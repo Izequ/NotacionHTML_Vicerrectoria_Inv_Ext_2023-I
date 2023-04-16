@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V27-N1-1</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            padding: 10em;
+            padding-top: 20px;
+            font-family: Times New Roman;
+            color: black;
+        }
+
+        .articulo-original {
+            background-color: black;
+            color: aliceblue;
+            width: 100%;
+            size: 15%;
+        }
+
+        #articulo-derecha {
+            float: left;
+        }
+
+
+        /* Posiciones de los resumenes */
+        .abstract-container {
+            display: flex;
+            width: 100%;
+        }
+
+        .keywords-container {
+            float: left;
+            width: 20%;
+            padding-right: 20px;
+        }
+
+        .text-container {
+            float: right;
+            width: 100%;
+            padding-left: 20px;
+        }
+
+
+        ul.navbar {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 25em;
+            left: 2em;
+            width: 250px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: Times New Roman;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        ul.navbar li {
+            background: white;
+            margin: 0.5em 0;
+            padding: 0.3em;
+        }
+
+
+        /* Enlaces */
+
+        a.link-color:visited {
+            color: white;
+        }
+
+        a.link-color:link {
+            color: white;
+        }
+
+        a.link-color:hover {
+            color: white;
+        }
+
+        a.link-color:hover {
+            border-bottom: 1px solid;
+            background: black;
+        }
+
+
+        /* Link de referencia */
+
+        a:link {
+            color: #4e00ff;
+        }
+
+        a:visited {
+            color: #003bff;
+        }
+
+        a:focus {
+            border-bottom: 1px solid;
+            background: #98aae4;
+        }
+
+        a:hover {
+            border-bottom: 1px solid;
+            background: #aacefe;
+        }
+
+
+
+        /* Etiqueta P */
+
+        p {
+            line-height: normal;
+            text-align: justify;
+            font-size: 18px
+        }
+
+        p.titulo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        p.subtitulo {
+            font-size: 20px;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        p.subtitulo-segundo {
+            font-style: italic;
+            font-size: 18px;
+        }
+
+        /* Fin P */
+
+
+        /* Etiqueta Italic */
+        i {
+            font-size: 18px
+        }
+
+        /* LI para las listas */
+
+        li {
+            font-size: 18px;
+        }
+
+
+
+        /* Tablas */
+
+        table {
+            border-collapse: collapse;
+            border: 2px solid rgb(0, 0, 0);
+            align-items: center;
+        }
+
+        thead th {
+            border-collapse: collapse;
+            background-color: rgb(179, 179, 179);
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        tbody td {
+            border-collapse: collapse;
+            text-align: center;
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+
+        .tipo {
+            color: #ffffff;
+            font-size: 22px;
+            border-radius: 10px 5px 10px 5px;
+            background-color: #696969;
+        }
+
+        div.info {
+            padding-top: 20px;
+        }
+
+        img.logos {
+            width: 15px;
+            height: 15px;
+        }
+
+        .image {
+            text-align: center;
+            image-rendering: optimizeQuality;
+        }
+
+        .image p {
+            text-align: center;
+            font-size: small;
+        }
+
+        .logo {
+            width: 300px;
+            height: 80px;
+        }
+
+        .logo2 {
+            width: 300px;
+            height: 50px;
+
+        }
+
+        .lista li {
+            margin-top: 10px;
+        }
+
+
+        /* Anclajes de la pagina */
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .ecuacion {
+            text-align: center;
+            font-weight: bold;
+            margin: 1px;
+        }
+
+        @media only screen and (min-width:320px) and (max-width:768px) {
+            body {
+                width: 100%;
+                padding: 5em;
+                margin: 5px;
+            }
+
+            .image {
+                text-align: center;
+                image-rendering: optimizeQuality;
+            }
+
+            .image img {
+                width: 100%;
+                height: 100%;
+            }
+
+            .image p {
+                font-size: small;
+                text-align: center;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="image">
+        <img src="img/V27-N1-1/cabeza.png" width="100%">
+    </div>
+
+    <div>
+        <div class="articulo-original">
+            <p>
+            <div id="articulo-derecha"><b> <u> Articulo Original</u> </b> </div>
+            <div style='text-align:right'><b> <u><img class="image" width="15px" src="img/globales/doi.png"><a
+                            class="link-color"
+                            href="https://doi.org/10.22463/0122820X.2632">https://doi.org/10.22463/0122820X.2632</a></u>
+                </b></div>
+            </p>
+        </div>
+
+
+
+        <!--Titulos-->
+        <h1>VRFT como estrategia de control basado en datos</h1>
+
+        <h2>VRFT as a data-driven control technique</h2>
+
+        <!--Autores-->
+        <h4>
+            Andrés Felipe Amaya-Pedraza<sup><a href="#sup1">1*</a> </sup> <br>
+            Fabián Leonardo Forero-Ordóñez<sup><a href="#sup2">2*</a> </sup> <br>
+            Ricardo Alzate-Castaño<sup><a href="#sup3">3*</a> </sup> <br>
+
+        </h4>
+
+        <hr>
+
+        <p id="sup1"><sup>1*</sup><img class="logos" src="img/globales/sobre.png"> Ingeniero Electrónico,
+            <a href="andres.amaya5@correo.uis.edu.co">andres.amaya5@correo.uis.edu.co</a> .
+            Universidad Industrial de Santander, Bucaramanga, Colombia.
+        </p>
+
+        <p id="sup2"><sup>2*</sup><img class="logos" src="img/globales/sobre.png"> Magíster en Ingeniería Eléctrica,
+            <a href="fabian.forero1@correo.uis.edu.co">fabian.forero1@correo.uis.edu.co</a> .
+            Universidad Industrial de Santander, Bucaramanga, Colombia.
+        </p>
+
+        <p id="sup3"><sup>3*</sup><img class="logos" src="img/globales/sobre.png"> Doctor en Automatización,
+            <a href="ralzatec@uis.edu.co">ralzatec@uis.edu.co</a> . <img class="logos" src="img/globales/orcid.png"> <a
+                href="https://orcid.org/0000-0001-7865-5742">ORCID:
+                0000-0001-7865-5742</a>.
+            Universidad Industrial de Santander, Bucaramanga, Colombia.
+        </p>
+
+
+        <hr>
+
+        <!-- Como realizar la cita -->
+
+        <p><b>Cómo citar: </b> A.F. Amaya-Pedraza, F.L. Forero-Ordóñez, R. Alzate-Castaño, “VRFT as a data-driven
+            control technique”. Respuestas, vol. 27, no. 1, pp. 6-13, 2022.</p>
+
+        <!--Licencia-->
+        <p>&copy;Peer review is the responsibility of the Universidad Francisco de Paula Santander. This is an article
+            under the license
+            <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>
+        </p>
+
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Licencia Creative Commons"
+                style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
+
+        <hr>
+
+        <!--Recibido y aprobado-->
+        <p><b>Received: </b> September 16, 2020 <br> <b>Approved: </b> November 25, 2021. </p>
+
+
+        <!--Resumen Inglés-->
+        <hr>
+
+        <div class="abstract-container">
+            <div class="keywords-container">
+                <p><b>Palabras clave:</b> <br></p>
+                <p>Control basado en datos, Técnica VRFT, Generador de inducción autoexcitado</p>
+            </div>
+            <hr>
+            <div class="text-container">
+                <p class="titulo"> Resumen </p>
+                <p>
+                    El presente artículo aborda la técnica de sintonización por realimentación de referencia virtual
+                    (VRFT)
+                    para el diseño de controladores y su potencial de aplicación en plantas de modelo desconocido. Se
+                    plantean
+                    las bases conceptuales para el método y se ilustra su uso en un caso de estudio, correspondiente con
+                    un
+                    sistema de generación eléctrica basado en una máquina de inducción autoexcitada. Resultados de
+                    simulación
+                    considerando perturbaciones de carga y suministro de potencia, muestran que esta técnica basada en
+                    datos
+                    permite obtener un desempeño dinámico satisfactorio a partir únicamente de información de los
+                    conjuntos
+                    de estímulo y respuesta del sistema.
+                </p>
+            </div>
+        </div>
+
+        <!-- Resumen Español -->
+        <hr>
+
+        <div class="abstract-container">
+            <div class="keywords-container">
+                <p><b>Keywords: </b> <br></p>
+                <p>Data-driven control, VRFT technique, Selfexcited induction generator</p>
+            </div>
+            <hr>
+            <div class="text-container">
+                <p class="titulo"> Abstract</p>
+
+                <p>
+                    In this paper the Virtual Reference Feedback Tuning (VRFT) technique for calculation of control
+                    parameters
+                    on systems of unknown model is addressed. The conceptual base of the VRFT technique is revisited and
+                    then
+                    applied to regulate the dynamics of an electrical power generation unit composed of a self-excited
+                    induction
+                    machine. Numerical simulations performed on the electrical generator subjected to disturbances in
+                    the load
+                    and input power, allowed to verify a successful dynamical behavior for the controlled loop
+                    calculated with
+                    only input/output data sets.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Cuerpo del documento -->
+    <div>
+        <hr>
+        <!--Introducción-->
+        <p class="titulo"> Introducción</p>
+
+        <p>
+            Las estrategias de control automático pueden dividirse inicialmente en dos grandes grupos: 1) las técnicas
+            basadas
+            en el modelo del sistema y 2) las técnicas basadas en los datos de operación del sistema. En el primer grupo
+            se
+            encuentran todas las metodologías clásicas de diseño de compensadores en el dominio de la frecuencia, y
+            otras tantas
+            en el espacio de estados cuando se asume un conocimiento suficiente de la estructura y de los parámetros del
+            sistema
+            <a href="#r1">[1]</a>.
+        </p>
+
+        <p>
+            Por otro lado, se tiene a partir del trabajo de Ziegler & Nichols en 1942, el primer registro documentado
+            del cálculo
+            de los parámetros de un controlador (PID) a partir de experimentos realizados sobre una planta desconocida
+            <a href="#r2">[2]</a>. Otro
+            tipo de corrientes del control aceptan incertidumbres paramétricas (control robusto) o se adaptan a los
+            cambios del
+            entorno (control predictivo, control adaptativo) <a href="#r2">[2]</a>. De manera más reciente, se puede hablar de
+            combinaciones de
+            técnicas de identificación de modelos y parámetros del sistema (lógica difusa, redes neuronales, máquinas de
+            soporte
+            vectorial) acopladas con técnicas basadas en el modelo <a href="#r3">[3]</a>. En cualquier caso, es importante resaltar que un
+            gran
+            número de estrategias se fundamentan en datos para el cálculo de sus controladores (data-driven control). De
+            manera
+            más formal, se considera como pionero el trabajo de M. G. Safonov, quien introdujo por primera vez el
+            concepto de:
+            teoría de control desfalsificada <a href="#r5">[5]</a>. Posteriormente, otros autores han propuesto estrategias similares para
+            el caso
+            de sistemas en tiempo discreto, permitiendo destacar la técnica denominada: sintonización por realimentación
+            de referencia virtual (VRFT), propuesta por Savaresi y Guardabassi <a href="#r6">[6]</a>. A su vez, la técnica VRFT presenta
+            adaptaciones
+            más recientes para aplicaciones en sistemas no convencionales según presentado en la literatura [<a href="#r7">7</a>, <a href="#r8">8</a>, <a href="#r9">9</a>, <a href="#r10">10</a> <a href="#r11">11</a>].
+        </p>
+
+        <p>
+            El objetivo de las técnicas de control basado en datos, está orientado a la obtención de una manipulación
+            dinámica
+            apropiada a partir del menor número de información posible de la operación del sistema, es decir, con
+            reducido costo
+            computacional <a href="#r12">[12]</a>. En este sentido se destaca el trabajo reciente de Bhattacharyya et al. aproximando
+            modelos
+            lineales para sistemas a partir de pocas mediciones <a href="#r13">[13]</a>. Esta metodología fue empleada por Amit et al. <a href="#r14">[14]</a>
+            y
+            Khadrahoui et al. <a href="#r15">[15]</a>. Otros desarrollos interesantes corresponden con el trabajo de Sanfelice <a href="#r16">[16]</a> y
+            Campestrini
+            <a href="#r17">[17]</a>. El presente artículo aborda los principios fundamentales de la técnica VRFT, ilustrado su uso a través
+            de un caso
+            de ejemplo motivado en sistemas de generación eléctrica a partir de recursos renovables.
+
+        </p>
+
+
+        <!-- Metodología y materiales -->
+        <hr>
+
+        <p class="titulo">Materiales y Métodos</p>
+
+
+        <p class="subtitulo">Control VRFT</p>
+
+        <p>
+            Como ya mencionado, el control VRFT es una técnica de control basado en datos que asume información a priori
+            de un modelo de referencia. La estructura general para este tipo de control se ilustra en la Figura 1. A
+            partir de ella,
+            se destacan los siguientes elementos: P(z) es una planta en tiempo discreto desconocida; C(z,θ) es un
+            controlador en
+            tiempo discreto parametrizado por el vector θ; M(z) es un modelo de referencia proporcionado por el usuario,
+            donde
+            {u,y} son señales conocidas de la operación del sistema.
+        </p>
+
+        <div class="image">
+            <img src="img/V27-N1-1/img12.png">
+            <p><b>Figura 1. </b>Estructura de control VRFT</p>
+        </div>
+
+        <p>
+            De otro lado, la ley de control está sujeta a la minimización del siguiente funcional de costo:
+        </p>
+
+        <div class="image">
+            <img src="img/V27-N1-1/img14.png" width="50%">
+        </div>
+
+        <p>
+            el cual evidentemente busca igualar las respuestas del sistema original y el correspondiente al modelo de
+            referencia.
+        </p>
+
+        <p>
+            Sin embargo, al no conocerse la expresión para P(z), el único camino posible para resolver dicho funcional
+            corresponde
+            con la identificación de un modelo apropiado para la planta. Evitar dicha identificación es precisamente la
+            filosofía
+            del control basado en datos, y por tanto, se realiza la modificación mostrada en el esquema de la Figura 2,
+            a partir del
+            cual bajo la suposición: y= yv
+            se cumple que rv = M-1 (z) y, siendo M-1 (z) el modelo inverso de M(z). Así entonces, se
+            requiere satisfacer la siguiente igualdad:
+        </p>
+
+        <div class="image">
+            <img src="img/V27-N1-1/img16.png" width="50%">
+        </div>
+
+        <p>
+            transformado el problema de optimización a la minimización de:
+        </p>
+
+        <div class="image">
+            <img src="img/V27-N1-1/img18.png" width="50%">
+        </div>
+
+        <p>
+            La equivalencia entre los funcionales de costo dado por (1) y (3) es demostrada en <a href="#r13">[13]</a>. Por tanto,
+            encontrar el vector
+            de parámetros θ del controlador en tiempo discreto C(z,θ) que minimiza el funcional de costo (3),
+            corresponde con
+            resolver de manera óptima los requerimientos impuestos por el modelo de referencia M(z).
+        </p>
+
+        <div class="image">
+            <img src="img/V27-N1-1/img24.png" width="65%">
+            <p><b>Figura 2.</b>Esquema VRFT modificado</p>
+        </div>
+
+        <p class="subtitulo">
+            Implementación computacional de la técnica
+        </p>
+
+        <p>
+            La solución computacional para el problema de optimización referido, se realiza haciendo uso del conjunto de
+            funciones para MATLAB y de acceso gratuito, desarrollado por Marco C. Campi et al. en la Universidad de
+            Brescia
+            en Italia. Implementación computacional de la técnica <a href="#r14">[14]</a>
+        </p>
+
+        <p>
+            Para ejecutar la herramienta se requiere el ingreso de los siguientes parámetros principales:
+        </p>
+
+        <ul>
+            <li>
+                Vectores u e y, correspondientes con las muestras de señales de entrada y salida en la planta;
+            </li>
+            <li>
+                La función de transferencia M para la relación deseada entre r e y;
+            </li>
+            <li>
+                El vector B de parámetros para una estructura de control predefinida y ponderable linealmente
+            </li>
+        </ul>
+
+        <p>
+            Adicionalmente, existen parámetros de uso específico que no serán explorados en el presente trabajo, pero
+            que pueden
+            consultarse en <a href="#r14">[14]</a>. A partir de lo anterior, el llamado a la función desde la ventana de comandos de MATLAB
+            es el
+            siguiente:
+        </p>
+
+        <p class="ecuacion">>> [C, θ] = VRFT1_ ry(u,y,M,B,[ ],[ ],[ ]);</p>
+
+        <p>
+            entregando como salidas la función de transferencia del controlador óptimo C y el vector de parámetros θ.
+        </p>
+
+        <p class="subtitulo">Diseño experimental y análisis estadístico</p>
+
+        <p class="subtitulo">Ejemplo ilustrativo</p>
+
+        <p>
+            A manera de ejemplo, a partir del esquema funcional presentado en el diagrama de bloques de la Figura 3, se
+            abordará
+            el diseño de un controlador para regular la generación de tensión en un esquema aislado basado en una
+            máquina de
+            inducción autoexcitada.
+        </p>
+
+        <div class="image">
+            <img src="img/V27-N1-1/img35.png" width="50%">
+            <p><b>Figura 3. </b>Diagrama de bloques para esquema de generación autoexcitado</p>
+        </div>
+
+        <p>
+            De entrada, calcular una función de transferencia para la relación (indirecta a través del índice de
+            modulación del
+            PWM del circuito inversor) entre el par de entrada aplicado al generador y la tensión de salida en los
+            bornes de la
+            resistencia de carga, se hace una tarea compleja desde el punto de vista analítico. Por tal razón, se
+            procede a realizar
+            el cálculo para los parámetros de un controlador PI empleando la técnica VRFT según se describe a
+            continuación.
+        </p>
+
+        <p class="subtitulo">Señales de entrada y salida para la planta</p>
+
+        <p>
+            Empleando un experimento de simulación en MATLAB, constituido a través de la librería SimScape, se procedió
+            a
+            obtener la relación experimental de estímulo de entrada y respuesta de salida en el esquema circuital
+            ilustrado en la
+            Figura 4. Como señal de entrada se aplicó un índice de modulación constante, correspondiente con el valor
+            nominal
+            para la planta. Los valores de parámetros circuitales utilizados replican los desarrollos presentados por
+            Machuca en
+            <a href="#r15">[15]</a>.
+        </p>
+
+        <p class="subtitulo">Determinación del periodo de muestreo</p>
+
+        <p>
+            Posteriormente, se aplicó el cálculo para la respuesta frecuencial del sistema a partir de un segundo
+            experimento de
+            simulación, en el cual se realizó variación sinusoidal para el índice de modulación del circuito inversor
+            alrededor de
+            su valor nominal, y se analizó su magnitud respecto a la variación obtenida en la tensión de salida en la
+            resistencia
+            de carga. La correspondiente relación entrada-salida en decibeles se muestra en la Figura 5, a partir de lo
+            cual se
+            establece como frecuencia máxima de esquina ω=157 [rad/s] y, por tanto, puede justificarse un periodo de
+            muestreo:
+        </p>
+
+        <div class="image">
+            <img src="img/V27-N1-1/img36.png" width="35%">
+        </div>
+
+        <p>
+            asumiendo una frecuencia de muestreo de 10 veces la frecuencia máxima del espectro.
+        </p>
+
+        <p class="subtitulo">Selección para relación deseada entre referencia y salida</p>
+
+        <p>
+            El comportamiento deseado para el sistema controlado en lazo cerrado se asume como una respuesta al escalón
+            de
+            tipo sobreamortiguado, con tiempo de establecimiento de alrededor de 4 [s] y valor final de 141.42 [VAC] RMS
+            , lo
+            cual equivale a decir que:
+        </p>
+
+        <div class="image">
+            <img src="img/V27-N1-1/img37.png" width="50%">
+        </div>
+
+        <p>
+            cuando se emplea una aproximación bilineal para efectuar la discretización.
+        </p>
+
+        <div class="image">
+            <img src="img/V27-N1-1/img47.png" width="100%">
+            <p><b>Figura 4. </b>Circuito simulado en MATLAB</p>
+        </div>
+
+        <p class="subtitulo">Definición para estructura del controlador</p>
+
+        <p>
+            Como ya previamente establecido, se asume el cálculo para un controlador PI. Dicho compensador será
+            configurado
+            en la forma de posición con discretización del término integral a través de una forma bilineal; es decir:
+        </p>
+
+        <div class="image">
+            <img src="img/V27-N1-1/img48.png" width="50%">
+        </div>
+
+        <p class="subtitulo">Cálculo del controlador óptimo</p>
+
+        <p>
+            Una vez definidos todos los parámetros en mención, se realiza el llamado a la función en MATLAB (VRFT1_ry)
+            que
+            realiza el cálculo para la función de transferencia del controlador que satisface los requerimientos a
+            partir del método
+            VRFT. Como resultado se obtiene lo siguiente:
+        </p>
+
+        <div class="image">
+            <img src="img/V27-N1-1/img49.png" width="50%">
+            <p><b>Figura 5. </b>Respuesta en frecuencia del circuito obtenida experimentalmente</p>
+        </div>
+
+        <hr>
+
+        <p class="titulo">Resultados y Discusión</p>
+
+        <p class="subtitulo">Verificación desempeño sistema controlado</p>
+
+        <p>
+            La Figura 6 presenta los resultados de simulación para el sistema controlado con los parámetros óptimos
+            recién
+            calculados.
+        </p>
+
+        <div class="image">
+            <img src="img/V27-N1-1/img56.png" width="40%">
+            <p><b>Figura 6. </b>Respuesta del sistema controlado</p>
+        </div>
+
+        <p>
+            Como se observa, el sistema restablece el valor final deseado y(t)=141.42 [VAC] a pesar de las
+            perturbaciones
+            aplicadas en la carga (pasando de 50 [kΩ] a 500 [kΩ] entre t=30 [s] y t=40 [s]) y en el par de entrada al
+            generador
+            (modificándose de 1,1 [Nm] a 0,9 [Nm] a partir de t=50 [s]) y con tiempos de respuesta dinámica consistentes
+            con las
+            características requeridas en el diseño.
+        </p>
+
+        <p>
+            Todo lo anterior se obtiene a expensas de un esfuerzo de control que no sobrepasa los límites de saturación
+            (que para
+            el índice de modulación van entre cero y uno), tal y como se indica en la Figura 7.
+        </p>
+
+        <div class="image">
+            <img src="img/V27-N1-1/img57.png" width="40%">
+            <p><b>Figura 7. </b>Esfuerzo de control</p>
+        </div>
+
+        <p>
+            Estos resultados confirman el apropiado desempeño del controlador calculado empleando la técnica VRFT, y más
+            importante aún, la independencia del conocimiento explícito de la función de transferencia de la planta para
+            efectuar
+            la apropiada sintonización del lazo.
+        </p>
+
+
+        <!-- Conclusiones -->
+        <hr>
+
+        <p class="titulo"> Conclusiones</p>
+        <p>
+            A partir de los desarrollos y resultados presentados es posible concluir que la técnica de control VRFT
+            facilita la
+            síntesis de controladores para el caso de sistemas con funciones de transferencia no conocidas. En
+            particular, se
+            demuestra la efectividad de la técnica para verificar la regulación en un lazo de control de generación de
+            potencia eléctrica, empleando como base la información de los conjuntos de datos de estímulo y respuesta del
+            circuito (control
+            basado en datos). Lo anterior presenta una alternativa interesante para muchos problemas prácticos en los
+            cuales se
+            dificulta acceder a representaciones analíticas y valores de parámetros del proceso bajo análisis.
+        </p>
+
+        <!-- agradecimientos -->
+        <hr>
+
+        <p class="titulo">Agradecimientos</p>
+
+        <p>
+            Los autores agradecen el apoyo de la Universidad Industrial de Santander por financiar, en el marco del
+            proyecto VIEUIS 2479 denominado: “Control Centralizado para un Sistema de Generación de Energía con
+            Potencial Aplicación en
+            Zonas Rurales del Departamento de Santander”, las actividades presentadas en el presente artículo.
+        </p>
+        <!-- Referencias -->
+
+        <hr>
+
+        <p class="titulo"> Referencias </p>
+
+        <p id="r1">[1] J. D. Correa, D. Rayo y J. Solano, “Macroscopic energy representation and simulation of a
+            permanent
+            magnet synchronous machine”, Respuestas, vol. 25, no. 3, pp. 154–164, July 2020.</p>
+        <p id="r2">[2] J. Ziegler y N. Nichols, “Optimum settings for automatic controllers”, Transactions of the
+            ASME, vol
+            64, no. 1, pp. 759–768, October 1942.</p>
+        <p id="r3">[3] F. Moreno, J. Ramirez y O. Ortiz, “Supervisory and control system for experimental bench of refrigeration
+            compression”, Respuestas, vol 21, no. 1, pp. 97 – 107, January 2016.</p>
+        <p id="r4">[4] E. Ibarguen, J. Montoya y M. Vergel, “Mathematical model of the aquatic phase in the population growth
+            dynamics of Aedes aegypti contaminated with Wolbachia”, Respuestas, vol. 25, no. 2, pp. 102 – 108,
+            November 2020.</p>
+        <p id="r5">[5] M. G. Safonov and T. C. Tsao. The unfalsified control concept: A direct path from experiment to
+            controller. Berlin, Germany: Springer, 1995.</p>
+        <p id="r6">[6] G. O. Guardabassi, y S. M. Savaresi, “Virtual reference direct design method: an off-line approach to
+            data-based control system design”, IEEE Transactions on Automatic Control, vol. 45, no. 5, pp. 954–
+            959, August 2000.</p>
+        <p id="r7">[7] T. Ortegon y C. Serrano, “Simulation of the subprocess of filling, capping and pasteurized for the
+            automation of a brewery”, Respuestas, vol. 21, no. 2, pp. 57 – 70, March 2016.</p>
+        <p id="r8">[8] S. P. Bhattacharyya, L. H. Keel and D. N. Mohsenizadeh. Linear Systems: A Measurement Based
+            Approach. Delhi, India: Springer, 2013.</p>
+        <p id="r9">[9] A. Bhaya, E. Herrera y O. Diene, “Revisiting the maximum power transfer for linear n‐ports with
+            uncoupled loads and applications to power systems”, Int. J. Circ. Theor. Appl., vol. 44, no. 1, pp. 1631–
+            1656, June 2016.</p>
+        <p id="r10">[10] S. Khadraoui, H. Nounou, M. Nounou, A. Datta y S. P. Bhattacharyya, “A model-free design of
+            reduced-order controllers and application to a DC servomotor”, Automatica, vol. 50, no. 8, pp. 2142 –
+            2149, September 2014.</p>
+        <p id="r11">[11] A. Sanfelice, L. Campestrini L. and D. Eckhard, Data-driven controller design. Dordrecht,
+            Netherlands: Springer, 2012.</p>
+        <p id="r12">[12] M. C. Campi, A. Lecchini y S. M. Savaresi, “Virtual reference feedback tuning (VRFT): a new direct
+            approach to the design of feedback controllers”, no. 39 in IEEE Conference on Decision and Control
+            Proceedings, (Sydney), pp. 623-629, IEEE, 2000.</p>
+        <p id="r13">[13] A. Lecchini, M. C. Campi S. M. y Savaresi, “Virtual reference feedback tuning for two degree of
+            freedom controllers”, European Control Conference, (Porto), pp. 2416-2421, IEEE, 2001.</p>
+        <p id="r14">[14] G. Rallo, S. Formentin, C. R. Rojas y S. M. Savaresi. “Robust Experiment Design for Virtual
+            Reference Feedback Tuning”, IEEE Conference on Decision and Control, (Miami), pp. 2271-2276,
+            IEEE, 2018.</p>
+        <p id="r15">[15] A. Kumar, Y. Zhang y M.-S. Chiu, "VRFT-based digital controller design using a generalized
+            second-order reference model", Computers & Chemical Engineering, vol. 142, p. 107049, November
+            2020. <a href="https://doi.org/10.1016/j.compchemeng.2020.107049">https://doi.org/10.1016/j.compchemeng.2020.107049</a></p>
+        <p id="r16">[16] M. C. Campi, A. Lecchini y S. M. Savaresi, “Virtual reference feedback tuning: a direct method for
+            the design of feedback controllers”, Automatica, vol. 38, no. 8, pp. 1337-1346, April 2002.</p>
+        <p id="r17">[17] A. Corleta, C. Lorenzini, J. Flores y L. Campestrini, “Data-driven control design applied to
+            uninterruptible power supplies”. IEEE Conference on Control Applications (Buenos Aires), pp. 1312–
+            1317, IEEE, 2016.</p>
+        <p id="r18">[18] M. C. Campi y S. M. Savaresi, “Direct nonlinear control design: the virtual reference feedback
+            tuning (VRFT) approach”, IEEE Transactions on Automatic Control, vol. 51, no. 1, pp. 14–27, March
+            2006.</p>
+        <p id="r19">[19] A. Care, F. Torricelli, M. C. Campi y S. M. Savaresi, “A Toolbox for Virtual Reference Feedback
+            Tuning (VRFT)”, no 18 in European Control Conference, (Naples), pp. 4252-4257, IFAC, 2019.</p>
+        <p id="r20">[20] J. A. Machuca, “Control droop de un generador de inducción en una microrred simple,” B.S. thesis,
+            Dept. Elect. Eng., Univ. Ind. Santander, Bucaramanga, Colombia, 2020. [Online]. Available: <a href="http://
+            tangara.uis.edu.co/biblioweb/tesis/2020/179030.pdf">http://
+            tangara.uis.edu.co/biblioweb/tesis/2020/179030.pdf</a></p>
+
+
+    </div>
+
+</body>
+
+</html>

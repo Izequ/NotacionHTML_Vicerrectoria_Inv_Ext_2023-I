@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V26-N2-3</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            padding: 10em;
+            padding-top: 20px;
+            font-family: Times New Roman;
+            color: black;
+        }
+
+        .articulo-original {
+            background-color: black;
+            color: aliceblue;
+            width: 100%;
+            size: 15%;
+        }
+
+        #articulo-derecha {
+            float: left;
+        }
+
+
+        /* Posiciones de los resumenes */
+        .abstract-container {
+            display: flex;
+            width: 100%;
+        }
+
+        .keywords-container {
+            float: left;
+            width: 20%;
+            padding-right: 20px;
+        }
+
+        .text-container {
+            float: right;
+            width: 100%;
+            padding-left: 20px;
+        }
+
+
+        ul.navbar {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 25em;
+            left: 2em;
+            width: 250px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: Times New Roman;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        ul.navbar li {
+            background: white;
+            margin: 0.5em 0;
+            padding: 0.3em;
+        }
+
+
+        /* Enlaces */
+
+        a.link-color:visited {
+            color: white;
+        }
+
+        a.link-color:link {
+            color: white;
+        }
+
+        a.link-color:hover {
+            color: white;
+        }
+
+        a.link-color:hover {
+            border-bottom: 1px solid;
+            background: black;
+        }
+
+
+        /* Link de referencia */
+
+        a:link {
+            color: #4e00ff;
+        }
+
+        a:visited {
+            color: #003bff;
+        }
+
+        a:focus {
+            border-bottom: 1px solid;
+            background: #98aae4;
+        }
+
+        a:hover {
+            border-bottom: 1px solid;
+            background: #aacefe;
+        }
+
+
+
+        /* Etiqueta P */
+
+        p {
+            line-height: normal;
+            text-align: justify;
+            font-size: 18px
+        }
+
+        p.titulo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        p.subtitulo {
+            font-size: 20px;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        p.subtitulo-segundo {
+            font-style: italic;
+            font-size: 18px;
+        }
+
+        /* Fin P */
+
+
+        /* Etiqueta Italic */
+        i {
+            font-size: 18px
+        }
+
+        /* LI para las listas */
+
+        li {
+            font-size: 18px;
+        }
+
+
+
+        /* Tablas */
+
+        table {
+            border-collapse: collapse;
+            border: 2px solid rgb(0, 0, 0);
+            align-items: center;
+        }
+
+        thead th {
+            border-collapse: collapse;
+            background-color: rgb(179, 179, 179);
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        tbody td {
+            border-collapse: collapse;
+            text-align: center;
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+
+        .tipo {
+            color: #ffffff;
+            font-size: 22px;
+            border-radius: 10px 5px 10px 5px;
+            background-color: #696969;
+        }
+
+        div.info {
+            padding-top: 20px;
+        }
+
+        img.logos {
+            width: 15px;
+            height: 15px;
+        }
+
+        .image {
+            text-align: center;
+            image-rendering: optimizeQuality;
+        }
+
+        .image p {
+            text-align: center;
+            font-size: small;
+        }
+
+        .logo {
+            width: 300px;
+            height: 80px;
+        }
+
+        .logo2 {
+            width: 300px;
+            height: 50px;
+
+        }
+
+        .lista li {
+            margin-top: 10px;
+        }
+
+
+        /* Anclajes de la pagina */
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .ecuacion {
+            text-align: center;
+            font-weight: bold;
+            margin: 1px;
+        }
+
+        @media only screen and (min-width:320px) and (max-width:767px) {
+            body {
+                width: 100%;
+                padding: 5em;
+                margin: 5px;
+            }
+
+            .image {
+                text-align: center;
+                image-rendering: optimizeQuality;
+            }
+
+            .image img {
+                width: 100%;
+                height: 100%;
+            }
+
+            .image p {
+                font-size: small;
+                text-align: center;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="image">
+        <img src="img/V26-N2-3/cabeza.png" width="100%">
+    </div>
+
+    <div>
+        <div class="articulo-original">
+            <p>
+            <div id="articulo-derecha"><b> <u> Articulo Original</u> </b> </div>
+            <div style='text-align:right'><b> <u><img class="image" width="15px" src="img/globales/doi.png"><a
+                            class="link-color"
+                            href="https://doi.org/10.22463/0122820X.2527">https://doi.org/10.22463/0122820X.2527</a></u>
+                </b></div>
+            </p>
+        </div>
+
+
+
+        <!--Titulos-->
+        <h1>A study on self-leadership, entrepreneurial self-efficacy and innovation in the generation
+            of Centennials in FESC students</h1>
+
+        <h2>Un estudio sobre el autoliderazgo, la autoeficacia emprendedora y la innovación en la generación de los
+            Centennials en estudiantes de la FESC</h2>
+
+        <!--Autores-->
+        <h4>
+            Victoria Yamileth Herrera-Laguna<sup><a href="#sup1">1*</a> </sup> <br>
+            Karla Yohana Sánchez-Mojica<sup><a href="#sup2">2*</a> </sup> <br>
+            Eugenio Guzmán-Soria<sup><a href="#sup3">3*</a> </sup> <br>
+
+        </h4>
+
+        <hr>
+
+        <p id="sup1"><sup>1*</sup><img class="logos" src="img/globales/sobre.png"> Ing. en Bioquímica,
+            <a href="m2003086@itcelaya.edu.mx">m2003086@itcelaya.edu.mx</a> . <img class="logos"
+                src="img/globales/orcid.png"> <a href="https://orcid.org/0000-0003-4800-7968">ORCID:
+                0000-0003-4800-7968</a>.
+            Tecnológico Nacional de México en Celaya, México.
+        </p>
+        <p id="sup2"><sup>2*</sup><img class="logos" src="img/globales/sobre.png"> MSc.en Ingeniería Industrial,,
+            <a href=" investigaciones@fesc.edu.co"> investigaciones@fesc.edu.co</a> . <img class="logos"
+                src="img/globales/orcid.png"> <a href="https://orcid.org/0000-0003-3164-4725">ORCID:
+                0000-0003-3164-4725</a>.
+            Fundación de Estudios Superiores Comfanorte, Colombia.
+        </p>
+        <p id="sup3"><sup>3*</sup><img class="logos" src="img/globales/sobre.png">PhD. en Ciencias en Economía,
+            <a href="eugenio.guzman@itcelaya.edu.mx">eugenio.guzman@itcelaya.edu.mx</a> . <img class="logos"
+                src="img/globales/orcid.png"> <a href="https://orcid.org/0000-0003-4713-7154">ORCID:
+                0000-0003-4713-7154</a>.
+            Tecnológico Nacional de México en Celaya, México.
+        </p>
+
+
+        <hr>
+
+        <!-- Como realizar la cita -->
+
+        <p><b>How to cite: </b>V.A. Herrera-Laguna, K.J. Sánchez-Mojica, E. Guzmán-Soria, “A study on self-leadership,
+            entrepreneurial
+            self-efficacy and innovation in the generation of Centennials in FESC students.” Respuestas, vol. 26, no. 2,
+            pp. 27-34, 2021.</p>
+
+        <!--Licencia-->
+        <p>&copy;Peer review is the responsibility of the Universidad Francisco de Paula Santander. This is an article
+            under the license
+            <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>
+        </p>
+
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Licencia Creative Commons"
+                style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
+
+        <hr>
+
+        <!--Recibido y aprobado-->
+        <p><b>Received: </b> August 15, 2020 <br> <b>Approved: </b> October 26, 2020. </p>
+
+
+        <!--Resumen Inglés-->
+        <hr>
+
+        <div class="abstract-container">
+            <div class="keywords-container">
+                <p><b>Keywords:</b> <br></p>
+                <p>Centennials, Innovation, Leadership, Self-efficacy, Entrepreneur</p>
+            </div>
+            <hr>
+            <div class="text-container">
+                <p class="titulo"> Abstract</p>
+                <p>
+                    At present, perceiving what current and future employees consider most important can be difficult
+                    when those expectations are changing due to globalization, competitiveness and the same market,
+                    the business sector has been affected. Therefore, the target population was university students
+                    belonging to a generation known as Centennials or Z, who seek new trends, environments and work
+                    independence, which is why many of them undertake. The present work validated the influence
+                    of three variables: self-leadership, entrepreneurial self-efficacy and innovation in students of the
+                    Fundación de Estudios Superiores Comfanorte in Colombia, obtaining preliminary results using
+                    statistical analysis software (SmartPLS).
+                </p>
+            </div>
+        </div>
+
+        <!-- Resumen Español -->
+        <hr>
+
+        <div class="abstract-container">
+            <div class="keywords-container">
+                <p><b>Palabras claves:</b> <br></p>
+                <p>Centennials, Innovación, Liderazgo, Autoeficacia, Emprendedor </p>
+            </div>
+            <hr>
+            <div class="text-container">
+                <p class="titulo"> Resumen</p>
+
+                <p>
+                    En la actualidad el percibir lo que los empleados actuales y futuros consideran más importante
+                    puede ser difícil cuando esas expectativas están cambiando por la globalización, la competitividad
+                    y el mismo mercado, el sector empresarial se ha visto afectado. Por lo cual, la población objetivo
+                    fueron los universitarios pertenecientes a una generación conocida como Centennials o Z,
+                    quienes buscan nuevas tendencias, ambientes e independencia laboral, por lo que muchos de ellos
+                    emprenden. El presente trabajo validó la influencia de tres variables: autoliderazgo, autoeficacia
+                    emprendedora y la innovación en estudiantes de la Fundación de Estudios Superiores Comfanorte
+                    en Colombia, obteniendo resultados preliminares empleando el software de análisis estadístico
+                    (SmartPLS).
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Cuerpo del documento -->
+    <div>
+        <hr>
+        <!--Introducción-->
+        <p class="titulo"> Introducción</p>
+
+        <p>
+            En la actualidad, la revelación de las generaciones ha sido propósito de estudio desde hace décadas por
+            numerosos
+            autores y disciplinas, no hay consenso en torno a su definición, elementos determinantes ni a las conductas
+            coligadas a
+            los conjuntos generacionales <a href="#r1">[1]</a>, lo antepuesto permitió observar que hoy en día los
+            millennials están por
+            ser rebasados
+            por la generación Centennials, los recientes estudiantes, que se encuentran estudiando el nivel
+            universitario, pertenecen
+            a la generación Z, los llamados Centennials; individuos nacidos del 1996 hasta el año 2010; calificados como
+            nativos
+            digitales, estos nacieron con la tecnología <a href="#r2">[2]</a>. Esta generación, manifiesta un reto en el
+            nivel de
+            educación superior,
+            por sus integrantes que se encuentran en los recintos universitarios <a href="#r3">[3]</a>. En Colombia,
+            esta es la generación
+            que está
+            ingresando actualmente a la fuerza laboral mundialmente, esta generación ha sido diferente a cualquier otra
+            debido a
+            la tecnología avance que se ha logrado en las últimas tres décadas. Estos avances tecnológicos incluyen
+            electrónica dispositivos de comunicación (TV, computadoras, teléfonos celulares, tabletas, etc.) y
+            desarrollo informático que esté
+            relacionado con comunicación (redes sociales, compras online, banca electrónica, etc.) Adicionalmente, la
+            Generación
+            Z es considerada como propia a la altura global, esto propicia que las diferencias particulares de las
+            sociedades que
+            habitan en el mundo no sean tan variadas al resto de las generaciones <a href="#r4">[4]</a>.
+        </p>
+
+
+        <!-- Metodología y materiales -->
+
+
+        <p class="subtitulo">Emprendimiento e Innovación</p>
+
+        <p>
+            En el presente, el desarrollo económico de naciones y territorios corresponde a un sinfín de elementos con
+            el
+            emprendimiento. El cual, es una de las funciones humanas más complicadas ya que se unen los constituyentes
+            sociopersonales, cognitivos, económicos, políticos y culturales, que al fusionarse podrían trascender como
+            predictores
+            eficaces de iniciativas de emprendimiento o de la intención emprendedora en los sujetos <a
+                href="#r5">[5]</a>. El emprendedor
+            es un
+            innovador, un estratega, un creativo y alguien que cree en sus ideas para llevarlas a cabo de forma exitosa
+            <a href="#r6">[6]</a>.
+        </p>
+
+        <p>
+            El trabajo por cuenta propia se define como trabajadores que trabajan por cuenta propia, miembros de
+            asociaciones
+            de productores y empleados familiares no remunerados. Siendo estos, no remunerados en el jucio de que
+            carecen de
+            un contrato formal para cobrar una cantidad fija de ingresos, sin embargo comparten los ingresos producidos
+            por la
+            compañia. Los empleados familiares no remunerados son especificamente importantes en el area de la
+            agricultura
+            y el comercio minorista. Todos los individuos que trabajan en compañias corporativas, incluso los directores
+            de las
+            compañias, se califican como empleados. El trabajo por cuenta propia se observa como una táctica de
+            supervivencia
+            para quienes no pueden hallar ningún otro medio de ingresos, también se le describe como una demostración
+            del
+            espíritu emprendedor y el deseo de ser tu propio jefe. Este indicador se mide como porcentaje de la
+            población ocupada
+            considerada (total, hombres o mujeres), en Colombia es de 50.1% (Gráfica 1).
+        </p>
+
+
+        <div class="image">
+            <img src="img/V26-N2-3/img5.png" width="90%">
+            <p><b>Grafica I. </b>OCDE: Tasa de autoempleo por país, Total % de empleo 2019.
+                Fuente: <a href="#r7">[7]</a></p>
+        </div>
+
+        <p>
+            La innovación estimula la productividad al encontrar e implementar formas más eficientes de utilización del
+            capital físico
+            y humano existente; es uno de los conceptos actuales en la gestión empresarial. Obteniendo una ventaja
+            competitiva
+            porque, es un componente intangible que es difícil de imitar entre los competidores <a href="#r8">[8]</a>.
+            En momentos de
+            crisis como
+            el actual, muchas cabezas se vuelven hacia la capacidad de innovación, se toma como principal factor de
+            mejorar la
+            productividad o eficiencia para las empresas <a href="#r9">[9]</a>, la calidad de los productos y costos de
+            producción
+            decrecientes o
+            incluso el tiempo de fabricación <a href="#r10">[10]</a>. Existe aún una brecha de investigación en la
+            bibliografía académica
+            relacionada
+            con la capacidad de innovación de una persona, el cómo medirlo y como desarrollarlo <a href="#r11">[11]</a>.
+            En este trabajo se
+            revisara tres conceptos: el primero es la capacidad de innovación, la autoeficacia en una persona,
+            propondremos tres
+            dimensiones para medir las en un cuestionario con estudiantes de la Universidad Fundación de Estudios
+            Superiores Comfanorte, para posteriormente contribuir que reactivos satisfacen la necesidad en la
+            investigación.
+        </p>
+
+        <p class="subtitulo">Liderazgo y Autoeficacia emprendedora</p>
+
+        <p>
+            El entorno laboral está sufriendo grandes y complejos cambios, ocasionados principalmente por diversos
+            factores
+            socioeconómicos y psicosociales; el mayor impacto en el mercado viene ocasionado por la innovación
+            tecnológica, lo
+            cual parece unir nuevos “caminos empresariales”. Hay quienes consideran que el avance tecnológico está dando
+            paso
+            al autoempleo. Es importante señalar que los cambios, en su mayoría, no se dan automáticamente y sin
+            resistencia;
+            se llevan a cabo por personas con iniciativa y, por su puesto, con características de liderazgo siendo el
+            proceso
+            de desarrollar ideas y una visión, de vivir conforme a los valores que apoyan esas ideas y esa visión, de
+            influir en
+            terceros para que adopten esos valores en su propio comportamiento, y de tomar decisiones. Así, la
+            autoeficacia en
+            los emprendedores representa un factor importante en la competitividad humana, pues será la que determine en
+            gran
+            medida las actividades, la motivación, el esfuerzo, así como la persistencia en las dificultades que se le
+            presentan <a href="#r12">[12]</a>.
+        </p>
+
+        <p>
+            En criterio de <a href="#r13">[13]</a> se supone emprendedor, al individuo cuyas actos son influenciados por
+            variables internas
+            que por
+            las externas, no obtante, no existe un contrato sobre estas variables. Por ende, resalta la importancia de
+            reconocer las
+            características de los posibles emprendedores, seindo estos los que se convierten vitales indicadores
+            relativamente
+            sólidos que puede influir a una generación, preparados para incentivar acciones de emprendimiento en función
+            del
+            desarrollo de un territorio o nación, esta información es relevante por que orienta y guía a la formación
+            gerencial en
+            los recintos universitarios, ya que se puede hallar un perfil social y laboral de los futuros emprendedores,
+            equilibrando
+            el peso que se le da a los rasgos personales y los saberes sobre aspectos de emprendimiento.
+        </p>
+
+        <hr>
+
+        <p class="titulo">Materiales y Métodos</p>
+
+        <p>
+            El presente trabajo es una investigación cuantitativa con alcance descriptivo, donde se le prestara especial
+            atención al
+            análisis factorial bajo el método de estimación PLS (Minimos cuadrados parciales) para estimar las
+            relaciones entre
+            las variables. Se hizo una revisión de distintos modelos empleados en la autoeficacia emprendedora y el
+            autoliderazgo,
+            en los cuales se observó una variable en común la innovación, del cual se revisaron artículos de
+            investigación, para
+            formular una primera obtención de resultados en Colombia. Posteriormente se hizo un breve análisis a la
+            Universidad
+            FESC en Colombia de los siguientes tres modelos de medición: El primero evalúo la autoeficacia emprendedora,
+            Entreprenuerial Self-Efficacy (ESE) en su versión en castellano por <a href="#r12">[12]</a>, contiene 10
+            reactivos; el segundo
+            evalúo el
+            autoliderazgo, The Revised Self-Leadership Questionaire (RSLQ) de <a href="#r14">[14]</a> compuesto por 18
+            reactivos y el
+            tercero
+            evalúo la Competencia en Innovación en diseño cuestionario INCODE-ICB-v5 <a href="#r15">[15]</a>. Todos los
+            modelos tienen el
+            formato en escala de Likert y está dividida en cinco partes, siendo 1 y 5 (1=Necesito mejorar mucho;
+            5=Excelente),
+            pasando por posibilidades medias.
+        </p>
+
+        <p class="subtitulo">Diseño experimental y análisis estadístico</p>
+
+        <p>
+            La población objetivo para este estudio se consideró a estudiantes integrantes de la Generación Centennials
+            (1996-2010 o bien, que se encuentren entre los 25 a 19 años de edad) de nivel superior y activos en el ciclo
+            escolar 2020-2021 en la FESC en Colombia, que registró a 2,495 estudiantes <a href="#r16">[16]</a>, el
+            tamaño de muestra
+            calculado fue de 334 estudiantes con un 5% de margen de error y 95% de nivel de confianza.
+        </p>
+
+        <p>
+            La información fue colectada durante el segundo semestre del año 2021 usando muestreo simple aleatorio y
+            se obtuvieron 202 respuestas (con una participación del 59% del género femenino y 41% del masculino) de
+            las carreras profesionales (Licenciatura Administración Financiera, Logística Empresarial, Administración
+            Turística y Hotelera, Ingeniería de Software, Administración Negocios Internacionales, Diseño y
+            Administración de Negocios de la Moda y Diseño Gráfico). <a href="#r16">[16]</a>.
+        </p>
+
+        <p>
+            A continuación, se realiza este análisis teniendo en cuenta algunos índices que permiten verificar la
+            validez
+            y confiabilidad de los constructos propuestos. Haciendo empleo del software SMART PLS 3, para validar
+            la relación de los ítems del cuestionario de cada constructo. En este modelo se utiliza el análisis
+            factorial
+            confirmatorio para comprobar si los indicadores seleccionados representan adecuadamente la variable
+            latente de interés <a href="#r17">[17]</a>.
+        </p>
+
+        <p>
+            Las métricas estándar proporcionadas por SmartPLS son las cargas de indicadores para indicadores
+            reflexivos, Alfa de Cronbach y fiabilidad compuesta, varianza extraída media (AVE), valores t y más. Todas
+            estas pruebas se basan en el análisis factorial confirmatorio (CFA).
+        </p>
+
+        <hr>
+
+        <p class="titulo">Resultados y Discusión</p>
+
+        <p>
+            Al concluir con la recolección de los datos, se obtuvo la respuesta de 202 estudiantes activos, donde
+            predomino el género femenino con el 59%, y el otro 41% corresponde al género masculino (Gráfica 2).
+        </p>
+
+        <div class="image">
+            <img src="img/V26-N2-3/img21.png" width="70%">
+            <p><b>Grafica 2. </b>Distribución de la variable: Género.</p>
+        </div>
+
+        <p>
+            Continuando con la estadística descriptiva, se observó edades entre 19 y 25 años con una media de 21 años
+            y una desviación estándar de 1.42.
+        </p>
+
+        <p>
+            Las cargas factoriales de los elementos muestran validez afín aceptable, porque todos los elementos tienen
+            cargas significativas superiores a 0.7 en los constructos <a href="#r18">[18]</a> en la figura 1.
+        </p>
+
+        <div class="image">
+            <img src="img/V26-N2-3/img22.png" width="70%">
+            <p><b>Figura 1. </b>Resultados de la medición y el modelo estructural. <b>Fuente. </b>Salida del SMART PLS 3
+            </p>
+        </div>
+
+        <p>
+            En la tabla 1 se muestra los valores de los constructos y los índices tomados en cuenta para su análisis de
+            fiabilidad y validez: Alfa de Cronbach, R², Fiabilidad compuesta y Varianza Extraída Media. Al analizar si
+            hay ítems que no cumplen con la confianza del 99% o 95%, se deberían de retirar del constructo, y si los
+            hubo, los items que se retiraron de los constructos fueron:
+        </p>
+
+        <p>- Autoliderazgo: el ítem C12, C13, C14, C15, C17, C18, C19, C20, C22, C23, C24, C27.</p>
+        <p>- Autoeficacia emprendedora: el ítem C9 Y C10.</p>
+        <p>- Competencias innovadoras: el ítem C29, C30, C31, C32, C34, C41, C43, C44. </p>
+
+        <p>
+            Una vez retirados los ítems del modelo, se realizaron nuevamente las pruebas de fiabilidad y validez para
+            garantizar la consistencia de los constructos como procedimiento del modelo de medida. La tabla 1 muestra
+            los resultados de los índices; de igual forma, se define que el cumplimiento de tres índices permite validar
+            la confiabilidad de los constructos (Tabla I).
+        </p>
+
+        <div class="image">
+            <p><b>Tabla I. </b>Fiabilidad y Validación de constructos.</p>
+            <img src="img/V26-N2-3/img29.png" width="70%">
+        </div>
+
+        <p>
+            <a href="#r19">[19]</a>El software Smart PLS suministra el índice de fiabilidad compuesta y el alfa de
+            Cronbach. La
+            investigación se
+            aseguró que los constructos tuvieran una alta consistencia interna al calcular sus confiablidades compuestas
+            y valores
+            alfa de Cronbach. <a href="#r20">[20]</a> mencionan validar estos indicadores con un valor por encima del
+            0.7, considerado como
+            un
+            nivel “modesto” especialmente para investigaciones exploratorias, y valores de 0.8 o 0.9 para etapas más
+            avanzadas
+            de la investigación. Y todos los valores de la alfa de Cronbach estuvieron superiores de 0.7-0.9, lo que
+            indica que se
+            considera estadísticamente significativo según <a href="#r21">[21]</a>.
+        </p>
+
+        <p>
+            En la Tabla II resume el análisis de comprobación de cada una de las hipótesis planteadas.
+        </p>
+
+        <div class="image">
+            <p><b>Tabla II. </b>Validación de hipótesis.</p>
+            <img src="img/V26-N2-3/img29.png" width="70%">
+            <p>Nota: *p < 0.1; **p < 0.05; ***p < 0.001</p>
+        </div>
+
+        <p>
+            En la figura 2, presenta el esquema que tiene implicaciones prácticas de gran alcance porque presentan que
+            los
+            estudiantes de la generación Z son influenciados por el emprendimiento y la innovación.
+        </p>
+
+        <div class="image">
+            <img src="img/V26-N2-3/img35.png" width="50%">
+            <p><b>Figura 2. </b>Esquema de los resultados del análisis estructural.</p>
+            <p><b>Fuente: </b>Salida del SMART PLS 3.</p>
+        </div>
+
+
+        <!-- Conclusiones -->
+        <hr>
+
+        <p class="titulo"> Conclusiones</p>
+        <p>
+            El presente trabajo resulto de gran utilidad para establecer las características principales para el
+            siguiente estudio
+            comparativo México-Colombia, se logró recabar, procesar y analizar los 202 datos obtenidos del cuestionario
+            aplicado,
+            que permitió dar respuestas a las preguntas de la investigación y comprobar o rechazar reactivos planteados
+        </p>
+
+        <p>
+            Con el apoyo de la estadística descriptiva se puede comentar que los estudiantes son personas que se
+            encuentra entre
+            los 19 y 25 años, rango dentro de la Generación Centennial, que es nuestro campo de estudio principal,
+            también se
+            observó un porcentaje amplio del 59% dentro del género Femenino mientras que el masculino arrojo un 41%.
+        </p>
+
+        <p>
+            Esta investigación se realizó con la intención de obtener las características principales del estudiante que
+            se encuentra
+            representando la Generación Centennial y proceder con el instrumento donde se observaran las variables
+            Autoeficacia
+            emprendedora, Autoliderazgo e Innovación, generando un estudio comparativo entre los países de México y
+            Colombia.
+        </p>
+
+
+        <!-- Referencias -->
+
+        <hr>
+
+        <p class="titulo"> Referencias </p>
+
+        <p id="r1">[1] T. Nichols and M. Wright, “Generational differences: understanding and exploring generation Z”,
+            Southwest Academy of Management Proceedings, 2018.</p>
+        <p id="r2">[2] C. De la Serna, "La generación que ya está cambiando al mundo", in World Economic Forum, 2018I.
+            Bedrow and F. T. Evers, “Bases of competence: an instrument for self and institutional assessment.
+            Assessment & Evaluation in Higher Education”, Journal of management education, vol. 35, no. 4, pp.
+            419–434, 2010.</p>
+        <p id="r3">[3] J. Salinas, “Innovación docente y uso de las TIC en la enseñanza universitaria”, Revista de
+            Universidad
+            y Sociedad del Conocimiento, vol. 1, no. 1, pp. 1-16, 2004.</p>
+        <p id="r4">[4] M. Dutra, “Generación Z: entre las nuevas formas de organización del trabajo y la convivencia
+            generacional " tesis, Universidad de la República, Uruguay, 2017.</p>
+        <p id="r5">[5] E. Durán-Aponte and D. Arias-Gómez, “Intención emprendedora en estudiantes universitarios:
+            integración de factores cognitivos y socio-personales.” Revista Colombiana de Ciencias Sociales, vol. 6, no.
+            2, pp. 320-340, 2015.</p>
+        <p id="r6">[6] E. Durán-Aponte and D. Arias-Gómez, “Actitud emprendedora y estilos emocionales. Contribuciones
+            para el diseño de la formación de futuros emprendedores” Gestión de la educación, pp. 83-102, 2016. </p>
+        <p id="r7">[7] OECD, “Self-employment rate (indicator)”, Doi: 10.1787/fb58715e-en, 2020</p>
+        <p id="r8">[8] J. Bessant, S. Caffyn and M. Gallagher, “An evolutionary model of continuous improvement
+            behaviour”,
+            Technovation, vol. 21, no. 2, pp. 67–77, 2001.</p>
+        <p id="r9">[9] P. W. Hyland, and T. Sloan, "Performance measurement and continuous improvement: are they linked
+            to
+            manufacturing strategy", International Journal of Technology Management, vol. 37, no. 3, pp. 237-333,
+            2007.</p>
+        <p id="r10">[10] C. M. De Benito Valencia, “La mejora continua en la gestión de calidad: seis Sigma, el camino
+            para
+            la excelencia”, Economía industrial, no. 331, 2000. ISSN: 0422-2784.</p>
+        <p class="r11">[11] I. Bedrow and F. T. Evers, “Bases of competence: A framework for facilitating reflective
+            learnercentered educational environments”, Journal of management education, vol. 35, no. 3, pp. 406–427,
+            2011.</p>
+        <p id="r12">[12] J. A. Moriano, F. J. Palací and J. F. Morales, “Adaptación y validación en España de la escala
+            de
+            Autoeficacia Emprendedora”, Revista de Psicología Social, vol. 21, no. 1, pp. 51-64, 2006.</p>
+        <p id="r13">[13] C. M. Salvador, “Impacto de la inteligencia emocional percibida en la autoeficacia
+            emprendedora”,
+            Boltín de psicología, no. 92, pp. 65-80, 2008.</p>
+        <p id="r14">[14] D. J. Houghton and C. P. Neck, “The revised self leadership questionnaire: Testing a
+            hierarchical
+            factor structurefor self leadership”, Journal of Managerial Psychology, vol. 17, no. 8, pp. 672-691,
+            2002.</p>
+        <p id="r15">[15] J. A. Marin-Garcia, L. E. Aznar-Mas and F. González Ladrón de Guevara, “Innovation types and
+            talent management for innovation”, Working Papers on Operations Management, vol. 2, no. 2, pp.
+            25–31, 2011.</p>
+        <p id="r16">[16] FESC (Fundación de Estudios Superiores Comfanorte). Reseña en línea, https://www.fesc.edu.co/
+            portal/ </p>
+        <p id="r17">[17] J. Hair, C. L. Randolph and A. Y. Chong, “Industrial Management & Data Systems”, An updated and
+            expanded assessment of PLS-SEM in information systems reserch, vol. 117, no. 3, pp. 442-458, DOI:
+            10.1108/IMDS-042016-0130.</p>
+        <p id="r18">[18] C. Fornell and D. F. Larcker, “Evaluating structural equation models with unobservable
+            variables
+            and measurement error”, Journal of marketing research, vol. 18, no. 1, pp. 39-50, 1981. </p>
+        <p id="r19">[19] J. Henseler, G. Hubona and P.A. Ray, “Using PLS path modeling in newtechnology research:
+            Updated guidelines”, Industrial management and data systems, vol. 116, no. 1, pp. 2-20, 2016, DOI:
+            10.1108/IMDS-092015-0382.</p>
+        <p id="r20">[20] J. C. Nunnally, “Pdychometric theory 3E”, Tata McGraw-hill education, 1994.</p>
+        <p id="r21">[21] J. F. Hair, G. T. Hult, C. Ringle and M. Sarstedt, “A Primer on Partial Least Squares
+            Structural
+            Equation Modeling (PLS-SEM)”, Sage: California, 2014, DOI: 10.1016/j.jfbs.2014.01.002.</p>
+
+
+    </div>
+
+</body>
+
+</html>

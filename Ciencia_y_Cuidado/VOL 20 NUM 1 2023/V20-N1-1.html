@@ -1,0 +1,750 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V20-N1-1</title>
+    <link rel="stylesheet" href="">
+    <style>
+        body {
+            padding: 10em;
+            padding-top: 20px;
+            font-family: Times New Roman;
+            color: black;
+        }
+
+        #articulo-derecha {
+            float: left;
+        }
+
+        /* Posiciones de los resumenes */
+
+        .contenedor-general {
+            display: inline-flex;
+            width: 100%;
+        }
+
+        .contenedor-resumen {
+            width: 240%;
+        }
+
+        .contenedor-autor {
+            width: 100%;
+            padding-left: 20px;
+        }
+
+        .hr-resumen {
+            background-color: gray;
+            margin: 0;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .resumen-fondo {
+            background-color: #bdd5f1;
+            border-radius: 5px;
+        }
+
+        .titulo-resumen {
+            color: black;
+            font-size: 22px;
+            font-weight: bold;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .texto-resumen {
+            padding: 20px;
+            margin: 0;
+        }
+
+        ul.navbar {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 25em;
+            left: 2em;
+            width: 250px;
+        }
+
+        /* Titulos principales */
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: Times New Roman;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        h1 {
+            color: #29abe3;
+        }
+
+        .categoria_titulo {
+            font-style: italic;
+            color: #ffffff;
+        }
+
+        h3 {
+            font-style: italic;
+            font-weight: bold;
+            color: #707073;
+        }
+
+        .categoria {
+            text-align: center;
+            background-color: #707073;
+            width: 20%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            margin: auto;
+        }
+
+        ul.navbar li {
+            background: white;
+            margin: 0.5em 0;
+            padding: 0.3em;
+        }
+
+        /* Enlaces */
+
+        a.link-color:visited {
+            color: white;
+        }
+
+        a.link-color:link {
+            color: white;
+        }
+
+        a.link-color:hover {
+            color: white;
+        }
+
+        a.link-color:hover {
+            border-bottom: 1px solid;
+            background: black;
+        }
+
+        /* Link de referencia */
+
+        a:link {
+            color: #4e00ff;
+        }
+
+        a:visited {
+            color: #003bff;
+        }
+
+        a:focus {
+            border-bottom: 1px solid;
+            background: #98aae4;
+        }
+
+        a:hover {
+            border-bottom: 1px solid;
+            background: #aacefe;
+        }
+
+        /* Etiqueta P */
+
+        p {
+            line-height: normal;
+            text-align: justify;
+            font-size: 18px;
+        }
+
+        p.titulo {
+            color: #29abe3;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        p.subtitulo {
+            color: #29abe3;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* NUEVO */
+        p.subtitulo-segundo {
+            color: #29abe3;
+            font-style: italic;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        p.correspondencia {
+            color: black;
+            font-size: 18px;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        /* NUEVO */
+        p.entrevista {
+            color: black;
+            font-size: 18px;
+            font-style: italic;
+        }
+
+        /* NUEVO */
+        p.subtitulo-tercero {
+            color: #29abe3;
+            font-style: italic;
+            font-size: 18px;
+        }
+
+        p#cabeza {
+            color: #1d71ae;
+            text-align: center;
+        }
+
+        p.autores {
+            font-size: 16px;
+            margin: 0;
+            text-indent: 0em;
+            margin-bottom: 10px;
+        }
+
+        p.forma-citar {
+            text-indent: 0em;
+            text-align: justify;
+            justify-content: center;
+        }
+
+        .cita {
+            text-align: -webkit-center;
+        }
+
+        /* Bold especial para palabras que tienen color seguido de dos puntos
+*/
+
+        /* NUEVO */
+
+        b.subtitulo-segundo {
+            color: #29abe3;
+            font-size: 18px;
+        }
+
+        .contenedor_info {
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .info {
+            width: auto;
+        }
+
+        /* Este es para los documentos del dos en adelante *codigo abajo de este comentario* */
+
+        .info-text {
+            text-align: end;
+            margin: 0;
+        }
+
+        /* Uso Exlusico para el primero documento  que es de revision  *codigo abajo de este comentario* */
+
+        .info_text {
+            font-size: 12px;
+            line-height: 100%;
+            text-align: center;
+            margin: 0;
+        }
+
+        .info_hr {
+            margin: 5;
+        }
+
+        /* Fin P */
+        /* Etiqueta Italic */
+
+        i {
+            font-size: 18px
+        }
+
+        i.centrado {
+            font-size: 18px
+        }
+
+        /* LI para las listas */
+
+        li {
+            font-size: 18px;
+            padding-top: 10px;
+            text-align: justify;
+        }
+
+        /* NUEVO */
+        .lista li {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        hr {
+            background-color: #29abe3;
+            height: 1px;
+        }
+
+        /* Tablas */
+
+        table {
+            border-collapse: collapse;
+            border: 2px solid rgb(0, 0, 0);
+            align-items: center;
+        }
+
+        thead th {
+            border-collapse: collapse;
+            background-color: rgb(179, 179, 179);
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        tbody td {
+            border-collapse: collapse;
+            text-align: center;
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        .tipo {
+            color: #ffffff;
+            font-size: 22px;
+            border-radius: 10px 5px 10px 5px;
+            background-color: #696969;
+        }
+
+        img.logos {
+            width: 15px;
+            height: 15px;
+        }
+
+        .image {
+            text-align: center;
+            image-rendering: optimizeQuality;
+        }
+
+        .image p {
+            text-align: center;
+            font-size: small;
+        }
+
+        .logo {
+            width: 300px;
+            height: 80px;
+        }
+
+        .logo2 {
+            width: 300px;
+            height: 50px;
+        }
+
+        /* Anclajes de la pagina */
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* NUEVO */
+        .ecuacion {
+            text-align: center;
+            font-weight: bold;
+            margin: 1px;
+        }
+
+        @media only screen and (min-width:320px) and (max-width:900px) {
+            body {
+                width: 100%;
+                padding: 5em;
+                margin: 5px;
+            }
+
+            .image {
+                text-align: center;
+                image-rendering: optimizeQuality;
+            }
+
+            .image img {
+                width: 100%;
+            }
+
+            .image p {
+                font-size: small;
+                text-align: center;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contenedor_info">
+        <div>
+            <img src="img/globales/logo.jpg" alt="" height="125px">
+        </div>
+        <div class="info" style="text-align: right;">
+            <p class="info-text"> ISSN-PRINT
+                1794-9831 / E-ISSN
+                2322-7028</p>
+            <p class="info-text"> Vol. 20 Nº1 / Ene - Abr 2023 / Cúcuta, Colombia
+            </p>
+        </div>
+    </div>
+
+
+    <!--Categoría-->
+    <div class="categoria">
+        <h2 class="categoria_titulo">Original </h2>
+    </div>
+
+    <h1> Enfermería ante la (des)humanización, una responsabilidad inherente ante la ciencia del cuidado.</h1>
+
+    <p class="entrevista">“Creo que los sentimientos se pierden en las palabras; estos deberían destilarse en acciones
+        que produzcan
+        resultados”</p>
+
+    <p class="entrevista">- Florence Nightingale</p>
+
+
+    <!--Autores-->
+    <h3>
+        Allan Rodríguez-Artavia <sup><a href="#sup1">1*</a> </sup> <br>
+    </h3>
+
+
+    <!-- Conetenedor de las columnas de la descripciones de los autores, correspondencia de autor 
+    y los resumenes -->
+    <div class="contenedor-general">
+
+
+        <!-- Contenedor de los resumenes -->
+        <div class="contenedor-resumen">
+            <div>
+                <p> Cuando se tiene en el presente el avance de la ciencia,
+                    la innovación tecnológica, los esfuerzos de la medicina
+                    por ser cada vez ser más especializada, y extender al
+                    ser humano todas las posibles nuevas alternativas para
+                    tratar una afección, se puede indicar sin temor a la equivocación que en salud se está avanzando.
+                </p>
+
+                <p>
+                    Es por ello que la Enfermería, como ciencia de la salud,
+                    debe de esforzarse en el ejercicio diario, a la compresión y manejo de la innovación en la atención,
+                    pues las
+                    condiciones para prestar un cuidado se complejizan, y
+                    requieren del mayor y más avanzado conocimiento y
+                    destreza para lograr los resultados, dado a que los procesos de la gestión en salud, implican no
+                    solo la inversión en recurso económico, tecnológico, farmacológico
+                    y humano, sino que conlleva a la vez el buscar la mayor
+                    condición de bienestar, hacia las personas, en las cuales
+                    se brinda tal atención.
+                </p>
+
+                <p>
+                    En el presente, es por ello, que se puede indicar que
+                    la formación en las áreas de Enfermería, ha sido consciente de tal necesidad, y ha procurado el
+                    proveer a los
+                    futuros profesionales de la rama, de las herramientas y
+                    conocimientos para poder desenvolverse en esta postmodernidad de la gestión en salud.
+                </p>
+            </div>
+        </div>
+
+        <!-- Descripcion de autores, Aprobado, Como citar, licencia -->
+        <div class="contenedor-autor">
+            <!-- Autores -->
+            <div>
+                <p class="subtitulo" style="color: black; font-size: 18px;">Autor de correspondencia*</p>
+                <!-- 1 -->
+                <p class="autores" id="sup1"><sup>1*</sup><img class="logos" src="img/globales/sobre.png"> Enfermero
+                    Ginecoobstetra y Perinatal, Bioeticista, Asistente de la Coordinación Nacional de Enfermería, Caja
+                    Costarricense del Seguro Social, Docente del Postgrado en Ciencias de la Enfermería Universidad de
+                    Costa Rica, y Postgrado en Bioética Universidad Nacional de Costa Rica/Universidad
+                    de Costa Rica, Docente de Grado Facultad de Enfermería Universidad de Iberoamérica.
+                    <a href="mailto:allanrodriguez.a@gmail.com">allanrodriguez.a@gmail.com</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0001-8679-657X">0000-0001-8679-657X</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Cuerpo del documento -->
+    <div>
+        <p>
+            No obstante, debe de añadirse que la gestión de la salud
+            desde Enfermería, sin importar el espacio o la latitud en la cual se desarrolle, no puede dejar de
+            considerar que
+            el eslabón principal del hacer profesional, por especializado que sea, es el ser humano, o en sí, para
+            resumirlo,
+            -la persona-, valorando desde ella, la particularidad, y
+            ante todo su valor visto y analizado, desde la dignidad.
+            Tal condición, permite entender, que una rama profesional, así cuente con los elementos para ser considerada
+            como ciencia; es decir constituida por un corpus
+            teórico, un proceso o metodología, un lenguaje común
+            y la investigación como elemento base (1), si la misma
+            no puede ser usada para un bien mayor, para un uso
+            para las comunidades o las personas, ¿para qué sirve,
+            o… para qué tenerla?
+        </p>
+
+        <p>
+            Estas preguntas, son las que deben de responderse en
+            el día a día del ejercer desde la Enfermería, en el tanto
+            no se puede olvidar que la esencia de esta ciencia, gira
+            en torno de las personas, y de los procesos que la disciplina pueda realizar, para satisfacer las
+            necesidades en
+            salud que se presenten.
+        </p>
+
+        <p>
+            Pues se puede desde la práctica habitual, en los distintos escenarios del hacer de Enfermería, aplicar los
+            conocimientos y destrezas de forma irrefutable, pero…
+            ¿esto para qué…, si se olvida quien es el otro?, ¿si el
+            trato brindado es impersonal?, ¿si se llama al usuario
+            como objeto, cama o patología?, ¿y su atención solo se
+            avoca al trato del cuerpo, y se olvida que las personas desde su integralidad son a la vez mente y espíritu?
+        </p>
+
+        <p>
+            ¿Para qué profesionales, con tanto conocimiento y destreza?, -si no hay relaciones humanas-…si no hay
+            sentimiento, no hay bondad, no hay capacidad de empatía
+            por el dolor y mal ajeno.
+        </p>
+
+        <p>
+            No se desea en el ejercicio de la Enfermería, “máquinas
+            perfectas de repetición de procesos o procedimientos”,
+            se requiere del sentido humano, para marcar diferencia,
+            para brindar cuidado, para gestionar salud, y proveer
+            la atención con esa condición que realmente genera un
+            cambio, y ayuda a las personas a lograr la efectiva recuperación de sus problemas.
+        </p>
+
+        <p>
+            Ser una ciencia a cargo de las personas, en donde se
+            instrumentaliza la gestión en salud por medio del cuidado, no implica solo: saber, saber ser y saber hacer
+            (2)
+            desde lo teórico, implica capacidades de interacción,
+            capacidad de entendimiento, y ante todo la capacidad
+            de poder reconocer que los desequilibrios de la salud,
+            trascienden al cuerpo, considerando a la vez elementos
+            de la mente y espíritu, por lo que la enfermería debe de
+            reforzar el aprendizaje y conocimiento del abordaje de
+            estas condiciones, en tanto el cuidado desde la complejidad de las personas, debe velar por el abordaje
+            desde
+            la totalidad de los elementos (mente, cuerpo y espíritu)
+            como un todo.
+        </p>
+
+        <p>
+            Para la Enfermería de hoy, es urgente superar en la
+            práctica, el paradigma biologicista en la gestión de la
+            salud, y comprender que, un cuidado real y efectivo,
+            es aquel que atiende las necesidades del individuo, en
+            consideración a todos los componentes que le conforman. Tomando para ello en cuenta que, al tratar con
+            personas, éstas se les debe y merecen, un trato desde
+            esta condición, brindando el respeto, y consideración
+            a lo que significan desde su dignidad, y entendiendo
+            que, la Enfermería no sería necesaria, sin las personas a
+            quienes poder brindar la atención y el cuidado.
+        </p>
+
+        <p>
+            La Enfermería como lo añade Malvárez (3), tiene “el
+            desafío de cuidar el mundo y de cuidarlo bien”, siendo
+            que el cuidar, como acto profesional, conlleva la responsabilidad, de hacerlo no solo con destrezas y
+            conocimiento, sino con sentido humano, …con empatía, con
+            el saber reconocer, que la Enfermería ante las personas,
+            conlleva como lo mencionó Levinás (4) la implicación
+            de saber que, “El Yo ante el Otro es infinitamente responsable”, siendo que el cuidado a brindar, es la
+            clave para la recuperación, o la desmejora, de la condición
+            humana, elemento que supera el momento de salud, en
+            el tanto, cualquier resultado que se obtenga de un proceso de enfermedad, marca el futuro del individuo.
+        </p>
+
+        <p>
+            El cuidado, como estrategia de la gestión de Enfermería, debe tener presente que, al ser la persona la
+            esencia
+            de la profesión, -debe ser brindado con humanismo-.
+            He allí la responsabilidad, que implica el ser un profesional, pues quien no cumpla, con tal consideración,
+            queda debiendo a la Enfermería, y debe reflexionar sobre su ejercicio profesional, en el tanto una
+            Enfermería, sin humanidad en el trato y en el cuidado, -no es
+            Enfermería…. Puede que se le reconozca con cualquier
+            otra denominación, llámese técnico, ejecutante, o cumplidor de indicaciones, por que un profesional de
+            Enfermería sin humanismo, no merece tal denominación.
+            En el tanto, un profesional de Enfermería real, lleva en
+            situ esa fibra del otro, lleva la responsabilidad de un
+            cuidado integral, lleva consigo ese valor que trasciende
+            del elemento contractual o laboral, pues sus acciones y
+            actividades reflejan sensibilidad, sentimiento y orgullo
+            por lo que se hace, por lo que se logra, y por los resultados obtenidos, más cuando se ha hecho lo mejor,
+            sin importar el desenlace, y las personas usuarias de la
+            atención lo han percibido.
+        </p>
+
+        <p>
+            La humanización es una responsabilidad directa e inherente del cuidado, y siendo que la Enfermería es la
+            ciencia que se ha profesionalizado en el ejercicio del
+            mismo, no puede desligar bajo ninguna circunstancia
+            el uso de tal condición.
+        </p>
+
+        <p>
+            Se debe de entender que, “Cuidado Humanizado”, lejos
+            de ser tan sólo una serie de actividades operativas y
+            conductuales, está vinculado a una transformación profunda de las formas de ver, oír y comprender el mundo
+            humano (5), donde el cuidado, no sólo sea la sumatoria
+            de muchas acciones dirigidas, sino un intercambio dialógico entre humanos (6), destacando las
+            características
+            que trascienden la simple biología, para llevar a cabo
+            un mayor entendimiento de las esferas del hombre (7).
+            Cuidado Humano, implica el acercarse a las personas,
+            conversar, escuchar, compartir, comprender, no criticar, asistir, y a través de la interacción dialógica,
+            más
+            las acciones propias particulares de la condición en salud, ejecutar las acciones para la atención de las
+            necesidades.
+        </p>
+
+        <p>
+            El tener y practicar tales condiciones, es construir y reforzar la Enfermería, es el ejercer una ciencia con
+            sentido y responsabilidad, es el encontrar una razón válida
+            y pertinente para seguir subsistiendo, pues la diferencia
+            entre las máquinas y las personas, no son las acciones
+            o tareas, pues ambas las pueden realizar, sino el sentimiento y calidez humana, que puede suscitarse en los
+            actos, y en las relaciones persona a persona. Y mientras
+            tal condición siga presente para la práctica del cuidado,
+            se puede pensar en una Enfermería de futuro, para mucho tiempo más, e insustituible.
+        </p>
+
+        <p>
+            El pensar en una deshumanización desde la Enfermería, es el negar la ciencia del cuidado en sí misma; pues
+            una práctica que pierda la relación del contacto hacia el
+            otro, que pierda la empatía y el valor de las relaciones
+            entre las personas, está condenada a la desaparición.
+            Enfermería es la responsable de las mejores prácticas
+            del cuidado, es la ciencia donde el conocimiento, destreza, y humanidad para con el otro, deben de fundirse
+            en sus acciones; su crecimiento, y desarrollo, pues su
+            subsistencia depende de ello.
+        </p>
+
+        <p>
+            Pues como fuese mencionado por Hidalgo y Altamira
+            (8) ser y ejercer enfermería va más allá de la tecnificación de procedimientos, que son instituidos por
+            interdependencia con otros profesionistas de salud, pues la
+            Enfermería desarrolla el sentido humano del profesional, marca al sujeto de cuidado por las experiencias,
+            vivencias y atenciones, que lo hacen ver como ser holístico, es decir, en su totalidad.
+        </p>
+
+        <p>
+            Una Enfermería, que intenta ser y mantenerse como
+            ciencia, sin la consideración de la persona, simplemente muere; de allí la responsabilidad de revisar las
+            prácticas actuales en la labor asistencial, de revisar los
+            enfoques en el nivel formativo, y de revisar desde las
+            autoridades en Enfermería y salud, cómo se está suscitando la prestación de la atención en la actualidad, y
+            cómo debería realmente de brindarse.
+        </p>
+
+        <p>
+            Puede ser, que al revisar a consciencia algunas prácticas, se pueda descubrir que algo se ha perdido en
+            cuanto a la atención, que el trato humano se ha dejado de
+            lado, y que sea necesario replantear algunas posiciones
+            sobre los enfoques en los sistemas de salud, y de lo que
+            se desea sean las prácticas propicias de Enfermería en
+            dichos sistemas.
+        </p>
+
+        <p>
+            Depende de cada uno de nosotros, el dejar o no que
+            las circunstancias y acciones varíen o no, pues como
+            lo anotó Florence Nightingale “…los sentimientos se
+            pierden en las palabras; estos deberían destilarse en acciones que produzcan resultados.” (9), no sirve de
+            nada
+            solo pensarlo, decirlo o exponerlo, pues los actos son
+            los que realmente van a marcar la diferencia en el trato,
+            en las acciones, y es en esa interrelación entre personas
+            y profesionales de Enfermería, donde se puede suscitar
+            la ciencia que se desea, y de la cual la humanización es
+            inherente, dado a que el cuidado sin humanización, no
+            es cuidado, y Enfermería sin estos elementos no tiene
+            razón de ser.
+        </p>
+
+        <p>
+            Enfermería nació para las personas, por lo que debe de
+            integrar las mejores acciones en la construcción de las
+            labores del cuidado, por lo que la humanización como
+            base de esta condición, es una responsabilidad directa
+            de los profesionales. No ejercerla, es negarse a la esencia de la disciplina, es perder la Enfermería, es
+            caer en
+            la deshumanización, y acciones que no corresponden a
+            los profesionales reales de esta rama del saber.
+        </p>
+
+        <p>
+            ¿De que lado estás?, es la pregunta que te debes hacer
+            al leer esta reflexión, y se espera que, estés del lado de
+            la responsabilidad profesional, del conocimiento y la
+            destreza con humanidad, del lado en donde se sirve al
+            otro con dignidad, como persona desde la integralidad,
+            pues esto es realmente la Enfermería, y es sin duda,
+            el lado correcto y necesario, para la continuidad de la
+            profesión y para el beneficio a los usuarios.
+        </p>
+
+        <!-- Referencias -->
+
+        <hr>
+
+        <p class="titulo"> Bibliografía </p>
+
+        <ol class="lista">
+            <li id="r1">Alfaro-LeFevre, R. Aplicación del proceso enfermero. Fundamento del razonamiento clínico.
+                Editorial Wolters Klumer, Philadelphia. 2014.</li>
+            <li id="r2">Cuadra-Martínez DJ, Castro PJ, Juliá MT. Three types of knowledge in competency based
+                professional education: the integration of subjective, professional, and scientific theories. Formación
+                universitaria, 11(5), 19-30.
+                2018. [citado 2022 Dic 04]. Disponible en: <a
+                    href="https://dx.doi.org/10.4067/S0718-50062018000500019">https://dx.doi.org/10.4067/S0718-50062018000500019</a>
+            </li>
+            <li id="r3">Malvárez S. El reto de cuidar en un mundo globalizado. Texto Contexto Enferm, Florianópolis.
+                2007; 16(3):
+                520-30. [citado 2022 Dic 03]. Disponible en: <a
+                    href="http://www.scielo.br/pdf/a19v16n3.pdf">http://www.scielo.br/pdf/a19v16n3.pdf</a></li>
+            <li id="r4">Levinas E. Humanismo del otro hombre. Siglo Veintiuno Editores S.A. México. 1974.</li>
+            <li id="r5">Marcuse H. Un ensayo sobre la liberación. México: Editorial Joaquín Mortiz, S.A.; 1969. 94 p.
+            </li>
+            <li id="r6">Romero M. Los cuidados de enfermería en la adversidad. Presencia [Internet]. ene-jun; 1(1).
+                2005. [citado
+                2022 Dic 04]; Disponible en: <a
+                    href="http://www.index-f.com/presencia/n1/r11articulo.php">http://www.index-f.com/presencia/n1/r11articulo.php</a>
+            </li>
+            <li id="r7">Espinosa-Aranzales Á, Enríquez Guerrero C, Leiva Aranzalez F, López Arévalo M, Castañeda
+                Rodríguez L.
+                Collective building of a concept in nursing humanized care. Cienc. enferm. [Internet]. 2015 Ago [citado
+                2022
+                Dic 05]; 21(2): 39-49. Disponible en: <a
+                    href="http://dx.doi.org/10.4067/S0717-95532015000200005">http://dx.doi.org/10.4067/S0717-95532015000200005</a>
+            </li>
+            <li id="r8">Hidalgo Mares B, Altamira Camacho R. ¿Qué es y qué no es el cuidado de enfermería? Enferm.
+                Actual Costa
+                Rica (en línea) [Internet]. 15 de diciembre de 2020 [citado 05 de diciembre de 2022];(40). Disponible
+                en:
+                <a
+                    href="https://revistas.ucr.ac.cr/index.php/enfermeria/article/view/40788">https://revistas.ucr.ac.cr/index.php/enfermeria/article/view/40788</a>
+            </li>
+            <li id="r9">Filatelia Cultural. Exposición Virtual "200 Años Del Nacimiento De Florence Nightingale".
+                [citado 2022 Dic
+                05]; Disponible en: <a
+                    href="https://filateliacultural.blogspot.com/2020/03/exposicion-virtual-200-anos-del.html">https://filateliacultural.blogspot.com/2020/03/exposicion-virtual-200-anos-del.html</a>
+            </li>
+        </ol>
+    </div>
+</body>
+
+</html>

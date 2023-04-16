@@ -1,0 +1,1332 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V19-N3-8</title>
+    <link rel="stylesheet" href="">
+    <style>
+        body {
+            padding: 10em;
+            padding-top: 20px;
+            font-family: Times New Roman;
+            color: black;
+        }
+
+        #articulo-derecha {
+            float: left;
+        }
+
+        /* Posiciones de los resumenes */
+
+        .contenedor-general {
+            display: inline-flex;
+            width: 100%;
+        }
+
+        .contenedor-resumen {
+            width: 240%;
+        }
+
+        .contenedor-autor {
+            width: 100%;
+            padding-left: 20px;
+        }
+
+        .hr-resumen {
+            background-color: gray;
+            margin: 0;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .resumen-fondo {
+            background-color: #bdd5f1;
+            border-radius: 5px;
+        }
+
+        .titulo-resumen {
+            color: black;
+            font-size: 22px;
+            font-weight: bold;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .texto-resumen {
+            padding: 20px;
+            margin: 0;
+        }
+
+        ul.navbar {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 25em;
+            left: 2em;
+            width: 250px;
+        }
+
+        /* Titulos principales */
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: Times New Roman;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        h1 {
+            color: #29abe3;
+        }
+
+        .categoria_titulo {
+            font-style: italic;
+            color: #ffffff;
+        }
+
+        h3 {
+            font-style: italic;
+            font-weight: bold;
+            color: #707073;
+        }
+
+        .categoria {
+            text-align: center;
+            background-color: #707073;
+            width: 20%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            margin: auto;
+        }
+
+        ul.navbar li {
+            background: white;
+            margin: 0.5em 0;
+            padding: 0.3em;
+        }
+
+        /* Enlaces */
+
+        a.link-color:visited {
+            color: white;
+        }
+
+        a.link-color:link {
+            color: white;
+        }
+
+        a.link-color:hover {
+            color: white;
+        }
+
+        a.link-color:hover {
+            border-bottom: 1px solid;
+            background: black;
+        }
+
+        /* Link de referencia */
+
+        a:link {
+            color: #4e00ff;
+        }
+
+        a:visited {
+            color: #003bff;
+        }
+
+        a:focus {
+            border-bottom: 1px solid;
+            background: #98aae4;
+        }
+
+        a:hover {
+            border-bottom: 1px solid;
+            background: #aacefe;
+        }
+
+        /* Etiqueta P */
+
+        p {
+            line-height: normal;
+            text-align: justify;
+            font-size: 18px;
+        }
+
+        p.titulo {
+            color: #29abe3;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        p.subtitulo {
+            color: #29abe3;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* NUEVO */
+        p.subtitulo-segundo {
+            color: #29abe3;
+            font-style: italic;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        p.correspondencia {
+            color: black;
+            font-size: 18px;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        /* NUEVO */
+        p.entrevista {
+            color: black;
+            font-size: 18px;
+            font-style: italic;
+        }
+
+        /* NUEVO */
+        p.subtitulo-tercero {
+            color: #29abe3;
+            font-style: italic;
+            font-size: 18px;
+        }
+
+        p#cabeza {
+            color: #1d71ae;
+            text-align: center;
+        }
+
+        p.autores {
+            font-size: 16px;
+            margin: 0;
+            text-indent: 0em;
+            margin-bottom: 10px;
+        }
+
+        p.forma-citar {
+            text-indent: 0em;
+            text-align: justify;
+            justify-content: center;
+        }
+
+        .cita {
+            text-align: -webkit-center;
+        }
+
+        /* Bold especial para palabras que tienen color seguido de dos puntos
+*/
+
+        /* NUEVO */
+
+        b.subtitulo-segundo {
+            color: #29abe3;
+            font-size: 18px;
+        }
+
+        .contenedor_info {
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .info {
+            width: auto;
+        }
+
+        /* Este es para los documentos del dos en adelante *codigo abajo de este comentario* */
+
+        .info-text {
+            text-align: end;
+            margin: 0;
+        }
+
+        /* Uso Exlusico para el primero documento  que es de revision  *codigo abajo de este comentario* */
+
+        .info_text {
+            font-size: 12px;
+            line-height: 100%;
+            text-align: center;
+            margin: 0;
+        }
+
+        .info_hr {
+            margin: 5;
+        }
+
+        /* Fin P */
+        /* Etiqueta Italic */
+
+        i {
+            font-size: 18px
+        }
+
+        i.centrado {
+            font-size: 18px
+        }
+
+        /* LI para las listas */
+
+        li {
+            font-size: 18px;
+            padding-top: 10px;
+            text-align: justify;
+        }
+
+        /* NUEVO */
+        .lista li {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        hr {
+            background-color: #29abe3;
+            height: 1px;
+        }
+
+        /* Tablas */
+
+        table {
+            border-collapse: collapse;
+            border: 2px solid rgb(0, 0, 0);
+            align-items: center;
+        }
+
+        thead th {
+            border-collapse: collapse;
+            background-color: rgb(179, 179, 179);
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        tbody td {
+            border-collapse: collapse;
+            text-align: center;
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        .tipo {
+            color: #ffffff;
+            font-size: 22px;
+            border-radius: 10px 5px 10px 5px;
+            background-color: #696969;
+        }
+
+        img.logos {
+            width: 15px;
+            height: 15px;
+        }
+
+        .image {
+            text-align: center;
+            image-rendering: optimizeQuality;
+        }
+
+        .image p {
+            text-align: center;
+            font-size: small;
+        }
+
+        .logo {
+            width: 300px;
+            height: 80px;
+        }
+
+        .logo2 {
+            width: 300px;
+            height: 50px;
+        }
+
+        /* Anclajes de la pagina */
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* NUEVO */
+        .ecuacion {
+            text-align: center;
+            font-weight: bold;
+            margin: 1px;
+        }
+
+        @media only screen and (min-width:320px) and (max-width:900px) {
+            body {
+                width: 100%;
+                padding: 5em;
+                margin: 5px;
+            }
+
+            .image {
+                text-align: center;
+                image-rendering: optimizeQuality;
+            }
+
+            .image img {
+                width: 100%;
+            }
+
+            .image p {
+                font-size: small;
+                text-align: center;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="contenedor_info">
+        <div>
+            <img src="img/globales/logo.jpg" alt="" height="125px">
+        </div>
+        <div class="info" style="text-align: right;">
+            <p class="info-text"> ISSN-PRINT 1794-9831 / E-ISSN 2322-7028 </p>
+            <p class="info-text"> Vol. 19 Nº 3 / sep - dic, 2022 / Cúcuta, Colombia. </p>
+            <p class="info-text">
+                <img src="img/globales/doi.png" height="20px" alt="">
+                <a href="https://doi.org/10.22463/17949831.3347">https://doi.org/10.22463/17949831.3347</a>
+            </p>
+        </div>
+    </div>
+
+
+    <!--Categoría-->
+    <div class="categoria">
+        <h2 class="categoria_titulo">Original </h2>
+    </div>
+
+    <h1> Procesos institucionales para la atención del paciente
+        sospechoso o diagnosticado con Covid-19 </h1>
+
+    <h2 class="segundo"> Institutional processes for the care of suspected or diagnosed COVID-19 patients</h2>
+
+    <h2 class="segundo"> Processos institucionais para atendimento de pacientes suspeitos ou diagnosticados com Covid-19
+    </h2>
+
+
+    <!--Autores-->
+    <h3>
+        Daniela Alejandra Ortiz-Arias <sup><a href="#sup1">1*</a> </sup> <br>
+        Yuliana Andrea Rincón-Peña <sup><a href="#sup2">2*</a> </sup> <br>
+        Nancy Yaneth Portela-Escandon <sup><a href="#sup3">3*</a> </sup> <br>
+    </h3>
+
+
+    <!-- Conetenedor de las columnas de la descripciones de los autores, correspondencia de autor 
+    y los resumenes -->
+    <div class="contenedor-general">
+
+
+        <!-- Contenedor de los resumenes -->
+        <div class="contenedor-resumen">
+
+            <!-- Resumen Español -->
+
+            <div class="resumen-fondo">
+                <p class="titulo-resumen"> Resumen</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> <b>Objetivo:</b> Identificar los procesos institucionales implementados y/o
+                    modificados para la atención de pacientes sospechosos o diagnosticados con COVID-19 en una
+                    institución de salud
+                    de Cundinamarca. <b>Materiales y métodos:</b> Se realizó un estudio trasversal descriptivo. La
+                    recolección de datos se efectuó a través del método de revisión de registros de los procesos
+                    institucionales de una institución de segundo nivel de complejidad, desde marzo del 2020
+                    hasta diciembre del 2021. A continuación, la información se sistematizó en una matriz de
+                    Excel previo diseño, validación y aplicación. <b>Resultados:</b> Se precisa que como dato principal
+                    la institución cuenta con 80 procesos establecidos de los cuales 41 fueron modificados,
+                    lo que corresponde al 51.25%; 24 no sufrieron ninguna modificación por la pandemia lo
+                    que equivale al 30%; también se implementaron15 procesos nuevos que corresponden a un
+                    18.75%. <b>Conclusiones:</b> Se pudo determinar que las principales modificaciones se observaron
+                    en la presencia de un mayor número de procesos modificados, puesto que ante la necesidad
+                    inmediata se requirió dar respuesta a la contingencia mediante la adaptación de lineamientos
+                    ya estandarizados anteriormente, lo que permitió agilizar la respuesta ante el suceso. Además,
+                    se evidenció un impacto significativo en la atención ambulatoria debido a la demanda del servicio,
+                    así como en los procesos dirigidos directamente a la atención del paciente. Se observó
+                    que el impacto del COVID-19 transformó significativamente los procesos implementados
+                    por las entidades sanitarias, lo que las llevó a realizar cambios en las acciones ejecutadas por
+                    el personal de la salud; de ahí, que este suceso permitió examinar las problemáticas importantes que
+                    se habían invisibilizado. </p>
+
+                <p class="texto-resumen">
+                    <b>Palabras Claves: </b> COVID-19; Procesos; Salud; Impacto; Prevención; Gestión de los servicios de
+                    salud.
+                </p>
+            </div>
+            <!-- Resumen Inglés -->
+
+            <div>
+                <p class="titulo-resumen"> Abstract</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> <b>Objective:</b> Identify the implemented and/or modified institutional
+                    processes for the attention
+                    of suspected or diagnosed COVID-19 patients in a health institution of Cundinamarca. <b>Materials
+                        and methods:</b> A cross-sectional descriptive study was carried-out. The recollection
+                    of data was made through a review method of records of the institutional processes from an
+                    institution of second level of complexity, from March of 2020 to December of 2021. Next,
+                    the information was systematized in an Excel matrix that was previously designed, validated
+                    and applied. <b>Results:</b> It must be noted that as the main information, the institution has 80
+                    established processes of which 41 were modified, corresponding to 51,25%; 24 did not have any
+                    modifications due to the pandemic, which is equivalent to 30%; also implementing 15
+                    new processes that correspond to 18,75%. <b>Conclusions:</b> It was possible to determine that the
+                    main modifications were observed in the presence of a greater number of modified processes,
+                    since there was an immediate need that required to respond to the eventuality through the
+                    adaptation of previously standardized guidelines, which allowed to speed up the response to
+                    the event. Also, a significant impact was evidenced in ambulatory care due to the demand for
+                    the service, as well as in processes that were directly aimed at patient care. It was observed
+                    that the impact of COVID-19 significantly transformed the processes implemented by health
+                    entities, which led to make changes in the actions taken by the healthcare personnel; from
+                    there, this event allowed to examine important issues that had been made invisible.</p>
+
+                <p class="texto-resumen">
+                    <b>KeyWords:</b> COVID-19; Processes; Health; Impact; Prevention; Health services management.
+                </p>
+            </div>
+            <!-- Resumen Portuguez -->
+
+            <div class="resumen-fondo">
+                <p class="titulo-resumen"> Resumo</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> <b>Objetivo:</b> Identificar os processos institucionais implementados e/ou
+                    modificados para o atendimento de pacientes suspeitos ou diagnosticados com a COVID-19 em uma
+                    instituição de
+                    saúde em Cundinamarca. <b>Materiais e métodos:</b> Foi realizado um estudo transversal descritivo. A
+                    coleta de dados foi realizada por meio do método de revisão dos registros dos processos
+                    institucionais de uma instituição de segundo nível de março de 2020 a dezembro de 2021.
+                    As informações foram então sistematizadas em Excel após validação e aplicação. <b>Resultados:</b> a
+                    instituição possui 80 processos estabelecidos dos quais 41 foram modificados, o que
+                    corresponde a 51,25%; 24 (30%) não sofreram nenhuma modificação devido à pandemia;
+                    15 (18,75%) novos processos também foram implementados. <b>Conclusões:</b> Foi possível determinar
+                    que houve maior número de processos modificados, uma vez que foi necessária a
+                    resposta à contingencia por meio da adaptação de diretrizes já padronizadas anteriormente, o
+                    que permitiu acelerar a resposta ao evento. Além disso, foi evidenciado um impacto significativo no
+                    atendimento ambulatorial devido à demanda pelo serviço, bem como em processos
+                    voltados diretamente ao atendimento ao paciente. Observou-se que o impacto da COVID-19
+                    transformou significativamente os processos implementados pelas entidades de saúde, o que
+                    os levou a fazer mudanças nas ações realizadas pelos profissionais de saúde; portanto, este
+                    evento tornou possível examinar os problemas importantes que tinham se tornado invisíveis.
+                </p>
+
+                <p class="texto-resumen">
+                    <b>Palavras-chave:</b> COVID-19; Processos; Saúde; Impacto; Prevenção; Administração de serviços de
+                    saúde.
+                </p>
+            </div>
+
+
+
+        </div>
+
+        <!-- Descripcion de autores, Aprobado, Como citar, licencia -->
+        <div class="contenedor-autor">
+            <!-- Autores -->
+            <div>
+                <p class="subtitulo" style="color: black; font-size: 18px;">Autor de correspondencia*</p>
+                <!-- 1 -->
+                <p class="autores" id="sup1"><sup>1*</sup><img class="logos" src="img/globales/sobre.png"> Estudiante de
+                    pregrado del programa de enfermería de la Universidad
+                    de Ciencias Aplicadas y Ambientales
+                    U.D.CA. Bogotá, Colombia.
+                    <a href="mailto:daniortiz@udca.edu.co">daniortiz@udca.edu.co</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0001-7492-2997">0000-0001-7492-2997</a>
+                </p>
+                <!-- 2 -->
+                <p class="autores" id="sup2"><sup>2*</sup><img class="logos" src="img/globales/sobre.png"> Estudiante de
+                    pregrado del programa de enfermería de la Universidad
+                    de Ciencias Aplicadas y Ambientales
+                    U.D.CA. Bogotá, Colombia.
+                    <a href="mailto:yulrincon@udca.edu.co">yulrincon@udca.edu.co</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0002-3350-6644">0000-0002-3350-6644</a>
+                </p>
+                <!-- 3 -->
+                <p class="autores" id="sup3"><sup>3*</sup><img class="logos" src="img/globales/sobre.png"> Magister en
+                    Educación. Profesora de
+                    la Universidad de Ciencias Aplicadas y
+                    Ambientales U.D.C.A. Bogotá, Colombia.
+                    <a href="mailto:nportela@udca.edu.co">nportela@udca.edu.co</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0001-5177-3634">0000-0001-5177-3634</a>
+                </p>
+            </div>
+
+            <!--Recibido y aprobado-->
+            <div>
+                <p><b>Recibido: </b> 2 mayo 2022 <br> <b>Aprobado: </b> 25 agosto 2022 </p>
+            </div>
+
+            <!-- Como citar -->
+            <div class="cita">
+                <p class="forma-citar autores"><b>Para citar este artículo / To reference this article / Para citar este
+                        artigo:</b> Ortiz-Arias DA, Rincón-Peña YA,
+                    Portela-Escandón NY. Procesos institucionales para la atención del paciente sospechoso o
+                    diagnosticado con
+                    Covid-19.. 2022; 19(3):75-85. <a
+                        href="https://doi.org/10.22463/17949831.3375">https://doi.org/10.22463/17949831.3375</a> </p>
+            </div>
+
+            <!--Licencia-->
+            <br>
+            <div>
+                <p class="autores "> &#169; Universidad Francisco de Paula Santander.
+                    Este es un artículo bajo la licencia CC-BY-NC-ND
+                    <br>
+                    <a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img
+                            alt="Licencia Creative Commons" style="border-width:0"
+                            src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Cuerpo del documento -->
+    <div>
+        <hr>
+        <!--Introducción-->
+        <p class="titulo"> Introducción</p>
+
+        <p>
+            El origen del COVID-19 data de diciembre del año
+            2019 en Wuhan, China, en la provincia de Hubei, en
+            donde se presenció un brote de casos de neumonía grave. Al iniciar los estudios epidemiológicos estos
+            indicaban que la enfermedad se expandía rápidamente
+            y se comportaba de forma agresiva, con una letalidad
+            global del 2.3% (1). Este suceso generó un método de
+            acción con poca reflexión y comprensión, impulsando
+            acciones de respuesta inmediatas. Esto sería fundamental para el control de la enfermedad y el acceso a la
+            salud, adoptando y acatando las medidas preventivas por parte de la población y las entidades prestadoras
+            de salud (2). Así mismo, se agudizan los problemas en
+            salud y su impacto en las instituciones hospitalarias, al
+            aumentar la demanda en la prestación de servicios y un
+            cambio notorio en la reducción de cobertura en diferentes servicios, lo que exigió una serie de
+            modificaciones
+            que permitieron un proceso adecuado y oportuno para
+            la atención frente a la pandemia (3,4).
+        </p>
+
+        <p>
+            La importancia de revisar esta problemática radica en
+            brindar aportes sobre los cambios que ha generado la
+            pandemia en el sector salud, ante la emergencia sanitaria del COVID-19 y el desafió que tienen las
+            instituciones de estar preparadas para futuras situaciones
+            epidemiológicas.
+        </p>
+
+        <p>
+            Por lo anterior es necesario identificar los procesos
+            institucionales implementados y/o modificados para
+            la atención de pacientes sospechosos o diagnosticados
+            con COVID-19 en una institución de salud de Cundinamarca. Desde esta perspectiva, se busca identificar los
+            objetivos específicos, los cuales permitirán especificar
+            los procesos institucionales implementados durante la
+            pandemia del COVID-19 por la institución prestadora de salud y, al mismo tiempo describir las variables
+            específicas que permiten identificar la infraestructura,
+            que hace referencia a las instalaciones de la institución
+            de salud, incluyendo equipamiento, insumos y los distintos factores que posibilitan la atención a los
+            usuarios
+            (5).
+        </p>
+
+        <p>
+            Por otra parte, la variable general engloba aspectos
+            comunes pertenecientes a un conjunto de individuos
+            que forman parte de un contexto, catalogándolos en
+            función de sus características o atributos específicos
+            (6). Por último, se describen los servicios, los cuales
+            se definen como aquellos que brindan asistencia sanitaria, cuya articulación constituye un sistema de
+            atención orientado al mantenimiento, la restauración y la
+            promoción de la salud de las personas (7). Por tanto,
+            es importante analizar estas variables puesto que permiten efectuar una clasificación y organización de la
+            información recolectada con respecto al impacto de la
+            emergencia sanitaria, como la atención centrada en la
+            respuesta para reportar, contener y manejar el impacto
+            de la pandemia (8).
+        </p>
+
+        <hr>
+
+        <p class="titulo">Objetivos</p>
+
+        <p class="subtitulo">Objetivo General</p>
+
+        <p>
+            Identificar los procesos institucionales implementados
+            y/o modificados para la atención de pacientes sospechosos o diagnosticados con COVID-19 en una institución
+            de salud de Cundinamarca.
+
+        </p>
+
+        <p class="subtitulo">Objetivos Específicos</p>
+
+        <ul class="lista">
+            <li>Clasificar los procesos institucionales implementados durante la pandemia del COVID-19, por la
+                institución prestadora de salud. </li>
+            <li>Describir las variables de los procesos implementados y/o modificados en función de su organización y
+                priorización en la institución de salud.
+            </li>
+        </ul>
+
+        <hr>
+
+        <p class="titulo">Materiales y Métodos</p>
+
+        <p>
+            El tipo de estudio aplicado en la institución prestadora
+            de servicios de salud de Cundinamarca, con un segundo nivel de complejidad, es transversal descriptivo, lo
+            cual permite analizar datos de variables recopiladas en
+            un momento específico y en un tiempo determinado
+            (9,10). En este caso el tiempo es el que transcurre desde el inicio de la pandemia hasta la fecha de
+            aplicación
+            del estudio que incluye los cambios generados en los
+            procesos institucionales a consecuencia de la pandemia
+            COVID-19, posibilitando inferir conclusiones sobre
+            los cambios inminentes en este corte de tiempo.
+        </p>
+
+        <p>
+            La técnica implementada fue la revisión de documentos, esta permitió reunir y medir información de diversas
+            fuentes con el fin de obtener un panorama completo
+            y específico de una zona de interés (11,15).
+        </p>
+
+        <p>
+            Finalmente, se realizó una matriz de recolección de información, la cual se dividió en tres fases:
+        </p>
+
+        <p><b>1. Fase: </b>Matriz con información recolectada a
+            partir de las 3 variables de donde se extrajeron los datos
+            para el análisis (Servicios, Infraestructura y generales).
+            Además se realizó la validez del constructo.
+        </p>
+
+        <p><b>2. Fase: </b>Prueba piloto de la matriz en una institución, para probar en menor escala aspectos
+            logísticos
+            de la ejecución del estudio, de esta manera se evitará
+            cometer errores y así verificar aspectos fundamentales
+            en la utilización y planeación de los estudios posteriores (12). La validez de este constructo tiene como
+            objeto verificar que la investigación obtenga una calidad
+            óptima para que brinde evidencias válidas y confiables
+            (13).
+        </p>
+        <p><b>3. Fase: </b>Extracción de los datos, en donde se realizó un análisis comparativo de las características
+            de las
+            variables que se establecieron en cada uno de los procesos institucionales. Se clasifican dependiendo si son
+            procesos nuevos implementados y/o modificados, o si
+            son protocolos, guías y manuales. De igual forma, se
+            clasificaron teniendo en cuenta si estaban dirigidos al
+            personal sanitario o si se aplican al usuario durante su
+            estancia en la institución, o si hacen parte de un proceso asistencial o administrativo. Igualmente, se
+            incluyó
+            una caracterización global a lo que se ha denominado
+            procesos generales: a) atención ambulatoria, referida
+            a: medios diagnósticos, rehabilitación, y consulta externa; b) atención continua que incluye hospitalización
+            y urgencias; y, c) las unidades cerradas que agrupan
+            cuidado intensivo, salas de parto y salas de cirugía.
+        </p>
+
+        <div class="image">
+            <img src="img/V19-N3-8/Screenshot_1.png" width="70%">
+            <p><b>Figura 1. </b>Orden del análisis de la información </p>
+            <p><b>Fuente: </b>Elaboración propia de los autores.</p>
+        </div>
+
+        <p>
+            Conviene aclarar que esta investigación cumplió con
+            los principios éticos.
+        </p>
+
+        <p>
+            Este proyecto fue aprobado por el Comité de Ética y
+            de Investigaciones, de la Universidad de Ciencias Aplicadas y Ambientales U.D.C.A (Bogotá Colombia). La
+            participación de la institución fue previo consentimiento informado. Se consideraron los principios éticos
+            de investigación según la resolución número 8430 de
+            1993 (octubre 4) por la cual se establecen las normas
+            científicas, técnicas y administrativas para la investigación en salud de Colombia (14).
+        </p>
+
+        <p class="titulo">Resultados</p>
+
+        <p>
+            Al realizar el análisis respectivo de la información hallada en términos cuantitativos, se precisa que como
+            dato principal la institución cuenta con 80 procesos establecidos de los cuales 41 fueron modificados, lo
+            que
+            corresponde al 51.25 %; 24 no sufrieron ninguna modificación por la pandemia, lo que equivale al 30% y hay
+            15 procesos nuevos implementados, correspondientes
+            a un 18.75%.
+        </p>
+
+        <p>
+            Teniendo en cuenta, lo anterior se evidenció el impacto
+            que generó la pandemia del covid-19 en el sector salud,
+            lo cual requirió de acciones inmediatas para la atención
+            de la población.
+        </p>
+
+        <p>
+            Del mismo modo, se realizó la verificación de los 56
+            procesos, encontrándose que 41 corresponden al 73.21
+            % los cuales sufrieron alguna modificación y 15 equivalentes a un 26.78 % son nuevos y fueron implementados
+            por la actual pandemia.
+        </p>
+
+        <p>
+            Así mismo, los documentos se clasificaron en: protocolos, guías, manuales y otros; además, se pudo
+            determinar que eran procesos nuevos implementados y modificados.
+        </p>
+
+        <div class="image">
+            <p><b>Tabla 1. </b>Procesos nuevos implementados o modificados dependiendo del tipo de documento</p>
+            <img src="img/V19-N3-8/Screenshot_2.png" width="70%">
+            <p><b>Fuente: </b>Elaboración propia de los autores.</p>
+        </div>
+
+        <p>
+            Por lo tanto, es correcto inferir que los procesos, que
+            se tenían dentro de la institución presentaron en mayor
+            relevancia en cuanto a modificaciones, en comparación
+            con los procesos los cuales requirieron una nueva implementación por la pandemia del COVID-19.
+        </p>
+
+        <p>
+            Otra manera de clasificar la información fue por medio
+            de los procesos asistenciales y los administrativos, el
+            resultado que el análisis arrojó se muestra en la tabla 2.
+        </p>
+
+        <div class="image">
+            <p><b>Tabla 2. </b>Procesos asistenciales o administrativos</p>
+            <img src="img/V19-N3-8/Screenshot_3.png" width="70%">
+            <p><b>Fuente: </b>Elaboración propia de los autores</p>
+        </div>
+
+        <p>
+            De acuerdo a este análisis se evidencia que la mayoría
+            de cambios se presentaron a nivel administrativo, debido a una mayor gestión de la financiación de recursos
+            de acuerdo al tipo de servicio que se maneje; de manera
+            análoga, es necesario garantizar la estandarización de
+            los procesos institucionales, con el objeto de asegurar
+            una atención en salud de calidad, tanto para el paciente
+            receptor de la misma como para el profesional que imparte esta labor.
+        </p>
+
+        <p>
+            Igualmente, se incluye la clasificación que permite determinar qué procesos institucionales estaban
+            dirigidos
+            al personal de salud o específicamente a la atención del
+            paciente con sospecha o diagnosticado con covid-19.
+            Los resultados se pueden visualizar en la Tabla 3.
+        </p>
+
+        <div class="image">
+            <p><b>Tabla 3. </b>Procesos del personal de la salud y la atención del paciente</p>
+            <img src="img/V19-N3-8/Screenshot_4.png" width="70%">
+            <p><b>Fuente: </b>Elaboración propia de los autores.</p>
+        </div>
+
+        <p>
+            Si se tiene en cuenta el análisis anterior se puede deducir que los procesos generales se realizaron para
+            atender
+            al paciente, observándose mayor relevancia en los modificados, debido a que las principales medidas
+            preventivas se implementaron con el fin de evitar la trasmisión
+            del virus entre el personal sanitario y el paciente.
+        </p>
+
+        <p>
+            Con el fin de agrupar la información se clasificó dependiendo del tipo de variable y el servicio que
+            incluye.
+            Al tener en cuenta los 56 procesos implementados y/o
+            modificados se realiza la siguiente agrupación de la información.
+        </p>
+
+        <p>
+            De los 56 procesos institucionales implementados y/o
+            modificados por la pandemia del COVID-19, se efectuó una división de 41 procesos modificados que
+            corresponden al 73.21%, de los cuales el 53.65% hacen
+            referencia a la variable general, el 26.82% a los servicios y el 19.51% a infraestructura. Del mismo modo,
+            de los 41 procesos modificados en general, el 65.85%
+            pertenece a la atención ambulatoria, 9.7 % a la atención constante y el 24.3% a las unidades cerradas.
+        </p>
+
+        <p>
+            Respecto a los datos descritos anteriormente se determinó un valor significativo en la variable de los
+            procesos generales con un valor del 53.65% (22), debido
+            a las modificaciones principales, las cuales se realizaron a nivel estándar para toda la población que forma
+            parte de la institución, incluyendo al personal de salud
+            como a los pacientes, puesto que se buscaba garantizar
+            una mayor seguridad en la ejecución de los diferentes
+            procedimientos de acuerdo con la normativa nacional
+            vigente.
+        </p>
+
+        <p>
+            Por otro lado, analizando la clasificación por servicios
+            se evidenció que las mayores modificaciones se ejecutaron en la variable de atención ambulatoria, debido a
+            que en este servicio los procedimientos son masivos y
+            la gente acude constantemente a los servicios de salud.
+            Posteriormente, de los 15 que corresponden al 26.78%
+            de los procesos nuevos implementados por la actual
+            pandemia, se contemplan dentro de la variable generales el 80 % y por servicios el 20%. Asimismo, de los
+            26.78% procesos modificados en general, el 93.3%
+            pertenecen a la atención ambulatoria y 6.66% a las unidades cerradas.
+        </p>
+
+        <p>
+            Teniendo en cuenta lo planteado anteriormente, se puede afirmar que de los procesos implementados, el
+            impacto ha sido más significativo en la variable general, puesto que son procesos instaurados por
+            obligatoriedad
+            para el manejo y funcionamiento de las instituciones
+            de salud. Respecto a los modificados se puede deducir
+            que la alta demanda costo-efectiva y de pacientes fue la
+            atención ambulatoria, puesto que tuvo una mayor fluctuación.
+        </p>
+
+        <p class="titulo">Discusión</p>
+
+        <p>
+            El presente estudió mostró los procesos institucionales
+            implementados y/o modificados para la atención de pacientes sospechosos o diagnosticados con COVID-19
+            en una institución de salud en Cundinamarca de segundo nivel de complejidad. Se verificaron 56 procesos
+            institucionales de los cuales 41 fueron modificados y
+            se implementaron 15 nuevos. De acuerdo con esta información se observó que los procesos modificados tuvieron
+            un valor significativo a diferencia de los nuevos
+            implementados, por esta razón fue necesario destinar
+            recursos disponibles para mejorar la calidad de la atención y ampliar su cobertura, dando lugar a la
+            implementación o ajuste de métodos eficientes que permitieran mejorar el cuidado otorgado por el personal de
+            la salud (16), siendo una de las principales limitantes
+            el que la institución no tenía especificados los recursos
+            humanos y financieros que se utilizarían para la implementación de estos protocolos.
+        </p>
+
+        <p>
+            Es decir, que los procesos fueron adoptados y reformados debido a los cambios en la institución de salud.
+            Teniendo en cuenta estos datos se precisó que la información consignada en los documentos de la entidad
+            hospitalaria se vio modificada en su mayoría, para
+            cumplir con los requisitos establecidos, lo que generó
+            un método sin que hubiese reflexión y comprensión,
+            impulsando acciones de respuesta inmediata (17). Por
+            ejemplo, para llevar a cabo la demanda suscitada por la
+            contingencia se tuvo que optar por medidas, que variaban de acuerdo con las necesidades del momento. Al
+            implementar las diferentes acciones intrahospitalarias,
+            los principales problemas se empezaron a identificar de
+            acuerdo a: déficit del personal cualificado para responder a la pandemia, elementos de protección personal
+            insuficientes, insumos escasos, problemas en las cadenas
+            de producción y transporte de los mismos (18).
+        </p>
+
+        <p>
+            Posteriormente, se describen las variables de los procesos implementados y/o modificados en función de su
+            organización y priorización en la institución de salud.
+            Las reformas de los procesos institucionales han progresado en las últimas décadas y han servido para
+            presentar escenarios eficaces de prevención y control de
+            enfermedades infectocontagiosas, esto con la finalidad
+            de seguir monitoreando el SARS-COV2, y controlar su
+            velocidad de propagación en Colombia (19). Teniendo
+            en cuenta esta información, se clasificaron los procesos
+            institucionales incluyendo: protocolos, guías, manuales
+            y otros, los cuales se dividieron en procesos de carácter
+            asistencial o administrativo; a su vez se observaron si
+            iban dirigidos a los pacientes o al personal asistencial y,
+            por último, según los procesos si eran modificados y/o
+            nuevos implementados por la institución.
+        </p>
+
+        <p>
+            Respecto al análisis de los datos presentados anteriormente y la priorización de los pacientes sospechosos o
+            diagnosticados con COVID-19 se pudo observar que
+            “La pandemia ha agudizado los problemas en salud y
+            ha afectado a las instituciones hospitalarias, puesto que
+            se ha evidenciado un aumento en la tasa de mortalidad de otras enfermedades, la prestación de servicios
+            es deficiente, reducción de cobertura en vacunación y
+            fragilidad en los sistemas de organización administrativa” (3). Estas deficiencias ocasionaron
+            modificaciones
+            en la planeación, dirección, organización y control en
+            la entidad hospitalaria, sobretodo debido a la premura
+            en cuanto al tiempo para la gestión y manejo de los recursos monetarios para el sostenimiento financiero de
+            la institución, razón por la cual se deben realizar ajustes económicos que permitan distribuir insumos para
+            la
+            atención de otras afecciones, las cuales se agudizaron
+            durante la pandemia por la desorganización que se presentó al momento del manejo de la contingencia (18).
+        </p>
+
+        <p>
+            Por otro lado, el COVID-19 dio origen a nuevos procesos de atención para el manejo del binomio
+            salud-enfermedad, los cuales afectaron significativamente la
+            forma en la que el personal de la salud brindaba la
+            atención, por este motivo se modificaron o instauraron
+            procesos nuevos adaptados a la situación que se estaba
+            vivenciando; sin embargo, se procuró ofrecer de manera satisfactoria calidad en la atención en salud a los
+            sujetos de cuidado. Por eso se efectuaron acciones que
+            propiciaron procesos más significativos tales como: ingreso de acompañante, horarios de visita, atención en
+            el servicio de imagenología, manual de bioseguridad,
+            proceso de atención paciente con COVID-19 y manejo de paciente que fallecieron por COVID-19, toma de
+            muestra nasofaríngea PCR y proceso de remisión de
+            la prueba al laboratorio, protocolo de embalaje, transporte y reporte de muestras COVID-19 (20).
+        </p>
+
+        <p>
+            Los principales procesos modificados e implementados
+            en la institución fueron: ingreso del acompañante, horarios de visita, manual de bioseguridad, medidas de
+            aislamiento UCI-adultos, atención en salud mental a
+            pacientes y familiares de casos sospechosos o confirmados con COVID-19, formato de seguimiento para
+            los colaboradores que tuvieron contacto con pacientes
+            que tenían infección respiratoria.
+        </p>
+
+        <p>
+            A su vez, otro aspecto fundamental que se manejó fue
+            el relacionado con las habilidades sociales partiendo
+            de la comunicación, la cual afecta la relación enfermero-paciente, puesto que debido a los procesos de
+            aislamiento fue necesario limitar el contacto directo.
+            Igualmente, se demostró que la evolución clínica del
+            paciente dependía de la manera en la que se relacionaba con los demás, principalmente con el personal de la
+            salud y sus familiares, por esta razón se incorporaron
+            como herramientas las tecnologías de la información y
+            las comunicaciones (TICS), mediante videollamadas
+            con los parientes para minimizar el impacto social, demostrándose una mejoría significativa en el estado de
+            salud de los sujetos de cuidado (17).
+        </p>
+
+        <p>
+            También se implementó la teleconsulta, facilitando
+            una interacción terapéutica con el profesional de la salud a fin de proporcionar asesoramiento y diagnóstico
+            a través de los medios electrónicos. Otro proceso modificado se relaciona con la modalidad domiciliaria,
+            en donde médicos y enfermeras atendían a la población
+            independientemente de la causa por la cual se comunicaran, luego les indicaban la ruta que debían seguir
+            para la atención respectiva, esto con el fin de agilizar
+            la atención a los pacientes que tenían alguna emergencia o urgencia médica, la cual demandara una atención
+            inmediata. Además se garantizó el aislamiento preventivo, mediante un seguimiento continuo a los sujetos de
+            cuidado, evitando la propagación del virus, a través de
+            un servicio de salud de calidad (20).
+        </p>
+
+        <p>
+            De igual forma, se activó un protocolo exclusivo para
+            la toma de muestras de COVID-19, capacitando al personal de forma rápida y efectiva; también, se aplicó el
+            seguimiento y evaluación de la adherencia al procedimiento, teniendo en cuenta al máximo los procesos de
+            bioseguridad; asimismo se coordinó la conservación
+            de las muestras, procurando obtener resultados oportunos que garantizaran la continuidad de la calidad en la
+            atención en salud. Al respecto, Riaño afirma que “Las
+            muestras deben ser tomadas por profesionales de la salud que hayan recibido capacitación y entrenamiento
+            en la toma de este tipo de muestras, teniendo en cuenta
+            todas las instrucciones de bioseguridad” (21). Para evaluar la efectividad de las pruebas rápidas de
+            antígenos
+            frente a las pruebas genéticas virales basadas en PCR
+            y su precisión sobre el diagnóstico se analizaron variables relacionadas con la sensibilidad y especificidad
+            de
+            las pruebas (29).
+        </p>
+
+        <p>
+            En definitiva, se identificaron como observaciones
+            fundamentales que los procesos institucionales fueron
+            modificados e implementados con premura para dar
+            respuesta a la contingencia por COVID-19; de igual
+            manera, los recursos financieros se vieron afectados,
+            aspecto que es relevante e influye en la calidad de la
+            atención a los usuarios independientemente de su diagnóstico; de ahí, que sea necesario gestionar
+            adecuadamente la administración de los medios económicos con
+            el fin de garantizar la eficacia y eficiencia en la atención
+            de la salud.
+        </p>
+
+        <p>
+            Al mismo tiempo, los procesos que implicaron un impacto importante fueron: los horarios de visita,
+            modificaciones en la bioseguridad, adquisición de insumos y
+            recursos, incapacidad de los familiares para despedirse de sus seres queridos, estancia en la sala de espera
+            de los familiares y el manejo de habilidades sociales,
+            aspectos que se modificaron y se implementaron para
+            atender la contingencia por la actual pandemia; por
+            esta razón es importante destacar la adaptación de los
+            protocolos institucionales mediante la preparación para
+            la detección temprana y la gestión de las emergencias
+            hospitalarias comprendiendo el estado actual del sistema de salud, siendo el primer paso en la planificación
+            para mejorar la capacidad de los hospitales y así responder ante la necesidad requerida ( 22).
+        </p>
+
+        <p>
+            Según Cortes E, la atención centrada en la respuesta al
+            COVID-19, debe identificar, reportar, contener, manejar y referir (Contribuir en la identificación de casos,
+            contención de la expansión y manejo oportuno de todos
+            los casos de COVID-19 en la comunidad) todas las actividades, modalidades y ámbitos, los cuales se
+            establecen en los nuevos protocolos institucionales (22).
+            En la actualidad el mundo se enfrenta a una crisis de
+            grandes proporciones, lo que llevó a experimentar un
+            desafío sanitario, implementando reformas radicales en
+            las estructuras sanitarias, productivas y sociales, priorizando la utilización de dispositivos tecnológicos
+            (23).
+            Además, esta eventualidad ha demandado significativamente el uso de dispositivos técnicos y tecnológicos
+            con la finalidad de proporcionar de manera eficiente,
+            eficaz y oportuna la atención en salud.
+        </p>
+
+        <p>
+            Conviene indicar que las herramientas tecnológicas de
+            acuerdo con la evidencia científica contribuyen a la interacción social, puesto que han permitido
+            significativamente fortalecer los vínculos entre los familiares y
+            amigos cercanos; de manera análoga, se ha probado
+            que en los adultos mayores han servido para el cuidado a largo plazo y en los entornos institucionales. Esta
+            información se corrobora de acuerdo a su impacto en
+            las manifestaciones clínicas como la depresión, la ansiedad y la soledad (30).
+        </p>
+
+        <p>
+            Según investigaciones realizadas se determinó que los
+            principales factores de riesgo de la enfermedad son: la
+            edad avanzada, Diabetes, HTA, ECV y cáncer. Sin embargo, la transmisión vertical no se ha comprobado. La
+            mayoría de los pacientes tienen un pronóstico bueno,
+            aunque es menos favorable para quienes tienen edad
+            avanzada y comorbilidades como las anteriormente
+            mencionadas (24). También, se dio prioridad en atender a pacientes diagnosticados con COVID-19, puesto
+            que era necesario tener en cuenta estos datos para analizar el perfil epidemiológico de la enfermedad.
+        </p>
+
+        <p>
+            Por tanto, las características generales que se tuvieron
+            en cuenta en los procesos institucionales radican en la
+            identificación y detección temprana de las manifestaciones clínicas para tomar las medidas respectivas. Del
+            mismo modo, se consideraron las indicaciones generales enunciadas en los protocolos a la hora de ingresar al
+            paciente, tales como: fiebre, cefalea, astenia, adinamia,
+            anorexia, mialgias; y síntomas respiratorios como: rinorrea, dolor faríngeo, tos seca, tos con expectoración
+            y disnea (25); es decir, que se privilegiaron estas medidas preventivas y correctivas. Al respecto la
+            secretaria distrital de salud en Bogotá expresa que hay que
+            “desarrollar recomendaciones generales que garanticen
+            la protección a trabajadores sanitarios, pacientes, familiares y la comunidad, desde cada uno de los
+            servicios
+            que prestan atención en salud y los aspectos de bioseguridad” (26).
+        </p>
+
+        <p>
+            Teniendo en cuenta, estos lineamientos internacionales,
+            fue necesario que las instituciones de salud estandarizaran los procedimientos, con el objetivo de mitigar
+            el
+            impacto del COVID-19. De igual forma, es importante
+            utilizar guías o protocolos, que planteen términos de referencia o parámetros que permitan valorar la
+            calidad
+            de la atención ofrecida; no obstante, esta práctica es
+            variable, tanto en la utilización de los recursos de salud
+            como en los resultados que se obtienen, atribuibles a
+            las diferencias en la oferta de servicios y a la disparidad
+            en la prestación de los mismos. (25).
+        </p>
+
+        <p>
+            Es necesario recalcar, sobre la importancia de priorizar
+            la atención en salud, puesto que se abarcan aspectos
+            como los determinantes sociales, los cuales interferirán
+            en la forma en se adopten medidas y prácticas sanitarias, que según Tobar corresponde a “El conjunto de
+            procesos a través de los cuales se concretan las prestaciones y cuidados de salud a un individuo, un grupo
+            familiar, una comunidad y/o una población” (27). Esto
+            se realiza con el fin de buscar "un estado de equilibrio
+            y de bienestar físico, mental y social, y no sólo la ausencia de enfermedad" que se define como un estado
+            de salud (28).
+        </p>
+
+        <!-- conclusiones -->
+
+        <hr>
+
+        <p class="titulo">Conclusiones</p>
+
+        <p>
+            Se evidenció que es necesario implementar nuevos procesos institucionales y modificar los existentes, con la
+            finalidad de brindar una mejor atención en salud y disminuir la exposición de los sujetos de cuidado al
+            COVID-19. De igual forma se determinó que las principales modificaciones se observan en un mayor número de
+            procesos, ante la necesidad inmediata de dar respuesta a la contingencia, mediante la adaptación de
+            lineamientos ya estandarizados, lo que permitió agilizar la repuesta ante el suceso.
+        </p>
+
+        <p>
+            Desde otro punto de vista, se concluyó que a través de
+            las variables se determinaron los principales aspectos
+            afectados como son: los horarios de visita, modificaciones en la bioseguridad, déficit del personal
+            cualificado, habilidades sociales, medidas preventivas, manejo de pruebas de laboratorio, tiempos de
+            aislamiento,
+            adquisición de insumos y recursos médicos. Además
+            se observó un impacto significativo en la atención ambulatoria y en los procesos dirigidos directamente a la
+            atención del paciente.
+        </p>
+
+        <p>
+            Además, se pudo comprobar que el impacto del COVID-19, transformó significativamente los procesos
+            implementados por las entidades sanitarias, lo que las
+            llevó a efectuar cambios en las acciones ejecutadas por
+            el personal de salud, permitiendo visibilizar problemáticas importantes.
+        </p>
+
+        <p>
+            En la clasificación de los procesos encontrados se incluyó una división de acuerdo a sus características
+            particulares como protocolos, guías y manuales, lo que
+            permitió concluir que un porcentaje significativo está
+            relacionado con la atención del profesional de la enfermería (9).
+        </p>
+
+        <p class="subtitulo">Conflicto de intereses</p>
+
+        <p>
+            Los autores declaran no tener ningun conflicto de intereses.
+        </p>
+
+        <!-- Referencias -->
+
+        <hr>
+
+        <p class="titulo"> Referencias Bibliograficas </p>
+
+        <ol class="lista">
+            <li id="r1">Díaz-Castrillón FJ, Toro-Montoya AI. SARS-CoV-2/COVID-19: el virus, la enfermedad y la pandemia.
+                Med.
+                Lab. 5 de mayo de 2020;24(3):183-05. Disponible en: <a
+                    href="https://medicinaylaboratorio.com/index.php/myl/article/view/268">https://medicinaylaboratorio.com/index.php/myl/article/view/268</a>
+            </li>
+            <li id="r2">Isaza Villamizar E, González-Casabianca F, Herrera S, Rodríguez-Barraquer T, Ángel A, Corredor
+                V, et al.
+                Políticas públicas, grandes datos, teoría de redes y COVID-19. Desafíos; 2020. Disponible en: <a
+                    href="https://revistas.urosario.edu.co/index.php/desafios/article/view/9205/8190">https://revistas.urosario.edu.co/index.php/desafios/article/view/9205/8190</a>
+            </li>
+            <li id="r3">Acevedo OB. Brief report.Impacto de la COVID-19 en los sistemas de salud. OPS. 2020. Disponible
+                en: <a
+                    href="https://www.campusvirtualsp.org/sites/default/files/final_esp_brief_covid_y_sistemas_de_salud_.pdf">https://www.campusvirtualsp.org/sites/default/files/final_esp_brief_covid_y_sistemas_de_salud_.pdf</a>
+            </li>
+            <li id="r4">OMS. Coronavirus. Organización mundial de salud. 2021. Disponible en: <a
+                    href="https://www.who.int/es/health-topics/coronavirus">https://www.who.int/es/health-topics/coronavirus</a>
+            </li>
+            <li id="r5">López F, Aguilar AG. Niveles de cobertura y accesibilidad de la infraestructura de los servicios
+                de salud en
+                la periferia metropolitana de la Ciudad de México. Invest Geogr . 2004;(53):185–209. Disponible en: <a
+                    href="http://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S0188-46112004000100011">http://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S0188-46112004000100011</a>
+            </li>
+            <li id="r6">Rae. General. Diccionario de la lengua española.2001. Disponible en: <a
+                    href="https://www.rae.es/drae2001/general">https://www.rae.es/drae2001/general</a></li>
+            <li id="r7">Vargas-González V, Valecillos J, Hernández C. Calidad en la prestación de servicios de salud:
+                Parámetros de
+                medición. Rev cienc soc - Univ Zulia, Fac Cienc Econ Soc. 2013 ;19(4). Disponible en: <a
+                    href="https://www.redalyc.org/pdf/280/28029474005.pdf">https://www.redalyc.org/pdf/280/28029474005.pdf</a>
+            </li>
+            <li id="r8">Lizeth K, Cortes E. Protocolo para la adaptación en infraestructura y dotación de los servicios
+                de uci y urgencias de una unidad hospitalaria temporal durante emergencia sanitaria en Colombia. Edu.co.
+                Disponible
+                en: <a
+                    href="https://repository.urosario.edu.co/bitstream/handle/10336/30725/EncisoCortes-KarenLizeth.pdf?sequence=1&isAllowed=y">https://repository.urosario.edu.co/bitstream/handle/10336/30725/EncisoCortes-KarenLizeth.pdf?sequence=1&isAllowed=y</a>
+            </li>
+            <li id="r9">Cvetkovic-Vega A, Maguiña JL, Soto A, Lama-Valdivia J, Correa-López LE. Estudios transversales.
+                Rev. Fac.
+                Med. Hum. 2021 Ene; 21(1): 179-185. Disponible en: <a
+                    href="http://dx.doi.org/10.25176/rfmh.v21i1.3069">http://dx.doi.org/10.25176/rfmh.v21i1.3069</a>
+            </li>
+            <li id="r10">Olsen C, Marie D, St M. Cross-sectional study design and data analysis. Yes-competition.
+                Disponible en:
+                <a
+                    href="http://www.yes-competition.org/media.collegeboard.com/digitalServices/pdf/yes/4297_MODULE_05.pdf">http://www.yes-competition.org/media.collegeboard.com/digitalServices/pdf/yes/4297_MODULE_05.pdf</a>
+            </li>
+            <li id="r11">Barbosa Chacón JW, Barbosa Herrera JC, Rodríguez Villabona M. Revisión y análisis documental
+                para estado del arte: una propuesta metodológica desde el contexto de la sistematización de experiencias
+                educativas.
+                Investig Bibl Arch Bibliotecol; 27(61):83–105. Disponible en: <a
+                    href="http://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S0187-358X2013000300005">http://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S0187-358X2013000300005</a>
+            </li>
+            <li id="r12">Díaz-Muñoz Gustavo. Metodología del estudio piloto. Rev. chil. radiol. 2020 Sep ; 26( 3 ):
+                100-104. Disponible en: <a
+                    href="http://dx.doi.org/10.4067/S0717-93082020000300100">http://dx.doi.org/10.4067/S0717-93082020000300100</a>
+            </li>
+            <li id="r13">Martínez-Corona JI, Palacios-Almón GE, Juárez-Hernández LG. Análisis de validez de constructo
+                del
+                instrumento: “Enfoque Directivo en la Gestión para Resultados en la Sociedad del Conocimiento. Retos.
+                2020;10(19):153–65. Disponible en: <a
+                    href="http://scielo.senescyt.gob.ec/scielo.php?script=sci_arttext&pid=S1390-86182020000100153">http://scielo.senescyt.gob.ec/scielo.php?script=sci_arttext&pid=S1390-86182020000100153</a>
+            </li>
+            <li id="r14">Ministerio de S. RESOLUCIÓN No 008430 DE 1993 (4 DE OCTUBRE DE 1993) . REPÚBLICA DE COLOMBIA
+                MINISTERIO DE SALUD. 1993. Disponible en: <a
+                    href="https://www.urosario.edu.co/Escuela-Medicina/Investigacion/Documentos-de-interes/Files/resolucion_008430_1993.pdf">https://www.urosario.edu.co/Escuela-Medicina/Investigacion/Documentos-de-interes/Files/resolucion_008430_1993.pdf</a>
+            </li>
+            <li id="r15">Torres M, Salazar FG, Paz K. Métodos de recolección de datos para una investigación. 2019;
+                Disponible en:
+                <a
+                    href="http://148.202.167.116:8080/jspui/handle/123456789/2817">http://148.202.167.116:8080/jspui/handle/123456789/2817</a>
+            </li>
+            <li id="r16">Mendoza-Popoca CÚ, Suárez-Morales M. Reconversión hospitalaria ante la pandemia de COVID-19.
+                Revista
+                Mexicana de Anestesiología. 2020;43(2):77–82. Disponible en: <a
+                    href="http://www.medigraphic.com/pdfs/rma/cma2020/cma202l.pdf">http://www.medigraphic.com/pdfs/rma/cma2020/cma202l.pdf</a>
+            </li>
+            <li id="r17">Villamizar E, González F, Herrera S, Ángel Á. Políticas públicas, grandes datos, teoría de
+                redes y COVID-19.
+                2020. Disponible en: <a
+                    href="https://revistas.urosario.edu.co/index.php/desafios/article/view/9205/8190">https://revistas.urosario.edu.co/index.php/desafios/article/view/9205/8190</a>
+            </li>
+            <li id="r18">Almeida IM. Proteção da saúde dos trabalhadores da saúde em tempos de pandemia e respostas à
+                pandemia.
+                Rev. Bras. Saúde Ocup. 2020. Disponible en: <a
+                    href="https://www.scielo.br/j/rbso/a/yyZ869N3cDZpLdsTJvNkvKb">https://www.scielo.br/j/rbso/a/yyZ869N3cDZpLdsTJvNkvKb</a>
+            </li>
+            <li id="r19">. Díaz-Pinzón JE. Perspectiva del COVID-19 en Colombia para el año 2021. Rev. repert med cir
+                .2020;128–33.
+                Disponible en: <a
+                    href="https://revistas.fucsalud.edu.co/index.php/repertorio/article/view/1136">https://revistas.fucsalud.edu.co/index.php/repertorio/article/view/1136</a>
+            </li>
+            <li id="r20">Pérez-Nieto OR, Zamarrón López EI, Guerrero Gutiérrez MA, Soriano Orozco R, Figueroa Uribe AF,
+                López
+                Fermín J, et al. Protocolo de manejo para la infección por COVID-19. Medicina Crítica. 2020;33(1):43–52.
+                Disponible en: <a
+                    href="http://www.medigraphic.com/pdfs/medcri/ti-2020/ti201c.pdf">http://www.medigraphic.com/pdfs/medcri/ti-2020/ti201c.pdf</a>
+            </li>
+            <li id="r21">Riaño M. Lineamientos para la gestión de muestras durante la pandemia del SARS-COV-2 (covid-19)
+                en
+                Colombia. Gov.co. 2020. Disponible en: <a
+                    href="http://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/VS/ED/VSP/psps02-lineamientos-gmuestras-pandemia-sars-cov-2-col.pdf">http://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/VS/ED/VSP/psps02-lineamientos-gmuestras-pandemia-sars-cov-2-col.pdf</a>
+            </li>
+            <li id="r22">. Enciso-Cortes KL. Protocolo para la adaptación en infraestructura y dotación de los servicios
+                de uci y urgencias de una unidad hospitalaria temporal durante emergencia sanitaria en Colombia Edu.co.
+                Disponible
+                en: <a
+                    href="https://repository.urosario.edu.co/bitstream/handle/10336/30725/EncisoCortes-KarenLizeth.pdf?sequence=1&isAllowed=y">https://repository.urosario.edu.co/bitstream/handle/10336/30725/EncisoCortes-KarenLizeth.pdf?sequence=1&isAllowed=y</a>
+            </li>
+            <li id="r23">Castaño A, Giraldo P, Marín I. Comportamientos y cambios que trajo consigo el Covid-19 en la
+                Ciudad de
+                Medellín en el mes de septiembre del año 2020. Edu.co. 2020. Disponible en: <a
+                    href="https://repository.ucc.edu.co/bitstream/20.500.12494/20460/1/2020-Casta%C3%B1oGiraldoyMarin-comportamientos_cambios_covid.pdf">https://repository.ucc.edu.co/bitstream/20.500.12494/20460/1/2020-Casta%C3%B1oGiraldoyMarin-comportamientos_cambios_covid.pdf</a>
+            </li>
+            <li id="r24">Díaz J TA. Vista de SARS-CoV-2/COVID-19: el virus, la enfermedad y la pandemia. Medicina y
+                laboratorio.
+                2020; Disponible en: <a
+                    href="https://medicinaylaboratorio.com/index.php/myl/article/view/268/256">https://medicinaylaboratorio.com/index.php/myl/article/view/268/256</a>
+            </li>
+            <li id="r25">Vera-Carrasco O. Guías de atención, guías de práctica clínica, normas y protocolos de atención.
+                rev médica - col méd paz. 2019. (2):70–7. Disponible en: <a
+                    href="http://www.scielo.org.bo/scielo.php?script=sci_arttext&pid=S1726-89582019000200011&lng=pt&nrm=iso">http://www.scielo.org.bo/scielo.php?script=sci_arttext&pid=S1726-89582019000200011&lng=pt&nrm=iso</a>
+            </li>
+            <li id="r26">Salud S. Recomendaciones para la operación de servicios UCI en el marco de la emergencia por
+                COVID-19
+                .2020. Org.co. Disponible en: <a
+                    href="https://hospitalinfantildesanjose.org.co/images/covid/circular-059-23-09-2020.pdf">https://hospitalinfantildesanjose.org.co/images/covid/circular-059-23-09-2020.pdf</a>
+            </li>
+            <li id="r27">OMS. La atención de la salud. Salud.Gob.ar. 2020. Disponible en: <a
+                    href="https://salud.gob.ar/dels/entradas/la-atencion-de-la-salud">https://salud.gob.ar/dels/entradas/la-atencion-de-la-salud</a>
+            </li>
+            <li id="r28">León Barua R, Berenson Seminario R. Medicina teórica.: Definición de la salud. Rev Médica
+                Hered. 1996;7(3):105–7. Disponible en: <a
+                    href="http://www.scielo.org.pe/scielo.php?script=sci_arttext&pid=S1018-130X1996000300001">http://www.scielo.org.pe/scielo.php?script=sci_arttext&pid=S1018-130X1996000300001</a>
+            </li>
+            <li id="r29">Armond M, Feliciano S, Hirabayashi E, Duus KM, Else TA, Stone AEL. Diagnostic accuracy of rapid
+                antigen tests for COVID-19 compared to the viral genetic test in adults: a systematic review protocol: A
+                systematic review protocol. JBI Evid Synth. 2021 ;19(5):1148–56. Disponible en: <a
+                    href="https://pubmed.ncbi.nlm.nih.gov/33851942/">https://pubmed.ncbi.nlm.nih.gov/33851942/</a></li>
+            <li id="r30">Macdonald M, Martin-Misener R, Weeks L, Moody E, McKibbon S, Wilson B, et al. Assistive
+                technologies
+                that support social interaction in long term care homes: a scoping review protocol: A scoping review
+                protocol.
+                JBI Database System Rev Implement Rep. 2019;18(3):592–8. Disponible en: <a
+                    href="https://pubmed.ncbi.nlm.nih.gov/32197019/">https://pubmed.ncbi.nlm.nih.gov/32197019/</a></li>
+        </ol>
+    </div>
+</body>
+
+</html>

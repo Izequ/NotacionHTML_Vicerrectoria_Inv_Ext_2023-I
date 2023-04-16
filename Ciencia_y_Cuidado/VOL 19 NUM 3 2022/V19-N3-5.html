@@ -1,0 +1,1159 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V19-N3-5</title>
+    <link rel="stylesheet" href="">
+    <style>
+        body {
+            padding: 10em;
+            padding-top: 20px;
+            font-family: Times New Roman;
+            color: black;
+        }
+
+        #articulo-derecha {
+            float: left;
+        }
+
+        /* Posiciones de los resumenes */
+
+        .contenedor-general {
+            display: inline-flex;
+            width: 100%;
+        }
+
+        .contenedor-resumen {
+            width: 240%;
+        }
+
+        .contenedor-autor {
+            width: 100%;
+            padding-left: 20px;
+        }
+
+        .hr-resumen {
+            background-color: gray;
+            margin: 0;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .resumen-fondo {
+            background-color: #bdd5f1;
+            border-radius: 5px;
+        }
+
+        .titulo-resumen {
+            color: black;
+            font-size: 22px;
+            font-weight: bold;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .texto-resumen {
+            padding: 20px;
+            margin: 0;
+        }
+
+        ul.navbar {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 25em;
+            left: 2em;
+            width: 250px;
+        }
+
+        /* Titulos principales */
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: Times New Roman;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        h1 {
+            color: #29abe3;
+        }
+
+        .categoria_titulo {
+            font-style: italic;
+            color: #ffffff;
+        }
+
+        h3 {
+            font-style: italic;
+            font-weight: bold;
+            color: #707073;
+        }
+
+        .categoria {
+            text-align: center;
+            background-color: #707073;
+            width: 20%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            margin: auto;
+        }
+
+        ul.navbar li {
+            background: white;
+            margin: 0.5em 0;
+            padding: 0.3em;
+        }
+
+        /* Enlaces */
+
+        a.link-color:visited {
+            color: white;
+        }
+
+        a.link-color:link {
+            color: white;
+        }
+
+        a.link-color:hover {
+            color: white;
+        }
+
+        a.link-color:hover {
+            border-bottom: 1px solid;
+            background: black;
+        }
+
+        /* Link de referencia */
+
+        a:link {
+            color: #4e00ff;
+        }
+
+        a:visited {
+            color: #003bff;
+        }
+
+        a:focus {
+            border-bottom: 1px solid;
+            background: #98aae4;
+        }
+
+        a:hover {
+            border-bottom: 1px solid;
+            background: #aacefe;
+        }
+
+        /* Etiqueta P */
+
+        p {
+            line-height: normal;
+            text-align: justify;
+            font-size: 18px;
+        }
+
+        p.titulo {
+            color: #29abe3;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        p.subtitulo {
+            color: #29abe3;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* NUEVO */
+        p.subtitulo-segundo {
+            color: #29abe3;
+            font-style: italic;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        p.correspondencia {
+            color: black;
+            font-size: 18px;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        /* NUEVO */
+        p.entrevista {
+            color: black;
+            font-size: 18px;
+            font-style: italic;
+        }
+
+        /* NUEVO */
+        p.subtitulo-tercero {
+            color: #29abe3;
+            font-style: italic;
+            font-size: 18px;
+        }
+
+        p#cabeza {
+            color: #1d71ae;
+            text-align: center;
+        }
+
+        p.autores {
+            font-size: 16px;
+            margin: 0;
+            text-indent: 0em;
+            margin-bottom: 10px;
+        }
+
+        p.forma-citar {
+            text-indent: 0em;
+            text-align: justify;
+            justify-content: center;
+        }
+
+        .cita {
+            text-align: -webkit-center;
+        }
+
+        /* Bold especial para palabras que tienen color seguido de dos puntos
+*/
+
+        /* NUEVO */
+
+        b.subtitulo-segundo {
+            color: #29abe3;
+            font-size: 18px;
+        }
+
+        .contenedor_info {
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .info {
+            width: auto;
+        }
+
+        /* Este es para los documentos del dos en adelante *codigo abajo de este comentario* */
+
+        .info-text {
+            text-align: end;
+            margin: 0;
+        }
+
+        /* Uso Exlusico para el primero documento  que es de revision  *codigo abajo de este comentario* */
+
+        .info_text {
+            font-size: 12px;
+            line-height: 100%;
+            text-align: center;
+            margin: 0;
+        }
+
+        .info_hr {
+            margin: 5;
+        }
+
+        /* Fin P */
+        /* Etiqueta Italic */
+
+        i {
+            font-size: 18px
+        }
+
+        i.centrado {
+            font-size: 18px
+        }
+
+        /* LI para las listas */
+
+        li {
+            font-size: 18px;
+            padding-top: 10px;
+            text-align: justify;
+        }
+
+        /* NUEVO */
+        .lista li {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        hr {
+            background-color: #29abe3;
+            height: 1px;
+        }
+
+        /* Tablas */
+
+        table {
+            border-collapse: collapse;
+            border: 2px solid rgb(0, 0, 0);
+            align-items: center;
+        }
+
+        thead th {
+            border-collapse: collapse;
+            background-color: rgb(179, 179, 179);
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        tbody td {
+            border-collapse: collapse;
+            text-align: center;
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        .tipo {
+            color: #ffffff;
+            font-size: 22px;
+            border-radius: 10px 5px 10px 5px;
+            background-color: #696969;
+        }
+
+        img.logos {
+            width: 15px;
+            height: 15px;
+        }
+
+        .image {
+            text-align: center;
+            image-rendering: optimizeQuality;
+        }
+
+        .image p {
+            text-align: center;
+            font-size: small;
+        }
+
+        .logo {
+            width: 300px;
+            height: 80px;
+        }
+
+        .logo2 {
+            width: 300px;
+            height: 50px;
+        }
+
+        /* Anclajes de la pagina */
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* NUEVO */
+        .ecuacion {
+            text-align: center;
+            font-weight: bold;
+            margin: 1px;
+        }
+
+        @media only screen and (min-width:320px) and (max-width:900px) {
+            body {
+                width: 100%;
+                padding: 5em;
+                margin: 5px;
+            }
+
+            .image {
+                text-align: center;
+                image-rendering: optimizeQuality;
+            }
+
+            .image img {
+                width: 100%;
+            }
+
+            .image p {
+                font-size: small;
+                text-align: center;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="contenedor_info">
+        <div>
+            <img src="img/globales/logo.jpg" alt="" height="125px">
+        </div>
+        <div class="info" style="text-align: right;">
+            <p class="info-text"> ISSN-PRINT 1794-9831 / E-ISSN 2322-7028 </p>
+            <p class="info-text"> Vol. 19 Nº 3 / sep - dic, 2022 / Cúcuta, Colombia. </p>
+            <p class="info-text">
+                <img src="img/globales/doi.png" height="20px" alt="">
+                <a href="https://doi.org/10.22463/17949831.3306">https://doi.org/10.22463/17949831.3306</a>
+            </p>
+        </div>
+    </div>
+
+
+    <!--Categoría-->
+    <div class="categoria">
+        <h2 class="categoria_titulo">Original </h2>
+    </div>
+
+    <h1> Diseño y validación del cuestionario de autocuidado preventivo
+        del pie diabético NAPD </h1>
+
+    <h2 class="segundo"> Design and validation of diabetic foot preventive self-care questionnaire NAPD</h2>
+
+    <h2 class="segundo"> Desenvolvimento e validação do questionário de autocuidado preventivo do pé diabético
+        NAPD</h2>
+
+
+    <!--Autores-->
+    <h3>
+        Mónica Paola Quemba-Mesa <sup><a href="#sup1">1*</a> </sup> <br>
+        Juan David Vega-Padilla <sup><a href="#sup2">2*</a> </sup> <br>
+        Edwar Rozo-Ortiz <sup><a href="#sup3">3*</a> </sup> <br>
+        Luz Johanna Ramos-Hernández <sup><a href="#sup4">4*</a> </sup> <br>
+        Olga Lucía Riaño-López <sup><a href="#sup5">5*</a> </sup> <br>
+    </h3>
+
+
+    <!-- Conetenedor de las columnas de la descripciones de los autores, correspondencia de autor 
+    y los resumenes -->
+    <div class="contenedor-general">
+
+
+        <!-- Contenedor de los resumenes -->
+        <div class="contenedor-resumen">
+
+            <!-- Resumen Español -->
+
+            <div class="resumen-fondo">
+                <p class="titulo-resumen"> Resumen</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> <b>Objetivo:</b> Realizar el diseño y la validación del cuestionario “Nivel de
+                    autocuidado en la
+                    prevención del pie diabético” en términos de su contenido, constructo, confiabilidad y sensibilidad.
+                    <b>Material y método:</b> Estudio psicométrico desarrollado en tres fases: diseño del
+                    instrumento, a partir de las categorías teóricas que surgen de 8 entrevistas a personas con
+                    diabetes mellitus; validación aparente y de contenido, contando con la participación de 20
+                    jueces expertos; y, validez del constructo, confiabilidad y sensibilidad, contando con 158
+                    mediciones del instrumento. <b>Resultados:</b> El proceso de teorización dio origen a la versión
+                    inicial del cuestionario con 23 ítems; sin embargo, en la validación facial y de contenido
+                    requirió mejorías en la redacción y retirar un ítem, cambios que se efectuaron siguiendo las
+                    observaciones de los expertos tales como: Índice de Validez de Contenido de 0.88 y Kappa
+                    de Fleiss de 0.7606 (p=0.000). Finalmente se obtuvo la versión 2 del cuestionario NAPD.V2
+                    con 22 ítems agrupados en 5 dimensiones: automanejo de la diabetes, percepción sobre el pie
+                    diabético, impacto emocional de la enfermedad, el cuidado rutinario de los pies y la percepción
+                    sobre el soporte social. Además, el análisis factorial exploratorio mostró una adecuada
+                    validez del constructo y su confiabilidad evidenció buen rendimiento -Alfa de Cronbach de
+                    0,942- y una sensibilidad significativa sobre la -prueba Wilcoxon p=0.000-. <b>Conclusiones:</b>
+                    Tras el diseño y la validación se obtiene el cuestionario NAPD.V2 con propiedades psicométricas
+                    adecuadas para ser usado en la población con diabetes mellitus colombiana
+                </p>
+
+                <p class="texto-resumen">
+                    <b>Palabras Claves: </b> Psicometría; Diabetes Mellitus; Educación en salud; Pie diabético;
+                    Autocuidado; Conductas relacionadas con la Salud.
+                </p>
+            </div>
+            <!-- Resumen Inglés -->
+
+            <div>
+                <p class="titulo-resumen"> Abstract</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> <b>Objective:</b> Carry out the design and validation of the questionnaire
+                    "Level of self-care in the
+                    prevention of diabetic foot" in terms of its content, construct, reliability and sensitivity.
+                    <b>Material and method:</b> Psychometric study developed in three phases: design of the instrument,
+                    based on the conceptualized theoretical categories of 8 interviews with people with diabetes
+                    mellitus; face and content validity, with the participation of 20 expert judges; and construct
+                    validity, reliability, and sensitivity, through 158 instrument measurements. <b>Results:</b> The
+                    theorization process gave rise to the initial version of the questionnaire with 23 items; however,
+                    the face and content validity required improvements in writing and removing an item, these
+                    changes were made following the experts’ observations such as: Content Validity Index of
+                    0.88 and Fleiss’ Kappa of 0.7606 (p = 0.000). Finally, the second version of the questionnaire was
+                    made with 22 items grouped in 5 dimensions: self-management of diabetes, perception
+                    of the diabetic foot, emotional impact of the disease, routinary foot care and perception of social
+                    support. Furthermore, the exploratory factor analysis showed adequate construct validity,
+                    and its reliability evidenced good performance -Cronbach's Alpha of 0.942- and significant
+                    sensitivity -Wilcoxon test p = 0.000-. <b>Conclusions:</b> After design and validation, a
+                    questionnaire with adequate psychometric properties was obtained to be used in the Colombian
+                    population with diabetes mellitus.
+                </p>
+
+                <p class="texto-resumen">
+                    <b>KeyWords:</b> Psychometrics; Diabetes mellitus; Health education; Diabetic foot; Self-care;
+                    Health behavior.
+                </p>
+            </div>
+            <!-- Resumen Portuguez -->
+
+            <div class="resumen-fondo">
+                <p class="titulo-resumen"> Resumo</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> <b>Objetivo: </b> Desenvolver e validar o questionário “Nível de autocuidado
+                    na prevenção do pé diabético” em termos de conteúdo, construto, confiabilidade e sensibilidade.
+                    <b>Material e método:</b> Estudo psicométrico desenvolvido em três fases: desenvolvimento do
+                    instrumento, a partir das categorias teóricas que surgiram de oito entrevistas à pessoas com
+                    Diabetes Mellitus;
+                    validação aparente e de conteúdo, contando com a participação de vinte juízes expertos; e,
+                    validez de construto, confiabilidade e sensibilidade com a realização de 158 medições do
+                    instrumento. <b>Resultados:</b> O processo de teorização deu origem à versão inicial do questionário
+                    com 23 itens; entretanto, a validação facial e de conteúdo sugeriu melhorar a redação e tirar
+                    um item, mudanças efetivadas seguindo o parecer dos expertos: índice de validez de conteúdo de 0,88
+                    e Kappa de Fleiss de 0,7606 (p=0,000). Finalmente, obteve-se a versão 2 do
+                    questionário NAPD.V2 com 22 itens agrupados em cinco dimensões: autogestão do diabetes,
+                    percepções do pé diabético, impacto emocional da doença, cuidados rotineiros com os pés
+                    e percepção do apoio social. Além disso, o analise fatorial exploratório mostrou adequada
+                    validação de construto e a confiabilidade do questionário evidencio bom rendimento (Alpha
+                    de Cronbach=0,92) e uma sensibilidade significativa na prova de Wilcoxon p=0,000. <b>Conclusões:</b>
+                    Obteve-se o questionário NAPD.V2 posterior a procedimentos de desenvolvimento
+                    e validação obtendo propriedades psicométricas adequadas para o seu uso na população com
+                    diabetes mellitus colombiana.
+                </p>
+
+                <p class="texto-resumen">
+                    <b>Palavras-chave:</b> Psicometria; Diabetes mellitus; Educação em saúde; Pé diabético; Autocuidado;
+                    Comportamentos relacionados com a saúde.
+                </p>
+            </div>
+
+
+
+        </div>
+
+        <!-- Descripcion de autores, Aprobado, Como citar, licencia -->
+        <div class="contenedor-autor">
+            <!-- Autores -->
+            <div>
+                <p class="subtitulo" style="color: black; font-size: 18px;">Autor de correspondencia*</p>
+                <!-- 1 -->
+                <p class="autores" id="sup1"><sup>1*</sup><img class="logos" src="img/globales/sobre.png"> Enfermera,
+                    Especialista en Epidemiología Clínica, Magister en Enfermería, Candidata a doctora en Bioética.
+                    Docente – Investigadora, Universidad
+                    de Boyacá. Tunja – Colombia.
+                    <a href="mailto:mpquemba@uniboyaca.edu.co">mpquemba@uniboyaca.edu.co</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0001-5646-6123">0000-0001-5646-6123</a>
+                </p>
+                <!-- 2 -->
+                <p class="autores" id="sup2"><sup>2*</sup><img class="logos" src="img/globales/sobre.png"> Médico,
+                    Especialista en Epidemiología. Investigador Universidad de
+                    Boyacá. Tunja – Colombia.
+                    <a href="mailto:ddavids89@hotmail.com">ddavids89@hotmail.com</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0001-6063-664X">0000-0001-6063-664X</a>
+                </p>
+                <!-- 3 -->
+                <p class="autores" id="sup3"><sup>3*</sup><img class="logos" src="img/globales/sobre.png"> Médico,
+                    Especialista en Medicina
+                    Interna. Docente - Investigador Universidad de Boyacá. Tunja – Colombia.
+                    <a href="mailto:ejrozo@uniboyaca.edu.co">ejrozo@uniboyaca.edu.co</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0002-3519-3645">0000-0002-3519-3645</a>
+                </p>
+                <!-- 4 -->
+                <p class="autores" id="sup4"><sup>4*</sup><img class="logos" src="img/globales/sobre.png"> Enfermera.
+                    Egresada de la Universidad de Boyacá. Tunja – Colombia.
+                    <a href="mailto:luzramos@uniboyaca.edu.co">luzramos@uniboyaca.edu.co</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0001-9031-6233">0000-0001-9031-6233</a>
+                </p>
+                <!-- 5 -->
+                <p class="autores" id="sup5"><sup>5*</sup><img class="logos" src="img/globales/sobre.png"> Enfermera.
+                    Egresada de la Universidad de Boyacá. Tunja – Colombia.
+                    <a href="mailto:olriano@uniboyaca.edu.co">olriano@uniboyaca.edu.co</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0002-2251-2395">0000-0002-2251-2395</a>
+                </p>
+            </div>
+
+            <!--Recibido y aprobado-->
+            <div>
+                <p><b>Recibido: </b> 14 marzo 2022 <br> <b>Aprobado: </b> 8 julio 2022 </p>
+            </div>
+
+            <!-- Como citar -->
+            <div class="cita">
+                <p class="forma-citar autores"><b>Para citar este artículo / To reference this article / Para citar este
+                        artigo:</b> Quemba-Mesa MP, Vega-Padilla
+                    JD, Rozo-Ortiz E, Ramos-Hernández LJ, Rianño-López OL. Diseño y
+                    validación del cuestionario de autocuidado preventivo del pie diabético
+                    NAPD. 2022; 19(3):44-55. <a
+                        href="https://doi.org/10.22463/17949831.3306">https://doi.org/10.22463/17949831.3306</a> </p>
+            </div>
+
+            <!--Licencia-->
+            <br>
+            <div>
+                <p class="autores "> &#169; Universidad Francisco de Paula Santander.
+                    Este es un artículo bajo la licencia CC-BY-NC-ND
+                    <br>
+                    <a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img
+                            alt="Licencia Creative Commons" style="border-width:0"
+                            src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Cuerpo del documento -->
+    <div>
+        <hr>
+        <!--Introducción-->
+        <p class="titulo"> Introducción</p>
+
+        <p>
+            La Diabetes Mellitus (DM) es una enfermedad crónica
+            como consecuencia de la deficiente o ausente producción de insulina en el páncreas; en las Américas se
+            estiman unos 62 millones de personas con este diagnóstico, proyectando un aumento a 109 millones de casos
+            para 2040 (1); al respecto se estima la existencia de
+            1.676.885 personas con esta enfermedad en Colombia
+            para el año 2021 (2). Lo anterior se debe tener en cuenta
+            para el fortalecimiento de los Programas de promoción
+            y prevención encaminados a la detección y tratamiento
+            oportuno de esta patología y la intensificación de las
+            acciones educativas hacia hábitos de vida saludable (3-
+            5).
+        </p>
+
+        <p>
+            El Pie Diabético (PD) es una complicación prevenible
+            de la DM que se da con una frecuencia significativa,
+            pues cada 30 segundos genera la amputación de una
+            extremidad en el mundo, lo que representa el 70% de
+            todas las amputaciones de extremidades inferiores (1).
+            Se ha evidenciado la importancia de las actividades de
+            autocuidado en la prevención del PD (6 - 10), lo que
+            permite resaltar la importancia de efectuar acciones de
+            educación en salud que las fomenten. La incorporación
+            de estas actividades a las rutinas habituales de cada persona esta mediada por la capacidad de la agencia de
+            autocuidado, concepto central de la Teoría de Enfermería de Dorothea Elizabeth Orem que la define como el
+            poder de la persona para realizar operaciones de autocuidado (11).
+        </p>
+
+        <p>
+            Al respecto, como parte de las intervenciones en la prevención del PD se requiere fomentar altos niveles de
+            autocuidado, lo cual generaría un impacto favorable en
+            las personas con DM, disminuyendo así la prevalencia
+            de estas complicaciones, así como de amputaciones y
+            de su consecuente impacto en la calidad de vida de los
+            pacientes con DM (12 - 13). Por lo anterior, es necesario contar con instrumentos válidos para la población
+            colombiana que permitan establecer de forma integral
+            el nivel de autocuidado en la prevención del PD, incluyendo las medidas específicas de cuidado de los
+            miembros inferiores y los otros aspectos relacionados
+            con el adecuado automanejo de la DM, pues si este automanejo no es favorable existen altas probabilidades
+            de desarrollar tanto PD como otras complicaciones de
+            esta patología.
+
+        </p>
+
+        <hr>
+
+        <p class="titulo">Objetivo</p>
+
+        <p>
+            Realizar el diseño y la validación del cuestionario “Nivel de autocuidado en la prevención del pie
+            diabético”
+            (NAPD) en términos de su contenido, constructo, confiabilidad y sensibilidad.
+        </p>
+
+        <hr>
+
+        <p class="titulo">Materiales y Métodos</p>
+
+        <p>
+            Estudio psicométrico del diseño y la validación de los
+            instrumentos de medición que se hizo en el marco del
+            desarrollo del proyecto de investigación docente “Evaluación de una intervención educativa para fortalecer
+            el nivel de autocuidado en la prevención de pie diabético en personas con diabetes mellitus atendidas
+            durante el 2018 en una institución de salud de la ciudad de
+            Tunja”, del cual se derivó la tesis de pregrado “Validez
+            aparente y de contenido del cuestionario nivel de autocuidado en la prevención del pie diabético en personas
+            con diabetes mellitus de Boyacá”. Se contó con el aval
+            del Comité de bioética en investigación de la Universidad de Boyacá. Este estudio psicométrico se desarrolla
+            en tres fases:
+        </p>
+
+        <p>
+            <b>Fase 1: </b> Diseño del instrumento, siguiendo a Ruiz y
+            M (14) en su concepto sobre cuestionario teniendo en
+            cuenta la identificación de las categorías temáticas que
+            integran la definición sobre el autocuidado en la prevención del PD. Esto se hizo tomando como base la
+            realización de entrevistas a profundidad a personas con
+            DM sobre los significados que ellos dan al autocuidado en la prevención del PD; seguidamente se procedió a
+            la triangulación de los hallazgos con los aportes de
+            la literatura científica. Luego se efectúa el análisis, la
+            síntesis y la formulación de cada ítem del instrumento
+            de medición.
+        </p>
+
+        <p>
+            <b>Fase 2: </b> Validación aparente y de contenido por juicio de expertos, tomando como referente el modelo
+            de
+            Lawshe (1975) modificado por Tristán (2008) (15), integrando así la validez aparente –que valora la
+            claridad,
+            la comprensión y la precisión-, así como la validez de
+            contenido al calcular la razón de validez de contenido,
+            el índice de validez de contenido y el estadístico Kappa
+            de Fleiss (16). Esta fase contó con la evaluación de 20
+            jueces (17), distribuidos como sigue: 10 expertos en
+            manejo de pacientes con DM -con experiencia mayor a
+            5 años; y 10 pacientes con este diagnóstico desde hace
+            más de 3 años.
+        </p>
+
+        <p>
+            <b>Fase 3: </b> Validez del constructo de confiabilidad y sensibilidad de la versión 2 del cuestionario
+            NAPD.V2. La
+            validez del constructo se valoró por medio de la realización de un análisis factorial exploratorio –que
+            explora los factores comunes o dimensiones que explican las
+            respuestas en los ítems de un test- (18). Por otra parte,
+            la evaluación de la confiabilidad hace referencia a la
+            consistencia de las medidas tomadas (19); y la sensibilidad al cambio del instrumento está–medida por las
+            diferencias entre las puntuaciones antes y después de
+            la aplicación de una intervención- (20). Esta fase contó con 158 participaciones como unidades de análisis,
+            tomadas del estudio “Evaluación de una intervención
+            educativa para fortalecer el nivel de autocuidado en la
+            prevención de pie diabético en personas con diabetes
+            mellitus atendidas durante el 2018 en una institución de
+            salud de la ciudad de Tunja”, con pacientes que cumplieron los siguientes criterios de selección: ser
+            mayores de edad, tener diagnóstico confirmado hace más de
+            seis meses de DM Tipo 2, contar con al menos una de
+            las extremidades inferiores completas y sin úlceras de
+            PD activas, estar ubicado en niveles bajos y medios de
+            dependencia según la escala de funcionalidad PULSES
+            (12 puntos o menos) y tener las capacidades de autocuidado conservadas (atención, percepción visual,
+            capacidad de comunicación y orientación).
+        </p>
+
+        <p class="titulo">Resultados</p>
+
+        <p>
+            <b>Fase 1:</b> En el diseño del instrumento se tuvo en cuenta
+            la metodología de la Pirámide de Wengraft, donde de
+            acuerdo a la coherencia con los objetivos del estudio se diferencian las preguntas en un lenguaje próximo a
+            los entrevistados (21 - 22). El fundamento teórico del
+            instrumento parte de la interpretación de las narrativas
+            de 8 entrevistas a profundidad a personas con DM sobre su percepción frente a qué es y cómo se previene
+            el PD; estas fueron trianguladas a la luz de la literatura
+            relacionada. De este proceso se derivó la versión 1 del
+            “Cuestionario nivel de autocuidado en la prevención
+            del pie diabético” NAPD.V1, la cual estaba constituida
+            por 23 ítems agrupados en 5 dimensiones: automanejo
+            de la diabetes, percepción sobre el pie diabético, impacto emocional de la enfermedad, el cuidado rutinario
+            de los pies y la percepción sobre el soporte social.
+        </p>
+
+        <p>
+            Esta fase inicial, permitió conceptualizar el autocuidado en la prevención del PD como esa capacidad que
+            desarrollan las personas con DM para identificar sus
+            necesidades de cuidado y realizar acciones diarias para
+            optimizar su estado de salud, lo que implica el cuidado
+            rutinario propio del manejo de la DM y el de los pies;
+            esta capacidad se ve directamente afectada por las dimensiones emocionales y relacionales con las redes de
+            soporte social del paciente con DM.
+        </p>
+
+        <div class="image">
+            <p><b>Tabla 1.</b> Cálculo de la razón y el índice de validez de contenido</p>
+            <img src="img/V19-N3-5/Screenshot_1.png" width="80%">
+            <p><b>Fuente:</b> Autores</p>
+        </div>
+
+        <p>
+            <b>Fase 2:</b> La NAPD.V1 fue sometida a validez aparente
+            y de contenido por juicio de expertos. Una vez que cada
+            juez evaluó los ítems en relación a su “relevancia”, se
+            determinó el número de coincidencias, obteniendo para
+            cada ítem y para cada dimensión el puntaje total del
+            instrumento con unos resultados en función de la Razón de Validez de Contenido (CVR’) y el Índice de Validez
+            de Contenido (CVI), mostrando de forma general
+            un acuerdo entre jueces, mayor del parámetro mínimo
+            establecido (entre 0,70 y 1) (Ver Tabla 1). Al calcular
+            tanto la Razón como el Índice de Validez de Contenido
+            discriminado para los 10 expertos en manejo de pacientes y los 10 pacientes, en las diferentes dimensiones
+            osciló entre 0,70 y 1. Estos resultados muestran un acuerdo significativo frente a la valoración de la
+            relevancia
+            de este instrumento.
+        </p>
+
+        <p>
+            De igual manera, el instrumento obtuvo un coeficiente de Kappa de Fleiss global de 0.7606 (p=0.000)
+            equivalente a una fuerza de concordancia considerable; al calcular esta fuerza de concordancia discriminada
+            para los
+            10 expertos en manejo de pacientes y los 10 pacientes
+            se consiguió una concordancia considerable en ambos
+            casos (Kappa de Fleiss de 0.7079 con p de 0.000 y de
+            0.8311 con p de 0.000, respectivamente); estos mismos
+            resultados favorables fueron extensivos a la discriminada por cada dimensión y en los criterios generales.
+            La dimensión con menor rendimiento fue “Automanejo de la diabetes” (Kappa de Fleiss= 0.6697) (Ver Tabla 2).
+            Teniendo en cuenta los rendimientos individuales (cuantitativos y cualitativos) de cada dimensión e
+            ítem se obtuvo una versión 2 ajustada del instrumento
+            NAPD.V2, la cual conservó sus dimensiones y pasó de
+            tener 23 a 22 ítems, siendo todos ajustados en cuanto a
+            su claridad, comprensibilidad y precisión.
+        </p>
+
+        <div class="image">
+            <p><b>Tabla 2:</b> Resultados generales de concordancia</p>
+            <img src="img/V19-N3-5/Screenshot_2.png" width="80%">
+            <p><b>Fuente:</b> Autores</p>
+        </div>
+
+        <p>
+            <b>Fase 3:</b> Esta fase se desarrolló tomando la versión 2
+            del instrumento “Nivel de autocuidado en la prevención del pie diabético” NAPD.V2
+        </p>
+
+        <p><b>Validez de constructo - Análisis factorial exploratorio. </b></p>
+
+        <p>
+            Previo a la realización de este análisis, se requiere comprobar los requisitos para el desarrollo de esta
+            prueba, teniendo como base la medida Kaiser-Meyer-Olkin
+            (KMO), la cual compara los coeficientes de correlación
+            parcial; en cuanto más grande sea su valor en escala de
+            0 a 1, más apropiado es realizar este tipo de análisis; para el NAPD.V2 la KMO fue de 0,918. Así mismo, la
+            prueba de esfericidad de Bartlett como otro requisito a
+            superar para el NAPD.V2 obtuvo una significancia de
+            0,000, lo que permitió rechazar la hipótesis nula -no
+            existen correlaciones significativas entre las variables-.
+        </p>
+
+        <p>
+            Tras la realización de estas pruebas, el porcentaje de
+            varianza del instrumento por cada uno de sus componentes, se estableció como sigue: este instrumento
+            cuenta con 5 dimensiones; es decir, que al extraer 5
+            componentes el modelo explica el 75% de su varianza.
+            Por otra parte, al revisar los auto-valores que son mayores que 1, se consiguieron 3 con estas
+            características,
+            por lo cual se sugiere que existen 3 componentes principales en el instrumento, los cuales explican el 66%
+            de
+            su variabilidad. Este análisis permite tener una aproximación de los escenarios más favorables frente al
+            posible número mínimo de dimensiones con las cuales se
+            puede explicar el presente instrumento. En relación al
+            gráfico de sedimentación (Ver Figura 1) o prueba de
+            sedimentación de Cattell se muestra una representación
+            gráfica de los auto-valores, siendo el final de la tendencia de descenso el número óptimo de factores que
+            deben estar presentes en el instrumento, observando
+            que este descenso termina entre los componentes 3 y 5,
+            como número ideal de dimensiones para el NAPD.V2.
+        </p>
+
+        <p>
+            Al analizar las comunalidades reproducidas con el método de componentes principales muestran que las
+            variables explicadas en menor proporción por el modelo
+            corresponden a los ítems 12, 14, 17 y 21 (están entre el
+            0,44 y el 0,49) siendo los otros 18 explicados en una
+            proporción considerable (están entre 0,53 y 0,81). Al
+            revisar el modelo resultante y aplicar el método de rotación Varimax con normalización Kaiser (la rotación
+            se
+            sometió a 5 iteraciones) se identifican tres componentes principales, y se hace la extracción de los
+            factores
+            que los integran de acuerdo a sus rendimientos.
+        </p>
+
+        <p>
+            En la Tabla 3 se puede observar el resultado de la extracción de los 22 factores o ítems y su agrupación en
+            los componentes donde se explica la mayor proporción
+            de su varianza, y se hace el paralelo entre estos componentes con las dimensiones propuestas para el NAPD.
+            V2. Con lo anterior, se puede ver que los ítems que
+            conforman las dimensiones 1, 2 y 4 del instrumento se
+            agrupan en el componente 1, lo cual muestra coherencia temática porque estos ítems hablan sobre el manejo de
+            la diabetes y la prevención del pie diabético. En
+            este mismo sentido el componente 2 quedó constituido
+            por los ítems de la dimensión 5 del instrumento, los
+            cuales hablan del soporte social percibido, y finalmente el componente 3 está conformado por los ítems de
+            la dimensión 3 del instrumento, los cuales hablan del
+            impacto emocional de la enfermedad. Por tanto, los 22
+            ítems del NAPD.V2 tienen una agrupación pertinente
+            en sus dimensiones (Ver Tabla 4), no existiendo ninguno que este mostrando mal rendimiento de acuerdo a su
+            posición, lo que señala propiedades que dan cuenta de
+            una adecuada validez del constructo.
+        </p>
+
+        <p class="subtitulo">Evaluación de la confiabilidad y sensibilidad al cambio.</p>
+
+        <p>
+            El análisis de confiabilidad del NAPD.V2 mostró un
+            valor de Alfa de Cronbach en el rango de excelencia al
+            ser > mayor a 0,9 (0,942) (21); por su parte la confiabilidad desde el método de las dos mitades -resultados
+            pares v/s impares- obtuvo un coeficiente de Spearman
+            de 0,965 (p=0,000). Estos resultados muestran una
+            adecuada fiabilidad del NAPD.V2, pues sus 22 ítems
+            miden el mismo constructo (o dimensión teórica) (Ver
+            Tabla 4). En cuanto a la sensibilidad se compararon las
+            mediciones antes y después de la implementación de
+            una intervención sobre el fortalecimiento del autocuidado, mediante la prueba de Wilcoxon de los rangos
+            con signo para muestras relacionadas, obteniendo un
+            resultado de cambios significativos (p=0,000), lo que
+            muestra que el NAPD.V2 es sensible para determinar
+            cambios tras la realización de intervenciones en un
+            mismo grupo de personas.
+        </p>
+
+        <div class="image">
+            <p><b>Tabla 3:</b> Paralelo entre las dimensiones del NAPD.V2 y los componentes del modelo de análisis
+                factorial resultante</p>
+            <img src="img/V19-N3-5/Screenshot_3.png" width="80%">
+            <p><b>Fuente: </b>Autores</p>
+        </div>
+
+        <div class="image">
+            <p><b>Tabla 4. </b>Cuestionario “Nivel de autocuidado en la prevención del pie diabético” NAPD.V2</p>
+            <img src="img/V19-N3-5/Screenshot_4.png" width="65%">
+            <p><b>Fuente:</b> Autores</p>
+        </div>
+
+        <div class="image">
+            <img src="img/V19-N3-5/Screenshot_5.png" width="60%">
+            <p><b>Figura 1.</b> Gráfico de sedimentación</p>
+            <p><b>Fuente: </b>Autores</p>
+        </div>
+
+        <p class="titulo">Discusión</p>
+
+        <p>
+            Este estudio permitió desarrollar el diseño del cuestionario NAPD.V2 a partir de las categorías teóricas
+            conceptualizadas de 8 entrevistas a personas con diabetes mellitus, así como su validación aparente y de
+            contenido, contando con la participación de 20 jueces
+            expertos, del mismo modo, se examinó su validez, confiabilidad y sensibilidad, a través de 158 mediciones
+            del instrumento. La realización de estas fases metodológicas se considera como una fortaleza de esta
+            investigación, al valorar sus aportes en la cualificación de
+            los instrumentos de medición en ciencias de la salud,
+            dado que aún se da un uso frecuente de instrumentos no
+            validados, no cursando estos los procesos dinámicos y
+            continuos de validación (21-22).
+        </p>
+
+        <p>
+            El apreciar las características de los ítems de este tipo
+            de instrumentos es un criterio esencial para determinar
+            la calidad de la medición en salud de un instrumento (22). Por eso en el presente estudio se consideraron
+            las fases de diseño, validez aparente, de contenido, de
+            constructo, confiabilidad y sensibilidad; en consecuencia, este proceso permite obtener un cuestionario con
+            adecuadas propiedades psicométricas listo para ser
+            usado en la población con DM de Colombia y en países
+            de habla hispana. Por otra parte, el NAPD.V2 identifica
+            las necesidades individuales prioritarias a ser intervenidas para fortalecer el autocuidado en las personas
+            con DM, además se puede usar en la monitorización objetiva del impacto de las acciones preventivas
+            realizadas,
+            lo cual beneficia a las personas con DM, pues al garantizar el fomento de su autocuidado se gana terreno en
+            la
+            prevención de las complicaciones de la DM y de forma
+            específica del PD.
+        </p>
+
+        <p>
+            Al contrastar el NAPD.V2 con instrumentos de medición similares, se encontraron cinco estudios psicométricos
+            con diferentes enfoques conceptuales y propósitos. En este sentido, Mendonça y cols., reportan la
+            construcción y validación de un instrumento general
+            sobre evaluación del autocuidado para pacientes con
+            DM (23); Chin y Huang muestran el desarrollo y validación de una escala de comportamientos de autocuidado
+            del PD (24); entre tanto Aljohani y Kendall reportan la evaluación psicométrica del resumen de las
+            actividades de autocuidado de la DM -SDSCA- (25).
+            Por su parte, Navarro publicó el desarrollo, validación
+            y análisis psicométrico del cuestionario de autocuidado
+            del PD -DFSQ-UMA-, que incluye aspectos específicos sobre cuidados pedios (26) y que fue traducido al
+            italiano (27); finalmente, Tayana y cols., realizaron la
+            adaptación cultural y validación del instrumento NeuroQol, el cual está enfocado en las implicaciones en la
+            calidad de vida de la neuropatía y del PD (28).
+        </p>
+
+        <p>
+            Como se evidenció al revisar estos referentes, algunos
+            se enfocan en el impacto de una lesión activa y/o de la
+            neuropatía más no en la prevención del PD (24-28); otros miden únicamente el autocuidado de forma general en
+            DM (23-25); y los otros abordan solamente la
+            realización de actividades rutinarias para la prevención
+            del PD (26). Así, los instrumentos generales no abordan específicamente el autocuidado en la prevención
+            del PD; y los específicos para PD descuidan aspectos
+            generales del automanejo de la enfermedad que son
+            fundamentales en la prevención del PD. Por lo anterior,
+            la pertinencia del cuestionario NAPD.V2 está en la inclusión de aspectos que en conjunto abarcan ampliamente
+            el autocuidado en la prevención del PD, a partir
+            de las dimensiones del automanejo de la DM, la percepción sobre el PD, el impacto emocional de la
+            enfermedad, el cuidado rutinario de los pies y la percepción
+            sobre el soporte social, en función de los postulados
+            de la Teoría de enfermería de déficit de autocuidado
+            de Dorotea Orem, los cuales formalizan los conceptos
+            de: déficit de autocuidado, agencia de autocuidado y el
+            agente de autocuidado (29). Adicionalmente, se considera relevante mencionar que ninguno de los instrumentos
+            encontrados como parte de los referentes teóricos (23-27), reporta procesos de adecuación semántica
+            para el contexto colombiano.
+        </p>
+
+        <p>
+            Sobre las dimensiones que el cuestionario NAPD.V2
+            aborda, es necesario hacer un recorrido por sus características centrales, como se verá a continuación. La
+            dimensión Automanejo de la DM integra aspectos trasversales como la alimentación, la medicación, control
+            de la glucemia y las recomendaciones generales para
+            control de la enfermedad; es frecuente que los pacientes
+            que no tienen un adecuado automanejo de la enfermedad presenten más riesgo sobre fallas multi-orgánicas
+            que pudiese complicar la DM y acelerar la aparición del
+            PD (30). La dimensión Percepción sobre el PD aborda
+            el reconocimiento que la personas con DM tienen del
+            riesgo de desarrollar este tipo de lesiones, lo cual es
+            fundamental, porque si la persona reconoce ese riesgo
+            ejecutará mejor sus rutinas de autocuidado, disminuyendo el riesgo de desarrollar PD (31). La dimensión
+            Impacto emocional de la enfermedad se preocupa por
+            los efectos emocionales específicos que genera el vivir la DM, como son: tristeza, angustia, sentirse como
+            una carga, entre otros, los cuales son trascendentales,
+            pues la DM genera múltiples cambios en los estilos de
+            vida de las personas que la padecen, lo que afecta su
+            calidad de vida y la emocionalidad (32), pues esta patología y sus complicaciones limitan la capacidad
+            física de la persona (33-34) generando distorsión de su
+            imagen corporal. La dimensión cuidado rutinario de los pies aborda los cuidados específicos en la prevención
+            del PD -observación, higiene, uso de calzado, corte de
+            uñas, identificación de signos de alarma, entre otros-;
+            estas medidas de autocuidado previenen el desarrollo
+            del PD, por tanto, es importante integrarlas a la vida
+            diaria (31). Por último, la dimensión Percepción sobre
+            el soporte social se preocupa por identificar el apoyo
+            social familiar y desde las instituciones de atención en
+            salud; por tanto, cuando las personas con DM perciben
+            un bajo nivel de apoyo social se produce un importante
+            descenso en su calidad de vida (32), lo cual dificulta
+            tener un adecuado manejo de esta patología.
+        </p>
+
+        <p>
+            Como parte de las limitaciones de este estudio se sugiere la necesidad de aplicarlo a poblaciones más
+            amplias,
+            y de avanzar en pruebas de validación que permitan
+            reconocer con amplitud sus propiedades psicométricas
+            y el poder predictivo que tiene sobre el nivel de autocuidado que tiene la población con DM para prevenir
+            el desarrollo de PD.
+        </p>
+
+
+        <!-- conclusiones -->
+
+        <hr>
+
+        <p class="titulo">Conclusiones</p>
+
+        <ul class="lista">
+            <li>Tras este proceso de diseño y validación se obtiene
+                el cuestionario NAPD.V2 con adecuadas propiedades psicométricas para ser usado en la población
+                con DM colombiana. Este instrumento tiene como
+                fortaleza identificar las necesidades individuales
+                prioritarias a ser intervenidas para fortalecer el
+                autocuidado en las personas con DM; además de
+                poderse usar en la monitorización objetiva del impacto de las acciones preventivas realizadas, lo cual
+                beneficia a las personas con DM, pues al garantizar
+                el fomento de su autocuidado se gana terreno en la
+                prevención de las complicaciones de la DM y de
+                forma específica del PD.</li>
+            <li>Desde las ciencias de la salud se requiere continuar
+                con el desarrollo y la implementación en la práctica clínica de instrumentos validados, que brinden
+                sustento a intervenciones reales a partir del orden
+                técnico, científico y social, orientados a mitigar la
+                vulnerabilidad de las personas con DM. Este tipo
+                de instrumentos permiten que los pacientes identifiquen de forma consciente los factores de riesgo
+                propios en el desarrollo del PD, y así tomar medidas de autocuidado sobre las acciones que deben
+                incorporar en su diario vivir, a fin de disponer de un
+                adecuado manejo de su condición de salud y prevenir el desarrollo de las posibles complicaciones de esta
+                patología.</li>
+        </ul>
+
+        <p class="subtitulo">Conflicto de intereses</p>
+
+        <p>
+            Los autores reportan la no existencia de conflictos de
+            interés en el desarrollo del presente manuscrito.
+        </p>
+
+
+
+        <!-- Referencias -->
+
+        <hr>
+
+        <p class="titulo"> Referencias </p>
+
+        <ol class="lista">
+            <li id="r1">Organization Mundial de la Salud (OMS). Diabetes. 2022. <a href="https://www.paho.org/es/temas/diabetes">https://www.paho.org/es/temas/diabetes</a></li>
+            <li id="r2">Cuenta de Aalto Costo. Día mundial de la diabetes. 2021. <a href="https://cuentadealtocosto.org/site/general/dia-mundial-de-la-diabetes-2021/">https://cuentadealtocosto.org/site/general/dia-mundial-de-la-diabetes-2021/</a> </li>
+            <li id="r3">Jiang L, Johnson A, Pratte K, et al. Long-term Outcomes of Lifestyle Intervention to Prevent Diabetes in
+                American Indian and Alaska Native Communities: The Special Diabetes Program for Indians Diabetes Prevention Program. Diabetes Care. 2018;41(7):1462-1470. <a href="https://doi.org/10.2337/dc17-2685">https://doi.org/10.2337/dc17-2685</a></li>
+            <li id="r4">Gabriel R, Boukichou Abdelkader N, Acosta T, et al. Early prevention of diabetes microvascular complications in people with hyperglycaemia in Europe. ePREDICE randomized trial. Study protocol, recruitment
+                and selected baseline data. PLoS One. 2020;15(4):e0231196. Published 2020 Apr 13. <a href="https://doi.org/10.1371/journal.pone.0231196">https://doi.org/10.1371/journal.pone.0231196</a></li>
+            <li id="r5">Azami G, Soh KL, Sazlina SG, et al. Effect of a Nurse-Led Diabetes Self-Management Education Program on
+                Glycosylated Hemoglobin among Adults with Type 2 Diabetes. J Diabetes Res. 2018;2018:4930157. Published 2018 Jul 8. <a href="https://doi.org/10.1155/2018/4930157">https://doi.org/10.1155/2018/4930157</a></li>
+            <li id="r6">Kilic M, Karadağ A. Developing and Evaluating a Mobile Foot Care Application for Persons With Diabetes
+                Mellitus: A Randomized Pilot Study. Wound Manag Prev. 2020;66(10):29-40. </li>
+            <li id="r7">O'Connor JJ, Deroche CB, Wipke-Tevis DD. Foot Care Self-Management in Non-Diabetic Older Adults: A
+                Pilot Controlled Trial. West J Nurs Res. 2021;43(8):751-761. <a href="https://doi.org/10.1177/0193945920962712">https://doi.org/10.1177/0193945920962712</a></li>
+            <li id="r8">Subrata SA, Phuphaibul R, Grey M, Siripitayakunkit A, Piaseu N. Improving clinical outcomes of diabetic
+                foot ulcers by the 3-month self- and family management support programs in Indonesia: A randomized controlled trial study. Diabetes Metab Syndr. 2020;14(5):857-863. <a href="https://doi.org/10.1016/j.dsx.2020.05.028">https://doi.org/10.1016/j.dsx.2020.05.028</a></li>
+            <li id="r9">Heng ML, Kwan YH, Ilya N, et al. A collaborative approach in patient education for diabetes foot and wound
+                care: A pragmatic randomised controlled trial. Int Wound J. 2020;17(6):1678-1686. <a href="https://doi.org/10.1111/iwj.13450">https://doi.org/10.1111/iwj.13450</a></li>
+            <li id="r10">Kim EJ, Han KS. Factors related to self-care behaviours among patients with diabetic foot ulcers. J Clin Nurs.
+                2020;29(9-10):1712-1722. <a href="https://doi.org/10.1111/jocn.15215">https://doi.org/10.1111/jocn.15215</a> 
+                </li>
+            <li id="r11">Naranjo Hernández Y, Concepción Pacheco JA, Avila SM. Adaptación de la teoría de Dorothea Orem a personas con diabetes mellitus complicada con úlcera neuropática. Rev Cubana Enfermer [Internet]. 2019 Mar
+                [citado 2022 Mar 30] ; 35( 1 ): e1869. Disponible en: <a href="http://scielo.sld.cu/scielo.php?script=sci_arttext&pid=S0864-03192019000100013&lng=es">http://scielo.sld.cu/scielo.php?script=sci_arttext&pid=S0864-03192019000100013&lng=es</a></li>
+            <li id="r12">Bolton L. Managing Patients With Diabetic Foot Ulcers. Wounds. 2018;30(12):380-381.</li>
+            <li id="r13">Quemba M. Relación entre agencia de autocuidado y riesgo de Pie Diabético en personas con Diabetes Mellitus que asisten a un hospital de tercer nivel de atención de Cundinamarca [Internet]. [Bogotá D.C.]: Universidad Nacional de Colombia; 2015 [cited 2020 Oct 17]. Available from: <a href="https://repositorio.unal.edu.co/handle/unal/55385">https://repositorio.unal.edu.co/handle/unal/55385</a></li>
+            <li id="r14">Ruiz A, Morillo L. Epidemiología Clínica. Investigación Clínica Aplicada. Editorial Médica Panamericana
+                S.A.; 2004. 159–174 p. </li>
+            <li id="r15">Tristán-López A. Modificación al modelo de Lawshe para el dictamen cuantitativo de la validez de contenido
+                de un instrumento objetivo. Av en Medición. 2008;6:37–48.</li>
+            <li id="r16">Landis JR, Koch GG. The Measurement of Observer Agreement for Categorical Data. Biometrics. 1977
+                Mar;33(1):159. </li>
+            <li id="r17">Escobar-Pérez J, Cuervo-Martínez Á. Validez de contenido y juicio de expertos: una aproximación a su utilización. Av en Medición. 2008;6:27–36.</li>
+            <li id="r18">Lloret-Segura S, Ferreres-Traver A, Hernández-Baeza A, Tomás-Marco I. El análisis factorial exploratorio de
+                los ítems: Una guía práctica, revisada y actualizada. An Psicol [Internet]. 2014 [cited 2020 Oct 17];30(3):1151–
+                69. <a href="https://doi.org/10.6018/analesps.30.3.199361">https://doi.org/10.6018/analesps.30.3.199361</a></li>
+            <li id="r19">Cervantes VH. Interpretaciones del Coeficiente Alpha de Cronbach. Av en Medición. 2005;3:9–28. 
+            </li>
+            <li id="r20">Meneses J, Rodríguez D. El cuestionario y la entrevista [Internet]. Catalunya -España; 2011 Sep [cited 2020
+                Oct 17]. Available from: <a href="http://femrecerca.cat/meneses/publication/cuestionario-entrevista/">http://femrecerca.cat/meneses/publication/cuestionario-entrevista/</a></li>
+            <li id="r21">Vargas Ramos LF. Construcción de pruebas psicométricas: aplicaciones a las ciencias sociales y de la salud.
+                Revista Digital de Investigación en Docencia Universitaria. 2014; 10(2), 92-94. <a href="https://doi.org/ 10.19083/ridu.10.479">https://doi.org/ 10.19083/ridu.10.479</a></li>
+            <li id="r22">Silva-Ortiz SR, Cobo-Mejía EA, Cepeda-Sainea JF. Validación de contenido del cuestionario de percepción
+                del aprendizaje de la Anatomía a través del sistema interactivo en 3 D, Cyber Anatomy. Revista Investig.
+                Salud Univ. Boyacá [Internet]. 9 de octubre de 2020 [cited 2021 Oct 17]; 7(2):33-51. Available from: <a href="https://revistasdigitales.uniboyaca.edu.co/index.php/rs/article/view/420">https://revistasdigitales.uniboyaca.edu.co/index.php/rs/article/view/420</a>
+                </li>
+            <li id="r23">Mendonça S, Zanetti M, Sawada N, Barreto I, Andrade J, Miyar L. Artículo Original Construcción y validación del Instrumento Evaluación del Autocuidado para pacientes con diabetes mellitus tipo 2 1. Rev Latino-Am Enferm [Internet]. 2017 [cited 2021 Oct 17]; 25:1–8. Available from: <a href="www.eerp.usp.br/rlae">www.eerp.usp.br/rlae</a></li>
+            <li id="r24">Chin YF, Huang TT. Development and validation of a diabetes foot self-care behavior scale. J Nurs Res [Internet]. 2013 Mar [cited 2021 Oct 17];21(1):19–25. Available from: <a href="https://pubmed.ncbi.nlm.nih.gov/23407334/">https://pubmed.ncbi.nlm.nih.gov/23407334/</a></li>
+            <li id="r25">Aljohani KA, Kendall GE, Snider PD. Psychometric Evaluation of the Summary of Diabetes Self-Care Activities–Arabic (SDSCA-Arabic): Translation and Analysis Process. J Transcult Nurs [Internet]. 2016 [cited
+                2020 Oct 17];27(1):65–72. Available from: <a href="https://pubmed.ncbi.nlm.nih.gov/24841470/">https://pubmed.ncbi.nlm.nih.gov/24841470/</a></li>
+            <li id="r26">Navarro-Flores E, Morales-Asencio JM, Cervera-Marín JA, Labajos-Manzanares MT, Gijon-Nogueron G.
+                Development, validation and psychometric analysis of the diabetic foot self-care questionnaire of the University of Malaga, Spain (DFSQ-UMA). J Tissue Viability [Internet]. 2015 Feb 1 [cited 2020 Oct 17];24(1):24–
+                34. Available from: <a href="https://pubmed.ncbi.nlm.nih.gov/25523014/">https://pubmed.ncbi.nlm.nih.gov/25523014/</a></li>
+            <li id="r27">Navarro-Flores E, Romero-Morales C, Villafañe JH, Becerro-de-Bengoa-Vallejo R, López-López D, Losa-Iglesias ME, Calvo-Lobo C, Palomo-López P. Transcultural adaptation and validation of Italian Selfcare
+                diabetic foot questionnaire. Int Wound J. 2021 Aug;18(4):543-551. <a href="https://doi.org/10.1111/iwj.13554">https://doi.org/10.1111/iwj.13554</a></li>
+            <li id="r28">Xavier AT da F, Foss MC, Marques W, dos Santos CB, Onofre PTBN, Pace AE. Adaptação cultural e validação do Neuropathy - and Foot Ulcer - Specific Quality of Life (NeuroQol) para a língua portuguesa do
+                Brasil - Fase 1. Rev Lat Am Enfermagem [Internet]. 2011 Nov [cited 2020 Oct 17];19(6):1352–61. Available
+                from: <a href="www.eerp.usp.br/rlaewww.eerp.usp.br/rlae">www.eerp.usp.br/rlaewww.eerp.usp.br/rlae</a></li>
+            <li id="r29">Simplício Oliveira P, Lopes Costa MM, Lopes Ferreira JD, Jácome Lima CL. Autocuidado en Diabetes Mellitus: estudio bibliométrico. Enferm. glob. [Internet]. 2017 [citado 2022 Mar 30] ; 16(45): 634-688. <a href="https://doi.org/ 10.6018/eglobal.16.1.249911">https://doi.org/ 10.6018/eglobal.16.1.249911</a> </li>
+            <li id="r30">Ahmad Sharoni SK, Abdul Rahman H, Minhat HS, Shariff-Ghazali S, Azman Ong MH. The effects of self-efficacy enhancing program on foot self-care behaviour of older adults with diabetes: A randomised controlled
+                trial in elderly care facility, Peninsular Malaysia. PLoS One. 2018;13(3):e0192417. Published 2018 Mar 13.
+                <a href="https://doi.org/10.1371/journal.pone.0192417">https://doi.org/10.1371/journal.pone.0192417</a></li>
+            <li id="r31">Quemba Mesa MP. Relación entre agencia de autocuidado y riesgo de pie diabético en personas con Diabetes Mellitus. Cult del Cuid [Internet]. 2018 Nov 23 [cited 2021 Oct 17];13(2):06–15. Available from: <a href="https://revistas.unilibre.edu.co/index.php/cultura/article/view/4319">https://revistas.unilibre.edu.co/index.php/cultura/article/view/4319</a></li>
+            <li id="r32">Iversen MM, Igland J, Smith-Strøm H, et al. Effect of a telemedicine intervention for diabetes-related foot
+                ulcers on health, well-being and quality of life: secondary outcomes from a cluster randomized controlled trial
+                (DiaFOTo). BMC Endocr Disord. 2020;20(1):157. Published 2020 Oct 21. <a href=" https://doi.org/10.1186/s12902-020-00637-x"> https://doi.org/10.1186/s12902-020-00637-x</a></li>
+            <li id="r33">Nguyen TPL, Edwards H, Do TND, Finlayson K. Effectiveness of a theory-based foot care education program
+                (3STEPFUN) in improving foot self-care behaviours and foot risk factors for ulceration in people with type 2
+                diabetes. Diabetes Res Clin Pract. 2019;152:29-38. <a href="https://doi.org/10.1016/j.diabres.2019.05.003">https://doi.org/10.1016/j.diabres.2019.05.003</a></li>
+            <li id="r34">Schneider KL, Crews RT, Subramanian V, et al. Feasibility of a Low-Intensity, Technology-Based Intervention for Increasing Physical Activity in Adults at Risk for a Diabetic Foot Ulcer: A Mixed-Methods Study. J
+                Diabetes Sci Technol. 2019;13(5):857-868. <a href="https://doi.org/10.1177/1932296818822538">https://doi.org/10.1177/1932296818822538</a></li>
+        </ol>
+
+
+
+
+    </div>
+
+</body>
+
+</html>

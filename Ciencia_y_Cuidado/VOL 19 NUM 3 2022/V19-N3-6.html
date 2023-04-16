@@ -1,0 +1,1473 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V19-N3-6</title>
+    <link rel="stylesheet" href="">
+    <style>
+        body {
+            padding: 10em;
+            padding-top: 20px;
+            font-family: Times New Roman;
+            color: black;
+        }
+
+        #articulo-derecha {
+            float: left;
+        }
+
+        /* Posiciones de los resumenes */
+
+        .contenedor-general {
+            display: inline-flex;
+            width: 100%;
+        }
+
+        .contenedor-resumen {
+            width: 240%;
+        }
+
+        .contenedor-autor {
+            width: 100%;
+            padding-left: 20px;
+        }
+
+        .hr-resumen {
+            background-color: gray;
+            margin: 0;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .resumen-fondo {
+            background-color: #bdd5f1;
+            border-radius: 5px;
+        }
+
+        .titulo-resumen {
+            color: black;
+            font-size: 22px;
+            font-weight: bold;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .texto-resumen {
+            padding: 20px;
+            margin: 0;
+        }
+
+        ul.navbar {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 25em;
+            left: 2em;
+            width: 250px;
+        }
+
+        /* Titulos principales */
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: Times New Roman;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        h1 {
+            color: #29abe3;
+        }
+
+        .categoria_titulo {
+            font-style: italic;
+            color: #ffffff;
+        }
+
+        h3 {
+            font-style: italic;
+            font-weight: bold;
+            color: #707073;
+        }
+
+        .categoria {
+            text-align: center;
+            background-color: #707073;
+            width: 20%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            margin: auto;
+        }
+
+        ul.navbar li {
+            background: white;
+            margin: 0.5em 0;
+            padding: 0.3em;
+        }
+
+        /* Enlaces */
+
+        a.link-color:visited {
+            color: white;
+        }
+
+        a.link-color:link {
+            color: white;
+        }
+
+        a.link-color:hover {
+            color: white;
+        }
+
+        a.link-color:hover {
+            border-bottom: 1px solid;
+            background: black;
+        }
+
+        /* Link de referencia */
+
+        a:link {
+            color: #4e00ff;
+        }
+
+        a:visited {
+            color: #003bff;
+        }
+
+        a:focus {
+            border-bottom: 1px solid;
+            background: #98aae4;
+        }
+
+        a:hover {
+            border-bottom: 1px solid;
+            background: #aacefe;
+        }
+
+        /* Etiqueta P */
+
+        p {
+            line-height: normal;
+            text-align: justify;
+            font-size: 18px;
+        }
+
+        p.titulo {
+            color: #29abe3;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        p.subtitulo {
+            color: #29abe3;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* NUEVO */
+        p.subtitulo-segundo {
+            color: #29abe3;
+            font-style: italic;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        p.correspondencia {
+            color: black;
+            font-size: 18px;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        /* NUEVO */
+        p.entrevista {
+            color: black;
+            font-size: 18px;
+            font-style: italic;
+        }
+
+        /* NUEVO */
+        p.subtitulo-tercero {
+            color: #29abe3;
+            font-style: italic;
+            font-size: 18px;
+        }
+
+        p#cabeza {
+            color: #1d71ae;
+            text-align: center;
+        }
+
+        p.autores {
+            font-size: 16px;
+            margin: 0;
+            text-indent: 0em;
+            margin-bottom: 10px;
+        }
+
+        p.forma-citar {
+            text-indent: 0em;
+            text-align: justify;
+            justify-content: center;
+        }
+
+        .cita {
+            text-align: -webkit-center;
+        }
+
+        /* Bold especial para palabras que tienen color seguido de dos puntos
+*/
+
+        /* NUEVO */
+
+        b.subtitulo-segundo {
+            color: #29abe3;
+            font-size: 18px;
+        }
+
+        .contenedor_info {
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .info {
+            width: auto;
+        }
+
+        /* Este es para los documentos del dos en adelante *codigo abajo de este comentario* */
+
+        .info-text {
+            text-align: end;
+            margin: 0;
+        }
+
+        /* Uso Exlusico para el primero documento  que es de revision  *codigo abajo de este comentario* */
+
+        .info_text {
+            font-size: 12px;
+            line-height: 100%;
+            text-align: center;
+            margin: 0;
+        }
+
+        .info_hr {
+            margin: 5;
+        }
+
+        /* Fin P */
+        /* Etiqueta Italic */
+
+        i {
+            font-size: 18px
+        }
+
+        i.centrado {
+            font-size: 18px
+        }
+
+        /* LI para las listas */
+
+        li {
+            font-size: 18px;
+            padding-top: 10px;
+            text-align: justify;
+        }
+
+        /* NUEVO */
+        .lista li {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        hr {
+            background-color: #29abe3;
+            height: 1px;
+        }
+
+        /* Tablas */
+
+        table {
+            border-collapse: collapse;
+            border: 2px solid rgb(0, 0, 0);
+            align-items: center;
+        }
+
+        thead th {
+            border-collapse: collapse;
+            background-color: rgb(179, 179, 179);
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        tbody td {
+            border-collapse: collapse;
+            text-align: center;
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        .tipo {
+            color: #ffffff;
+            font-size: 22px;
+            border-radius: 10px 5px 10px 5px;
+            background-color: #696969;
+        }
+
+        img.logos {
+            width: 15px;
+            height: 15px;
+        }
+
+        .image {
+            text-align: center;
+            image-rendering: optimizeQuality;
+        }
+
+        .image p {
+            text-align: center;
+            font-size: small;
+        }
+
+        .logo {
+            width: 300px;
+            height: 80px;
+        }
+
+        .logo2 {
+            width: 300px;
+            height: 50px;
+        }
+
+        /* Anclajes de la pagina */
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* NUEVO */
+        .ecuacion {
+            text-align: center;
+            font-weight: bold;
+            margin: 1px;
+        }
+
+        @media only screen and (min-width:320px) and (max-width:900px) {
+            body {
+                width: 100%;
+                padding: 5em;
+                margin: 5px;
+            }
+
+            .image {
+                text-align: center;
+                image-rendering: optimizeQuality;
+            }
+
+            .image img {
+                width: 100%;
+            }
+
+            .image p {
+                font-size: small;
+                text-align: center;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="contenedor_info">
+        <div>
+            <img src="img/globales/logo.jpg" alt="" height="125px">
+        </div>
+        <div class="info" style="text-align: right;">
+            <p class="info-text"> ISSN-PRINT 1794-9831 / E-ISSN 2322-7028</p>
+            <p class="info-text"> Vol. 19 Nº 3 / sep - dic, 2022 / Cúcuta, Colombia. </p>
+            <p class="info-text">
+                <img src="img/globales/doi.png" height="20px" alt="">
+                <a href="https://doi.org/10.22463/17949831.3375">https://doi.org/10.22463/17949831.3375</a>
+            </p>
+        </div>
+    </div>
+
+
+    <!--Categoría-->
+    <div class="categoria">
+        <h2 class="categoria_titulo">Original </h2>
+    </div>
+
+    <h1> Significado del duelo frente al COVID en estudiantes y profe- sores de enfermería </h1>
+
+    <h2 class="segundo"> Meaning of grief during COVID-19 in nursing students and professors</h2>
+
+    <h2 class="segundo"> Significado do luto perante a COVID em estudantes e professores de enfermagem</h2>
+
+
+    <!--Autores-->
+    <h3>
+        Merilyn Guerra-Ramirez <sup><a href="#sup1">1*</a> </sup> <br>
+        Indiana Rojas-Torres <sup><a href="#sup2">2*</a> </sup> <br>
+        Janery Tafur-Castillo <sup><a href="#sup3">3*</a> </sup> <br>
+    </h3>
+
+
+    <!-- Conetenedor de las columnas de la descripciones de los autores, correspondencia de autor 
+    y los resumenes -->
+    <div class="contenedor-general">
+
+
+        <!-- Contenedor de los resumenes -->
+        <div class="contenedor-resumen">
+
+            <!-- Resumen Español -->
+
+            <div class="resumen-fondo">
+                <p class="titulo-resumen"> Resumen</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> <b>Objetivo:</b> La pandemia ocasionada por el COVID- 19 y sus consecuencias
+                    por el alto índice
+                    de mortalidad, afectó a la población mundial a nivel de salud mental, psicológica y emocional. La
+                    comunidad académica de la enfermería no fue la excepción; por tanto, el objetivo
+                    de este estudio fue describir el significado del duelo frente al COVID - 19 en estudiantes
+                    y profesores de enfermería de una institución universitaria. <b>Materiales y métodos:</b> Estudio
+                    cualitativo descriptivo con enfoque fenomenológico, a partir de la experiencia de 12 personas
+                    que enfrentaron duelo ante la pérdida de un ser querido por COVID -19. La información se
+                    obtuvo de septiembre de 2021 a febrero de 2022 mediante entrevistas en profundidad grabadas y
+                    transcritas literalmente; posteriormente se identificaron las palabras clave para categorizarla.
+                    <b>Resultados:</b> Emergieron cuatro categorías: El último adiós por lo que el COVID nos
+                    quitó; seguir viviendo en medio de un duelo por COVID; búsqueda de apoyo para sobrellevar
+                    el duelo COVID; lo que cambió después de perder a un ser querido por COVID. Los datos
+                    anteriores indican que se debe pensar en el cuidado sobre este tipo de actitudes frente al duelo
+                    sobre la desaparición de seres queridos y cercanos por el COVID-19 desde la academia
+                    de manera particular. <b>Conclusiones:</b> El estudio concluye que estudiantes y profesores de un
+                    programa de enfermería enfrentaron un proceso complejo y diverso, con matices sociales,
+                    culturales y que las categorías develadas dan luz a posibles acciones de cuidado orientadas a
+                    la población de estudio.
+                </p>
+
+                <p class="texto-resumen">
+                    <b>Palabras Claves: </b> Cuidado; Duelo; Afrontamiento; Coronavirus.
+                </p>
+            </div>
+            <!-- Resumen Inglés -->
+
+            <div>
+                <p class="titulo-resumen"> Abstract</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> <b>Objective:</b> The pandemic caused by COVID-19 and the consequences due to
+                    its high mortality rate, affected the mental, psychological and emotional health of the world’s
+                    population.
+                    The nursing academic community was not the exception; therefore, the objective of this study
+                    is to describe the meaning of grief during COVID-19 in nursing students and professors in a
+                    university. <b>Materials and methods:</b> Qualitative descriptive study with phenomenological focus
+                    from the experience of 12 people who faced grief due to the loss of a loved one because of
+                    COVID-19. The information was obtained from September 2021 to February 2022 through
+                    in-depth interviews that were recorded and literally transcribed; subsequently, the keywords
+                    were identified to categorize them. <b>Results:</b> Four categories emerged: the last goodbye for
+                    what COVID took from us; continuing life with grief caused by COVID; seeking support to
+                    cope with grief due to COVID; what changed after losing a loved one to COVID. The data
+                    above indicate that care should be particularly thought in the academy for these grief attitudes
+                    caused by the disappearance of near and dear ones due to COVID. <b>Conclusions:</b> The study
+                    concludes that the students and professors of a nursing program faced a complex and diverse
+                    process, with social and cultural aspects, and that the categories shown reveal possible care
+                    actions orientated to the study population. </p>
+
+                <p class="texto-resumen">
+                    <b>KeyWords:</b> Care; Grief; Confrontation; Coronavirus.
+                </p>
+            </div>
+            <!-- Resumen Portuguez -->
+
+            <div class="resumen-fondo">
+                <p class="titulo-resumen"> Resumo</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> <b>Objetivo:</b> A pandemia causada pelo COVID-19 e suas consequências devido
+                    à alta taxa de
+                    mortalidade, afetaram a saúde mental, psicológica e emocional da população mundial. A
+                    comunidade acadêmica de enfermagem não foi exceção; portanto, o objetivo deste estudo
+                    foi descrever o significado do luto perante a COVID-19 em estudantes de enfermagem e professores de
+                    uma instituição universitária. <b>Materiais e métodos:</b> Estudo descritivo, qualitativo
+                    com abordagem fenomenológica, baseado na experiência de 12 pessoas que enfrentaram o
+                    luto pela perda de um ente querido devido à COVID-19. As informações foram obtidas de
+                    setembro de 2021 a fevereiro de 2022 por meio de entrevistas aprofundadas gravadas e transcritas
+                    literalmente; posteriormente, as palavras-chave foram identificadas para categorizá-la.
+                    <b>Resultados:</b> Quatro categorias surgiram: O último adeus pelo que a COVID tirou de nós;
+                    continuar a viver no meio da dor pela COVID; buscar apoio para lidar com o luto pela COVID;
+                    o que mudou depois de perder uma pessoa querida para a COVID. Os dados acima indicam
+                    que desde a formação universitária devem ser consideradas estas necessidades de cuidado
+                    perante o duelo da perda de seres queridos ou próximos pela COVID-19. <b>Conclusões:</b> O
+                    estudo conclui que alunos e professores de um programa de enfermagem enfrentaram um
+                    processo complexo e diversificado, com nuances sociais e culturais e que as categorias identificadas
+                    fornecem informação de necessidades que requerem de ações assistenciais voltadas
+                    à população estudada.
+                </p>
+
+                <p class="texto-resumen">
+                    <b>Palavras-chave:</b> Cuidado; Luto; Enfrentamento; Coronavírus.
+                </p>
+            </div>
+
+
+
+        </div>
+
+        <!-- Descripcion de autores, Aprobado, Como citar, licencia -->
+        <div class="contenedor-autor">
+            <!-- Autores -->
+            <div>
+                <p class="subtitulo" style="color: black; font-size: 18px;">Autor de correspondencia*</p>
+                <!-- 1 -->
+                <p class="autores" id="sup1"><sup>1*</sup><img class="logos" src="img/globales/sobre.png"> Enfermera,
+                    magister en enfermería,
+                    profesora programa de enfermería Universidad Simón Bolívar. Barranquilla
+                    Colombia.
+                    <a href="mailto:mguerra@unisimonbolivar.edu.co">mguerra@unisimonbolivar.edu.co</a>, <img
+                        class="logos" src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0002-9398-5317">0000-0002-9398-5317</a>
+                </p>
+                <!-- 2 -->
+                <p class="autores" id="sup2"><sup>2*</sup><img class="logos" src="img/globales/sobre.png"> Enfermera,
+                    magister en administración
+                    de empresas e innovación, profesora
+                    programa de enfermería Universidad
+                    Simón Bolívar. Barranquilla Colombia.
+                    <a href="mailto:indianaluzrojastorres@gmail.com">indianaluzrojastorres@gmail.com</a>, <img
+                        class="logos" src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0002-2601-2363">0000-0002-2601-2363</a>
+                </p>
+                <!-- 3 -->
+                <p class="autores" id="sup3"><sup>3*</sup><img class="logos" src="img/globales/sobre.png"> Enfermera.
+                    PhD en Ciencias de la Educación, profesora programa de enfermería Universidad Simón Bolívar.
+                    Barranquilla Colombia.
+                    <a href="mailto:jtafur1@unisimonbolovar.edu.co">jtafur1@unisimonbolovar.edu.co</a>, <img
+                        class="logos" src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0002-5808-5495">0000-0002-5808-5495</a>
+                </p>
+            </div>
+
+            <!--Recibido y aprobado-->
+            <div>
+                <p><b>Recibido: </b> 26 mayo 2022 <br> <b>Aprobado: </b> 12 julio 2022 </p>
+            </div>
+
+            <!-- Como citar -->
+            <div class="cita">
+                <p class="forma-citar autores"><b>Para citar este artículo / To reference this article / Para citar este
+                        artigo:</b> Guerra-Ramirez M, Rojas-Torres I, Tafur-Castillo J. Significado del duelo frente
+                    al COVID en estudiantes y profesores de
+                    enfermería. 2022; 19(3):56-66 <a
+                        href="https://doi.org/10.22463/17949831.3375">https://doi.org/10.22463/17949831.3375</a> </p>
+            </div>
+
+            <!--Licencia-->
+            <br>
+            <div>
+                <p class="autores "> &#169; Universidad Francisco de Paula Santander.
+                    Este es un artículo bajo la licencia CC-BY-NC-ND
+                    <br>
+                    <a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img
+                            alt="Licencia Creative Commons" style="border-width:0"
+                            src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Cuerpo del documento -->
+    <div>
+        <hr>
+        <!--Introducción-->
+        <p class="titulo"> Introducción</p>
+
+        <p>
+            La pandemia causada por el coronavirus COVID-19
+            catalogada como crisis de orden en salud pública de
+            acuerdo con la Organización Mundial de Salud, causó a
+            nivel global uno de los desafíos más arduos de enfrentar desde tiempos históricos de la guerra entre 1939 y
+            1945 (1).
+        </p>
+
+        <p>
+            Los cambios necesarios y estipulados a la población
+            general, como medidas restrictivas implementadas en
+            todo el mundo para frenar la propagación de la infección entre ellas el aislamiento domiciliario, el uso
+            obligatorio de equipos de protección personal, así como la
+            exclusión social impuesta para quienes debían ser separados de manera abrupta de un ser querido por causa de
+            la hospitalización, repercutieron de manera negativa
+            en muchos aspectos de la cotidianidad, incluida la salud mental y el bienestar psicosocial (2).
+        </p>
+
+        <p>
+            Por otra parte y para quienes dolorosamente perdieron
+            un familiar o conocido, supuso la separación traumática
+            causada por un previo distanciamiento (en la mayoría
+            de los casos), la imposibilidad de verlos o escucharlos,
+            la incapacidad de tener actualizaciones sobre la condición de salud y posteriormente, la denegación de pasar
+            por el proceso de duelo sin un cuerpo para llorar, (3) o
+            el momento social de afecto que culturalmente conlleva a la reunión para una despedida con rezos, oraciones
+            o un simple adiós, como parte del rito cultural, que
+            por causa de la situación pandémica se vio truncado.
+        </p>
+
+        <p>
+            Cabe señalar que el duelo frente a la muerte, como
+            evento de vida devastador, puede llegar a ser una de
+            las experiencias más complejas que un individuo puede
+            experimentar (4). La evidencia demuestra que la pérdida de un vínculo cercano puede tener efectos duraderos
+            y perjudiciales en la salud física y mental, incluyendo aspectos como disminución en la calidad de vida (5)
+            y
+            enfrentamiento a posibles ideas suicidas (6).
+        </p>
+
+        <p>
+            De acuerdo con lo anteriormente descrito, el duelo
+            posterior a casos por COVID-19 se ha desarrollado en
+            relativo aislamiento, como fenómeno sin precedentes,
+            (7) sin muchos de los apoyos en los que las personas
+            generalmente confían para hacer frente al duelo. En Latinoamérica culturalmente suelen desarrollarse
+            rituales
+            mortuorios en cinco momentos: la velación, el entierro
+            o sepelio, la conmemoración, el culto y el recuerdo de
+            las nuevas almas (8-9). En razón de lo detallado, el
+            duelo corresponde al reconocimiento social y cultural
+            de las emociones, su importancia y lugar al hacer frente
+            al significado de este proceso.
+        </p>
+
+        <p>
+            En ausencia de las manifestaciones de duelo, se sabe
+            que puede afectar la capacidad de un individuo para
+            conectarse con quien fallece tanto antes como después
+            de la muerte, lo que podría aumentar la sensación de
+            angustia y dolor (10) y por ende el riesgo del duelo
+            complicado (11).
+        </p>
+
+        <p>
+            De igual forma, la población académica de la enfermería de la institución sujeto de estudio no ha sido ajena
+            a esta problemática, si se tiene en cuenta que, el panorama ha sido el mismo y que lo puntualizado impacta
+            directamente sobre la comunidad académica y a futuro
+            puede llegar a repercutir, sobre ejes de la salud mental, psicoemocional o incluso sobre los indicadores de
+            rendimiento académico o deserción de los participantes
+            del estudio.
+        </p>
+
+        <p>
+            Para la enfermería, conocer el significado del duelo por
+            el COVID-19 en estudiantes y profesores de enfermería
+            de una institución universitaria se considera pertinente,
+            pues permite incluir formas transformadoras de adaptación a los procesos de duelo y ajustar el cuidado de la
+            salud incluso en procesos académicos, evitando posibles problemas e impacto negativo en la salud mental,
+            mientras se mantenga el respeto.
+        </p>
+
+        <hr>
+
+        <p class="titulo">Objetivo</p>
+
+        <p>
+            Describir el significado del duelo frente al COVID-19
+            en estudiantes y profesores de enfermería de una institución universitaria, durante el periodo comprendido
+            entre 2021- 2022.
+        </p>
+
+        <hr>
+
+        <p class="titulo">Materiales y Métodos</p>
+
+        <p>
+            Estudio de tipo cualitativo descriptivo con enfoque fenomenológico fundamentado en la filosofía desarrollada
+            por Edmund Husserl, quien conceptualiza como un
+            "regreso a la intuición reflexiva para describir y clarificar la experiencia tal como se vive y se construye
+            desde
+            la conciencia de la persona que porta el fenómeno en
+            estudio" (12). Este enfoque puede ofrecer un apoyo
+            teórico y metodológico sustancial (13), puesto lo que
+            lo que se pretende es describir el significado del duelo
+            frente al COVID-19 en estudiantes y profesores de enfermería de una institución universitaria en el periodo
+            comprendido entre 2021- 2022.
+        </p>
+
+        <p>
+            Inicialmente, las investigadoras realizaron una descripción personal del fenómeno de interés para apartar
+            sus
+            suposiciones previas frente al fenómeno en estudio, y
+            las propias vivencias de pérdida de familiares o cercanos por COVID-19.
+        </p>
+
+        <p>
+            En el estudio participaron 12 personas: ocho estudiantes y cuatro profesores. Uno de los principios que
+            orientó el muestreo fue la saturación de datos.
+        </p>
+
+        <p>
+            El criterio de inclusión permitió seleccionar estudiantes y profesores de la institución, que hubiesen
+            perdido un familiar hasta en 2do grado de consanguinidad
+            a causa del COVID-19, a quienes inicialmente se les
+            contactó mediante correo electrónico. Los participantes
+            que aceptaron se les hizo una llamada telefónica para
+            establecer la organización de los encuentros mediante
+            videollamada. Cabe destacar que previo a cada entrevista, las personas que aceptaron participar firmaron
+            un consentimiento informado, lo que permitió que las
+            investigadoras realizaran entrevistas en profundidad y
+            que fueran grabadas.
+        </p>
+
+        <p>
+            Antes de iniciar cada entrevista se indagó sobre aspectos sociodemográficos de los participantes, los cuales
+            incluyeron: edad, estado civil, religión o cultura religiosa que profesa, composición familiar y grado de
+            consanguinidad que tenía con la persona o ser querido
+            fallecido, posteriormente se efectuó la entrevista a profundidad. La pregunta que dio apertura a la
+            entrevista
+            fue: ¿qué ha significado tiene para usted la pérdida de
+            un ser querido por COVID -19?
+        </p>
+
+        <p>
+            Por otra parte, a partir de las respuestas entregadas por
+            los participantes, surgieron nuevas interrogantes que
+            permitieron ahondar en el diálogo, entre las que se destacan: ¿Podría compartirme acerca de la situación de
+            pérdida de su ser querido por COVID-19; algo durante
+            el proceso que le haya marcado especialmente? ¿Existe
+            algo o alguien que le haya ayudado especialmente a
+            afrontar la experiencia vivida? ¿existe algún aspecto
+            particular, en medio de este duro proceso que haya sido
+            de extrema dificultad para enfrentar?
+        </p>
+
+        <p>
+            Las grabaciones de cada entrevista fueron fielmente
+            transcritas de manera manual en tablas organizadas en
+            Word, a partir de las que se desarrolló un análisis comprensivo de cada una de las descripciones del
+            significado para la estructura del fenómeno de estudio. Cada
+            experiencia aportó sentido e interpretación que fueron
+            aplicables a los códigos extraídos de las transcripciones
+            en Word, lo que dio origen e identificación a categorías
+            que permitieron dilucidar el fenómeno en estudio.
+        </p>
+
+        <p>
+            Se puede resaltar que durante este proceso se tomaron
+            notas de campo, en donde se registró información durante la videollamada, como aspectos gestuales, tono
+            de voz, expresiones corporales, aspectos que se tuvieron en cuenta para el análisis.
+        </p>
+
+        <p>
+            No hubo información personal en las transcripciones
+            o notas de campo, de ahí que se aplicó un código de
+            número para las entrevistas. Hay que precisar que no se
+            presentaron situaciones de llanto o de crisis grave, pese
+            a lo complejo del tema objeto del diálogo.
+        </p>
+
+        <p>
+            La saturación se logró en la entrevista nueve y se llevó
+            hasta los 12 participantes, validando los significados
+            encontrados anteriormente.
+        </p>
+
+        <p>
+            Por otra parte, cada entrevista transcrita junto a las notas de campo, fueron analizadas de forma
+            independiente por las investigadoras. Seguidamente en una reunión
+            para mesa de trabajo se realizó la reflexión y la discusión sobre las categorías centrales definidas a
+            partir del
+            análisis.
+        </p>
+
+        <p>
+            Los significados develados se socializaron con cuatro
+            de los participantes, quienes pudieron reconocer su experiencia en las categorías y las descripciones
+            expuestas.
+        </p>
+
+        <p>
+            En relación con los aspectos éticos se consideraron los
+            criterios de: beneficencia, justicia, autonomía y no maleficencia, respeto a la autonomía. Asimismo, se tuvo
+            en consideración la resolución 008430 del Ministerio de Salud en con respecto al riesgo, la garantía de
+            preservar la privacidad de los participantes y la confidencialidad de la información. Es decir, que a cada
+            participante se le manifestó que el uso de los datos era
+            con fines académicos. De igual forma, se contó con el
+            aval del comité de ética de investigación institucional
+            acta PRO-CIE-USB-0267-00. Una vez identificados
+            los resultados se socializaron en las áreas de bienestar
+            universitario y en la de coordinación del Programa Excelencia Académica del programa de enfermería, a fin
+            de establecer desde el cuidado, posibles estrategias de
+            apoyo a la población académica en general.
+        </p>
+
+        <p class="titulo">Resultados</p>
+
+        <p>
+            La edad de los participantes osciló entre los 19 y 50
+            años; diez personas de género femenino, dos de género
+            masculino; cinco participantes solteros, tres en unión
+            libre, cuatro casados; siete profesan la religión católica
+            y cinco cristianos evangélicos. En cuanto a la composición familiar, cinco forman parte de familia nuclear,
+            uno monoparental, uno plataforma de lanzamiento,
+            cinco en familia extensa.
+        </p>
+
+        <p>
+            Cuatro participantes perdieron a un progenitor, dos a
+            sus hermanos, dos a sus tíos y cuatro a sus abuelos.
+            Como resultado del análisis de los testimonios y voces de los participantes y el significado que entregaron
+            sobre el duelo frente al COVID-19 en periodo de pandemia y aislamiento social, se identificaron cuatro
+            categorías centrales de significado: 1) el último adiós, lo
+            que el COVID nos quitó; 2) seguir viviendo en medio
+            de un duelo por COVID; 3) búsqueda de apoyo para
+            sobrellevar el duelo COVID; 4) lo que cambió después
+            de perder a un ser querido por COVID.
+        </p>
+
+        <p class="subtitulo-segundo">1) El último adiós, lo que el COVID nos quitó: </p>
+
+        <p>
+            El enfrentar la muerte de un familiar por causa del COVID-19, especialmente en el periodo de la pandemia
+            y el aislamiento social, representó en los participantes
+            una despedida intangible y dolorosa. El significado
+            asignado a esta experiencia estuvo mediado por la falta
+            de un rito especial y culturalmente tradicional, despedidas sin un cuerpo para llorar, el no poder
+            experimentar el apoyo en una reunión familiar, no recibir el
+            abrazo o consuelo con el acercamiento y palabras de
+            consideración y la ausencia de un ritual religioso de
+            despedida.
+        </p>
+
+        <p>
+            Algunas de las voces que aportaron este significado
+            fueron:
+        </p>
+
+        <p>
+            E: entrevista.
+        </p>
+
+        <p class="entrevista">
+            E2: “Y lo perdí y no pude siquiera verlo, no había un
+            cajón para llorar, no podía acercarme, lo llevaron directo a sepultar, siento que nunca me despedí”.
+        </p>
+
+        <p class="entrevista">
+            E5: “Me mostraron un video en donde la colocaron en
+            una bolsa; sin embargo, hoy no se si es ella la que yace
+            en esa lápida, fue una despedida solo simbólica, no
+            dejo de pensar en eso”.
+        </p>
+
+        <p class="entrevista">
+            E7: “Llorar y ver a tus demás familiares llorando, sin
+            poder abrazarnos. …ellos no vivían con nosotros, debíamos permanecer aislados, los demás en una videollamada
+            conectados, ¿que manera de despedirse es
+            esa?”
+        </p>
+
+        <p class="entrevista">
+            E9: “Solo tres personas ingresaron directo al cementerio, el resto debimos esperar en casa, no le vi cuando
+            entró en la clínica, no le vi cuando le sepultaron, no me
+            despedí, no tuvo un sepelio digno; el COVID no solo se
+            lo llevó, se llevó hasta una despedida como debía ser,
+            como la merecía”.
+        </p>
+
+        <p class="entrevista">
+            E11: “Aun voy al cementerio a despedirme, ese virus
+            malo me arrebató a mi abuela y a cambio me dejó un
+            duelo sin cuerpo, así…así es más duro este duelo”.
+        </p>
+
+        <p>
+            Cabe resaltar que, esta primera categoría se observó
+            como difícil de expresar o dialogar, algunos participantes se mostraron nostálgicos y con voz quebrada, las
+            facies de tristeza absoluta fueron visibles en la mayoría
+            de ellos, aunque no se presentaron crisis o episodios de
+            llanto, por eso en las notas de campo se registró que fue
+            el momento más complejo de las entrevistas.
+        </p>
+
+        <p class="subtitulo-segundo">2) Seguir viviendo en medio de un duelo por COVID</p>
+
+        <p>
+            Posterior a la pérdida de un ser querido, los participantes expresaron que, pese a la dura prueba, algunos
+            proyectos en los que se incluían al ser querido perdido
+            debían desarrollarse; por eso para algunos, este proceso
+            quedó inconcluso, no tuvo un cierre y pese al impacto
+            por la pérdida sus vidas continúan marchando:
+        </p>
+
+        <p class="entrevista">
+            E1: “Ella está en el cielo, es mi ángel, yo debo enfrentarlo, ella hubiese deseado verme en mi graduación,
+            aun la lloro, pero sé que ella no quisiera que fuese así”.
+        </p>
+
+        <p class="entrevista">
+            E7: “Ay profe, yo no la vi cuando ella se fue, pero ella
+            si me verá cuando yo me gradué, eso es la vida… la
+            vida sigue así me duela, pero sabe…. sueño que ese día
+            hasta sin ese poco de ropa, sin tapaboca, con mi toga
+            blanca, qué bonito será, por ella lo voy a hacer, con
+            más esfuerzo, ella me verá desde el cielo”.
+        </p>
+
+        <p class="entrevista">
+            E8: “Ahora por mis hijos debo seguir, seguir con todo
+            el cuidado, seguir con todas las medidas, hacerme
+            fuerte y seguir, por mi familia, por mi hermosa profesión de enfermería”.
+        </p>
+
+        <p class="entrevista">
+            E12: “Soy consciente que mi vida continua, pero que
+            duro es… fui al cementerio poco después, lloré como
+            nunca, me sequé mis lágrimas, pensé en que él no me
+            quería ver así, me levanté, di un beso al mármol y me
+            fui a trabajar”.
+        </p>
+
+        <p class="subtitulo-segundo">3) Búsqueda de apoyo para sobrellevar el duelo COVID.</p>
+
+        <p>
+            En relación con esta categoría, para los participantes es
+            importante mantener la salud mental, afrontar la situación mediante el sentido de resiliencia y la capacidad
+            de reponerse a la adversidad impresa por la pandemia.
+            Al respecto, manifestaron su intención de buscar en
+            diversos recursos sociales, espirituales, religiosos y
+            psicológicos el apoyo que necesitaban para continuar
+            con sus vidas.
+        </p>
+
+        <p class="entrevista">
+            E10: “Y cuando vi que ya mi tristeza era tan grande,
+            me refugié en mi familia, empecé a llamarlos más,
+            como no podía verlos les hacía videollamadas, ellos
+            fueron mi motor, mi más grande apoyo”.
+        </p>
+
+        <p class="entrevista">
+            E7: “El señor ha sido mi refugio, soy creyente, mi hermana era creyente y antes de enfermar me decía: busca
+            de Dios. Eso hice, me refugié en su palabra, colocaba
+            alabanzas, ingresaba a los servicios o cultos virtuales,
+            si no es por eso, me hundo profe, me hundo, pero el
+            señor ha sido mi fortaleza”.
+        </p>
+
+        <p class="entrevista">
+            E4: “Cuando en la U. unos compañeros me dijeron
+            que había grupos de apoyo precisamente para personas como nosotros que pasaban por lo mismo, primero
+            pensé y contar mi tristeza a un extraño…. Pero vea eso
+            me ayudó a saber que otros pasaban exactamente por
+            lo mismo, me ayudó no sabe cómo”.
+        </p>
+
+        <p class="subtitulo-segundo">4) Lo que cambió después de perder a un ser querido
+            por el COVID.
+        </p>
+
+        <p>
+            En la presente categoría, los testimonios de las experiencias compartidas imprimieron el significado de
+            aquellos aspectos que se modificaron a raíz de un episodio duro, abrupto a escala mundial, algunas de las
+            voces de los participantes fueron:
+        </p>
+
+        <p class="entrevista">
+            E2: “Definitivamente ahora valoro más la familia, paso
+            más tiempo con ellos, busco el momento, no se sabe
+            cuándo estemos juntos por última v
+        </p>
+
+        <p class="entrevista">
+            E7: “Me tocó suspender un periodo académico, me pagaba mis estudios, ahora busqué por un préstamo, eso
+            es lo de menos, uno busca la salida, pero en mi vida
+            todo cambió, todo cambió”.
+        </p>
+
+        <p class="entrevista">
+            E1: “Mi vida no será la misma, ya ella no está, pero
+            ahora siento que valoro más las pequeñas cosas….
+            ahora uso la tecnología para comunicarme más con
+            la familia”.
+        </p>
+
+        <p class="entrevista">
+            E6: “Bueno, ahora respeto más la vida, la valoro, valoro lo que hago, valoro mi profesión, valoro el tiempo,
+            valoro el poder respirar, valoro la familia”.
+
+        </p>
+
+        <p class="entrevista">
+            E9: “La casa quedó vacía, me mudé para evitar... es un
+            nuevo inicio, por y para mis hijos, nada será igual, pero
+            aquí estamos”.
+        </p>
+
+        <p class="titulo">Discusión</p>
+
+        <p>
+            A continuación, se presenta la discusión en función de
+            los hallazgos evidenciados tanto en aspectos sociodemográficos relevantes, como en categorías centrales
+            dilucidadas por el equipo investigador.
+        </p>
+
+        <p>
+            En relación con el género de los participantes de en
+            donde predomina el género femenino, es posible describir que frente al duelo las mujeres se sienten bien,
+            hablando de aquello que posterior al duelo les produce
+            dolor y al verbalizarlo la intensidad se disipa, incluso
+            existe la recomendación de hablarlo o dialogarlo con
+            personas del mismo género (14); esta solidaridad es reafirmada como un activo de salud en sí misma (15).
+        </p>
+
+        <p>
+            En función del género también se pudo resaltar que de
+            acuerdo con estudios sobre consecuencias de la pandemia en Argentina se demostró que las mujeres
+            manifestaron en mayor medida sus sentimientos, afectos y
+            la posibilidad de introspección y reflexión que el duelo
+            por la pandemia les ocasiona (16); mientras que la socialización por parte del género masculino obstaculiza
+            su expresión en determinados contextos (17).
+        </p>
+
+        <p>
+            Por otra parte, el total de los participantes del presente
+            estudio se encuentran unidos a una deidad a través de
+            la religión católica o cristiana evangélica. Con respecto
+            a este punto, diversos estudios sugieren que existe evidencia de cómo la espiritualidad y la religión ayudan
+            a las personas en momentos de duelo y crisis (18-19);
+            sin embargo, otro estudio difiere en la representación
+            de la religión en este aspecto, debido a la existencia
+            de grupos que polarizan la situación, sugiriendo que la
+            pandemia es un castigo de Dios por el pecado de la
+            humanidad (20).
+        </p>
+
+        <p>
+            Frente a lo anteriormente descrito los participantes del
+            estudio expresaron como fuentes de apoyo: la religión,
+            la fe y la creencia en un ser superior que escucha sus
+            plegarias. Por tanto, es importante que desde la enfermería se tenga en cuenta este aspecto, se documente y
+            se incluya en los aspectos curriculares, para que desde
+            la academia se brinde conocimiento al futuro profesional acerca de la importancia de la religión en la vida
+            de la gran mayoría de individuos, sobre todo a nivel
+            latinoamericano.
+        </p>
+
+        <p>
+            En cuanto a la estructura familiar se sabe que en cualquier tipo de estructura, las familias mayormente
+            afectadas por muertes en pandemia, son aquellas con baja
+            escolaridad o pobreza (21) o incluso con morbilidades
+            que repercutieron en los rastreos epidemiológicos; de
+            ahí, que el fallecimiento del padre o de la madre da
+            lugar a la formación de una familia seminuclear contraída. En el caso de los participantes objeto de este
+            estudio, cinco de ellos pertenecían a familias nucleares.
+            De igual forma se debe aclarar que las implicaciones
+            propias del proceso de duelo, inciden en la familia que
+            debe enfrentar los conflictos propios de la fase del ciclo
+            vital familiar en que se encuentre, así como las dificultades económicas, domésticas y laborales, y hacerse
+            cargo de los hijos sin su pareja.
+        </p>
+
+        <p>
+            En el caso de las familias extensas, un estudio sugiere
+            que los problemas y los conflictos posteriores al duelo
+            pueden surgir entre los medio hermanos y hermanastros, incidiendo la edad, la ocupación y el tipo de
+            relación que lleven entre sí y con sus padres y padrastros,
+            dando lugar a procesos disfuncionales futuros en la familia (22).
+        </p>
+
+        <p>
+            Conforme a la primera categoría identificada, es posible que cuando fallece un ser querido, el suceso se
+            ubique en una situación compleja de cambio y al no
+            tener un ritual o proceso tradicional se enfrente a un
+            duelo diferente. En este sentido, una de las referentes
+            importantes de la disciplina de la enfermería, es Afaf
+            Meléis, quien plantea que las circunstancias influyen
+            en cómo una persona se pueda enfrentar a procesos de
+            cambio, contribuyendo o impidiendo al progreso que le
+            lleve a un avance saludable y que los factores personales, comunitarios o de contacto social pueden
+            facilitar
+            o limitar los procesos y resultados de transiciones saludables (23).
+        </p>
+
+        <p>
+            A su vez, el sentido cultural de estar al lado del otro en
+            estrecho contacto, aunque las prácticas culturales para
+            el proceso de duelo pueden variar de una región a otra
+            o dependiendo del grupo social (24), influye en los rituales que suelen manifestarse de manera similar (25).
+            Desde este punto de vista, rituales desaconsejados de
+            acuerdo con las medidas de aislamiento social dadas
+            por la pandemia por COVID-19, incidieron en la función de apoyo, de ayuda a la expresión del dolor, a la
+            reminiscencia de recuerdos, a la nostalgia, la idealización o reconciliación con el fallecido (26) .
+        </p>
+
+        <p>
+            Adicionalmente, varios estudios afirman que expresiones indicativas de duelo más severas pueden relacionarse
+            con ver o no, el rostro de la persona que ha
+            fallecido. Por ejemplo, según un estudio, madres que
+            perdieron hijos como consecuencia de muertes accidentales o abruptas, tienden a mantener la continuidad
+            del vínculo, lo que puede indicar discrepancias importantes en la forma en que se integra la pérdida en el
+            duelo (27).
+        </p>
+
+        <p>
+            Conforme al significado de seguir viviendo en medio
+            de un duelo por COVID, la situación excepcional de
+            esta pandemia y sus efectos, desde luego no contemplados, puede tener impacto emocional en enfermos,
+            familiares y profesionales de la salud, en quienes se incluye
+            el grupo de participantes del presente estudio.
+        </p>
+
+        <p>
+            Se reportan investigaciones que refieren que en ocasiones y frente a duelos excepcionales, las personas
+            muestran una capacidad de resiliencia y hacen frente a la adversidad de forma adecuada (28).
+        </p>
+
+        <p>
+            Asimismo, se considera como alivio a la vivencia del
+            duelo si la muerte es anticipada y se ha podido acompañar al ser querido durante la enfermedad hasta los
+            últimos momentos de la vida (29), situación que no se
+            presentó (despedida anticipada) en la experiencia de
+            los participantes en este estudio, aunque la muerte y
+            el proceso de duelo es un hecho natural, universal, con
+            matices culturales y religiosos, morir es considerado
+            como parte del proceso de la vida misma (30).
+        </p>
+
+        <p>
+            Asimismo, se considera como alivio a la vivencia del
+            duelo si la muerte es anticipada y se ha podido acompañar al ser querido durante la enfermedad hasta los
+            últimos momentos de la vida (29), situación que no se
+            presentó (despedida anticipada) en la experiencia de
+            los participantes en este estudio, aunque la muerte y
+            el proceso de duelo es un hecho natural, universal, con
+            matices culturales y religiosos, morir es considerado
+            como parte del proceso de la vida misma (30).
+        </p>
+
+        <p>
+            Definitivamente, frente a las voces identificadas y las
+            categorías que emergieron posterior al análisis de las
+            entrevistas realizadas a la población académica de la
+            enfermería de una institución universitaria, en relación
+            al duelo experimentado a causa de la pandemia por
+            COVID-19 confluyen aspectos importantes para el
+            análisis, como la importancia de documentar desde la
+            experiencia y el significado asignado al duelo en diversos grupos poblacionales, que conduzcan a la
+            reflexión
+            mediante prácticas dialógicas, de tal forma que la educación desde la enfermería sea transformadora o
+            liberadora, al permitir expresar sentimientos que pueden
+            estar guardados y que no han aflorado por la situación
+            sanitaria vivida a nivel mundial.
+        </p>
+
+        <p>
+            La búsqueda de apoyo para sobrellevar el duelo COVID, significó en los participantes apoyarse en fuentes
+            personales, familiares, religiosas, profesionales e incluso tecnológicas, para afrontar la experiencia
+            vivida tras
+            perder a un familiar y adaptarse a la nueva realidad de
+            la muerte, a la expresión de los sentimientos y el rememorar los recuerdos compartidos del ser querido (33).
+            Otras investigaciones reportan (34), que individuos que
+            disponen de apoyo social poseen una mayor preparación para la muerte y menores complicaciones en la
+            evolución del duelo.
+        </p>
+
+        <p>
+            Por otro lado, quienes no dispusieron de apoyo práctico
+            y emocional por el distanciamiento social, la pérdida de
+            rutina, los roles sociales y las actividades que estructuran la vida cotidiana, acumulan adversidades que,
+            sumadas a las pérdidas por muerte, pueden superar la resiliencia de una persona (35).
+        </p>
+
+        <p>
+            A su vez, cuando se utilizan estrategias de afrontamiento frente a un proceso de duelo como enfrentar el
+            hecho,
+            experimentar sentimientos de resignación, compartir
+            con otros el dolor a través del diálogo, apoyarse en el
+            ámbito religioso o en un ser superior, permite la reinterpretación positiva del suceso, para superar las
+            primeras
+            etapas del duelo en un plazo de seis a doce meses (36).
+            En función de lo planteado anteriormente, es necesario que en los estudios sobre enfermería se documente
+            adecuadamente el apoyo desde diversos enfoques en
+            situación de duelo como consecuencia del COVID-19;
+            de igual modo, se debe conocer cómo perciben las personas el apoyo recibido o el deseado, de tal forma que
+            se puedan fortalecer las prácticas de cuidado no solo en
+            entornos académicos, sino también en entornos hospitalarios. En definitiva, la pandemia, que aun no se ha
+            superado, modificó aspectos de la cotidianidad que influyeron o repercutieron en la forma como se percibe el
+            apoyo social en crisis.
+        </p>
+
+        <p>
+            En torno a la categoría sobre lo que cambió después de
+            perder un ser querido por COVID, es importante comprender que el significado que asignan los participantes
+            está relacionado con aquellos aspectos que afectaron el
+            nivel social, espiritual, cultural y en la dinámica familiar. En tal sentido, estudios afirman que cada
+            familia
+            como sistema al hacer frente a los procesos de
+            duelo, se convierte en un soporte que afronta los
+            cambios en la estructura familiar en su dinámica
+            y en la reorganización de roles y funciones (37-38).
+            Al mismo tiempo, un estudio describe que posterior a
+            la situación de la pandemia y del duelo, algunos jóvenes comenzaron a explorar un mundo novedoso, a
+            encontrarse con su propio ser; además se resalta el hecho
+            por el cual el duelo en pandemia puede hacer emerger
+            cosas positivas o negativas en cada individuo, para dar
+            lugar a la consistencia del tejido social y construir la
+            posibilidad de pensar desde lo novedoso, desde la resiliencia. No toda situación, pese a lo complejo, genera
+            necesariamente un trauma (39).
+        </p>
+
+        <!-- conclusiones -->
+
+        <hr>
+
+        <p class="titulo">Conclusiones</p>
+
+        <ul class="lista">
+            <li> El presente estudio permitió comprender el significado de la experiencia vivida en relación con la
+                pérdida de un ser querido a causa del COVID-19, en la población académica de una institución
+                universitaria</li>
+            <li>Con respecto a las categorías identificadas, se puede describir que la falta o limitación de apoyo
+                social, propicia actitudes en el marco del duelo como
+                son: la percepción de aumento del dolor espiritual
+                y la tristeza del fallecimiento; y, la ausencia o escases de procesos o ritos comunes en las cultura
+                latinas, estos factores incidieron en el aumento de las
+                percepciones mencionadas; sin embargo, los participantes de la investigación enfrentaron el proceso
+                con cierto sentido de apoyo.</li>
+            <li>Enfermería como actor fundamental en el acompañamiento en procesos de duelo puede trabajar
+                en estrategias que los faciliten y guíen con fluidez,
+                mediante intervenciones terapéuticas propias del
+                ejercicio sobre el cuidado, el cual debe estar fundamentado en principios como la empatía, el respeto,
+                la confianza y el autoaprendizaje (40). De igual
+                forma, se recomiendan estudios posteriores con
+                respecto a la relación entre la función familiar y el
+                duelo causado por el COVID-19, en diversas etapas
+                del ciclo vital familiar.</li>
+            <li>Frente a un tema tan álgido como el estudio sobre
+                significado que se le da a uno de los eventos más
+                devastadores en la vida de cualquier ser humano,
+                no se presentaron mayores limitaciones, incluso
+                para algunos participantes fue una experiencia liberadora, sobretodo al poder dialogar con otra persona
+                respecto a su experiencia y el saber que a futuro
+                podían compartirla con sus pares.</li>
+            <li>Se considera oportuno trabajar de manera institucional en las diversas unidades académicas sobre
+                las estrategias de afrontamiento; además hay que
+                promover en los estudiantes, en los profesores e
+                incluso en toda la comunidad académica, aspectos
+                asociados al duelo en quienes han perdido un ser
+                querido por COVID-19.</li>
+        </ul>
+
+        <p class="subtitulo">Conflicto de intereses</p>
+
+        <p>
+            Las autoras declaran no tener ningún conflicto de interés
+
+        </p>
+
+
+
+        <!-- Referencias -->
+
+        <hr>
+
+        <p class="titulo"> Referencias </p>
+
+        <ol class="lista">
+            <li id="r1">Hernández-Tejedor A, Martín Delgado MC. Una crisis de ética dentro de la crisis sanitaria por la
+                COVID-19.
+                Med Intensiva (Engl Ed). 2021 Mar 26;45(9):563-5. <a
+                    href="https://doi.org/10.1016/j.medin.2021.03.006">https://doi.org/10.1016/j.medin.2021.03.006</a>
+            </li>
+            <li id="r2">Kokkinos CM, Tsouloupas CN, Voulgaridou I. The effects of perceived psychological, educational,
+                and financial impact of COVID-19 pandemic on Greek university students' satisfaction with life through
+                Mental
+                Health. Journal of Affective Disorders. 2022 Mar; 300:289-95. <a
+                    href="https://doi.org/10.1016/j.jad.2021.12.114">https://doi.org/10.1016/j.jad.2021.12.114</a></li>
+            <li id="r3">Mañón-Garibay GJ. La pandemia COVID-19 y la nueva relación con la muerte. Revista del Posgrado
+                en Derecho. 2020 nov 21;(13):56. <a
+                    href="https://doi.org/10.22201/ppd.26831783e.2020.13.150">https://doi.org/10.22201/ppd.26831783e.2020.13.150</a>
+            </li>
+            <li id="r4">Grace MK. COVID-19 bereavement, depressive symptoms, and binge drinking. SSM - Mental Health.
+                2021
+                Dec; 1:100041. <a
+                    href="https://doi.org/10.1016/j.ssmmh.2021.100041">https://doi.org/10.1016/j.ssmmh.2021.100041</a>
+            </li>
+            <li id="r5">Kumar RM. The Many Faces of Grief: A Systematic Literature Review of Grief During the COVID-19
+                Pandemic. Illness, Crisis & Loss. 2021 Aug 16;105413732110380. <a
+                    href="https://doi.org/10.1177/10541373211038084">https://doi.org/10.1177/10541373211038084</a></li>
+            <li id="r6">Boelen PA, Lenferink LIM. Symptoms of prolonged grief, posttraumatic stress, and depression in
+                recently
+                bereaved people: symptom profiles, predictive value, and cognitive behavioural correlates. Social
+                Psychiatry
+                and Psychiatric Epidemiology. 2019 Sep 18;55(6):765–77. <a
+                    href="https://doi.org/10.1007/s00127-019-01776-w">https://doi.org/10.1007/s00127-019-01776-w</a>
+            </li>
+            <li id="r7">Buitrago-Ramírez F, Ciurana-Misol R, Fernández-Alonso MdelC, Tizón JL. Pandemia de la COVID-19 y
+                salud mental: reflexiones iniciales desde la atención primaria de salud española. Atención Primaria.
+                Jul;
+                2021;53(1):89-101. <a
+                    href="https://doi.org/10.1016/j.aprim.2020.06.006">https://doi.org/10.1016/j.aprim.2020.06.006</a>
+            </li>
+            <li id="r8">Montoya Carrasquilla J. Pérdida, aflicción y luto: manual para la recuperación. México Trillas;
+                2012.</li>
+            <li id="r9">Palacio Valencia MC, Bernal Orozco F. El duelo por muerte: la intersección entre prácticas
+                culturales, rituales
+                sociales y expresiones emocionales. Tempus Psicológico. 2020 May 30;2(1):88-107. <a
+                    href="https://doi.org/10.30554/tempuspsi.2.1.2595.2019">https://doi.org/10.30554/tempuspsi.2.1.2595.2019</a>
+            </li>
+            <li id="r10">Schwerdtle PM, De Clerck V, Plummer V. Experiences of Ebola Survivors: Causes of Distress and
+                Sources
+                of Resilience. Prehospital and Disaster Medicine. Cambridge University Press; 2017;32(3):234–9. <a
+                    href="https://doi.org/10.1017/S1049023X17000073">https://doi.org/10.1017/S1049023X17000073</a></li>
+            <li id="r11">Diolaiuti F, Marazziti D, Beatino MF, Mucci F, Pozza A. Impact and consequences of COVID-19
+                pandemic
+                on complicated grief and persistent complex bereavement disorder. Psychiatry Research. 2021 Mar;113916.
+                <a
+                    href="https://doi.org/10.1016/j.psychres.2021.113916">https://doi.org/10.1016/j.psychres.2021.113916</a>
+            </li>
+            <li id="r12">Barbaras R. La fenomenología como dinámica de la manifestación. Aporía Revista Internacional de
+                Investigaciones Filosóficas. 2019 Aug 2;3(Especial):48-68. <a
+                    href="https://doi.org/10.7764/aporia.3-Especial.1931">https://doi.org/10.7764/aporia.3-Especial.1931</a>
+            </li>
+            <li id="r13">Morley J. Phenomenology in nursing studies: New perspectives – Commentary. International
+                Journal of Nursing Studies. 2019 May; 93:163–7. <a
+                    href="https://doi.org/10.1016/j.ijnurstu.2019.02.002">https://doi.org/10.1016/j.ijnurstu.2019.02.002</a>
+            </li>
+            <li id="r14">Martínez-Pérez AM. “Quedarse madre”. Maternidad y duelo en el proceso de
+                salud-enfermedad-cuidado.
+                CMS [Internet]. 13 de mayo de 2022 [citado 8 de julio de 2022];61(3):57-65. <a
+                    href="https://doi.org/10.56116/cms.v61.n3.s1.2021.86">https://doi.org/10.56116/cms.v61.n3.s1.2021.86</a>
+            </li>
+            <li id="r15">Mariano-Juárez L. Etnografías de la Muerte y las Culturas en América Latina, de Juan Antonio
+                Flores Martos
+                y Luisa Abad González, Coords. AIBR, Revista de Antropologia Iberoamericana. 2008 May 1;03(02).
+                Recuperado de: <a
+                    href="https://www.redalyc.org/articulo.oa?id=62330210">https://www.redalyc.org/articulo.oa?id=62330210</a>
+            </li>
+            <li id="r16">Johnson MC, Saletti-Cuesta L, Tumas N. Emociones, preocupaciones y reflexiones frente a la
+                pandemia del
+                COVID-19 en Argentina. Ciência & Saúde Coletiva. 2020 Jun;25(suppl 1):2447–56. Disponible en: <a
+                    href="https://doi.org/10.1590/1413-81232020256.1.10472020">https://doi.org/10.1590/1413-81232020256.1.10472020</a>
+            </li>
+            <li id="r17">. De Boise S, Hearn J. Are men getting more emotional? Critical sociological perspectives on
+                men, masculinities
+                and emotions. The Sociological Review. 2017 Jan 25;65(4):779–96. <a
+                    href="https://doi.org/10.1177/0038026116686500">https://doi.org/10.1177/0038026116686500</a></li>
+            <li id="r18">Piscitello GM, Martin S. Spirituality, Religion, and Medicine Education for Internal Medicine
+                Residents. Am J Hosp Palliat Med. 2020 [acceso: 06/10/2020];37(4):272–7. Disponible en: <a
+                    href=" https://doi.org/10.1177/1049909119872752"> https://doi.org/10.1177/1049909119872752</a></li>
+            <li id="r19">Ali M. COVID-19 Epidemic and Spirituality: A Review of the Benefits of Religion in Times of
+                Crisis.
+                Jundishapur J Chronic Dis Care. 2020 [acceso: 17/09/2020]; 9(2): e104260. Disponible en: <a
+                    href="https://doi.org/10.5812/jjcdc.104260">https://doi.org/10.5812/jjcdc.104260</a>
+            </li>
+            <li id="r20">Mamani-Benito O, Carranza-Esteban R, Turpo-Chaparro J, White M, Pichén-Fernández J. Evidencias
+                iniciales de validez y confiabilidad en población peruana de una escala de repercusiones en las
+                prácticas religiosas
+                a causa de la COVID-19 (ERPR-Cov19). Revista Cubana de Enfermería [Internet]. 2020 [citado 8 Jul 2022];
+                36 Disponible en: <a
+                    href="http://revenfermeria.sld.cu/index.php/enf/article/view/4107">http://revenfermeria.sld.cu/index.php/enf/article/view/4107</a>
+            </li>
+            <li id="r21">Manjula-Bai H. The Socio-Economic Implications of the Coronavirus Pandemic (COVID-19): A
+                Review.
+                ComFin Research. 2020 Oct 1;8(4):8–17. <a
+                    href="https://doi.org/10.34293/commerce.v8i4.3293">https://doi.org/10.34293/commerce.v8i4.3293</a>
+            </li>
+            <li id="r22">Huerta-González J. "la familia ante la pandemia por la covid-19." Rev Mex Med Fam 7 (2020):
+                109-14. <a href="https://doi.org/10.24875/RMF.20000130">https://doi.org/10.24875/RMF.20000130</a>
+            </li>
+            <li id="r23">García-Hernández AM. Duelo y confinamiento. Ene. 2020;14(1):1414.Disponible en: <a
+                    href="http://scielo.isciii.es/scielo.php?script=sci_arttext&pid=S1988-348X2020000100004&lng=es">http://scielo.isciii.es/scielo.php?script=sci_arttext&pid=S1988-348X2020000100004&lng=es</a>
+            </li>
+            <li id="r24">Mitima-Verloop HB, Mooren TTM, Boelen PA. Facilitating grief: An exploration of the function of
+                funerals
+                and rituals in relation to grief reactions. Death Studies. 2019 Nov 11;1–11. <a
+                    href="https://doi.org/10.1080/07481187.2019.1686090">https://doi.org/10.1080/07481187.2019.1686090</a>
+            </li>
+            <li id="r25">Kokou-Kpolou CK. Letter to the Editor: Prolonged grief disorder, posttraumatic stress disorder,
+                and depression following traffic accidents among bereaved Balinese family members: Prevalence, latent
+                classes and cultural correlates. Journal of Affective Disorders. 2021 Dec;295:1–2. <a
+                    href="https://doi.org/10.1016/j.jad.2021.05.085">https://doi.org/10.1016/j.jad.2021.05.085</a></li>
+            <li id="r26">William-Worden J, Aparicio A, Sánchez Barberán G. El tratamiento del duelo: asesoramiento
+                psicológico y
+                terapia. Barcelona; México: Paidós; 2010.</li>
+            <li id="r27">García-Hernández AM, Rodríguez-Álvaro M, Brito-Brito PR, Fernández-Gutiérrez DA,
+                Martínez-Alberto
+                CE, Marrero-González CM. Duelo adaptativo, no adaptativo y continuidad de vínculos. Revista ENE de
+                Enfermería. 2021; 15(1). Recuperado de <a
+                    href="http://ene-nfermeria.org/ojs/index.php/ENE/article/view/1242">http://ene-nfermeria.org/ojs/index.php/ENE/article/view/1242</a>
+            </li>
+            <li id="r28">Wallace CL, Wladkowski SP, Gibson A, White P. Grief during the COVID-19 pandemic:
+                Considerations
+                for palliative care providers. Journal of Pain and Symptom Management. 2020 Apr;60(1). <a
+                    href="https://doi.org/10.1016/j.jpainsymman.2020.04.012">https://doi.org/10.1016/j.jpainsymman.2020.04.012</a>
+            </li>
+            <li id="r29">Lacasta-Reverte Ma, Lacasta M, Torrijos MT, López-Pérez Y, Carracedo Sanchidrián D, Pérez
+                Manrique T,
+                et al. Impacto emocional en pacientes y familiares durante la pandemia por COVID-19. Un duelo diferente.
+                Medicina Paliativa [Internet]. 2020 [cited 2020 Nov 28]. <a
+                    href="https://doi.org/10.20986/medpal.2020.1188/2020">https://doi.org/10.20986/medpal.2020.1188/2020</a>
+            </li>
+            <li id="r30">León-Amenero D, Huarcaya-Victoria J. El duelo y cómo dar malas noticias en medicina. Anales de
+                la Facultad de Medicina [Internet]. 2019 Jan 1;80(1):86-91. Available from: <a
+                    href="http://www.scielo.org.pe/scielo.php?pid=S1025-55832019000100016&script=sci_arttext">http://www.scielo.org.pe/scielo.php?pid=S1025-55832019000100016&script=sci_arttext</a>
+            </li>
+            <li id="r31">Tamiolaki A, Kalaitzaki AE. "That which does not kill us, makes us stronger": COVID-19 and
+                Posttraumatic
+                Growth. Psychiatry Research. 2020 Jul;289:113044. <a
+                    href="https://doi.org/10.1016/j.psychres.2020.113044">https://doi.org/10.1016/j.psychres.2020.113044</a>
+            </li>
+            <li id="r32">Heuston MM, Grove C, Harne-Britner S, Fox BA. Nurse Leaders and Staff as Partners to Manage
+                Grief
+                and Build Resiliency During COVID-19. Nurse Leader. 2021 Apr; 19(3), 308–311. <a
+                    href="https://doi.org/10.1016/j.mnl.2021.02.010">https://doi.org/10.1016/j.mnl.2021.02.010</a></li>
+            <li id="r33">Giraldo-García JA, Restrepo-Echavarría R. El proceso de duelo ante la pérdida humana en tiempos
+                de pandemia por COVID-19. Revista Científica Arbitrada en Investigaciones de la Salud GESTAR. 2022 Mar
+                4;5(9
+                Edición especial marzo):135-52.</li>
+            <li id="r34">Dantas C de R, Azevedo RCS de, Vieira LC, Côrtes MTF, Federmann ALP, Cucco L da M, et al. O
+                luto nos
+                tempos da COVID-19: desafios do cuidado durante a pandemia. Revista Latinoamericana de Psicopatologia
+                Fundamental [Internet]. 2020 Sep [cited 2021 Jun 1];23(3):509-33. Available from: <a
+                    href="https://doi.org/10.1590/1415-4714.2020v23n3p509.5">https://doi.org/10.1590/1415-4714.2020v23n3p509.5</a>
+            </li>
+            <li id="r35">Mayland CR, Harding AJE, Preston N, Payne S. Supporting Adults Bereaved Through COVID-19: A
+                Rapid Review of the Impact of Previous Pandemics on Grief and Bereavement. Journal of Pain and Symptom
+                Management [Internet]. 2020 Aug [cited 2020 Aug 14];60(2):e33-9. <a
+                    href="https://doi.org/10.1016/j.jpainsymman.2020.05.012">https://doi.org/10.1016/j.jpainsymman.2020.05.012</a>
+            </li>
+            <li id="r36">Mora López G, Berbís Morelló C, Martínez Segura E, Montesó Curto P, Ferré Grau C. Former
+                caregiver's daily life reconstruction: facing the grief of the caregiver. Index Enferm [Internet]. 2019
+                Sep [citado
+                2022 Mayo 06] ; 28( 3 ): 105-109. Disponible en: <a
+                    href="http://scielo.isciii.es/scielo.php?script=sci_arttext&pid=S1132-12962019000200003&lng=es">http://scielo.isciii.es/scielo.php?script=sci_arttext&pid=S1132-12962019000200003&lng=es</a>
+            </li>
+            <li id="r37">Ponce-Reyes JV, Rodríguez-Álava LA. La dinámica familiar frente al duelo por la pérdida de un
+                miembro del
+                sistema. Revista Científica Arbitrada en Investigaciones de la Salud GESTAR ISSN: 2737-6273 [Internet].
+                2022 Mar 4 [cited 2022 May 7];5(9 Ed. esp.):38-57. <a
+                    href="https://doi.org/10.46296/gt.v5i9edespmar.0053">https://doi.org/10.46296/gt.v5i9edespmar.0053</a>
+            </li>
+            <li id="r38">Villarraga-Ramírez L. Cuidado de la salud mental de las enfermeras: prioridad en la pandemia
+                por la covid-19. Aquichan. 2021;21(3): e2131. <a
+                    href="https://doi.org/10.5294/ aqui.2021.21.3.1">https://doi.org/10.5294/ aqui.2021.21.3.1</a></li>
+            <li id="r39">. Eisma MC, Tamminga A. Grief Before and During the COVID-19 Pandemic: Multiple Group
+                Comparisons. Journal of Pain and Symptom Management. 2020 Dec;60(6): e1-4. <a
+                    href="https://doi.org/10.1016/j.jpainsymman.2020.10.004">https://doi.org/10.1016/j.jpainsymman.2020.10.004</a>
+            </li>
+            <li id="r40">. Noguera-Ortiz NY, Pérez-Ruiz C. La situación de enfermería: "un milagro de vida" en la
+                aplicación integral
+                del concepto de duelo. Avances en Enfermería. 2014 Oct 15;32(2):306-13. <a
+                    href="https://doi.org/10.15446/av.enferm.v32n2.46245">https://doi.org/10.15446/av.enferm.v32n2.46245</a>
+            </li>
+        </ol>
+
+    </div>
+
+</body>
+
+</html>

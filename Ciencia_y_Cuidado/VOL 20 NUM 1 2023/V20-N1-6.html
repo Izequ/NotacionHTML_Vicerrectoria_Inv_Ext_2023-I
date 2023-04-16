@@ -1,0 +1,1374 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V20-N1-6</title>
+    <link rel="stylesheet" href="">
+    <style>
+        body {
+            padding: 10em;
+            padding-top: 20px;
+            font-family: Times New Roman;
+            color: black;
+        }
+
+        #articulo-derecha {
+            float: left;
+        }
+
+        /* Posiciones de los resumenes */
+
+        .contenedor-general {
+            display: inline-flex;
+            width: 100%;
+        }
+
+        .contenedor-resumen {
+            width: 240%;
+        }
+
+        .contenedor-autor {
+            width: 100%;
+            padding-left: 20px;
+        }
+
+        .hr-resumen {
+            background-color: gray;
+            margin: 0;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .resumen-fondo {
+            background-color: #bdd5f1;
+            border-radius: 5px;
+        }
+
+        .titulo-resumen {
+            color: black;
+            font-size: 22px;
+            font-weight: bold;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .texto-resumen {
+            padding: 20px;
+            margin: 0;
+        }
+
+        ul.navbar {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 25em;
+            left: 2em;
+            width: 250px;
+        }
+
+        /* Titulos principales */
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: Times New Roman;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        h1 {
+            color: #29abe3;
+        }
+
+        .categoria_titulo {
+            font-style: italic;
+            color: #ffffff;
+        }
+
+        h3 {
+            font-style: italic;
+            font-weight: bold;
+            color: #707073;
+        }
+
+        .categoria {
+            text-align: center;
+            background-color: #707073;
+            width: 20%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            margin: auto;
+        }
+
+        ul.navbar li {
+            background: white;
+            margin: 0.5em 0;
+            padding: 0.3em;
+        }
+
+        /* Enlaces */
+
+        a.link-color:visited {
+            color: white;
+        }
+
+        a.link-color:link {
+            color: white;
+        }
+
+        a.link-color:hover {
+            color: white;
+        }
+
+        a.link-color:hover {
+            border-bottom: 1px solid;
+            background: black;
+        }
+
+        /* Link de referencia */
+
+        a:link {
+            color: #4e00ff;
+        }
+
+        a:visited {
+            color: #003bff;
+        }
+
+        a:focus {
+            border-bottom: 1px solid;
+            background: #98aae4;
+        }
+
+        a:hover {
+            border-bottom: 1px solid;
+            background: #aacefe;
+        }
+
+        /* Etiqueta P */
+
+        p {
+            line-height: normal;
+            text-align: justify;
+            font-size: 18px;
+        }
+
+        p.titulo {
+            color: #29abe3;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        p.subtitulo {
+            color: #29abe3;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* NUEVO */
+        p.subtitulo-segundo {
+            color: #29abe3;
+            font-style: italic;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        p.correspondencia {
+            color: black;
+            font-size: 18px;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        /* NUEVO */
+        p.entrevista {
+            color: black;
+            font-size: 18px;
+            font-style: italic;
+        }
+
+        /* NUEVO */
+        p.subtitulo-tercero {
+            color: #29abe3;
+            font-style: italic;
+            font-size: 18px;
+        }
+
+        p#cabeza {
+            color: #1d71ae;
+            text-align: center;
+        }
+
+        p.autores {
+            font-size: 16px;
+            margin: 0;
+            text-indent: 0em;
+            margin-bottom: 10px;
+        }
+
+        p.forma-citar {
+            text-indent: 0em;
+            text-align: justify;
+            justify-content: center;
+        }
+
+        .cita {
+            text-align: -webkit-center;
+        }
+
+        /* Bold especial para palabras que tienen color seguido de dos puntos
+*/
+
+        /* NUEVO */
+
+        b.subtitulo-segundo {
+            color: #29abe3;
+            font-size: 18px;
+        }
+
+        .contenedor_info {
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .info {
+            width: auto;
+        }
+
+        /* Este es para los documentos del dos en adelante *codigo abajo de este comentario* */
+
+        .info-text {
+            text-align: end;
+            margin: 0;
+        }
+
+        /* Uso Exlusico para el primero documento  que es de revision  *codigo abajo de este comentario* */
+
+        .info_text {
+            font-size: 12px;
+            line-height: 100%;
+            text-align: center;
+            margin: 0;
+        }
+
+        .info_hr {
+            margin: 5;
+        }
+
+        /* Fin P */
+        /* Etiqueta Italic */
+
+        i {
+            font-size: 18px
+        }
+
+        i.centrado {
+            font-size: 18px
+        }
+
+        /* LI para las listas */
+
+        li {
+            font-size: 18px;
+            padding-top: 10px;
+            text-align: justify;
+        }
+
+        /* NUEVO */
+        .lista li {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        hr {
+            background-color: #29abe3;
+            height: 1px;
+        }
+
+        /* Tablas */
+
+        table {
+            border-collapse: collapse;
+            border: 2px solid rgb(0, 0, 0);
+            align-items: center;
+        }
+
+        thead th {
+            border-collapse: collapse;
+            background-color: rgb(179, 179, 179);
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        tbody td {
+            border-collapse: collapse;
+            text-align: center;
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        .tipo {
+            color: #ffffff;
+            font-size: 22px;
+            border-radius: 10px 5px 10px 5px;
+            background-color: #696969;
+        }
+
+        img.logos {
+            width: 15px;
+            height: 15px;
+        }
+
+        .image {
+            text-align: center;
+            image-rendering: optimizeQuality;
+        }
+
+        .image p {
+            text-align: center;
+            font-size: small;
+        }
+
+        .logo {
+            width: 300px;
+            height: 80px;
+        }
+
+        .logo2 {
+            width: 300px;
+            height: 50px;
+        }
+
+        /* Anclajes de la pagina */
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* NUEVO */
+        .ecuacion {
+            text-align: center;
+            font-weight: bold;
+            margin: 1px;
+        }
+
+        @media only screen and (min-width:320px) and (max-width:900px) {
+            body {
+                width: 100%;
+                padding: 5em;
+                margin: 5px;
+            }
+
+            .image {
+                text-align: center;
+                image-rendering: optimizeQuality;
+            }
+
+            .image img {
+                width: 100%;
+            }
+
+            .image p {
+                font-size: small;
+                text-align: center;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="contenedor_info">
+        <div>
+            <img src="img/globales/logo.jpg" alt="" height="125px">
+        </div>
+        <div class="info" style="text-align: right;">
+            <p class="info-text"> ISSN-PRINT 1794-9831 / E-ISSN 2322-7028</p>
+            <p class="info-text"> Vol. 19 Nº 3 / sep - dic, 2022 / Cúcuta, Colombia. </p>
+            <p class="info-text">
+                <img src="img/globales/doi.png" height="20px" alt="">
+                <a href="https://doi.org/10.22463/17949831.3475">https://doi.org/10.22463/17949831.3475</a>
+            </p>
+        </div>
+    </div>
+
+
+    <!--Categoría-->
+    <div class="categoria">
+        <h2 class="categoria_titulo">Original </h2>
+    </div>
+
+    <h1> Autopercepción de salud de adolescentes escolarizados en tiempos de pandemia por COVID-19 </h1>
+
+    <h2 class="segundo"> Self-perception of health among school-aged adolescents in times of pandemic by
+        COVID-19</h2>
+
+    <h2 class="segundo"> Auto-percepção da saúde entre adolescentes em idade escolar em tempos de pandemia
+        pela COVID-19</h2>
+
+
+    <!--Autores-->
+    <h3>
+        Moraima Del Toro-Rubio <sup><a href="#sup1">1*</a> </sup> <br>
+        Kendy Madero-Zambrano <sup><a href="#sup2">2*</a> </sup> <br>
+    </h3>
+
+
+    <!-- Conetenedor de las columnas de la descripciones de los autores, correspondencia de autor 
+    y los resumenes -->
+    <div class="contenedor-general">
+
+
+        <!-- Contenedor de los resumenes -->
+        <div class="contenedor-resumen">
+
+            <!-- Resumen Español -->
+
+            <div class="resumen-fondo">
+                <p class="titulo-resumen"> Resumen</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> <b>Introducción:</b> La adolescencia es una etapa esencial dentro del ciclo de
+                    vida humano. La
+                    presencia de enfermedades en esta etapa puede afectar la capacidad para crecer y desarrollarse a
+                    plenitud, sobre todo cuando son de índole física, psicológica y ocurren en contextos
+                    escolares. <b>Objetivo:</b> Evaluar la autopercepción de salud que tienen los estudiantes
+                    adolescentes matriculados en instituciones educativas en tiempos de pandemia por Covid-19. Cartagena
+                    2021. <b>Materiales y métodos:</b> Estudio cuantitativo, de corte transversal, y correlacional.
+                    Población de 1188 estudiantes de 12-17 años de dos instituciones educativas en Cartagena
+                    (Colombia). Muestra estimada de 319 sujetos, seleccionados a través de muestreo aleatorio
+                    simple. Se aplicó encuesta sociodemográfica diseñada por el equipo investigador y validada por
+                    expertos y para el estado de salud percibido se usó el Cuestionario de Salud SF-36,
+                    la versión en español adaptada culturalmente al contexto colombiano por Lugo, García y
+                    Gómez la cual cuenta con alfas de Cronbach entre 0,7 y 0,94. <b>Resultados:</b> Los adolescentes
+                    fueron principalmente de 15 años (21,9%), de octavo (21,7%) y noveno (27,7%), se dedican
+                    a estudiar (95,9%), en sus familias se devengan menos del salario mínimo (42,3%) y entre
+                    1-2 (40,8%). Viven con padre y madre, con o sin hermanos (72,7%), los padres están casados
+                    o en unión libre (60,5%) y han estudiado hasta bachillerato tanto madres (54,9%) como padres
+                    (49,2%). La autopercepción de la salud fue buena (32,6%) y excelente (33,9%). Se observaron
+                    correlaciones estadísticamente significativas (p < 0,05) entre dicha autopercepción y edad, grado,
+                        escolaridad del padre y valoración del rendimiento académico. <b>Conclusión:</b>
+                        Pese a la emergencia sanitaria ocasionada por la pandemia de covid-19, la autopercepción de
+                        salud que tienen un grupo de estudiantes adolescentes resulta ser favorable y positiva. </p>
+
+                <p class="texto-resumen">
+                    <b>Palabras Claves: </b> Covid-19; Autoinforme; Datos de salud generados por el paciente; Salud del
+                    adolescente.
+                </p>
+            </div>
+            <!-- Resumen Inglés -->
+
+            <div>
+                <p class="titulo-resumen"> Abstract</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> <b>Introduction:</b> Adolescence is an essential stage within the human life
+                    cycle. The presence of
+                    diseases at this stage can affect the ability to grow and develop to the fullest, especially when
+                    they are physical, psychological and occur in school contexts. <b>Objective:</b> To evaluate the
+                    self-perception of health of adolescent students enrolled in educational institutions in times
+                    of the Covid-19 pandemic. Cartagena 2021. <b>Materials and methods:</b> Quantitative,
+                    cross-sectional, correlational study. Population of 1188 students aged 12-17 years from two
+                    educational institutions in Cartagena (Colombia). Estimated sample of 319 subjects, selected through
+                    simple random sampling. A sociodemographic survey designed by the research team and validated by
+                    experts was applied and for perceived health status the SF-36 Health Questionnaire
+                    was used, the Spanish version culturally adapted to the Colombian context by Lugo, García
+                    and Gómez, which has Cronbach's alphas between 0.7 and 0.94. <b>Results:</b> The adolescents
+                    were mainly 15 years old (21.9%), in eighth grade (21.7%) and ninth grade (27.7%), they are
+                    dedicated to study (95.9%), in their families they earn less than the minimum wage (42.3%)
+                    and between 1-2 (40.8%). They live with father and mother, with or without siblings (72.7%),
+                    the parents are married or in union (60.5%) and both mothers (54.9%) and fathers (49.2%)
+                    have studied up to high school. Self-perception of health was good (32.6%) and excellent
+                    (33.9%). Statistically significant correlations (p < 0.05) were observed between self-perception and
+                        age, grade, father's schooling and assessment of academic performance. <b>Conclusion:</b>
+                        Despite the health emergency caused by the covid-19 pandemic, the self-perception of health
+                        of a group of adolescent students was favorable and positive. </p>
+
+                <p class="texto-resumen">
+                    <b>KeyWords:</b> Covid-19; Self-report; Patient-generated health data; Adolescent health.
+                </p>
+            </div>
+            <!-- Resumen Portuguez -->
+
+            <div class="resumen-fondo">
+                <p class="titulo-resumen"> Resumo</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> <b>Introdução:</b> A adolescência é uma etapa essencial no ciclo de vida
+                    humana. A presença de
+                    doenças nesta fase pode afetar a capacidade de crescimento e desenvolvimento pleno, especialmente
+                    quando elas são físicas, psicológicas e ocorrem em contextos escolares. <b>Objetivo:</b>
+                    Avaliar a autopercepção da saúde entre os estudantes adolescentes matriculados em instituições
+                    educacionais em tempos da pandemia de Covid-19. Cartagena 2021. Materiais e
+                    <b>métodos:</b> Estudo quantitativo, transversal, correlacional. População de 1188 estudantes de
+                    12-17 anos de duas instituições educacionais em Cartagena (Colômbia). Amostra estimada
+                    de 319 sujeitos, selecionados através de amostragem aleatória simples. Foi aplicada uma
+                    pesquisa sociodemográfica projetada pela equipe de pesquisa e validada por especialistas e
+                    para a percepção do estado de saúde foi utilizado o questionário de saúde SF-36, a versão
+                    espanhola culturalmente adaptada ao contexto colombiano por Lugo, García e Gómez que
+                    tem a alfabetização de Cronbach entre 0,7 e 0,94. <b>Resultados:</b> Os adolescentes tinham
+                    principalmente 15 anos (21,9%), na oitava série (21,7%) e na nona série (27,7%), dedicam-se aos
+                    estudos (95,9%), em suas famílias ganham menos do que o salário mínimo (42,3%) e entre
+                    1-2 (40,8%). Eles vivem com ambos os pais, com ou sem irmãos (72,7%), os pais são casados ou em
+                    união (60,5%) e ambas as mães (54,9%) e os pais (49,2%) estudaram até o ensino
+                    médio. A auto-percepção da saúde foi boa (32,6%) e excelente (33,9%). Foram observadas
+                    correlações estatisticamente significativas (p < 0,05) entre autopercepção e idade, série,
+                        escolaridade do pai e avaliação do desempenho acadêmico. <b>Conclusão:</b> Apesar da emergência
+                        sanitária causada pela pandemia de covid-19, a autopercepção da saúde de um grupo de estudantes
+                        adolescentes é favorável e positiva.
+                </p>
+
+                <p class="texto-resumen">
+                    <b>Palavras-chave:</b> covid-19; Auto-relato; Dados de saúde gerados pelo paciente; Saúde do
+                    adolescente.
+                </p>
+            </div>
+
+
+
+        </div>
+
+        <!-- Descripcion de autores, Aprobado, Como citar, licencia -->
+        <div class="contenedor-autor">
+            <!-- Autores -->
+            <div>
+                <p class="subtitulo" style="color: black; font-size: 18px;">Autor de correspondencia*</p>
+                <!-- 1 -->
+                <p class="autores" id="sup1"><sup>1*</sup><img class="logos" src="img/globales/sobre.png"> Enfermera,
+                    Magister en educación,
+                    docente investigadora, Corporación
+                    Universitaria Rafal Núñez, Cartagena
+                    de Indias, Colombia.
+                    <a href="mailto:moraima.deltoro@curnvirtual.edu.co">moraima.deltoro@curnvirtual.edu.co</a>, <img
+                        class="logos" src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0001-6710-5171">0000-0001-6710-5171</a>
+                </p>
+                <!-- 2 -->
+                <p class="autores" id="sup2"><sup>2*</sup><img class="logos" src="img/globales/sobre.png"> Enfermera,
+                    Magister en Auditoria
+                    y Sistemas de Calidad en Servicios
+                    de Salud, docente investigadora, lider
+                    grupo de investigación GISIBEC Corporación Universitaria Rafal Núñez,
+                    Cartagena de Indias, Colombia.
+                    <a href="mailto:kendy.madero@curnvirtual.edu.co">kendy.madero@curnvirtual.edu.co</a>, <img
+                        class="logos" src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0001-5581-784">0000-0001-5581-784</a>
+                </p>
+            </div>
+
+            <!--Recibido y aprobado-->
+            <div>
+                <p><b>Recibido: </b> 5 julio 2022 <br> <b>Aprobado: </b> 17 noviembre 2022 </p>
+            </div>
+
+            <!-- Como citar -->
+            <div class="cita">
+                <p class="forma-citar autores"><b>Para citar este artículo / To reference this article / Para citar este
+                        artigo:</b> Del Toro-Rubio M, Madero-Zambrano
+                    K. Autopercepción de salud de adolescentes escolarizados en tiempos de pandemia por COVID-19. 2023;
+                    20(1):59-
+                    70. <a href="https://doi.org/10.22463/17949831.3475">https://doi.org/10.22463/17949831.3475</a></p>
+            </div>
+
+            <!--Licencia-->
+            <br>
+            <div>
+                <p class="autores "> &#169; Universidad Francisco de Paula Santander.
+                    Este es un artículo bajo la licencia CC-BY-NC-ND
+                    <br>
+                    <a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img
+                            alt="Licencia Creative Commons" style="border-width:0"
+                            src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Cuerpo del documento -->
+    <div>
+        <hr>
+        <!--Introducción-->
+        <p class="titulo"> Introducción</p>
+
+        <p>
+            En la actualidad, la salud de la población adolescente
+            constituye una prioridad en la agenda de política pública global en salud y en el campo de la investigación.
+        </p>
+
+        <p>
+            Esto porque la transición de la adolescencia a la adultez
+            temprana es un período de múltiples cambios que involucra elementos importantes para la salud física y
+            mental; aspectos que suelen incidir en el desarrollo y bienestar de un individuo (1). La Organización
+            Mundial de
+            la Salud expresa que, si bien la mayoría de los adolescentes presenta buena salud, la mortalidad prematura,
+            la morbilidad y las lesiones en este grupo poblacional
+            continúan siendo problemáticas importantes de analizar (2). Por ejemplo, los extremos de la malnutrición y
+            obesidad, mancomunado al aumento de la falta de actividad física son algunos de los factores determinantes
+            frente a enfermedades y muertes a temprana edad. De
+            igual forma, problemáticas como depresión, violencia,
+            VIH/Sida, embarazo y parto precoz, consumo de tabaco, alcohol y drogas, juega un papel fundamental en el
+            bienestar y salud de los adolescentes (3).
+        </p>
+
+        <p>
+            En los últimos 20 años, Colombia ha documentado
+            cambios notables en la salud de los adolescentes, evidenciando que las principales causas de morbilidad de
+            esta población (12 - 18 años) se encuentran asociadas
+            a las enfermedades no transmisibles (57,57%) y las
+            condiciones transmisibles y nutricionales (16,26%).
+            En menor medida aparecen las lesiones (5,48%) y las
+            condiciones maternas (1,75%). Este panorama puede
+            estar relacionado con una alimentación inadecuada, caracterizada por consumo poco frecuente de frutas,
+            verduras 86,9%, lácteos 76,5% y consumo de sal adicional
+            43,3%. (4). Lo descrito es relevante, dado que las enfermedades pueden afectar la capacidad de los
+            adolescentes para crecer y desarrollarse a plenitud. Además,
+            se ha documentado que el consumo de alcohol o tabaco,
+            el sedentarismo, las relaciones sexuales sin protección
+            y la exposición a la violencia pueden poner en peligro
+            su salud actual, así como la que presenten más adelante
+            en el ciclo de vida (5). En efecto, cuando se consumen
+            psicoactivos de modo excesivo a los 15 años, el riesgo
+            de futuras adicciones se torna considerablemente alto
+            (6).
+        </p>
+
+        <p>
+            La actual pandemia por Covid-19, ha generado grandes cambios a nivel social y personal, en los jóvenes
+            quizás uno de los más significativos se enmarcó en la
+            formación educativa, donde se generó una transición
+            de educación presencial a remota; con este escenario
+            emergieron algunas dificultades que afectaron el proceso de aprendizaje de los estudiantes y por ende su
+            bienestar (7), lo que les generó síntomas depresivos,
+            ansiedad, ideación suicida, problemas de sueño (8), y
+            estrés a causa de no poder desarrollar sus actividades
+            académicas por dificultades en la conexión a internet
+            (9). Sumado a lo anterior, en la adolescencia ocurre una
+            incidencia significativamente alta de trastornos socioemocionales, lo que puede estar ligado a los cambios
+            propios del desarrollo en esta etapa. Es decir, esto puede tener vínculo con las transformaciones hormonales
+            y morfológicas relacionados con la pubertad; las alteraciones en los patrones de sueño; las dificultades con
+            la regulación de las emociones; los cambios en la importancia y naturaleza de las relaciones con los pares;
+            y
+            las eventuales alteraciones del autoconcepto (10). Adicionalmente existen otros condicionantes del estado de
+            salud en estos sujetos, así como de las percepciones,
+            concepciones y valoraciones que sobre ello emanan;
+            aquí se incluyen entre otros– la manera en que se configura y opera la dinámica familiar, la cultura y el
+            medio
+            ambiente (11).
+        </p>
+
+        <p>
+            La autopercepción en salud es un indicador de bienestar subjetivo que puede ser un elemento clave como
+            predictor en el proceso salud-enfermedad, en tanto que
+            ofrece información relevante en salud tanto física como
+            mental. Cabe resaltar, que este concepto se encuentra
+            relacionado a distintas características sociodemográficas que influyen en la percepción de salud de un
+            individuo, tal es el caso del sexo, la escolaridad y el lugar
+            de residencia (12). Autores como Rosa y García (13),
+            evidencian como la percepción de salud positiva de su
+            población sujeto de estudio puede tener una relación
+            directa con la mayor participación de actividades físico-deportivas. Por ende, identificar las relaciones
+            existentes entre la salud autoevaluada y las características
+            vitales de un individuo desde edades tempranas permite fortalecer políticas públicas, estrategias e
+            intenciones en pro del cuidado y el mantenimiento de la salud
+            en la adultez (14).
+        </p>
+
+        <p>
+            Ahora bien, existe información para diferentes contextos geográficos que aborda desde diversas perspectivas
+            y matices analíticos la temática de la percepción de la
+            salud entre los adolescentes. Para un grupo de 19 Ciudades europeas se conoció que los adolescentes que
+            practican actividad física son más propensos a reportar
+            un buen estado de salud (OR = 1,861, p valor = 0,001)
+            (11). En un sentido similar apuntaron los hallazgos de
+            una revisión sistemática, según los cuales existe evidencia de una asociación positiva entre la actividad
+            física y el estado de salud autoinformado en adolescentes, de modo que el aumento de los niveles de
+            actividad
+            física da como resultado un mejor estado de salud autoinformado (15).
+        </p>
+
+        <p>
+            En Brasil se analizó la prevalencia de la autopercepción negativa de la salud, la cual ascendió a 26,7%.
+            Siendo mayor en las mujeres (32,9%) respecto a los varones (19,1%), lo cual se explicaría por el hecho de
+            que las féminas son más sensibles a detectar cambios
+            fisiológicos y consideran hábitos inapropiados para la
+            salud, y porque están más atentas a la atención médica.
+            Además, se puntualizó que los sujetos cuyas familias
+            devengan bajos ingresos tienen más probabilidades de
+            calificar negativamente su salud. Esto obedece a que el
+            ingreso se asume como un componente determinante
+            para un mayor acceso a otras formas de actividades, entre ellas ocio, educación, vivienda y servicios de
+            salud,
+            así, el poder de adquisición de esos bienes y servicios
+            actúa como mediador en la percepción de la salud (16).
+        </p>
+
+        <p>
+            Entre otro conjunto de estudiantes adolescentes brasileros se buscó conocer la asociación entre la salud
+            autopercibida con la actividad física y el estado nutricional.
+            Los hallazgos revelados dan cuenta de que existe una
+            alta prevalencia de autopercepción de salud negativa,
+            particularmente entre las mujeres, además de que los
+            adolescentes rurales, cuyas madres tenían un nivel de
+            escolaridad más bajo y que no practican actividad física en su tiempo libre, eran insuficientemente activos,
+            tenían sobrepeso y preferían actividades de ocio más
+            pasivas, contaban con una autopercepción de salud
+            negativa más alta. Además, los adolescentes de ambos sexos que no practicaban actividad física durante
+            su tiempo libre tenían más probabilidades de tener una
+            percepción de salud negativa (17).
+        </p>
+
+        <p>
+            En el contexto Colombiano, un grupo de adolescentes
+            de Bogotá tuvo una buena autopercepción de salud.
+            Sin embargo, desde la salud mental, se evidenciaron
+            problemáticas comunes en el grupo de mujeres adolescentes relacionadas con: “dolor/malestar” y “sentirse
+            triste/preocupado o infeliz” (18). A nivel de Cartagena
+            la información sobre el tema resultó ser ciertamente escasa.
+        </p>
+
+        <hr>
+
+        <p class="titulo">Objetivos</p>
+
+        <p class="subtitulo-segundo">Objetivo General</p>
+
+        <p>
+            Evaluar la autopercepción de salud que tienen los estudiantes adolescentes matriculados en instituciones
+            educativas en Cartagena durante 2021.
+        </p>
+
+        <p class="subtitulo-segundo">Objetivos específicos</p>
+
+        <ul class="lista">
+            <li>Caracterizar los aspectos sociodemográficos de los
+                estudiantes adolescentes, teniendo en cuenta sexo, edad, tipo de familia, estrato, escolaridad de los
+                padres, nivel de ingresos del hogar, entre otros.</li>
+            <li>Analizar la percepción de los adolescentes en torno a su salud teniendo en cuenta las dimensiones
+                correspondientes a función física, dolor corporal,
+                salud general, vitalidad, función social y rol emocional.</li>
+            <li>Correlacionar las dimensiones de autopercepción
+                con los aspectos sociodemográficos de los adolescentes.</li>
+        </ul>
+
+        <hr>
+
+        <p class="titulo">Materiales y Métodos</p>
+
+        <p>
+            El estudio fue cuantitativo (19), descriptivo (20), de
+            corte transversal (21) y correlacional ( ). La población
+            fue de 1.188 estudiantes entre 12 y 17 años, adolescentes matriculados en dos instituciones de educación
+            media en la ciudad de Cartagena. Se estimó una muestra probabilística de 319 sujetos (error: 5%, nivel de
+            confianza: 95%), y se consideraron los siguientes criterios de inclusión: sujeto adolescente, es decir, con
+            12-17 años; matriculado en alguna de las instituciones
+            de educación media seleccionadas; cuyos padres o acudientes firmen el asentimiento informado, autorizando
+            la respectiva participación.
+        </p>
+
+        <p>
+            La recolección de la información se realizó durante los
+            meses de septiembre a noviembre de 2020, contó con
+            la colaboración de las instituciones educativas para el
+            envío por correo electrónico de un enlace que condujo
+            a la encuesta, la cual estuvo alojada en un formulario en
+            la plataforma Google Forms. Al acceder a la encuesta,
+            apareció la explicación de la finalidad del estudio, el
+            asentimiento informado (para los estudiantes, por tener
+            de 12 a 17 años) y el consentimiento informado (para
+            los padres). En caso de contar con la voluntad de participar, se daba acceso a las preguntas; en caso
+            contrario
+            se cerró el aplicativo y se agradeció.
+        </p>
+
+        <p>
+            El instrumento aplicado consta de 29 preguntas distribuidas en dos componentes: Aspectos sociodemográficos;
+            diseñado por el equipo investigador que constó
+            de 11 (ítems), teniendo en cuenta variables como edad,
+            estado civil, grado, ingresos, tipo de familia, estado civil de los padres, escolaridad de los padres,
+            cantidad de
+            hermanos, entre otras. Este fue sometido a prueba piloto, en la cual no se realizaron modificaciones.
+            Además,
+            se contó con el Componente estado de salud percibido del cuestionario SF-36, que evaluó 7 dimensiones de
+            salud: <b>Autopercepción de salud física y psicológica,
+                Funcionamiento físico, Dolor, Funcionamiento social, salud mental, rol emocional y vitalidad,</b> contó
+            con
+            36 ítems. Para este componente se recurrió al Cuestionario de Salud SF-36 (Alfa de Cronbach de 0,7 y 0,94),
+            que corresponde a una escala genérica que proporciona
+            un perfil del estado de salud y es aplicable a pacientes
+            y a la población general; se usó la versión en español
+            adaptada culturalmente al contexto Colombiano por
+            Lugo, García y Gómez (23), la cual presenta equivalencia lingüística entre los ítems traducidos y los
+            originales. Las dimensiones que integran el cuestionario
+            original son: función física, rol físico, dolor corporal,
+            salud general, vitalidad, función social, rol emocional
+            y salud mental, la cual ha resultado útil para evaluar la
+            calidad de vida relacionada con la salud en la población
+            general y en subgrupos específicos.
+        </p>
+
+        <p>
+            La existencia de asociación se determinó por Chi Cuadrado (Chi2), posteriormente se procedió a calcular su
+            magnitud, empleando la herramienta estadística conocida como V de Cramer (ver Tabla 4). Una vez estimado el
+            anterior coeficiente se procedió a calcular la
+            probabilidad. Finalizado el anterior procedimiento, los
+            formularios se exportaron de Google Sheets (que es
+            la aplicación en donde se almacena la información) a
+            SPSS v15
+        </p>
+
+        <p>
+            El soporte ético estuvo en la Resolución 8430 de 1993
+            la cual sirvió de guía para la realización del presente
+            estudio, considerado sin riesgo debido a que los datos se obtuvieron sin llevar a cabo experimentos sobre
+            los
+            sujetos ( ). El estudio se realizó con fines académicos,
+            con total reserva y respeto al participante y sus familiares; asimismo, fue sometido a la aprobación del
+            comité
+            de ética de la institución bajo el código de proyecto
+            002-IIP 2019.
+        </p>
+
+        <p class="titulo">Resultados</p>
+
+        <p class="subtitulo">Aspectos sociodemográficos</p>
+
+        <p>
+            Las edades más frecuentes correspondieron a 17
+            35,62%, 16 31,96% y 15 años 24,2%. Las adolescentes
+            fueron más frecuentes 58,45% que los varones 41,55%.
+            Se encontró que el estrato dos fue el recurrente 52,05%,
+            seguido del tres 25,11% y del uno 21%. Tal como se
+            esperaba el estado civil soltero fue el más frecuente,
+            observándose entre el 95,89% de los estudiantes. En
+            correspondencia con la etapa de la vida de la vida en
+            que se encuentran los estudiantes, se encontró que no
+            tener hijos fue lo más común 94,98%. Al preguntar por
+            el estado civil de los padres, se observa que sus progenitores eran casados 29,22%, en unión libre 35,16% y
+            separados 33,33%. Los estudiantes viven en sus casas
+            con tres personas 30,59%, cuatro 26,48% y más de 4
+            personas 30,14%. Finalmente, los estudiantes consideran su rendimiento como bueno 56,62%, excelente
+            23,29% y regular 18,72%.
+        </p>
+
+        <p class="subtitulo-segundo">Autopercepción de salud física y psicológica</p>
+
+        <div class="image">
+            <p><b>Tabla 1. </b>Autopercepción de la salud.</p>
+            <img src="img/V20-N1-6/Screenshot_1.png" width="75%">
+            <p><b>IE: I</b>nstitución Educativa </p>
+            <p><b>Fuente: </b>Cálculos del equipo investigador. </p>
+        </div>
+
+        <p>
+            La interpretación de este resultado permitió evidenciar
+            que la percepción que tienen los estudiantes de su salud
+            es positiva. Teniendo en cuenta que el 33,9% indicó
+            que considera que su estado de salud es excelente, el
+            26,6% menciona que es muy bueno, y el 32,6% refiere
+            que su salud es buena. Se conoció que los estudiantes,
+            en general, conciben que su salud actual ha presentado una variación favorable cuando se le pidió que la
+            compararan con el estado que tenía 1 año atrás. Así, el
+            42,6% del total mencionó que su salud es mucho mejor
+            ahora, y el 23,8% indicó que es algo mejor ahora. Sin
+            embargo, no debe dejarse de lado el 30,4% que reconoce que su salud en la actualidad era más o menos igual
+            que la de 1 año atrás.
+        </p>
+
+        <p class="subtitulo-segundo">Funcionamiento físico</p>
+
+        <p>
+            En lo concerniente al dominio de las limitaciones experimentadas en la realización de actividades cotidianas
+            por el estado de salud actual fue evidente que prevalecieron los estudiantes que reconocieron que no
+            experimentan ningún inconveniente al respecto. En efecto, las
+            respuestas que así se recabaron están comprendidas entre el 60,2% hasta el 77,1%. Sin embargo, se consideró
+            justo y pertinente elucidar la situación menos positiva,
+            aunque proporcionalmente no resultaran mayoritarias.
+            Tal fue el caso de quienes reportaron sentir “mucha limitación”, sobre todo en cuanto a (J) bañarse o
+            vestirse
+            21%, (I) caminar cien metros o 1 cuadra 15%, (E) subir
+            un piso por la escalera 14,1%, y (G) caminar más de
+            un kilómetro o 10 cuadras 14,1%. En tanto que otros
+            expresaron que sienten “un poco” de limitación –por
+            cuenta de su estado de salud actual– a la hora de realizar (A) actividades intensas 26%, (G) caminar más de
+            un kilómetro o 10 cuadras 25,7%, así como al momento
+            de (D) subir varios pisos por las escaleras 23,8%.
+        </p>
+
+        <p class="subtitulo-segundo">Dolor</p>
+
+        <p>
+            Frente al caso del dolor, las respuestas estuvieron concentradas a la izquierda de la distribución de
+            frecuencias. En este caso tal situación se interpreta en el sentido de que el dolor está relativamente
+            ausente entre los
+            encuestados. Tal es así que el 50,5% del total mencionó
+            que en las últimas cuatro semanas ha sido nula la presencia de dolor físico, así mismo, el 28,8% coincidió
+            en
+            que ha sido muy poco lo que ha experimentado.
+        </p>
+
+        <div class="image">
+            <p><b>Tabla 2. </b>Intensidad de la presencia de dolor físico reciente (últimas cuatro semanas).</p>
+            <img src="img/V20-N1-6/Screenshot_2.png" width="75%">
+            <p><b>IE: </b>Institución Educativa </p>
+            <p><b>Fuente: </b>Cálculos del equipo investigador. </p>
+        </div>
+
+        <p>
+            Dentro del ámbito del funcionamiento social, por lo general la salud física o los problemas emocionales de
+            los
+            estudiantes no han dificultado las actividades sociales
+            normales de modo general 65,2%, ni desagregado.
+        </p>
+
+        <p>
+            En esta dimensión, se evidenció que los aspectos calificados de modo más favorable fueron el hecho (A)
+            haberse sentido feliz (promedio: 1,96) y (B) sentirse
+            tranquilo y sereno (promedio: 2,25).
+        </p>
+
+        <p class="subtitulo-segundo">Salud mental</p>
+
+        <div class="image">
+            <p><b>Tabla 3. </b>Presencia de sensaciones relacionadas con la salud mental (cifras promedio).</p>
+            <img src="img/V20-N1-6/Screenshot_3.png" width="70%">
+            <p><b>IE: </b>Institución Educativa </p>
+            <p><b>Fuente: </b>Cálculos del equipo investigador con base en información de las encuestas. </p>
+        </div>
+
+        <p class="subtitulo-segundo">Rol emocional</p>
+
+        <p>
+            Se indagó a los estudiantes por la presencia de problemas en la realización de las actividades cotidianas
+            derivados de la salud emocional. En esencia, tales problemas han estado ausentes en la mayoría de ellos, sin
+            embargo, se observó que, en una tercera parte de los
+            encuestados, manifiestan que (B) han podido hacer
+            menos de lo que hubieran querido hacer 34,8%, (A)
+            han disminuido el tiempo que dedicaban a actividades
+            32,6% y (C) han hecho el trabajo u otras actividades
+            con menos cuidado de lo usual 32,6%.
+        </p>
+
+        <p class="subtitulo-segundo">Vitalidad</p>
+
+        <p>
+            El último de los aspectos analizados dentro de la autopercepción de la salud entre los estudiantes resultó
+            ser la vitalidad. De acuerdo con los resultados, puede
+            decirse que el aspecto mejor calificado resultó ser la
+            percepción de (A) tener mucha energía. Sin embargo,
+            la calificación indicativa de menor favorabilidad ocurrió en torno al ítem (D) se ha sentido cansado.
+        </p>
+
+        <p class="subtitulo-segundo">Correlación entre la autopercepción de salud y los aspectos sociodemográficos</p>
+
+        <p>
+            La evidencia empírica reveló que se presentaron patrones diferenciados entre cada uno de los colegios.
+        </p>
+
+        <p>
+            Así, se puede decir que la autopercepción de salud se
+            correlaciona con el hecho de que los estudiantes de la
+            institución educativa #1 tengan 15 años (p valor: 0,027)
+            y los de la institución educativa #2 tengan 16 años (p
+            valor: 0,016).
+        </p>
+
+        <p>
+            Así mismo, se reveló que el grado que cursa el estudiante también es importante porque se relaciona con la
+            percepción de la salud, en particular, resultó relevante
+            en la institución educativa #1 el hecho de cursar grado séptimo (p valor: 0,049), mientras que en la
+            institución educativa #2 resultó estadísticamente significativo
+            cursar grado octavo (p valor: 0,049) y décimo (0,043).
+            Además, hubo correlación estadísticamente significativa entre la autopercepción de la salud reportada por
+            los
+            estudiantes de la institución educativa #2 y el grado de
+            escolaridad de sus padres, específicamente aquellos del
+            nivel de primaria (p valor: 0,000).
+        </p>
+
+        <p>
+            Finalmente, se apreciaron correlaciones que merecen
+            destacarse entre la percepción de la salud y la percepción del rendimiento académico. En particular, en la
+            institución educativa #1 se correlacionó la valoración
+            de la salud y el hecho de concebir el rendimiento tanto
+            malo (p valor: 0,000) como regular (p valor: 0,037). En
+            cambio, en la institución educativa #2 fue importante
+            en este vínculo el rendimiento considerado excelente
+            (p valor: 0,005).
+        </p>
+
+        <div class="image">
+            <p><b>Tabla 4. </b>Correlación entre autopercepción de salud y aspectos sociodemográficos de los estudiantes
+                según instituciones educativas.</p>
+            <img src="img/V20-N1-6/Screenshot_4.png" width="75%">
+            <p><b>Graph1</b>Se consideraron significativas aquellas variables que presentaron p < 0,05 y aparecen
+                    sombreados en azul.</p>
+                    <p><b>Fuente: </b>Cálculos del equipo investigador.</p>
+        </div>
+
+        <p class="titulo">Discusión</p>
+
+        <p>
+            El estudio llevado a cabo se circunscribió a evaluar la
+            autopercepción de salud entre adolescentes escolarizados. Constructos como estos –de índole psicosocial–
+            han ganado progresivamente mayor importancia pues,
+            tal como argumentan Marques y colaboradores (25), se
+            constituyen en predictores relevantes de morbilidad,
+            mortalidad, y de resultados de salud física y mental.
+        </p>
+
+        <p>
+            El núcleo analítico correspondió a la autopercepción de
+            la salud. Lo cual, siguiendo lo expresado por Malta et
+            al. (26), permite resumir objetivamente las expectativas de las personas sobre su salud e incluye un
+            entrenado integral de las dimensiones biológicas, psicológicas
+            y sociales. Al final resulta un indicador simple medido
+            por una pregunta que expresa la percepción que tiene el
+            individuo de su estado o grado de salud.
+        </p>
+
+        <p>
+            Ahora bien, los hallazgos logrados en esta investigación dejaron entrever que los adolescentes
+            escolarizados, en su mayoría, perciben de modo positivo su salud. Al comparar con la literatura que se ha
+            ocupado de
+            este tema, se encontró una proporción de percepción
+            de mala salud reportada por Malta et al. (26), la cual
+            asciende a 7,1%. Otros estudios reportan cifras elevadas, tal fue el caso del 26,7% mencionado por Vieira
+            y colaboradores (16), o el intervalo del 1,2% – 38%
+            presentado por Silva et al. (27).
+        </p>
+
+        <p>
+            Con respecto al funcionamiento o salud física, la evidencia recabada permitió afirmar que –en general– es
+            positiva en la medida en que las actividades cotidianas
+            son realizadas sin limitación alguna a causa del estado
+            de salud. Esta dinámica puede entenderse y abordarse a
+            la luz de lo expresado por Silva et al. (27), en el sentido de que estos autores afirman que la actividad y
+            la salud
+            física se vinculan con la adopción de otras conductas
+            relacionadas con la salud y, a su vez, con la percepción
+            de que se tiene buena salud para llevarlas a cabo. Sin
+            embargo, otros estudios reflejan cómo ha impactado el
+            confinamiento por la pandemia Covid-19, en menos valoración de la autopercepción de salud física por parte
+            de un grupo de adolescentes; resaltando la importancia
+            de implementar programas de intervención dirigidas a
+            la promoción de la salud mental, así como, establecer
+            estrategias postpandemia con base en sus expectativas
+            para un mejor afrontamiento (28).
+        </p>
+
+        <p>
+            Para el caso de lo referente a la percepción de dolor, las
+            respuestas de los adolescentes estuvieron relativamente
+            polarizadas, en el sentido de que alrededor de la mitad
+            de los participantes expresó no haber experimentado
+            esta sensación recientemente, en cambio, la mitad restante mencionó haber tenido algún grado de dolor. Las
+            cifras aquí encontradas resultan más altas que aquellas
+            indicadas por Grasaas et al., (29) respecto a que la prevalencia de algún grado de dolor en los adolescentes
+            de
+            países occidentales se encuentra presente entre el 20%
+            al 35% de los participantes. En cambio, la prevalencia
+            de dolor fue más parecida al 60% calculado por Haraldstad, Christophersen y Helseth (30), en su
+            investigación sobre percepción de dolor en adolescentes.
+        </p>
+
+        <p>
+            Como parte de la finalidad de este estudio se tuvo interés en conocer las variables sociodemográficas que se
+            relacionaban con la autopercepción de salud. Esto se
+            llevó a cabo mediante un procedimiento estadístico de
+            tipo correlacional, gracias al cual se puso en evidencia
+            que solo algunas fueron estadísticamente significativas
+            (p &#60; 0,05). Tales fueron la edad, el grado académico cursado, el hecho de tener papá que ha cursado
+            hasta el
+            nivel de primaria (solo en la institución educativa #2), y la valoración que le otorgan al rendimiento
+            académico actual. </p>
+
+        <p>
+            La comparación de los resultados de la correlación con
+            los presentados por otros investigadores permitió establecer puentes interpretativos. A la luz del
+            aporte de
+            Fumarco, Baert y Sarra (31) se aprecian diferencias,
+            dado que estos autores revelan que son significativas
+            las variables status o estrato socioeconómico y la convivencia con ambos padres en la vivienda.
+            Frente al
+            artículo de Vieira y colaboradores (16) hubo similitudes en tanto que la edad también les resultó
+            significativa (p &#60; 0,047), así como los ingresos del hogar (p &#60; 0,001), algo que no ocurrió
+            en esta investigación. Sobre
+            este último aspecto se puede afirmar, siguiendo a Vieira y colaboradores (16) que el ingreso es un
+            aspecto
+            importante, en el sentido de que los adolescentes con
+            ingresos familiares bajos tienen más probabilidades
+            de calificar su salud negativamente, pues estos son un
+            componente determinante en un mayor acceso a formas
+            de ocio, educación, vivienda y servicios de salud. En
+            consecuencia, un mayor poder adquisitivo tiende a actuar como mediador del nivel de salud percibido.
+        </p>
+
+        <p>
+            Además, se observa que la escolaridad de la madre fue
+            una variable significativa (p &#60; 0,001) dentro de los aportes de Silva et al. (27) y de Malta et
+            al. (26), contrario
+            a lo detectado en la presente investigación, en donde la
+            escolaridad paterna fue más relevante. Al respecto, se
+            puede argumentar que, en los contextos estudiados por
+            estas dos investigaciones, la escolarización materna es
+            un importante de los ingresos y el estatus socioeconómico, por tanto, entre menor escolaridad tenga
+            la madre, menor nivel de vida y, a su vez, persiste una peor
+            autopercepción de salud.
+        </p>
+
+        <!-- conclusiones -->
+
+        <hr>
+
+        <p class="titulo">Conclusiones</p>
+
+        <ul class="lista">
+            <li>A raíz de lo anterior se llegó a una serie de conclusiones; pese a las condiciones que ha generado
+                la emergencia sanitaria causada por la pandemia
+                Covid -19 y las características propias de la población sujeto de estudio, la autopercepción de la salud
+                entre los participantes fue positiva y favorable, en
+                la medida en que fueron recurrentes los calificativos de excelente, muy buena, y buena. Además, la
+                salud actual –al compararla con su salud pasada–
+                fue concebida como mucho mejor en el momento
+                presente. Esto puede estar relacionado con el momento de recolección de recolección de la información,
+                dado que los estudiantes se encontraban en
+                periodo de confinamiento obligatorio y muchas de
+                las actividades cotidianas cesaron entre ellas ir a la
+                escuela, lo que pudo permitir más tiempo de ocio,
+                descanso y compartir en familia.</li>
+            <li>Sumado a lo anterior, las valoraciones sobre aspectos específicos del estado de salud conllevan a
+                concluir que los estudiantes de ambas instituciones
+                educativas concuerdan con que su salud es excelente, casi ninguno opina que su salud va a empeorar,
+                y tampoco creen que se puedan enfermar más fácilmente que otras personas. En esencial, el estado de
+                salud física, el dolor y el funcionamiento social en
+                poca medida repercute en las actividades diarias.
+                Cabe precisar que la salud mental, la vitalidad y el
+                rol emocional fueron valoradas positivamente por
+                los estudiantes. Muy probablemente esta percepción positiva estuvo mediada por la etapa del ciclo
+                vital de la población sujeta de estudio, así como los
+                reportes estadísticos a nivel mundiales que evidenciaban poco riesgo para este grupo poblacional en
+                los primeros picos de la enfermedad.</li>
+            <li>Así mismo, se pudo establecer que solo algunas
+                variables sociodemográficas se correlacionaron
+                de manera estadísticamente significativa con la
+                autopercepción de salud de los estudiantes. Tales
+                variables fueron la edad, el grado cursado, los estudiantes con padres que han cursado hasta el nivel
+                de primaria, y la valoración que le otorgan al rendimiento académico actual. Estas relaciones revelan
+                que, pese al contexto social de la población su percepción de salud es buena. </li>
+        </ul>
+
+        <p class="subtitulo">Disponibilidad de datos: </p>
+
+        <p>
+            Los datos utilizados para
+            respaldar las conclusiones de este estudio pueden solicitarse al autor principal.
+        </p>
+
+        <p class="subtitulo">Declaración de financiación:</p>
+
+        <p>
+            Esta investigación fue
+            apoyado por la Corporación Universitaria Rafael Núñez
+            [Código Institución de Educación Superior 2825]
+        </p>
+
+        <p class="subtitulo">Agradecimiento: </p>
+
+        <p>
+            A los estudiantes del programa de
+            enfermería María Elvira Alcalá Castro, Yeidis Seidid
+            Padilla Berrio, Yuranis Gutiérrez Rodríguez, Luisa María Padilla Peña
+        </p>
+
+        <p class="subtitulo">Conflicto de intereses:</p>
+
+        <p>
+            Los autores declaran no tener
+            ningún conflicto de intereses
+        </p>
+
+
+        <!-- Referencias -->
+
+        <hr>
+
+        <p class="titulo"> Referencias Bibliograficas </p>
+
+        <ol class="lista">
+            <li id="r1">Macintyre A, Torrens C, Campbell P, Maxwell M, Pollock A, Biggs H, et al. Socioeconomic
+                inequalities
+                and the equity impact of population-level interventions for adolescent health: an overview of systematic
+                reviews. Public Health. [Internet] 2020. [consultado 20 de febrero de 2020]; 180: 154-162, 2020. <a
+                    href="https://doi.org/10.1016/j.puhe.2019.11.008">https://doi.org/10.1016/j.puhe.2019.11.008</a>
+            </li>
+            <li id="r2">Organización Mundial de la salud – OMS. Adolescentes: riesgos para la salud y soluciones.
+                [Internet]. 2021
+                [consultado 20 de febrero de 2020]. Disponible en: <a
+                    href="https://www.who.int/es/news-room/fact-sheets/detail/adolescents-health-risks-and-solutions">https://www.who.int/es/news-room/fact-sheets/detail/adolescents-health-risks-and-solutions</a>
+            </li>
+            <li id="r3">Organización Mundial de la salud – OMS. Salud del adolescente y el joven adulto. [Internet].
+                2021 [consultado 20 de febrero de 2020]. Disponible en: <a
+                    href="https://www.who.int/es/news-room/adolescents-health-risks-and-solutions">https://www.who.int/es/news-room/adolescents-health-risks-and-solutions</a>
+            </li>
+            <li id="r4"> Departamento Administrativo Distrital de Salud-DADIS. Análisis de la situación de salud con el
+                modelo de
+                determinantes sociales de salud del distrito de Cartagena de Indias. Cartagena, 2018. [Internet]. 2018.
+                [consultado 20 de febrero de 2020]. Disponible en: <a
+                    href="https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/VS/ED/PSP/asis-distrital-cartagena-2018.pdf">https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/VS/ED/PSP/asis-distrital-cartagena-2018.pdf</a>
+            </li>
+            <li id="r5">Patton G, Sawyer S, Santelli J, Ross D, Afifi R, Allen N, et al, Our future: a Lancet commission
+                on adolescent
+                health and wellbeing. The Lancet. [Internet]. 2016 [consultado 20 de febrero de 2020]; 387(10036): 2423–
+                2478. <a
+                    href="https://doi.org/10.1016/S0140-6736(16)00579-1">https://doi.org/10.1016/S0140-6736(16)00579-1</a>
+            </li>
+            <li id="r6">De Santiago I, Ribeiro R, Nicolau L, Marinho R, Pereira J. Consumption of Alcohol and Drugs in
+                the School
+                Population of Sao Tome and Principe. Acta Med Port. [Internet]. 2020 [consultado 20 de febrero de 2020];
+                33
+                (4): 237-245. <a href="https://doi.org/10.20344/amp.11876">https://doi.org/10.20344/amp.11876</a></li>
+            <li id="r7">Silva T, Ramos E, Montanari R. Dificultades de la educación remota en las escuelas rurales del
+                norte de Minas
+                Gerais durante la pandemia de Covid-19. Research, Society and Development. [Internet]. 2020 [consultado
+                20
+                de febrero de 2020]; 9 (8): 1-14. <a
+                    href="https://doi.org/10.33448/rsd-v9i8.6053">https://doi.org/10.33448/rsd-v9i8.6053</a></li>
+            <li id="r8">Cobo R, Vega A, García D. Consideraciones institucionales sobre la Salud Mental en estudiantes
+                universitarios durante la pandemia de Covid-19. CienciAmérica. [Internet]. 2020 [consultado 20 de
+                febrero de 2020]; 9
+                (2): 277-284. <a href="https://doi.org/10.33210/ca.v9i2.322">https://doi.org/10.33210/ca.v9i2.322</a>
+            </li>
+            <li id="r9">Muvdi Y, Malvaceda E, Barreto M, Madero K, Mendoza X, Bohórquez C. Estrés percibido en
+                estudiantes de
+                enfermería durante el confinamiento obligatorio por Covid-19. Revista Cuidarte. [Internet]. 2021
+                [consultado
+                20 de febrero de 2020]; 12(2):1330-1340. <a
+                    href="https://doi.org/10.15649/cuidarte.1330">https://doi.org/10.15649/cuidarte.1330</a></li>
+            <li id="r10">Rapee R, Oar E, Johnco C, Forbes M, Fardouly J, Magson N, et al. Adolescent development and
+                risk for the
+                onset of social-emotional disorders: A review and conceptual model. Behaviour Research and Therapy.
+                [Internet]. 2019 [consultado 20 de febrero de 2020]; 123: 103501. <a
+                    href="https://doi.org/10.1016/j.brat.2019.103501">https://doi.org/10.1016/j.brat.2019.103501</a>
+            </li>
+            <li id="r11">Granger E, Williams G, Di Nardo F, Harrison A, Verma A. The relationship between physical
+                activity and
+                self-rated health status in European adolescents: Results of the EURO-URHIS 2 survey. European Journal
+                of
+                Public Health. [Internet]. 2017 [consultado 20 de febrero de 2020]; 27 (2): 107-111. <a
+                    href="https://doi.org/10.1093/eurpub/ckw177">https://doi.org/10.1093/eurpub/ckw177</a></li>
+            <li id="r12"> Aguilar I, Carrera P, Rabanaque M. Salud percibida y nivel educativo en España: tendencias por
+                comunidades autónomas y sexo. Gac. Sanit. [Internet].2015 [consultado 20 de febrero de 2020]; 29: 37-43.
+                <a
+                    href="https://dx.doi.org/10.1016/j.gaceta.2014.07.004">https://dx.doi.org/10.1016/j.gaceta.2014.07.004</a>
+            </li>
+            <li id="r13">Rosa A, García E, Carrillo P. Percepción de salud, actividad física y condición física en
+                escolares. Cuadernos
+                de Psicología del Deporte. [Internet]. 2018 [consultado 20 de febrero de 2020]; 18 (3): 179-189.
+                Disponible
+                en: <a
+                    href="https://revistas.um.es/cpd/article/view/330901">https://revistas.um.es/cpd/article/view/330901</a>
+            </li>
+            <li id="r14">Ramírez R, Silva C, Correa J, González K, Prieto D, Villa E, et al. Self-Rated Health Status
+                and Cardiorespiratory Fitness in a Sample of School children from Bogotá, Colombia. The FUPRECOL Study.
+                Int. J.
+                Environ. Res. Public Health. [Internet]. 2017 [consultado 20 de febrero de 2020]; 14 (952): 1-14. <a
+                    href="https://doi.org/10.3390/ijerph14090952">https://doi.org/10.3390/ijerph14090952</a></li>
+            <li id="r15"> Granger E, Di Nardo F, Harrison A, Patterson L, Holmes R, Verma A. A systematic review of the
+                relationship
+                of physical activity and health status in adolescents. Eur J Public Health. [Internet]. 2017 [consultado
+                20 de
+                febrero de 2020]; 27(2): 100-106. <a
+                    href="https://doi.org/10.1093/eurpub/ckw187">https://doi.org/10.1093/eurpub/ckw187</a></li>
+            <li id="r16">Vieira B, Oliveira A, Pereira M, Cunha F, De Melo P, De Menezes V, Colares V, Bandeira C.
+                Negative self-perceived health associated with school violence in adolescents. Ciência & Saúde Coletiva.
+                [Internet]. 2018
+                [consultado 20 de febrero de 2020]; 23(9): 2909-2916. <a
+                    href="https://doi.org/10.1590/1413-81232018239.12962018">https://doi.org/10.1590/1413-81232018239.12962018</a>
+            </li>
+            <li id="r17"> Silva A, Diniz P, Santos M, Ritti-Dias R, Farah BQ, Tassitano R, Oliveira L. Health
+                self-perception and itsassociation with physical activity and nutritional status in adolescents. J
+                Pediatr [Internet]. 2019 [consultado 20
+                de febrero de 2020]; 95(4): 458-465. <a
+                    href="https://doi.org/10.1016/j.jped.2018.05.007">https://doi.org/10.1016/j.jped.2018.05.007</a>
+            </li>
+            <li id="r18">Gaitán D, Correa J, Vinaccia S, Ramírez R. Autoreporte de la calidad de vida en niños y
+                adolescentes colombianos: Estudio FUPRECOL. Colombia Médica. [Internet]. 2017 [consultado 20 de febrero
+                de 2020]; 48(1):
+                12-18. <a href="https://doi.org/10.48713/10336_11960">https://doi.org/10.48713/10336_11960</a></li>
+            <li id="r19">Palella S, Martins F. Metodología de la investigación cuantitativa. [Internet]. Caracas:
+                Fedupel; 2012. [consultado 20 de febrero de 2020]. Disponible en: <a
+                    href="https://es.calameo.com/read/000628576f51732890350">https://es.calameo.com/read/000628576f51732890350</a>
+            </li>
+            <li id="r20"> Santos F, Rodríguez C, Rodríguez R. Metodología básica de investigación en Enfermería.
+                [Internet]. Madrid: Ediciones Díaz de Santos; 2018. [consultado 20 de febrero de 2020]. Disponible en:
+                <a
+                    href="https://www.editdiazdesantos.com/libros/santos-heredero-francisco-xavier-metodologia-basica-de-investigacion-en-enfermeria-L03006060101.html">https://www.editdiazdesantos.com/libros/santos-heredero-francisco-xavier-metodologia-basica-de-investigacion-en-enfermeria-L03006060101.html</a>
+            </li>
+            <li id="r21">Moreno A, López S, Corcho A. Principales medidas en epidemiología. Salud Pública de México.
+                [Internet].
+                2000 [consultado 20 de febrero de 2020]; 42 (4): 337- 348. <a
+                    href="https://www.scielosp.org/pdf/spm/v42n4/2882.pdf">https://www.scielosp.org/pdf/spm/v42n4/2882.pdf</a>
+            </li>
+            <li id="r22">Hernández-Sampieri RM, Fernández-Collado C, Baptista-Lucio MP. Definición del alcance de la
+                investigación a realizar: exploratoria, descriptiva, correlacional o explicativa [Internet]. [consultado
+                1 de septiembre de
+                2019]. Disponible en: <a
+                    href="https://www.uca.ac.cr/wp-content/uploads/2017/10/Investigacion.pdf">https://www.uca.ac.cr/wp-content/uploads/2017/10/Investigacion.pdf</a>
+            </li>
+            <li id="r23"> Lugo L, García H, Gómez C. Confiabilidad del cuestionario de calidad de vida en salud sf-36 en
+                Medellín,
+                Colombia. Rev Fac Nac Salud Pública. [Internet]. 2006 [consultado 20 de febrero de 2020]; 24 (2): 37-50.
+                Disponible en: <a
+                    href="http://www.scielo.org.co/pdf/rfnsp/v24n2/v24n2a05.pdf">http://www.scielo.org.co/pdf/rfnsp/v24n2/v24n2a05.pdf</a>
+            </li>
+            <li id="r24">Ministerio de Salud República de Colombia. Resolución 8430 de 1993. [Internet]. [Citado el 1 de
+                abril de
+                2020]. Disponible en: <a
+                    href="http://www.unisabana.e%20du.co/fileadmin/Documentos/Investigacion/comite_de_etica/Res__8430_1993_-_Salud.pdf">http://www.unisabana.e%20du.co/fileadmin/Documentos/Investigacion/comite_de_etica/Res__8430_1993_-_Salud.pdf</a>
+            </li>
+            <li id="r25">Marques A, Peralta M, Santos T, Martins J, De Matos M. Self-rated health and health-related
+                quality of life
+                are related with adolescents, healthy lifestyle. Public Health. [Internet]. 2019 [consultado 20 de
+                febrero de
+                2020]; 170: 89–94. <a
+                    href="https://doi.org/10.1016/j.puhe.2019.02.022">https://doi.org/10.1016/j.puhe.2019.02.022</a>
+            </li>
+            <li id="r26">Malta D, Oliveira M, Machado I, Prado R, Stopa S, Crespo C, Assunção A. Characteristics
+                associated to a poor
+                self-rated health in Brazilian adolescents, National Adolescent School-based Health Survey, 2015. Rev
+                Bras
+                Epidemiol. [Internet]. 2018 [consultado 20 de febrero de 2020]; 21 (1): 1-12. <a
+                    href="https://doi.org/10.1590/1980-549720180018.supl.1">https://doi.org/10.1590/1980-549720180018.supl.1</a>
+            </li>
+            <li id="r27">Silva B, Andrade P, Baad V, Valenc P, Menezes V, Amorim V, et al. Prevalência e fatores
+                associados à autopercepc¸ão neg- ativa em saúde dos adolescentes: uma revisão sistemática. Rev Bras
+                Promoc¸ Saude. [Internet].
+                2016 [consultado 20 de febrero de 2020]; 29: 595-601. <a
+                    href="https://doi.org/10.5020/18061230.2016.p595">https://doi.org/10.5020/18061230.2016.p595</a>
+            </li>
+            <li id="r28">Cardozo L. Adena L. Percepción del autoconcepto físico en estudiantes universitarios en tiempos
+                de pandemia y confinamiento por Covid-19. Cuadernos de Psicología del Deporte. [Internet]. 2021
+                [consultado 20 de
+                febrero de 2020]; 21(3): 48-61. <a
+                    href="https://doi.org/10.6018/cpd.443591">https://doi.org/10.6018/cpd.443591</a></li>
+            <li id="r29">Grasaas E, Helseth S, Fegran L, Stinson J, Småstuen M, Haraldstad K. Health-related quality of
+                life in adolescents with persistent pain and the mediating role of self-efficacy: a cross-sectional
+                study. Health and Quality
+                of Life Outcomes. [Internet]. 2020 [consultado 20 de febrero de 2020]; 18 (1): 1-10. <a
+                    href="https://doi.org/10.1186/s12955-020-1273-z">https://doi.org/10.1186/s12955-020-1273-z</a></li>
+            <li id="r30"> Haraldstad K, Christophersen KA, Helseth S. Health-related quality of life and pain in
+                children and adolescents: a school survey. BMC Pediatr. [Internet]. 2017 [consultado 20 de febrero de
+                2020]; 17 (1): 1-8. <a
+                    href="https://doi.org/10.1186/s12887-017-0927-4">https://doi.org/10.1186/s12887-017-0927-4</a></li>
+            <li id="r31">Fumarco L, Baert S, Sarracino F. Younger, Dissatisfied, and Unhealthy - Relative Age in
+                Adolescence. Economics & Human Biology. [Internet]. 2020 [consultado 20 de febrero de 2020]; 100858:
+                1-41. <a href="https://doi.org/10.1016/j.ehb.2020.100858">https://doi.org/10.1016/j.ehb.2020.100858</a>
+            </li>
+        </ol>
+    </div>
+</body>
+
+</html>

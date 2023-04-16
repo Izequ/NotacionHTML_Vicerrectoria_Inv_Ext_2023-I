@@ -1,0 +1,1177 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V20-N1-7</title>
+    <link rel="stylesheet" href="">
+    <style>
+        body {
+            padding: 10em;
+            padding-top: 20px;
+            font-family: Times New Roman;
+            color: black;
+        }
+
+        #articulo-derecha {
+            float: left;
+        }
+
+        /* Posiciones de los resumenes */
+
+        .contenedor-general {
+            display: inline-flex;
+            width: 100%;
+        }
+
+        .contenedor-resumen {
+            width: 240%;
+        }
+
+        .contenedor-autor {
+            width: 100%;
+            padding-left: 20px;
+        }
+
+        .hr-resumen {
+            background-color: gray;
+            margin: 0;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .resumen-fondo {
+            background-color: #bdd5f1;
+            border-radius: 5px;
+        }
+
+        .titulo-resumen {
+            color: black;
+            font-size: 22px;
+            font-weight: bold;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .texto-resumen {
+            padding: 20px;
+            margin: 0;
+        }
+
+        ul.navbar {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 25em;
+            left: 2em;
+            width: 250px;
+        }
+
+        /* Titulos principales */
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: Times New Roman;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        h1 {
+            color: #29abe3;
+        }
+
+        .categoria_titulo {
+            font-style: italic;
+            color: #ffffff;
+        }
+
+        h3 {
+            font-style: italic;
+            font-weight: bold;
+            color: #707073;
+        }
+
+        .categoria {
+            text-align: center;
+            background-color: #707073;
+            width: 20%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            margin: auto;
+        }
+
+        ul.navbar li {
+            background: white;
+            margin: 0.5em 0;
+            padding: 0.3em;
+        }
+
+        /* Enlaces */
+
+        a.link-color:visited {
+            color: white;
+        }
+
+        a.link-color:link {
+            color: white;
+        }
+
+        a.link-color:hover {
+            color: white;
+        }
+
+        a.link-color:hover {
+            border-bottom: 1px solid;
+            background: black;
+        }
+
+        /* Link de referencia */
+
+        a:link {
+            color: #4e00ff;
+        }
+
+        a:visited {
+            color: #003bff;
+        }
+
+        a:focus {
+            border-bottom: 1px solid;
+            background: #98aae4;
+        }
+
+        a:hover {
+            border-bottom: 1px solid;
+            background: #aacefe;
+        }
+
+        /* Etiqueta P */
+
+        p {
+            line-height: normal;
+            text-align: justify;
+            font-size: 18px;
+        }
+
+        p.titulo {
+            color: #29abe3;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        p.subtitulo {
+            color: #29abe3;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* NUEVO */
+        p.subtitulo-segundo {
+            color: #29abe3;
+            font-style: italic;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        p.correspondencia {
+            color: black;
+            font-size: 18px;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        /* NUEVO */
+        p.entrevista {
+            color: black;
+            font-size: 18px;
+            font-style: italic;
+        }
+
+        /* NUEVO */
+        p.subtitulo-tercero {
+            color: #29abe3;
+            font-style: italic;
+            font-size: 18px;
+        }
+
+        p#cabeza {
+            color: #1d71ae;
+            text-align: center;
+        }
+
+        p.autores {
+            font-size: 16px;
+            margin: 0;
+            text-indent: 0em;
+            margin-bottom: 10px;
+        }
+
+        p.forma-citar {
+            text-indent: 0em;
+            text-align: justify;
+            justify-content: center;
+        }
+
+        .cita {
+            text-align: -webkit-center;
+        }
+
+        /* Bold especial para palabras que tienen color seguido de dos puntos
+*/
+
+        /* NUEVO */
+
+        b.subtitulo-segundo {
+            color: #29abe3;
+            font-size: 18px;
+        }
+
+        .contenedor_info {
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .info {
+            width: auto;
+        }
+
+        /* Este es para los documentos del dos en adelante *codigo abajo de este comentario* */
+
+        .info-text {
+            text-align: end;
+            margin: 0;
+        }
+
+        /* Uso Exlusico para el primero documento  que es de revision  *codigo abajo de este comentario* */
+
+        .info_text {
+            font-size: 12px;
+            line-height: 100%;
+            text-align: center;
+            margin: 0;
+        }
+
+        .info_hr {
+            margin: 5;
+        }
+
+        /* Fin P */
+        /* Etiqueta Italic */
+
+        i {
+            font-size: 18px
+        }
+
+        i.centrado {
+            font-size: 18px
+        }
+
+        /* LI para las listas */
+
+        li {
+            font-size: 18px;
+            padding-top: 10px;
+            text-align: justify;
+        }
+
+        /* NUEVO */
+        .lista li {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        hr {
+            background-color: #29abe3;
+            height: 1px;
+        }
+
+        /* Tablas */
+
+        table {
+            border-collapse: collapse;
+            border: 2px solid rgb(0, 0, 0);
+            align-items: center;
+        }
+
+        thead th {
+            border-collapse: collapse;
+            background-color: rgb(179, 179, 179);
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        tbody td {
+            border-collapse: collapse;
+            text-align: center;
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        .tipo {
+            color: #ffffff;
+            font-size: 22px;
+            border-radius: 10px 5px 10px 5px;
+            background-color: #696969;
+        }
+
+        img.logos {
+            width: 15px;
+            height: 15px;
+        }
+
+        .image {
+            text-align: center;
+            image-rendering: optimizeQuality;
+        }
+
+        .image p {
+            text-align: center;
+            font-size: small;
+        }
+
+        .logo {
+            width: 300px;
+            height: 80px;
+        }
+
+        .logo2 {
+            width: 300px;
+            height: 50px;
+        }
+
+        /* Anclajes de la pagina */
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* NUEVO */
+        .ecuacion {
+            text-align: center;
+            font-weight: bold;
+            margin: 1px;
+        }
+
+        @media only screen and (min-width:320px) and (max-width:900px) {
+            body {
+                width: 100%;
+                padding: 5em;
+                margin: 5px;
+            }
+
+            .image {
+                text-align: center;
+                image-rendering: optimizeQuality;
+            }
+
+            .image img {
+                width: 100%;
+            }
+
+            .image p {
+                font-size: small;
+                text-align: center;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="contenedor_info">
+        <div>
+            <img src="img/globales/logo.jpg" alt="" height="125px">
+        </div>
+        <div class="info" style="text-align: right;">
+            <p class="info-text"> ISSN-PRINT 1794-9831 / E-ISSN 2322-7028 </p>
+            <p class="info-text"> Vol. 19 Nº 3 / sep - dic, 2022 / Cúcuta, Colombia. </p>
+            <p class="info-text">
+                <img src="img/globales/doi.png" height="20px" alt="">
+                <a href="https://doi.org/10.22463/17949831.3336">https://doi.org/10.22463/17949831.3336</a>
+            </p>
+        </div>
+    </div>
+
+
+    <!--Categoría-->
+    <div class="categoria">
+        <h2 class="categoria_titulo">Original </h2>
+    </div>
+
+    <h1> Homecare skills and overburden of caregivers of
+        hospitalized chronic patients </h1>
+
+    <h2 class="segundo"> Competência de cuidado e sobrecarga do cuidador da pessoa com doença crônica hospitalizada
+    </h2>
+
+    <h2 class="segundo"> Competencia del cuidar y sobrecarga del cuidador de la persona con enfermedad
+        crónica hospitalizada</h2>
+
+
+    <!--Autores-->
+    <h3>
+        Alix Yaneth Perdomo-Romero <sup><a href="#sup1">1*</a> </sup> <br>
+        Claudia Patricia Cantillo-Medina <sup><a href="#sup2">2*</a> </sup> <br>
+        Claudia Andrea Ramírez-Perdomo <sup><a href="#sup3">3*</a> </sup> <br>
+    </h3>
+
+
+    <!-- Conetenedor de las columnas de la descripciones de los autores, correspondencia de autor 
+    y los resumenes -->
+    <div class="contenedor-general">
+
+
+        <!-- Contenedor de los resumenes -->
+        <div class="contenedor-resumen">
+
+            <!-- Resumen Español -->
+
+            <div class="resumen-fondo">
+                <p class="titulo-resumen"> Abstract</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> <b>Objective:</b> To describe care competence and its association with
+                    overburden of caregivers
+                    of patients with chronic diseases. <b>Method:</b> Quantitative, descriptive, cross-sectional study,
+                    with a convenience sample. Three instruments were used for data collection: the GCPC-UN
+                    instrument for caregiver-patient characterization, the Homecare Skills Questionnaire (CUIDAR, as per
+                    its name in Spanish), and the Zarit Burden Interview. Participants in this study
+                    were 102 caregivers of people hospitalized in a health institution who met the inclusion criteria.
+                    <b>Results:</b> Caregivers were mainly women, had a low level of education, high burden
+                    (56.8%), and high level of care competence (68.6%). A statistically significant correlation
+                    was found between overburden and overall scores on the CUIDAR instrument, as well as
+                    with the following categories: knowledge, uniqueness and anticipation. <b>Conclusion:</b> Homecare
+                    competence is associated with overburden of caregivers of people with CNCDs. Therefore, nursing
+                    teams have to identify the needs of caregivers and take action so as to contribute
+                    to seamless transitions to patients’ homes.
+                </p>
+
+                <p class="texto-resumen">
+                    <b>Keywords: </b> Chronic disease; Family caregivers; Caregiver burden; Nursing.
+                </p>
+            </div>
+            <!-- Resumen Inglés -->
+
+            <div>
+                <p class="titulo-resumen"> Resumo</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> <b>Objetivo:</b> Descrever a competência de cuidar e sua associação com a
+                    sobrecarga do cuidador
+                    familiar da pessoa com doença crônica. <b>Método:</b> estudo descritivo, transversal, quantitativo,
+                    amostragem por conveniência. Foi aplicada a ficha de caracterização da díade Instrumento
+                    CUIDAR e Zarit. 102 cuidadores de pessoas com doenças crônicas em áreas hospitalares, que
+                    atenderam aos critérios de inclusão. <b>Resultados:</b> Predominam mulheres cuidadoras, baixa
+                    escolaridade, 56,8% sobrecarga, alto nível de competência para cuidar 68,6%. Relação
+                    estatisticamente significativa com a variável sobrecarga e a qualificação global da competência
+                    CARE, bem como com suas dimensões: Conhecimento, Singularidade, Antecipação. <b>Conclusão:</b> A
+                    competência para cuidar está associada à sobrecarga do cuidador de pessoas com
+                    doença crônica não transmissível. Portanto, a Enfermagem tem a responsabilidade de identificar as
+                    necessidades do cuidador e intervir nelas para contribuir com a transição para o papel
+                    de cuidador no domicílio do paciente. </p>
+
+                <p class="texto-resumen">
+                    <b>Palavras chave:</b> Doença crônica; Cuidadores familiares; Sobrecarga; Enfermagem.
+                </p>
+            </div>
+            <!-- Resumen Portuguez -->
+
+            <div class="resumen-fondo">
+                <p class="titulo-resumen"> Resumen</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> <b>Objetivo:</b> Describir la competencia del cuidar y su asociación con la
+                    sobrecarga del cuidador
+                    familiar de la persona con enfermedad crónica. <b>Método:</b> Estudio cuantitativo descriptivo,
+                    transversal, muestreo por conveniencia. Se aplicó la ficha de caracterización de la díada,
+                    Instrumento CUIDAR y Zarit. 102 cuidadores de personas con enfermedades crónicas en
+                    las áreas hospitalarias, que cumplían los criterios de inclusión. <b>Resultados:</b> Predominan las
+                    mujeres como cuidadores, nivel de escolaridad bajo, sobrecarga en un 56,8%, alto nivel de
+                    competencia para cuidar 68,6%. Relación estadísticamente significativa con la variable sobrecarga y
+                    la calificación global de la competencia CUIDAR así como con sus dimensiones:
+                    Conocimiento, Unicidad, Anticipación. <b>Conclusión:</b> La competencia de cuidar se asocia con
+                    la sobrecarga del cuidador de personas con enfermedad crónica no transmisible. Por lo tanto,
+                    Enfermería tiene la responsabilidad de identificar las necesidades del cuidador e intervenirlas
+                    para contribuir en la transición hacia el rol de cuidador en el egreso del paciente al hogar. </p>
+
+                <p class="texto-resumen">
+                    <b>Palabras claves: </b> Enfermedad crónica; Cuidadores familiares; Sobrecarga; Enfermería
+                </p>
+            </div>
+
+
+
+        </div>
+
+        <!-- Descripcion de autores, Aprobado, Como citar, licencia -->
+        <div class="contenedor-autor">
+            <!-- Autores -->
+            <div>
+                <p class="subtitulo" style="color: black; font-size: 18px;">Autor de correspondencia*</p>
+                <!-- 1 -->
+                <p class="autores" id="sup1"><sup>1*</sup><img class="logos" src="img/globales/sobre.png"> Nurse. Master
+                    in Nursing. Master
+                    in Education. Professor, Nursing Department. South Colombian University.
+                    Neiva huila. Colombia.
+                    <a href="mailto:alixyaneth.perdomo@usco.edu.co">alixyaneth.perdomo@usco.edu.co</a>, <img
+                        class="logos" src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0003-1390-9718">0000-0003-1390-9718</a>
+                </p>
+                <!-- 2 -->
+                <p class="autores" id="sup2"><sup>2*</sup><img class="logos" src="img/globales/sobre.png"> Nurse.
+                    Specialist in nephrology and
+                    urology nursing. Master in Nursing.
+                    Professor, Nursing Department. South
+                    Colombian University.
+                    <a href="mailto:claudia.cantillo@usco.edu.co">claudia.cantillo@usco.edu.co</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0003-0173-9619">0000-0003-0173-9619</a>
+                </p>
+                <!-- 3 -->
+                <p class="autores" id="sup3"><sup>3*</sup><img class="logos" src="img/globales/sobre.png"> Nurse.
+                    Specialist in Intensive Care.
+                    Master in Nursing. Doctor in Nursing.
+                    Professor, Nursing Department. South
+                    Colombian University. Neiva-Huila.
+                    Colombia.
+                    <a href="mailto:graffhe@usco.edu.co">graffhe@usco.edu.co</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0001-9828-773X">0000-0001-9828-773X</a>
+                </p>
+            </div>
+
+            <!--Recibido y aprobado-->
+            <div>
+                <p><b>Recibido: </b> 5 julio 2022 <br> <b>Aprobado: </b> 17 noviembre 2022 </p>
+            </div>
+
+            <!-- Como citar -->
+            <div class="cita">
+                <p class="forma-citar autores"><b>Para citar este artículo / To reference this article / Para citar este
+                        artigo:</b> Perdomo-Romero AY, Cantillo-Medina
+                    CP, Ramírez-Perdomo CA. Homecare
+                    skills and overburden of caregivers of
+                    hospitalized chronic patients. 2023;
+                    20(1):71-80. <a
+                        href="https://doi.org/10.22463/17949831.3336">https://doi.org/10.22463/17949831.3336</a> </p>
+            </div>
+
+            <!--Licencia-->
+            <br>
+            <div>
+                <p class="autores "> &#169; Universidad Francisco de Paula Santander.
+                    Este es un artículo bajo la licencia CC-BY-NC-ND
+                    <br>
+                    <a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img
+                            alt="Licencia Creative Commons" style="border-width:0"
+                            src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Cuerpo del documento -->
+    <div>
+        <hr>
+        <!--Introducción-->
+        <p class="titulo"> Introduction</p>
+
+        <p>
+            On a global scale, chronic non-communicable diseases
+            (CNCDs) led to the death of 41 million people in 2016,
+            which represents 71% of total deaths (1). CNCDs are
+            mainly associated with risk factors such as unhealthy
+            diets, use of alcohol and tobacco, air pollution, and
+            sedentariness (2-3). This group of diseases includes
+            cardiovascular diseases, cancer, diabetes, respiratory
+            diseases, and mental diseases (3). They can lead to dependence and need for support in daily life (4),
+            requiring the assistance of informal caregivers (5), who can
+            be family members or friends, paid or not, who are in
+            charge of providing support for carrying out daily tasks
+            to people who have experienced changes in their physical and/or mental health (6).
+        </p>
+
+        <p>
+            It is acknowledged that care of people with CNCDs is
+            taken on by caregivers and family members, and these interactions may result in stress, due to the health
+            conditions and the behavior of the people with these
+            diseases. This situation faced by caregivers can result
+            in overburden and feelings of impotence due to not
+            knowing what to do or whom to ask for help, making
+            that taking care of a ill person becomes an exhausting
+            labor and a depressing process (7).
+        </p>
+
+        <p>
+            The burden of uninterrupted care associates with anxiety and depression in caregivers affecting their life
+            quality (8).
+        </p>
+
+        <p>
+            For this reason, it is important that caregivers be prepared to develop their abilities and skills, so they
+            are able
+            to take on homecare (9). The Homecare Competence
+            questionnaire (CUIDAR), as for the acronym in spanish) includes the following dimensions: knowledge,
+            related to concepts about diseases, their treatment, and
+            daily care; uniqueness, related to personal qualities that
+            contribute to being able to face and overcome issues
+            and challenges; instrumental and procedural, related
+            to the skills and abilities to carry out care tasks and
+            meet basic needs; enjoyment, referring to the extent of
+            well-being and personal satisfaction related to perceived quality of life; anticipation, referring to
+            foreseeing the needs of caregivers and identifying risks; and
+            relationships and social interaction, referring to social
+            relationships and support networks that improve the
+            task of providing care. Adequate levels of these factors
+            help caregivers achieve balance in their daily lives, and
+            helps in meeting the needs of both caregivers and the
+            patients (10), making it easy to provide care and reducing stress, since these roles and responsibilities
+            can
+            result in overburden for caregivers when they do not
+            have the needed skills and knowledge(11).
+        </p>
+
+        <p>
+            In a literature review, we found studies that address
+            the issue of overburden of caregivers and their quality of life (12-15) but few address overburden of
+            caregivers and homecare competence (16). Given this
+            background, it is important to assess homecare skills
+            before hospital discharge in order to be aware of the
+            needs of patients with CNCDs and guide care plans and
+            their follow-up (17), and by doing so, reduce the risk
+            of overburden. A situation that demonstrates the gap in knowledge of the impact in competence of caring and
+            the overburden in caregivers which is a relevant aspect
+            to generate strategies that contributes to improving the
+            security of the people with CNCD during hospitalization and discharge
+        </p>
+
+        <p>
+            For these reasons, the objective of this study was to
+            describe homecare competence and overburden among
+            caregivers of people with CNCDs that are hospitalized.
+        </p>
+
+        <hr>
+
+        <p class="titulo">Materials and Methods</p>
+
+        <p>
+            Quantitative, descriptive, correlation and cross-sectional study. A convenience sample was used. Caregivers
+            of patients with CNCDs in hospital services were selected from the Internal Medicine department of a
+            high-complexity public hospital. The inclusion criteria
+            were being 18 years old or older; having been the main
+            caregiver for more than three months; and having provided care for more than three hours a day. The sample
+            was shaped of a hundred and two caregivers which
+            constituted the quantity of population who were hospitalized during the time of data collection, they were
+            informed of the objectives and procedures to be carried
+            out, before signing free and informed consent was forms.
+        </p>
+
+        <p>
+            Data collection was carried out in the institution by the
+            researchers and by trained research assistants, during
+            day and night shifts, as well as on weekends. The collection process was carried out between June and
+            September 2019, in compliance with the inclusion criteria.
+            All caregivers who were contacted agreed to participate in the survey
+        </p>
+
+        <p>
+            The instruments used were:
+        </p>
+
+        <p>
+            The GCPC-UN caregiver-patient characterization survey (18), with 42 items that survey the pair in three
+            categories: overall conditions and sociodemographic
+            profile; burden and perception of support; and available
+            means of information and communication. The instrument’s use was authorized by the research group on the
+            care of chronic patients (GCPC) at the Nursing School
+            of Universidad Nacional de Colombia (UN).
+        </p>
+
+        <p>
+            The homecare skills questionnaire - caregiver, short
+            version, with 20 likert-type items, with the following
+            response possibilities: hardly ever or never; sometimes; often; and almost always or always; with a scale
+            from 0 to 3. Scores are defined as follows: knowledge
+            (low 0-3, average 4-6, high 7-9), uniqueness (low 0-6,
+            average 7-9, high 10-12), instrumental and procedural
+            (low 0-3, average 4-6, high 7-9), enjoyment (low 0-6,
+            average 7-9, high 10-12), anticipation (low 0-2, average 3-4, high 5-6); relationships and social
+            interaction,
+            (low 0-6, average 7-9, high 10-12); and the overall score (low 0-36, average 37-48, high 49-60). The
+            instrument has a Cronbach’s alpha of 0.928 (9). The instrument was used with the authorization of the GCPC.
+        </p>
+
+        <p>
+            The Zarit burden interview (8), composed of 22 Likert-type items with five response options: 1 means
+            never, and 5 means almost always. A score of under
+            46 means no overburden, from 46 to 56, mild overburden, and over 56, severe overburden. The instrument
+            is valid and suitable for Colombia, with a Cronbach’s
+            alpha of 0.86 (19). The instrument was used with the
+            authorization of the provider, the Mapi Research Trust.
+        </p>
+
+        <p>
+            Data were entered on a Microsoft excel ® 2019
+            spreadsheet and processed in SPSS ® statistics software version 23. Univariate descriptive analysis was
+            carried out. Qualitative variables were described using
+            frequency tables, and quantitative variables were described by central tendency measures (mean, median),
+            dispersion measures (standard deviation), and position measures (minimum, maximum, range). Bivariate
+            analysis was performed using the Kruskal Wallis test,
+            and correlation analysis with the Spearman’s method.
+            We considered differences as statistically significant
+            when p &#60; 0.05.
+        </p>
+
+        <p>
+            <b>Ethical aspects</b>
+        </p>
+
+        <p>
+            The study was approved by the research ethics committee of Hospital Hernando Moncaleano Perdomo, minutes
+            number 001-003 of 2019, considering the following
+            bioethical principles: respect of human dignity, privacy, freedom of speech and feelings, confidentiality,
+            and
+            reciprocity.
+        </p>
+
+        <p class="titulo">Results</p>
+
+        <p>
+            One hundred and two caregivers of CNCD patients
+            participated in the study, of whom 74.5% were women, 66.7% were between 36 and 59 years old, with
+            an average of 48.2 years (SD±14.9), 43.1% had completed primary school, 53.9% worked in the household,
+            90.2% had low economic status, and 73.5% had a spouse (Table 1).
+        </p>
+
+        <p>
+            Their relationship with the patient with CNCD was parent-child or spouse (38.2% and 37.3%, respectively).
+            20.5% of caregivers reported that they had a CNCD.
+            87% had been committed to care since diagnosis, 67.7% had been the sole caregivers for more than 37 months
+            (49%) and more than 20 hours a day (60.8%). Patients
+            cared for were 60 years old or older (72.5%), with high
+            levels of dependence (52.9%) and no intellectual alterations (61.8%), and they saw themselves as a light or
+            moderate burden (43.13% and 36.3% respectively).
+        </p>
+
+        <div class="image">
+            <p><b>Table 1. </b>Sociodemographic profile of caregivers of patients with CNCDs. Neiva, Huila,
+                Colombia, 2019. (n=102)</p>
+            <img src="img/V20-N1-7/Screenshot_1.png" width="60%">
+            <p><b>Source: </b>study data</p>
+        </div>
+
+        <p>
+            A high percentage of caregivers of patients with CNCDs perceive mild or intense overburden when they took on
+            their roles (Table 2).
+        </p>
+
+        <div class="image">
+            <p><b>Table 2. </b>Overburden of caregivers of patients with
+                CNCDs. Neiva, Huila, Colombia, 2019. (n=102)</p>
+            <img src="img/V20-N1-7/Screenshot_2.png" width="40%">
+            <p><b>Source: </b>study data</p>
+        </div>
+
+        <p>
+            With regard to homecare skills (CUIDAR instrument),
+            the six dimensions showed high scores: knowledge,
+            54.9%; uniqueness, 56.9%; instrumental and procedural, 57.8%; enjoyment, 56.9%; anticipation, 59.8%; and
+            relationships and social interaction, 51%. Likewise, the
+            overall score for skills was high, at 68%; however, average levels above 25% were found for all dimensions,
+            including overall skills (Table 3).
+        </p>
+
+        <div class="image">
+            <p><b>Table 3. </b>Homecare skills of caregivers of patients with CNCDs. Neiva, Huila,
+                Colombia, 2019. (n=102)</p>
+            <img src="img/V20-N1-7/Screenshot_3.png" width="50%">
+            <img src="img/V20-N1-7/Screenshot_4.png" width="50%">
+            <p><b>Source: </b>study data </p>
+        </div>
+
+        <p>
+            Statistically significant correlations were found between
+            overburden and the following dimensions: knowledge
+            (p=0.001 &#60; 0.05); uniqueness (p=0.005 &#60; 0.05); anticipation (p=0.035 &#60; 0.05); and the overall
+            score on the CUIDAR instrument (p=0.035 &#60; 0.05); no correlations were
+            found with the other three dimensions (Table 4).
+        </p>
+
+        <div class="image">
+            <p><b>Table 4. </b>Association between homecare skills and overburden of caregivers of patients with
+                CNCDs. Neiva, Huila, Colombia, 2019. (n=102)</p>
+            <img src="img/V20-N1-7/Screenshot_5.png" width="65%">
+            <p><b>Source: </b>study data</p>
+        </div>
+
+        <p>
+            Caregivers who did not experience overburden had a
+            high level of knowledge, as opposed to caregivers who
+            experienced low and average levels of overburden.
+        </p>
+
+        <p>
+            Caregivers who did not experience overburden had a
+            high level of knowledge, as opposed to caregivers who
+            experienced low and average levels of overburden.
+        </p>
+
+        <p>
+            For the anticipation dimension, caregivers who did not
+            experience overburden had high scores, and caregivers
+            with mild or intense overburden had low or average
+            scores.
+        </p>
+
+        <p>
+            Regarding the overall scores on the CUIDAR instrument, caregivers who did not experience overburden
+            had high scores, as opposed to caregivers who experienced mild overburden and had low or average scores.
+        </p>
+
+        <p class="titulo">Discussion</p>
+
+        <p>
+            Care is directly associated with the family environment, where caregivers are usually spouses or children,
+            and are mostly women, women are assigned care tasks, and make up an unpaid workforce, as shown in the
+            literature (10,14,20-26). Women are asigned to care
+            labors, to being in an informal laboral which is not
+            remunerated based on cultural and social representations (27). This is a key factor for understanding
+            current gender inequalities associated with care of adult
+            individuals with CNCDs (28), for which it is necessary
+            to implement measures to increase equality in the care
+            of people with chronic conditions. The majority of the
+            surveyed caregivers had spouses, worked in the household, had been committed to care since diagnosis as
+            sole caregivers, had low economic status, and had completed primary school. These findings are in line with
+            those of previous studies (21,23,29).
+        </p>
+
+        <p>
+            This study found that six out of ten caregivers experienced overburden, while other studies have reported
+            overburden in four out of ten (21), or one-third with
+            intense overburden (22). Overburden can be associated with taking on responsibility for treatment, as well
+            as emotional and practical support tasks, decision-making, and health services paperwork (30), all of which
+            are situations that lead to stress, are described as a burden, and affect the quality of life of caregivers
+            in its
+            social, personal and economic aspects (31).
+        </p>
+
+        <p>
+            The findings of this study allow us to conclude that
+            there is a correlation between homecare skills and
+            overburden. Likewise, they describe a correlation between the knowledge dimension and overburden. It is
+            important to recognize that the caregiver does his own
+            functions in solitude with low knowledge of them and
+            without a familiar or healthcare system support leading
+            to a physical tension and a great emotional burden, putting them at risk of becoming sick (32-34). During
+            this
+            process caregivers go through three stages: the first is
+            intense, when they prepare to become a caregiver; in
+            the second, they learn the routine and adapt to changes; and in the third, they feel they are competent to
+            perform their duties, finding a purpose for their work
+            and self-care (28). and improving their skills over time
+            (11). Lack of appropriate communication about how
+            to deal with these diseases results in lack of preparation
+            to take on care, which leads to stress and overburden
+            (35-36).
+        </p>
+
+        <p>
+            Moreover, a correlation was found between the uniqueness dimension and overburden. The acceptance
+            and organization of the role of caregiver creates interdependence in the pair. Caregivers are aware that
+            they
+            live to take care of patients, who are now part of their
+            lives, and they complement each other. This strong
+            bond between caregivers and patients with CNCDs is
+            “special,” and when the care process takes place, leads
+            to new roles and improved provision of care, as well
+            as personal growth for the pair (37). Uniqueness can
+            be a protective factor that allows them to overcome
+            their problems as caregivers, resulting in reduced risk
+            of overburden.
+        </p>
+
+        <p>
+            The results also show a correlation between the anticipation dimension and overburden, in which higher
+            scores mean lower risk of experiencing overburden. Not
+            being able to anticipate unexpected events results in a
+            high percentage of caregivers who experience mild or
+            intense levels of overburden.
+        </p>
+
+        <p>
+            Being supported by healthcare staff helps them define
+            priorities, solve problems, and make decisions. Being
+            informed increases confidence, even though the provision of care is complex due to the number of daily tasks
+            to be performed, many of which cannot be anticipated
+            (11). When caregivers are aware, they can anticipate
+            care demands and prevent overburden.
+        </p>
+
+        <p>
+            Therefore, when nursing teams assesses homecare
+            skills by means of the CUIDAR instrument before hospital discharge, they can anticipate needs, and together
+            with caregivers, they can plan and define care strategies that strengthen the caregivers’ role, with the aim
+            of
+            providing continuity of safe and high-quality care, with
+            fewer readmissions and better outcomes.
+        </p>
+
+
+        <!-- conclusiones -->
+
+        <hr>
+
+        <p class="titulo">Conclusion</p>
+
+        <ul class="lista">
+            <li>There was prevalence of women, the type of kinship was mostly spouses or children, most had low
+                levels of education, were committed to care for
+                long periods, and had low socioeconomic status.
+                Mild or intense overburden was observed as a result of taking on the role of caregiver, and this can
+                have a negative impact on quality of life.</li>
+            <li>As for homecare skills, the knowledge, uniqueness,
+                and anticipation dimensions had statistically significant correlations with overburden of caregivers.
+                Therefore, it is important that nurses identify needs
+                of caregivers during hospitalization relative in order to design care strategies to diminish the
+                negative impact that disease and hospitalization bring
+                along.</li>
+            <li>Therefore, it is important to assess homecare before
+                it is provided in order to implement a strategy that
+                reduces the risk of overburden and prepares caregivers of patients with CNCDs to face the changes
+                that are inherent to their role.</li>
+            <li>Healthcare staff, especially nursing professionals,
+                must implement support programs for caregivers
+                aimed at preventing overburden and improving
+                their homecare skills, which will have a positive
+                effect on the quality of life of both caregivers and
+                patients.</li>
+        </ul>
+
+        <p class="subtitulo">Conflicts of interest </p>
+
+        <p>
+            The authors have no conflicts of interest.
+        </p>
+
+        <p class="subtitulo">Acknowledgements </p>
+
+        <p>
+            We would like to thank the caregivers who agreed to
+            participate in the study, and the Hospital Universitario
+            Hernando Moncaleano Perdomo-Neiva-Huila-Colombia, which approved the study and granted access to
+            their facilities for data collection.
+        </p>
+
+        <!-- Referencias -->
+
+        <hr>
+
+        <p class="titulo"> References </p>
+
+        <ol class="lista">
+            <li id="r1">World Health Organization. World Health Statistics, 2019: Monitoring Health for the sustainable
+                develoment
+                goals. Geneva: Geneva: World Health Organizatio; 2019. 132 p. </li>
+            <li id="r2">World Health Organization. World Health Statistics, 2018: Monitoring Health for the sustainable
+                develoment
+                goals. Geneve; 2018. p. 100. </li>
+            <li id="r3">Zuccala E, Horton R. Reframing the NCD agenda: a matter of justice and equity. Lancet.
+                septiembre de 2020.
+                [cited 2022 Mar 02]; 6736(20):31910–3. <a
+                    href="https://doi.org/10.1016/S0140-6736(20)31910-3">https://doi.org/10.1016/S0140-6736(20)31910-3</a>
+            </li>
+            <li id="r4">Pedreira LC, Maria Cabral Ferreira A, Tadeu Reis Silva G, Maria de Oliveira Silva R, Marques
+                Freitas C.
+                Older Brazilian caregivers and their lived experiences of caring—A hermeneutic phenomenological study. J
+                Clin Nurs. 2018. [cited 2021 Mar 15]; 27(17–18):3314–23. <a
+                    href="http://dx.doi.org/%2010.1111/jocn.14207">http://dx.doi.org/%2010.1111/jocn.14207</a></li>
+            <li id="r5">Aksoydan E, Aytar A, Blazeviciene A, van Bruchem - Visser RL, Vaskelyte A, Mattace-Raso F, et
+                al. Is training for informal caregivers and their older persons helpful? A systematic review. Arch
+                Gerontol Geriatr.
+                2019. [cited 2021 Mar 05]; 83(August 2018):66–74. <a
+                    href="https://doi.org/10.1016/j.archger.2019.02.006">https://doi.org/10.1016/j.archger.2019.02.006</a>
+            </li>
+            <li id="r6">Sambasivam R, Liu J, Vaingankar JA, Ong HL, Tan ME, Fauziana R, et al. The hidden patient:
+                chronic physical morbidity, psychological distress, and quality of life in caregivers of older adults.
+                Psychogeriatrics. 2018.
+                [cited 2021 Abr 15]; 19(1):65–72. <a
+                    href="https://doi.org/10.1111/psyg.12365">https://doi.org/10.1111/psyg.12365</a></li>
+            <li id="r7">Lima ICS, Lima SBA. Experiencing feelings and weaknesses of care in schizophrenia: family
+                caregivers
+                vision. Rev Fun Care Online. 2017. [cited 2022 Dbr 3]; 9(4): 1081-1086. <a
+                    href="http://dx.doi.org/10.9789/2175-5361.2017.v9i4.1081-1086">http://dx.doi.org/10.9789/2175-5361.2017.v9i4.1081-1086</a>
+            </li>
+            <li id="r8">Sanches MR, Pipek LZ, Mesquita GHA de, et al. The impact of stressors and overload on informal
+                caregivers
+                of patients with cirrhosis: The first use of the Burden Scale for Family Caregivers in Brazil. Journal
+                of Health
+                Psychology. 2022. [cited 2022 Dbr 3]; 27(2):408-421. <a
+                    href="http://dx.doi.org/10.1177/1359105320953464">http://dx.doi.org/10.1177/1359105320953464</a>
+            </li>
+            <li id="r9">Carrillo GM, Herrera BS, Arias Rojas EM. Validation of an instrument to assess the homecare
+                competency of
+                the family caregiver of a person with chronic disease. Investig y Educ en Enferm. 2015. [cited 2021 Abr
+                15];
+                33(3):449–55. <a
+                    href="https://doi.org/10.17533/udea.iee.v33n3a08">https://doi.org/10.17533/udea.iee.v33n3a08</a>
+            </li>
+            <li id="r10">Liu HY, Yang CT, Wang YN, Hsu WC, Huang TH, Lin YE, et al. Balancing competing needs mediates
+                the
+                association of caregiving demand with caregiver role strain and depressive symptoms of dementia
+                caregivers:
+                A cross-sectional study. J Adv Nurs. 2017. [cited 2021 Abr 15]; 73(12):2962–72. <a
+                    href="https://doi.org/10.1111/jan.13379">https://doi.org/10.1111/jan.13379</a></li>
+            <li id="r11">Given B, Sherwood PR, Given CW. What knowledge and skills do caregivers need? J Soc Work Educ.
+                2008;
+                [cited 2021 Mar 15]; 44(sup3):115–23. <a
+                    href="https://doi.org/10.1097/01.NAJ.0000336410.30001.cb">https://doi.org/10.1097/01.NAJ.0000336410.30001.cb</a>
+            </li>
+            <li id="r12">Tulek Z, Baykal D, Erturk S, Bilgic B, Hanagasi H, Gurvit IH. Caregiver Burden, Quality of Life
+                and Related
+                Factors in Family Caregivers of Dementia Patients in Turkey. Issues Ment Health Nurs. 2020. [cited 2021
+                May 17]; 41:8, 741-749. <a
+                    href="https://doi.org/10.1080/01612840.2019.1705945">https://doi.org/10.1080/01612840.2019.1705945</a>
+            </li>
+            <li id="r13">Andrade G, Rangu S, Provini L, Putterman E, Gauthier A, Castelo-Soccio L. Childhood vitiligo
+                impacts
+                emotional health of parents: a prospective, cross-sectional study of quality of life for primary
+                caregivers. J
+                Patient-Reported Outcomes. 2020. [cited 2021 Ago 04]; 4(1):1–5. <a
+                    href="https://doi.org/10.1186/s41687-020-0186-2">https://doi.org/10.1186/s41687-020-0186-2</a></li>
+            <li id="r14">Ramírez CA, Salazar Y, Perdomo AY. Quality of life of caregivers of persons with neurological
+                disorder
+                sequels. Rev Cient la Soc Esp Enferm Neurol. 2017. [cited 2021 Abr 08]; 45. <a
+                    href="https://doi.org/10.1016/j.sedeng.2016.12.001">https://doi.org/10.1016/j.sedeng.2016.12.001</a>
+            </li>
+            <li id="r15">Al Qadire M, Aloush S, Alkhalaileh M, Qandeel H, Al-Sabbah A. Burden Among Parents of Children
+                With
+                Cancer in Jordan: Prevalence and Predictors. Cancer Nurs. 2020. [cited 2021 Abr 08]; 43(5):396–401. <a
+                    href="https://doi.org/10.1097/NCC.0000000000000724">https://doi.org/10.1097/NCC.0000000000000724</a>
+            </li>
+            <li id="r16">Carreño S, Arias M. Competence to care in the home and burden in the caregiver of the child
+                with cancer. Gac
+                Mex Oncol. 2016. [cited 2021 Mar 16]; 15(6):336–43. <a
+                    href="https://doi.org/10.1016/j.gamo.2016.09.009">https://doi.org/10.1016/j.gamo.2016.09.009</a>
+            </li>
+            <li id="r17">Carrillo GM, Sanchez B, Vargas E. Development and psychometric tests of the "cuidar" instrument
+                - short
+                version for the assessment of the competence for home care. Rev la Univ Ind Santander Salud. 2016.
+                [cited
+                2021 Ago 08]; 48(2):222–31. <a
+                    href="http://dx.doi.org/10.18273/revsal.v48n2-2016007">http://dx.doi.org/10.18273/revsal.v48n2-2016007</a>
+            </li>
+            <li id="r18">Chaparro L, Sánchez B, Carrillo G. Survey characterization care dyad family caregiver – a
+                person with a chronic disease. Rev Cienc y Cuid. 2014. [cited 2021 Abr 08]; 11(2):31–45. <a
+                    href="https://doi.org/10.22463/17949831.196">https://doi.org/10.22463/17949831.196</a>
+            </li>
+            <li id="r19">Barreto RV, Campos MS, Carrillo GM, Coral R, Chaparro L, Durán M, et al. Entrevista de
+                Percepção de
+                Carga do Cuidado de Zarit: Provas psicométricas para a Colômbia. Aquichan. 2015. [cited 2021 Mar 16];
+                15(3):368–80. <a
+                    href="http://dx.doi.org/10.5294/aqui.2015.15.3.5">http://dx.doi.org/10.5294/aqui.2015.15.3.5</a>
+            </li>
+            <li id="r20">Ramírez CA, Chacón E, Perdomo AY. Dealing the toughness of Chronic disease, challenges of the
+                dyad: caregiver/person cared for. Cult los Cuid Rev Enfermería y Humanidades 2018. [cited 2021 Abr 07];
+                22(52):46–
+                57. <a href="http://dx.doi.org/10.14198/cuid.2018.52.04">http://dx.doi.org/10.14198/cuid.2018.52.04</a>
+            </li>
+            <li id="r21">Torres B, Agudelo MC, Pulgarin M B-FD. Factors associated with overloading in the primary
+                caregiver. Medellin, 2017. 2018. [cited 2021 Mar 15]; 20(3):261–9. <a
+                    href="https://doi.org/10.22267/rus.182003.130">https://doi.org/10.22267/rus.182003.130</a></li>
+            <li id="r22">Barrera L, Campos MS, Gallardo K, Coral RC H-BA. Social support perceived in people with
+                chronic disease
+                and their family caregivers in five macro regions of Colombia. Rev Univ salud. 2016. [cited 2021 Sep
+                10];
+                18(1):102–12. <a
+                    href="http://dx.doi.org/10.22267/rus.161801.23">http://dx.doi.org/10.22267/rus.161801.23</a></li>
+            <li id="r23">Sánchez LM, Carrillo M. Competency for homecare of that dyad person with cancer in chemotherapy
+                and
+                his caregiver family. Psicooncologia. 2017. [cited 2020 Sep 10]; 14(1):137–48. <a
+                    href="https://doi.org/10.5209/PSIC.55817">https://doi.org/10.5209/PSIC.55817</a></li>
+            <li id="r24">Cantillo CP, Ramírez CA, Perdomo AY. Caring ability in family caregivers of people with chronic
+                disease and
+                perceived overload. Cienc enferm. 2018. [cited 2021 Sep 13]; 24(16):1–12. <a
+                    href="http://dx.doi.org/10.4067/s0717-95532018000100216">http://dx.doi.org/10.4067/s0717-95532018000100216</a>
+            </li>
+            <li id="r25">Kazemi A, Azimian J, Mafi M, Allen KA, Motalebi SA. Caregiver burden and coping strategies in
+                caregivers
+                of older patients with stroke. BMC Psychol. 2021. [cited 2022 Dbr 3]; 9, 51. <a
+                    href="https://doi.org/10.1186/s40359-021-00556-z">https://doi.org/10.1186/s40359-021-00556-z</a>
+            </li>
+            <li id="r26">Bagnasco A, Rosa F, Dasso N, Aleo G, Catania G, Zanini M, Rocco G, Turci C, Ghirotto L, Hayter
+                M &
+                Sasso, L. Caring for patients at home after acute exacerbation of chronic obstructive pulmonary disease:
+                A
+                phenomenological study of family caregivers’ experiences. Journal of Clinical Nursing. 2021. [cited 2022
+                Dbr
+                3]; 30(15-16):2246-2257. <a
+                    href="http://dx.doi.org/10.1111/jocn.15613">http://dx.doi.org/10.1111/jocn.15613</a></li>
+            <li id="r27">Gresswell I, Lally L, Adamis D, McCarthy GM. Widening the net: exploring social determinants of
+                burden
+                of informal carers. Ir J Psychol Med. 2018 Mar. [cited 2022 Dbr 3]; 35(1):43-51. <a
+                    href="http://dx.doi.org/10.1017/ipm.2017.36">http://dx.doi.org/10.1017/ipm.2017.36</a></li>
+            <li id="r28">Batthyány K, Genta N, Perrotta V. The contribution of family and women to unpaid health care in
+                Uruguay. Rev Estud Fem. 2017. [cited 2021 Oct 05];25(1):187–213. <a
+                    href="https://doi.org/10.1590/1806-9584.2017v25n1p187">https://doi.org/10.1590/1806-9584.2017v25n1p187</a>
+            </li>
+            <li id="r29">Vega OM, González DS. Social Support Perceived and Competence for Care in the Home, Ocaña,
+                Colombia. Nova. 2019. [cited 2021 Oct 07]; 17(32):95–108. <a
+                    href="https://doi.org/10.22490/24629448.3638">https://doi.org/10.22490/24629448.3638</a></li>
+            <li id="r30">Lee VYW, Seah WY, Kang AWC, Khoo EYH, Mooppil N, Griva K. Managing multiple chronic conditions
+                in Singapore – Exploring the perspectives and experiences of family caregivers of patients with diabetes
+                and
+                end stage renal disease on haemodialysis. Psychol Heal. 2016. [cited 2021 Oct 10]; 31(10):1220–36. <a
+                    href="https://doi.org/10.1080/08870446.2016.1203921">https://doi.org/10.1080/08870446.2016.1203921</a>
+            </li>
+            <li id="r31">Rico M, Quesada V, Polentinos E, Sánchez R, Rayo MÁ, Del Cura I; CuidaCare Group.
+                Health-related quality
+                of life in caregivers of community-dwelling individuals with disabilities or chronic conditions. A
+                gender-differentiated analysis in a cross-sectional study. BMC Nurs. 2022. [cited 2022 Dbr 4]; Mar
+                29;21(1):69. <a
+                    href="https://doi.org/10.1186/s12912-022-00845-x">https://doi.org/10.1186/s12912-022-00845-x</a>
+            </li>
+            <li id="r32">Ahn S, Esquivel JH, Davis EM, Logan JG, Chung ML. Cardiovascular Disease Incidence and Risk in
+                Family
+                Caregivers of Adults With Chronic Conditions: A Systematic Review. J Cardiovasc Nurs. 2022 May-Jun 01.
+                [cited 2022 Dbr 4]; 37(3):E47-E60. <a
+                    href="https://doi.org/10.1097/JCN.0000000000000816">https://doi.org/10.1097/JCN.0000000000000816</a>.
+            </li>
+            <li id="r33">Javanmardifard S, Shirazi F, Jamalnia S, Sadeghi E. Relationship Between Caregiver Burden and
+                Cognitive Impairment in Adult Patients with Type 2 Diabetes. J Holist Nurs Midwifery 2022. [cited 2022
+                Dbr 4];
+                32(3):203-209. <a
+                    href="https://doi.org/10.32598/jhnm.32.3.2207">https://doi.org/10.32598/jhnm.32.3.2207</a></li>
+            <li id="r34">Sarabia C, Taltavull J. M, Miguélez A, Fernández A, Ortego C & Fernández R. Experiences of
+                caregiving and
+                quality of healthcare among caregivers of patients with complex chronic processes: A qualitative study.
+                Applied
+                Nursing Research. 2020. [cited 2022 Dbr 4]; 56, 151344. <a
+                    href="https://doi.org/doi:10.1016/j.apnr.2020.151344">https://doi.org/doi:10.1016/j.apnr.2020.151344</a>
+            </li>
+            <li id="r35">Liu J, Liu Q, Huang Y, Wang W, He G, Zeng Y. Effects of personal characteristics, disease
+                uncertainty and
+                knowledge on family caregivers’ preparedness of stroke survivors: a cross-sectional study. Nurs Heal
+                Sci.
+                2020, [cited 2022 ene 05]; 7(e013210). <a
+                    href="http://dx.doi.org/10.1111/nhs.12743">http://dx.doi.org/10.1111/nhs.12743</a></li>
+            <li id="r36">Li X, Xia X, Wang P, Zhang S, Liu M, Wang L. Needs and rights awareness of stroke survivors and
+                caregivers:
+                A cross-sectional, single-centre questionnaire survey. BMJ Open. 2017. [cited 2021 Oct 12]; 7(10). <a
+                    href="http://dx.doi.org/10.1136/bmjopen-2016-013210">http://dx.doi.org/10.1136/bmjopen-2016-013210</a>
+            </li>
+            <li id="r37">Chaparro L. How a "Special Caring Bond is Form Between Chronically ill Patient Fam Caregiver.
+                2011. [cited
+                2021 May 05]; 11(1):7–22. <a
+                    href="http://dx.doi.org/10.5294/aqui.2011.11.1.1">http://dx.doi.org/10.5294/aqui.2011.11.1.1</a>.
+            </li>
+        </ol>
+
+
+    </div>
+</body>
+
+</html>

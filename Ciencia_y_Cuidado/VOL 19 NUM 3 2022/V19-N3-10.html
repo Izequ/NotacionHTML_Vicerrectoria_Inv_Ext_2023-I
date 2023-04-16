@@ -1,0 +1,1440 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V19-N3-10</title>
+    <link rel="stylesheet" href="">
+    <style>
+        body {
+            padding: 10em;
+            padding-top: 20px;
+            font-family: Times New Roman;
+            color: black;
+        }
+
+        #articulo-derecha {
+            float: left;
+        }
+
+        /* Posiciones de los resumenes */
+
+        .contenedor-general {
+            display: inline-flex;
+            width: 100%;
+        }
+
+        .contenedor-resumen {
+            width: 240%;
+        }
+
+        .contenedor-autor {
+            width: 100%;
+            padding-left: 20px;
+        }
+
+        .hr-resumen {
+            background-color: gray;
+            margin: 0;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .resumen-fondo {
+            background-color: #bdd5f1;
+            border-radius: 5px;
+        }
+
+        .titulo-resumen {
+            color: black;
+            font-size: 22px;
+            font-weight: bold;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .texto-resumen {
+            padding: 20px;
+            margin: 0;
+        }
+
+        ul.navbar {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 25em;
+            left: 2em;
+            width: 250px;
+        }
+
+        /* Titulos principales */
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: Times New Roman;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        h1 {
+            color: #29abe3;
+        }
+
+        .categoria_titulo {
+            font-style: italic;
+            color: #ffffff;
+        }
+
+        h3 {
+            font-style: italic;
+            font-weight: bold;
+            color: #707073;
+        }
+
+        .categoria {
+            text-align: center;
+            background-color: #707073;
+            width: 20%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            margin: auto;
+        }
+
+        ul.navbar li {
+            background: white;
+            margin: 0.5em 0;
+            padding: 0.3em;
+        }
+
+        /* Enlaces */
+
+        a.link-color:visited {
+            color: white;
+        }
+
+        a.link-color:link {
+            color: white;
+        }
+
+        a.link-color:hover {
+            color: white;
+        }
+
+        a.link-color:hover {
+            border-bottom: 1px solid;
+            background: black;
+        }
+
+        /* Link de referencia */
+
+        a:link {
+            color: #4e00ff;
+        }
+
+        a:visited {
+            color: #003bff;
+        }
+
+        a:focus {
+            border-bottom: 1px solid;
+            background: #98aae4;
+        }
+
+        a:hover {
+            border-bottom: 1px solid;
+            background: #aacefe;
+        }
+
+        /* Etiqueta P */
+
+        p {
+            line-height: normal;
+            text-align: justify;
+            font-size: 18px;
+        }
+
+        p.titulo {
+            color: #29abe3;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        p.subtitulo {
+            color: #29abe3;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* NUEVO */
+        p.subtitulo-segundo {
+            color: #29abe3;
+            font-style: italic;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        p.correspondencia {
+            color: black;
+            font-size: 18px;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        /* NUEVO */
+        p.entrevista {
+            color: black;
+            font-size: 18px;
+            font-style: italic;
+        }
+
+        /* NUEVO */
+        p.subtitulo-tercero {
+            color: #29abe3;
+            font-style: italic;
+            font-size: 18px;
+        }
+
+        p#cabeza {
+            color: #1d71ae;
+            text-align: center;
+        }
+
+        p.autores {
+            font-size: 16px;
+            margin: 0;
+            text-indent: 0em;
+            margin-bottom: 10px;
+        }
+
+        p.forma-citar {
+            text-indent: 0em;
+            text-align: justify;
+            justify-content: center;
+        }
+
+        .cita {
+            text-align: -webkit-center;
+        }
+
+        /* Bold especial para palabras que tienen color seguido de dos puntos
+*/
+
+        /* NUEVO */
+
+        b.subtitulo-segundo {
+            color: #29abe3;
+            font-size: 18px;
+        }
+
+        .contenedor_info {
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .info {
+            width: auto;
+        }
+
+        /* Este es para los documentos del dos en adelante *codigo abajo de este comentario* */
+
+        .info-text {
+            text-align: end;
+            margin: 0;
+        }
+
+        /* Uso Exlusico para el primero documento  que es de revision  *codigo abajo de este comentario* */
+
+        .info_text {
+            font-size: 12px;
+            line-height: 100%;
+            text-align: center;
+            margin: 0;
+        }
+
+        .info_hr {
+            margin: 5;
+        }
+
+        /* Fin P */
+        /* Etiqueta Italic */
+
+        i {
+            font-size: 18px
+        }
+
+        i.centrado {
+            font-size: 18px
+        }
+
+        /* LI para las listas */
+
+        li {
+            font-size: 18px;
+            padding-top: 10px;
+            text-align: justify;
+        }
+
+        /* NUEVO */
+        .lista li {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        hr {
+            background-color: #29abe3;
+            height: 1px;
+        }
+
+        /* Tablas */
+
+        table {
+            border-collapse: collapse;
+            border: 2px solid rgb(0, 0, 0);
+            align-items: center;
+        }
+
+        thead th {
+            border-collapse: collapse;
+            background-color: rgb(179, 179, 179);
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        tbody td {
+            border-collapse: collapse;
+            text-align: center;
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        .tipo {
+            color: #ffffff;
+            font-size: 22px;
+            border-radius: 10px 5px 10px 5px;
+            background-color: #696969;
+        }
+
+        img.logos {
+            width: 15px;
+            height: 15px;
+        }
+
+        .image {
+            text-align: center;
+            image-rendering: optimizeQuality;
+        }
+
+        .image p {
+            text-align: center;
+            font-size: small;
+        }
+
+        .logo {
+            width: 300px;
+            height: 80px;
+        }
+
+        .logo2 {
+            width: 300px;
+            height: 50px;
+        }
+
+        /* Anclajes de la pagina */
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* NUEVO */
+        .ecuacion {
+            text-align: center;
+            font-weight: bold;
+            margin: 1px;
+        }
+
+        @media only screen and (min-width:320px) and (max-width:900px) {
+            body {
+                width: 100%;
+                padding: 5em;
+                margin: 5px;
+            }
+
+            .image {
+                text-align: center;
+                image-rendering: optimizeQuality;
+            }
+
+            .image img {
+                width: 100%;
+            }
+
+            .image p {
+                font-size: small;
+                text-align: center;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="contenedor_info">
+        <div>
+            <img src="img/globales/logo.jpg" alt="" height="125px">
+        </div>
+        <div class="info" style="text-align: right;">
+            <p class="info-text"> ISSN-PRINT 1794-9831 / E-ISSN 2322-7028 </p>
+            <p class="info-text"> Vol. 19 Nº 3 / sep - dic, 2022 / Cúcuta, Colombia. </p>
+            <p class="info-text">
+                <img src="img/globales/doi.png" height="20px" alt="">
+                <a href="https://doi.org/10.22463/17949831.3321">https://doi.org/10.22463/17949831.3321</a>
+            </p>
+        </div>
+    </div>
+
+
+    <!--Categoría-->
+    <div class="categoria">
+        <h2 class="categoria_titulo">Original </h2>
+    </div>
+
+    <h1> ¿Qué se preguntan las enfermeras/os sobre el aborto? Una re- visión panorámica† </h1>
+
+    <h2 class="segundo"> What questions do nurses have about abortion? A scoping review</h2>
+
+    <h2 class="segundo"> O que as enfermeiras se perguntam sobre o aborto? Uma revisão panorâmica</h2>
+
+
+    <!--Autores-->
+    <h3>
+        Gina Rosa Alonso-Muñiz <sup><a href="#sup1">1*</a> </sup> <br>
+        Beatriz Elena Arias-López <sup><a href="#sup2">2*</a> </sup> <br>
+    </h3>
+
+
+    <!-- Conetenedor de las columnas de la descripciones de los autores, correspondencia de autor 
+    y los resumenes -->
+    <div class="contenedor-general">
+
+
+        <!-- Contenedor de los resumenes -->
+        <div class="contenedor-resumen">
+
+            <!-- Resumen Español -->
+
+            <div class="resumen-fondo">
+                <p class="titulo-resumen"> Resumen</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> <b>Objetivo:</b> Analizar las preguntas, metodologías y tendencias en
+                    investigaciones realizadas por
+                    enfermeras/os, con el fin de identificar los intereses disciplinares y posibles derivaciones en
+                    el desarrollo del conocimiento y las prácticas de cuidado. <b>Metodología:</b> Revisión panorámica
+                    en las bases de datos: Scielo, BVS, PubMed y Redalyc, con una ventana de búsqueda de
+                    2008 a 2020, en idiomas español, inglés y portugués. Se incluyeron 33 artículos, producto de la
+                    búsqueda con términos de: MeSH, Nursing Care, Abortion, Abortion Applicants.
+                    Además, se emplearon expresiones en español sobre: cuidado de enfermería; enfermería;
+                    el aborto; el aborto y cuidado de enfermería en la salud pública; aborto inducido y cuidado
+                    de enfermería sobre salud mental; aborto criminal y salud mental; y, cuidado de enfermería
+                    frente a solicitantes de aborto. <b>Análisis:</b> Se observó una relación entre el tipo de estudios
+                    y
+                    el contexto jurídico de los países en que se realizaron. Son relevantes los estudios respecto
+                    de las actitudes, creencias y prácticas de enfermería en torno al aborto, poniendo el foco en la
+                    subjetividad de los profesionales de la disciplina. Resaltan los estudios cualitativos, haciendo
+                    acopio de teorías y conceptos de procedencia multidisciplinar y solo marginalmente de aquella
+                    producida por la disciplina de enfermería. <b>Conclusiones:</b> Las preguntas más frecuentes que
+                    se hacen las enfermeras/os sobre el aborto se dirigen especialmente a examinar las formas
+                    en que se provee el cuidado de enfermería a las mujeres que pasan por esta experiencia;
+                    del mismo modo se evidencia el correlato en las experiencias emocionales y dilemas éticos
+                    para el personal de enfermería, constituyéndose en un fenómeno controversial. Lo expuesto
+                    anteriormente implica para la disciplina de enfermería ampliar el repertorio para el abordaje
+                    epistemológico de este fenómeno, con miradas críticas transdisciplinares, que consideren el
+                    contexto social, cultural y normativo, con el fin de enriquecer la investigación disciplinar, que
+                    tenga efectos sobre la práctica profesional y los procesos de formación. </p>
+
+                <p class="texto-resumen">
+                    <b>Palabras Claves: </b> Cuidado de enfermería; Aborto; Solicitantes de aborto; Revisión.
+                </p>
+            </div>
+            <!-- Resumen Inglés -->
+
+            <div>
+                <p class="titulo-resumen"> Abstract</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> <b>Objective:</b> Analyze the questions, methodologies and tendencies made in
+                    nursing research,
+                    with the purpose of identifying the disciplinary interests and possible derivations in the
+                    development of knowledge and care practices. <b>Methodology:</b> Scoping review in the databases:
+                    Scielo, BVS, Pubmed and Redalyc, with a search window from 2008 to 2020, in Spanish,
+                    English and Portuguese. Thirty-three articles were included, resulting from the search of
+                    the terms: MeSH, Nursing Care, Abortion, Abortion Applicants. Furthermore, the following
+                    Spanish expressions were used: nursing care; nursing; abortion; abortion and nursing care in public
+                    health; induced abortion and mental health nursing care; criminal abortion and mental health; and,
+                    nursing care for abortion applicants. <b>Analysis:</b> A relationship was observed
+                    between the type of studies and the legal context of the countries in which these were conducted.
+                    The studies about the attitudes, beliefs and nursing practices regarding abortion are
+                    relevant, focusing on the subjectivity of the professionals of this discipline. The qualitative
+                    studies stand out, gathering theories and concepts from multidisciplinary sources, and only
+                    marginally those from the nursing discipline. <b>Conclusions:</b> The most frequently asked
+                    questions that nurses have about abortion are specially directed to examine the ways in which
+                    nursing care is provided to women who undergo this experience; similarly, the correlation
+                    between the emotional experiences and the ethical dilemmas for the nursing personnel is evidenced,
+                    constituting a controversial phenomenon. The forementioned implies for the nursing
+                    discipline to broaden the repertoire for the epistemological approach of this phenomenon,
+                    with transdisciplinary critical views, that consider the social, cultural and regulatory context,
+                    in order to enrich the disciplinary research, having effects on the professional practice and
+                    the training processes. </p>
+
+                <p class="texto-resumen">
+                    <b>KeyWords:</b> Nursing care; Abortion; Abortion applicants; Review.
+                </p>
+            </div>
+            <!-- Resumen Portuguez -->
+
+            <div class="resumen-fondo">
+                <p class="titulo-resumen"> Resumo</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> <b>Objetivo:</b> Analisar as questões, metodologias e tendências nas pesquisas
+                    realizadas pelos
+                    enfermeiros, a fim de identificar interesses disciplinares e possíveis derivações no desenvolvimento
+                    de práticas de conhecimento e cuidado. <b>Metodologia:</b> Revisão panorâmica nas
+                    bases de dados: Scielo, VHL, PubMed e Redalyc, com uma janela de pesquisa entre 2008 e
+                    2020, em espanhol, inglês e português. Foram incluídos 33 artigos, produto da pesquisa com
+                    termos: MeSH, Nursing Care, Abortion, Abortion Applicants. Além disso, foram utilizadas
+                    expressões em espanhol: cuidado de enfermería, enfermería, aborto, aborto e cuidado de
+                    enfermería e salud pública; aborto inducido e cuidado de enfermería e salud mental; aborto
+                    criminal e salud mental e cuidado de enfermería, solicitantes de aborto. <b>Análise:</b> Observou-se
+                    relação entre o tipo de estudo e o contexto jurídico dos países em que foram realizados. Estudos
+                    sobre atitudes, crenças e práticas de enfermagem em torno do aborto são relevantes, com
+                    foco na subjetividade dos profissionais da disciplina. Destacam-se estudos qualitativos,
+                    colecionando teorias e conceitos de origem multidisciplinar e apenas marginalmente produzidas
+                    pela disciplina de enfermagem. <b>Conclusões:</b> As perguntas mais frequentes das enfermeiras
+                    sobre o aborto visam especialmente examinar as formas como a assistência de enfermagem
+                    é prestada às mulheres que passam por essa experiência; da mesma forma, evidencia-se a
+                    correlação entre experiências emocionais e dilemas éticos para o pessoal de enfermagem,
+                    tornando-se um fenômeno controverso. Os achados implicam à disciplina de enfermagem
+                    ampliar o repertório para a abordagem epistemológica desse fenômeno, com perspectivas
+                    críticas transdisciplinares, que considerem o contexto social, cultural e normativo, a fim de
+                    enriquecer a pesquisa disciplinar, com efeitos na prática profissional e nos processos formativos.
+                </p>
+
+                <p class="texto-resumen">
+                    <b>Palavras-chave:</b> Cuidados de enfermagem; Aborto; Aspirantes a aborto; Revisão
+                </p>
+            </div>
+
+
+
+        </div>
+
+        <!-- Descripcion de autores, Aprobado, Como citar, licencia -->
+        <div class="contenedor-autor">
+            <!-- Autores -->
+            <div>
+                <p class="subtitulo" style="color: black; font-size: 18px;">Autor de correspondencia*</p>
+                <!-- 0 -->
+                <p class="autores" id="sup0"><sup>†</sup><img class="logos" src="img/globales/sobre.png">Ese artículo se
+                    deriva de la tesis doctoral (en proceso) titulada “Trayectorias
+                    de cuidado entre mujeres que deciden
+                    abortar en Ecuador, 2021-2023”, realizada para optar por el título de Doctora en Enfermería de la
+                    Universidad de
+                    Antioquia realizada por Gina Alonso y
+                    asesorada por Beatriz Elena Arias
+                </p>
+                <!-- 1 -->
+                <p class="autores" id="sup1"><sup>1*</sup><img class="logos" src="img/globales/sobre.png"> Licenciada en
+                    enfermería, Magister
+                    en Emergencias Médicas, PhD (c) en
+                    Enfermería, Universidad de Antioquia,
+                    Docente Universidad Estatal del Sur
+                    de Manabí, Jipijapa, Ecuador.
+                    <a href="mailto:gina.alonzo@unesum.edu.ec">gina.alonzo@unesum.edu.ec</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="http://orcid.org/0000-0003-0041-2956">0000-0003-0041-2956</a>
+                </p>
+                <!-- 2 -->
+                <p class="autores" id="sup2"><sup>2*</sup><img class="logos" src="img/globales/sobre.png"> Enfermera,
+                    Magister en Educación y
+                    Desarrollo Comunitario, PhD en Salud
+                    Mental, Docente Universidad de Antioquia, Medellín, Colombia.
+                    <a href="mailto:beatriz.arias@udea.edu.co">beatriz.arias@udea.edu.co</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0002-3326-0402">0000-0002-3326-0402</a>
+                </p>
+            </div>
+
+            <!--Recibido y aprobado-->
+            <div>
+                <p><b>Recibido: </b> 22 abril 2022 <br> <b>Aprobado: </b> 20 agosto 2022 </p>
+            </div>
+
+            <!-- Como citar -->
+            <div class="cita">
+                <p class="forma-citar autores"><b>Para citar este artículo / To reference this article / Para citar este
+                        artigo:</b> Alonso-Muñiz GE, Arias-Lopez BE.
+                    ¿Qué se preguntan las enfermeras sobre el aborto? Una revisión panorámica. 2022; 19(3):96-111. <a
+                        href="https://doi.org/10.22463/17949831.3321 ">https://doi.org/10.22463/17949831.3321 </a></p>
+            </div>
+
+            <!--Licencia-->
+            <br>
+            <div>
+                <p class="autores "> &#169; Universidad Francisco de Paula Santander.
+                    Este es un artículo bajo la licencia CC-BY-NC-ND
+                    <br>
+                    <a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img
+                            alt="Licencia Creative Commons" style="border-width:0"
+                            src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Cuerpo del documento -->
+    <div>
+        <hr>
+        <!--Introducción-->
+        <p class="titulo"> Introducción</p>
+
+        <p>
+            Existe un consenso en el mundo académico en considerar el aborto como un problema de salud pública y
+            de derechos humanos, que plantea desafíos y retos a
+            las distintas disciplinas y profesiones (1-4). Su complejidad involucra dimensiones convergentes de carácter
+            médico, social, jurídico, ético y político, donde
+            los contextos normativos y sociales, incluidos aquellos
+            del negacionismo y la prohibición, han contribuido a
+            disputas que afectan en forma importante a las mujeres, especialmente a aquellas que se ven forzadas a
+            realizarlo en la clandestinidad y sin las condiciones de seguridad y cuidado requeridas. Hay que precisar
+            que
+            las mujeres abortan sin condiciones mínimas, especialmente en contextos con menores accesos económicos y
+            educativos (2, 5-7), donde suele aumentar el número de
+            embarazos no deseados (10-11). En América Latina,
+            la criminalización tiende a incrementar los niveles de
+            mortalidad, morbilidad, sufrimiento y estigmatización
+            (8), limitando el derecho de las mujeres a decidir sobre
+            su propio cuerpo (9).
+        </p>
+
+        <p>
+            Hay que mencionar que el aborto es defendido por
+            grupos feministas alrededor del mundo, quienes lo incluyen como un derecho (12-13), en contraposición a
+            los grupos conservadores, también llamados provida,
+            quienes ven el aborto como un pecado (14). A pesar
+            de los debates sobre el tema, la realidad es que solo se
+            han logrado avances parciales, no solamente en América Latina, sino en otros continentes, donde es débil
+            la legislación y las políticas públicas enfocadas en la
+            defensa de los derechos de las mujeres (15-18).
+        </p>
+
+        <p>
+            Conviene indicar que esta situación dilemática y contradictoria, interpela de forma directa a los
+            profesionales de la salud, incluidas las/os enfermeras/os. Puesto
+            que su misión es el cuidado de la salud y la vida, se han
+            interesado por la comprensión de la experiencia, identificando distintos sentidos en la producción de
+            conocimiento disciplinar, incluidos propósitos sociopolíticos
+            y emancipatorios (19-21). Es así como en este artículo
+            se explora dicha intención, a partir de los siguientes
+            interrogantes: ¿Que preguntas se están haciendo las/os
+            enfermeras/os con relación al aborto? ¿Cuáles son los
+            abordajes metodológicos con los que emprenden sus
+            investigaciones? ¿Cuáles teorías o conceptos iluminan
+            sus búsquedas? ¿Cuáles tendencias se encuentran en sus
+            hallazgos? Al respecto, se realizó una revisión y análisis de bibliografía seleccionada sobre el tema, con
+            el
+            objetivo general de describir las principales tendencias
+            de la investigación a partir de la literatura publicada,
+            cuya autoría fuese de profesionales de enfermería. En
+            términos específicos se buscó determinar los campos
+            temáticos y problemáticos más relevantes, el panorama de las metodologías utilizadas, las vías conceptuales
+            y teóricas de acercamiento, además de comprender
+            la contextualización de los hallazgos en función de las
+            diferencias sobre jurisprudencia de los países de procedencia de los estudios.
+        </p>
+
+        <hr>
+
+        <p class="titulo">Metodología</p>
+
+        <p>
+            Revisión panorámica (scoping review), cuya finalidad
+            fue identificar cómo es conceptualizado el aborto en la
+            literatura (22), desde una perspectiva general del desarrollo científico, identificando conocimientos
+            emergentes (22-25). Se siguieron los lineamientos de la guía
+            para revisiones panorámicas del JBI Joanna Briggs Institute (25) y de la declaración PRISMA (Preferred
+            Reporting Items for Systematic reviews and Meta-Analyses extension for Scoping Reviews) (26). Para
+            establecer
+            la pregunta se utilizó la estrategia PICO (Participants,
+            Interventions, Comparisons, Outcomes) acotada (23).
+        </p>
+
+        <p>
+            Se privilegiaron los términos MeSH,
+
+            Nursing Care,
+            Abortion, Abortion Applicants; en español: cuidado de
+            enfermería, enfermería, aborto, aborto y cuidado de
+            enfermería y salud pública; aborto inducido y cuidado
+            de enfermería y salud mental; aborto criminal y salud
+            mental y cuidado de enfermería, solicitantes de aborto; y, en portugués: cuidados de enfermagem, aborto,
+            solicitantes de aborto; aborto e saúde pública; aborto
+            induzido e cuidados de enfermagem e saúde mental;
+            aborto criminoso e saúde mental e cuidados de enfermagem, requerentes de aborto.
+
+            Las bases de datos que
+            se utilizaron fueron: Scielo, BVS, Lilacs, PubMed y
+            Redalyc, con un periodo de búsqueda de 2008 a 2020,
+            en inglés, español y portugués. Los criterios de elegibilidad incluyeron texto completo disponible,
+            referencias
+            verificables, autoría de profesionales de enfermería, los
+            cuales terminaron de refinarse una vez se sometieron
+            los artículos a crítica. Este proceso se detalla en la figura 1.
+        </p>
+
+        <p>
+            Para el análisis de los datos se empleó una matriz de
+            síntesis en MS Excel. A partir de la lectura detenida
+            y cruzada de los artículos, se establecieron categorías
+            temáticas que agruparon los estudios analizados, considerando los objetivos. Estos resultados se detallan a
+            continuación.
+        </p>
+
+        <p class="titulo">Análisis</p>
+
+        <p class="subtitulo">Métricas</p>
+
+        <p>
+            La metodología arrojó como resultado un total de 33
+            artículos: 16 BVS, 7 Redalyc, 5 PubMed y 5 Scielo, la
+            mayoría publicados entre 2011 y 2014. Se hallaron en
+            idioma inglés el 57,5%, seguidos del portugués con el
+            30% y solo 12% en español; otros datos descriptivos se
+            aprecian en la figura 2. En cuanto a la situación legal, la interrupción voluntaria del embarazo IVE se
+            considera
+            legal cuando se encuentra normada y legalizada; ilegal
+            es cuando solo se permite bajo determinadas condiciones (riesgo de vida de la madre, del feto, violación,
+            condición socioeconómica, entre otras); en situación
+            mixta o no regulada, influyen circunstancias jurídicas
+            en las que, o bien no se encuentra normado el aborto,
+            o bien se presenta legalizado en algunas jurisdicciones
+            del territorio nacional y no en otras.
+        </p>
+
+        <div class="image">
+            <img src="img/V19-N3-10/Screenshot_1.png" width="65%">
+            <p><b>Figura 1: </b>Diagrama de flujo de revisión panorámica</p>
+            <p><b>Fuente: </b>Elaborado por autoras con base en lineamientos de PRISMA(26)</p>
+        </div>
+
+        <p>
+            La mitad de los artículos tienen diseños cualitativos,
+            seguidos de revisiones (27%), diseños cuantitativos
+            (15%) y escritos reflexivos (7%). Las revisiones ocupan una ventana de observación de 1971 a 2016. La
+            mayoría de los estudios focalizan como población a las/
+            os enfermeras/os, con sus experiencias, sus prácticas y
+            subjetividades (63,5%) a los equipos de salud (6%), y
+            solo el 18% se orientan a conocer la perspectiva de las
+            mujeres que experimentan el aborto. Llama la atención
+            que solo el 84% de los estudios focalizan el aborto inducido como caso de exploración, sobre aquellos de
+            tipo espontáneo y eugenésico. Respecto a la situación
+            jurídica de la IVE, en la tabla 1 se identifican los países
+            donde se hicieron los estudios, con sus normativas y la
+            magnitud de artículos publicados.
+        </p>
+
+        <div class="image">
+            <img src="img/V19-N3-10/V19-N3-10_page-0005.jpg" width="50%">
+            <p><b>Figura 2: </b>Datos descriptivos de resultados</p>
+            <p><b>Fuente: </b>Elaborado por autoras.</p>
+        </div>
+
+        <div class="image">
+            <p><b>Tabla 1. </b>Situación normativa de la IVE en países de realización del estudio</p>
+            <img src="img/V19-N3-10/Screenshot_3.png" width="75%">
+            <p><b>Fuente: </b>Elaborado con base en datos de la OMS actuales, en Global Abortion Policies Database
+                (2022) (27).
+                *En Colombia se tomó como referencia la norma de 2006, vigente en la ventana de búsqueda de los
+                artículos. Durante la
+                escritura del artículo, en el año 2022 esta fue modificada, legalizándolo hasta la semana 24 y
+                manteniendo causales a partir
+                de esta semana gestacional.
+                ** En 2007 el aborto fue despenalizado en Ciudad de México; su situación es variable dependiendo del
+                Estado/Provincia,
+                aunque en la mayoría de estos es ilegal y permitido bajo ciertas condiciones.
+                *** En Taiwán no se encuentra normado, aunque se permite y en general su realización se efectúa bajo
+                petición justificada
+                de la mujer</p>
+        </div>
+
+        <p>
+            En la tabla número 2 se presentan los estudios seleccionados con sus objetivos, la población y los
+            instrumentos de recolección de datos utilizados, y su clasificación
+            en las categorías temáticas y problemáticas analizadas.
+        </p>
+        <div class="image">
+            <p><b>Tabla 2. </b>Artículos seleccionados</p>
+            <img src="img/V19-N3-10/Screenshot_4.png" width="90%">
+            <img src="img/V19-N3-10/Screenshot_5.png" width="90%">
+            <img src="img/V19-N3-10/Screenshot_6.png" width="90%">
+            <img src="img/V19-N3-10/Screenshot_7.png" width="90%">
+            <img src="img/V19-N3-10/Screenshot_8.png" width="90%">
+            <img src="img/V19-N3-10/Screenshot_9.png" width="90%">
+            <p><b>Fuente: </b>Elaborada por autoras. </p>
+            <p><b>Nota. </b>En el encabezado de la tabla <b>N:</b> número identificador del artículo; <b>Ref:</b> número
+                de cita en la bibliografía del artículo; <b>M:</b> metodología; <b>P:</b> población o voz que recoge;
+                <b>TA:</b> tipo de aborto. En P (población) <b>E:</b> Enfermeras/os; <b>M:</b> mujeres; <b>PS:</b>
+                personal de salud. En
+                <b>TA</b> (tipo de aborto) <b>E:</b> espontáneo; <b>EU:</b> eugenésico; <b>I:</b> inducido/provocado;
+                <b>L:</b> legal.
+            </p>
+        </div>
+
+        <p>
+            En la tabla 3 se sintetizan 6 temáticas centrales, las cuales se recogen en función de sus objetivos,
+            preguntas y
+            hallazgos; podrá encontrarse allí la categoría temática con los artículos que la abordan, además de
+            indicarse el
+            peso porcentual de cada una.
+        </p>
+
+        <div class="image">
+            <p><b>Tabla 3. </b>Categorías temáticas</p>
+            <img src="img/V19-N3-10/Screenshot_10.png" width="75%">
+            <p><b>Fuente: </b>Elaborada por autoras. </p>
+            <p>Nota. Se indica con colores la situación jurídica de los países en que se realizaron los estudios.
+                <b>Verde: </b>IVE legal;
+                naranja: países con IVE ilegal; azul: países con situación jurídica de IVE mixta o no normada.
+            </p>
+        </div>
+
+        <p class="subtitulo-segundo">Tematizaciones</p>
+
+        <p>
+            - Cuidados de enfermería y atención de los equipos
+            sanitarios en situaciones de aborto: Las producciones
+            señalan que el cuidado de enfermería se ha mantenido
+            en una dirección tecnicista, discriminatoria, juzgadora
+            y burocrática, lo que contradice el código de ética de la
+            profesión promulgado por el Consejo Internacional de
+            enfermería CIE en 1953, cuya última actualización es
+            del año 2021, en el cual se hace alusión a un proceder
+            enfermero de reflexión y empatía, reiterando que no es
+            posible cuidar sin establecer una relación interpersonal
+            y un vínculo (29) (37).
+        </p>
+
+        <p>
+            En los países donde el aborto no es criminalizado las/
+            os enfermeras/os se han involucrado en la educación, el
+            asesoramiento y la atención de las mujeres que buscan
+            estos servicios (37) mediante procesos de empoderamiento profesional (39). No obstante, en los contextos
+            normativos y morales más adversos, el cuidado se
+            presenta mediado por una serie de prejuicios, que en
+            algunos casos conlleva a establecer relaciones entre
+            la enfermera y las mujeres, limitadas a asuntos meramente procedimentales y técnicos (51); de ahí que se
+            coloque en segundo lugar la comprensión de la experiencia vivida por las mujeres, por tanto, las preguntas
+            sobre la praxis de enfermería y el rol que desempeña el
+            profesional tomen relevancia en los estudios (50, 53).
+            La estigmatización social del aborto inducido y la criminalización (50-51) son factores que influyen en la
+            praxis de enfermería, con efectos tanto positivos como
+            negativos (51,53).
+        </p>
+
+        <p>
+            El empoderamiento de las/os enfermeras/os, no solo
+            como profesionales, sino desde su misma condición de
+            mujeres, puede mejorar la práctica profesional (39), lo
+            que se complementa con los hallazgos de Lipp (41) y
+            Hoffmann (45), quienes señalan que las/os enfermeras/
+            os reconocen la necesidad de mantener una distancia
+            valórica en su práctica para preservar y privilegiar el
+            derecho de las mujeres a decidir, por encima de sus
+            convicciones morales. El rol de la enfermera frente
+            al cuidado de las mujeres que abortan es central para
+            McLemore y Levi (37), quienes consideran que existen lagunas sobre esta temática y que la investigación
+            aún no ha sido consistente para definir adecuadamente
+            dicho rol. En este sentido, no se encuentra consenso
+            sobre las intervenciones, los tratamientos, los estándares de cuidado que se deben prestar (44), siendo este
+            un campo abierto para la exploración. A pesar de esta
+            limitación, se señala que se ha avanzado en asuntos relacionados con los tratamientos del dolor, la
+            seguridad
+            en la prestación del cuidado y la revisión de estándares y competencias de las/os enfermeras/os (37). Por
+            otro lado, en contextos donde el aborto está legalizado,
+            es significativa la indagación por parte de enfermería
+            respecto a las competencias referidas al duelo (29,37),
+            resaltando la falta de capacitación en la dimensión psicológica y emocional para la mejora de los cuidados
+            (29). Con respecto a la atención que presta el personal
+            sanitario es heterogénea en las revisiones estudiadas,
+            observando una determinada influencia por las representaciones sociales, los valores y los prejuicios (32,
+            45).
+        </p>
+
+        <p>
+            - Experiencias emocionales, necesidades y dilemas éticos de las/os enfermeras/os: En relación con lo
+            anterior,
+            se encuentran preguntas sobre cómo la ética, la moral y
+            los valores modulan la práctica de enfermería en una situación de aborto (33). Esto es especialmente
+            relevante
+            en el caso del aborto inducido (31, 34), y llama la atención cómo aparece recurrentemente en aquellos
+            contextos donde el aborto se considera legal. Yang et al. (31),
+            sugieren que las/os enfermeras/os reprimen sus reparos
+            éticos, ocultando emociones y sentimientos, los cuales
+            están dados por sus contextos socioculturales; por tanto, es importante atender las necesidades emocionales
+            y valóricas, así como apoyar a las/os enfermeras/os en
+            estas circunstancias (38). La estigmatización del aborto aparece como un tema central en la consideración
+            emocional y ética de las/os enfermeras/os (41), que en
+            muchos casos no está directamente relacionado con el
+            contexto normativo.
+        </p>
+
+        <p>
+            Por su parte, Agnese y Squillace (32) plantean que la
+            práctica podría mejorar con una mayor capacitación,
+            colaboración entre atención primaria y terciaria y actualización disciplinar constante; mientras Parket et
+            al.
+            (38), añaden que una mayor vinculación con el medio
+            puede promover una mejor praxis; en particular se evidencia que el conocimiento de las circunstancias en las
+            que las mujeres realizan abortos puede favorecer el trabajo de enfermería, en tanto se incorporan las
+            propias
+            representaciones sociales (46). Una visión particularmente contrapuesta plantea Trejo (39), quien sugiere
+            que los dilemas éticos en torno al aborto están dados
+            por la imposición de su realización en casos de legalización, obligando con ello a enfermeras/os a
+            practicarlo aun con su conciencia en contra. Por el contrario,
+            Mauri y Squillace (28) evidencian en su estudio que,
+            tras largos años de legalización, las/os enfermeras/os
+            han aprendido a afrontarlo de mejor manera y con mayores competencias. La objeción de consciencia es un
+            tema poco abordado (46), al respecto, Mohammad et
+            al., (47) ponen en relieve que se dispone de este mecanismo, y que debe ser utilizado atendiendo a criterios
+            valóricos sin caer en el prejuicio o la discriminación.
+        </p>
+
+        <p>
+            - Experiencia de mujeres que abortan: La mayoría de
+            estudios que focalizan la experiencia de las mujeres fue
+            abordado por enfermeras/os procedentes de contextos
+            de ilegalidad de la IVE, con opciones restrictivas. Se
+            centran en las razones que llevan a las mujeres a tomar la decisión, apareciendo asuntos como la violencia
+            doméstica y de pareja (50, 55), además de la vulnera bilidad económica (59). Se documenta que las mujeres
+            que practican abortos inducidos suelen sentir dolor
+            psicológico asociado a sus creencias, valores y representaciones sociales en torno al aborto, situaciones
+            que
+            aumentan su vulnerabilidad (48, 54-55).
+        </p>
+
+        <p>
+            - Salud pública y aspectos legales sobre el aborto:
+            Comprender el aborto desde la dimensión política y
+            colectiva es central; sin embargo, no parece ocupar el
+            interés por parte de los investigadores en enfermería,
+            con pocos estudios en esta vía; en cambio están quienes focalizan principalmente los temas de disponibilidad
+            y acceso, con efecto sobre la praxis de enfermería
+            (56, 60). Ambos estudios se hicieron en contextos de
+            ilegalidad de la IVE. Arnold (58) considera el aborto
+            un tema central en determinadas minorías, por ejemplo, población indígena en Norteamérica, además de
+            relacionarlo con una deficiente política de salud. Por su
+            parte, Laza (57) da cuenta sobre la importancia de conocer los aspectos normativos por parte de estudiantes
+            de enfermería, aunque es imposible generalizar estos
+            resultados.
+        </p>
+
+        <p class="subtitulo-segundo">Abordajes y conceptualizaciones</p>
+
+        <p>
+            La mayoría de artículos no presenta en forma explícita
+            un encuadre teórico que oriente el estudio, presentando más bien nociones variadas como: objeción de
+            conciencia, criminalización y derechos humanos (57-58),
+            trabajo emocional (34), estigma (41), afrontamiento
+            (38), violencia doméstica (40) o bioética (56). No obstante, algunos se posicionan en teorías procedentes de
+            diversas disciplinas y con perspectivas feministas (41,
+            52, 58).
+        </p>
+
+        <p>
+            Solo se encontró la alusión a modelos disciplinares de
+            enfermería en 2 de los 33 artículos. La teoría de la vida
+            humana (61) enmarcó el estudio de Gallagher (39),
+            acudiendo a las nociones de los dominios del paciente
+            y sus tres dimensiones, esto es: vivir con uno mismo,
+            vivir con los demás y vivir en situaciones, siendo el
+            objetivo de las/os enfermeras/os apoyar a los pacientes en sus vivencias. Esta perspectiva se considera muy
+            pertinente para el caso del cuidado de las mujeres que
+            abortan, razón por la cual las/os enfermeras/os deben
+            focalizar las dimensiones mencionadas. Por otra parte, el trabajo de McLemore (33) se posicionó desde la
+            perspectiva de la teoría de Benner, donde se considera que los desafíos éticos son rutinarios dentro de la
+            práctica de enfermería, la cual se estructura en los niveles principiante, principiante avanzado,
+            competente,
+            eficiente y experto (62). Por tanto, las decisiones que
+            toman la/os enfermeras/os están sometidas a las consideraciones sobre valores personales, además están
+            influenciadas/os por otros factores, como la situación
+            jurídica, la estigmatización, las razones por las que las
+            mujeres abortan, entre otras; que inciden en su práctica
+            y que van configurando sus niveles de experticia.
+        </p>
+
+        <!-- conclusiones -->
+
+        <hr>
+
+        <p class="titulo">Conclusiones</p>
+
+        <p>
+            Los estudios analizados dan cuenta de las temáticas investigadas por enfermería en torno al aborto, y
+            arrojan
+            luces sobre su complejidad que no termina de ser resuelta, sobre todo en países donde el contexto normativo
+            es aún restrictivo. Es importante mencionar que si
+            bien la cantidad de estudios es mayoritaria en aquellos
+            países en los que la IVE es ilegal; sin embargo, continúa siendo de interés general.
+        </p>
+
+        <p>
+            Las categorías temáticas identificadas dan cuenta de
+            que los aspectos más estudiados son: los cuidados de
+            enfermería, especialmente en el caso de abortos inducidos; las experiencias emocionales; las necesidades y
+            los dilemas éticos que enfrenta el personal de enfermería, mostrando cómo la práctica del cuidado está
+            fuertemente influida por la subjetividad, en la que se decantan sus creencias, valores, prejuicios; es
+            decir, en sus
+            contextos de socialización y formación (39, 50-53), sin
+            que puedan identificarse estándares de actuación disciplinar (37). También llama la atención, cómo para las/
+            os enfermeras/os sigue siendo central su propia experiencia personal y sus prácticas en un 66% de los
+            estudios, indicando que el fenómeno interpela asuntos personales y profesionales que generan dilemas, e
+            incluso
+            terminan siendo más relevantes que la pregunta por la
+            situación de las mujeres que abortan como sujetos de
+            cuidados, y muy marginalmente sobre aspectos de salud pública, de salud colectiva o de derechos, siendo
+            estos últimos tópicos los que se consideran de menor
+            interés para la investigación sobre este fenómeno. Las
+            experiencias emocionales y dilemas éticos de las/os
+            enfermeras/os son abordados tanto en países con IVE
+            legal y no legal, indicando que la experiencia moral y
+            emocional está presente en la práctica de los cuidados,
+            máxime en problemáticas en las que se interseccionan
+            temas de género y de derechos, que tienden a tener una
+            perspectiva globalizada de debate, pero que además
+            interpelan el desarrollo de una disciplina generalizada como lo es enfermería. Cabe señalar que en países
+            donde han transcurrido más años de legalización, los
+            estudios tienden a focalizar más el rol de enfermería y
+            la mejora de la práctica para atender adecuadamente a
+            las mujeres que practican abortos, con independencia
+            de su causa y tipo, a través de una perspectiva centrada
+            en las mujeres.
+        </p>
+
+        <p>
+            Contrariamente, en países donde persiste la ilegalidad
+            y clandestinidad las preguntas están direccionadas al
+            contexto mismo en que se da el aborto, con interés en
+            las razones y las circunstancias que llevan a las mujeres a realizarlo, surgiendo fenómenos como la
+            violencia doméstica, la violencia de pareja (37, 55) y las
+            condiciones socioeconómicas (63), que bien pueden
+            significar la existencia de intereses en la producción de
+            conocimientos alrededor de factores sociopolíticos y
+            de empoderamiento de más reciente aparición.
+        </p>
+
+        <p>
+            No obstante, también se encuentran en los estudios propuestas contrarias a la legalización los cuales
+            sugieren
+            que el aborto atenta contra las máximas de preservación de la vida, y con ello el objetivo de enfermería, es
+            cuestionar la objeción de conciencia y a la posibilidad
+            de que sea efectiva en contextos de aborto legal (28,
+            35). Sin embargo, cabe anotar que esta es una postura
+            marginal en los estudios revisados, en donde más bien
+            se plantea una postura crítica frente a la necesidad de
+            la legalización como condición de mejoramiento de las
+            prácticas del aborto y por ende de sus cuidados.
+        </p>
+
+        <p>
+            Desde el punto de vista teórico, la mayoría de los estudios analizados no explicitan su indagación desde el
+            punto de vista de enfermería. En este sentido, destacan
+            dos estudios (33, 39), que pueden ser guías para futuras
+            investigaciones, a partir de la propuesta de la Teoría de
+            la vida Humana de Kim (61) y de la Enfermera novata
+            a experta de Benner (62). La escasez de investigaciones
+            sobre este tópico, indica la necesidad de fundamentarlo
+            teóricamente a partir de la experiencia, privilegiando
+            las dimensiones estética, ética y personal de la práctica
+            de enfermería, además de la importancia de los patrones
+            sociopolíticos y emancipatorios, tanto para la experiencia de las mujeres, como para la de las/os
+            enfermeras/
+            os. Desde esta perspectiva es pertinente avanzar desde las teorías sustantivas a las teorías de rango medio
+            que permitan la mejor comprensión de este fenómeno
+            en enfermería; aunque el aporte de otras categorías de
+            procedencia multidiscplinar se tornan muy sugerentes
+            como las de trabajo emocional (34), de afrontamiento
+            (38) o bien otras de carácter feminista (41, 52).
+        </p>
+
+        <p>
+            Por otra parte, las metodologías utilizadas son fundamentalmente cualitativas, lo cual es coherente con el
+            tipo de preguntas ya identificadas, haciendo que los estudios se orienten a indagar sobre las experiencias y
+            las voces tanto de las/os enfermeras/os, como de las
+            mujeres que abortan.
+        </p>
+
+        <p>
+            Como desafíos para la disciplina, esta revisión panorámica indica la necesidad de mejorar el rol de las/os
+            enfermeras/os, superando las miradas instrumentales, rutinarias y acríticas, de modo que se ejecuten
+            decisiones legítimas como las que se fundamentan en la objeción
+            de conciencia; por tanto, debe prevalecer la valoración
+            de los resultados de una buena práctica y no en prejuicios y preconceptos, que, si bien no pueden obviarse,
+            son elementos para guiar la práctica de enfermería. En
+            estos casos el cuidado basado en las mujeres y sus derechos es un imperativo ético fundamental.
+        </p>
+
+        <p class="subtitulo">Conflicto de intereses</p>
+
+        <p>
+            Las autoras no tienen conflictos de interés.
+        </p>
+
+
+        <!-- Referencias -->
+
+        <hr>
+
+        <p class="titulo"> Referencias bibliográficas </p>
+
+        <ol class="lista">
+            <li id="r1">Dides -Castillo CA, Fernandez C. Aborto en Chile: avances en derechos humanos. Rev. Bioética y
+                Derecho.
+                2018; (43 ): 61-76. </li>
+            <li id="r2">Lopez E. Aborto inducido; ¿ignorancia o negación de una tragedia? Salud colectiva. 2014;
+                10(153-156).</li>
+            <li id="r3">Faúndes A, Duarte GA, de Sousa MH, Soares Camargo RP, Pacagnella RC. Brazilians have different
+                views
+                on when abortion should be legal, but most do not agree with imprisoning women for abortion. Reprod
+                Health
+                Matters. 2013 Nov;21(42):165-73. Available from: doi: <a
+                    href="https://doi.org/10.1016/S0968-8080(13)42726-X">https://doi.org/10.1016/S0968-8080(13)42726-X.</a>
+            </li>
+            <li id="r4">Fino L, Fino JB. La ley del aborto en todo el mundo: progreso y retroceso. Am J Salud Pública.
+                2013 abril;
+                103 (4): 585-9. Available from: <a
+                    href="https://doi.org/10.2105/AJPH.2012.301197">https://doi.org/10.2105/AJPH.2012.301197.</a></li>
+            <li id="r5">Romio C. Saúde mental das mulheres e aborto induzido no BrasilWomen’s mental health and induced
+                abortion in Brazil. Psic. Rev. São Paulo. 2015; 24(1): p. 61-81.</li>
+            <li id="r6">Borsari C, Nomura R, Benute G, Nonnenmacher D, Lucia M, Francisco R. O aborto inseguro é um
+                problema
+                de saúde pública / Unsafe abortion is a public health problem. Femina. 2012; 40(2).</li>
+            <li id="r7">Santos V. Criminalização do aborto no Brasil e implicações à saúde pública. Revista Bioética.
+                2013; 21(3): p.
+                494-508.</li>
+            <li id="r8">Chiliquinga J, Salazar P, Riofrio S, Loaiza D. Uso de métodos anticonceptivos en jóvenes de
+                América Latina,
+                un aporte desde Ecuador. Revista San Gregorio. 2021; 11(45).</li>
+            <li id="r9">Venegas D, Parrón T, Aranda C, Alarcón R. Factores de riesgo asociados con embarazos no deseados
+                en mujeres estudiantes de medicina. Gac. Méd. Méx. 2021 jul; 155(4).</li>
+            <li id="r10">Bergallo P, Jaramillo I, Vaggione J. El aborto en América Latina. Primera ed. Buenos Aires:
+                Siglo XXI; 2018.</li>
+            <li id="r11">Cruz V, Ferraz K, Souzas R, Gonçalves B. Criminalização do aborto no Brasil e implicações à
+                saúde pública.
+                Revista Bioetica. 2013; 21(3): 494-508.</li>
+            <li id="r12">Dema S, Llorente M, Díaz M. Induced abortion and gender (in) equality in Europe: A panel
+                analysis. European Journal of Women’s Studies. 2020; 27(3): p. 250-266.
+            </li>
+            <li id="r13">Vaggione J, Johnson M, Bard G. Creer y decidir. Experiencias de abortos en mujeres de Córdoba,
+                Argentina.
+                Religião e Sociedade. 2021; 41(1):219-242.</li>
+            <li id="r14">Calkin S, Kaminska M. Persistence and change in morality policy: the role of the Catholic
+                Church in the politic of abortion in Irelan and Poland. Feminist Review. 2020; 124(1):86-102.</li>
+            <li id="r15">Reagan L. Abortion travels: an international history. Journal of Modern European History. 2019;
+                17(3):337-352. <a
+                    href="https://doi.org/10.1177%2F1611894419854682">https://doi.org/10.1177%2F1611894419854682</a>
+            </li>
+            <li id="r16">Nicholls L, Cuestas F. Penalización del aborto: violencia política y abusos de la memoria en
+                Chile. Saúde e
+                Sociedade. 2018; 27(2):367-380. <a
+                    href="https://doi.org/10.1590/S0104-12902018170419">https://doi.org/10.1590/S0104-12902018170419</a>
+            </li>
+            <li id="r17">Polifroni C, Welch M. Explanation in nursing science. En: perspectives in philosophy of science
+                in nursing an
+                historical and contemporary anthology. Filadelfia: Lippincott; 1999.</li>
+            <li id="r18">Escobar B, Sanhueza O. Patrones de conocimiento de Carper y expresión en el cuidado de
+                enfermería: estudio
+                de revisión. Enfermería: Cuidados Humanizados. 2018 jun; 7(1). <a
+                    href="https://doi.org/10.22235/ech.v7i1.1540">https://doi.org/10.22235/ech.v7i1.1540</a></li>
+            <li id="r19">White J. Patterns of knowing: review, critique, and update. ANS Adv Nurs Sci. 1995
+                Jun;17(4):73-86. <a
+                    href="https://doi.org/10.1097/00012272-199506000-00007">https://doi.org/10.1097/00012272-199506000-00007</a>
+            </li>
+            <li id="r20">Osorio-Castaño JH. Patron de conociminto sociopolitico en enfermeria: reflexiones conceptuales.
+                Rev Cuid
+                [Internet]. 2016 Dec [cited 2022 Apr 29]; 7(2): 1352-1357. Available from: <a
+                    href="https://doi.org/10.15649/cuidarte.v7i2.319">https://doi.org/10.15649/cuidarte.v7i2.319</a>
+            </li>
+            <li id="r21">Chinn P, Kramer M. Theory and Nursing. Interpreted Knowledge. 5th ed. Philadelphia: Mosby;
+                1999. St
+                Louis, II.</li>
+            <li id="r22">Guirao-Goris SJ. Adolf. Utilidad y tipos de revisión de literatura. Ene. [Internet]. 2015
+                [citado 2022 Abr
+                29]; 9(2). Disponible en: <a
+                    href="https://dx.doi.org/10.4321/S1988-348X2015000200002">https://dx.doi.org/10.4321/S1988-348X2015000200002</a>
+            </li>
+            <li id="r23">Tapia-Benavente L, Vergara-Merino L, Garegnani LI, Loézar-Hernández C, Vargas-Peirano M.
+                Revisiones
+                rápidas: definiciones y usos. Medwave; 21(1): e8090, 2021.</li>
+            <li id="r24">Munn Z, Peters M, Stern C, Tufanaru C, McArthur A, Aromataris E. Systematic review or scoping
+                review?
+                Guidance for authors when choosing between a systematic or scoping review approach. BMC Med Res Methodol
+                18, 143 (2018). <a
+                    href="https://doi.org/10.1186/s12874-018-0611-x">https://doi.org/10.1186/s12874-018-0611-x</a></li>
+            <li id="r25">Peters M, Godfrey C, Khalil H, McInerney P, Parket D, Soares C. Guidance for conducting
+                systematic scoping reviews. International Journal of Evidence-Based Healthcare. 2015 Sept.; 12(3). <a
+                    href="https://doi:10.1097/XEB.0000000000000050">https://doi:10.1097/XEB.0000000000000050</a> </li>
+            <li id="r26">Page M, McEnzie J, Bossuyt P, Boutron I, Hoffmann T, Mulrow C, et al. The PRISMA 2020
+                statement: an
+                updated guideline for reporting systematics reviews. BMJ. 2021; 372(71). <a
+                    href="https://doi.org/10.1136/bmj.n71">https://doi.org/10.1136/bmj.n71</a>
+            </li>
+            <li id="r27">WHO. Global Abortion Policies Database. [Online].; 2022 [cited 2022 03 16. Available from: <a
+                    href="https://abortion-policies.srhr.org/country/malaysia/">https://abortion-policies.srhr.org/country/malaysia/</a>
+            </li>
+            <li id="r28">Mauri P, Squillace F. The experience of Italian nurses and midwives in the termination of
+                pregnancy: a qualitative study. Eur J Contracept Reprod Health Care. 2017 Jun;22(3):227-232. <a
+                    href="https://dx.doi.org/10.1080/13625187.2017.1318846">https://dx.doi.org/10.1080/13625187.2017.1318846</a>
+            </li>
+            <li id="r29">Merrigans J. Educating Emergency Department Nurses About Miscarriage. The American Journal of
+                Maternal/Child Nursing.2018;43(1):26-31. <a
+                    href="https://dx.doi.org/10.1097/NMC.0000000000000391">https://dx.doi.org/10.1097/NMC.0000000000000391</a>
+            </li>
+            <li id="r30">Pitilin E, Banazeski AC, Bedin R, Gasparin VA. Cuidados de enfermería en situaciones de aborto
+                inducido / provocado: una revisión integral de la literatura. Enferm. glob. [Internet]. 2016 Jul [citado
+                2022 Abr 29] ; 15( 43 ): 439-451. Disponible en: <a
+                    href="http://scielo.isciii.es/scielo.php?script=sci_arttext&pid=S169561412016000300017&lng=es">http://scielo.isciii.es/scielo.php?script=sci_arttext&pid=S169561412016000300017&lng=es</a>
+            </li>
+            <li id="r31">Cheng-Fang Y, Hui-Lian Ch, Hsin-Wan H, Shu-Mei W. Concealing emotions: nurses' experiences with
+                induced abortion care. J Clin Nurs. 2016 May;25(9-10):1444-54. <a
+                    href="https://dx.doi.org/10.1111/jocn.13157">https://dx.doi.org/10.1111/jocn.13157</a></li>
+            <li id="r32">. Engel J, Rempel L. Health Professionals' Practices and Attitudes About Miscarriage. American
+                Journal of
+                Maternal/Child Nursing. 2016 Jan.-Feb.; 41(1). <a
+                    href="https://dx.doi.org/10.1097/NMC.0000000000000207">https://dx.doi.org/10.1097/NMC.0000000000000207</a>
+            </li>
+            <li id="r33">McLemore MR, Kools S, Levi AJ. Calculus Formation: Nurses’ Decision‐Making in Abortion‐Related
+                Care.
+                Res Nurs Health. 2015; Jun;38(3):222-31. <a
+                    href="https://dx.doi.org/10.1002/nur.21655">https://dx.doi.org/10.1002/nur.21655</a></li>
+            <li id="r34">Parker A, Swanson H, Frunchak V. Needs of labor and delivery nurses caring for women undergoing
+                pregnancy
+                termination. J Obstet Gynecol Neonatal Nurs. 2014 Jul-Aug; 43(4):478-87. <a
+                    href="https://dx.doi.org/10.1111/1552-6909.12475">https://dx.doi.org/10.1111/1552-6909.12475</a>
+            </li>
+            <li id="r35">Trejo MF. Reflexiones sobre la despenalización del aborto en México. Enf Neurol (Mex).
+                2012;11(1):47-52.
+                [citado 2022 Abril 29]. Disponible en: <a
+                    href="https://www.medigraphic.com/pdfs/enfneu/ene-2012/ene121i.pdf">https://www.medigraphic.com/pdfs/enfneu/ene-2012/ene121i.pdf</a>
+            </li>
+            <li id="r36">Lipp A. Stigma in abortion care: Application to a grounded theory study. Contemporary Nurse.
+                2014;
+                37(2):115-23. <a
+                    href="https://doi.org/10.5172/conu.2011.37.2.115">https://doi.org/10.5172/conu.2011.37.2.115</a>
+            </li>
+            <li id="r37">McLemore M, Levi A. Nurses and care of women seeking abortions, 1971 to 2011. J Obstet Gynecol
+                Neonatal
+                Nurs. 2011 Nov-Dec 2011;40(6):672-7. <a
+                    href="https://doi: 10.1111/j.1552-6909.2011.01302.x">https://doi:
+                    10.1111/j.1552-6909.2011.01302.x</a></li>
+            <li id="r38">Nicholson J, Slade P, Fletcher J. Termination of pregnancy services: experiences of
+                gynaecological nurses. J
+                Adv Nurs. 2010 Oct;66(10):2245-56. <a href="https//:doi: 10.1111/j.1365-2648.2010.05363.x.">https//:doi:
+                    10.1111/j.1365-2648.2010.05363.x.</a></li>
+            <li id="r39">Gallagher K, Porock D, Edgley A. he concept of ‘nursing’ in the abortion services. J Adv Nurs.
+                2010
+                Apr;66(4):849-57. <a href="https//doi: 10.1111/j.1365-2648.2009.05213.x">https//doi:
+                    10.1111/j.1365-2648.2009.05213.x</a></li>
+            <li id="r40">Williams G, Brackley M. Intimate Partner Violence, Pregnancy and the Decision for Abortion.
+                Issues Ment
+                Health Nurs. 2009 Apr;30(4):272-8. <a
+                    href="https://dx.doi.org/10.1080/01612840802710902">https://dx.doi.org/10.1080/01612840802710902</a>
+            </li>
+            <li id="r41">Lipp A. A woman centred service in termination of pregnancy: a grounded theory study. Contemp
+                Nurse.
+                2008 Dec;31(1):9-19. <a
+                    href="https://dx.doi.org/10.5172/conu.673.31.1.9">https://dx.doi.org/10.5172/conu.673.31.1.9</a>
+            </li>
+            <li id="r42">Silva do Nascimento-Souza Z, Freire -Diniz N. Aborto provocado: o discurso das mulheres sobre
+                suas relações familiares. Texto & Contexto - Enfermagem [online]. 2011, v. 20, n. 4 [Acessado 29 Abril
+                2022] , pp.
+                742-750. Disponível em: <a
+                    href="https://doi.org/10.1590/S0104-07072011000400013">https://doi.org/10.1590/S0104-07072011000400013</a>
+            </li>
+            <li id="r43">Mortari C, Hoffmann M, Jussara G, Vargas M. Representações de enfermeiras sobre o cuidado com
+                mulheres
+                em situação de aborto inseguro. Revista da Escola de Enfermagem da USP [online]. 2012, v. 46, n. 4
+                [Acessado 29 Abril 2022] , pp. 914-921. Disponível em: <a
+                    href="https://doi.org/10.1590/S0080-62342012000400019">https://doi.org/10.1590/S0080-62342012000400019</a>
+            </li>
+            <li id="r44">Mendes-Carvalho S, Oroski-Paes G. Integralidade do cuidado em enfermagem para a mulher que
+                vivenciou
+                o aborto inseguro. Escola Anna Nery [online]. 2014, v. 18, n. 1 [Acessado 29 Abril 2022] , pp. 130-135.
+                Disponível em: <a
+                    href="https://doi.org/10.5935/1414-8145.20140019">https://doi.org/10.5935/1414-8145.20140019</a>
+            </li>
+            <li id="r45">Laza-Vásquez C, Castiblanco-Montañez R. Experiencias y opiniones de los profesionales de la
+                salud frente a la
+                despenalización del aborto. Rev Cubana Salud Pública [Internet]. 2013 [citado 2022 Abr 29] ; 39( Suppl 1
+                ): 939-
+                949. Disponible en: <a
+                    href="http://scielo.sld.cu/scielo.php?script=sci_arttext&pid=S086434662013000500012&lng=es">http://scielo.sld.cu/scielo.php?script=sci_arttext&pid=S086434662013000500012&lng=es</a>
+            </li>
+            <li id="r46">Fleming V, Frith L, Luyben A, Ramsayer B. Conscientious objection to participation in abortion
+                by midwives
+                and nurses: a systematic review of reasons. BMC Med Ethics 19, 31 (2018). <a
+                    href="https://doi.org/10.1186/s12910-018-0268-3">https://doi.org/10.1186/s12910-018-0268-3</a></li>
+            <li id="r47">Mohamad-Firdaus MI, Abdurezak- Abdullahi H, Mohd -Said bin N, Muhammad- Lokman bin M. Islamic
+                moral judgement on abortion and its nursing applications: expository analysis. Enferm Clin. [Internet]
+                2018;28(Supl 1 Part A):212-216. Disponibel en: <a
+                    href="https://www.elsevier.es/es-revista-enfermeria-clinica-35-articulo-islamic-moraljudgement-on-abortion-S1130862118300706">https://www.elsevier.es/es-revista-enfermeria-clinica-35-articulo-islamic-moraljudgement-on-abortion-S1130862118300706</a>
+            </li>
+            <li id="r48">Adhiambo-Onyango M, Mott S. The nexus between bridewealth, family curse, and spontaneous
+                abortion
+                among southern Sudanese women. J Nurs Scholarsh. 2011 Dec;43(4):376-84. <a
+                    href="https://dx.doi.org/10.1111/j.1547-5069.2011.01417.x">https://dx.doi.org/10.1111/j.1547-5069.2011.01417.x</a>
+            </li>
+            <li id="r49">Freire-Diniz NM, Dos Anjos-Gesteira MG, Mendonça-Lopes RL, Santos-Mota R, Gómez Pérez BA,
+                PereiraGomes N. Aborto provocado e violência doméstica entre mulheres atendidas em uma maternidade
+                pública
+                de Salvador-BA. Revista Brasileira de Enfermagem [online]. 2011, v. 64, n. 6 [Acessado 29 Abril 2022] ,
+                pp.
+                1010-1015. Disponível em: <a
+                    href="https://doi.org/10.1590/S0034-71672011000600004">https://doi.org/10.1590/S0034-71672011000600004</a>
+            </li>
+            <li id="r50">Dos Anjos- Gesteira MS,Diniz- Freire NM, Oliveira- Menicucci E. Assistência à mulher em
+                processo de
+                abortamento provocado: discurso de profissionais de enfermagem. Acta paul. enferm. [Internet]. 2008
+                [cited
+                2022 Apr 29] ; 21( 3 ): 449-453. Available from: <a
+                    href="https://doi.org/10.1590/S0103-21002008000300011">https://doi.org/10.1590/S0103-21002008000300011</a>
+            </li>
+            <li id="r51">De Oliveira Freitas, Valéria Évila, Arruda Dantas, Rosane , Ribeiro Cunha, Ana Rita , Simôa
+                Almeida, Jank
+                Landy , Ramos Medeiros Souto, Cláudia Maria , Cidney da Silva Soares, Maria , Práticas de enfermagem na
+                atenção às mulheres em situação de abortamento. Rev Rene [Internet]. 2012;13(1):140-146. Recuperado de:
+                <a
+                    href="https://www.redalyc.org/articulo.oa?id=324027980016">https://www.redalyc.org/articulo.oa?id=324027980016</a>
+            </li>
+            <li id="r52">Paynter M, Norman W, Martin R. Nurses are Key Members of the Abortion Care Team: Why aren’t
+                Schools
+                of Nursing Teaching Abortion Care? Dalhousie University School of Nursing, Halifax, Nova Scotia. 2019;
+                1(2). 17-29. <a href="https://doi.org/10.25071/2291-5796.30">https://doi.org/10.25071/2291-5796.30</a>
+            </li>
+            <li id="r53">Haney C. Towards Legitimate Nursing Work? Historical Discursive Constructions of Abortion in
+                The Canadian Nurse, 1950-1965. Can Bull Med Hist. 2014 Fall;31(2):93-115. <a
+                    href="https://dx.doi.org/10.3138/cbmh.31.2.93">https://dx.doi.org/10.3138/cbmh.31.2.93</a></li>
+            <li id="r54">Sell S, Kotzias E, Velho M, Lorenzini A, Hernandes M. Reasons and meanings attributed by women
+                who
+                experienced induced abortion: an integrative review. Revista da Escola de Enfermagem da USP. 2013;
+                49(3):
+                p. 495-501. Available from: <a
+                    href="https://doi.org/10.1590/S0080-623420150000300019">https://doi.org/10.1590/S0080-623420150000300019</a>
+            </li>
+            <li id="r55">Santos, Danyelle Leonette Araújo dos e Brito, Rosineide Santana de Processo decisório do aborto
+                provocado:
+                vivência de mulheres. Physis: Revista de Saúde Coletiva [online]. 2014, v. 24, n. 4 [Acessado 29 Abril
+                2022]
+                , pp. 1293-1314. Disponível em: <a
+                    href="https://doi.org/10.1590/S0103-73312014000400014">https://doi.org/10.1590/S0103-73312014000400014</a>
+            </li>
+            <li id="r56">Cruz S, Ferraz- dos Anjos K, Souzas R, Gonçalves E. Criminalização do aborto no Brasil e
+                implicações à
+                saúde pública. Revista Bioética. [internet] 2013, v. 21, n. 3, pp. 494-508. Disponible en: <a
+                    href="https://www.scielo.br/j/bioet/a/3ZMrQd69ZnwWCGNXTsZzh7t/?format=pdf&lang=pt">https://www.scielo.br/j/bioet/a/3ZMrQd69ZnwWCGNXTsZzh7t/?format=pdf&lang=pt</a>
+            </li>
+            <li id="r57">Laza-Vásquez C, Cerquera-Gallego E, Ferrer-Pérez T, Gutiérrez-Ocampos Y. El aborto legal en
+                Colombia:
+                opiniones de un grupo de estudiantes de Enfermería. Rev. Fac. Nac. Salud Pública [Internet]. 2019 Apr
+                [cited
+                2022 Apr 29] ; 37( 1 ): 78-86. Available from: <a
+                    href="https://doi.org/10.17533/udea.rfnsp.v37n1a12">https://doi.org/10.17533/udea.rfnsp.v37n1a12</a>
+            </li>
+            <li id="r58">Arnold-Shayne B. Reproductive Rights Denied: The Hyde Amendment and Access to Abortion for
+                Native
+                American Women Using Indian Health Service Facilities. American journal of public health vol. 104,10.
+                [internet] 2014: 1892-3. doi:10.2105/AJPH.2014.302084. Disponible en: <a
+                    href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4167108/pdf/AJPH.2014.302084.pdf">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4167108/pdf/AJPH.2014.302084.pdf</a>
+            </li>
+            <li id="r59">Dos Santos-Amuzza A, Alexandre- Moreira MS, Silva- Barros HCH, Assis- Bastos ML. Caracterização
+                das
+                mulheres que realizaram o aborto após gravidez indesejada. Rev enferm UFPE on line., Recife, 11(5):1847-
+                51, maio., [internet] 2017. Disponible en: <a
+                    href="https://periodicos.ufpe.br/revistas/revistaenfermagem/article/view/23332/18928">https://periodicos.ufpe.br/revistas/revistaenfermagem/article/view/23332/18928</a>
+            </li>
+            <li id="r60">Ferraz- dos Anjos K, Cruz-Santos V, Souzas R, Gonçalves E. Aborto e saúde pública no Brasil:
+                reflexões sob
+                a perspectiva dos direitos humanos. Saúde em Debate. [internet] 2013, v. 37, n. 98, pp. 504-515.
+                Disponible
+                en: <a
+                    href="https://www.scielo.br/j/sdeb/a/yTbJpmr9CbpSvzVKggKsJdt/?format=pdf&lang=pt">https://www.scielo.br/j/sdeb/a/yTbJpmr9CbpSvzVKggKsJdt/?format=pdf&lang=pt</a>
+            </li>
+            <li id="r61">. Kim H. The Role of Theory in Clinical Nursing Practice. Klinisk Sygepleje. 2012; 26(2):16-29.
+                <a
+                    href="https://dx.doi.org/10.18261/ISSN1903-2285-2012-02-03">https://dx.doi.org/10.18261/ISSN1903-2285-2012-02-03</a>
+            </li>
+            <li id="r62">Escobar-Castellanos B, Jara-Concha P. Filosofía de Patricia Benner, aplicación en la formación
+                de enfermería: propuestas de estrategias de aprendizaje. Educación, 28(54), 182-202. <a
+                    href="https://doi.org/10.18800/educacion.201901.009">https://doi.org/10.18800/educacion.201901.009</a>
+            </li>
+            <li id="r63">Levín S. ¿Salud sexual y salud reproductiva sin libertad?: El conflicto por el aborto en
+                Argentina. Salud Colectiva. 2018; 14(3): p. 377-389. <a
+                    href="https://dx.doi.org/10.18294/sc.2018.2011">https://dx.doi.org/10.18294/sc.2018.2011</a></li>
+            <li id="r64">Varea-Viteri MS. El aborto en Ecuador: sentimientos y ensamblajes. Primera ed. Quito: Flacso;
+                2018.</li>
+            <li id="r65">Rocha M, Rostagnol S, Gutiérrez M. Aborto y Parlamento: un estudio sobre Brasil, Uruguay y
+                Argentina. Revista Brasileira de Estudos de População [online]. 2009, v. 26, n. 2 [Accedido 29 Abril
+                2022] , pp. 219-236.
+                Disponible en: <a
+                    href="https://doi.org/10.1590/S0102-30982009000200005">https://doi.org/10.1590/S0102-30982009000200005</a>
+            </li>
+            <li id="r66">Vargas I, Valenzuela M, Barrios S, Campos S. Uribe C., González X, et al. (2020). La Escuela de
+                Enfermería
+                UC ante la ley que despenaliza el aborto: responde si al cuidado de los vulnerables. Horizonte De
+                Enfermería,
+                28(1), 51–60. <a
+                    href="https://doi.org/10.7764/Horiz_Enferm.28.1.51">https://doi.org/10.7764/Horiz_Enferm.28.1.51</a>
+            </li>
+            <li id="r67">Cruz S, Rêgo M, Mendes A, Leonhardt V, Pereira M, Marciano I. A enfermagem perante o aborto:
+                uma revisão
+                integrativa. Revista de Divulgação Científica Sena Aires; 10(2): 228-239, 2021. <a
+                    href="http://dx.doi.org/10.3623/revisa.v%.n%.p707%">http://dx.doi.org/10.3623/revisa.v%.n%.p707%</a>
+            </li>
+            <li id="r68">Ruberte- Lacambra M, Sánchez- Pablo P. La objeción de conciencia del personal enfermero en la
+                interrupción
+                voluntaria del embarazo. [Tesis en internet]. España. Universidad de Zaragoza. 2019 [consultado 30 de
+                noviembre 2021]. Disponible en: <a
+                    href="https://zaguan.unizar.es/record/88993/files/TAZ-TFG-2019-637.pdf">https://zaguan.unizar.es/record/88993/files/TAZ-TFG-2019-637.pdf</a>
+            </li>
+            <li id="r69">Silva J, Almeida J, Oliveira S, Colaco L. Assistência de enfermagem à mulher em risco iminente
+                de abortamento ou aborto. Research, Society and Development. 2020; 9(12). <a
+                    href="http://dx.doi.org/10.33448/rsd-v9i12.10728">http://dx.doi.org/10.33448/rsd-v9i12.10728</a>
+            </li>
+            <li id="r70">Sasso K, De Campos R, Galvão C. Revisão integrativa: método de pesquisa para a incorporação de
+                evidências
+                na saúde e na enfermagem. Reflexão. 2008; 17(4). <a
+                    href="https://doi.org/10.1590/S0104-07072008000400018">https://doi.org/10.1590/S0104-07072008000400018</a>
+            </li>
+            <li id="r71">Eisenhauer ER. An interview with Dr Barbara A. Carper. ANS Adv Nurs Sci. 2015
+                Apr-Jun;38(2):73-82. <a
+                    href="https://dx.doi.org/10.1097/ANS.0000000000000067">https://dx.doi.org/10.1097/ANS.0000000000000067</a>
+            </li>
+            <li id="r72">Alberto L. ormación para la ciencia: una reflexión sobre los desafíos de la investigación en
+                enfermería en la
+                región de Latinoamérica. Rev. Cuidarte. 2014; 5(2). <a
+                    href="https://doi.org/10.15649/cuidarte.v5i2.128">https://doi.org/10.15649/cuidarte.v5i2.128</a>
+            </li>
+            <li id="r73">Grove S, Gray J. Investigación en enfermería. Desarrollo de la práctica enfermera basada en la
+                evidencia.
+                séptima ed. Barcelona: Elsevier España; 2019.</li>
+            <li id="r74">Garay NJ, Santos QM, Felix AM, Beltran MM. La investigación cualitativa como paradigma
+                emergente en la
+                investigación en enfermería. La investigación como recurso para fortalecer el desarrollo educativo.
+                Universidad Tecnocientífica del Pacifico. Mexico: Primera edición. 2019. p.53.65</li>
+        </ol>
+    </div>
+</body>
+
+</html>

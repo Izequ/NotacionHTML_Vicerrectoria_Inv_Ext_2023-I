@@ -1,0 +1,1690 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V20-N1-5</title>
+    <link rel="stylesheet" href="">
+    <style>
+        body {
+            padding: 10em;
+            padding-top: 20px;
+            font-family: Times New Roman;
+            color: black;
+        }
+
+        #articulo-derecha {
+            float: left;
+        }
+
+        /* Posiciones de los resumenes */
+
+        .contenedor-general {
+            display: inline-flex;
+            width: 100%;
+        }
+
+        .contenedor-resumen {
+            width: 240%;
+        }
+
+        .contenedor-autor {
+            width: 100%;
+            padding-left: 20px;
+        }
+
+        .hr-resumen {
+            background-color: gray;
+            margin: 0;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .resumen-fondo {
+            background-color: #bdd5f1;
+            border-radius: 5px;
+        }
+
+        .titulo-resumen {
+            color: black;
+            font-size: 22px;
+            font-weight: bold;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .texto-resumen {
+            padding: 20px;
+            margin: 0;
+        }
+
+        ul.navbar {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 25em;
+            left: 2em;
+            width: 250px;
+        }
+
+        /* Titulos principales */
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: Times New Roman;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        h1 {
+            color: #29abe3;
+        }
+
+        .categoria_titulo {
+            font-style: italic;
+            color: #ffffff;
+        }
+
+        h3 {
+            font-style: italic;
+            font-weight: bold;
+            color: #707073;
+        }
+
+        .categoria {
+            text-align: center;
+            background-color: #707073;
+            width: 20%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            margin: auto;
+        }
+
+        ul.navbar li {
+            background: white;
+            margin: 0.5em 0;
+            padding: 0.3em;
+        }
+
+        /* Enlaces */
+
+        a.link-color:visited {
+            color: white;
+        }
+
+        a.link-color:link {
+            color: white;
+        }
+
+        a.link-color:hover {
+            color: white;
+        }
+
+        a.link-color:hover {
+            border-bottom: 1px solid;
+            background: black;
+        }
+
+        /* Link de referencia */
+
+        a:link {
+            color: #4e00ff;
+        }
+
+        a:visited {
+            color: #003bff;
+        }
+
+        a:focus {
+            border-bottom: 1px solid;
+            background: #98aae4;
+        }
+
+        a:hover {
+            border-bottom: 1px solid;
+            background: #aacefe;
+        }
+
+        /* Etiqueta P */
+
+        p {
+            line-height: normal;
+            text-align: justify;
+            font-size: 18px;
+        }
+
+        p.titulo {
+            color: #29abe3;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        p.subtitulo {
+            color: #29abe3;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* NUEVO */
+        p.subtitulo-segundo {
+            color: #29abe3;
+            font-style: italic;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        p.correspondencia {
+            color: black;
+            font-size: 18px;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        /* NUEVO */
+        p.entrevista {
+            color: black;
+            font-size: 18px;
+            font-style: italic;
+        }
+
+        /* NUEVO */
+        p.subtitulo-tercero {
+            color: #29abe3;
+            font-style: italic;
+            font-size: 18px;
+        }
+
+        p#cabeza {
+            color: #1d71ae;
+            text-align: center;
+        }
+
+        p.autores {
+            font-size: 16px;
+            margin: 0;
+            text-indent: 0em;
+            margin-bottom: 10px;
+        }
+
+        p.forma-citar {
+            text-indent: 0em;
+            text-align: justify;
+            justify-content: center;
+        }
+
+        .cita {
+            text-align: -webkit-center;
+        }
+
+        /* Bold especial para palabras que tienen color seguido de dos puntos
+*/
+
+        /* NUEVO */
+
+        b.subtitulo-segundo {
+            color: #29abe3;
+            font-size: 18px;
+        }
+
+        .contenedor_info {
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .info {
+            width: auto;
+        }
+
+        /* Este es para los documentos del dos en adelante *codigo abajo de este comentario* */
+
+        .info-text {
+            text-align: end;
+            margin: 0;
+        }
+
+        /* Uso Exlusico para el primero documento  que es de revision  *codigo abajo de este comentario* */
+
+        .info_text {
+            font-size: 12px;
+            line-height: 100%;
+            text-align: center;
+            margin: 0;
+        }
+
+        .info_hr {
+            margin: 5;
+        }
+
+        /* Fin P */
+        /* Etiqueta Italic */
+
+        i {
+            font-size: 18px
+        }
+
+        i.centrado {
+            font-size: 18px
+        }
+
+        /* LI para las listas */
+
+        li {
+            font-size: 18px;
+            padding-top: 10px;
+            text-align: justify;
+        }
+
+        /* NUEVO */
+        .lista li {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        hr {
+            background-color: #29abe3;
+            height: 1px;
+        }
+
+        /* Tablas */
+
+        table {
+            border-collapse: collapse;
+            border: 2px solid rgb(0, 0, 0);
+            align-items: center;
+        }
+
+        thead th {
+            border-collapse: collapse;
+            background-color: rgb(179, 179, 179);
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        tbody td {
+            border-collapse: collapse;
+            text-align: center;
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        .tipo {
+            color: #ffffff;
+            font-size: 22px;
+            border-radius: 10px 5px 10px 5px;
+            background-color: #696969;
+        }
+
+        img.logos {
+            width: 15px;
+            height: 15px;
+        }
+
+        .image {
+            text-align: center;
+            image-rendering: optimizeQuality;
+        }
+
+        .image p {
+            text-align: center;
+            font-size: small;
+        }
+
+        .logo {
+            width: 300px;
+            height: 80px;
+        }
+
+        .logo2 {
+            width: 300px;
+            height: 50px;
+        }
+
+        /* Anclajes de la pagina */
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* NUEVO */
+        .ecuacion {
+            text-align: center;
+            font-weight: bold;
+            margin: 1px;
+        }
+
+        @media only screen and (min-width:320px) and (max-width:900px) {
+            body {
+                width: 100%;
+                padding: 5em;
+                margin: 5px;
+            }
+
+            .image {
+                text-align: center;
+                image-rendering: optimizeQuality;
+            }
+
+            .image img {
+                width: 100%;
+            }
+
+            .image p {
+                font-size: small;
+                text-align: center;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="contenedor_info">
+        <div>
+            <img src="img/globales/logo.jpg" alt="" height="125px">
+        </div>
+        <div class="info" style="text-align: right;">
+            <p class="info-text"> ISSN-PRINT 1794-9831 / E-ISSN 2322-7028</p>
+            <p class="info-text"> Vol. 19 Nº 3 / sep - dic, 2022 / Cúcuta, Colombia. </p>
+            <p class="info-text">
+                <img src="img/globales/doi.png" height="20px" alt="">
+                <a href="https://doi.org/10.22463/17949831.3360">https://doi.org/10.22463/17949831.3360</a>
+            </p>
+        </div>
+    </div>
+
+
+    <!--Categoría-->
+    <div class="categoria">
+        <h2 class="categoria_titulo">Original </h2>
+    </div>
+
+    <h1> Vivencia de la espiritualidad en el paciente con cáncer en quimioterapia ambulatoria </h1>
+
+    <h2 class="segundo"> Experience of spirituality in cancer patients undergoing ambulatory chemotherapy</h2>
+
+    <h2 class="segundo"> Experiências de espiritualidade em pacientes com câncer em quimioterapia ambulatorial</h2>
+
+
+    <!--Autores-->
+    <h3>
+        Camilo Duque-Ortiz <sup><a href="#sup1">1*</a> </sup> <br>
+        Andrés Felipe Tirado-Otalvaro <sup><a href="#sup2">2*</a> </sup> <br>
+        Luzbiam Fernanda Guarin-Cardona <sup><a href="#sup3">3*</a> </sup> <br>
+    </h3>
+
+
+    <!-- Conetenedor de las columnas de la descripciones de los autores, correspondencia de autor 
+    y los resumenes -->
+    <div class="contenedor-general">
+
+
+        <!-- Contenedor de los resumenes -->
+        <div class="contenedor-resumen">
+
+            <!-- Resumen Español -->
+
+            <div class="resumen-fondo">
+                <p class="titulo-resumen"> Resumen</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> <b>Objetivo:</b> Analizar la vivencia de la espiritualidad en el paciente con
+                    cáncer en tratamiento
+                    con quimioterapia ambulatoria. <b>Materiales y métodos:</b> Se realizó una investigación cualitativa
+                    con enfoque histórico hermenéutico. Participaron seis personas con diagnóstico de cáncer
+                    que se encontraban en tratamiento de quimioterapia ambulatoria en tres centros asistenciales
+                    de la ciudad de Medellín, Colombia entre julio de 2020 y julio de 2021. La información se
+                    recolectó a través de entrevistas semiestructuradas. El proceso de análisis se realizó utilizando
+                    técnicas de la teoría fundamentada de Strauss y Corbin, tales como: microanálisis,
+                    codificación abierta, codificación axial y comparación constante. <b>Resultado:</b> La forma como
+                    los pacientes con cáncer en tratamiento de quimioterapia ambulatoria viven la espiritualidad
+                    se representa a través de las siguientes categorías: “Emociones vividas durante el tratamiento
+                    como impulso para seguir adelante”, “Las redes de apoyo, una fuente de fortaleza y esperanza”, “El
+                    cáncer, una prueba divina entre las limitaciones y el aprendizaje”, “La empatía
+                    del personal de salud, un mecanismo para afrontar la enfermedad y generar bienestar” y “La
+                    espiritualidad, una fuerza que cambia la perspectiva de la enfermedad”. <b>Conclusiones:</b> Pese
+                    a la connotación negativa del diagnóstico de cáncer, la dimensión espiritual en el paciente
+                    con cáncer en tratamiento de quimioterapia ambulatoria contribuye a que la persona vea la
+                    enfermedad desde una perspectiva positiva, aumente la fe y la esperanza para continuar luchando, le
+                    dé un sentido de que todo ha valido la pena, permite ver más allá y proporciona
+                    tranquilidad para enfrentar las adversidades ocasionadas por el cáncer. </p>
+
+                <p class="texto-resumen">
+                    <b>Palabras Claves: </b> Emociones; Apoyo Social; Adaptación psicológica.
+                </p>
+            </div>
+            <!-- Resumen Inglés -->
+
+            <div>
+                <p class="titulo-resumen"> Abstract</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> <b>Objective:</b> To analyze the experience of spirituality in cancer patients
+                    undergoing treatment
+                    with ambulatory chemotherapy. <b>Materials and methods:</b> A qualitative research with a historical
+                    hermeneutic approach. Six people with a diagnosis of cancer who were undergoing outpatient
+                    chemotherapy treatment in three health care centers in the city of Medellin,
+                    Colombia between July 2020 and July 2021 participated. The information was collected
+                    through semi-structured interviews. The analysis process was carried out using Strauss and
+                    Corbin's grounded theory techniques: microanalysis, open coding, axial coding, and constant
+                    comparison. <b>Results:</b> The way cancer patients undergoing outpatient chemotherapy
+                    treatment experience spirituality is represented through the following categories: "Emotions
+                    experienced during treatment as an impetus to move forward", "Support networks, a source
+                    of strength and hope", "Cancer, a divine test between limitations and learning", "Empathy of health
+                    personnel, a mechanism to coping with the disease and generate well-being", and
+                    "Spirituality, a force that changes the perspective of the disease". <b>Conclusions:</b> Despite the
+                    negative connotation of the diagnosis of cancer, the spiritual dimension in the cancer patient
+                    undergoing outpatient chemotherapy treatment contributes to the person seeing the disease
+                    from a positive perspective, increases faith and hope to continue fighting, gives a sense that
+                    everything has been worthwhile, allows seeing beyond and provides peace of mind to face
+                    the adversities caused by cancer.</p>
+
+                <p class="texto-resumen">
+                    <b>KeyWords:</b> Emotions; Social support; Adaptation psychological.
+                </p>
+            </div>
+            <!-- Resumen Portuguez -->
+
+            <div class="resumen-fondo">
+                <p class="titulo-resumen"> Resumo</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> <b>Objetivo:</b> Analisar a experiência da espiritualidade em pacientes com
+                    câncer em quimioterapia ambulatorial. <b>Materiais e Métodos:</b> Realizou-se uma pesquisa
+                    qualitativa com uma abordagem histórico hermenéutico. Participaram seis pessoas diagnosticadas com
+                    câncer que estavam em tratamento quimioterápico ambulatorial em três centros de atendimento da
+                    cidade
+                    de Medellín, Colômbia, entre julho de 2020 e julho de 2021. As informações foram coletadas
+                    por meio de entrevistas semiestruturadas. O processo de análise foi realizado utilizando as
+                    técnicas de teoria fundamentada de Strauss e Corbin, tais como: microanálise, codificação
+                    aberta, codificação axial e comparação constante. <b>Resultado:</b> A forma como os pacientes
+                    oncológicos em tratamento quimioterápico ambulatorial vivenciam a espiritualidade é representada por
+                    meio das seguintes categorias: "Emoções experimentadas durante o tratamento
+                    como um ímpeto para seguir em frente", "Redes de apoio, fonte de força e esperança", "Câncer, teste
+                    divino entre limitações e aprendizagem", "A empatia do pessoal de saúde, um mecanismo para
+                    enfrentamento da doença e gerar bem-estar" e "A espiritualidade, uma força que
+                    muda a perspectiva da doença". <b>Conclusões:</b> Apesar da conotação negativa do diagnóstico de
+                    câncer, a dimensão espiritual em pacientes com câncer em tratamento quimioterápico ambulatorial
+                    ajuda a pessoa a ver a doença de uma perspectiva positiva, aumenta a fé e a esperança
+                    de continuar lutando, dá a sensação de que tudo valeu a pena, permite você enxergar além e
+                    traz tranquilidade para enfrentar as adversidades causadas pelo câncer. </p>
+
+                <p class="texto-resumen">
+                    <b>Palavras-chave:</b> Emoções, Apoio Social, Adaptação Psicológica
+                </p>
+            </div>
+
+
+
+        </div>
+
+        <!-- Descripcion de autores, Aprobado, Como citar, licencia -->
+        <div class="contenedor-autor">
+            <!-- Autores -->
+            <div>
+                <p class="subtitulo" style="color: black; font-size: 18px;">Autor de correspondencia*</p>
+                <!-- 1 -->
+                <p class="autores" id="sup1"><sup>1*</sup><img class="logos" src="img/globales/sobre.png"> Enfermero,
+                    Doctor en Enfermería,
+                    Docente titular, Facultad de Enfermería, Universidad Pontificia Bolivariana. Medellín, Colombia.
+                    <a href="mailto:camilo.duque@upb.edu.co">camilo.duque@upb.edu.co</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0003-3106-0471">0000-0003-3106-0471</a>
+                </p>
+                <!-- 2 -->
+                <p class="autores" id="sup2"><sup>2*</sup><img class="logos" src="img/globales/sobre.png"> Enfermero,
+                    Doctor en Salud Pública,
+                    Docente titular, Facultad de Enfermería,
+                    Universidad Pontificia Bolivariana.
+                    Medellín, Colombia.
+                    <a href="mailto:felipe.tirado@upb.edu.co">felipe.tirado@upb.edu.co</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0001-9010-1494">0000-0001-9010-1494</a>
+                </p>
+                <!-- 3 -->
+                <p class="autores" id="sup3"><sup>3*</sup><img class="logos" src="img/globales/sobre.png"> Enfermera,
+                    Magister en Enfermería
+                    Oncológica. Facultad de Enfermería,
+                    Universidad Pontificia Bolivariana.
+                    Medellín, Colombia.
+                    <a href="mailto:fernanda_8927@hotmail.com">fernanda_8927@hotmail.com</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0001-7028-1504">0000-0001-7028-1504</a>
+                </p>
+            </div>
+
+            <!--Recibido y aprobado-->
+            <div>
+                <p><b>Recibido: </b> 2 junio 2022 <br> <b>Aprobado: </b> 20 noviembre 2022 </p>
+            </div>
+
+            <!-- Como citar -->
+            <div class="cita">
+                <p class="forma-citar autores"><b>Para citar este artículo / To reference this article / Para citar este
+                        artigo:</b> Duque-Ortiz C, Tirado-Otalvaro
+                    AF, Guarin-Cardiba LF. Vivencia de
+                    la espiritualidad en el paciente con
+                    cáncer en quimioterapia ambulatoria. 2023; 20(1):45-58. <a
+                        href="https://doi.org/10.22463/17949831.3360">https://doi.org/10.22463/17949831.3360</a> </p>
+            </div>
+
+            <!--Licencia-->
+            <br>
+            <div>
+                <p class="autores "> &#169; Universidad Francisco de Paula Santander.
+                    Este es un artículo bajo la licencia CC-BY-NC-ND
+                    <br>
+                    <a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img
+                            alt="Licencia Creative Commons" style="border-width:0"
+                            src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Cuerpo del documento -->
+    <div>
+        <hr>
+        <!--Introducción-->
+        <p class="titulo"> Introducción</p>
+
+        <p>
+            La espiritualidad es un concepto abstracto, continuo y
+            dinámico que se expresa en el ser humano a través del
+            espíritu y se piensa como un proceso que actúa entre
+            la armonía y el bienestar (1,2). Se considera un fenómeno personal que se relaciona con la energía, las
+            relaciones, las conexiones y los vínculos que establecen
+            las personas con ellos mismos, con el ambiente, con
+            los demás y con una fuerza o ser superior y que denota
+            armonía, plenitud e integridad del individuo (3). Así
+            mismo, la espiritualidad se considera un principio, una
+            experiencia y una forma de ser que se expresa a través
+            del cuerpo (4).
+        </p>
+
+        <p>
+            La espiritualidad también hace referencia a la interconexión entre lo esencial y lo sagrado que se da a
+            través
+            de la experiencia de vida. En este sentido, la espiritualidad se constituye en una dimensión única de la
+            persona
+            que se caracteriza por la relación con el yo, con el otro,
+            con la naturaleza y con la vida. En otras palabras, es
+            una fuerza que da sentido a la vida (3).
+        </p>
+
+        <p>
+            Batista y Rodríguez (5) exponen que la espiritualidad
+            trae beneficios que influyen directamente sobre el cuerpo humano tales como reducción de la tensión
+            muscular, de la frecuencia cardiaca y de la presión arterial;
+            mientras que Jim et al. (4), plantean que contribuye al
+            control del dolor y el sufrimiento y a la disminución
+            significativa del estrés. Del mismo modo, la orientación y acompañamiento espiritual pueden aumentar el
+            bienestar personal, ayudar en el proceso de rehabilitación y reducir el impacto de las situaciones
+            estresantes
+            a las que se enfrenta una persona cuando tiene un quebrando de salud (1).
+        </p>
+
+        <p>
+            La espiritualidad en las personas que padecen enfermedades como el cáncer se manifiesta de formas diferentes
+            según la experiencia de cada sujeto y suele ser
+            más evidente cuando perciben la enfermedad como
+            una amenaza para su vida (6). Puchalski (7) describe
+            que el diagnóstico del cáncer cambia para siempre la
+            vida de los pacientes y los lleva a evaluar y formularse
+            preguntas existenciales sobre el sentido de la vida, el
+            sufrimiento y la muerte.
+        </p>
+
+        <p>
+            Tener en cuenta la dimensión espiritual del paciente
+            con cáncer contribuye a brindar una atención integral,
+            fomenta el bienestar mental y espiritual de la persona
+            (4), ayuda a que el paciente vuelva a tener esperanzas
+            de cumplir sus metas, objetivos y proyecto de vida;
+            mejora la salud física y mental, disminuye el estrés y
+            aporta herramientas para hacerle frente a la enfermedad
+            (8). Las prácticas espirituales pueden generar un sentimiento de control que ayude a recuperar la
+            estabilidad
+            física emocional y mental (1,9).
+        </p>
+
+        <p>
+            Pham et al. (10) destacan la importancia de considerar
+            la dimensión de espiritualidad como un aspecto relevante cuando se tiene que informar al paciente sobre
+            el diagnóstico y el pronóstico de su enfermedad ya que
+            aumenta la satisfacción con la atención en salud y reduce el riesgo de presentar sintomatología depresiva.
+            La
+            espiritualidad cumple un rol importante en el enfrentamiento al cáncer, en tanto permite nutrir la
+            esperanza, re-significar la experiencia y buscar un sentido a la
+            vida, la enfermedad y la muerte (1,11); de esta forma,
+            la dimensión espiritual se convierte en una fuente de
+            apoyo y esperanza después del diagnóstico y durante el
+            tratamiento (12).
+        </p>
+
+        <p>
+            El mantenimiento del bienestar espiritual se convierte
+            en un componente esencial del ser humano, especialmente en el contexto de enfermedades que amenazan
+            la vida (11,13,14). El cuidado de las necesidades espirituales de los pacientes se correlaciona con mejores
+            resultados psicológicos y espirituales y con la percepción
+            de un cuidado menos agresivo al final de la vida (3,13);
+            y aunque el personal de salud reconoce el cuidado espiritual como un aspecto apropiado de su función, los
+            pacientes perciben que los brindan con poca frecuencia
+            (10).
+        </p>
+
+        <p>
+            De acuerdo con lo anterior, se reconoce la importancia
+            de abordar el fenómeno de la espiritualidad tal y como
+            la experimentan los pacientes. En tal sentido, se realizó
+            una investigación cualitativa con el objetivo de analizar
+            la vivencia de la espiritualidad en el paciente con cáncer
+            en tratamiento con quimioterapia ambulatoria. Como
+            objetivos específicos se propusieron: describir de qué
+            manera las emociones vividas y las relaciones establecidas con el personal de salud durante el tratamiento
+            contribuyen a la espiritualidad, describir el significado
+            de la espiritualidad para los pacientes sometidos a quimioterapia ambulatoria, reconocer las creencias de
+            los
+            pacientes y analizar el proceso de transición espiritual
+            durante el tratamiento de quimioterapia ambulatoria.
+        </p>
+
+        <hr>
+
+        <p class="titulo">Materiales y métodos</p>
+
+        <p>
+            Se realizó una investigación cualitativa con enfoque
+            histórico hermenéutico (15). Lo anterior permitió centrar el estudio hacia la búsqueda de significados,
+            conocer la manera como los participantes piensan y actúan
+            y la forma cómo el entorno influye en la vida de las
+            personas cuando padecen cáncer y se encuentran en
+            tratamiento de quimioterapia ambulatoria (16).
+        </p>
+
+        <p>
+            El estudio incluyó personas con diagnóstico de cáncer
+            que se encontraban en tratamiento de quimioterapia
+            ambulatoria en tres centros asistenciales privados de
+            tercer nivel de la ciudad de Medellín, Colombia. Uno
+            de los cuales es un centro exclusivo para la atención de
+            pacientes oncológicos y los dos restantes son centros
+            hospitalarios generales que ofrecen servicios de quimioterapia.
+        </p>
+
+        <p>
+            Se consideraron los siguientes criterios de inclusión: a)
+            pacientes mayores de 18 años de cualquier género, b)
+            que asistieron a tratamiento de quimioterapia ambulatoria, c) pacientes que llevaran más de cuatro meses en
+            tratamiento de quimioterapia, y d) que vivieran en el
+            área metropolitana de Medellín. El único criterio de exclusión fue tener limitaciones para el habla
+            secundario
+            al diagnóstico o al tratamiento.
+        </p>
+
+        <p>
+            Los participantes fueron contactados por la investigadora principal, dada su experiencia laboral en
+            servicios oncológicos, por medio de un muestreo con propósito
+            (17). El número de participantes se determinó por la
+            saturación de datos de las categorías y por el alcance
+            del estudio en cuanto al objetivo propuesto (18).
+        </p>
+
+        <p>
+            El periodo de recolección de información se efectuó
+            entre julio de 2020 y julio de 2021. Se realizaron un
+            total de seis entrevistas semiestructuradas (19) con una
+            duración entre 35 y 90 minutos, las cuales fueron hechas por la investigadora principal quien fue
+            previamente capacitada para este fin. Dos de las entrevistas
+            fueron realizadas antes de la pandemia por COVID-19
+            de manera presencial en un lugar concertado por los
+            entrevistados. Y las demás se realizaron a través de videollamadas por la plataforma Google Meet debido a
+            las restricciones sanitarias producto del confinamiento.
+            Durante las entrevistas se hizo observación de los gestos, actitudes, silencios y lenguaje no verbal; lo que
+            se
+            registró en un diario de campo.
+        </p>
+
+        <p>
+            Para las entrevistas virtuales, teniendo en cuenta que la
+            mediación de la tecnología podría influir en la tranquilidad del participante, la cámara se mantuvo
+            encendida
+            en todo momento lo que permitió ver los gestos y expresiones de cada participante.
+        </p>
+
+        <p>
+            Para favorecer el discurso de los participantes y la expresión de sus pensamientos y sentimientos, se
+            facilitó
+            el rapport, creando tanto en las entrevistas presenciales
+            como en las virtuales, un ambiente de confianza con el
+            participante, estableciendo al inicio una conversación
+            casual para romper el hielo y luego se continuó profundizando en la temática a tratar.
+        </p>
+
+        <p>
+            Las entrevistas se orientaron por medio de un guión de
+            cuatro preguntas abiertas que incentivaran la conversación, el diálogo con el participante y la descripción
+            de
+            sus experiencias. Las preguntas detonadoras de las entrevistas fueron: ¿para usted qué es la
+            espiritualidad?,
+            ¿Qué ha significado para usted la espiritualidad en las
+            diferentes etapas de su tratamiento?, ¿Cómo ha vivido
+            la espiritualidad durante el tratamiento de quimioterapia ambulatoria?, ¿de qué manera la espiritualidad ha
+            sido un recurso para afrontar los efectos producidos
+            por la quimioterapia? A partir de las respuestas de los
+            participantes se hicieron otras preguntas secundarias
+            orientadas a profundizar en sus experiencias respecto
+            al fenómeno de estudio, a las categorías y sub- categorías emergentes.
+        </p>
+
+        <p>
+            Las entrevistas fueron grabadas y transcritas textualmente. En los casos donde se utilizaron nombres de
+            personas o instituciones se asignaron pseudónimos. La
+            información registrada en el diario de campo sobre el
+            lenguaje no verbal de los participantes se tuvo en cuenta en el proceso de análisis.
+        </p>
+
+        <p>
+            El proceso de análisis se realizó utilizando elementos
+            de la teoría fundamentada propuesta por Strauss y Corbin (20), tales como: microanálisis, codificación
+            abierta, codificación axial y comparación constante. El análisis fue realizado por todo el equipo de
+            investigación,
+            se hizo paralelamente a la recolección de datos y se
+            apoyó con la realización de memos analíticos y teóricos (21,22).
+        </p>
+
+        <p>
+            Inicialmente se hizo una lectura completa de las entrevistas para verificar que la transcripción fue
+            adecuada y
+            para sensibilizarse de nuevo con cada una de ellas para
+            luego realizar una precodificación, la cual consistió en
+            un señalamiento de fragmentos de texto con comentarios o códigos al margen de la página. Posteriormente,
+            en una matriz en Excel®, se consolidaron las unidades
+            de análisis (UA) correspondientes a fragmentos de texto con significado, a los cuales se les asignó un
+            código
+            substantivo o In Vivo que lo representara. En adición,
+            se indicó el código de la entrevista de donde se extrajo
+            y se contó con una casilla para realizar observaciones
+            que permitieran hacer un análisis denso y profundo de
+            cada UA. Al final de este proceso se obtuvo un total de
+            441 códigos.
+        </p>
+
+        <p>
+            Los códigos obtenidos se agruparon según sus relaciones y similitudes bajo conceptos globales lo que
+            permitió la creación de subcategorías y categorías. A
+            través de la ayuda de memos analíticos y diagramas
+            se establecieron relaciones entre los diferentes niveles
+            de la estructura categorial. A partir de dicha estructura,
+            se elaboró la descripción teórica de los hallazgos del
+            estudio.
+        </p>
+
+        <p>
+            Esta investigación tuvo aprobación del Comité de Ética
+            de investigación en Salud de la Universidad Pontificia
+            Bolivariana (acta número 22 de 2019). Se cumplió con
+            los requisitos exigidos en la Resolución No 008430 de
+            1993 expedida por el Ministerio de Salud de Colombia,
+            en relación con los estudios clasificados como “Investigación con riesgo mínimo”. Se solicitó consentimiento
+            informado y se protegieron en todo momento los principios éticos fundamentales de beneficencia, no
+            maleficencia, respeto y justicia. Los criterios de rigor que se
+            tuvieron en cuenta para el desarrollo del estudio fueron el de credibilidad, auditabilidad y
+            transferibilidad, estos se describen en la Tabla 1 (23).
+        </p>
+
+        <div class="image">
+            <p><b>Tabla 1.</b> Criterios de rigor del estudio</p>
+            <img src="img/V20-N1-5/Screenshot_1.png" width="75%">
+            <p><b>Fuente. </b>Proceso reflexivo sobre el rigor metodológico a partir de los criterios de Morse (23).</p>
+        </div>
+
+        <p class="titulo">Resultados</p>
+
+        <p>
+            Los participantes fueron tres hombres y tres mujeres
+            con una edad media de 54 años. Dos eran casados, dos
+            en unión libre, uno separado y la restante era soltera.
+        </p>
+
+        <p>
+            En cuanto a la religión que profesaban, cinco participantes eran católicos y el restante era cristiano. Los
+            diagnósticos oncológicos de los participantes y otras
+            características clínicas y demográficas se presentan en
+            la tabla 2.
+        </p>
+
+        <div class="image">
+            <p><b>Tabla 2. </b>Características de los participantes.</p>
+            <img src="img/V20-N1-5/Screenshot_2.png" width="85%">
+            <p><b>Fuente: </b>Base de datos construida a partir de las entrevistas realizadas.</p>
+        </div>
+
+        <p>
+            A partir del análisis cualitativo de las entrevistas se
+            identificó que la forma como los pacientes con cáncer
+            en tratamiento de quimioterapia ambulatoria viven la
+            espiritualidad se representa a través de las siguientes
+            categorías: “Emociones vividas durante el tratamiento como impulso para seguir adelante”, “Las redes de
+            apoyo, una fuente de fortaleza y esperanza”, “El cáncer, una prueba divina entre las limitaciones y el
+            aprendizaje”, “La empatía del personal de salud, un mecanismo
+            para afrontar la enfermedad y generar bienestar” y “La
+            espiritualidad, una fuerza que cambia la perspectiva de
+            la enfermedad”. En la figura 1 se presenta un análisis
+            de las relaciones establecidas a partir de los hallazgos
+            del estudio.
+        </p>
+
+        <div class="image">
+            <img src="img/V20-N1-5/Screenshot_3.png" width="95%">
+            <p><b>Figura 1. </b>Categorías que representan la espiritualidad de las personas con cáncer en tratamiento
+                con
+                quimioterapia ambulatoria. </p>
+            <p><b>Fuente: </b>Estructura categorial derivada del proceso de codificación</p>
+        </div>
+
+        <p><b>Emociones vividas durante el tratamiento como impulso para seguir adelante</b></p>
+
+        <p>
+            Los participantes reconocen que la experiencia de padecer cáncer está marcada por la percepción de
+            sentimientos que varían de acuerdo con los momentos de
+            la enfermedad y las etapas por las que atraviesan. Los
+            sentimientos previos al diagnóstico del cáncer reflejan
+            tranquilidad e indiferencia pues, al no tener ninguna
+            dolencia, no hay algo que los perturbe o afecte. Así
+            mismo, no tienen afán con su vida y sus prioridades recaen sobre las personas cercanas y familiares como se
+            refleja en el siguiente testimonio: “Primero uno como
+            está tan aliviado, usted es vaya y venga” Mujer de 56
+            años con cáncer de ovario.
+        </p>
+
+        <p>
+            Una vez se diagnostica la enfermedad, los participantes experimentan sentimientos de tristeza, rabia,
+            incertidumbre y angustia. Dichos sentimientos se asocian
+            con la preocupación por conseguir el sustento de sus
+            hijos, el temor a la muerte, el desconsuelo por no poder trabajar y las implicaciones de dichas situaciones
+            sobre las relacionales laborales, familiares y sociales.
+            Los participantes lo describen de la siguiente manera:
+            “El primer cáncer que me descubrieron fue muy triste,
+            porque que le digan a usted de una, eso fue algo muy
+            impactante, ahí el dolor fue con las niñas, después…
+            eso fue lo que más me desmoronó a mí”. Mujer de 56
+            años con cáncer de ovario.
+        </p>
+
+        <p>
+            Los sentimientos que perciben durante el tratamiento se asocian con los cambios físicos y funcionales
+            que se derivan de este, como: el dolor, la pérdida de
+            pelo, el cansancio y el agotamiento. De igual manera, sienten incomodidad al tener que depender de otros y
+            disconfort por los procedimientos y efectos de la quimioterapia. Al respecto, los participantes refieren que
+            aguantan y disimulan el dolor para no producir sufrimiento a sus familiares. Lo anterior, desencadena en
+            ellos sentimientos adicionales de desconsuelo, derrota
+            y vulnerabilidad pues deben dejar actividades que solían hacer y sufrir en silencio. Esto se refleja en el
+            relato del siguiente participante: “Hay días que te levantas
+            con ganas de tirar la toalla, yo siento que es la misma
+            quimio, son esos días que lo maluquean a uno, la paso
+            triste, malgeniado y aburrido”. Hombre de 26 años con
+            sarcoma de tejidos blandos.
+        </p>
+
+        <p>
+            Durante el tratamiento, a pesar del tipo de sentimientos
+            que experimentaron los participantes, aumentaron las
+            ganas y la fortaleza de luchar por la vida, de salir adelante, de resistir y mantenerse en pie. Esto
+            favoreció la
+            expresión de su espiritualidad a través del desarrollo de
+            una visión positiva, como una forma de expresión de
+            sus vivencias, frente a la situación a la que se enfrentaban, como una manera de no dejarse derrotar por la
+            enfermedad y de aferrarse a razones importantes para
+            vivir tales como la familia y los proyectos de vida que
+            estaban pendientes por cumplir. Así lo describen los siguientes participantes: “… llega algo por dentro que
+            te da ese impulso, que dice que sales adelante, Y esas
+            niñas son las que me empujan a mí” Mujer de 56 años
+            con cáncer de ovario.
+        </p>
+
+        <p class="entrevista">
+            “… al sexto día, después de la quimioterapia, eso se le
+            quita a uno y ya me vuelvo y me paro con ganas y me
+            da alegría poder comer y me da alegría poder hacer
+            otras cosas, es más que todo esas ganas de poder estar
+            conmigo, con mi hermano, con todos ellos…” Hombre
+            de 26 años con sarcoma de tejidos blandos.
+        </p>
+
+        <p>
+            En las recaídas, en algunos casos la noticia y el diagnóstico no produce tanto impacto como la primera vez,
+            pues ya se tiene una experiencia previa con la situación
+            y aún se conserva el apoyo y el impulso por salir adelante como se observa en el siguiente testimonio:
+        </p>
+
+        <p class="entrevista">
+            “…
+            y ahora otra vez volver, eso fue el año pasado, que me
+            dijeran que tenía cáncer no fue tan doloroso como la
+            primera vez, porque yo ya veía que eso resultaba por
+            otro lado… yo decía… listo, yo quedé curada, quedé
+            muy bien, pero he tenido familia con cáncer y entonces
+            eso les había repetido”
+            <span>
+                <p>
+                    Mujer de 56 años con cáncer
+                    de ovario.
+                </p>
+            </span>
+        </p>
+
+        <p><b>Las redes de apoyo, una fuente de fortaleza y esperanza</b></p>
+
+        <p>
+            Los participantes destacan lo importante que ha sido
+            para ellos contar con el apoyo de sus hijos, de la pareja,
+            de sus amigos más cercanos y compañeros de trabajo.
+            En ellos encuentran la fortaleza, el sostén y la esperanza
+            para asumir de una forma más positiva la enfermedad.
+            La familia se reconoce como un círculo de amor que da
+            apoyo y ayuda durante las dificultades y procesos que
+            se derivan de la evolución del cáncer. Así mismo, se
+            reconoce como una fuente de fortaleza espiritual que
+            ayuda a afrontar los desafíos que impone la enfermedad. Esto se refleja en el siguiente testimonio:
+        <p class="entrevista">
+            “… uno
+            está tan cobijado de amor en mi casa… yo tengo una
+            familia que son como 20 y créeme que, si los 20 pudieran ir a las quimioterapias, todos irían conmigo”
+        </p>
+        <p>
+            Hombre de 26 años con sarcoma de tejidos blandos.
+        </p>
+        </p>
+
+        <p>
+            Los participantes también se sienten agradecidos,
+            acompañados y motivados cuando los compañeros de
+            trabajo y amigos se preocupan por ellos, están pendientes de su familia y de su proceso de enfermedad. La
+            oración es una forma como las personas manifiestan su
+            intereses y acompañamiento desde la distancia, pues en
+            ella encuentran una herramienta para combatir la soledad y para sentirse acompañados. Una participante lo
+            describe de la siguiente manera:
+
+        <p class="entrevista">
+            ”… he tenido mucho
+            apoyo tanto de mi familia, como de mis compañeras
+            de trabajo, como de los vecinos, de todo mundo; todo
+            mundo me dice… la tengo en mis oraciones, no me han
+            dejado sola… yo creo que esa ha sido mi mayor fuerza”
+        </p>
+        <p>
+            Mujer de 56 años con cáncer de ovario.
+        </p>
+        </p>
+
+        <p>
+            En contraste con lo anterior, hay algunos casos donde la
+            persona enferma se reserva el diagnóstico para sí misma o para un grupo limitado de personas y no comparte
+            la noticia con toda la familia con el fin de centrar sus
+            redes de apoyo en el grupo familiar más proximal y de
+            esta manera evitar que el resto de la familia sienta pena
+            y sufrimiento por su situación de enfermedad. Esto se
+            observa en el siguiente relato:
+
+        <p class="entrevista">
+            “… yo no le cuento a nadie, tengo un primo hermano que es ginecólogo, tengo
+            dos primas médicas también, en mi familia hay como
+            diez médicos y yo a ninguno les cuento nada, ni a mi
+            papá, ni a mis hermanas, ni a mis hermanos, ni a mis
+            sobrinas las médicas, la única que sabe es mi señora,
+            la mujer con la que vivo… por no preocuparlos; porque es que tuve una hermana que también sufrió de
+            este mismo problema y le contó a toda la familia y toda la familia preocupada llorando. Yo no quiero que esa
+            gente esté mal”.
+        </p>
+
+        <p>
+            Hombre de 60 años con linfoma de
+            Hodgkin.
+        </p>
+        </p>
+
+        <p><b>El cáncer, una prueba divina entre las limitaciones y el aprendizaje</b></p>
+
+        <p>
+            Los participantes refieren que ven la enfermedad como
+            una prueba divina en la que se enfrentan a múltiples
+            limitaciones y dificultades que, a su vez, se constituyen
+            en una oportunidad de cambio y de reflexión que le da
+            un sentido diferente a la vida y que conlleva a aprendizajes significativos.
+        </p>
+
+        <p>
+            Una de las principales dificultades a las que se enfrentaron los participantes es a la pérdida de la
+            capacidad para
+            realizar actividades cotidianas, deportivas y laborales.
+            En este sentido, el depender de otras personas para salir
+            de la casa, para realizar tareas que usualmente hacían y
+            asistir a lugares que solían frecuentar se constituye en
+            un desafío, como se observa en el siguiente testimonio:
+        <p class="entrevista">
+            “…si voy a una parte… ya uno no puede ir solo. Si me
+            voy para una IPS (Instituciones Prestadoras de Servicios) tiene que ser acompañada […] Yo voy a misa
+            cuando siento que no hay mucha gente, porque como
+            les digo… yo voy a misa, entonces el tumulto me pone
+            mal, el calor, me voy como sofocando y me voy maluquiando, me voy desmayando”
+        </p>
+
+        <p>
+            Mujer de 56 años con
+            cáncer de ovario.
+        </p>
+        </p>
+
+        <p>
+            En cuanto a los logros y aprendizajes significativos se
+            encuentran el haber superado las fases del tratamiento
+            del cáncer, aprender a controlar el dolor y ser más positivos en la vida y frente la enfermedad.
+        </p>
+
+        <p>
+            Al superar las distintas fases del tratamiento, los participantes perciben que su pronóstico de vida es
+            mayor
+            y mejoran las expectativas que tenían al inicio. Uno de
+            los aspectos que contribuye a superarlas es el control
+            del dolor que se deriva de la enfermedad en sí misma
+            y del tratamiento que reciben. Para esto, el aceptar el
+            cáncer hasta el punto de imaginarlo como un amigo se
+            convierte en una estrategia que favorece su control y
+            manejo.
+        </p>
+
+        <p>
+            Así mismo, se reconoce que el tránsito por la enfermedad contribuye a cambiar la forma de ser de la persona.
+            Dicho cambio se caracteriza por ver la vida y el cáncer
+            desde una perspectiva positiva, ser más humildes, no
+            guardar rencor, valorar más la vida, no juzgar a los demás, aceptarse incondicionalmente a sí mismos y
+            fortalecer el alma y el espíritu. Esto se observa en el relato
+            de una de las participantes:
+        <p class="entrevista">
+            “… tiene que pasar uno por
+            esas cosas para uno pensar, para uno saber todo lo que
+            uno ha dejado de hacer y tener que llegar a una enfermedad de estas, para uno poder pensar cuánto vale
+            uno, cuánto vale la vida, cuánto vale el ser que tiene
+            uno al lado, de valorar las cosas por insignificantes
+            que sean.”
+        </p>
+        <p>
+            Mujer de 56 años con cáncer de ovario.
+        </p>
+        </p>
+
+        <p><b>La empatía del personal de salud, un mecanismo para afrontar la enfermedad y generar bienestar.</b></p>
+
+        <p>
+            Las muestras de empatía por parte del personal de salud
+            se reconocen como valiosas, ayudan a afrontar el proceso de enfermedad y tratamiento y brindan una sensación
+            de bienestar. Así mismo, se entienden como fuente de espiritualidad, pues contribuyen a sentir gratitud,
+            motivación, reconocimiento y confianza en sí mismos.
+            Los participantes percibieron que el personal de salud
+            era empático cuando mostraron interés, preocupación,
+            les dieron un cuidado personalizado, los llamaron por
+            su nombre y cuando el trato fue cálido, alegre, oportuno y pertinente para dar solución a sus necesidades
+            tanto físicas como emocionales. Esto se refleja en el
+            siguiente testimonio:
+        <p class="entrevista"><b>
+                “Tratándolo a uno bien, diciéndole que eso no le va a doler o que si le va a doler, le va
+                a doler un ratico no más y le dan como mucha moral,
+                como para que uno no se decaiga, lo paran a uno”
+            </b></p>
+        <p>
+            Hombre de 73 años con Leucemia.
+        </p>
+        </p>
+
+        <p>
+            Por otro lado, los participantes también manifiestan
+            que, cuando la atención del personal se hizo con falta de calidez, afecto y armonía, llegan a percibir que
+            el personal que los atiende no tiene vocación y lo hacen como parte de una función que están obligados a
+            cumplir, a diferencia de otros profesionales de los que
+            reciben una atención más cercana, tal como lo relata el
+            siguiente participante:
+        </p>
+
+        <p class="entrevista">
+            “… había otra jefa toda mala
+            clase y yo ese tercer ciclo pasé maluco, maluco, maluco y al cuarto ciclo volví y ya estaba otra jefa y ya
+            fue mejor”
+        </p>
+
+        <p>
+            Hombre de 26 años con sarcoma de tejidos
+            blandos.
+        </p>
+
+        <p><b>La espiritualidad, una fuerza que cambia la perspectiva de la enfermedad.</b></p>
+
+        <p>
+            En el proceso de tránsito por la enfermedad, los participantes resaltan la importancia de la espiritualidad
+            como
+            un camino para el afrontamiento, la lucha, el aguante y la perseverancia en todas las etapas por las que
+            atraviesan, además, consideran que genera una actitud
+            positiva que ayuda a que se sientan mejor. Este bienestar se refleja en la disminución de la ansiedad, el
+            enojo y el malestar, aumenta la esperanza, el optimismo y
+            la capacidad de disfrutar y encontrarle un propósito a
+            la vida. Los participantes reconocen la espiritualidad
+            como la energía con que se vive la vida, el tener el alma
+            tranquila y la fuerza motivadora que los ayuda a salir
+            adelante y no los deja desfallecer, los ayuda a encontrar
+            la paz interior, a reafirmar el deseo de vivir y gozar de
+            las cosas simples de la vida. Lo anterior se observa en
+            el siguiente testimonio:
+        </p>
+
+        <p><b>
+                “… la espiritualidad es como
+                lo que tengo en mi interior, yo lo defino como mi fe,
+                como lo que yo tengo en mi interior, como esa fuerza
+                interna que yo tengo, ese interior que me motiva a mí
+                a hacer las cosas…”
+            </b></p>
+
+        <p>
+            Mujer de 69 años con cáncer de
+            mama.
+        </p>
+
+        <p>
+            En adición, la espiritualidad se reconoce como algo que
+            ayuda a mantener una buena interacción con los demás
+            y a darle un significado diferente a la vida, lo que a su
+            vez despierta un interés por las buenas acciones, ayuda a resolver asuntos pendientes y mantener la mirada
+            puesta hacia adelante desarrollando una visión de la
+            realidad que conecte la existencia de manera congruente con lo que se hace, dice y piensa, de manera que
+            fomenta la capacidad de abrirse a nuevas perspectivas de
+            ver el mundo que les rodea. Lo anterior lo evidencia el
+            siguiente testimonio:
+        </p>
+
+        <p><b>
+                “… lo único que pienso es que la
+                espiritualidad tiene que ver es con la tranquilidad de
+                uno, estar en paz con todo el mundo y vivir la vida sin
+                afanes, sin desesperos, para mí eso es espiritualidad”
+            </b></p>
+
+        <p>
+            Hombre de 73 años con Leucemia.
+        </p>
+
+        <p>
+            Por otro lado, la espiritualidad se describe como la relación que se establece con Dios. Los participantes
+            reconocieron que, durante la enfermedad, se incrementó
+            la fé y creencia en un ser superior, considerando que la
+            oración y el encomendarse a Dios da tranquilidad. En
+            este sentido, se le atribuye y agradece a Dios la mejoría, fortaleza, confianza y oportunidad de seguir
+            viviendo y salir adelante ante la enfermedad, el tratamiento,
+            el dolor y la angustia que experimentan. De igual forma, consideran que Dios se manifiesta en cada persona
+            que los hace sentir bien y les brinda consuelo. Esto se
+            observa en el siguiente testimonio:
+        </p>
+
+        <p class="entrevista">
+            “…cuando uno está
+            triste siempre tiene a alguien que le regala una sonrisa,
+            cuando uno está aburrido siempre hay alguien que te
+            reactiva con eso y Dios está en esa gente”.
+        </p>
+
+        <p>
+            Hombre de 26 años con sarcoma de tejidos blandos.
+        </p>
+
+        <p class="titulo">Discusión</p>
+
+        <p>
+            Una vivencia da cuenta de una experiencia significativa que marca la vida de las personas y que motiva sus
+            acciones hacia lo que realmente vale la pena, en tal sentido (24), Wakiuchi et al. (25) representan la
+            experiencia de la quimioterapia como vivir con un tratamiento
+            que provoca cambios profundos en la vida y en todas
+            las dimensiones del ser, destacándose la emocional y la
+            espiritual.
+        </p>
+
+        <p>
+            En este estudio se encontró que los participantes experimentaron diferentes emociones durante el tratamiento
+            de su enfermedad tales como tristeza, rabia, incertidumbre y angustia; hallazgos similares a los reportados
+            por Montiel-Castillo et al. (26). Lo anterior podría tener explicación en los problemas físicos que se
+            derivan
+            de la enfermedad y el tratamiento, además de altos niveles de incertidumbre que experimentan los pacientes
+            con cáncer lo cual no solo genera sufrimiento, sino
+            que puede afectar considerablemente su calidad de vida
+            (26, 27).
+        </p>
+
+        <p>
+            A pesar de las emociones negativas que los participantes refieren haber experimentado durante el
+            tratamiento, encontramos que dichas vivencias se convierten en
+            una fortaleza espiritual que los impulsa a seguir adelante. Frente a esto, Knaul et al. (28) identificaron
+            que
+            el apego a la vida es un motor que le ayuda al paciente
+            a iniciar su lucha para hacerle frente a la enfermedad y
+            exponen que la motivación que da la familia produce
+            la capacidad de otorgar sentido a la vida en toda clase de experiencias y les brinda la razón para continuar
+            viviendo y luchando. En contraste con lo expuesto,
+            hay aspectos que contribuyen a que las personas con
+            cáncer realicen una represión significativa del afrontamiento de la enfermedad entre las que se encuentran:
+            evitar hablar de la enfermedad, ocultar el diagnóstico
+            por estar asociado con el sufrimiento de sí mismo y el
+            de otros, tener una reacción emocional negativa ante el
+            diagnóstico y no demostrar que están alterados psicológicamente para evitar verse vulnerable ante los demás
+            (29,30), asuntos que guardan coherencia con los hallazgos de este estudio.
+        </p>
+
+        <p>
+            Con relación a las redes de apoyo, Wakiuchi et al. (25)
+            reconocen que estas brindan soporte emocional, instrumental o material y espiritual (31). Así mismo, Ávila
+            et al. (32) expresan que cada uno de los integrantes de
+            la red de apoyo del paciente aporta los cimientos de un
+            escenario en el que el paciente experimenta un proceso de estabilidad emocional, que favorece el desarrollo
+            de cualidades y actitudes necesarias para enfrentar
+            la enfermedad. Lo anterior, coincide con los hallazgos
+            de nuestro estudio en los cuales se interpreta cómo las
+            redes de apoyo representan una fuente significativa de
+            esperanza y espiritualidad que contribuyen al afrontamiento a la enfermedad.
+        </p>
+
+        <p>
+            En cuanto al aprendizaje durante la enfermedad, en
+            este estudio se identificó que el paciente desarrolla un
+            interés por priorizar el tiempo y realizar actividades
+            que los hagan sentir revitalizados. Frente a este tema,
+            Engqvist-Boman et al. (33) manifiestan que las características importantes del aprendizaje durante una
+            enfermedad potencialmente mortal como el cáncer son
+            fuertes impulsores personales para comprender y lidiar
+            con todo lo que ocurre (25,28), situación similar a la
+            narrada por los participantes de este estudio quienes
+            manifestaron cómo las experiencias vividas se transformaron en crecimiento y aprendizaje espiritual.
+        </p>
+
+        <p>
+            En adición, Nipp et al. (34) encontraron una relación
+            positiva entre la autoeficacia para afrontar el problema
+            y la calidad de vida, lo cual se relaciona con los resultados de este estudio ya que se interpreta, a través
+            de
+            los relatos de los participantes, cómo estos logran salir
+            adelante a pesar de las dificultades que se derivan de
+            la enfermedad y el tratamiento. De igual forma, Ishibashi et al. (35) plantean que los factores tales como:
+            actitud positiva, marcar un propósito, la conexión con
+            los amigos y familia, la confianza y el aumento del conocimiento sobre la vida aumentan la capacidad para
+            superar las diferentes etapas del proceso oncológico.
+        </p>
+
+        <p>
+            Por lo que se refiere a la empatía y la relación con el
+            personal de salud, establecer una relación empática con
+            los pacientes hace que sus incertidumbres, miedos e inseguridades disminuyan y obtengan un bienestar tanto
+            físico, emocional como espiritual (36,37). Hallazgos
+            similares a los encontrados en este estudio, los cuales
+            sugieren que la relación empática con el personal de
+            salud favorece la espiritualidad y se convierten en un
+            importante mecanismo para afrontar la enfermedad y
+            generar bienestar. En este sentido, Rohani et al. (38)
+            concluyen que la empatía debe considerarse como uno
+            de los estándares de competencia más importantes en
+            las enfermeras de oncología, pues estos se relacionan con un menor estrés y mayor satisfacción en los
+            pacientes con cáncer (39).
+        </p>
+
+        <p>
+            Wittenberg et al. (40) afirman que un cuidado comprometido repercute en la satisfacción del paciente. Por
+            esto , afinar la labor de enfermería en el cuidado del
+            paciente con cáncer, supone el perfeccionamiento de
+            competencias de comunicación para conseguir una actitud empática y afectiva hacia la comprensión y
+            sensibilización de las vivencias del paciente (41).
+        </p>
+
+        <p>
+            Olver et al. (42) plantean que la espiritualidad se presenta a través de capacidades humanas que trascienden
+            la materia y la inteligencia tales como: la capacidad de
+            abstracción, de razonar o argumentar, de reconocer la
+            verdad y de anunciarla en un lenguaje, de querer, de
+            auto determinarse libremente, de actuar con miras a un
+            fin conocido inteligentemente y de auto reflexión que
+            permita conocer y querer nuestros propios actos.
+            Del mismo modo, Caldeira et al. (43) exponen que la
+            espiritualidad es un concepto complejo y se relaciona
+            con la búsqueda de sentido y propósito en la vida, con
+            las interacciones con uno mismo, con los demás y con
+            el mundo; y consideran que es una dimensión dinámica
+            a lo largo de la vida que surge específicamente cuando
+            las personas viven situaciones que amenazan la vida o
+            afecta significativamente la salud.
+        </p>
+
+        <p>
+            Los argumentos de Olver et al. (42) y Caldeira et al.
+            (43) son coherentes con los hallazgos de este estudio,
+            los cuales apuntan a entender cómo la espiritualidad se
+            vincula con la energía con que se vive la vida, el tener el
+            alma en paz y tranquila y como una fuerza motivadora
+            que los ayuda a salir adelante y no los deja desfallecer.
+            Por otra parte, los participantes también reconocieron
+            que, durante la enfermedad, la fe, la creencia y cercanía
+            hacia un ser superior se incrementó. En este sentido,
+            le agradecieron a dicho ser por escuchar las suplicas,
+            por la oportunidad de seguir viviendo y salir adelante,
+            y por la mejoría, fortaleza y confianza que logran durante el dolor y la angustia. Acerca de esto, Freitas
+            et
+            al. (44) encontraron que la fe y la creencia en Dios son
+            fuentes esenciales de consuelo y apoyo para afrontar el
+            estrés generado por el proceso de enfermar e identificaron que las creencias en Dios se mantuvieron o
+            incrementaron durante la enfermedad, sirviendo de soporte
+            emocional, evidencias que respaldas los hallazgos del
+            presente estudio.
+        </p>
+
+        <p>
+            Por otra parte, Diego-Cordero et al. (45) plantean que la enfermedad del cáncer, desde un punto de vista
+            espiritual, suele concebirse como una voluntad de Dios
+            o como un castigo. Situación análoga a los hallazgos
+            del presente estudio, según los cuales, los pacientes reconocen la espiritualidad como una forma de dar una
+            explicación o causa a lo que viven para, así, asignar un
+            significado a su enfermedad. Sin embargo, Dos Reis et
+            al. (46) expresan que cuando se experimenta una enfermedad como el cáncer, las personas se ven impulsadas a
+            buscar un mayor autoconocimiento, a repensar su vida,
+            a redescubrir su valor y a ubicarse como protagonistas
+            de su historia, por lo que se intensifica la creencia en la
+            existencia de un Dios o Ser supremo y se considera que
+            la búsqueda del milagro provocado por el poder de la fe
+            es el más importante y quizás el último de los recursos
+            disponibles.
+        </p>
+
+        <p>
+            Al respecto, DSouza y Astrow (47) afirman que las personas se dirigen hacia la religión en busca de ayuda en
+            aquellas situaciones de la vida que son más estresantes.
+            De igual forma, consideran que muchos de los mecanismos religiosos parecen estar diseñados para ayudar
+            a las personas en los momentos más difíciles de su vida
+            y pueden ser beneficiosos en momento de gran dolor.
+            Esto concuerda con los resultados de este estudio en
+            los que los participantes piensan que la oración y el
+            encomendarse a Dios les da tranquilidad.
+        </p>
+
+        <p>
+            Cultivar la espiritualidad a lo largo de la vida e incluso en su final, favorece la capacidad de trascender
+            y
+            mitigar el sufrimiento y el dolor. Atender los aspectos
+            espirituales favorece la tranquilidad, la fe, la auto aceptación, el optimismo y, por lo tanto, el bienestar
+            y el
+            autocuidado (43).
+        </p>
+
+        <!-- conclusiones -->
+
+        <hr>
+
+        <p class="titulo">Conclusiones</p>
+        <ul class="lista">
+            <li>Se concluye que, pese a la connotación negativa del
+                diagnóstico de cáncer, la dimensión espiritual en el
+                paciente con cáncer en tratamiento de quimioterapia ambulatoria contribuye a que la persona vea la
+                enfermedad desde una perspectiva positiva, aumente la fe y la esperanza para continuar luchando, le dé
+                un sentido de que todo ha valido la pena, permite ver más allá y proporciona tranquilidad para enfrentar
+                las adversidades ocasionadas por el cáncer.</li>
+            <li>Se identifica que la espiritualidad es una fuente de
+                vigor natural, una virtud que alienta, da fortaleza y
+                paz a las personas con cáncer y cuyos efectos alcanzan a quienes se encuentran a su alrededor. Así
+                mismo, se reconoce que brinda esperanza, significado
+                de vida y transcendencia durante el proceso de enfermedad, además de aprendizaje personal a través
+                de la capacidad para enfrentar cualquier dificultad.</li>
+            <li>Se recomienda explorar y profundizar sobre la manera como las redes de apoyo familiares o sociales
+                contribuyen al desarrollo de la espiritualidad y la
+                forma como se ve reflejado en el afrontamiento de
+                la enfermedad para que se puedan desarrollar estudios adicionales.</li>
+            <li>Como limitaciones del estudio, es preciso aclarar
+                que la hermenéutica implica un proceso dinámico e
+                intersubjetivo en el cual el equipo de investigación
+                involucra de manera directa su experiencia con los
+                hallazgos emergentes, motivo por el cual los resultados no alcanzan un nivel de generalización en
+                términos de inferencia estadística, por lo que se invita
+                a leer el texto en el contexto y temporalidad histórica en el que se desarrolló (48).</li>
+            <li>Comprender la manera cómo los pacientes en quimioterapia ambulatoria viven su espiritualidad
+                permite a los profesionales de enfermería hacer un
+                proceso reflexivo frente a su praxis clínica y la manera como desde la empatía y el favorecimiento de
+                las redes de apoyo, pueden aportar al afrontamiento
+                del tratamiento de la enfermedad.</li>
+        </ul>
+
+        <p class="subtitulo">Conflicto de intereses</p>
+
+        <p>
+            Los autores declaran no tener ningún conflicto de intereses.
+        </p>
+
+        <!-- Referencias -->
+
+        <hr>
+
+        <p class="titulo"> Referencias </p>
+
+        <ol class="lista">
+            <li id="r1">Balducci L. Geriatric Oncology, Spirituality, and Palliative Care. J Pain Symptom Manage.
+                2019;57(1):171–
+                5. <a
+                    href="https://doi.org/10.1016/j.jpainsymman.2018.05.009">https://doi.org/10.1016/j.jpainsymman.2018.05.009</a>
+            </li>
+            <li id="r2">Lin HR, Bauer-Wu SM. Psycho-spiritual well-being in patients with advanced cancer: An
+                integrative review
+                of the literature. J Adv Nurs. 2003;44(1):69–80. <a
+                    href="https://www.doi.org/10.1046/j.1365-2648.2003.02768.x">https://www.doi.org/10.1046/j.1365-2648.2003.02768.x</a>
+            </li>
+            <li id="r3">Mousavi SR, Akdari ME. Spirituality and religion in cancer. Ann Oncol. 2010;21(4):907–8. <a
+                    href="https://www.doi.org/10.1093/annonc/mdp604">https://www.doi.org/10.1093/annonc/mdp604</a></li>
+            <li id="r4">Jim HS, Pustejovsky J, Park CL, Danhauer SC, Sherman AC, Fitchett G, et al. Religion,
+                spirituality, and physical health in cancer patients: A meta-analysis. Cancer. 2016;121(21):3760–8. <a
+                    href="https://www.doi.org/10.1002/cncr.29353">https://www.doi.org/10.1002/cncr.29353</a></li>
+            <li id="r5">Batista S, Rodriguez dos Anjos Mendoca A. Espiritualidade e qualidade de vida nos pacientes
+                oncológicos em
+                tratamento quimioterápico. Rev bioét. 2012;20(1):175–88. </li>
+            <li id="r6">Rogers CC, Pope S, Whitfield F, Cohn WF, Valdez RS. The lived experience during the
+                peri-diagnostic period
+                of breast cancer: A scoping review. Patient Educ Couns. 2022;105(3):547–85. <a
+                    href="https://www.doi.org/10.1016/j.pec.2021.06.017">https://www.doi.org/10.1016/j.pec.2021.06.017</a>
+            </li>
+            <li id="r7">Puchalski CM. Spirituality in the cancer trajectory. Ann Oncol. 2012;23(Supplement 3):49–55. <a
+                    href="https://www.doi.org/10.4067/s0717-92272011000400006">https://www.doi.org/10.4067/s0717-92272011000400006</a>
+            </li>
+            <li id="r8">Palmer Kelly E, Paredes AZ, Tsilimigras DI, Hyer JM, Pawlik TM. The role of religion and
+                spirituality in
+                cancer care: An umbrella review of the literature. Surg Oncol. 2020;42:1–8. <a
+                    href="https://www.doi.org/10.1016/j.suronc.2020.05.004">https://www.doi.org/10.1016/j.suronc.2020.05.004</a>
+            </li>
+            <li id="r9">Urrego Barbosa SC, Sierra Matamoros FA, Sánchez Pedraza R. Desarrollo de una intervención
+                centrada en
+                espiritualidad en paciente con cáncer. Univ Psychol. 2015;14(1):15–27. <a
+                    href="https://www.doi.org/10.11144/Javeriana.upsy14-1.dice">https://www.doi.org/10.11144/Javeriana.upsy14-1.dice</a>
+            </li>
+            <li id="r10">Pham VA, Nguyen H, Krakauer EL, Harding R. “I Wish I Could Die So I Would Not Be in Pain”: A
+                Qualitative Study of Palliative Care Needs Among People With Cancer or HIV/AIDS in Vietnam and Their
+                Caregivers.
+                J Pain Symptom Manage. 2021;62(2):364–72. <a
+                    href="https://www.doi.org/10.1016/j.jpainsymman.2020.11.030">https://www.doi.org/10.1016/j.jpainsymman.2020.11.030</a>
+            </li>
+            <li id="r11">Flanigan M, Wyatt G, Lehto R. Spiritual Perspectives on Pain in Advanced Breast Cancer: A
+                Scoping Review.
+                Pain Manag Nurs. 2019;20(5):432–43. <a
+                    href="https://www.doi.org/10.1016/j.pmn.2019.04.002">https://www.doi.org/10.1016/j.pmn.2019.04.002</a>
+            </li>
+            <li id="r12">Mayssara A. Abo Hassanin Supervised A. A espiritualidade nos pacientes com câncer em
+                quimioterapia. Pinto, S Caldeira, S Martins, JC. 2012;6:8–14. <a
+                    href="https://pesquisa.bvsalud.org/portal/resource/pt/bde-23786">https://pesquisa.bvsalud.org/portal/resource/pt/bde-23786</a>
+            </li>
+            <li id="r13">Mendonça AB, Pereira ER, Magnago C, Costa Rosa Andrade Silva RM, Meira KC, de Oliveira Martins
+                A.
+                Distress and the religious and spiritual coping of Brazilians living with cancer: A cross-sectional
+                study. Eur J
+                Oncol Nurs. 2020;48:1–12. <a
+                    href="https://www.doi.org/10.1016/j.ejon.2020.101825">https://www.doi.org/10.1016/j.ejon.2020.101825</a>
+            </li>
+            <li id="r14">Beca-Infante JP. El cuidado espiritual del enfermo como responsabilidad del profesional de la
+                salud. Etica los
+                Cuid. 2008;1(1):1–8. <a
+                    href="https://dialnet.unirioja.es/servlet/articulo?codigo=7644148">https://dialnet.unirioja.es/servlet/articulo?codigo=7644148</a>
+            </li>
+            <li id="r15">Guba E, Lincoln Y. Competing paradigms in qualitative research. In: Denzin N., Lincoln Y.,
+                editors. Handbook of qualitative research. Thousand Oaks: Sage; 1994. p. 105–17. <a
+                    href="https://ethnographyworkshop.files.wordpress.com/2014/11/guba-lincoln-1994-competing-paradigms-in-qualitative-research-handbook-of-qualitative-research.pdf">https://ethnographyworkshop.files.wordpress.com/2014/11/guba-lincoln-1994-competing-paradigms-in-qualitative-research-handbook-of-qualitative-research.pdf</a>
+            </li>
+            <li id="r16">Taylor SJ, Bogdan R, DeVault ML. Introduction: Go to the people. In: Introduction to
+                qualitative research methods A guidebook and resource. 4th ed. New Jersey: Wiley; 2016. p. 3–28. <a
+                    href="https://books.google.es/books?id=pONoCgAAQBAJ&printsec=frontcover&hl=es&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=-false">https://books.google.es/books?id=pONoCgAAQBAJ&printsec=frontcover&hl=es&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=-false</a>
+            </li>
+            <li id="r17">Patton MQ. Sampling strategies. In: Qualitative research and evaluation methods. 3th ed.
+                Thosuand Oaks:
+                SAGE Publications; 2002. p. 243–51. <a
+                    href="https://books.google.es/books?id=FjBw2oi8El4C&printsec=frontcover&hl=es&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false">https://books.google.es/books?id=FjBw2oi8El4C&printsec=frontcover&hl=es&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false</a>
+            </li>
+            <li id="r18">Charmaz K. Theoretical sampling, saturation and sorting. In: Constructing Grounded Theory: A
+                Practical Guide Through Qualitative Analysis. London: SAGE Publications; 2006. p. 96–122. <a
+                    href="https://projects.iq.harvard.edu/files/socseniorthesis/files/charmaz_ch5_theoretical_sampling_saturation_sorting.pdf?m=1444853194">https://projects.iq.harvard.edu/files/socseniorthesis/files/charmaz_ch5_theoretical_sampling_saturation_sorting.pdf?m=1444853194</a>.
+            </li>
+            <li id="r19">Taylor SJ, Bogdan R, DeVault ML. In-depth interviewing. In: Introduction to qualitative
+                research methods A
+                guidebook and resource. 4th ed. New Jersey: Wiley; 2016. p. 101–34. <a
+                    href="https://books.google.es/books?id=pONoCgAAQBAJ&printsec=frontcover&hl=es&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false">https://books.google.es/books?id=pONoCgAAQBAJ&printsec=frontcover&hl=es&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false</a>
+            </li>
+            <li id="r20">Strauss A, Corbin J. El análisis por medio del examen microscópico de los datos. In: Bases de
+                la investigación cualitativa Técnicas y procedimientos para desarrollar la teoría fundamentada.
+                Medellín: Editorial
+                Universidad de Antioquia; 2002. p. 63–79. <a
+                    href="https://books.google.com.co/books/about/Bases_de_la_investigaci%C3%B3n_cualitativa.html?hl=es&id=TmgvTb4tiR8C&redir_esc=y">https://books.google.com.co/books/about/Bases_de_la_investigaci%C3%B3n_cualitativa.html?hl=es&id=TmgvTb4tiR8C&redir_esc=y</a>
+            </li>
+            <li id="r21">Charmaz K. An invitation to grounded theory. In: Constructing Grounded Theory: A Practical
+                Guide Through Qualitative Analysis. 2nd ed. London: SAGE; 2014. p. 1–21. <a
+                    href="https://uk.sagepub.com/en-gb/eur/constructing-grounded-theory/book235960">https://uk.sagepub.com/en-gb/eur/constructing-grounded-theory/book235960</a>
+            </li>
+            <li id="r22">Strauss A, Corbin J. Codificación axial. In: Bases de la investigación cualitativa Técnicas y
+                procedimientos
+                para desarrollar la teoría fundamentada. Medellín: Editorial Universidad de Antioquia; 2002. p. 134–56.
+            </li>
+            <li id="r23">Morse JM. Critical analysis of strategies for determining rigor in qualitative inquiry. Qual
+                Health Res.
+                2015;25(9):1212–22. <a
+                    href="https://www.doi.org/10.1177/1049732315588501">https://www.doi.org/10.1177/1049732315588501</a>
+            </li>
+            <li id="r24">De los Reyes-Navarro HR, Rojano-Alvarado ÁY, Araújo-Castellar LS. La fenomenología : un método
+                multidisciplinario en el estudio de las ciencias sociales. Pensam y gestión. 2019;47:1–21. <a
+                    href="https://www.doi.org/%2010.14482/pege.47.7008">https://www.doi.org/%2010.14482/pege.47.7008</a>
+            </li>
+            <li id="r25">Wakiuchi J, Marcon SS, Oliveira DC de, Sales CA. Rebuilding subjectivity from the experience of
+                cancer and
+                its treatment. Rev Bras Enferm. 2019;72(1):125–33. <a
+                    href="https://www.doi.org/10.1590/0034-7167-2018-0332">https://www.doi.org/10.1590/0034-7167-2018-0332</a>
+            </li>
+            <li id="r26">Montiel-Castillo VE, Guerra-Morales VM, Cárdenas B. Estrés y emociones displacenteras en
+                mujeres sobrevivientes de cáncer de mama. Rev Cuba Med Gen Intergal. 2019;35(2):1–15.</li>
+            <li id="r27">Oliveira DSA, Cavalcante LSB, Carvalho RT de. Sentimentos de pacientes em cuidados paliativos
+                sobre
+                modificações corporais ocasionadas pelo câncer. Psicol Ciência e Profissão. 2019;39:1–13. <a
+                    href="https://www.doi.org/10.1590/1982-3703003176879">https://www.doi.org/10.1590/1982-3703003176879</a>
+            </li>
+            <li id="r28">Knaul FM, Doubova S V., Gonzalez Robledo MC, Durstine A, Pages GS, Casanova F, et al.
+                Self-identity, lived experiences, and challenges of breast, cervical, and prostate cancer survivorship
+                in Mexico: A qualitative
+                study. BMC Cancer. 2020;20(1):1–11. <a
+                    href="https://www.doi.org/10.1186/s12885-020-07076-w">https://www.doi.org/10.1186/s12885-020-07076-w</a>
+            </li>
+            <li id="r29">Langford DJ, Morgan S, Cooper B, Paul S, Kober K, Wright F, et al. Association of personality
+                profiles with coping and adjustment to cancer among patients undergoing chemotherapy. Psychooncology.
+                2020;29(6):1060–
+                7. <a href="https://www.doi.org/10.1002/pon.5377">https://www.doi.org/10.1002/pon.5377</a></li>
+            <li id="r30">Rose-Black A, Woods-Giscombé C. Applying the Stress and ‘Strength’ Hypothesis to Black Women’s
+                Breast
+                Cancer Screening Delays. Stress Heal. 2012;28(5):389–96. <a
+                    href="https://www.doi.org/10.1002/smi.2464">https://www.doi.org/10.1002/smi.2464</a></li>
+            <li id="r31">. Korotkin BD, Hoerger M, Voorhees S, Allen CO, Robinson WR, Duberstein PR. Social support in
+                cancer:
+                How do patients want us to help? J Psychosoc Oncol. 2019;37(6):699–712. <a
+                    href="https://www.doi.org/10.1080/07347332.2019.1580331">https://www.doi.org/10.1080/07347332.2019.1580331</a>
+            </li>
+            <li id="r32">Ávila Roura KE, Ayora Talavera DA, Campo Marín TC. Lecciones de humanidad: la importancia del
+                apoyo a
+                familias con hijos hospitalizados por cáncer. Psicumex. 2018;8(2):54–68. <a
+                    href="https://www.doi.org/10.36793/psicumex.v8i2.298">https://www.doi.org/10.36793/psicumex.v8i2.298</a>
+            </li>
+            <li id="r33">Engqvist Boman L, Sandelin K, Wengström Y, Silén C. Patients’ learning and understanding during
+                their
+                breast cancer trajectory. Patient Educ Couns. 2017;100(5):795–804. <a
+                    href="https://www.doi.org/10.1016/j.pec.2016.12.024">https://www.doi.org/10.1016/j.pec.2016.12.024</a>
+            </li>
+            <li id="r34">Nipp RD, El-Jawahri A, Fishbein JN, Eusebio J, Stagl JM, Gallagher ER, et al. The relationship
+                between
+                coping strategies, quality of life, and mood in patients with incurable cancer. Cancer.
+                2016;122(13):2110–6. <a
+                    href="https://www.doi.org/10.1002/cncr.30025">https://www.doi.org/10.1002/cncr.30025</a></li>
+            <li id="r35">Ishibashi A, Okamura J, Ueda R, Sunami S, Kobayashi R, Ogawa J. Psychosocial Strength Enhancing
+                Resilience in Adolescents and Young Adults With Cancer. J Pediatr Oncol Nurs. 2016;33(1):45–54. <a
+                    href="https://www.doi.org/10.1177/1043454214563935">https://www.doi.org/10.1177/1043454214563935</a>
+            </li>
+            <li id="r36">Jabbarian LJ, Korfage IJ, Červ B, van Delden JJM, Deliens L, Miccinesi G, et al. Coping
+                strategies of patients
+                with advanced lung or colorectal cancer in six European countries: Insights from the ACTION Study.
+                Psychooncology. 2020;29(2):347–55.</li>
+            <li id="r37">Bueno-Bejarano AY, Ramos-Pereira E, Costa-Rosa RM, Nencetti-Pereira RC, Gil Moncayo FL. El
+                sentido de
+                la vida como recurso espiritual para el cuidado en oncología. Rev Cubana Enferm. 2018;34(4):1–15. </li>
+            <li id="r38">Rohani C, Kesbakhi MS, Mohtashami J. Clinical empathy with cancer patients: A content analysis
+                of oncology nurses’ perception. Patient Prefer Adherence. 2018;12:1089–98. <a
+                    href="https://www.doi.org/10.2147/PPA.S156441">https://www.doi.org/10.2147/PPA.S156441</a></li>
+            <li id="r39">Pene CTH, Kissane D. Communication in cancer: Its impact on the experience of cancer care:
+                Communicating with the angry patient and the patient in denial. Curr Opin Support Palliat Care.
+                2019;13(1):46–52. <a
+                    href="https://www.doi.org/10.1097/SPC.0000000000000410">https://www.doi.org/10.1097/SPC.0000000000000410</a>
+            </li>
+            <li id="r40">Wittenberg E, Reb A, Kanter E. Communicating with Patients and Families Around Difficult Topics
+                in Cancer
+                Care Using the COMFORT Communication Curriculum. Semin Oncol Nurs. 2018;34(3):264–73. <a
+                    href="https://www.doi.org/10.1016/j.soncn.2018.06.007">https://www.doi.org/10.1016/j.soncn.2018.06.007</a>
+            </li>
+            <li id="r41">. Hermosilla-Ávila A, Sanhueza-Alvarado O. La vivencia de los pacientes con cáncer y el cuidado
+                de enfermería. Rev Cuid. 2020;11(1):1–14. <a
+                    href="https://revistas.udes.edu.co/cuidarte/article/view/782">https://revistas.udes.edu.co/cuidarte/article/view/782</a>
+            </li>
+            <li id="r42">Olver I, Keefe D, Herrstedt J, Warr D, Roila F, Ripamonti CI. Supportive care in cancer—a MASCC
+                perspective. Support Care Cancer. 2020;28(8):3467–75. <a
+                    href="https://www.doi.org/10.1007/s00520-020-05447-4">https://www.doi.org/10.1007/s00520-020-05447-4</a>
+            </li>
+            <li id="r43">Caldeira S, Timmins F, de Carvalho EC, Vieira M. Spiritual Well-Being and Spiritual Distress in
+                Cancer Patients Undergoing Chemotherapy: Utilizing the SWBQ as Component of Holistic Nursing Diagnosis.
+                J Relig
+                Health. 2017;56(4):1489–502. <a
+                    href="https://www.doi.org/10.1007/s10943-017-0390-4">https://www.doi.org/10.1007/s10943-017-0390-4</a>
+            </li>
+            <li id="r44">Freitas RA de, Menezes TM de O, Santos LB, Moura HCGB, Sales MGS, Moreira FA. Spirituality and
+                religiousity in the experience of suffering, guilt, and death of the elderly with cancer. Rev Bras
+                Enferm.
+                2020;73:1–7. <a
+                    href="https://www.doi.org/10.1590/0034-7167-2019-0034">https://www.doi.org/10.1590/0034-7167-2019-0034</a>
+            </li>
+            <li id="r45">De Diego-Cordero R, Fernández-Fernández M, Vega-Escaño J. Cultura y espiritualidad en la
+                vivencia del
+                cáncer de mama y la mastectomía. Cult los Cuid. 2020;24(57):9. <a
+                    href="https://doi.org/10.14198/cuid.2020.57.02">https://doi.org/10.14198/cuid.2020.57.02</a></li>
+            <li id="r46">Dos Reis LBM, Leles CR, Freire M do CM. Religiosity, spirituality, and the quality of life of
+                patients with
+                sequelae of head and neck cancer. Oral Dis. 2020;26(4):838–42. <a
+                    href="https://www.doi.org/10.1111/odi.13284">https://www.doi.org/10.1111/odi.13284</a></li>
+            <li id="r47">DSouza K, Astrow AB. Patient Spirituality as a Component of Supportive Care: Assessment and
+                Intervention.
+                Curr Treat Options Oncol. 2020;21(2):1–10. <a
+                    href="https://www.doi.org/10.1007/s11864-020-0701-y">https://www.doi.org/10.1007/s11864-020-0701-y</a>
+            </li>
+            <li id="r48">Ercikan K, Roth W. Qualitative and quantitative evidence in health: The critics’ view. In:
+                Olson K, Young RA,
+                Schultz IZ, editors. Handbook of qualitative health research for evidence-based practice. New York:
+                Springer;
+                2016. p. 77–90.</li>
+        </ol>
+    </div>
+</body>
+
+</html>

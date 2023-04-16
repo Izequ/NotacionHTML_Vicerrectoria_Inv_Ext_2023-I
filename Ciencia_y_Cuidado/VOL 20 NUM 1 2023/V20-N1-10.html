@@ -1,0 +1,1605 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V20-N1-10</title>
+    <link rel="stylesheet" href="">
+    <style>
+        body {
+            padding: 10em;
+            padding-top: 20px;
+            font-family: Times New Roman;
+            color: black;
+        }
+
+        #articulo-derecha {
+            float: left;
+        }
+
+        /* Posiciones de los resumenes */
+
+        .contenedor-general {
+            display: inline-flex;
+            width: 100%;
+        }
+
+        .contenedor-resumen {
+            width: 240%;
+        }
+
+        .contenedor-autor {
+            width: 100%;
+            padding-left: 20px;
+        }
+
+        .hr-resumen {
+            background-color: gray;
+            margin: 0;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .resumen-fondo {
+            background-color: #bdd5f1;
+            border-radius: 5px;
+        }
+
+        .titulo-resumen {
+            color: black;
+            font-size: 22px;
+            font-weight: bold;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .texto-resumen {
+            padding: 20px;
+            margin: 0;
+        }
+
+        ul.navbar {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 25em;
+            left: 2em;
+            width: 250px;
+        }
+
+        /* Titulos principales */
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: Times New Roman;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        h1 {
+            color: #29abe3;
+        }
+
+        .categoria_titulo {
+            font-style: italic;
+            color: #ffffff;
+        }
+
+        h3 {
+            font-style: italic;
+            font-weight: bold;
+            color: #707073;
+        }
+
+        .categoria {
+            text-align: center;
+            background-color: #707073;
+            width: 20%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            margin: auto;
+        }
+
+        ul.navbar li {
+            background: white;
+            margin: 0.5em 0;
+            padding: 0.3em;
+        }
+
+        /* Enlaces */
+
+        a.link-color:visited {
+            color: white;
+        }
+
+        a.link-color:link {
+            color: white;
+        }
+
+        a.link-color:hover {
+            color: white;
+        }
+
+        a.link-color:hover {
+            border-bottom: 1px solid;
+            background: black;
+        }
+
+        /* Link de referencia */
+
+        a:link {
+            color: #4e00ff;
+        }
+
+        a:visited {
+            color: #003bff;
+        }
+
+        a:focus {
+            border-bottom: 1px solid;
+            background: #98aae4;
+        }
+
+        a:hover {
+            border-bottom: 1px solid;
+            background: #aacefe;
+        }
+
+        /* Etiqueta P */
+
+        p {
+            line-height: normal;
+            text-align: justify;
+            font-size: 18px;
+        }
+
+        p.titulo {
+            color: #29abe3;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        p.subtitulo {
+            color: #29abe3;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* NUEVO */
+        p.subtitulo-segundo {
+            color: #29abe3;
+            font-style: italic;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        p.correspondencia {
+            color: black;
+            font-size: 18px;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        /* NUEVO */
+        p.entrevista {
+            color: black;
+            font-size: 18px;
+            font-style: italic;
+        }
+
+        /* NUEVO */
+        p.subtitulo-tercero {
+            color: #29abe3;
+            font-style: italic;
+            font-size: 18px;
+        }
+
+        p#cabeza {
+            color: #1d71ae;
+            text-align: center;
+        }
+
+        p.autores {
+            font-size: 16px;
+            margin: 0;
+            text-indent: 0em;
+            margin-bottom: 10px;
+        }
+
+        p.forma-citar {
+            text-indent: 0em;
+            text-align: justify;
+            justify-content: center;
+        }
+
+        .cita {
+            text-align: -webkit-center;
+        }
+
+        /* Bold especial para palabras que tienen color seguido de dos puntos
+*/
+
+        /* NUEVO */
+
+        b.subtitulo-segundo {
+            color: #29abe3;
+            font-size: 18px;
+        }
+
+        .contenedor_info {
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .info {
+            width: auto;
+        }
+
+        /* Este es para los documentos del dos en adelante *codigo abajo de este comentario* */
+
+        .info-text {
+            text-align: end;
+            margin: 0;
+        }
+
+        /* Uso Exlusico para el primero documento  que es de revision  *codigo abajo de este comentario* */
+
+        .info_text {
+            font-size: 12px;
+            line-height: 100%;
+            text-align: center;
+            margin: 0;
+        }
+
+        .info_hr {
+            margin: 5;
+        }
+
+        /* Fin P */
+        /* Etiqueta Italic */
+
+        i {
+            font-size: 18px
+        }
+
+        i.centrado {
+            font-size: 18px
+        }
+
+        /* LI para las listas */
+
+        li {
+            font-size: 18px;
+            padding-top: 10px;
+            text-align: justify;
+        }
+
+        /* NUEVO */
+        .lista li {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        hr {
+            background-color: #29abe3;
+            height: 1px;
+        }
+
+        /* Tablas */
+
+        table {
+            border-collapse: collapse;
+            border: 2px solid rgb(0, 0, 0);
+            align-items: center;
+        }
+
+        thead th {
+            border-collapse: collapse;
+            background-color: rgb(179, 179, 179);
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        tbody td {
+            border-collapse: collapse;
+            text-align: center;
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        .tipo {
+            color: #ffffff;
+            font-size: 22px;
+            border-radius: 10px 5px 10px 5px;
+            background-color: #696969;
+        }
+
+        img.logos {
+            width: 15px;
+            height: 15px;
+        }
+
+        .image {
+            text-align: center;
+            image-rendering: optimizeQuality;
+        }
+
+        .image p {
+            text-align: center;
+            font-size: small;
+        }
+
+        .logo {
+            width: 300px;
+            height: 80px;
+        }
+
+        .logo2 {
+            width: 300px;
+            height: 50px;
+        }
+
+        /* Anclajes de la pagina */
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* NUEVO */
+        .ecuacion {
+            text-align: center;
+            font-weight: bold;
+            margin: 1px;
+        }
+
+        @media only screen and (min-width:320px) and (max-width:900px) {
+            body {
+                width: 100%;
+                padding: 5em;
+                margin: 5px;
+            }
+
+            .image {
+                text-align: center;
+                image-rendering: optimizeQuality;
+            }
+
+            .image img {
+                width: 100%;
+            }
+
+            .image p {
+                font-size: small;
+                text-align: center;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="contenedor_info">
+        <div>
+            <img src="img/globales/logo.jpg" alt="" height="125px">
+        </div>
+        <div class="info" style="text-align: right;">
+            <p class="info-text"> ISSN-PRINT 1794-9831 / E-ISSN 2322-7028 </p>
+            <p class="info-text"> Vol. 20 Nº 1 / ene - abr 2023 / Cúcuta, Colombia. </p>
+            <p class="info-text">
+                <img src="img/globales/doi.png" height="20px" alt="">
+                <a href="https://doi.org/10.22463/17949831.3503">https://doi.org/10.22463/17949831.3503</a>
+            </p>
+        </div>
+    </div>
+
+
+    <!--Categoría-->
+    <div class="categoria">
+        <h2 class="categoria_titulo">Original </h2>
+    </div>
+
+    <h1> Biblioterapia: estrategia para el bienestar emocional en
+        niños durante la pandemia COVID-19 <sup>†</sup> </h1>
+
+    <h2 class="segundo"> Bibliotherapy: strategy for emotional well-being in children during the COVID-19
+        pandemic</h2>
+
+    <h2 class="segundo"> Biblioterapia: estratégia para o bem-estar emocional das crianças durante a pandemia da
+        COVID-19</h2>
+
+
+    <!--Autores-->
+    <h3>
+        Luz Eugenia Ibáñez-Alfonso <sup><a href="#sup1">1*</a> </sup> <br>
+        Ana Cecilia Ojeda-Avellaneda <sup><a href="#sup2">2*</a> </sup> <br>
+        Alejandro Gómez-Rodríguez <sup><a href="#sup3">3*</a> </sup> <br>
+        Emilio Cárcamo-Troconis <sup><a href="#sup4">4*</a> </sup> <br>
+    </h3>
+
+
+    <!-- Conetenedor de las columnas de la descripciones de los autores, correspondencia de autor 
+    y los resumenes -->
+    <div class="contenedor-general">
+
+
+        <!-- Contenedor de los resumenes -->
+        <div class="contenedor-resumen">
+
+            <!-- Resumen Español -->
+
+            <div class="resumen-fondo">
+                <p class="titulo-resumen"> Resumen</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> <b>Objetivo:</b> Determinar el impacto de la lectura de literatura infantil
+                    como estrategia de acompañamiento y bienestar emocional en niños/as escolarizados en situación de
+                    confinamiento
+                    por la pandemia. <b>Método:</b> Estudio en su totalidad cuasiexperimental de antes y después,
+                    bajo enfoque mixto (cuantitativo-cualitativo) e interdisciplinar (Enfermería-Literatura-Educación).
+                    Se presentan solamente los resultados de corte cuantitativo. Con 50 participantes
+                    de 7 a 12 años, de colegios públicos de Bucaramanga (Colombia). Luego de valoración por
+                    dominios de taxonomía II de la North American Nursing Diagnosis Association/ NANDA,
+                    los participantes recibieron cuatro sesiones virtuales de lectura, aplicando la intervención
+                    biblioterapia de la Nursing Intervention Classification/NIC. En las sesiones, observadores
+                    externos evaluaron la respuesta emocional de los/as participantes a través del resultado equilibrio
+                    emocional de la escala Nursing Outcomes Classification/NOC. <b>Resultados:</b> Los diagnósticos
+                    NANDA más comunes fueron: Disposición para mejorar resiliencia, Impotencia y
+                    Riesgo de soledad. Muestran en los participantes una situación mental y emocional vulnerable,
+                    experimentando tristeza, miedo y aburrimiento. Ante esto, la intervención biblioterapia
+                    fue efectiva: el resultado equilibrio emocional pasó de 4.0 (NOC-inicial) a 4.8 (NOC-final).
+                    <b>Conclusión:</b> Se constató que la biblioterapia impacta positivamente la salud mental y el
+                    estado emocional de niños vulnerables en situaciones de crisis, al observarse mejoría en los
+                    participantes luego de la intervención de lectura.
+                </p>
+
+                <p class="texto-resumen">
+                    <b>Palabras Claves: </b> Atención de Enfermería; Bienestar del Niño; Salud Mental; Emociones.
+                </p>
+            </div>
+            <!-- Resumen Inglés -->
+
+            <div>
+                <p class="titulo-resumen"> Abstract</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> <b>Objective:</b> To determine the impact of children’s reading as a strategy
+                    for emotional support
+                    and well-being in children in school under COVID-19 lockdown. <b>Methodology:</b> Study in its
+                    entirety quasi-experimental with pre-post intervention before and after, under mixed method
+                    (quantitative and qualitative) and interdisciplinary approach (Nursing-Literature
+                    Studies-Education). Only quantitative results are presented. With 50 research participants between 7
+                    and
+                    12 years old, from public schools of Bucaramanga Metropolitan Area (Colombia). After they
+                    were evaluated according to health domains from North American Nursing Diagnosis Association/NANDA
+                    II Taxonomy, four reading virtual sessions were given to research participants,
+                    applying the bibliotherapy intervention from Nursing Intervention Classification (NIC). In
+                    these reading sessions, external observers assessed emotional reaction from research participants,
+                    calculating their emotional balance indicator through a Nursing Outcomes Classification/NOC scale.
+                    <b>Results:</b> The most common nursing diagnoses (NANDA) were Willingness
+                    to improve resilience, Powerlessness and Risk of loneliness. Results show that research participants
+                    were going through a vulnerable condition in their mental and emotional sphere;
+                    they were feeling sadness, fear, and boredom. Facing this situation, the bibliotherapy intervention
+                    was proved as effective: from a start-NOC value of 4.0 in their emotional balance,
+                    research participants passed to an end-NOC value of 4.8. <b>Conclusion:</b> Results demonstrated
+                    that bibliotherapy have a positive impact on mental health and psycho-emotional state for
+                    vulnerable children under crisis contexts, because there was an improvement on emotional
+                    balance of research participants after reading intervention.
+                </p>
+
+                <p class="texto-resumen">
+                    <b>KeyWords:</b> Nursing Care; Child Welfare; Mental Health; Emotions.
+                </p>
+            </div>
+            <!-- Resumen Portuguez -->
+
+            <div class="resumen-fondo">
+                <p class="titulo-resumen"> Resumo</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> <b>Objetivo:</b> Determinar o impacto da leitura da literatura infantil como
+                    estratégia de acompanhamento e bem-estar emocional em crianças em confinamento devido à pandemia da
+                    COVID-19. <b>Método:</b> Estude em sua abordagem quase-experimental antes e depois, sob uma
+                    abordagem mista (quantitativa-qualitativa) e interdisciplinar (Enfermagem-Literatura-Educação).
+                    Somente resultados quantitativos são apresentados. Com 50 participantes de 7 a 12
+                    anos de idade, de escolas públicas em Bucaramanga (Colômbia). Após uma avaliação pelos domínios de
+                    saúde da taxonomia II da North American Nursing Diagnosis Association/
+                    NANDA, os participantes receberam quatro sessões virtuais de leitura virtual, aplicando a
+                    intervenção biblioterapia da Nursing Intervention Classification/NIC. Nas sessões, os observadores
+                    externos avaliaram a resposta emocional dos participantes utilizando o indicador de
+                    equilíbrio emocional da escala Nursing Outcomes Classification/NOC. <b>Resultados:</b> Os
+                    diagnósticos mais comuns da NANDA foram: Disposição para melhorar a resistência, Desamparo
+                    e Risco de solidão. Mostram que os participantes estavam passando por uma situação mental
+                    e emocional vulnerável, experimentando tristeza, medo e aborrecimento. Neste contexto, a
+                    intervenção foi efetiva: de um NOC inicial médio de 4,0 em seu equilíbrio emocional, passou
+                    para um NOC final de 4,8. <b>Conclusão:</b> Constatou-se que a biblioterapia teve um impacto
+                    positivo na saúde mental e estado emocional de crianças vulneráveis em situações de crise,
+                    com os participantes a mostrarem melhorias após a intervenção de leitura. </p>
+
+                <p class="texto-resumen">
+                    <b>Palavras-chave:</b> Cuidados de Enfermagem; Bem-Estar da Criança; Saúde Mental; Emoções.
+                </p>
+            </div>
+
+
+
+        </div>
+
+        <!-- Descripcion de autores, Aprobado, Como citar, licencia -->
+        <div class="contenedor-autor">
+            <!-- Autores -->
+            <div>
+                <p class="subtitulo" style="color: black; font-size: 18px;">Autor de correspondencia*</p>
+                <!-- 0 -->
+                <p class="autores" id="sup6"><sup>†</sup><img class="logos" src="img/globales/sobre.png"> Este artículo
+                    se deriva de la investigación La lectura de literatura infantil
+                    como estrategia de acompañamiento y
+                    bienestar emocional de niños/as en situación de confinamiento por la pandemia
+                    COVID-19, desarrollada por investigadores/as del Grupo de Investigación
+                    GRINFER (Escuela de Enfermería),
+                    del Grupo de Investigación CUYNACO
+                    (Escuela de Idiomas), con el apoyo del
+                    Semillero de investigación Co-Libris
+                    y de los estudiantes auxiliares Aura
+                    Margarita Hernández Quintero y Diego
+                    Fernando Santisteban Pérez, de la Universidad Industrial de Santander (UIS).
+                </p>
+                <!-- 1 -->
+                <p class="autores" id="sup1"><sup>1*</sup><img class="logos" src="img/globales/sobre.png"> Enfermera con
+                    especialización en
+                    Enfermería Médico-Quirúrgica. Profesora titular Escuela de Enfermería,
+                    Universidad Industrial de Santander,
+                    Bucaramanga, Colombia.
+                    <a href="mailto:libanez@saber.uis.edu.co">libanez@saber.uis.edu.co</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0001-7332-5349">0000-0001-7332-5349</a>
+                </p>
+                <!-- 2 -->
+                <p class="autores" id="sup2"><sup>2*</sup><img class="logos" src="img/globales/sobre.png"> Doctora en
+                    Estudios Ibéricos y Latinoamericanos. Profesora titular Escuela de Idiomas, Universidad Industrial
+                    de Santander, Bucaramanga, Colombia.
+                    <a href="mailto:anaojeda@uis.edu.co">anaojeda@uis.edu.co</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0001-6291-4690">0000-0001-6291-4690</a>
+                </p>
+                <!-- 3 -->
+                <p class="autores" id="sup3"><sup>3*</sup><img class="logos" src="img/globales/sobre.png"> Licenciado en
+                    Español y Literatura. Escuela
+                    de Idiomas, Universidad Industrial de Santander, Bucaramanga, Colombia.
+                    <a href="mailto:jose.gomez15@correo.uis.edu.co">jose.gomez15@correo.uis.edu.co</a>, <img
+                        class="logos" src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0001-9886-4007">0000-0001-9886-4007</a>
+                </p>
+                <!-- 4 -->
+                <p class="autores" id="sup4"><sup>4*</sup><img class="logos" src="img/globales/sobre.png"> Ingeniero de
+                    Sistemas. Escuela de Ingeniería
+                    de Sistemas e Informática, Universidad Industrial de Santander, Bucaramanga, Colombia.
+                    <a href="mailto:emcartro@gmail.com">emcartro@gmail.com</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0003-0749-5440">0000-0003-0749-5440</a>
+                </p>
+            </div>
+
+            <!--Recibido y aprobado-->
+            <div>
+                <p><b>Recibido: </b> 24 agosto 2022 <br> <b>Aprobado: </b> 10 diciembre 2022 </p>
+            </div>
+
+            <!-- Como citar -->
+            <div class="cita">
+                <p class="forma-citar autores"><b>Para citar este artículo / To reference this article / Para citar este
+                        artigo:</b> Ibáñes-Alfonso LE, Ojeda-Avellaneda AC, Gómez-Rodríguez-A,
+                    Cárcamo-Troconis E. Biblioter- apia: estrategia para el bienestar
+                    emocional en niños durante la pandemia COVID-19. 20(1):105-118. <a
+                        href="https://doi.org/10.22463/17949831.3503">https://doi.org/10.22463/17949831.3503</a> </p>
+            </div>
+
+            <!--Licencia-->
+            <br>
+            <div>
+                <p class="autores "> &#169; Universidad Francisco de Paula Santander.
+                    Este es un artículo bajo la licencia CC-BY-NC-ND
+                    <br>
+                    <a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img
+                            alt="Licencia Creative Commons" style="border-width:0"
+                            src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Cuerpo del documento -->
+    <div>
+        <hr>
+        <!--Introducción-->
+        <p class="titulo"> Introducción</p>
+
+        <p>
+            La salud mental de los niños se ha visto afectada durante
+            la pandemia COVID-19 como resultado de los cambios
+            derivados del confinamiento y de la interrupción de la
+            interacción social que se generaba en la escolarización.
+            Dicho contexto de crisis impactó la actividad física, la
+            salud mental y psicoemocional, causando estrés, ansiedad, irritabilidad, síntomas depresivos, insomnio y
+            negación (1).
+        </p>
+
+        <p>
+            Los estudios a nivel mundial demuestran la vulnerabilidad de los niños ante los efectos del COVID-19, ya que
+            tienen recursos más limitados para comprender e
+            interpretar los eventos asociados con la pandemia (2,3).
+        </p>
+
+        <p>
+            Erades y Morales (4) muestran cómo durante el confinamiento los niños presentaron reacciones emocionales
+            negativas, problemas de sueño y de conducta. Estos
+            niños invertían menos tiempo en ejercicio físico y más
+            tiempo en los dispositivos electrónicos, desencadenando pasividad y estados emocionales negativos. En
+            consecuencia, desde el comienzo de la pandemia, se hace
+            un llamado a atender, investigar e intervenir los efectos
+            del encierro en la infancia (5) y sus efectos en la salud
+            mental y psico-emocional.
+        </p>
+
+        <p>
+            La estrategia seleccionada fue la biblioterapia, intervención de enfermería de la Nursing Intervention
+            Classification (NIC), definida como la utilización terapéutica de la lectura y la literatura para potenciar
+            la expresión de sentimientos y la resolución o afrontamiento
+            de problemas y crisis (6). Esta constituye la primera
+            fuente de fundamentación teórica y procedimental del
+            presente estudio.
+        </p>
+
+        <p>
+            La efectividad de esta intervención se comprueba en
+            estudios precedentes, desarrollados en contextos hospitalarios de Asia, Europa y Sudamérica, donde se
+            detallan sus efectos positivos. Por un lado, en trabajos
+            experimentales (7-10), se encontró que la biblioterapia
+            disminuye la gravedad de problemas de salud mental
+            y psico-emocional como depresión, ansiedad y estrés
+            derivado de situaciones de crisis, hospitalización o enfermedad. Además, contribuye al bienestar
+            psicológico, emocional y social de los niños, al mejorar aspectos
+            como autoconfianza, autoestima, madurez emocional,
+            interacción social, comunicación y expresión de emociones (11-13).
+        </p>
+
+        <p>
+            Los estudios realizados por Shrodes (14) en contextos
+            hospitalarios, demostraron que esta intervención mejoraba la salud mental y el estado psicoemocional, a
+            través de un proceso de lectura en tres etapas: identificación, catarsis emocional y apropiación. En la
+            identificación, los pacientes experimentan sus problemas a
+            través de la lectura de libros cercanos a su condición
+            personal, identificándose con las situaciones vividas
+            por los personajes de los libros y reconociendo en ellos
+            sus propios conflictos. En la catarsis emocional, los pacientes observan cómo los personajes hallan solución
+            a sus problemas y liberan la carga que estos conflictos
+            producen. La etapa de apropiación se produce cuando
+            los pacientes se enfrentan a sus problemas y aplican e
+            integran lo leído a sus vidas (15).
+        </p>
+
+        <p>
+            Procedimentalmente, la biblioterapia también ofrece
+            pautas en forma de protocolo con 10 actividades a realizar en toda intervención de lectura, según la NIC
+            (6),
+            entre las que se cuentan:
+        </p>
+
+        <ul class="lista">
+            <li>Identificar necesidades emocionales, cognitivas y
+                situacionales del niño.</li>
+            <li>Establecer los objetivos de intervención.</li>
+            <li>Seleccionar cuentos infantiles que reflejen lo expresado por el paciente. </li>
+            <li>Leer en voz alta.</li>
+            <li>Utilizar las ilustraciones de los cuentos.</li>
+            <li>Estimular la identificación con los personajes y
+                su contenido emocional.</li>
+            <li>Examinar y hablar sobre los sentimientos expresados por los personajes del cuento.</li>
+            <li>Propiciar el diálogo para ayudar a comparar el
+                cuento con la situación personal del niño.</li>
+            <li>Reconocer cómo la situación vista en la literatura
+                permite lograr cambios.</li>
+            <li>Proponer modelación de roles.</li>
+        </ul>
+
+        <p>
+            Para Caldin (16), la biblioterapia es una técnica de
+            lectura en la que se maneja un material bibliográfico
+            con una persona bajo un fin terapéutico, al conectar la
+            lectura con la situación psicoemocional del paciente.
+            La literatura infantil ha de estimular la imaginación del
+            niño, ayudarle a discernir sus emociones, contener sus
+            aspiraciones y ansiedades, ayudarle a reconocer sus dificultades y esbozarle posibles soluciones.
+        </p>
+
+        <p>
+            En cuanto a los referentes conceptuales relacionados
+            con las emociones, se consideran los planteados por
+            Goleman (17) y Aresté Grau (18), quienes las definen
+            como fenómenos de carácter biológico, cognitivo-psicológico derivados de una situación individual o social.
+            Asimismo, se consideran como reacciones/respuestas a
+            estímulos y sucesos internos o externos (19).
+        </p>
+
+        <p>
+            Según Aresté Grau (18), las emociones se manifiestan
+            a través de la expresión facial (ojos, boca, cejas, frente), corporal (movimiento y posición del cuerpo:
+            cabeza, hombros, manos) y la expresión verbal (tono, voz,
+            diálogo, participación activa/pasiva). Las expresiones
+            anteriores se observan según grados de intensidad y
+            frecuencia, lo que da como resultado la caracterización
+            de un estado emocional concreto. Según la tipología establecida por Goleman (17), esos estados emocionales
+            son 7: las emociones primarias (alegría, tristeza, ira) y
+            las emociones secundarias (miedo, tranquilidad, asco,
+            sorpresa).
+        </p>
+
+        <p>
+            De igual forma, se retoma el concepto de bienestar emocional de López Pereyra y otros (20), definido como
+            la estabilidad o equilibrio social, psicológico y subjetivo, en el que predominan las emociones positivas/
+            eufóricas (alegría, sorpresa, tranquilidad) por encima
+            las emociones negativas/disfóricas (tristeza, ira, miedo,
+            asco). El bienestar emocional sería entonces un estado
+            donde cobra importancia la autopercepción y autovaloración (21-23), de modo que el sujeto que experimenta
+            dicho bienestar se siente satisfecho, autorrealizado y en equilibrio consigo mismo.
+        </p>
+
+        <p>
+            La relevancia de la presente investigación está en la
+            aplicación de la biblioterapia como estrategia desde la
+            perspectiva investigativa que arroja resultados concretos y los analiza.
+        </p>
+
+        <hr>
+
+        <p class="titulo">Objetivos</p>
+
+        <p>
+            El objetivo principal de esta investigación fue determinar el impacto de la lectura de literatura infantil
+            como
+            estrategia de acompañamiento y bienestar emocional
+            en niños en situación de confinamiento por la pandemia COVID-19.
+        </p>
+
+        <hr>
+
+        <p class="titulo">Materiales y Métodos</p>
+
+        <p>
+            La muestra estuvo conformada por 50 participantes, 26
+            niñas y 24 niños, entre los 7 y los 12 años, pertenecientes al nivel de educación primaria (de 2do a 5to
+            grado),
+            de cuatro colegios públicos del Área Metropolitana de
+            Bucaramanga (Colombia). Al momento del desarrollo
+            de la investigación, todos los/as participantes estaban
+            en situación de confinamiento, recibiendo escolarización virtual desde casa.
+        </p>
+
+        <p>
+            La muestra fue de tipo no probabilístico por conveniencia, a través de captación de los coordinadores
+            académicos, docentes y psico-orientadores/as de las instituciones educativas, quienes remitieron niños/as en
+            los
+            que se detectaran problemas psico-emocionales. El
+            tamaño de la misma se calculó teniendo en cuenta las
+            capacidades logísticas, económicas y de talento humano del equipo investigador, así como la precisión y el
+            fácil manejo de datos que ofrecía una muestra de tales
+            dimensiones.
+        </p>
+
+        <p>
+            Sumado a lo anterior, la participación también estuvo
+            condicionada por el cumplimiento de los siguientes criterios de inclusión:
+        </p>
+
+        <ol class="lista" type="a">
+            <li>Estar en rango de edad de 7 a 12 años.</li>
+            <li>Contar con la presencia obligatoria de un acudiente mayor de edad.</li>
+            <li>Tener acceso a dispositivos tecnológicos (celular, computador, tablet) e internet.</li>
+            <li>Tener disponibilidad para dedicar 1 hora a la
+                semana, durante cuatro semanas, para las sesiones de
+                lectura.</li>
+        </ol>
+
+        <p>
+            Al tratarse de menores de edad, se solicitó previa autorización de los acudientes, quienes por escrito
+            diligenciaron consentimiento y asentimiento informado,
+            aprobados por el Comité de Ética en Investigación
+            Científica (CEINCI) de la Universidad Industrial de
+            Santander (UIS) en Acta No. 15, del 09 de septiembre
+            de 2020.
+        </p>
+
+        <p>
+            El sustento ético del estudio se soportó en los lineamientos de la Ley Estatutaria 1581 (24) y del Decreto
+            1377 (25), conservando un tratamiento adecuado de
+            los datos personales bajo criterios de confidencialidad,
+            anonimato y privacidad.
+        </p>
+
+        <p>
+            El estudio fue analítico, de corte prospectivo, tipo cuasiexperimental de antes y después, sin grupo
+            control,
+            definido por Campbell y Stanley (26) y Hernández Sampieri y otros (27) como la aplicación de tratamientos,
+            estímulos o intervenciones (variables independientes)
+            para observar su impacto sobre determinado contexto,
+            población y/o fenómeno (variables dependientes).
+        </p>
+
+        <p>
+            En el caso de esta investigación, se aplicó la intervención NIC biblioterapia (variable independiente) para
+            identificar el impacto que este tratamiento podría tener
+            sobre el estado anímico y emocional (variable dependiente) de niños/as escolarizados en situación de
+            confinamiento por la pandemia COVID-19.
+        </p>
+
+        <p>
+            En cuanto al enfoque, aunque originalmente la investigación mantuvo un diseño mixto (27), por motivos de
+            delimitación expositiva, aquí sólo se presentan los datos de la dimensión cuantitativa del estudio,
+            distribuido
+            en tres etapas.
+        </p>
+
+        <p>
+            En la Etapa 1 o «Etapa de caracterización, valoración
+            y diagnóstico», se buscaba una imagen global de las
+            características sociodemográficas junto con la identificación del estado de salud mental y emocional de
+            los/as
+            participantes, a través de la aplicación de instrumentos
+            -dos encuestas- diseñados para tal fin.
+        </p>
+
+        <p>
+            Le siguió la Etapa 2 o «Etapa de intervención de lectura
+            biblioterapia», consistente en la ejecución de la intervención a través de 4 sesiones virtuales de lectura
+            de
+            cuentos, diseñadas de acuerdo a las valoraciones, diagnósticos, características identificadas en los/as
+            participantes, así como siguiendo las actividades de la intervención biblioterapia propuestas por la NIC (6)
+            .
+        </p>
+
+        <p>
+            Adicionalmente, en esta etapa también se aplicaron
+            instrumentos -una escala-, que recolectaban datos y
+            mediciones de la respuesta emocional de los/as participantes frente a la intervención.
+        </p>
+
+        <p>
+            En la Etapa 3 o «Etapa de sistematización y análisis»
+            no se aplicó ningún instrumento, pues su énfasis estuvo
+            en la clasificación, cómputo y análisis de datos y mediciones recogidas en los instrumentos previos. La
+            sistematización, por un lado, se hizo a través del software
+            de procesamiento de datos Lectura UIS, v. 1.0 , diseñado especialmente para esta investigación siguiendo
+            los parámetros de la ingeniería informática (36) y el
+            modelo de diseño SCRUM (37, 38).
+        </p>
+
+        <p>
+            El análisis de los datos, por otro lado, se fundamentó en
+            una aproximación cuantitativa, utilizando operaciones
+            estadísticas simples (porcentajes mayoritarios-minoritarios) y medidas de tendencia central (promedios),
+            resaltando los patrones más comunes de las variables
+            indagadas en este estudio.
+        </p>
+
+        <p>
+            En cuanto instrumentos, al menos en lo correspondiente a los datos cuantitativos, se utilizaron tres,
+            descritos
+            a continuación.
+        </p>
+
+        <p>
+            i) Aplicado en la Etapa 1, el instrumento Encuesta sociodemográfica estuvo conformado por 13 preguntas
+            que indagaban variables como género, edad, escolaridad, nivel socioeconómico, entorno familiar. A raíz de
+            las limitaciones impuestas por el confinamiento, la recolección de datos de este instrumento se hizo semanas
+            antes del inicio de la intervención de lectura, a través de
+            llamada telefónica por encuestadores del equipo investigador, quienes -en contacto con participantes y
+            acudientes- consignaron las respuestas verbales que estos
+            daban a las preguntas. Para el análisis, se utilizó una
+            aproximación cuantitativa, sustentada en la identificación de operaciones estadísticas simples (extracción
+            de
+            porcentajes mayoritarios y minoritarios).
+        </p>
+
+        <p>
+            ii) Aplicado en la Etapa 1, el instrumento Encuesta de
+            valoración y diagnóstico de enfermería por dominios
+            de taxonomía II de la North American Nursing Diagnosis Association (NANDA) (28) estuvo compuesto por
+            17 preguntas/ítems, segmentados en cincos dominios
+            de enfermería: Promoción de la salud (2 ítems); Actividad y reposo (4 ítems); Autopercepción (7 ítems); Rol
+            y relaciones (2 ítems); Afrontamiento y tolerancia al
+            estrés (2 ítems).
+        </p>
+
+        <p>
+            De acuerdo con su descripción teórico conceptual (28),
+            se priorizaron estos dominios particulares de enfermería por ser los más relacionados, dentro de la
+            taxonomía
+            II de la NANDA, con la dimensión de salud mental y
+            psico-emocional, que era la dimensión que más interesaba caracterizar de acuerdo a los intereses de este
+            estudio.
+        </p>
+
+        <p>
+            Al igual que el anterior instrumento, la aplicación y recolección de datos para ese instrumento, se hizo a
+            distancia, en semanas previas al inicio de la intervención,
+            a través de llamadas telefónicas dirigidas por encuestadores del equipo investigador, en las que los/as
+            participantes, acompañados de sus acudientes, respondieron
+            verbalmente a las preguntas de cada dominio.
+        </p>
+
+        <p>
+            Posteriormente, se hizo un análisis de las respuestas de
+            cada participante, agrupando estadísticamente los resultados de cada dominio en porcentajes mayoritarios y
+            medidas de tendencia central (promedios). Este análisis
+            por dominios facilitó la determinación de valoraciones
+            y diagnósticos de enfermería, priorizando los diagnósticos más críticos, que se elaboraron a partir de la
+            asociación de los resultados de esta encuesta con etiquetas
+            diagnósticas, características definitorias y factores relacionados estandarizados por la NANDA (28).
+        </p>
+
+        <p>
+            A partir de las valoraciones y diagnósticos de enfermería ya definidos, se estableció un plan de cuentos
+            para
+            cada niño/a participante, procurando elegir las lecturas
+            que mejor se ajustaban a las condiciones de salud mental y psico-emocional de cada uno/a.
+        </p>
+
+        <p>
+            iii) Aplicado en la Etapa 2, el último instrumento fue
+            la Escala Nursing Outcomes Classification (NOC): resultado equilibrio emocional (29), que medía el estado
+            emocional de los/as participantes al inicio (sesión
+            1: NOC-inicial) y al final (sesión 4: NOC-final) de la
+            intervención de lectura biblioterapia.
+        </p>
+
+        <p>
+            Para medir el resultado ‘Equilibrio emocional’, esta
+            escala estaba conformada por cuatro indicadores: a)
+            Muestra un estado de ánimo sereno; b) Muestra un
+            afecto adecuado a la situación; c) Muestra concentración; d) Conversa a un ritmo moderado. Cada uno de
+            estos indicadores se puntuó según escala Likert de 1 a
+            5 puntos, donde 1 denotaba la peor condición del ítem
+            y 5 la mejor.
+        </p>
+
+        <p>
+            La operacionalización de estos indicadores se llevó a cabo siguiendo los lineamientos estandarizados de la
+            clasificación NOC (29), seleccionando aquellos que
+            sumados diesen orientaciones sobre la respuesta emocional de cada participante ante las sesiones de lectura.
+            Una respuesta emocional que, según autores como Goleman (17) y Agresté-Grau (18), se puede evidenciar
+            en aspectos actitudinales (indicador a e indicador b),
+            de expresión facial (indicador c) y verbal (indicador d),
+            que fueron incluidos en el diseño de esta escala.
+        </p>
+
+        <p>
+            La aplicación, recolección y diligenciamiento de esta
+            escala tuvo lugar al inicio (sesión 1, NOC-Inicial) y al
+            final (sesión 4, NOC-Final) del proceso de intervención
+            biblioterapia, por parte de integrantes del grupo de investigación quienes se conectaban a todas a las
+            sesiones
+            virtuales de lectura, asumiendo el rol de observadores
+            externos –asistentes en silencio, que no intervenían ni
+            interactuaban con participantes− para consignaban las
+            respectivas puntuaciones para cada indicador a partir
+            de las observaciones hechas en referente a actitudes,
+            expresiones y estados anímicos notados en los/as participantes.
+        </p>
+
+        <p>
+            La intervención consistió en la puesta en práctica de 4
+            sesiones virtuales de lectura de cuentos, con frecuencia
+            semanal durante cuatro semanas en el periodo 2020-
+            2021.
+        </p>
+
+        <p>
+            Cada sesión -de 1 hora de duración- era de carácter individualizado, es decir, sólo asistía un niño/a
+            participante por sesión, quien participaba de las actividades
+            en compañía de un familiar acudiente. Junto a estos
+            dos, se sumaban dos integrantes investigadores: uno
+            en el rol de mediador/a quien orientaba la lectura de
+            cuentos y las actividades complementarias; otro como
+            observador externo quien valoraba -a través de la Escala NOC Equilibrio emociona- el estado emocional del
+            participante antes y después de la lectura.
+        </p>
+
+        <p>
+            Siguiendo tanto las actividades de la intervención propuestas por la NIC (6) así como la teoría de Shrodes
+            (14) sobre los tres momentos de la biblioterapia, la estructura de las sesiones estaba distribuida en tres
+            momentos: antes, durante y después de la lectura.
+        </p>
+
+        <p>
+            En el antes de la lectura, se introducía al cuento a través
+            de una actividad lúdica (adivinanzas, sopas de letras,
+            canciones, etc) para que el/la participante se familiarizase con el tema/cuento de cada sesión,
+            estableciendo
+            inferencias sobre el mismo, activando sus conocimientos previos y despertando su interés.
+        </p>
+
+        <p>
+            El durante la lectura estaba enfocado en la lectura dramatizada del cuento, hecha por el mediador/a de
+            lectura
+            asignado a cada participante. Esta lectura se hacía en
+            voz alta, imitando las voces de personajes y dramatizando entonaciones y muecas, de modo tal que fuese
+            una lectura experiencial del cuento: que incluyese todos los sentidos para que fuese más significativa.
+        </p>
+
+        <p>
+            Finalmente, el tercer momento era el después de la lectura, donde se promovía que el mismo/a participante
+            hiciese una reflexión sobre el texto leído, a través de
+            una actividad lúdica posterior (dibujos, cartas, manualidades), que le ayudase a reconocer su propia
+            experiencia emocional relacionándola con el cuento leído,
+            en concordancia con los principios teóricos de apropiación-catarsis de Schrodes (14) y las actividades
+            propuestas por la NIC (6).
+        </p>
+
+        <p>
+            En resume, la función de cada momento de la intervención era que los/as participantes reflexionaran sobre su
+            propio estado emocional y las dificultades particulares
+            por las que estaban atravesando, dando así alternativas
+            de solución a las mismas (lo terapéutico).
+        </p>
+
+        <p>
+            Respecto al plan de cuentos, se diseñó según los intereses, necesidades, situación, valoraciones
+            psicoemocionales y diagnósticos de enfermería de cada participante. Así, de una base de datos de 40 cuentos
+            infantiles, se
+            leyeron 21 cuentos acordes las necesidades psico-emocionales de cada participante.
+        </p>
+
+        <p class="titulo">Resultados</p>
+
+        <p>
+            Encuesta de valoración y diagnóstico de enfermería por
+            dominios NANDA.
+        </p>
+
+        <p>
+            Dentro de los resultados más relevantes de esta encuesta, se destacan aquellos dominios asociados con
+            aspectos psico-emocionales de los participantes, entre ellos,
+            el dominio Promoción de la salud, el dominio Afrontamiento y tolerancia al estrés y el dominio
+            Autopercepción.
+        </p>
+
+        <p>
+            La valoración de los dominios evidenció alteraciones
+            en el estado anímico de los/as participantes, quienes
+            manifestaron haber experimentado cambios psíquicos,
+            impredecibles, fluctuantes e inconscientes (17) durante
+            el confinamiento y la pandemia.
+        </p>
+
+        <p>
+            Como se observa en el Gráfico 1, el 52% de los participantes habían experimentado alteraciones en su estado
+            anímico durante la pandemia: ya sea en mayor (más de 5 cambios anímicos) o en menor medida (1 sólo cambio
+            anímico).
+        </p>
+
+        <div class="image">
+            <img src="img/V20-N1-10/Screenshot_1.png" width="70%">
+            <p><b>Gráfico 1. </b>Cambios anímicos durante confinamiento/pandemia: núm. de cambios
+                (n=50)</p>
+            <p><b>Fuente: </b>Elaboración propia a partir de datos recogidos en Encuesta de valoración y
+                diagnóstico de enfermería por dominios NANDA (Etapa 1), dominio ‘Actividad y
+                reposo’, pregunta 2.4</p>
+        </div>
+
+        <p>
+            Dentro de los principales cambios anímicos, los más
+            presentes en los/as participantes fueron agresividad,
+            aburrimiento, ansiedad, tristeza,estrés e irritabilidad,
+            como se observa en el Gráfico 2. Si bien no se podía
+            saber con exactitud estadística el estado anímino anterior a la situación pandémica, los resultados siguen
+            siendo ilustrativos respecto a la forma en la que se venían sintiendo los niños/as participantes, al ser
+            ellos/as
+            mismos/as junto con sus acudientes quienes reconocieron que habían pasado por estos cambios.
+        </p>
+
+        <div class="image">
+            <img src="img/V20-N1-10/Screenshot_2.png" width="70%">
+            <p><b>Gráfico 2. </b>Estados anímicos más recurrentes durante confinamiento/pandemia: tipificación.</p>
+            <p><b>Fuente: </b>Elaboración propia a partir de datos recogidos en Encuesta de
+                valoración y diagnóstico de enfermería por dominios NANDA (Etapa 1),
+                dominio ‘Actividad y reposo’, pregunta 2.4</p>
+        </div>
+
+        <p>
+            En cuanto al balance de las emociones experimentadas
+            por los/as participantes, estas se identificaron a través
+            de una de las preguntas incluidas en el dominio Autopercepción, pregunta en la que se integró las
+            elaboraciones teóricas de Goleman (17) sobre el número de
+            emociones existentes, que fueron las que se preguntaron a los/as participantes.
+        </p>
+
+        <p>
+            En este sentido, en el Gráfico 3, se evidencia que las
+            emociones negativas/disfóricas (color rojo), que reducen el bienestar emocional, venían siendo las más
+            presentes en los/as participantes durante el confinamiento,
+            siendo un indicativo de las afectaciones a la salud mental por las que estaban pasando los/as participantes.
+            En
+            contraste, las emociones positivas/eufóricas (color verde), que aumentan el bienestar, mostraron una
+            proporción minoritaria en los/as participantes.
+        </p>
+
+        <p>
+            Lo anterior resulta entendible teniendo en cuenta el
+            impacto de problemas derivados de la pandemia COVID-19: aislamiento, interrupción del contacto con
+            amigos y familiares, sensación de incertidumbre, suspensión de las actividades al aire libre y las
+            interrupción
+            del proceso escolar, hechos que afectaron la condición
+            psico-emocional de la población infantil.
+        </p>
+
+        <div class="image">
+            <img src="img/V20-N1-10/Screenshot_3.png" width="90%">
+            <p><b>Gráfico 3. </b>Estado emocional de participantes durante el confinamiento/pandemia.
+            </p>
+            <p><b>Fuente: </b>Elaboración propia a partir de datos recogidos en Encuesta de valoración y diagnóstico
+                de enfermería por dominios NANDA (Etapa 1), dominio ‘Autopercepción’, pregunta 3.9</p>
+        </div>
+
+        <p>
+            A pesar de que lo anterior muestra un panorama bastante preocupante, los diagnósticos de enfermería
+            arrojaron que -pese a las dificultades- los/as participantes
+            mantenían una actitud positiva frente a su propia situación emocional.
+        </p>
+
+        <p>
+            Lo anterior se ilustra en el Gráfico 4, que muestra los
+            diagnósticos de enfermería de los/as participantes, con
+            el diagnóstico prioritario “Disposición para mejorar la
+            resiliencia” presentándose en el 46% de la muestra de
+            participantes. Este diagnóstico, definido como un patrón en la capacidad para recuperarse de situaciones
+            adversas a través de un proceso de adaptación (28), se
+            extrajo a partir de la identificación de características definitorias y factores relacionados de la NANDA,
+            siendo
+            uno de ellos la manifestación del deseo de mejorar la
+            situación difícil vivida durante la pandemia.
+        </p>
+
+        <p>
+            El Gráfico 4 también muestra otros diagnósticos menos alentatores que se destacaron. Aunque vale aclarar
+            que aparecieron en menor proporción de la muestra de
+            participantes. Tales fueron “Disminución de compromiso de actividad recreativa”, “Impotencia”, “Riesgo
+            de soledad”.
+        </p>
+
+        <p>
+            Los anteriores diagnósticos mostraron el estado de salud psico-emocional alterado y, en algunos casos,
+            crítico de los/as participantes durante el confinamiento y la
+            escolarización desde casa, antes de la intervención, lo
+            que reafirmaba y justificaba la necesidad de implementar la intervención de lectura biblioterapia, que fue
+            lo
+            que se hizo posteriormente.
+        </p>
+
+        <div class="image">
+            <img src="img/V20-N1-10/Screenshot_4.png" width="90%">
+            <p><b>Gráfico 4. </b>Diagnósticos de enfermería NANDA: etiquetas diagnósticas de participantes
+                (n=50)</p>
+            <p><b>Fuente: </b>Elaboración propia a partir de operacionalización de Encuesta de valoración y
+                diagnóstico de enfermería por dominios taxonomía II NANDA.
+            </p>
+        </div>
+
+        <p>
+            Resultados Escala NOC: equilibrio emocional
+        </p>
+
+        <p>
+            Los resultados de esta medición evidenciaron que la intervención de lectura biblioterapia mejoró el
+            equilibrio
+            emocional de los/as participantes.
+        </p>
+
+        <p>
+            En el Gráfico 5, se observa que la mayoría de las puntuaciones promedio rozaban un equilibrio emocional
+            negativo en participantes al comienzo de la intervención (NOC-inicial: color azul). Sin embargo, en el
+            momento final de la intervención (NOC-final: color verde), los promedios más negativos disminuyeron dando
+            paso a un aumento de las puntuaciones promedio positivas del equilibrio emocional (puntuación de 5).
+        </p>
+
+        <p>
+            Como balance global, estableciendo un promedio de
+            corte por toda la muestra de 50 participantes, se observó que el equilibrio emocional mejoró, comenzando en
+            un NOC-inicial promedio de 4.0 y terminando, después
+            de las 4 sesiones de biblioterapia, en un NOC-final promedio de 4.8.
+        </p>
+
+        <div class="image">
+            <img src="img/V20-N1-10/Screenshot_5.png" width="80%">
+            <p><b>Gráfico 5. </b>Valoración comparativa equilibrio emocional: NOC-inicial vs NOC-final</p>
+            <p><b>Fuente: </b>Elaboración propia a partir de mediciones de la Escala NOC equilibrio
+                emocional, sesión 1 y sesión 4.</p>
+        </div>
+
+        <p class="titulo">Discusión</p>
+
+        <p>
+            Como evidenciaron los resultados, la intervención biblioterapia mostró su eficacia para atender el estado de
+            salud psico-emocional de niños en situación de confinamiento. Así, a través de la aplicación de diagnósticos
+            de enfermería NANDA (28), y de la Encuesta NOC, resultado equilibrio emocional (29), se pudo comprobar
+            la respuesta positiva de los niños/as participantes ante
+            la intervención de biblioterapia propuesta, expresando
+            una mejor reacción en el comportamiento emocional,
+            al contrastarse las valoraciones de los dos momentos
+            evaluados: valoración de entrada (NOC-inicial, sesión
+            1) versus valoración de salida (NOC-final, sesión 4).
+        </p>
+
+        <p>
+            Los resultados comparten algunas conclusiones y elementos en común con investigaciones precedentes,
+            realizadas en otros contextos. Con Erades y Morales (4),
+            se concuerda en el impacto que el confinamiento y la
+            pandemia COVID-19 generó en la población infantil.
+            A raíz de las medidas de aislamiento social, los centros
+            escolares se vieron sin recursos para ofrecer una formación alternativa y de calidad a los menores
+            escolarizados. Esto, unido a la prohibición de salir al aire libre
+            para la recreación o para establecer relaciones con sus
+            iguales, tuvo consecuencias negativas para los menores
+            y sus familias, llegando incluso a producirse situaciones de maltrato, tensiones al interior de los hogares,
+            estrés o impactos negativos en la situación emocional
+            de los niños/as (4). La misma situación se evidenció
+            también en la presente investigación, con la identificación de estados de ánimo y emociones negativas como
+            aburrimiento, tristeza, miedo y preocupación.
+        </p>
+
+        <p>
+            El estudio de Feinberg y otros (30) muestra la necesidad de un amplio apoyo e intervención familiar para
+            prevenir problemas de relaciones familiares, pues evidenció deterioro desde antes y durante la pandemia en
+            la calidad de la crianza compartida, pudiendo generar
+            un clima de desatención familiar frente al estado mental de los niños. Esto contrasta con la presente
+            investigación en lo referente a la prevalencia del diagnóstico
+            de enfermería Disposición para el fortalecimiento de
+            la resiliencia, donde el 46% de los participantes manifestó una actitud positiva frente a las dificultades
+            del
+            confinamiento y la pandemia, lo que podría mostrar
+            que el entorno familiar pudo influir para favorecer el
+            diagnóstico de los niños.
+        </p>
+
+        <p>
+            Aunque se desconoce cómo puede afectar la situación
+            de aislamiento por la COVID-19 a los niños a largo
+            plazo, se dispone de referencias respecto a otras situaciones en las que niños y adolescentes tuvieron
+            limitado contacto social e inasistencia a los centros educativos, junto con exposición a sufrir estrés. Es
+            el caso de
+            los niños hospitalizados, donde autores han demostrado que la no asistencia la escuela está relacionada con
+            mayores niveles de ansiedad (31).
+        </p>
+
+        <p>
+            De igual manera, Sprang y Silman (32) advirtieron que
+            los niños que han vivido una situación de aislamiento
+            lo experimentan como un hecho traumático, aumentando las probabilidades de presentar cuadros de estrés,
+            como el trastorno de estrés postraumático (4). Comparado con esto, aunque el presente estudio no profundizó
+            en el estrés, sí lo hizo respecto al bienestar emocional,
+            indicador que, como se observó en los resultados, fue
+            crítico en algunos niños/as confinados.
+        </p>
+
+        <p>
+            Sin duda en la vivencia de la pandemia, los cambios
+            abruptos en la calidad de vida, el bienestar y la salud
+            mental y psico-emocional de los niños fueron evidentes
+            y demostrables: no sólo en el estudio presente, sino en
+            los precedentes.
+        </p>
+
+        <p>
+            Debido a que la lectura y la literatura infantil ha sido
+            bien valorada por sus efectos de catarsis y autoconocimiento (33,34), se consideró que la biblioterapia
+            podría
+            ser la estrategia adecuada para intervenir a niños/as en
+            situación emocional crítica. Se la describe como un
+            método mediante el cual padres, profesores, libreros,
+            consejeros, psicólogos o profesionales de la salud utilizan la influencia de los libros para ayudar a otros
+            con
+            necesidades específicas (15), aspecto en común que el
+            presente estudio trató de seguir para las necesidades específicas, psico-emocionales y de salud mental en
+            este
+            caso, derivadas de la pandemia.
+        </p>
+
+        <p>
+            Por este motivo, ciertos autores sugieren adquirir un
+            material bibliográfico acorde a la situación emocional
+            de quienes serán objeto de la intervención biblioterapia
+            (16). Aspecto también común en el presente estudio,
+            donde, a partir de una valoración de enfermería previa,
+            se identificaron las condiciones de cada participante
+            con el fin de que los mediadores de lectura seleccionaran los cuentos más cercanos a la condición,
+            necesidades y problemas particulares.
+        </p>
+
+        <p>
+            La presente investigación también coincide con Szabó y Sipos (35) en cuanto al procedimiento de la
+            biblioterapia, pues en ambos estudios se asoció cada emoción básica con un cuento, permitiendo que se
+            leyeran
+            cuentos acordes a la emoción más representativa manifestada por el participante. Otro aspecto en común fue
+            la forma de medir la respuesta emocional: para ambos
+            estudios, se utilizó un referente gráfico (una colección
+            de retratos de caras) con las emociones más destacadas,
+            de modo que los participantes elegían aquella con la
+            que se sintieran identificados y que ilustrara el estado
+            emocional de los personajes o de sí mismos, sirviendo
+            como mecanismo de evaluación (35).
+        </p>
+
+        <p>
+            En suma, como mostraron tanto el presente estudio
+            como los mencionados, la intervención del NIC biblioterapia ha mostrado su eficacia como estrategia
+            para mejorar el equilibrio emocional y atender la salud
+            mental de la población infantil. Además, se evidenció
+            que puede servir de apoyo para la implementación de
+            programas de intervención dirigidos a paliar los efectos
+            negativos de situaciones de crisis (pandemia u hospitalización) en el corto y mediano plazo.
+        </p>
+
+        <p>
+            Es importante mencionar que esta investigación no solamente es relevante, sino que también incluye aspectos
+            nuevos e importantes en la medida en que es un estudio
+            interdisciplinario (Enfermería, Literatura y Educación)
+            y se centra en un área prioritaria en el contexto actual
+            producto de la pandemia: la salud mental.
+        </p>
+
+        <p>
+            Dentro de las limitaciones que se presentaron en el
+            estudio, se recalca que el proyecto fue planteado en
+            un primer momento para el servicio de pediatría del
+            Hospital Universitario de Santander, pero -como consecuencia de las restricciones de la pandemia- no se
+            permitió el acceso. A partir de lo anterior, surge la necesidad de adaptar la investigación al sector
+            educativo
+            desde la virtualidad. Pese a que esta virtualidad supuso
+            un reto que generó dificultades al inicio, en especial
+            porque se debían adaptar los instrumentos, no fue un
+            obstáculo, ya que se convirtió en una posibilidad de
+            adaptarse a los nuevos cambios y lograr un análisis con
+            rigor científico.
+        </p>
+
+        <!-- conclusiones -->
+
+        <hr>
+
+        <p class="titulo">Conclusiones</p>
+
+        <p>
+            Durante la pandemia, se ha demostrado la importancia de propuestas de intervención que propendan por
+            el bienestar psicoemocional de los niños/as abocados
+            al confinamiento y a situaciones de crisis que generen cambios abruptos en su cotidianidad, derivando en
+            expresiones emocionales negativas y afectaciones en el
+            bienestar (12-14, 16).
+        </p>
+
+        <p>
+            Entre esas propuestas, aparece la biblioterapia como
+            opción. Su fácil implementación favorece resultados
+            más positivos en población infantil en situaciones de
+            crisis y vulnerabilidad, minimizando los efectos negativos tanto en su salud mental como psico-emocional.
+        </p>
+
+        <p>
+            Los encierros y las medidas de distanciamiento social
+            cuestionaron el acceso y la prestación de atención y tratamiento de la salud mental, hecho que mostró lo
+            fundamental que resulta atenderla en los niños, teniendo
+            siempre en consideración una atención interdisciplinaria (1-5, 31).
+        </p>
+
+        <p>
+            Como se pudo mostrar, los vínculos entre la lectura,
+            la literatura infantil y la salud psico-emocional de los
+            niños están interrelacionados. Su integración ofrece la
+            posibilidad de uso terapéutico en diferentes escenarios de intervención. Los beneficios de la biblioterapia
+            pueden ser oportunidades para el acompañamiento y el
+            bienestar emocional de los niños. Lo anterior muestra
+            la necesidad de movilizar recursos y dar prioridad a las
+            políticas e intervenciones alternativas de salud mental
+            dirigidas a los niños.
+        </p>
+
+        <p>
+            A través de este estudio, también se evidenció que la
+            biblioterapia -como campo de estudio- se amplía conceptualmente al ser utilizada desde una perspectiva
+            interdisciplinar, vinculando a las Ciencias Sociales y
+            Humanas con las Ciencias de la Salud e incluso con las
+            Ciencias de la Computación. Lo anterior da cuenta de la
+            contribución que este estudio y sus resultados ofrecen
+            al concepto de biblioterapia, mostrando la potencialidad de esta como una intervención flexible -sobre todo,
+            cuando se la interrelaciona con otras áreas del saber-.
+        </p>
+
+        <p>
+            Por último, como sugerencias a futuros investigadores,
+            se hacen necesarios nuevos estudios que arrojen resultados del impacto de la biblioterapia en el mediano y
+            largo plazo (1-2 años, por ejemplo). También sería interesante la aparición de estudios enfocados en el uso
+            de la biblioterapia con otros segmentos poblacionales (primera infancia, adolescentes y jóvenes, adultos
+            mayores, etc.) para observar si su influencia varía de
+            acuerdo con las etapas de desarrollo del ser humano. La
+            biblioterapia tiene mucho potencial como estrategia, de
+            modo tal que lo que queda es llevarla a un desarrollo más completo para beneficiar a quienes más lo
+            requieran.
+        </p>
+
+        <p class="subtitulo">Conflicto de intereses</p>
+
+        <p>
+            Los autores declaran expresamente no poseer ningún
+            conflicto de interés.
+        </p>
+
+        <p class="subtitulo">Financiación</p>
+
+        <p>
+            El proyecto del cual surgió el presente
+            artículo fue financiado en su totalidad por la Universidad Industrial de Santander, al presentarse en la
+            convocatoria interna y ser seleccionado en 2019.
+        </p>
+
+
+
+        <!-- Referencias -->
+
+        <hr>
+
+        <p class="titulo"> Referencias bibliográficas </p>
+
+        <ol class="lista">
+            <li id="r1">Wang G, Zhang Y, Zhao J, Zhang J, Jiang F. Mitigate the effects of home confinement on children
+                during the
+                COVID-19 outbreak. Lancet. 2020; 395: 945-947. <a
+                    href="https://doi.org/10.1016/S0140-6736(20)30547-X">https://doi.org/10.1016/S0140-6736(20)30547-X</a>
+            </li>
+            <li id="r2">Pedreira JL. Salud mental y COVID-19 en infancia y adolescencia: visión desde la psicopatología
+                y la Salud
+                Pública. Rev. Esp. Salud Pública [Internet]. 2020 [citado 2023 ene 6]; 94: 1-17. Disponible en: <a
+                    href="https://www.sanidad.gob.es/biblioPublic/publicaciones/recursos_propios/resp/revista_cdrom/VOL94/C_ESPECIALES/RS94C_202010141.pdf">https://www.sanidad.gob.es/biblioPublic/publicaciones/recursos_propios/resp/revista_cdrom/VOL94/C_ESPECIALES/RS94C_202010141.pdf</a>
+            </li>
+            <li id="r3">Sánchez IM. Impacto psicológico de la COVID-19 en niños y adolescentes. Medisan [Internet]. 2021
+                [citado 2022 ago 22]; 25(1): 123-141. Disponible en: <a
+                    href="https://www.medigraphic.com/pdfs/medisan/mds-2021/mds211j.pdf">https://www.medigraphic.com/pdfs/medisan/mds-2021/mds211j.pdf</a>
+            </li>
+            <li id="r4">Erades N, Morales A. Impacto psicológico del confinamiento por la COVID-19 en niños españoles:
+                un estudio
+                transversal. Rev. psicol. clín. niños adolesc [Internet]. 2020 [citado 2022 ago 23]; 7(3): 27–34.
+                Disponible en:
+                <a
+                    href="https://www.revistapcna.com/sites/default/files/006_0.pdf">https://www.revistapcna.com/sites/default/files/006_0.pdf</a>
+            </li>
+            <li id="r5">Romero E, López-Romero L, Domínguez-Álvarez B, Villar P, Gómez-Fraguela JA. Testing the effects
+                of
+                covid-19 confinement in spanish children: The role of parents’ distress, emotional problems and specific
+                parenting. Int. J. Environ. Res. Public Health. 2020; 17(19): 69-75. <a
+                    href="https://doi.org/10.3390/ijerph17196975">https://doi.org/10.3390/ijerph17196975</a>
+            </li>
+            <li id="r6">Butcher HK, Bulechek GM, Dochterman JM, Wagner CM. Nursing Interventions Classification (NIC).
+                Elsevier; 2019.</li>
+            <li id="r7">Yuan S, Zhou X, Zhang Y, Zhang H, Pu J, Yang L, et al. Comparative efficacy and acceptability of
+                bibliotherapy for depression and anxiety disorders in children and adolescents: a meta-analysis of
+                randomized clinical
+                trials. Neuropsychiatr Dis Treat [Internet]. 2018;14,353–365. <a
+                    href="https://doi.org/10.2147/NDT.S152747">https://doi.org/10.2147/NDT.S152747</a></li>
+            <li id="r8">Scaletti R, Hocking C. Healing through Story Telling: An Integrated Approach for Children
+                Experiencing
+                Grief and Loss. New Zealand Journal of Occupational Therapy. 2010;57(2):66–71. </li>
+            <li id="r9">Caldin CF. Biblioterapia: Atividades de leitura desenvolvidas por acadêmicos do Curso de
+                Biblioteconomia da Universidade Federal de Santa Catarina. Biblios [Internet]. 2005 [consultado en 20
+                agde agosto de
+                2022];6(22):13–25. Disponible en: <a
+                    href="https://core.ac.uk/download/pdf/11878939.pdf">https://core.ac.uk/download/pdf/11878939.pdf</a>
+            </li>
+            <li id="r10">Alfonso-Sánchez LM, Colmenares F. La evolución de las necesidades de la información: la
+                biblioterapia
+                como novedad terapeútica. Congreso Internacional de Información [Internet]. 2004 [consultado 8 de junio
+                de
+                2022];5. Disponible en: <a
+                    href="http://www.congresoinfo.cu/UserFiles/File/Info/Info2004/Ponencias/057">http://www.congresoinfo.cu/UserFiles/File/Info/Info2004/Ponencias/057</a>
+            </li>
+            <li id="r11">Pettersson C. Psychological well-being, improved self-confidence, and social capacity:
+                bibliotherapy from a
+                user perspective. J Poet Ther [Internet]. 2018 [Consultado 27 de julio de 2022];31(2):124–34. <a
+                    href="https://doi.org/10.1080/08893675.2018.1448955">https://doi.org/10.1080/08893675.2018.1448955</a>
+            </li>
+            <li id="r12">Lucas CV, Soares L. Bibliotherapy: A tool to promote children’s psychological well-being. J
+                Poet Ther.
+                2013;26(3):137–47. <a
+                    href="https://doi.org/10.1080/08893675.2013.823310">https://doi.org/10.1080/08893675.2013.823310</a>
+            </li>
+            <li id="r13">Rojas-Guzmán VR. Impacto de las estrategias pedagógicas basadas en la biblioterapia
+                desarrolladas con niños y niñas vinculados al programa de pedagogía hospitalaria de la Fundación
+                Cardioinfantil - Instituto de Cardiología [Tesis de grado]. Bogotá: Pontificia Universidad Javeriana;
+                2017. </li>
+            <li id="r14">Shrodes C. Bibliotherapy: A theoretical and clinical-experimental study [Tesis de Ph. D.].
+                Berkeley: University of California; 1950.</li>
+            <li id="r15">Cornett CE, Cornett CF. Bibliotherapy: The Right Book at the Right Time. Bloomington, Indiana:
+                Phi Delta
+                Kappa Educational Foundation; 1980. </li>
+            <li id="r16">Caldin CF. The Therapeutic Applicability of Literaries Texts for children. Encontros Bibli
+                Revista Eletrônica
+                de Biblioteconomia e Ciência da Informação. 2004;9(18): 72–89. <a
+                    href="https://doi.org/10.5007/1518-2924.2004v9n18p72">https://doi.org/10.5007/1518-2924.2004v9n18p72</a>
+            </li>
+            <li id="r17">Goleman D. Inteligencia emocional. Barcelona: Kairós; 1996.</li>
+            <li id="r18">. Aresté-Grau J. Las emociones en Educación Infantil: sentir, reconocer y expresar [Tesis de
+                grado]. Universidad Internacional de La Rioja; 2015. </li>
+            <li id="r19">Martínez C. Consideraciones sobre la inteligencia emocional. La Habana: Editorial
+                Científico-técnica; 2009.</li>
+            <li id="r20">López-Pereyra M, Armenta-Huarte C, Gómez-Vega MP, Puerto-Díaz O. El bienestar emocional en las
+                niñas
+                y los niños. Revista Internacional De Educación Emocional y Bienestar [Internet]. 2021 [consultado 20 de
+                agosto de 2022];1(2):53–70. Disponible en: <a
+                    href="https://rieeb.ibero.mx/index.php/rieeb/article/view/14/30">https://rieeb.ibero.mx/index.php/rieeb/article/view/14/30</a>
+            </li>
+            <li id="r21">Bem DJ. Self-perception theory. Adv Exp Soc Psychol. 1972;6:1–62. <a
+                    href="https://doi.org/10.1016/S0065-2601(08)60024-6">https://doi.org/10.1016/S0065-2601(08)60024-6</a>
+            </li>
+            <li id="r22">Laird JD. Self-attribution of emotion: The effects of expressive behavior on the quality of
+                emotional experience. J Pers Soc Psychol. 1974;29(4):475–86. <a
+                    href="https://doi.org/10.1037/h0036125">https://doi.org/10.1037/h0036125</a></li>
+            <li id="r23">. Fazio RH. Self-Perception Theory: A Current Perspective. En: Zanna MP, Olson JM, Herman CP,
+                editores.
+                Social Influence: The Ontario Symposium. Nueva York: Psychology Press; 2014. p. 129–50.
+            </li>
+            <li id="r24">Congreso de Colombia. Ley Estatutaria 1581: Por la cual se dictan disposiciones generales para
+                la protección
+                de datos personales. Diario Oficial. 2012 Oct 17;(No. 48587 octubre 17).</li>
+            <li id="r25">Presidencia de la República de Colombia. Decreto 1377.:Por el cual se reglamenta parcialmente
+                la Ley 1581
+                de 2012 para la protección de datos personales. Diario Oficial. 2013 Jun 27;(No. 48834 junio 27). </li>
+            <li id="r26">Campbell D, Stanley J. Diseños experimentales y cuasiexperimentales en la investigación social.
+                Buenos Aires: Amorrortu Editores; 1995. </li>
+            <li id="r27">Hernández-Sampieri R, Fernández-Collado C, Baptista MP. Metodología de la investigación. Sexta
+                edición.
+                México D.F.: Mcgraw-Hill/Interamericana Editores, S.A.; 2014. </li>
+            <li id="r28">Herdman HT, Kamitsuru S, Lopes CT. Nanda Nursing Diagnoses: Definitions & Classification,
+                2021–2023.
+                Doceava edición. Kindle; 2021.</li>
+            <li id="r29">Moorhead S, Johnson M, Maas ML, Swanson E. Nursing Outcomes Classification (NOC). Sexta
+                edición.
+                Elsevier; 2018.</li>
+            <li id="r30">Feinberg ME, Mogle J, Lee J, Tornello SL, Hostetler ML, Cifelli JA, et al. Impact of the
+                COVID‐19 Pandemic on Parent, Child, and Family Functioning. Fam. process. 2021; 61(1); 361-374. <a
+                    href="https://doi.org/10.1111/famp.12649">https://doi.org/10.1111/famp.12649</a></li>
+            <li id="r31">Serradas-Fonseca M, Ortiz-González MC, Manueles-Jiménez J, Estalayo-Martín LM. Necesidad de
+                asistencia educativa al niño hospitalizado. Enseñanza & Amp Teaching: Revista interuniversitaria de
+                didáctica
+                [Internet]. 2002 [Consultado 20 de junio de 2022];20:243–258. Disponible en: <a
+                    href="https://revistas.usal.es/index.php/0212-5374/article/view/4008/4032">https://revistas.usal.es/index.php/0212-5374/article/view/4008/4032</a>
+            </li>
+            <li id="r32">Sprang, G, Silman M. Posttraumatic stress disorder in parents and youth after health-related
+                disasters. Med Public Health Prep. 2013;7:105–110. <a
+                    href="https://doi.org/10.1017/dmp.2013.22">https://doi.org/10.1017/dmp.2013.22</a>
+            </li>
+            <li id="r33">Volpi J. Leer la mente. El cerebro y el arte de la ficción. México: Alfaguara. 2011.</li>
+            <li id="r34">Bettelheim B. Psicoanálisis de los cuentos de hadas. Barcelona: Editorial Crítica; 1994.</li>
+            <li id="r35">Szabó J, Sipos M. Training the recognition of emotions based on bibliotherapy techniques.
+                Psychiatr Danub
+                [Internet]. 2018 [Consultado Agosto 18 de 2022;30(October):380–383. Disponible en: <a
+                    href="https://www.psychiatria-danubina.com/UserDocsImages/pdf/dnb_vol30_noSuppl%206/dnb_vol30_noSuppl%206_380.pdf">https://www.psychiatria-danubina.com/UserDocsImages/pdf/dnb_vol30_noSuppl%206/dnb_vol30_noSuppl%206_380.pdf</a>
+            </li>
+            <li id="r36">Vialart Vidal N. Enfermería Informática: ¿una contradicción o una oportunidad para el trabajo
+                en red?. Rev
+                Cubana Enfermer [Internet]. 2011 [citado 2023 Ene 10] ; 27(2): 178-188. Disponible en: <a
+                    href="http://scielo.sld.cu/scielo.php?script=sci_arttext&pid=S0864-03192011000200010&lng=es">http://scielo.sld.cu/scielo.php?script=sci_arttext&pid=S0864-03192011000200010&lng=es</a>.
+            </li>
+            <li id="r37">Schwaber K, Sutherland J. The Scrum Guide. The Definitive Guide to Scrum: The Rules of the Game
+                [En línea];
+                2020 [citado 2022 ago 17]. Disponible en: <a
+                    href="https://www.kaizenko.com/wp-content/uploads/2020/12/2020-Scrum-Guide-US.pdf">https://www.kaizenko.com/wp-content/uploads/2020/12/2020-Scrum-Guide-US.pdf</a>
+            </li>
+            <li id="r38">Schwaber K. SCRUM Development Process. En: J. Sutherland, C. Casanave, J. Miller, P. Patel, G.
+                Hollowell
+                (Eds.), Business Object Design and Implementation. Londres, Reino Unido: Springer-Verlag London Limited;
+                2010. Disponible en: <a
+                    href="https://link.springer.com/chapter/10.1007/978-1-4471-0947-1_11">https://link.springer.com/chapter/10.1007/978-1-4471-0947-1_11</a>
+            </li>
+        </ol>
+    </div>
+</body>
+
+</html>

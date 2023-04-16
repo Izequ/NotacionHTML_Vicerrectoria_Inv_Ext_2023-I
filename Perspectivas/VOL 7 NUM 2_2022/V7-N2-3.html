@@ -1,0 +1,1471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V7-N2-3</title>
+    <link rel="stylesheet" href="">
+    <style>
+        body {
+            padding: 10em;
+            padding-top: 20px;
+            font-family: Times New Roman;
+            color: black;
+        }
+
+        .articulo-original {
+            background-color: black;
+            color: aliceblue;
+            width: 100%;
+            size: 15%;
+        }
+
+        #articulo-derecha {
+            float: left;
+        }
+
+
+        /* Posiciones de los resumenes */
+        .abstract-container {
+            display: flex;
+            width: 100%;
+        }
+
+        .keywords-container {
+            float: left;
+            width: 20%;
+            padding-right: 20px;
+        }
+
+        .text-container {
+            float: right;
+            width: 100%;
+            padding-left: 20px;
+        }
+
+
+        ul.navbar {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 25em;
+            left: 2em;
+            width: 250px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: Times New Roman;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        ul.navbar li {
+            background: white;
+            margin: 0.5em 0;
+            padding: 0.3em;
+        }
+
+
+        /* Enlaces */
+
+        a.link-color:visited {
+            color: white;
+        }
+
+        a.link-color:link {
+            color: white;
+        }
+
+        a.link-color:hover {
+            color: white;
+        }
+
+        a.link-color:hover {
+            border-bottom: 1px solid;
+            background: black;
+        }
+
+
+        /* Link de referencia */
+
+        a:link {
+            color: #4e00ff;
+        }
+
+        a:visited {
+            color: #003bff;
+        }
+
+        a:focus {
+            border-bottom: 1px solid;
+            background: #98aae4;
+        }
+
+        a:hover {
+            border-bottom: 1px solid;
+            background: #aacefe;
+        }
+
+
+
+        /* Etiqueta P */
+
+        p {
+            line-height: normal;
+            text-align: justify;
+            font-size: 18px
+        }
+
+        p.titulo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        p.subtitulo {
+            font-size: 20px;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        p.subtitulo-segundo {
+            font-style: italic;
+            font-size: 18px;
+        }
+
+        /* Fin P */
+
+
+        /* Etiqueta Italic */
+        i {
+            font-size: 18px
+        }
+
+        /* LI para las listas */
+
+        li {
+            font-size: 18px;
+        }
+
+
+
+        /* Tablas */
+
+        table {
+            border-collapse: collapse;
+            border: 2px solid rgb(0, 0, 0);
+            align-items: center;
+        }
+
+        thead th {
+            border-collapse: collapse;
+            background-color: rgb(179, 179, 179);
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        tbody td {
+            border-collapse: collapse;
+            text-align: center;
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+
+        .tipo {
+            color: #ffffff;
+            font-size: 22px;
+            border-radius: 10px 5px 10px 5px;
+            background-color: #696969;
+        }
+
+        div.info {
+            padding-top: 20px;
+        }
+
+        img.logos {
+            width: 15px;
+            height: 15px;
+        }
+
+        .image {
+            text-align: center;
+            image-rendering: optimizeQuality;
+        }
+
+        .image p {
+            text-align: center;
+            font-size: small;
+        }
+
+        .logo {
+            width: 300px;
+            height: 80px;
+        }
+
+        .logo2 {
+            width: 300px;
+            height: 50px;
+
+        }
+
+        .lista li {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+
+        /* Anclajes de la pagina */
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .ecuacion {
+            text-align: center;
+            font-weight: bold;
+            margin: 1px;
+        }
+
+        @media only screen and (min-width:320px) and (max-width:767px) {
+            body {
+                width: 100%;
+                padding: 5em;
+                margin: 5px;
+            }
+
+            .image {
+                text-align: center;
+                image-rendering: optimizeQuality;
+            }
+
+            .image img {
+                width: 100%;
+                height: 100%;
+            }
+
+            .image p {
+                font-size: small;
+                text-align: center;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="image">
+        <img src="img/V7-N2-3/cabeza.png" width="100%">
+    </div>
+
+    <div>
+        <div class="articulo-original">
+            <p>
+            <div id="articulo-derecha"><b> <u> Articulo Original</u> </b> </div>
+            <div style='text-align:right'><b> <u><img class="image" width="15px" src="img/globales/doi.png"><a
+                            class="link-color"
+                            href="https://doi.org/10.22463/25909215.3582">https://doi.org/10.22463/25909215.3582</a></u>
+                </b></div>
+            </p>
+        </div>
+
+
+
+        <!--Titulos-->
+        <h1>Parenting practices in early childhood as technologies of power in family and educational
+            contexts</h1>
+
+        <h2>Prácticas parentales en infancia: tecnologías de poder, familia y educación</h2>
+
+        <!--Autores-->
+        <h4>
+            Leonardo García-Botero<sup><a href="#sup1">1*</a> </sup> <br>
+            Annie Julieth Alvarez-Maestre<sup><a href="#sup2">2*</a> </sup> <br>
+            Carlos Alfredo Pérez-Fuentes<sup><a href="#sup3">3*</a> </sup> <br>
+            Andrea Johana Aguilar-Barreto<sup><a href="#sup4">4*</a> </sup> <br>
+
+        </h4>
+
+        <hr>
+
+        <p id="sup1"><sup>1*</sup><img class="logos" src="img/globales/sobre.png"> Doctoral student in Doctorado en
+            Educación y Estudios Sociales del Tecnológico de Antioquia IU,
+            <a href="lgarciab@tdea.edu.co">lgarciab@tdea.edu.co</a> . <img class="logos" src="img/globales/orcid.png">
+            <a href="https://orcid.org/0000-0003-2166-2014">ORCID:
+                0000-0003-2166-2014</a>.
+            Tecnológico de Antioquia Medellín, Colombia.
+        </p>
+
+        <p id="sup2"><sup>2*</sup><img class="logos" src="img/globales/sobre.png">Doctor in Education, psychology
+            professor in Tecnológico de Antioquia IU,
+            <a href="annie.alvarez@tdea.edu.co">annie.alvarez@tdea.edu.co</a> . <img class="logos"
+                src="img/globales/orcid.png"> <a href="https://orcid.org/0000-0002-9432-8554">ORCID:
+                0000-0002-9432-8554</a>.
+            Tecnológico de Antioquia Medellín, Colombia.
+        </p>
+
+        <p id="sup3"><sup>3*</sup><img class="logos" src="img/globales/sobre.png">Doctoral student in Doctorado en
+            Educación y Estudios Sociales del Tecnológico de Antioquia IU,
+            <a href="carlos.perez77@tdea.edu.co">carlos.perez77@tdea.edu.co</a> . <img class="logos"
+                src="img/globales/orcid.png"> <a href="https://orcid.org/0000-0003-0645-5973">ORCID:
+                0000-0003-0645-5973</a>.
+            Tecnológico de Antioquia Medellín, Colombia.
+        </p>
+
+        <p id="sup4"><sup>4*</sup><img class="logos" src="img/globales/sobre.png">Doctor in Education, Vice-Rector of
+            Tecnológico de Antioquia IU,
+            <a href="vice.academica@tdea.edu.co">vice.academica@tdea.edu.co</a> . <img class="logos"
+                src="img/globales/orcid.png"> <a href="https://orcid.org/0000-0003-1074-1673">ORCID:
+                0000-0003-1074-1673</a>.
+            Tecnológico de Antioquia Medellín, Colombia..
+        </p>
+
+
+        <hr>
+
+        <!-- Como realizar la cita -->
+
+        <p><b>How to cite: </b> García-Botero, L. Alvarez-Maestre, A.J, Pérez-Fuentes, C.A, Aguilar-Barreto, A.J.
+            (2022). “Parenting practices
+            in early childhood as technologies of power in family and educational contexts.”. Perspectivas, vol. 7, no.
+            2, pp. 26-37, 2022.</p>
+
+        <!--Licencia-->
+        <p>&copy;Peer review is the responsibility of the Universidad Francisco de Paula Santander. This is an article
+            under the license
+            <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>
+        </p>
+
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Licencia Creative Commons"
+                style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
+
+        <hr>
+
+        <!--Recibido y aprobado-->
+        <p><b>Received: </b> January 25, 2022 <br> <b>Approved: </b> May 7, 2022. </p>
+
+
+        <!--Resumen Inglés-->
+        <hr>
+
+        <div class="abstract-container">
+            <div class="keywords-container">
+                <p><b>Keywords</b> <br></p>
+                <p>Early Childhood, Parenting Practices, Poststructuralist, Power Relations.</p>
+            </div>
+            <hr>
+            <div class="text-container">
+                <p class="titulo"> Abstract</p>
+                <p>
+                    This research with a post-structuralist epistemological approach and qualitative methodology had the
+                    objective
+                    of revealing the conditions that make it possible for the parenting practices of caregivers of early
+                    childhood
+                    children in family and educational contexts to be configured as technologies of power (procedures
+                    through
+                    which power relations are socially legitimized). Likewise, it was proposed to demonstrate the
+                    self-care practices
+                    of children configured as technologies of the self. The results made it possible to identify current
+                    parenting
+                    practices where discipline practices are still evident in both contexts. It is concluded that power
+                    relations arise
+                    in the middle of a relational triad school - family - childhood, in an apparently functional gear,
+                    thus, children are
+                    influenced by the processes of both entities and begin to witness how the family has become
+                    Foucault's terms
+                    in an "institution". Part of the practices carried out by adults are incorporated by children and
+                    become self-care
+                    practices that, according to the analysis obtained, are part of a powerful formation of technologies
+                    of the self,
+                    however, not so well achieved. at this age, but a strong constitution is expected in the next stages
+                    of the life
+                    cycle.
+                </p>
+            </div>
+        </div>
+
+        <!-- Resumen Español -->
+        <hr>
+
+        <div class="abstract-container">
+            <div class="keywords-container">
+                <p><b>Palabras claves</b> <br></p>
+                <p>Postestructuralista, Prácticas de Crianza, Primera Infancia, Relaciones de Poder.</p>
+            </div>
+            <hr>
+            <div class="text-container">
+                <p class="titulo"> Resumen</p>
+
+                <p>
+                    Esta investigación de enfoque epistemológico post estructuralista y metodología cualitativa tuvo
+                    como objetivo,
+                    develar las condiciones que hacen posible que las prácticas de crianza de los cuidadores de niños de
+                    primera
+                    infancia en los contextos familiar y educativo se configuren como tecnologías de poder
+                    (procedimientos mediante
+                    los cuales socialmente se legitiman relaciones de poder). Así mismo, se propuso evidenciar las
+                    prácticas de auto
+                    cuidado de los niños configuradas como tecnologías del yo. Los resultados permitieron identificar
+                    prácticas
+                    vigentes en la crianza donde aún se evidencian prácticas de disciplinamiento en ambos contextos. Se
+                    concluye
+                    que, las relaciones de poder surgen en medio de una triada relacional escuela – familia – infancia,
+                    en un
+                    engranaje aparentemente funcional, así, niños son influenciados por los procesos de ambos entes y se
+                    empieza a
+                    presenciar como la familia se ha convertido en términos de Foucault en una “institución”. Parte de
+                    las prácticas
+                    ejecutadas por los adultos son incorporadas por los niños y niñas y se convierten en prácticas de
+                    auto cuidado
+                    que, según el análisis logrado, estas si hacen parte de una potente formación de tecnologías del yo,
+                    sin embargo,
+                    no tan bien logradas en esta edad, pero si se espera una constitución fuerte en las próximas etapas
+                    del ciclo vital.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Cuerpo del documento -->
+    <div>
+        <hr>
+        <!--Introducción-->
+        <p class="titulo"> Introduction</p>
+
+        <p>
+            Currently, there are many actions aimed at
+            comprehensive care that seek to increase the quality
+            of life of children around the world, based on the
+            hypothesis that, by working for today's children,
+            progress is guaranteed of each country and the life
+            in society of said beneficiaries is facilitated. Thus,
+            recognizing that the family is where the process of
+            guaranteeing rights and socialization with the world
+            begins, it is essential to carry out investigations in
+            favor of all the processes that are evidenced within
+            them, since children even in their early years are
+            surrounded by attentions, behaviors, concepts,
+            and practices that strengthen their development or,
+            on the contrary, may impair it, as the case may be
+            (Restrepo-Segura, & García-Peña, 2021).
+        </p>
+
+        <P>
+            This research focuses on those practices used for
+            the training of children by some of their significant
+            adults. By identifying certain practices that improve
+            the development process, the efforts made by the
+            state to guarantee integral development will be
+            increased, in this way, a contribution from this
+            research will be related to those significant actions
+            that favor the attempts and plans of the state and the
+            co-responsible for childhood, including parents and
+            caregivers.
+        </P>
+
+        <P>
+            A key objective in the results of this research is
+            to analyze parenting practices from the Foucaultian
+            perspective as power relations; The understanding
+            of the primary and secondary socialization scenarios
+            in the family setting and the educational setting as
+            spaces that generate power relations and legitimize
+            said practices is a novel vision, taking into account
+            that the contributions of the postmodernist theorist
+            were always maintained in institutions but not
+            directly approximate to the first years of life of
+            human beings.
+        </P>
+
+        <P>
+            In this order of ideas, three analytical categories
+            are determined: first, parenting practices that
+            refer to the actions that people carry out in favor
+            of the development of children in the form of intentional and regulated actions (Aguirre-Dávila
+            & Morales-Castillo, 2022; Aguirre-Dávila et al.,
+            2021). The second category, power relations,
+            conceptualized by Foucault (2003) as objective
+            capacities, communication and behavior relations
+            that configure the actions of free subjects. The third
+            category determined as the technologies of the self,
+            are defined as operations on the body and soul of
+            the subject himself, in search of the transformation
+            of themselves and of happiness that begins on their
+            own or with the help of others (Foucault, 2016).
+        </P>
+
+        <P>
+            In summary, this research, supported by the
+            search for symbolisms and representations within
+            the family nucleus and the work of educational
+            agents around children, sustains a fundamental value
+            paying great attention to discourse and practice in
+            the historical context in which they appeared and
+            occurred. they produced effects of knowledge, truth,
+            and power; From the beginning, it was conceived as
+            an investigative hypothesis that parenting practices
+            are configured as power relations and, likewise,
+            these practices generate self-care practices in boys
+            and girls that can become technologies of the self.
+        </P>
+
+
+        <!-- Metodología y materiales -->
+        <hr>
+
+        <p class="titulo">Methodology</p>
+
+        <p>
+            The methodological approach of this research
+            considered appropriate and closer to its interests, the
+            inclusion of the interpretive view from the position of
+            critical hermeneutics as an epistemological approach.
+            Critical hermeneutics is considered a hermeneutic of
+            suspicion, of the interpretation of hidden links, and
+            is even inclusive, sharing and trying to complement
+            other theories (Recas Bayón, 2007). In addition
+            to expressing the totality about an event, it deals
+            with making visible what the granting of meaning
+            hides, conceals or distorts, being an implication of
+            the dynamics of language, coercive forms of power
+            or dominance. The critical hermeneutical approach
+            proposed implies giving important value to the
+            interpretation of the problematized experiences
+            (Habermas, 2019, 2018).
+        </p>
+
+        <P>
+            In conjunction with the objectives and
+            expectations of this research, it was convenient to
+            use a qualitative methodology and as one of the main
+            reasons it is found that qualitative research responds
+            to the interests of this research, since a relevant way
+            of approaching the execution of parenting practices
+            by parents and the discourses that support them is
+            favorable from the use of interviews, observations
+            of the environment, content or discourse analysis,
+            or others. According to Sandoval Casillimas
+            (2011), it was decided for the present investigation
+            the moments of the qualitative model that he calls
+            common for almost all research studies, among
+            them, the moments of formulation, design, and
+            management. Hereafter, the description of the design
+            and management moment is provided.
+        </P>
+
+        <P>
+            This research was of immediate interest on the
+            power relations between caregivers - children in
+            family and educational contexts in the municipality
+            of San José de Cúcuta (unit of analysis). The
+            categories to be considered empirically within the
+            unit of analysis correspond to all those behaviors
+            generated by parents and caregivers of children in
+            relation to their development and training process;
+            Likewise, he paid attention to power relations, the
+            conditions that configure them and those actions that
+            children may be executing as authors of their own
+            destiny in favor of self-care.
+        </P>
+
+        <P>
+            In terms of the work unit, 4 boys and 2 girls
+            were selected as participating subjects, randomly
+            selected from 180 children attending an institution
+            for comprehensive early childhood care; the program
+            benefits children in early childhood from 2 years and
+            8 months to 5 years belonging to socioeconomic
+            strata 1 and 2 according to SISBEN. Likewise, the
+            significant adults of the children were involved in
+            the work unit, in this case, 2 educational agents
+            and the 6 adult guardians of the selected children,
+            preferably mother or grandmother, depending on the
+            case, who spends the most time with the children,
+            to collect as much information as possible in the
+            interview process.
+        </P>
+
+        <P>
+            In the same way, for the collection of the
+            information, those techniques that easily and
+            truthfully support the achievement of the objectives
+            in a greater correspondence than any other technique
+            were selected with caution. Considering that
+            different age groups (children and adults) were
+            handled, the information gathering techniques were
+            determined based on this. For the group of adults,
+            the semi-structured interview was used as interviews
+            aimed at learning about events and activities that
+            cannot be observed directly, where the participants
+            are complete informants and describe in detail what
+            happens (Taylor et al., 2015).
+        </P>
+
+        <P>
+            For the information gathering technique with
+            the children, an instrument composed of images
+            that make up comic strips was designed, with a
+            projective intention; some of the images were taken
+            from the projective test called the Düss Fables and
+            adapted to research based on Foucault's theoretical
+            construct on the technologies of the self and selfcare, for which a review of three key texts was made
+            to identify possible characteristics of the construct:
+            the government of oneself and others (Foucault,
+            2011), technologies of the self and other related texts
+            (Foucault, 2016) and the hermeneutics of the subject
+            (Foucault, 2005).
+        </P>
+
+        <P>
+            Each image responds to the aspects or behaviors
+            that Foucault (Foucault, 2016) in his theoretical
+            review in the three texts considers about technologies
+            of the self and practices of self-care; projective
+            images are presented to children with an opening
+            question and in some cases carry a description of the
+            situation for the child. Each situation as proposed
+            must respond to the following aspects: 1. Selfknowledge or ability to self-evaluate, 2. Rules of
+            conduct or behavior, 3. Ability to face the world or
+            independence, 4. Self-government, 5. Caring for the
+            other and 6. Physical care activities.
+        </P>
+
+        <P>
+            The methodological process is complemented
+            by the analysis phase, in which the intensive analysis
+            method is used in this research, through which a
+            discovery process is carried out in progress, through the identification of themes and / or categories and
+            the propositions that accompany them (data or
+            incidents).
+        </P>
+
+        <!-- resultados -->
+
+        <p class="titulo">Results</p>
+
+        <p>
+            Two decades ago, children in early childhood
+            spent more time at home, accompanied by relatives,
+            were in maternal care (if possible) and were
+            superfluously instructed at home to prepare in some
+            way for entering school. Currently, children spend
+            most of their time in scholastic spaces outside the
+            family context, which implies a greater involvement
+            of relationships with the world, an opening at an early
+            age to the social situation and this without including
+            the ease of access to education world information
+            from the media and new technological models. It is
+            worth describing that some children already know
+            how to write, read, and count before the age of 5,
+            where this was previously seen after the age of 6 and
+            counting on having quality academic instruction.
+        </p>
+
+        <p>
+            And although children today seem more
+            independent and socially involved, the need to train
+            adults depends on discipline practices. Well, it is
+            essential to clarify this expression, since in fact not all
+            actions carried out by adults are oriented to control,
+            or are they? Well Foucault (2009) defines discipline
+            as the mechanism of power that manages to control
+            the social body, controls individuals, establishes
+            their behaviors, guides and defines and uses
+            surveillance, sanction and examination practices for
+            their maintenance. To the above, if considers some
+            of the actions of adults towards children, whether,
+            in the family or at school, similarities will be found,
+            but, in fact, a parent or teacher may claim that they
+            must control their son or daughter because they do
+            not know what is right or wrong and are at risk of
+            getting hurt or falling into danger.
+        </p>
+
+        <p>
+            Applicable to all contexts, what an adult refers
+            to about the need to care for children is true, even
+            the laws and regulations established by the state give
+            priority to children, especially in early childhood (de
+            la Nación, 2006). But, what is behind this interest in well-being? What is behind the need to verify
+            their behavior? What is hidden in the verbalizations
+            of parents when they punish and submit or, on the
+            contrary, when they reward and motivate appearance
+            of behaviors? Likewise, there is the question about
+            the coherence between what the state has raised
+            regarding the training of younger citizens and the
+            practices that are actually sustained in reality.
+        </p>
+
+        <p>
+            To open up a possible visibility of power relations
+            between children and their adult caregivers, it is
+            essential to focus on practices, hence Foucault (2003)
+            uses the term "behavior" to facilitate the exploration
+            of relationships, reinforcing a Again, relationships
+            are intangible and invisible, but particular actions
+            reveal their structure. In other words, in the first
+            moment of this discussion, the practices carried out
+            by adult caregivers will be compared with the theory
+            in search of similarities or differences to determine
+            the existence of a power and its relationship mode.
+        </p>
+
+        <p>
+            Based on the results collected from the
+            applied instruments, parenting practices in general
+            at home and at school are exposed to physical
+            care, the incorporation of behavioral norms and
+            the development of cognitive skills for school
+            performance. Aguirre-Dávila & Morales-Castillo
+            (2022) considers that in parenting practices, adults
+            attend to specific behaviors of their children,
+            providing care in feeding, satisfying the demand for
+            affection and correcting behaviors against the norm.
+            Then, it can be affirmed that adults in the family
+            environment carry out said practices described by
+            Aguirre-Dávila (2022; 2021), and that is also the
+            case with adults in the educational environment,
+            whereby somewhat similar actions they are kept in a
+            parenting parallel.
+        </p>
+
+        <p>
+            Although Aguirre-Dávila et al., (2021) clarifies
+            that parenting practices are part of family relationships
+            (Aguirre-Dávila & Morales-Castillo, 2022), it can
+            be observed that the behaviors developed in school
+            have the same characteristics and apparently a
+            similar purpose, which will not be deduced at this
+            time, will be developed later. For now, it is possible to establish that there are parenting practices both
+            in
+            the family and in the educational environment. To
+            continue, these practices will be specified, but closer
+            to Foucault's theory.
+        </p>
+
+        <p>
+            It is clarified that it has not yet been said that
+            the parenting practices, both in the family and in the
+            school of the children under study, are the product
+            of discipline, that will now be established through
+            what Foucault called disciplinary power techniques
+            (Foucault, 2009). In the first place, Foucault
+            affirms that, to consider behaviors as techniques
+            of disciplinary power, they must be oriented in the
+            following classifications: the distribution of bodies,
+            control of activities, organization of genesis and the
+            composition of forces.
+        </p>
+
+        <p>
+            Foucault (2012) specifies that discipline takes
+            advantage of exercises such as sanction and reward
+            to continue controlling; In this sense, children
+            recognize the relationship between meeting the
+            established time and receiving a “happy face” or
+            having to stay longer finishing their work while
+            others play. At home, adults also take advantage of
+            the system of punishments or rewards in meeting
+            schedules, some with appetizing incentives such as
+            sweets or promises to take you somewhere.
+        </p>
+
+        <p>
+            The constant and daily execution of activities in
+            the family context and in the educational context is
+            called habit, which is the main task of both entities:
+            the achievement of the children incorporating
+            certain habits for their daily lives; For Foucault, this
+            becomes repetitive tasks imposed as a product of
+            adult knowledge.
+        </p>
+
+        <p>
+            The composition of forces is notorious as a
+            technology of disciplinary power, since, at home, it
+            is the children who are at the bottom of the hierarchy,
+            and in the same way it is at school. It is their adults
+            who decide what is right or wrong for them; “mom
+            and dad tell her because they are the ones in charge”
+            are the words of a girl when she inquired about why
+            the mother in the cartoon sends her daughter to brush
+            her teeth, bathe and have breakfast.
+        </p>
+
+        <p>
+            At school, the rhythm is the same, the teacher
+            is above all children and demands respect and
+            obedience from them. It is also evident that her
+            status as a teacher places her hierarchically above
+            the parents. This is deduced from the fact that parents
+            consider the teachers and the educational institution
+            as a support that carries out the parenting process,
+            since they must comply with other obligations that
+            limit their time.
+        </p>
+
+        <p>
+            It can be clarified with the previous paragraphs,
+            that technologies of disciplinary power do occur, but
+            these are stipulated in the family in one way and in
+            the school in another, which we will delve into below,
+            addressing the techniques to generate discipline
+            individuality. Each child must meet a number of
+            conditions to be a "good child" throughout the day,
+            this exposes him as a subject in a power relationship,
+            since his actions are awaiting the assessment of
+            adults, and during the day it will be adjusted to
+            actions of vigilance and normalizing sanction to
+            fulfill the expectations of the adult.
+        </p>
+
+        <p>
+            Parents and teachers spend most of their time
+            monitoring the fulfillment of requests, among
+            which the child follows instructions and obeys; But,
+            when one of the surveillance entities is missing,
+            the children act at their will, what the teachers in
+            their activity program call “free play”; It is a space
+            without restrictions, where the children are not in an
+            imposed activity, however the teacher is still in the
+            classroom to handle situations that get out of control
+            and that is where the normalizing sanction appears.
+            The normalizing sanction seeks to differentiate
+            individuals and draw the border between normal and
+            abnormal (Urízar Herrera 2019).
+        </p>
+
+        <p>
+            This makes it clear that the techniques
+            of individualization of power do exist in both
+            environments, the family and the educational one and
+            achieve their mission of generating differences and
+            creating particular cases and in many cases labels.
+            The work at school is done in a group and there is
+            a range of comparison, in the discourse the teachers
+            express themselves about the children in a general way, “they sleep”, “come on, relieve themselves,
+            wash their faces” , “The children go out”, “the speed
+            with which the children work”; it is noted that their
+            verbalizations are made in the plural to the extent
+            that the whole group must function in the same way.
+        </p>
+
+        <p>
+            As Foucault (2003) affirms, it is in the school
+            where concepts such as morality, sexuality, the
+            norm, evaluation, among others, are not discussed,
+            they are sustained in a passing from generation to
+            generation and if what the philosopher affirms is
+            related poststructuralist with the experience of early
+            childhood children in school, it is well known that
+            the implementation of technologies of disciplinary
+            power by the teachers and sustained by the parents
+            in the homes will continue with the formation of the
+            subject in favor of the maintenance of power from
+            the discipline.
+        </p>
+
+        <p>
+            So far, the analysis has made it possible to
+            observe that both at school and in the family, children
+            are immersed in hierarchical power relationships that
+            depend on the execution of disciplinary strategies,
+            which would mean that all children are submissive
+            and respond favorably to the intentions that their
+            two environments in relation determine for them.
+            Foucault explains that, for a power relationship to
+            exist, the subject must be free, therefore, children
+            in a condition of submission would not have a logic
+            from the author's approaches, that is why the term
+            of resistance is now involved at this time of the
+            discussion.
+        </p>
+
+        <p>
+            Resistance is not taken merely as the property of
+            reacting or opposing a force in the opposite direction
+            and similar to the action of the other, resistance is
+            an active process, which sets a pattern of acting
+            differently but still does not get out of power.
+            An example of this is the dynamics of children
+            responding to activities that are to their least liking
+            where, even knowing that their teacher may refuse
+            to change the activity, they suggest another more
+            attractive activity for them.
+        </p>
+
+        <p>
+            Another example of such resistance is the
+            negotiation that children make at the time of sleep,
+            as this becomes a habit that must be followed. When
+            a boy or girl does not want to sleep, they are urged to
+            try, even so, this is not their will and even if they are
+            lying on the mat they do not yield to the pressure of
+            the group. Tantrums can also be interpreted as acts
+            of resistance, which in some cases by generational
+            tradition uses physical punishment to eliminate
+            them. But, there are other ways of seeing the acts that
+            children perform and that can not only be resistance,
+            they can also be ways of controlling and executing
+            the power of domination over their parents and
+            caregivers.
+        </p>
+
+        <p>
+            Now, the taking or the change in the condition
+            of execution of power does not imply that the child
+            “commands” more or that the adult “commands”
+            less, no, this means that power relations can be
+            altered and modified, since be it one way or another,
+            without implying convenience for whom or which.
+            Consequently, it is essential to begin to identify
+            knowledge within parenting practices. Knowledge
+            supposes the historical construction by which
+            practices are configured, thus, for the purposes of this
+            analysis, it is required to know where the practices
+            are maintained in terms of historical dimension
+            (Foucault, 2009).
+        </p>
+
+        <p>
+            These are part of what the mothers expose and
+            can be interpreted as the knowledge that sustains
+            the practices, a whole series of justifications that
+            emerge from the current context. The current state
+            policy on early childhood indicates that this is the
+            vital stage of the development cycle and that by
+            guaranteeing integral development in it, favorable
+            conditions are determined for the human being in
+            the future (Restrepo-Segura, & García-Peña, 2021;
+            Aguilar Barreto et al., 2019). It is probable that the
+            mothers' knowledge is permeated by the condition
+            set forth above, generating meanings and discourses
+            that support the importance of their practices from
+            special care in children, easy adaptation to change
+            and guaranteeing a better future.
+        </p>
+
+        <p>
+            There are many possible justifications that are
+            the product of the historical and social construction
+            that support its use by mothers with their children.
+            Constructions such as that children need to be formed
+            because they do not have a structure and because
+            that is the function of parents, as is also evidenced by
+            Ariés (1986), in their research on childhood through
+            history. The teachers have a repertoire of knowledge
+            more oriented to the demands of the environment
+            and the guarantee of rights, it can be taken as an
+            institutionalized knowledge since its passage through
+            academic institutions and its constant relationship
+            with state policies in favor of early childhood.
+        </p>
+
+        <p>
+            Parenting practices do not go unnoticed in the
+            production and maintenance of power and within their
+            teachings, family and school teach children how the
+            world works. It would then be expected that school
+            and family in this particular context were oriented in
+            different ways, but both are in charge of executing
+            behavior regulation devices and introducing children
+            to rules, norms and conditions, establishing in their
+            head the "social order" (Foucault, 2009).
+        </p>
+
+        <p>
+            Mothers insist that their children comply
+            with the habits of hygiene, feeding and rest, that
+            they maintain organization and order and avoid
+            unwanted behaviors that go against the norm, which
+            is ultimately part of the regulation of behavior. The
+            teachers in the space of 8 hours and with the help of
+            other institutional caregivers make the children carry
+            out the actions that are requested, they are aware of
+            the movements of each child in their group and have
+            control over their body and their activities, In this
+            way, it is the teacher who authorizes whether the
+            child can go to the bathroom, what time they will
+            eat, and when they can wash their hands and teeth.
+            And although regulation devices at home seem less
+            than at school, those implemented at home can be
+            more drastic than those at school.
+        </p>
+
+        <p>
+            The foregoing is subject to the verbalizations
+            of the participants, taking into account that actions
+            of physical punishment are considered a form of
+            behavior regulation, which the teachers do not execute because the law specifically stipulates that a
+            teacher cannot use any type of punishment that It is
+            detrimental to the self-esteem of their students, but
+            this is not something that is stipulated for parents,
+            although the law states that a child should not be
+            physically punished, it is still sustained in the speech
+            of the people that it can be used hitting or screaming
+            if the child's performance warrants it.
+        </p>
+
+        <p>
+            The regulatory device that derives from physical
+            punishment generates fear and this affects the way
+            in which children construct themselves as subjects
+            and appropriate the world, thus condemning that
+            they also perpetuate the punishment and sustain it
+            as suitable for training. Attached to the foregoing,
+            regulatory devices such as controlling activities also
+            have an inappropriate impact, since at school the
+            activities that are controlled are academic and are
+            assumed to be an integral development objective.
+            On the contrary, at home, parental control activities
+            impose them without careful thought and are
+            sometimes routine, they even become activities that
+            have no value for their cognitive, physical, or social
+            development, among them is the use of television
+            so that the child does not make noise, assigning
+            tasks without performing preparation exercises
+            beforehand, playing video or computer games to
+            focus the child's attention and minimize their activity.
+        </p>
+
+        <p>
+            These control devices are given life by the
+            devices of truth, those that are knowledge in the
+            strict sense of the discourse, it is not made up of
+            several historical annexes, but rather accounts for
+            the elaboration that the adult has made about their
+            participation in the maintenance of power and in the
+            modes of subjectivation (Foucault, 2003). The adults
+            of the children participating in the study managed
+            to incorporate discourses of social circulation and
+            finally created their own perception of acting with
+            respect to parenting.
+        </p>
+
+        <p>
+            Thus, they provided the real reasons for their
+            behavior as caregivers and among them are that their
+            parenting practices are relevant because it implies
+            maintaining a positive relationship with their sons and daughters, because by training them with respect
+            to their practices their children will not pass for the
+            same difficulties as them. Parents also consider as a
+            mode of subjectivation that they have experience in
+            the formation of their children and that by forming
+            them through habits and rules in this way they will be
+            well educated; they also include plans, summarizing
+            that the successful development of children depends
+            on learning what parents teach them as children
+            learning to fend for themselves.
+        </p>
+
+        <p>
+            The teachers establish as truth devices that
+            favor their process of subjectivation with respect to
+            operators of parenting practices in their students, the
+            following: the child to the extent that he acquires
+            the manners and habits that adapt easily to society,
+            becomes he will become a person responsible for
+            himself, he will respond favorably to the environment;
+            in the same way, they state that children as subjects
+            under construction must be in constant evolution and
+            that their significant adults are there to help them in
+            the process of becoming fit citizens of society.
+        </p>
+
+        <p>
+            The excess of control in the school and the
+            family, the cases of flexibility in the family in response
+            to the actions of resistance and the concern of the
+            school as an institution to promote its ideologies in
+            this case in accordance with the laws of the state
+            for the former childhood, have created a relational
+            triad school - family - childhood, where they do
+            not operate separately, they are allied to achieve
+            individual and group discourses, they are in constant
+            communication, permeating and also modifying,
+            because teachers as subjects influence children and
+            They influence parents, children influence parents
+            and their teachers, and parents influence their
+            children and teachers as well.
+        </p>
+
+        <p>
+            Foucault (2009) defines the institution as a
+            place where power is executed through discipline,
+            order is maintained and children and young
+            people are prepared for coexistence, thus being
+            the phenomenon of first-class children. childhood
+            in the school context and the relational triad that
+            is generated begins to direct the family also as an institution, which maintains power, exercises the
+            same power, and reproduces it constantly.
+        </p>
+
+        <p>
+            A second interest of this research, after
+            power relations, is to account for the existence of
+            technologies of the self, defined by Foucault (2005)
+            as the techniques that allow individuals to carry
+            out operations on their own bodies, souls, thoughts
+            and behaviors and this in a way that achieves the
+            transformation of himself until reaching a state of
+            happiness. According to Foucault, technologies
+            are also made up of practices, which is why
+            the verbalizations provided by children will be
+            contrasted to identify the configuration of their selfcare practices with Foucault's conceptualization.
+        </p>
+
+        <p>
+            At first it is necessary to identify if the children
+            carry out self-care practices and of what kind. The
+            findings suggest that children carry out practices that
+            are considered proper of self-care, despite this, they
+            do not have sufficient evidence of being their own
+            products or evidence that they are not reinforced by
+            parents and teachers and when they stop reinforcing
+            these are lost from the behavioral repertoire.
+        </p>
+
+        <p>
+            Even so, an attempt is made to give a complete
+            vision, since the technologies of whether they are not
+            independent actions, they are dimensioned actions
+            that require other executions. In the first moment
+            of the classification based on Foucault's theoretical
+            support, we will talk about those practices in children
+            that account for their ability to evaluate themselves.
+            In the presentation of the comics, the children
+            showed the capacity for self-reflection oriented to
+            aspects close to the domain of the body, that is, body
+            postures, punishments, non-verbal expressions of
+            affection, spatial location, which can be interpreted
+            as a derivation of the relationship disciplinary power
+            to which they are mediated, this implies that they are
+            recognized as a subject body. However, the children,
+            identified the concern and the ability to think within
+            the comic, which implies that its construction of the
+            mind subject can be facilitated and explored.
+        </p>
+
+        <p>
+            Continuing with another type of practice, there
+            is the execution of norms and habits; children, due
+            to the two contexts in which they are involved and
+            the power relations between these contexts, flow
+            in an endless amount of demands, therefore, they
+            recognize the existence of norms so that the world
+            has an order. Children respect these norms, the more
+            they recognize that these norms are external and not
+            their own and await the approval and confirmation
+            of the adult to carry them out; they also recognize
+            that breaking a standard has consequences and this
+            gives a notion of knowledge of the world.
+        </p>
+
+        <p>
+            Practices oriented to the ability to face the
+            world and be independent in children are limited;
+            children suggest the need for an adult to be able to
+            survive in the world, however, in the presence of
+            adults, children little by little in their development
+            are acquiring skills that make them feel independent
+            and their own. In this way, the capacity for selfgovernment is also affected, since if the child does
+            not recognize the ability to face the world, they will
+            not identify options to critically decide and influence
+            their reality. Among the findings, it was evidenced
+            that children recognize the power of long-term
+            decisions, but still do not measure the effects of their
+            actions at any other level.
+        </p>
+
+        <p>
+            Foucault clearly states that whoever cares for
+            himself must seek a state of health (Foucault, 2005).
+            Children in relation to the care of their body have
+            the behavioral repertoire that their adults - parents
+            and teachers - have exercised and recognize habits
+            of hygiene, grooming, the importance of physical
+            activity, food, among others. This is an encouraging
+            principle for the time to inquire about self-practices,
+            being that, if children value their body and healthy
+            physical state, they will have the basis to continue with
+            the development of thought for the benefit of their
+            life and achieve coherent modes of subjectivation.
+        </p>
+
+        <p>
+            On the other hand, you cannot pretend that you
+            take care of yourself, when you forget the other
+            (Foucault, 2005). The other, for the children of the
+            institution, not only translates into other children, they register as part of those others, their parents,
+            teachers and other adults, not only their peers and
+            companions, they even recognize those children
+            as existing subjects with whom they do not share
+            physical space and see each other for a few minutes
+            a day. Children interpret the suffering in others and
+            feel empathy for them, give help and let their adults
+            know if they do not have the solution. However, they
+            hit, hurt and offend their peers, but this makes sense
+            in the power relations that they also exercise within
+            their group and seek to adapt in the best way to their
+            immediate environment.
+        </p>
+
+        <p>
+            When inquiring about self-care practices in
+            children of the institution, a series of actions appear
+            vaguely that can be associated as such, however,
+            although they are intended to improve the situation
+            of children, these are still the result of the influence
+            of disciplining technologies in the relational triad
+            of power from the family and the initial education
+            institution. These are altered as significant adults
+            establish their usefulness and benefit in the lives of
+            children.
+        </p>
+
+        <p>
+            In summary, it is the adult who structures said
+            practices from their knowledge, but these cannot yet
+            be established as technologies of the self in the strict
+            sense of the concept, since they do not contain the
+            main component, that is, that they are developed and
+            executed with will. own from the life expectancies
+            that the subject presents. Despite the above, the
+            fact that although in the early years, these actions
+            cannot be interpreted as technologies of the self,
+            does not mean that these are not being configured
+            in the subject, it is likely that the construction of
+            technologies of the self is also It is influenced by
+            cognitive and physical development, which can
+            show another type of development in the following
+            stages of the life cycle (García et al., 2020).
+        </p>
+
+
+        <!-- Conclusiones -->
+        <hr>
+
+        <p class="titulo"> Conclusions</p>
+        <p>
+            Currently, adult caregivers of children, to
+            guarantee an integral development as defined by
+            the national policies for childhood and adolescence, carry out a number of training practices that remain in
+            coherence with what is established at a sociocultural
+            level on what is expected to be achieved in the
+            first stage of the life cycle and how appropriate
+            development affects the rest of their lives. With
+            respect to the above, parents within the family
+            context carry out daily actions aimed at training,
+            the most common being the interest in generating
+            healthy grooming and hygiene habits, eating habits,
+            schoolwork habits and the regulation of behavior.
+        </p>
+
+        <p>
+            Parents in their concern to ensure the well-being
+            of their children, from the first years incorporate
+            a second training entity where initial education is
+            practiced. This is known as Comprehensive Early
+            Childhood Care based on the legal framework of Law
+            1098 of 2006, Code of childhood and adolescence.
+            These spaces work on the basis of early childhood
+            in relation to the guarantees of rights and integral
+            development. The conditions of these programs are
+            clear, raising their interest in three basic aspects in
+            children, nutrition, protection, and education. From
+            the previous proof, variants of actions are also
+            carried out so that children are formed from their
+            institutional ideals.
+        </p>
+
+        <p>
+            By analyzing in detail the parenting practices
+            in both environments, educational and family, they
+            respond to disciplinary actions based on the norm
+            and control of behavior. Parents and educational
+            agents are involved to ensure that their children and
+            students stay within the norm since when they learn
+            it from a young age, their interaction with the world
+            and their reality will be more adaptive. However,
+            children, whether in the capacity of children or
+            students, initiate behaviors of resistance to this
+            discipline, seeking other forms of relationship with
+            their authority figures.
+        </p>
+
+        <p>
+            The discourses that maintain current practices
+            are the product of the socio-historical construction
+            of adults and their individual relationship with
+            the real context. Thus, control behaviors such as
+            physical punishment are still maintained, even
+            when child protection policies seek to eliminate this corrective model, employing others that increase
+            self-reflection, promoting self-esteem and positive
+            family relationships. The persistent thought in adults
+            is that their children need to be trained, they require
+            a structure, they demand guidance and their position
+            as parents and teachers is to be regulators of said
+            structure to guarantee the well-being of children and
+            a better future.
+        </p>
+
+        <p>
+            The involvement of the school in the first years
+            of life, has modified the participation of parents as
+            training agents through power relations; The school
+            also functions as a regulator of parents' actions to
+            guarantee comprehensive development. The school
+            is based on academic principles and knowledge
+            related to the legal aspect as part of its speeches
+            and truth devices. The early childhood school as an
+            institution promotes disciplinary actions in relation
+            to the academic and political approaches of today's
+            society, hence, its discursive position in the evolution
+            of the life cycle, the guarantee of rights, peaceful
+            coexistence, the common good, among others.
+        </p>
+
+        <p>
+            The excess of control in the family and
+            educational context has generated double-link
+            relationships with feedback in three senses, which
+            has been interpreted in this research as a relational
+            triad where School - Family - Childhood are
+            constructed as particular objects and are configured
+            and they influence each other. In this way, not only
+            the school, for boys and girls, fulfills a function as an
+            institution, but the family begins to become visible
+            as an institution, defined in Foucault's terms, which
+            in relation to the relational triad helps maintain
+            power, exercises the same power and reproduces it
+            constantly.
+        </p>
+
+        <p>
+            The power relations generated from school
+            and family, account for a subject prepared to follow
+            orders, commit to authority and set aside selfinterest to become a “we”, this is due to the fact that
+            children in school They are not executing processes
+            of construction of themselves from their positions
+            and reality, since their reality is configured by adults
+            as shared. Based on this, children in early childhood
+            must have the spaces to doubt themselves and their environment, criticize them and actively participate
+            in their world and their relationships, to leave behind
+            the position of a submissive childhood that only
+            receives and does not is able to give in return and
+            transform.
+        </p>
+
+        <p>
+            One aspect that can facilitate the bonding of
+            early childhood children in the construction of
+            subjectivity and the transformation of reality are the
+            technologies of the self. Self-care practices are part
+            of actions that can be highlighted as technologies of
+            the self, but in children the behaviors that suggest
+            self-care are derived from an entire disposition to the
+            external agent, that is, it is subject to the teaching
+            they provide their adults. Self-care practices in early
+            childhood children exist, but they do not have the
+            relational maturation essential to be considered
+            technologies of the self. Now, with the fact that
+            actions in favor of caring for oneself and the other
+            are made visible, in future tense the infant will be
+            open to the configuration of aspects that promote the
+            development of technologies of the self.
+        </p>
+
+        <p>
+            Finally, it is in the interest of the authors to
+            suggest research that accounts for power relations
+            in children after completing the initial education
+            stage in early childhood and is immersed in another
+            environment: formal education, which supports
+            other interests, powers and meanings. Likewise, it
+            is interesting to be able to apply strategies that favor
+            the technologies of the self from the first years and
+            from initial education, with this the guarantee of the
+            quality of life in the next stages of the life cycle to be
+            established with certainty
+        </p>
+
+
+        <!-- Referencias -->
+
+        <hr>
+
+        <p class="titulo"> References </p>
+
+        <p id="r1">Aguilar Barreto, A., Sanguino, W., Portilla, J., &
+            Benítez, D. (2018). Política pública para la
+            primera infancia: alcances desde su gestión
+            educativa. Revista Espacios, 39(52). </p>
+        <p id="r2">Aguirre-Dávila, E., Morales-Castillo, M., & MorenoVásquez, M. (2021). Parenting, autonomy and
+            academic achievement in the adolescence. Journal of Family Studies, 1-14.</p>
+        <p id="r3">Aguirre-Dávila, E., & Chávez-Plazas, Y. A.
+            (2022). Madres, transmisión cultural de la paz
+            y orden discursivo sobre el cuidado. Revista
+            Latinoamericana de Ciencias Sociales, Niñez
+            y Juventud, 20(3), 1-20. Ariès, P. (1986). La
+            infancia. Revista de Educación, 281, 5-17</p>
+        <p id="r4">de la Nación, P. G. (2006). Código de la infancia y la
+            adolescencia. Bogotá: Colombia</p>
+        <p id="r5">Foucault, M. (2003). El sujeto y el poder. Biblioteca
+            Virtual Universal.</p>
+        <p id="r6">Foucault, M. (2005). La hermeneutica del sujeto/The
+            Hermeneutics of the Subject: Cursos Del College
+            De France, 1981-1982/Lectures at the College
+            De France, 1981-1982 (Vol. 237). Ediciones
+            Akal.</p>
+        <p id="r7">Foucault, M. (2009). Vigilar y castigar: nacimiento
+            de la prisión. Siglo XXI.</p>
+        <p id="r8">Foucault, M. (2011). El gobierno de sí y de los otros:
+            Curso del Collège de France (1982-1983) (Vol.
+            318). Ediciones Akal.</p>
+        <p id="r9">Foucault, M. (2012). Microfísica do poder (v. 25).
+            São Paulo: Graal.</p>
+        <p id="r10">Foucault, M. (2016). Tecnologías del yo y otros
+            textos afines. 12a Impres. Barcelona, Buenos
+            Aires, México: Ediciones Paidós Ibérica, SA.
+        </p>
+        <p id="r11">García, J. L., Heckman, J. J., Leaf, D. E., & Prados,
+            M. J. (2020). Quantifying the life-cycle benefits of
+            an influential early-childhood program. Journal
+            of Political Economy, 128(7), 2502–2541.</p>
+        <p id="r12">Habermas, J. (2019). Perfiles filosófico-políticos.
+            Taurus. </p>
+        <p id="r13">Habermas, J. (2018). Philosophical introductions:
+            Five approaches to communicative reason. John Wiley & Sons.
+        </p>
+        <p id="r14">Recas Bayón, J. (2007). Hacia una hermenéutica
+            crítica: Gadamer, Habermas, Apel, Vattimo,
+            Rorty, Derrida y Ricoeur. Biblioteca nueva.</p>
+        <p id="r15">Restrepo-Segura, C., & García-Peña, J. J. (2021). El
+            agente educativo en la garantía de la protección
+            integral de la primera infancia. El Ágora USB,
+            21(1), 386-401.
+        </p>
+        <p id="r16">Sandoval Casillimas, C. (2011). Investigación
+            cualitativa. Programa de investigación en teoría
+            y métodos y técnicas de investigación social.
+            ICFES- ARFO Editores.
+        </p>
+        <p id="r17">Taylor, S. J., Bogdan, R., & DeVault, M. (2015).
+            Introduction to qualitative research methods: A
+            guidebook and resource. John Wiley & Sons.</p>
+        <p id="r18">Urízar Herrera, G. C. (2019). El cuerpo disciplinado
+            y el ocaso de la libertad: Análisis del hospital
+            psiquiátrico y la escuela en el pensamiento de
+            Michel Foucault. Sincronía, 75, 104–128.</p>
+
+
+    </div>
+
+</body>
+
+</html>

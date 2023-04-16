@@ -1,0 +1,1131 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V19-N3-7</title>
+    <link rel="stylesheet" href="">
+    <style>
+        body {
+            padding: 10em;
+            padding-top: 20px;
+            font-family: Times New Roman;
+            color: black;
+        }
+
+        #articulo-derecha {
+            float: left;
+        }
+
+        /* Posiciones de los resumenes */
+
+        .contenedor-general {
+            display: inline-flex;
+            width: 100%;
+        }
+
+        .contenedor-resumen {
+            width: 240%;
+        }
+
+        .contenedor-autor {
+            width: 100%;
+            padding-left: 20px;
+        }
+
+        .hr-resumen {
+            background-color: gray;
+            margin: 0;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .resumen-fondo {
+            background-color: #bdd5f1;
+            border-radius: 5px;
+        }
+
+        .titulo-resumen {
+            color: black;
+            font-size: 22px;
+            font-weight: bold;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .texto-resumen {
+            padding: 20px;
+            margin: 0;
+        }
+
+        ul.navbar {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 25em;
+            left: 2em;
+            width: 250px;
+        }
+
+        /* Titulos principales */
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: Times New Roman;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        h1 {
+            color: #29abe3;
+        }
+
+        .categoria_titulo {
+            font-style: italic;
+            color: #ffffff;
+        }
+
+        h3 {
+            font-style: italic;
+            font-weight: bold;
+            color: #707073;
+        }
+
+        .categoria {
+            text-align: center;
+            background-color: #707073;
+            width: 20%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            margin: auto;
+        }
+
+        ul.navbar li {
+            background: white;
+            margin: 0.5em 0;
+            padding: 0.3em;
+        }
+
+        /* Enlaces */
+
+        a.link-color:visited {
+            color: white;
+        }
+
+        a.link-color:link {
+            color: white;
+        }
+
+        a.link-color:hover {
+            color: white;
+        }
+
+        a.link-color:hover {
+            border-bottom: 1px solid;
+            background: black;
+        }
+
+        /* Link de referencia */
+
+        a:link {
+            color: #4e00ff;
+        }
+
+        a:visited {
+            color: #003bff;
+        }
+
+        a:focus {
+            border-bottom: 1px solid;
+            background: #98aae4;
+        }
+
+        a:hover {
+            border-bottom: 1px solid;
+            background: #aacefe;
+        }
+
+        /* Etiqueta P */
+
+        p {
+            line-height: normal;
+            text-align: justify;
+            font-size: 18px;
+        }
+
+        p.titulo {
+            color: #29abe3;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        p.subtitulo {
+            color: #29abe3;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* NUEVO */
+        p.subtitulo-segundo {
+            color: #29abe3;
+            font-style: italic;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        p.correspondencia {
+            color: black;
+            font-size: 18px;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        /* NUEVO */
+        p.entrevista {
+            color: black;
+            font-size: 18px;
+            font-style: italic;
+        }
+
+        /* NUEVO */
+        p.subtitulo-tercero {
+            color: #29abe3;
+            font-style: italic;
+            font-size: 18px;
+        }
+
+        p#cabeza {
+            color: #1d71ae;
+            text-align: center;
+        }
+
+        p.autores {
+            font-size: 16px;
+            margin: 0;
+            text-indent: 0em;
+            margin-bottom: 10px;
+        }
+
+        p.forma-citar {
+            text-indent: 0em;
+            text-align: justify;
+            justify-content: center;
+        }
+
+        .cita {
+            text-align: -webkit-center;
+        }
+
+        /* Bold especial para palabras que tienen color seguido de dos puntos
+*/
+
+        /* NUEVO */
+
+        b.subtitulo-segundo {
+            color: #29abe3;
+            font-size: 18px;
+        }
+
+        .contenedor_info {
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .info {
+            width: auto;
+        }
+
+        /* Este es para los documentos del dos en adelante *codigo abajo de este comentario* */
+
+        .info-text {
+            text-align: end;
+            margin: 0;
+        }
+
+        /* Uso Exlusico para el primero documento  que es de revision  *codigo abajo de este comentario* */
+
+        .info_text {
+            font-size: 12px;
+            line-height: 100%;
+            text-align: center;
+            margin: 0;
+        }
+
+        .info_hr {
+            margin: 5;
+        }
+
+        /* Fin P */
+        /* Etiqueta Italic */
+
+        i {
+            font-size: 18px
+        }
+
+        i.centrado {
+            font-size: 18px
+        }
+
+        /* LI para las listas */
+
+        li {
+            font-size: 18px;
+            padding-top: 10px;
+            text-align: justify;
+        }
+
+        /* NUEVO */
+        .lista li {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        hr {
+            background-color: #29abe3;
+            height: 1px;
+        }
+
+        /* Tablas */
+
+        table {
+            border-collapse: collapse;
+            border: 2px solid rgb(0, 0, 0);
+            align-items: center;
+        }
+
+        thead th {
+            border-collapse: collapse;
+            background-color: rgb(179, 179, 179);
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        tbody td {
+            border-collapse: collapse;
+            text-align: center;
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        .tipo {
+            color: #ffffff;
+            font-size: 22px;
+            border-radius: 10px 5px 10px 5px;
+            background-color: #696969;
+        }
+
+        img.logos {
+            width: 15px;
+            height: 15px;
+        }
+
+        .image {
+            text-align: center;
+            image-rendering: optimizeQuality;
+        }
+
+        .image p {
+            text-align: center;
+            font-size: small;
+        }
+
+        .logo {
+            width: 300px;
+            height: 80px;
+        }
+
+        .logo2 {
+            width: 300px;
+            height: 50px;
+        }
+
+        /* Anclajes de la pagina */
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* NUEVO */
+        .ecuacion {
+            text-align: center;
+            font-weight: bold;
+            margin: 1px;
+        }
+
+        @media only screen and (min-width:320px) and (max-width:900px) {
+            body {
+                width: 100%;
+                padding: 5em;
+                margin: 5px;
+            }
+
+            .image {
+                text-align: center;
+                image-rendering: optimizeQuality;
+            }
+
+            .image img {
+                width: 100%;
+            }
+
+            .image p {
+                font-size: small;
+                text-align: center;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="contenedor_info">
+        <div>
+            <img src="img/globales/logo.jpg" alt="" height="125px">
+        </div>
+        <div class="info" style="text-align: right;">
+            <p class="info-text"> ISSN-PRINT 1794-9831 / E-ISSN 2322-7028 </p>
+            <p class="info-text"> Vol. 19 Nº 3 / sep - dic, 2022 / Cúcuta, Colombia. </p>
+            <p class="info-text">
+                <img src="img/globales/doi.png" height="20px" alt="">
+                <a href="https://doi.org/10.22463/17949831.3275">https://doi.org/10.22463/17949831.3275</a>
+            </p>
+        </div>
+    </div>
+
+
+    <!--Categoría-->
+    <div class="categoria">
+        <h2 class="categoria_titulo">Original </h2>
+    </div>
+
+    <h1> Efectividad de intervención educativa en conocimientos sobre
+        VIH y adherencia terapéutica antirretroviral </h1>
+
+    <h2 class="segundo"> Effectivity of an educational intervention on HIV knowledge and adherence to
+        antiretroviral therapy</h2>
+
+    <h2 class="segundo"> Efetividade da intervenção educacional no conhecimento sobre HIV e adesão
+        terapêutica antirretroviral</h2>
+
+
+    <!--Autores-->
+    <h3>
+        Pavel Rodríguez-Bustamante <sup><a href="#sup1">1*</a> </sup> <br>
+        Esmeralda Rico-Pérez <sup><a href="#sup2">2*</a> </sup> <br>
+        Carmen Jazmin Mayorquin-Muñoz <sup><a href="#sup3">3*</a> </sup> <br>
+        Francisco Javier Báez-Hernández <sup><a href="#sup4">4*</a> </sup> <br>
+        Ulises Benjamín Delgadillo-Breceda <sup><a href="#sup5">5*</a> </sup> <br>
+    </h3>
+
+
+    <!-- Conetenedor de las columnas de la descripciones de los autores, correspondencia de autor 
+    y los resumenes -->
+    <div class="contenedor-general">
+
+
+        <!-- Contenedor de los resumenes -->
+        <div class="contenedor-resumen">
+
+            <!-- Resumen Español -->
+
+            <div class="resumen-fondo">
+                <p class="titulo-resumen"> Resumen</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> <b>Introducción:</b> La infección por el virus de la inmunodeficiencia humana
+                    figura como uno de
+                    los mayores retos de salud pública, por lo que el conocimiento sobre la enfermedad y la adherencia a
+                    la terapia antirretroviral en personas que viven con VIH, son elementos cruciales
+                    para mitigar las secuelas sanitarias de la epidemia. <b>Objetivo:</b> Evaluar la efectividad de una
+                    intervención educativa para incrementar el nivel de conocimientos sobre VIH y fomentar la
+                    adherencia terapéutica antirretroviral en personas que padecen de VIH. <b>Materiales y métodos:</b>
+                    Estudio pre-experimental sin grupo de control, en el que participaron 10 personas que
+                    tienen VIH bajo tratamiento antirretroviral, a través de un muestreo no probabilístico por
+                    bola de nieve. La intervención se desarrolló en tres etapas, con tres sesiones. Se aplicaron
+                    dos instrumentos: un cuestionario diseñado ex profeso para medir el conocimiento sobre
+                    VIH, evaluado pos-intervención mediante la prueba Wilcoxon y el test Morisky-Green para
+                    medir la adherencia terapéutica, analizada a través de la prueba t de Student de muestras
+                    emparejadas. <b>Resultados:</b> En la etapa diagnóstica, el 100% de la muestra presentó niveles
+                    bajos de conocimientos sobre VIH y no adherencia terapéutica. Al finalizar la intervención,
+                    el 90% de los participantes incrementó el nivel de conocimientos y el 70% eran adherentes a
+                    la terapia, ambos resultados con diferencias estadísticamente significativas (p=.004; p=.005).
+                    <b>Conclusiones:</b> La intervención educativa demostró ser efectiva en el incremento del nivel de
+                    conocimientos sobre VIH y fomentó la adherencia a la terapia antirretroviral.
+                </p>
+
+                <p class="texto-resumen">
+                    <b>Palabras Claves: </b> Atención de enfermería; Educación en salud; VIH; Terapia antirretroviral
+                    altamente activa.
+                </p>
+            </div>
+            <!-- Resumen Inglés -->
+
+            <div>
+                <p class="titulo-resumen"> Abstract</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> <b>Introduction:</b> The infection caused by the human immunodeficiency virus
+                    figures as one
+                    of the greatest challenges for public health, therefore, knowledge about the disease and the
+                    adherence to antiretroviral therapy for people who live with HIV, are crucial elements to
+                    mitigate health effects of this epidemic. <b>Objective:</b> Evaluate the effectivity of an
+                    educational intervention to increase the level of knowledge on HIV and encourage the adherence to
+                    antiretroviral therapy in people who have HIV. <b>Materials and methods:</b> Pre-experimental
+                    study with no control group, with the participation of 10 people with HIV on antiretroviral
+                    treatment, through the non-probability method of snowball sampling. The intervention was
+                    developed in three stages, with three sessions. Two instruments were applied: a questionnaire
+                    designed expressly to measure knowledge on HIV, evaluated post-intervention through the
+                    Wilcoxon signed-rank test and the Morisky-Green test to measure the therapeutic adherence,
+                    analyzed through a t-test of paired samples. <b>Results:</b> in the diagnostic stage, 100% of the
+                    sample showed low levels of knowledge on HIV and no therapeutic adherence. At the end of the
+                    intervention, 90% of the participants increased their level of knowledge and 70% where adherent to
+                    therapy, both results with significant statistical differences (p=.004; p=.005). <b>Conclusions:</b>
+                    The educational intervention demonstrated to be effective by increasing the level of
+                    knowledge on HIV and encouraging the adherence to antiretroviral therapy.</p>
+
+                <p class="texto-resumen">
+                    <b>KeyWords:</b> Nursing care; Health education; HIV; Highly active antiretroviral therapy
+                </p>
+            </div>
+            <!-- Resumen Portuguez -->
+
+            <div class="resumen-fondo">
+                <p class="titulo-resumen"> Resumo</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> <b>Introdução:</b> A infecção pelo vírus da imunodeficiência humana é um dos
+                    maiores
+                    desafios à
+                    saúde pública, por isso o conhecimento sobre a doença e a adesão à terapia antirretroviral em
+                    pessoas vivendo com HIV são aspectos fundamentais para mitigar as consequências para a
+                    saúde pública da epidemia. <b>Objetivo:</b> Avaliar a eficácia de uma intervenção educacional para
+                    aumentar o nível de conhecimento sobre o HIV e promover a adesão terapêutica antirretroviral em
+                    pessoas que sofrem de HIV. <b>Materiais e métodos:</b> Estudo pré-experimental sem grupo
+                    controle, no qual participaram 10 pessoas com HIV sob tratamento antirretroviral, empregando-se
+                    amostragem não probabilística. A intervenção foi desenvolvida em três etapas, com três
+                    sessões. Foram aplicados dois instrumentos: um questionário projetado especificamente para
+                    medir o conhecimento sobre o HIV, avaliado após a intervenção pelo teste de Wilcoxon e o
+                    teste Morisky-Green para medir a adesão terapêutica, analisado através do teste t de Student
+                    de amostras emparelhadas. <b>Resultados:</b> Na fase diagnóstica, 100% da amostra apresentou
+                    baixos níveis de conhecimento sobre HIV e não adesão terapêutica. Ao final da intervenção,
+                    90% dos participantes aumentaram o nível de conhecimento e 70% foram adeptos à terapia,
+                    ambos resultados com diferenças estatisticamente significativas (p= 0,004; p = 0,005).
+                    <b>Conclusões:</b> A
+                    intervenção educacional mostrou-se eficaz no aumento do nível de conhecimento
+                    sobre o HIV e promoveu a adesão à terapia antirretroviral.
+                </p>
+
+                <p class="texto-resumen">
+                    <b>Palavras-chave:</b> Cuidados de enfermagen; Educação em Saúde; HIV; Terapia antirretroviral de
+                    alta atividade.
+                </p>
+            </div>
+
+
+
+        </div>
+
+        <!-- Descripcion de autores, Aprobado, Como citar, licencia -->
+        <div class="contenedor-autor">
+            <!-- Autores -->
+            <div>
+                <p class="subtitulo" style="color: black; font-size: 18px;">Autor de correspondencia*</p>
+                <!-- 1 -->
+                <p class="autores" id="sup1"><sup>1*</sup><img class="logos" src="img/globales/sobre.png"> Licenciado en
+                    Enfermería, Maestro
+                    en Enfermería. Enfermero asistencial,
+                    Instituto Mexicano del Seguro Social.
+                    Sonora, México.
+                    <a href="mailto:pavel_brp@hotmail.com">pavel_brp@hotmail.com</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0003-0551-9947">0000-0003-0551-9947</a>
+                </p>
+                <!-- 2 -->
+                <p class="autores" id="sup2"><sup>2*</sup><img class="logos" src="img/globales/sobre.png"> Licenciada en
+                    Enfermería, Maestra en
+                    Enfermería. Enfermera asistencial, Hospital Angeles Puebla. Puebla, México.
+                    <a href="mailto:esmericoo.er@gmail.com">esmericoo.er@gmail.com</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0003-3852-4793">0000-0003-3852-4793</a>
+                </p>
+                <!-- 3 -->
+                <p class="autores" id="sup3"><sup>3*</sup><img class="logos" src="img/globales/sobre.png"> Licenciada en
+                    Enfermería, Maestra en
+                    Enfermería. Puebla, México.
+                    <a href="mailto:jazz_fly18@hotmail.com">jazz_fly18@hotmail.com</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0001-6415-738X">0000-0001-6415-738X</a>
+                </p>
+                <!-- 4 -->
+                <p class="autores" id="sup4"><sup>4*</sup><img class="logos" src="img/globales/sobre.png"> Licenciado en
+                    Enfermería, Maestro
+                    en Ciencias de Enfermería, Doctor en
+                    Ciencias de Enfermería. Profesor investigador, Benemérita Universidad
+                    Autónoma de Puebla. Puebla, México.
+                    <a href="mailto:javier.baez@correo.buap.mx">javier.baez@correo.buap.mx</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0003-4986-6596">0000-0003-4986-6596</a>
+                </p>
+                <!-- 5 -->
+                <p class="autores" id="sup5"><sup>5*</sup><img class="logos" src="img/globales/sobre.png"> Licenciado en
+                    Enfermería, Maestro en
+                    Enfermería. Doctorando en Ciencias de
+                    Enfermería, Universidad de Guanajuato. Guanajuato, México.
+                    <a href="mailto:ub.delgadillobreceda@gmail.com">ub.delgadillobreceda@gmail.com</a>, <img
+                        class="logos" src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0002-7034-13242">0000-0002-7034-13242</a>
+                </p>
+            </div>
+
+            <!--Recibido y aprobado-->
+            <div>
+                <p><b>Recibido: </b> 26 mayo 2022 <br> <b>Aprobado: </b> : 14 agosto 2022 </p>
+            </div>
+
+            <!-- Como citar -->
+            <div class="cita">
+                <p class="forma-citar autores"><b>Para citar este artículo / To reference this article / Para citar este
+                        artigo:</b> Rodríguez-Bustamante P, RicoPérez E, Mayorquin-Muñoz CJ,
+                    Báez-Hernández FJ, Delgadillo-Breceda UB. Efectividad de intervención
+                    educativa en conocimientos sobre VIH
+                    y adherencia terapéutica antirretroviral. 2022; 19(3):67-74 <a
+                        href="https://doi.org/10.22463/17949831.3275">https://doi.org/10.22463/17949831.3275</a> </p>
+            </div>
+
+            <!--Licencia-->
+            <br>
+            <div>
+                <p class="autores "> &#169; Universidad Francisco de Paula Santander.
+                    Este es un artículo bajo la licencia CC-BY-NC-ND
+                    <br>
+                    <a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img
+                            alt="Licencia Creative Commons" style="border-width:0"
+                            src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Cuerpo del documento -->
+    <div>
+        <hr>
+        <!--Introducción-->
+        <p class="titulo"> Introducción</p>
+
+        <p>
+            La infección por el virus de la inmunodeficiencia humana (VIH) figura como uno de los mayores retos de
+            salud pública en el mundo (1). Esta enfermedad infecta
+            las células y debilita los sistemas de defensa a medida
+            que la infección avanza, arremete contra los linfocitos
+            CD4 interrumpiendo el adecuado funcionamiento de la
+            inmunidad, lo que origina un deterioro gradual y una
+            consecuente situación de inmunodeficiencia humana
+            (2).
+        </p>
+
+        <p>
+            Para el cierre del año 2020, se contaba con 37.7 millones de personas que viven con VIH (PVV) en todo el
+            mundo, de las cuales 1.5 millones contrajeron la infección ese mismo año. Para el cierre de junio 2021 solo
+            28.2 millones tenían acceso a la terapia antirretroviral
+            de gran actividad (TARGA) (3). En México el panorama no es distinto, puesto que a finales del 2021 se
+            notificaron 328,791 PVV, de las que 13,139 fueron nuevos
+            casos y el número de defunciones relacionadas al virus
+            en 2019 fue de 5,281 individuos; en relación con este
+            fenómeno, una de las entidades federativas con mayor
+            número de casos en el país es el estado de Puebla, que
+            figura en el sexto puesto con 15,035 PVV (4). En términos porcentuales, las PVV en México representan el
+            0.06% de la población (5), por lo que, al ser una minoría social, es un grupo que se caracteriza por hacer
+            frente a múltiples problemas emocionales como el estrés,
+            la ansiedad y la depresión, los cuales constituyen una
+            gran amenaza para la salud física, mental y el seguimiento de la adherencia a la TARGA (6,7).
+        </p>
+
+        <p>
+            Se debe precisar que a pesar de los grandes avances
+            en materia de salud, el VIH sigue generando muchas
+            secuelas sanitarias, siendo la principal medida de éxito
+            para su tratamiento y control la aplicación de la TARGA, dado que a través de la supresión viral se ha
+            logrado disminuir ampliamente la mortalidad relacionada
+            con esta enfermedad (8,9). A propósito, el Programa
+            Conjunto de las Naciones Unidas sobre el VIH/Sida a
+            nivel internacional, ha promovido los objetivos 90-90-
+            90 con la finalidad de poner fin a la epidemia, al reducir
+            la cantidad de VIH presente en el cuerpo de las PVV
+            hasta niveles indetectables y así mejorar la salud. Por
+            eso, para evitar la propagación del virus, se ha implementado la terapia antirretroviral (10).
+        </p>
+
+        <p>
+            En virtud de lo expuesto anteriormente, la evidencia
+            disponible demuestra que esta terapia tiene mejores
+            resultados en presencia de la adherencia al tratamiento, puesto que se perfecciona de manera considerable
+            el pronóstico, reduciendo la incidencia de infecciones oportunistas y la frecuencia de hospitalizaciones
+            (6,7,11). No obstante, la no adherencia a la TARGA se
+            ha vuelto un problema a nivel mundial, puesto que a
+            pesar de su efectividad clínica, la falta de cumplimiento de los tratamientos farmacológicos se ven
+            afectados
+            por: estigmas sociales, problemas emergentes de salud
+            mental, efectos secundarios al medicamento, falta de
+            apoyo social e instrucción sobre la enfermedad; por
+            tanto, estas situaciones propician la resistencia vírica
+            y comprometen la efectividad medicamentosa (7,9).
+            Ante este escenario es imprescindible destacar la labor
+            del personal sanitario en la elaboración de estrategias
+            educativas para abordar oportunamente a las PVV, en
+            aras de promover la salud, mantener y mejorar la calidad y expectativas de vida (12).
+        </p>
+
+        <p>
+            Se ha reportado que una de cada cuatro PVV tiene un
+            nivel de instrucción bajo referente a su enfermedad
+            (13), por lo que la ruta idónea para asistir y facilitar la
+            promoción de la salud en términos personales y colectivos son las intervenciones educativas (7,14,15). Como
+            consecuencia, algunos estudios realizados en México,
+            Portugal y Tanzania han demostrado que la ejecución
+            de intervenciones psicoeducativas bajo un enfoque conductista han sido útiles para mejorar el conocimiento
+            de la patología y la adherencia terapéutica (7,9,15,16).
+            De igual manera, diversos autores han realizado programas de intervención cognitivos, obteniendo resultados
+            favorables en cuanto al nivel de conocimientos
+            sobre VIH y la adherencia a la TARGA (11,17,18). Al
+            respecto, un estudio realizado en Cuba (18) desarrolló
+            un programa educativo, a través de un modelo metodológico, cuyo seguimiento sistematizado de pasos como
+            guías procedimentales para la actuación, logró efectos
+            favorables orientados al conocimiento sobre el VIH y
+            la concientización en torno a una óptima adherencia al
+            tratamiento farmacológico.
+        </p>
+
+        <hr>
+
+        <p class="titulo">Objetivo general</p>
+
+        <p>
+            Evaluar la efectividad de una intervención educativa
+            basada en el modelo PRECEDE (19,20), para incrementar el nivel de conocimientos sobre VIH y fomentar la
+            adherencia a la TARGA en PVV.
+        </p>
+
+        <hr>
+
+        <p class="titulo">Materiales y Métodos</p>
+
+        <p>
+            Para el desarrollo de la intervención educativa, se realizó un estudio pre-experimental pre-test y pos-test
+            sin
+            grupo de control (21), con un muestreo no probabilístico por bola de nieve, respecto al difícil acceso de
+            las
+            PVV (22). El universo de estudio se integró por 10 elementos, localizados a través de dos participantes
+            clave,
+            quienes facilitaron el proceso de reclutamiento bajo los
+            siguientes criterios de selección: personas de ambos sexos, mayores de 18 años, residentes del estado de
+            Puebla (México), con diagnóstico no mayor a un año, bajo
+            tratamiento antirretroviral, que supieran leer, escribir y
+            aceptaran participar en el estudio. Se excluyó a quienes
+            no desearon participar en la investigación.
+        </p>
+
+        <p>
+            En términos metodológicos, el estudio se dividió en
+            tres bloques, según lo propuesto por el modelo PRECEDE (19), siendo un instrumento que permite diagnosticar
+            necesidades educativas para la formulación de
+            planes tendientes a la modificación de conductas y la
+            ampliación del conocimiento (20). A continuación se
+            muestra el proceso que se siguió: 1) etapa diagnóstica (pre-test), sirvió para medir la primera variable de
+            estudio, relacionada con el nivel de conocimientos sobre VIH. Con este propósito se aplicó un cuestionario
+            diseñado ex profeso, en función de la literatura científica disponible y posteriormente se sometió a
+            revisión
+            por parte de expertos. Este pre-test está conformado
+            por dos apartados: el primero aborda datos personales como sexo, edad, estado civil y escolaridad; y el
+            segundo está integrado por diez reactivos con opción
+            de respuesta múltiple, asignando valores de cero a las
+            respuestas incorrectas y uno a las correctas; del mismo
+            modo, se consideró como no aprobado a puntajes iguales o menores de cinco y aprobado a puntajes iguales
+            o mayores de seis. Asimismo, se clasificó como bajo
+            conocimiento a puntajes de 0 a 5, regulares a valores de
+            6 a 7 y buenos a puntajes de 8 a 10.
+        </p>
+
+        <p>
+            En cuanto a la medición de la segunda variable de interés, adherencia a la TARGA, se empleó el Test de
+            Morisky-Green, el cual está conformado por cuatro
+            preguntas dicotómicas de auto reporte con validación
+            en población latina (alfa de Cronbach: 0.82), en donde la persona responde sí/no conforme a su conducta
+            ante el tratamiento antirretroviral. En este sentido, el
+            test considera adherente a la persona que responda negativamente a los reactivos uno, tres y cuatro, y
+            positivamente al reactivo dos, con un puntaje de 0 puntos, y
+            no adherente a puntajes iguales o mayores a 1 (23,24).
+            2) Etapa de planeación e implementación. Los resultados de la primera etapa fueron el punto de partida para
+            la planificación del programa educativo, desarrollado
+            bajo un panorama de estrategias centradas en el participante (25,26), a través de la recepción significativa
+            del aprendizaje, considerándolo como un proceso que
+            posibilita el desarrollo de nuevos conocimientos, mediante la relación sustantiva entre las ideas previas
+            del
+            individuo (identificadas en la etapa diagnóstica) con la
+            información propuesta para el aprendizaje (27,28).
+        </p>
+
+        <p>
+            Por otra parte, la intervención educativa se programó
+            en tres sesiones, con una duración de 40 minutos, respectivamente, una vez a la semana, en semanas
+            consecutivas, con control de lista de asistencia, en un área
+            privada y en un ambiente de tranquilidad y respeto. De
+            manera análoga, la secuencia didáctica se desarrolló a
+            través de enseñanza expositiva, con estrategias pre-instruccionales como planteamiento de objetivos y lluvia
+            de ideas; co-instruccionales como señalizaciones, ilustraciones descriptivas y analogías; y
+            pos-instruccionales mediante preguntas intercaladas (25). La primera
+            sesión se denominó “Conociendo del Virus de la Inmunodeficiencia Humana (VIH)” con la intención de
+            proporcionar información básica sobre la enfermedad,
+            su clasificación, vías de transmisión, cuadro clínico
+        </p>
+
+        <p>
+            y complicaciones. La segunda “Terapia antirretroviral: mejorando la calidad y expectativa de vida” con
+            el propósito de conocer la TARGA, su importancia,
+            mecanismos de acción, tipos de tratamiento y efectos
+            secundarios; y, la tercera “Adherencia terapéutica y su
+            importancia como herramienta de éxito” con el objetivo de reforzar la elementalidad y los beneficios del
+            adecuado seguimiento de la TARGA.
+        </p>
+
+        <p>
+            3) Etapa de evaluación (pos-test). Al finalizar la tercera sesión programada, se aplicó el cuestionario de
+            conocimientos sobre VIH y el Test Morisky-Green, para
+            identificar los cambios generados tras la intervención.
+            Conviene subrayar que el estudio se apegó al Reglamento de la Ley General de Salud en Materia de
+            Investigación de México (29); igualmente, se conservó el
+            anonimato, la confidencialidad de los datos recabados
+            y la integridad de las PVV. Se consideraron los principios de bioética (30), al actuar con autonomía en la
+            toma de decisiones y respetar la libertad de los participantes para abandonar la investigación si así lo
+            deseaban. Además, se rigió a través de los principios de
+            beneficencia, no maleficencia y justicia, puesto que la
+            intervención fue realizada por profesionales de enfermería con capacitación previa en salud sexual,
+            enfocados en promover el bienestar, mediante un trato justo e
+            igualitario. Por último, se cumplió con lo establecido
+            en la Ley General de Protección de Datos personales
+            (31), al solicitar un consentimiento informado, comunicar el objetivo del estudio y describir detalladamente
+            en qué consistiría la intervención y el resguardo de la
+            información.
+        </p>
+
+        <p>
+            El análisis de datos se realizó a través del paquete estadístico Statistical Package for the Social Sciences
+            (SPSS) versión 24 a través del cual se procedió a realizar el análisis descriptivo de los datos
+            sociodemográficos mediante frecuencias y porcentajes, medidas de
+            tendencia central y dispersión. Además, se ejecutó la
+            prueba de bondad de ajuste (Shapiro-Wilk), la prueba
+            no paramétrica Wilcoxon para el pre-test y pos-test del
+            nivel de conocimientos sobre VIH y se corrió la prueba
+            t de Student de muestras emparejadas, para conocer los
+            cambios generados en la adherencia a la TARGA
+        </p>
+
+        <p class="titulo">Resultados</p>
+
+        <p>
+            La muestra se conformó por 10 participantes, de los
+            cuales nueve pertenecían al sexo masculino y una participante al sexo femenino. El promedio de edad fue de
+            26 + 3 años, el estado civil de ocho corresponde a solteros y dos señalaron vivir en unión libre; como
+            máximo
+            grado de estudios predominó el nivel en licenciatura
+            con un 60%.
+        </p>
+
+        <p>
+            En la etapa diagnóstica de la intervención, se observó
+            que el 100% de los participantes obtuvieron puntajes
+            no aprobatorios y presentaron un nivel de conocimientos bajo sobre el VIH (X ̅= 3.7, DE= +.94), y el total
+            no
+            es adherente a la TARGA (X ̅= 1.9, DE= + .73).
+        </p>
+
+        <p>
+            Al determinar la efectividad de la intervención educativa, como se muestra en la Tabla 1, desde el punto de
+            vista descriptivo se identificó que el 90% de los participantes incrementó el nivel de conocimientos
+            referente
+            al VIH (Mdn= 9, R= 2). Con el objeto de soportar el
+            punto de vista inferencial, al no cumplir con el criterio
+            de normalidad, se corrió la prueba Wilcoxon con un
+            efecto favorable y estadísticamente significativo (Z=
+            -2.859, p= .004). En cuanto al nivel de adherencia a
+            la TARGA, también se obtuvieron cambios positivos,
+            puesto que el 70% de la muestra se adhiere a la terapia
+            (X ̅= .40, DE= + .69), en la que, al presentar una distribución normal de datos, se ratificó a través de la
+            prueba
+            t de Student con un valor de t= 3.73, siendo estadísticamente significativo (p= .005).
+        </p>
+
+        <div class="image">
+            <p><b>Tabla 1. </b>Nivel de conocimientos sobre VIH y adherencia a la TARGA</p>
+            <img src="img/V19-N3-7/Screenshot_1.png" width="60%">
+            <p><b>Fuente:</b> Elaboración propia </p>
+        </div>
+
+        <p class="titulo">Discusión</p>
+
+        <p>
+            El presente estudio tuvo el propósito de evaluar la efectividad de una intervención educativa para
+            incrementar
+            el nivel de conocimientos sobre VIH y fomentar la adherencia a la TARGA en PVV. Los datos sociodemográficos
+            recabados permitieron mostrar la predominancia
+            del sexo masculino, resultados similares a los referidos
+            por la Dirección General de Epidemiología (4), donde
+            se señala que la mayoría de las PVV en México son
+            varones. En cuanto a escolaridad predominó el nivel
+            licenciatura, coincidiendo con lo reportado por Neria
+            et al. (9), quienes identificaron preponderancia de educación superior en las PVV sujetos de su
+            intervención.
+            Por lo que se pudiera indicar que los hombres, tienen
+            una baja percepción de susceptibilidad hacia el VIH, lo
+            que se puede relacionar con prácticas sexuales de riesgo, las cuales, son independientes del nivel
+            educativo.
+            Circunstancias que propician la necesidad de realizar
+            actividades de alfabetización en salud.
+        </p>
+
+        <p>
+            En relación al nivel de conocimientos sobre VIH, el estudio mostró bajo nivel de conocimientos de las PVV
+            en torno a su enfermedad, resultado que pudiera deberse a que el grupo de estudio contaba con un diagnóstico
+            reciente (tiempo menor a un año); con respecto a
+            este panorama las PVV se encuentran en un estado de
+            vulnerabilidad y adaptación a la enfermedad (12). De
+            igual manera, el bajo nivel de instrucción con respecto al VIH coincidió con lo referido por Dávila et al.
+            (13), y Ribeiro et al. (15), quienes sustentan que las
+            PVV carecen de dirección y entendimiento sobre su
+            condición actual, lo que puede repercutir en el manejo, así como impactar negativamente en el seguimiento de
+            indicaciones emitidas por el personal de salud.
+            Asimismo, los resultados pos-test coincidieron con los
+            hallazgos de Neria et al. (9), Ribeiro et al. (15), y Quintana et al. (17), en los que se muestra la
+            efectividad de
+            las intervenciones educativas para mejorar los saberes
+            sustantivos referentes a la infección por VIH. Dicho lo
+            anterior, el resultado favorable que se obtuvo puede corresponder a la estimulación de habilidades
+            cognitivas,
+            gracias a la empatía percibida por los participantes, al
+            ser escuchados respecto a sus inquietudes y necesidades durante las tres etapas de la intervención. Es
+            decir,
+            que se demuestra la importancia de la escucha activa y
+            el trato respetuoso por parte del profesional de la salud.
+            En cuanto al nivel de adherencia a la TARGA, al finalizar el estudio se lograron cambios significativos en
+            la
+            mayoría de los participantes, lo que coincide con estudios similares realizados por Rendón y Cerrato (11),
+            Zárate et al. (14), y Pérez et al. (18), quienes demostraron el efecto positivo de las intervenciones
+            educativas dirigidas a promover el mejoramiento en la adherencia terapéutica. Sin embargo, el desarrollo de
+            la
+            intervención fue diferente a lo realizado por Plascencia
+            et al. (7), Neria et al. (9), Ribeiro et al. (15), y Siril
+            et al. (16), quienes implementaron programas educativos con enfoques conductistas en los que se trataron
+            tópicos concernientes al estado emocional de las PVV.
+            No obstante, se encontró similitud con el reporte de sus
+            resultados y el efecto significativo que se consiguió al
+            finalizar la intervención. Por tanto, los resultados permiten sugerir que tanto los programas
+            psicoeducativos
+            como los dirigidos al componente cognitivo, generan
+            cambios favorables en el fomento de la adherencia a
+            la TARGA. Además, permite generar estrategias conducentes a promover la relación entre el sujeto cognoscente
+            (PVV) y el objeto cognoscible (TARGA), a
+            través de espacios informativos sin prejuicios, libres de
+            discriminación, propiciando efectos positivos en los niveles del manejo terapéutico.
+        </p>
+
+        <p>
+            Por último, es importante mencionar que el diseño del
+            estudio, el empleo de un muestreo de tipo no probabilístico y el reducido tamaño muestral minimizan la
+            probabilidad de generalizar los resultados encontrados
+            en esta investigación. De ahí, que es importante resaltar
+            que estos hallazgos pueden propiciar un punto de partida para la formulación de intervenciones específicas
+            dirigidas a esta minoría social en el contexto mexicano,
+            a fin de que estos grupos poblacionales dispongan de
+            herramientas para controlar su enfermedad, contribuir
+            al cumplimiento de los objetivos 90-90-90 (10), prevenir complicaciones y mejorar la calidad y expectativas
+            de vida.
+        </p>
+
+        <!-- conclusiones -->
+
+        <hr>
+
+        <p class="titulo">Conclusión</p>
+
+        <p>
+            Los resultados de este estudio permiten inferir que las
+            intervenciones educativas basadas en el modelo PRECEDE, como estrategias promotoras de la salud, con
+            tres sesiones de 40 minutos de duración cada una, son
+            efectivas e incrementan el conjunto de saberes concernientes al VIH y fomentan la adherencia a la TARGA
+            en los PVV. También se puede agregar, que los hallazgos que se obtuvieron contribuyen, en pequeña escala,
+            al control de la enfermedad, al propiciar cambios que a
+            futuro impactarán positivamente en la supresión de la
+            carga viral, su consecuente indetectabilidad y el comportamiento de la epidemia.
+        </p>
+
+        <p class="subtitulo">Conflicto de intereses</p>
+
+        <p>
+            Los autores declaran no tener ningún conflicto de intereses.
+        </p>
+
+
+
+        <!-- Referencias -->
+
+        <hr>
+
+        <p class="titulo"> Referencias bibliográficas</p>
+
+        <ol>
+            <li id="r1">Jaramillo HA, Acevedo J, Carvajal CM, Lugo AR. Conocimientos sobre el VIH en mujeres
+                embarazadas:
+                estudio exploratorio en dos hospitales de referencia en Venezuela. CIMEL. 2021; 26(2): 5-11. <a
+                    href="https://doi.org/10.23961/cimel.v26i2.1268">https://doi.org/10.23961/cimel.v26i2.1268</a></li>
+            <li id="r2">World Health Organization. HIV/AIDS, key facts [Internet]. 2021 [consultado 30 de noviembre
+                2021]. Disponible en: <a href="https://bit.ly/3Fs4ZBd">https://bit.ly/3Fs4ZBd</a></li>
+            <li id="r3">Joint United Nations Programme on HIV/AIDS. Fact sheet: Global HIV & AIDS statics [Internet].
+                2020 [consultado 10 de septiembre 2021]. Disponible en: <a
+                    href="https://bit.ly/3GvJaC9">https://bit.ly/3GvJaC9</a></li>
+            <li id="r4">Dirección General de Epidemiología. Sistema de vigilancia epidemiológica de VIH: informe
+                histórico día
+                mundial VIH 2021 [Internet]. 2021 [consultado 15 de diciembre 2021]. Disponible en: <a
+                    href="https://bit.ly/3mNjAAH">https://bit.ly/3mNjAAH</a></li>
+            <li id="r5">Comisión Nacional para Prevenir la Discriminación. Ficha temática: personas que viven con VIH
+                [Internet].
+                2017 [consultado 15 de septiembre 2021]. Disponible en: <a href=" https://bit.ly/3B7ROnE">
+                    https://bit.ly/3B7ROnE</a></li>
+            <li id="r6">Estrada S, Hoil DB, Apolinar E, Pérez GI. Resiliencia y adherencia al tratamiento en personas
+                que viven con
+                VIH/SIDA. Apuntes de Psicología [Internet]. 2021 [consultado 17 de septiembre 2021]; 39(1): 3-7.
+                Disponible en: <a href="https://bit.ly/3FffhWH">https://bit.ly/3FffhWH</a></li>
+            <li id="r7">Plascencia JC, Chan EC, Matsui OJ, Salcedo JM. Intervención psicoeducativa-multidisciplinar
+                sobre la adherencia al tratamiento en pacientes con VIH de una asociación civil en Guadalajara, México.
+                Pensamiento
+                Psicológico. 2021; 19(1). <a
+                    href="https://doi.org/10.11144/Javerianacali.PPSI19.ipma">https://doi.org/10.11144/Javerianacali.PPSI19.ipma</a>
+            </li>
+            <li id="r8">Varela M, Galdames S. Depresión y adhesión a terapia anti-retroviral en pacientes con infección
+                por VIH
+                atendidos en el Hospital San Pablo de Coquimbo, Chile. Revista chilena de infectología [Internet]. 2014
+                [consultado 15 de septiembre 2021]; 31(3): 323-328. Disponible en: <a
+                    href="https://bit.ly/3Da538e">https://bit.ly/3Da538e</a></li>
+            <li id="r9">Neria R, Sánchez JJ, Riveros A. Psicoeducación para la adherencia al tratamiento
+                antirretroviral: la metáfora
+                del reloj de arena. Psicología y Salud [Internet]. 2020 [consultado 16 de septiembre 2021]; 30(2):
+                217-229.
+                <a href="https://doi.org/10.25009/pys.v30i2.2656">https://doi.org/10.25009/pys.v30i2.2656</a>
+            </li>
+            <li id="r10">Programa Conjunto de las Naciones Unidas sobre el VIH/Sida. 90-90-90: avanzamos, pero el mundo
+                sigue
+                lejos de conseguir los objetivos para 2020 [Internet]. 2020 [consultado 13 de octubre 2021]. Disponible
+                en:
+                <a href="https://bit.ly/34gNSFT">https://bit.ly/34gNSFT</a>
+            </li>
+            <li id="r11">Rendón AL, Cerrato D. Beneficios de la implementación de un programa de seguimiento
+                fármaco-terapéutico
+                a pacientes VIH positivo atendidos en el Instituto Nacional Cardiopulmonar. Revista Ciencia y Tecnología
+                [Internet]. 2018 [consultado 14 de octubre 2021]; (23): 17-32. <a
+                    href="https://doi.org/10.5377/rct.v0i23.6858">https://doi.org/10.5377/rct.v0i23.6858</a></li>
+            <li id="r12">De Andrade DC, De Oliveira RC, Arruda AV, Da Rocha J, Corrêa CA, Barbosa MM. El conocimiento de
+                las
+                personas que viven con el VIH/SIDA acerca de la terapia antirretroviral. Enfermería Global [Internet].
+                2018
+                [consultado 20 de julio 2021]; (49): 96-110. Disponible en: <a
+                    href="https://bit.ly/3ixZqsu">https://bit.ly/3ixZqsu</a></li>
+            <li id="r13">Dávila ME, Gil MA, Tagliaferro ZA. Conocimiento de las personas que viven con el virus del
+                VIH/SIDA sobre la enfermedad. Revista de Salud Pública [Internet]. 2015 [consultado 20 de agosto 2021];
+                17(4): 541-551.
+                <a href="http://dx.doi.org/10.15446/rsap.v17n4.41378">http://dx.doi.org/10.15446/rsap.v17n4.41378</a>
+            </li>
+            <li id="r14">Zárate A, Rodríguez CN, Huérfano MJ, Orjuela OL, Castaño A. Intervención educativa sobre virus
+                de inmunodeficiencia humana en la comunidad habitante de calle que asiste a un centro de acogida en la
+                ciudad
+                de Bogotá D.C. – Colombia. Revista NOVA [Internet]. 2017 [consultado 22 de agosto 2021]; 15(28): 11-17.
+                Disponible en: <a href="https://bit.ly/3l2t2Qb">https://bit.ly/3l2t2Qb</a></li>
+            <li id="r15">Ribeiro C, Sarmento R, Dinis M, Fernandes L. Effectiveness of psycho-educational intervention
+                in HIV patients’ treatment. Frontiers in Psychiatry [Internet]. 2015 [consultado 25 de agosto 2021]; 5:
+                1-8. <a href="https://doi.org/10.3389/fpsyt.2014.00198">https://doi.org/10.3389/fpsyt.2014.00198</a>
+            </li>
+            <li id="r16">Siril HN, Kaaya SF, Smith MK, Mtisi E, Somba M, Kilewo J, et al. CLINICAL outcomes and loss to
+                follow-up
+                among people living with HIV participating in the NAMWEZA intervention in Dar es Salaam, Tanzania: a
+                prospective cohort study. AIDS Research and Therapy [Internet]. 2017 [consultado 21 de agosto 2021]; 14:
+                1-10. <a href="https://doi.org/10.1186/s12981-017-0145-z">https://doi.org/10.1186/s12981-017-0145-z</a>
+            </li>
+            <li id="r17">Quintana IM, Martínez R, Rodríguez A, Cutén I, Dragnet Y. Intervención educativa en familiares
+                y vecinos de
+                pacientes con VIH/sida. Revista Información Científica [Internet]. 2015 [consultado 20 de septiembre
+                2021];
+                91(3): 472-481. Disponible en: <a href="https://bit.ly/3osQjgl">https://bit.ly/3osQjgl</a></li>
+            <li id="r18">Pérez E, Soler YM, Hung Y, Rondón M. Programa educativo para favorecer la adherencia
+                terapéutica en pacientes con tratamiento antirretroviral. Revista Archivo Médico de Camagüey [Internet].
+                2016 [consultado 18
+                de septiembre 2021]; 20(2): 177-187. Disponible en: <a
+                    href="https://bit.ly/3l6QMD3">https://bit.ly/3l6QMD3</a></li>
+            <li id="r19">Morales L, Austria ST, Quevedo DM, Hernández M, Galicia RM, Landeros E. Intervención educativa
+                en
+                cuidadores para prevenir úlceras por presión en adultos con inmovilidad prolongada. SANUS [Internet].
+                2019
+                [consultado 10 de julio 2021]; (12): 6-16. Disponible en: <a
+                    href="https://bit.ly/2YaFXXA">https://bit.ly/2YaFXXA</a></li>
+            <li id="r20">Sánchez E, López P, Honrubia M. Intervenciones enfermeras en cuidados sanitarios de sexualidad
+                para mujeres con lesión medular lumbar en Cataluña. International Journal of Developmental and
+                Educational Psychology [Internet]. 2018 [consultado 08 de julio 2021]; 3(1): 109-118. Disponible en: <a
+                    href="https://bit.ly/2YbKjNY">https://bit.ly/2YbKjNY</a></li>
+            <li id="r21">Álvarez A, Guzmán E, Higuera JL, López, JA. Metodología de la investigación para enfermería,
+                elementos
+                para elaborar un proyecto de investigación. México: La Biblioteca; 2021.</li>
+            <li id="r22">Lorenzo R, Sonego M, Pulido J, González A, Jiménez E, Sordo L. Métodos indirectos para la
+                estimación de
+                poblaciones ocultas. Revista Española de Salud Pública [Internet]. 2017 [consultado 10 de julio 2021];
+                91:
+                1-9. Disponible en: <a href="https://bit.ly/3lbdE4p">https://bit.ly/3lbdE4p</a></li>
+            <li id="r23">Pagés N, Valverde MI. Métodos para medir la adherencia terapéutica. Ars Pharm [Internet]. 2018
+                [consultado
+                05 de julio 2021]; 59(3): 163-172. <a
+                    href="http://dx.doi.org/10.30827/ars.v59i3.7387">http://dx.doi.org/10.30827/ars.v59i3.7387</a></li>
+            <li id="r24">Valdés Y, Pantelón OS. Adherencia terapéutica a los anticoagulantes orales y su importancia en
+                la enfermedad
+                tromboembólica venosa. Revista Cubana de Angiología [Internet]. 2016 [consultado 01 de julio 2021];
+                17(1):
+                55-70. Disponible en: <a href="https://bit.ly/3l2G3cv">https://bit.ly/3l2G3cv</a>
+            </li>
+            <li id="r25">Díaz F, Hernández G. Estrategias docentes para un aprendizaje significativo. Una interpretación
+                constructivista. México: McGraw-Hill Interamericana; 2010.</li>
+            <li id="r26">Jiménez D, Tornel M, González JJ, Sancho P. Perfil del profesorado universitario que emplea un
+                enfoque
+                docente centrado en el alumnado. Psychology, Society, & Education [Internet]. 2019 [consultado 08 de
+                julio
+                2021]; 11(1): 125-135. <a
+                    href="https://doi.org/10.25115/psye.v10i1.2125">https://doi.org/10.25115/psye.v10i1.2125</a>
+            </li>
+            <li id="r27">Garcés LF, Montaluisa Á, Salas E. El aprendizaje significativo y su relación con los estilos de
+                aprendizaje.
+                Anales de la Universidad Central del Ecuador [Internet]. 2018 [consultado 08 de julio 2021]; 1(376):
+                231-248.
+                <a href="https://doi.org/10.29166/anales.v1i376.1871">https://doi.org/10.29166/anales.v1i376.1871</a>
+            </li>
+            <li id="r28">Sánchez-Medina R, Rosales-Piña C, Becerra-Ramírez J, Enríquez-Negrete D, Guarneros-Reyes E,
+                Silva-Rodríguez A. Evaluación de un curso en línea sobre VIH/SIDA en estudiantes de psicología. Eureka
+                [Internet].
+                2022 [consultado 20 de diciembre de 2021]; 19(1). Disponible en: <a
+                    href="https://bit.ly/3nraVUT">https://bit.ly/3nraVUT</a></li>
+            <li id="r29">Secretaría de Salud. Reglamento de la Ley General de Salud en Materia de Investigación para la
+                Salud [Internet]. 1984 [consultado 20 de julio 2021]. Disponible en: <a
+                    href="https://bit.ly/1SBpqPT">https://bit.ly/1SBpqPT</a></li>
+            <li id="r30">López LE, León G. El principio de beneficencia como articulador entre la teología moral, la
+                bioética y las
+                prácticas biomédicas. Franciscanum [Internet]. 2020 [consultado 08 de febrero 2022]; 62(174): 1-30. <a
+                    href="https://doi.org/10.21500/01201468.4884">https://doi.org/10.21500/01201468.4884</a></li>
+            <li id="r31">Diario Oficial de la Federación. Ley Federal de Protección de Datos Personales en Posesión de
+                los Particulares
+                [Internet]. 2017 [consultado 08 de febrero 2022]. Disponible en: <a
+                    href="https://bit.ly/3HDXGsj">https://bit.ly/3HDXGsj</a></li>
+        </ol>
+
+
+
+
+    </div>
+
+</body>
+
+</html>

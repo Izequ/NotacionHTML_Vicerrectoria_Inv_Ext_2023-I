@@ -1,0 +1,1111 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V20-N1-9</title>
+    <link rel="stylesheet" href="">
+    <style>
+        body {
+            padding: 10em;
+            padding-top: 20px;
+            font-family: Times New Roman;
+            color: black;
+        }
+
+        #articulo-derecha {
+            float: left;
+        }
+
+        /* Posiciones de los resumenes */
+
+        .contenedor-general {
+            display: inline-flex;
+            width: 100%;
+        }
+
+        .contenedor-resumen {
+            width: 240%;
+        }
+
+        .contenedor-autor {
+            width: 100%;
+            padding-left: 20px;
+        }
+
+        .hr-resumen {
+            background-color: gray;
+            margin: 0;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .resumen-fondo {
+            background-color: #bdd5f1;
+            border-radius: 5px;
+        }
+
+        .titulo-resumen {
+            color: black;
+            font-size: 22px;
+            font-weight: bold;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .texto-resumen {
+            padding: 20px;
+            margin: 0;
+        }
+
+        ul.navbar {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 25em;
+            left: 2em;
+            width: 250px;
+        }
+
+        /* Titulos principales */
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: Times New Roman;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        h1 {
+            color: #29abe3;
+        }
+
+        .categoria_titulo {
+            font-style: italic;
+            color: #ffffff;
+        }
+
+        h3 {
+            font-style: italic;
+            font-weight: bold;
+            color: #707073;
+        }
+
+        .categoria {
+            text-align: center;
+            background-color: #707073;
+            width: 20%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            margin: auto;
+        }
+
+        ul.navbar li {
+            background: white;
+            margin: 0.5em 0;
+            padding: 0.3em;
+        }
+
+        /* Enlaces */
+
+        a.link-color:visited {
+            color: white;
+        }
+
+        a.link-color:link {
+            color: white;
+        }
+
+        a.link-color:hover {
+            color: white;
+        }
+
+        a.link-color:hover {
+            border-bottom: 1px solid;
+            background: black;
+        }
+
+        /* Link de referencia */
+
+        a:link {
+            color: #4e00ff;
+        }
+
+        a:visited {
+            color: #003bff;
+        }
+
+        a:focus {
+            border-bottom: 1px solid;
+            background: #98aae4;
+        }
+
+        a:hover {
+            border-bottom: 1px solid;
+            background: #aacefe;
+        }
+
+        /* Etiqueta P */
+
+        p {
+            line-height: normal;
+            text-align: justify;
+            font-size: 18px;
+        }
+
+        p.titulo {
+            color: #29abe3;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        p.subtitulo {
+            color: #29abe3;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* NUEVO */
+        p.subtitulo-segundo {
+            color: #29abe3;
+            font-style: italic;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        p.correspondencia {
+            color: black;
+            font-size: 18px;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        /* NUEVO */
+        p.entrevista {
+            color: black;
+            font-size: 18px;
+            font-style: italic;
+        }
+
+        /* NUEVO */
+        p.subtitulo-tercero {
+            color: #29abe3;
+            font-style: italic;
+            font-size: 18px;
+        }
+
+        p#cabeza {
+            color: #1d71ae;
+            text-align: center;
+        }
+
+        p.autores {
+            font-size: 16px;
+            margin: 0;
+            text-indent: 0em;
+            margin-bottom: 10px;
+        }
+
+        p.forma-citar {
+            text-indent: 0em;
+            text-align: justify;
+            justify-content: center;
+        }
+
+        .cita {
+            text-align: -webkit-center;
+        }
+
+        /* Bold especial para palabras que tienen color seguido de dos puntos
+*/
+
+        /* NUEVO */
+
+        b.subtitulo-segundo {
+            color: #29abe3;
+            font-size: 18px;
+        }
+
+        .contenedor_info {
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .info {
+            width: auto;
+        }
+
+        /* Este es para los documentos del dos en adelante *codigo abajo de este comentario* */
+
+        .info-text {
+            text-align: end;
+            margin: 0;
+        }
+
+        /* Uso Exlusico para el primero documento  que es de revision  *codigo abajo de este comentario* */
+
+        .info_text {
+            font-size: 12px;
+            line-height: 100%;
+            text-align: center;
+            margin: 0;
+        }
+
+        .info_hr {
+            margin: 5;
+        }
+
+        /* Fin P */
+        /* Etiqueta Italic */
+
+        i {
+            font-size: 18px
+        }
+
+        i.centrado {
+            font-size: 18px
+        }
+
+        /* LI para las listas */
+
+        li {
+            font-size: 18px;
+            padding-top: 10px;
+            text-align: justify;
+        }
+
+        /* NUEVO */
+        .lista li {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        hr {
+            background-color: #29abe3;
+            height: 1px;
+        }
+
+        /* Tablas */
+
+        table {
+            border-collapse: collapse;
+            border: 2px solid rgb(0, 0, 0);
+            align-items: center;
+        }
+
+        thead th {
+            border-collapse: collapse;
+            background-color: rgb(179, 179, 179);
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        tbody td {
+            border-collapse: collapse;
+            text-align: center;
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        .tipo {
+            color: #ffffff;
+            font-size: 22px;
+            border-radius: 10px 5px 10px 5px;
+            background-color: #696969;
+        }
+
+        img.logos {
+            width: 15px;
+            height: 15px;
+        }
+
+        .image {
+            text-align: center;
+            image-rendering: optimizeQuality;
+        }
+
+        .image p {
+            text-align: center;
+            font-size: small;
+        }
+
+        .logo {
+            width: 300px;
+            height: 80px;
+        }
+
+        .logo2 {
+            width: 300px;
+            height: 50px;
+        }
+
+        /* Anclajes de la pagina */
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* NUEVO */
+        .ecuacion {
+            text-align: center;
+            font-weight: bold;
+            margin: 1px;
+        }
+
+        @media only screen and (min-width:320px) and (max-width:900px) {
+            body {
+                width: 100%;
+                padding: 5em;
+                margin: 5px;
+            }
+
+            .image {
+                text-align: center;
+                image-rendering: optimizeQuality;
+            }
+
+            .image img {
+                width: 100%;
+            }
+
+            .image p {
+                font-size: small;
+                text-align: center;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contenedor_info">
+        <div>
+            <img src="img/globales/logo.jpg" alt="" height="125px">
+        </div>
+        <div class="info" style="text-align: right;">
+            <p class="info-text"> ISSN-PRINT 1794-9831 / E-ISSN 2322-7028 </p>
+            <p class="info-text"> Vol. 20 Nº 1 / ene - abr 2023 / Cúcuta, Colombia. </p>
+            <p class="info-text">
+                <img src="img/globales/doi.png" height="20px" alt="">
+                <a href="https://doi.org/10.22463/17949831.3523">https://doi.org/10.22463/17949831.3523</a>
+            </p>
+        </div>
+    </div>
+
+
+    <!--Categoría-->
+    <div class="categoria">
+        <h2 class="categoria_titulo">Original </h2>
+    </div>
+
+    <h1> Indicadores de cuidado de enfermería hospitalario orientados
+        por modelo de práctica profesional </h1>
+
+    <h2 class="segundo"> Indicators of hospital nursing care guided by a professional practice model
+    </h2>
+
+    <h2 class="segundo"> Indicadores de cuidados de enfermagem hospitalares orientados por um modelo de
+        prática profissional</h2>
+
+
+    <!--Autores-->
+    <h3>
+        Maryory Guevara-Lozano <sup><a href="#sup1">1*</a> </sup> <br>
+        Ligia Patricia Arroyo-Marlés <sup><a href="#sup2">2*</a> </sup> <br>
+        Beatriz Pérez-Giraldo <sup><a href="#sup3">3*</a> </sup> <br>
+        Mónica Andrea Nonsoque-Cholo <sup><a href="#sup4">4*</a> </sup> <br>
+        Beatriz Sánchez-Herrera <sup><a href="#sup5">5*</a> </sup> <br>
+    </h3>
+
+
+    <!-- Conetenedor de las columnas de la descripciones de los autores, correspondencia de autor 
+    y los resumenes -->
+    <div class="contenedor-general">
+
+
+        <!-- Contenedor de los resumenes -->
+        <div class="contenedor-resumen">
+
+            <!-- Resumen Español -->
+
+            <div class="resumen-fondo">
+                <p class="titulo-resumen"> Resumen</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> <b>Objetivo:</b> Diseñar y validar indicadores de cuidado de enfermería a
+                    partir de la orientación
+                    de un modelo de práctica profesional en un hospital universitario de Colombia, 2018 – 2021.
+                    <b>Material y Método:</b> Este es un estudio cuantitativo bajo el abordaje de investigación
+                    denominado “Investigación metodológica en enfermería” desarrollado en cinco fases que incluyen:
+                    1) revisión de los procesos de calidad institucional; 2) revisión de literatura sobre indicadores
+                    hospitalarios de enfermería; 3) Propuesta de indicadores con orientación del modelo
+                    institucional de práctica profesional de enfermería; 4) Validación de los indicadores mediante
+                    criterio de expertos; 5) Evaluación de la efectividad preliminar en campo durante 8 meses.
+                    <b>Resultados:</b> A partir de las tres primeras fases del estudio se plantean veintiún indicadores
+                    de
+                    cuidado de enfermería que responden al interés institucional y a la mejor evidencia disponible. Su
+                    validación refleja alta comprensibilidad y validez facial, una razón de validez de contenido (RVC)
+                    entre .74 y .96, y un índice de validez de contenido (IVC) de 0.83. <b>Conclusión:</b>
+                    Los indicadores de cuidado de enfermería diseñados bajo la orientación de un modelo de
+                    práctica profesional y validados mediante el criterio de expertos, mostraron una efectividad
+                    preliminar positiva para medir y mejorar los procesos y resultado del cuidado de enfermería
+                    de acuerdo con las personas implicadas en la recepción y suministro de dicho cuidado. Estos
+                    indicadores pueden ser empleados en hospitales con plataformas estratégicas similares.
+                </p>
+
+                <p class="texto-resumen">
+                    <b>Palabras Claves: </b> Investigación metodológica en enfermería; Indicadores de Calidad de la
+                    Atención de Salud; Teoría de enfermería; Investigación en administración de enfermería;
+                    Atención de enfermería.
+                </p>
+            </div>
+            <!-- Resumen Inglés -->
+
+            <div>
+                <p class="titulo-resumen"> Abstract</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> <b>Objective:</b> To design and validate nursing care indicators based on the
+                    orientation of a professional practice model in a university hospital in Colombia, 2018 - 2021.
+                    <b>Method:</b> This is
+                    a quantitative study under the research approach called "Methodological research in nursing"
+                    developed in five phases that include: 1) review of institutional quality processes; 2) review
+                    of literature on hospital nursing indicators; 3) proposal of indicators with orientation of the
+                    institutional model of professional nursing practice; 4) validation of the indicators through
+                    expert criteria; 5) evaluation of preliminary effectiveness in the field during 8 months.
+                    <b>Results:</b> From the first three phases of the study, twenty-one nursing care indicators were
+                    proposed that respond to institutional interest and to the best available evidence. Their validation
+                    reflects high comprehensibility and face validity, a content validity ratio (CVR) between .74
+                    and .96, and a content validity index (CVI) of .83. <b>Conclusion:</b> The nursing care indicators
+                    designed under the guidance of a professional practice model and validated through expert
+                    judgment showed positive preliminary effectiveness in measuring and improving the processes and
+                    outcome of nursing care according to the persons involved in receiving and providing
+                    nursing care. These indicators can be employed in hospitals with similar strategic platforms.
+                </p>
+
+                <p class="texto-resumen">
+                    <b>KeyWords:</b> Nursing Methodology Research; Indicators of Health Services Quality Indicators,
+                    Health Care; Nursing Theory; Nursing administration Research. Nursing Care.
+                </p>
+            </div>
+            <!-- Resumen Portuguez -->
+
+            <div class="resumen-fondo">
+                <p class="titulo-resumen"> Resumo</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> <b>Objectivo:</b> Conceber e validar indicadores de cuidados de enfermagem com
+                    base na orientação
+                    de um modelo de prática profissional num hospital universitário na Colômbia, 2018 - 2021.
+                    <b>Método:</b> Este é um estudo quantitativo no âmbito da abordagem de investigação denominada
+                    "Pesquisa metodológica em enfermagem" desenvolvido em cinco fases que incluem: 1) revisão dos
+                    processos de qualidade institucional; 2) revisão da literatura sobre indicadores de
+                    enfermagem hospitalar; 3) proposta de indicadores com orientação do modelo institucional de
+                    prática profissional de enfermagem; 4) validação dos indicadores através de critérios de peritos; 5)
+                    avaliação da eficácia preliminar no terreno durante 8 meses. <b>Resultados:</b> A partir das três
+                    primeiras fases do estudo, são propostos vinte e um indicadores de cuidados de enfermagem
+                    que respondem ao interesse institucional e às melhores provas disponíveis. A sua validação
+                    reflecte uma elevada compreensibilidade e validade facial, um rácio de validade de conteúdo
+                    (CVR) entre .74 e .96, e um índice de validade de conteúdo (CVI) de .83. <b>Conclusão:</b> Os
+                    indicadores de cuidados de enfermagem concebidos sob a orientação de um modelo de prática
+                    profissional e validados através do julgamento de peritos mostraram uma eficácia preliminar
+                    positiva na medição e melhoria dos processos e resultados dos cuidados de enfermagem de
+                    acordo com as pessoas envolvidas na recepção e prestação de cuidados de enfermagem. Estes
+                    indicadores podem ser utilizados em hospitais com plataformas estratégicas semelhantes.
+                </p>
+
+                <p class="texto-resumen">
+                    <b>Palavras-chave:</b> Investigação metodológica em enfermagem; Indicadores de Qualidade em
+                    Assistência à Saúde; Teoria da enfermagem; Investigação em gestão de enfermagem; Cuidados de
+                    Enfermagem
+                </p>
+            </div>
+
+
+
+        </div>
+
+        <!-- Descripcion de autores, Aprobado, Como citar, licencia -->
+        <div class="contenedor-autor">
+            <!-- Autores -->
+            <div>
+                <p class="subtitulo" style="color: black; font-size: 18px;">Autor de correspondencia*</p>
+                <!-- 1 -->
+                <p class="autores" id="sup1"><sup>1*</sup><img class="logos" src="img/globales/sobre.png"> Enfermera.
+                    Directora del Programa
+                    de Enfermería. Universidad de La Sabana, Chía Cundinamarca, Colombia.
+                    <a href="mailto:maryorygl@unisabana.edu.co">maryorygl@unisabana.edu.co</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0002-9559-5697">0000-0002-9559-5697</a>
+                </p>
+                <!-- 2 -->
+                <p class="autores" id="sup2"><sup>2*</sup><img class="logos" src="img/globales/sobre.png"> Enfermera, Ex
+                    diretora de Enfermería,
+                    Clínica Universidad de La Sabana, Chía
+                    Cundinamarca, Colombia.
+                    <a href="mailto:larroyomarles@gmail.com">larroyomarles@gmail.com</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0002-4317-6722">0000-0002-4317-6722</a>
+                </p>
+                <!-- 3 -->
+                <p class="autores" id="sup3"><sup>3*</sup><img class="logos" src="img/globales/sobre.png"> Enfermera.
+                    Profesora retirada. Universidad de La Sabana, Chía Cundinamarca, Colombia.
+                    <a href="mailto:beatrizperezgiraldo@gmail.com">beatrizperezgiraldo@gmail.com</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0001-6636-290X">0000-0001-6636-290X</a>
+                </p>
+                <!-- 4 -->
+                <p class="autores" id="sup4"><sup>4*</sup><img class="logos" src="img/globales/sobre.png"> Enfermera.
+                    Estudiante de Maestría em
+                    Enfermería. Universidad de La Sabana,
+                    Chía Cundinamarca, Colombia.
+                    <a href="mailto:mandrea853@gmail.com">mandrea853@gmail.com</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0001-6475-4854">0000-0001-6475-4854</a>
+                </p>
+                <!-- 5 -->
+                <p class="autores" id="sup5"><sup>5*</sup><img class="logos" src="img/globales/sobre.png"> Profesora de
+                    Alto Prestígio, Universidad de La Sabana, Chía Cundinamarca,
+                    Colombia.
+                    <a href="mailto:clara.sanchez@unisabana.edu.co">clara.sanchez@unisabana.edu.co</a>, <img
+                        class="logos" src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0002-8029-7187">0000-0002-8029-7187</a>
+                </p>
+            </div>
+
+            <!--Recibido y aprobado-->
+            <div>
+                <p><b>Recibido: </b> 29 agosto 2022 <br> <b>Aprobado: </b> 15 diciembre 2022 </p>
+            </div>
+
+            <!-- Como citar -->
+            <div class="cita">
+                <p class="forma-citar autores"><b>Para citar este artículo / To reference this article / Para citar este
+                        artigo:</b> Guevara-Lozano M, Arroyo-Marlés LP,
+                    Pérez-Giraldo B, Nonsoque-Cholo MA,
+                    Sánchez-Herrera B. Perfil del estilo de
+                    vida en docentes y administrativos de
+                    una universidad. 2023; 20(1):94-104. <a
+                        href="https://doi.org/10.22463/17949831.3523">https://doi.org/10.22463/17949831.3523</a> </p>
+            </div>
+
+            <!--Licencia-->
+            <br>
+            <div>
+                <p class="autores "> &#169; Universidad Francisco de Paula Santander.
+                    Este es un artículo bajo la licencia CC-BY-NC-ND
+                    <br>
+                    <a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img
+                            alt="Licencia Creative Commons" style="border-width:0"
+                            src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Cuerpo del documento -->
+    <div>
+        <hr>
+        <!--Introducción-->
+        <p class="titulo"> Introducción</p>
+
+        <p>
+            A nivel mundial las instituciones de salud han asumido
+            el reto de lograr mejoramiento sistémico y permanente
+            de sus procesos y resultados. Fitzpatrick et al., (1)
+            proponen pasar de la triple meta en salud que planteó el
+            Institute for Healthcare Improvement, a una cuádruple
+            meta. La triple meta planteó mejorar de manera simultánea la experiencia asistencial del paciente, la salud
+            de
+            la población, y la disminución del coste per cápita de
+            su atención. La cuádruple, incluye además garantizar
+            un entorno saludable al profesional sanitario para que disfrute en su lugar de trabajo. Para lograr estas
+            mejoras, enfermería ha buscado aplicar modelos y teorías
+            propios que le permitan generar cambios en las estructuras y en los procesos administrativos y asistenciales
+            (2) y que se asocien con las decisiones clínicas con una
+            evidencia cada vez más sólida (3).
+        </p>
+
+        <p>
+            Hay demostración reciente de la implementación de
+            modelos de la práctica de enfermería, para favorecer el
+            desempeño profesional (4,5); También se han propuesto indicadores que logran incidir en el mejoramiento
+            de la práctica institucional de enfermería (5). Sin embargo, las experiencias reportadas de medición
+            objetiva para evaluar el cambio se limitan al proceso o al
+            resultado del cuidado y pocas veces tienen en cuenta la
+            percepción de enfermería.
+        </p>
+
+        <p>
+            De otra parte, la evaluación del cuidado ha considerado
+            la experiencia de los receptores (6) así como su progreso (7) y también al enfermero para saber si su carga
+            laboral se asocia con una mala práctica (8). No obstante,
+            los reportes no reflejan los procesos y productos en el
+            marco de la interacción del paciente y su cuidador con
+            el enfermero, como sucede en la cotidianeidad. Por el
+            contrario, la calidad del servicio hospitalario que presta
+            enfermería tiende a medirse con base en indicadores
+            transversales de calidad, seguridad, infección y mortalidad institucional que de una parte no dependen solo
+            del cuidado de enfermería, y de otra, tienden a contabilizar sus errores y omisiones y no sus logros (9).
+            Más
+            aún, la mayor parte de estos indicadores no cuentan con
+            la evidencia suficiente para respaldarlos (10).
+        </p>
+
+        <p>
+            Con el fin de atender los obstáculos identificados cuando la teoría de enfermería no se articula en la
+            rutina
+            diaria del cuidado (11), el presente trabajo buscó establecer los indicadores de cuidado de enfermería para
+            medir y mejorar los procesos y resultados del cuidado
+            en un hospital universitario de Colombia, considerando
+            de forma simultánea la percepción de los receptores,
+            paciente o cuidador familiar, y de los enfermeros encargados de prestar este servicio, dando así continuidad
+            a
+            los lineamientos e implementación de un modelo institucional de práctica profesional de enfermería (12).
+        </p>
+
+        <hr>
+
+        <p class="titulo">Metodología</p>
+
+        <p>
+            Este es un estudio cuantitativo realizado bajo el abordaje de “Investigación metodológica en enfermería” que
+            tal como lo señala la Organización Panamericana de la
+            salud (13) consiste en la sistematización de técnicas y
+            métodos que apoyan a enfermería para explorar asuntos relacionados con la experiencia humana en asuntos
+            como el cuidado de la salud (13). Con la aplicación de
+            esta metodología se buscó diseñar y validar indicadores
+            de cuidado de enfermería teniendo como eje la calidad
+            del servicio y la experiencia del cuidado de la salud de
+            las personas. En ella se buscó, tal como ha sido sugerido, la mayor participación y la motivación permanente
+            del personal (14).
+        </p>
+
+        <p>
+            El estudio fue se llevó a cabo en el marco de un proyecto en alianza docencia- asistencia para mejorar la
+            práctica de enfermería, 2018 - 2021. Contó con aval
+            de las instituciones previa revisión de aspectos éticos y
+            ambientales (Acta No. 003140319).
+        </p>
+
+        <p>
+            Su ejecución se desarrolló en cinco fases secuenciales.
+            La primera, fue la revisión de procesos de calidad institucional, realizada con base en la normatividad
+            nacional e internacional vigente, en la que se convocaron los
+            directivos responsables de calidad institucional.
+        </p>
+
+        <p>
+            La segunda fase, fue una revisión bibliográfica en respuesta a la pregunta qué dice la literatura mundial de
+            los últimos 5 años sobre los indicadores de enfermería
+            sobre el cuidado de la experiencia del paciente y su cuidador familiar durante la hospitalización. Se
+            realizó en
+            idiomas inglés y español limitándose a publicaciones
+            arbitradas. Los descriptores empleados y fórmulas de
+            búsqueda fueron: [Indicadores de Calidad de la Atención de Salud OR indicadores] AND [Atención de enfermería
+            OR Enfermería] AND [Hospital].
+        </p>
+
+        <p>
+            La tercera fase, fue el planteamiento teórico de los indicadores bajo la orientación del modelo
+            institucional de
+            práctica profesional de enfermería. Este modelo busca
+            un cuidado de enfermería con dos condiciones: compromiso y tono humano. El compromiso para mejorar
+            continuamente la práctica con base en la evidencia.
+            Tono humano, dignificando la condición trascendente
+            de las personas a través del cuidado (12). Para el diseño se tomaron los momentos de encuentro entre los
+            pacientes y sus cuidadores familiares y la enfermera
+            tal como lo refiere el modelo (12). Estos encuentros
+            incluyen: el ingreso, la valoración, la atención a las necesidades básicas, la administración de
+            medicamentos,
+            el cambio de turno y el egreso hospitalario, en donde
+            se espera que más allá de tener una interacción, los encuentros se conviertan en momentos de cuidado (15).
+            Este planteamiento siguió la metodología institucional
+            para el diseño de indicadores identificando su objetivo,
+            tipología, utilidad, forma de aplicación, medición, periodicidad y responsabilidad de cada una de las
+            instancias implicadas.
+        </p>
+
+        <p>
+            La cuarta fase fue la validación de los indicadores mediante criterio de expertos. Se incluyeron cinco
+            enfermeros, con más de tres años de experiencia en calidad
+            del cuidado de enfermería. Se entregó a cada uno de
+            ellos un formato con los enunciados de los indicadores que incluyó cuatro casillas para calificar el nivel
+            de
+            claridad, coherencia y relevancia y otra para calificar la suficiencia de cada grupo de indicadores que
+            pertenecen a una misma dimensión. En cada caso se calificó
+            sobre una escala de 1 a 4 indicando incumplimiento del
+            criterio o un nivel de cumplimiento bajo, moderado o
+            alto. A partir de este resultado, se calculó la razón de
+            validez de contenido (RVC) de cada indicador y el índice de validez de contenido global (IVC), bajo
+            criterios
+            de Lawshe modificado por Tristán (16). Para la RVC se
+            aceptaron acuerdos mayores o iguales a 0.70. El IVC
+            del instrumento global fue determinado a partir de su
+            valor promedio.
+        </p>
+
+        <p>
+            La quinta y última fase, fue una aplicación de los indicadores propuestos en el servicio de hospitalización
+            durante ocho meses, con medición mensual, para verificar su efectividad preliminar.
+        </p>
+
+        <p>
+            La revisión de procesos de calidad institucional permitió definir los parámetros requeridos para proponer
+            indicadores de cuidado de enfermería.
+        </p>
+
+        <p>
+            Los 55 artículos encontrados en la literatura se agrupan
+            en 4 categorías: 1) los que presentan indicadores y su
+            importancia para valorar el servicio que presta enfermería; 2) los que vinculan resultados de los procesos
+            de enfermería con la salud; 3) los que hacen énfasis en
+            la metodología, y 4) los que llaman la atención sobre
+            las fallas en el campo de la medición. En conjunto,
+            los estudios reflejan que a pesar de que existen dificultades en la implementación, los indicadores de
+            estructura, proceso y producto prestan gran utilidad para
+            poder mejorar la calidad del cuidado de enfermería en
+            los diferentes roles y servicios hospitalarios; las metodologías más recomendadas son las participativas,
+            tal
+            como se ilustra con ejemplos (ver tabla 1).
+        </p>
+
+        <p class="titulo">Resultados</p>
+
+        <div class="image">
+            <p><b>Tabla 1. </b>Listado con selección de los estudios más relevantes por su aporte a la construcción de
+                indicadores</p>
+            <img src="img/V20-N1-9/Screenshot_1.png" width="75%">
+            <img src="img/V20-N1-9/Screenshot_2.png" width="75%">
+            <p><b>Fuente: </b>Elaboración propia con base en datos del estudio </p>
+        </div>
+
+        <p>
+            Para responder a la mirada integral y a cada uno de los
+            seis momentos de cuidado planteados en el modelo (12)
+            se plantearon 21 indicadores que no buscan reemplazar
+            los de calidad hospitalaria vigente, sino que pretenden
+            complementar esta medición permitiendo visibilizar y
+            mejorar el cuidado de enfermería Los indicadores diseñados permiten evaluar la práctica de enfermería en la
+            institución desde la perspectiva de los usuarios, paciente y cuidador familiar, y de la enfermera.
+        </p>
+
+        <p>
+            Con el fin de garantizar mayor objetividad, los indicadores son aplicados por personas que no tienen
+            conflicto de interés en este proceso. En la tabla 2 se ilustran
+            con un ejemplo los indicadores planteados (ver tabla 2).
+        </p>
+
+        <div class="image">
+            <p><b>Tabla 2. </b>Indicadores de cuidado de enfermería según tipología y momentos de cuidado que describe
+                el modelo de práctica profesional</p>
+            <img src="img/V20-N1-9/Screenshot_3.png" width="75%">
+            <img src="img/V20-N1-9/Screenshot_4.png" width="75%">
+            <p><b>Fuente: </b>Datos del estudio</p>
+        </div>
+
+        <p>
+            Los resultados de las pruebas de validez facial y de contenido de los indicadores propuestos muestran
+            claridad,
+            pertinencia y suficiencia. Algunos de ellos requirieron revisiones que fueron asumidas y verificadas frente
+            a
+            las recomendaciones recibidas (ver tabla 3).
+        </p>
+
+        <div class="image">
+            <p><b>Tabla 3. </b>Nivel de validez facial y de contenido de los indicadores de cuidado de enfermería</p>
+            <img src="img/V20-N1-9/Screenshot_5.png" width="75%">
+            <img src="img/V20-N1-9/Screenshot_6.png" width="75%">
+            <img src="img/V20-N1-9/Screenshot_7.png" width="75%">
+            <p><b>Fuente: </b>Datos del estudio</p>
+        </div>
+
+        <p>
+            La aplicación de los indicadores diseñados con base en
+            el modelo reflejó su efectividad preliminar para visibilizar el cuidado, comparar las percepciones de los
+            involucrados y propiciar un mejoramiento permanente, tal
+            como se ilustra en la Gráfica 1.
+        </p>
+
+        <div class="image">
+            <img src="img/V20-N1-9/Screenshot_8.png" width="65%">
+            <p><b>Gráfica 1. </b>Ejemplo de seguimiento empleando los indicadores: cambio de turno de
+                enfermería</p>
+            <p><b>Fuente:</b> Elaboración propia</p>
+        </div>
+
+        <p class="titulo">Discusión</p>
+
+        <p>
+            Mejorar la práctica de enfermería a nivel hospitalario
+            supone centrarla en el paciente y en su cuidador familiar sin dejar de mirar el desempeño de la enfermera y
+            hacerlo visible (17).
+        </p>
+
+        <p>
+            Los indicadores propuestos facilitaron la medición de
+            los procesos y productos del cuidado que, como lo señalan Marx et al., (18) deben ser medibles, para poder
+            ser mejorados.
+        </p>
+
+        <p>
+            Los indicadores propuestos en este trabajo bajo la
+            orientación de un modelo de práctica profesional de
+            enfermería se suman a los que tradicionalmente miden
+            la calidad hospitalaria para consolidar un sistema que
+            responda a la experiencia del paciente y su cuidador
+            familiar a nivel hospitalario. Tal como lo refieren Piggott et al., (19), es necesario cerrar la brecha
+            entre las
+            directrices y los indicadores con que se mide la calidad
+            del cuidado de la salud. Cerrar esas brechas supone
+            facilitar los caminos para un mejor logro de las metas
+            propuestas. Contar con indicadores de este tipo, permiten mejorar la experiencia del usuario y verificar si
+            se
+            da atención segura y humanizada (20,21).
+        </p>
+
+        <p>
+            Al incorporar de manera simultánea la perspectiva del
+            receptor del cuidado, bien sea este el paciente o su cuidador familiar y la de la enfermera, en los
+            indicadores de medición del cuidado de enfermería tal como se
+            hizo, este trabajo refleja mayor integralidad que otros
+            recientemente reportados (22,23).
+        </p>
+
+        <p>
+            En este caso la aplicación del modelo de enfermería
+            institucional (12), reflejó que el empleo de una directriz
+            teórica de enfermería es útil para proponer mejoras en
+            la práctica profesional de enfermería (23-25). Los indicadores propuestos al igual que los planteados por
+            Bekbergenova et al., responden al reto de monitorear la
+            práctica de enfermería (25). Estos indicadores retoman
+            la experiencia de la enfermera como lo sugieren en su
+            estudio Stalpers et al., (26). De igual forma el presente
+            desarrollo permite asegurar calidad del servicio a los
+            pacientes y lograr excelencia en el cuidado, como lo
+            evidencia el estudio de Merkley (27).
+        </p>
+
+        <p>
+            Los hallazgos del presente estudio responden parcialmente a la cuádruple meta en salud planteada por
+            Fitzpatrick et al., (1), puesto que ayudan a mejorar la
+            experiencia asistencial del paciente buscando que se refleje el tono humano de los profesionales en el
+            cuidado.
+            Aseguran un mejor manejo de la condición de salud
+            al basar la atención en la mejor evidencia disponible;
+            y atienden la experiencia de la enfermera en su lugar
+            de trabajo. Sin embargo, aunque organizar los procesos puede disminuir costos, se considera una limitación
+            de la presente investigación no contar con indicadores económicos. Podría sugerirse complementar estos
+            indicadores bajo el método lean healthcare, para garantizar su mayor eficiencia (28,29,30).
+        </p>
+
+        <!-- conclusiones -->
+
+        <hr>
+
+        <p class="titulo">Conclusiones</p>
+
+        <p>
+            Los indicadores para mejorar el cuidado de enfermería
+            diseñados bajo la orientación de un modelo de práctica
+            profesional tienen una razón de validez de contenido
+            (RVC) entre .74 y .96, y un índice de validez de contenido (IVC) de 0.83.
+        </p>
+
+        <p>
+            Estos indicadores mostraron una efectividad preliminar
+            positiva para medir y mejorar los procesos y resultados
+            del cuidado. Ellos permiten hacer un seguimiento relevante para valorar el cuidado de enfermería en la
+            institución de acuerdo con la experiencia de los pacientes y
+            cuidadores familiares y de la misma enfermera. Será
+            la suma de los indicadores convencionales de calidad
+            hospitalaria más los propuestos para visibilizar y poder mejorar el cuidado de enfermería, lo que propiciará
+            los mejores resultados en la experiencia y salud de los
+            usuarios.
+        </p>
+
+        <p>
+            Los indicadores propuestos pueden ser empleados en
+            hospitales con plataformas estratégicas similares.
+        </p>
+
+        <p class="subtitulo">Coflicto de intereses</p>
+
+        <p>
+            Los autores declaran no tener ningún conflicto de intereses.
+        </p>
+
+
+        <!-- Referencias -->
+
+        <hr>
+
+        <p class="titulo"> Referencias bibliográficas </p>
+
+        <ol class="lista">
+            <li id="r1">Fitzpatrick B, Bloore K, Blake N. Joy in work and reducing nurse burnout: from triple aim to
+                quadruple aim.
+                AACN advanced critical care. 2019; 30(2):185-188. <a
+                    href="https://doi.org/10.4037/aacnacc2019833">https://doi.org/10.4037/aacnacc2019833</a></li>
+            <li id="r2">Alejandro JI. Lessons learned through nursing theory. Nursing. 2017; 47(2):41-42. <a
+                    href="https://doi.org/10.1097/01.nurse.0000511808.68087.e3">https://doi.org/10.1097/01.nurse.0000511808.68087.e3</a>
+            </li>
+            <li id="r3">Karnick PM. Evidence-based practice and nursing theory. Nursing science quarterly. 2016;
+                29(4):283-284.
+                <a href="https://doi.org/10.1177/0894318416661107">https://doi.org/10.1177/0894318416661107</a>
+            </li>
+            <li id="r4">Fawcett J. Applying conceptual models of nursing: quality improvement, research, and practice.
+                Springer
+                publishing company. 2016. <a
+                    href="http://doi.org/10.1891/9780826180063">http://doi.org/10.1891/9780826180063</a>
+            </li>
+            <li id="r5">Pretto-Báo AC, Coelho-Amestoy S, Schebella-Souto GM, Lima-Trindade L. Quality indicators: tools
+                for the
+                management of best practices in Health. Revista brasileira de enfermagem. 2019; 72(2):360-366. <a
+                    href="https://doi.org/10.1590/0034-7167-2018-0479">https://doi.org/10.1590/0034-7167-2018-0479</a>
+            </li>
+            <li id="r6">Santana MJ, Ahmed S, Lorenzetti D, Jolley RJ, Manalili K, Zelinsky S, et al. Measuring
+                patient-centred system performance: a scoping review of patient-centred care quality indicators. BMJ
+                Open. 2019 Jan 7 [cited
+                2022 Nov 22]; Available from: <a
+                    href="https://doi.org/10.1136/bmjopen-2018-023596">https://doi.org/10.1136/bmjopen-2018-023596</a>
+            </li>
+            <li id="r7">Stalpers D, Van Der Linden D, Kaljouw MJ, Schuurmans MJ. Using publicly reported
+                nursing-sensitive
+                screening indicators to measure hospital performance the Netherlands experience in 2011. Nursing
+                Research
+                [Internet]. 2016 Jan 1 [cited 2022 Nov 22];65(5):362-370–370. Available from: <a
+                    href="https://doi.org/10.1097/nnr.0000000000000170">https://doi.org/10.1097/nnr.0000000000000170</a>
+            </li>
+            <li id="r8">Chang L-Y, Yu H-H, Chao Y-FC. The Relationship Between Nursing Workload, Quality of Care, and
+                Nursing Payment in Intensive Care Units. Journal of Nursing Research [Internet]. 2019 Feb 1 [cited 2022
+                Nov
+                22];27(1). Available from: <a
+                    href="https://doi.org/10.1097/jnr.0000000000000265">https://doi.org/10.1097/jnr.0000000000000265</a>
+            </li>
+            <li id="r9">Liu X, Zheng J, Liu K, Baggs JG, Liu J, Wu Y, et al. Hospital nursing organizational factors,
+                nursing care left
+                undone, and nurse burnout as predictors of patient safety: A structural equation modeling analysis.
+                International Journal of Nursing Studies [Internet]. 2018 Oct 1 [cited 2022 Nov 22];86:82–9. Available
+                from: <a
+                    href="https://doi.org/10.1016/j.ijnurstu.2018.05.005">https://doi.org/10.1016/j.ijnurstu.2018.05.005</a>
+            </li>
+            <li id="r10">Breyer JZ, Giacomazzi J, Kuhmmer R, Lima KM, Hammes LS, Ribeiro RA, et al. Hospital quality
+                indicators:
+                a systematic review. International Journal of Health Care Quality Assurance [Internet]. 2019 Mar 11
+                [cited
+                2022 Nov 22];32(2):474–87. Available from: <a
+                    href="https://doi.org/10.1108/ijhcqa-04-2018-0091">https://doi.org/10.1108/ijhcqa-04-2018-0091</a>
+            </li>
+            <li id="r11">Ribeiro O, Martins MMFPDS, Tronchin DMR, da Silva JMAV. Professional nursing practice grounded
+                in the
+                theoretical framework of the discipline: Reality or utopia. Revista de Enfermagem Referencia [Internet].
+                2018
+                Dec 1 [cited 2022 Nov 22];4(19):39-48–48. Available from: <a
+                    href="https://pdfs.semanticscholar.org/53b0/8c6d7e69541ba7316d94f692a3f43d43af18.pdf">https://pdfs.semanticscholar.org/53b0/8c6d7e69541ba7316d94f692a3f43d43af18.pdf</a>
+            </li>
+            <li id="r12">Arroyo‐Marlés LP, Guevara‐Lozano M, Pérez‐Giraldo B, Sánchez‐Herrera B. Commitment and a sense
+                of
+                humanity for the adaptation of patients during hospital care. Journal of Nursing Management. 2018;
+                26(5):
+                548-554. <a href="https://doi.org/10.1111/jonm.12581">https://doi.org/10.1111/jonm.12581</a></li>
+            <li id="r13">Descriptores en Ciencias de la Salud: DeCS [Internet]. ed. 2017. Sao Paulo (SP): BIREME / OPS /
+                OMS.
+                2017 [actualizado 2017 May 18; citado 2017 Jun 13]. Disponible en: <a
+                    href="http://decs.bvsalud.org/E/homepagee.htm">http://decs.bvsalud.org/E/homepagee.htm</a></li>
+            <li id="r14">Radbron E, McCance T, Middleton R, Wilson V. Maintaining momentum in action research. Nurse
+                researcher
+                [Internet]. 2021 Sep 9 [cited 2022 Nov 22]; 29(3):15–21. Available from: <a
+                    href="https://doi.org/10.7748/nr.2021.e1789">https://doi.org/10.7748/nr.2021.e1789</a></li>
+            <li id="r15">Guevara Lozano M, Arroyo Marles LP, Pérez Giraldo B, Sánchez Herrera B. Commitment and Human
+                Tone:
+                the Difference between Traditional Service and Nursing Care. Invest Educ Enferm. 2019 Feb;37(1):e05. <a
+                    href="https://doi.org/10.17533/udea.iee.v37n1e05">https://doi.org/10.17533/udea.iee.v37n1e05</a>
+            </li>
+            <li id="r16">Tristán-López A. Modificación al modelo de Lawshe para el dictamen cuantitativo de la validez
+                de contenido
+                de un instrumento objetivo. Avances en medición. 2008; 6(1):37-48.</li>
+            <li id="r17">Caram CS, Brito MJM, Peter E. Invisibility of the self: Reaching for the telos of nursing
+                within a context
+                of moral distress. Nursing Inquiry. 2019 Jan 1 [cited 2022 Nov 22]; Available from: <a
+                    href="https://doi.org/10.1111/nin.12269">https://doi.org/10.1111/nin.12269</a></li>
+            <li id="r18">Marx M, Nitschke C, Nafula M, Nangami M, Brodowski M, Marx I, et al. If you can’t measure it-
+                you can’t
+                change it – a longitudinal study on improving quality of care in hospitals and health centers in rural
+                Kenya.
+                BMC Health Services Research [Internet]. 2018 Apr 1 [cited 2022 Nov 22];18(1):1–12. Available from: <a
+                    href="https://doi.org/10.1186/s12913-018-3052-7">https://doi.org/10.1186/s12913-018-3052-7</a></li>
+            <li id="r19">Piggott T, Langendam M, Parmelli E, Adolfsson J, Akl EA, Armstrong D, et al. Bringing two
+                worlds closer together: a critical analysis of an integrated approach to guideline development and
+                quality assurance schemes.
+                BMC Health Services Research [Internet]. 2021 Dec 1 [cited 2022 Nov 22];21(1). Available from: <a
+                    href="https://doi.org/10.1186/s12913-020-05819-w">https://doi.org/10.1186/s12913-020-05819-w</a>
+            </li>
+            <li id="r20">Seiffert LS, Wolff LDG, Cruz EDA, Silvestre AL, Ferreira MMF. Indicators of effectiveness of
+                nursing care
+                in the dimension of patient safety. Revista Brasileira de Enfermagem [Internet]. 2020 Apr 1 [cited 2022
+                Nov
+                22];73(3). Available from: <a
+                    href="https://doi.org/10.1590/0034-7167-2018-0833">https://doi.org/10.1590/0034-7167-2018-0833</a>
+            </li>
+            <li id="r21">Dubois C, Dʼamour D, Brault I, Dallaire C, Déry J, Duhoux A, et al. Which priority indicators
+                to use to evaluate nursing care performance? A discussion paper. Journal of Advanced Nursing [Internet].
+                2017 Dec 1
+                [cited 2022 Nov 22];73(12):3154–67. Available from: <a
+                    href="https://doi.org/10.1111/jan.13373">https://doi.org/10.1111/jan.13373</a></li>
+            <li id="r22">Beck SL, Berry PH, Guo J-W, Eaton J, Wong B, Dunton N, et al. Dissemination and Implementation
+                of Patient-centered Indicators of Pain Care Quality and Outcomes. Medical Care [Internet]. 2019 Feb 1
+                [cited 2022
+                Nov 22];57(2):159-166–166. Available from: <a
+                    href="https://doi.org/10.1097/mlr.0000000000001042">https://doi.org/10.1097/mlr.0000000000001042</a>
+            </li>
+            <li id="r23">Fawcett J. Applying conceptual models of nursing : quality improvement, research, and practice
+                [Internet].
+                2017 [cited 2022 Nov 22]. Available from: <a
+                    href="https://doi.org/10.1891/9780826180063">https://doi.org/10.1891/9780826180063</a></li>
+            <li id="r24">Slatyer S, Coventry LL, Twigg D, Davis S. Professional practice models for nursing: a review of
+                the literature and synthesis of key components. Journal of Nursing Management [Internet]. 2016 Mar 1
+                [cited 2022 Nov
+                22];24(2):139–50. Available from: <a
+                    href="https://doi.org/10.1111/jonm.12309">https://doi.org/10.1111/jonm.12309</a></li>
+            <li id="r25">Bekbergenova Z, Derbissalina G, Umbetzhanova A, Koikov V. Key Indicators of Performance as a
+                Method for
+                Monitoring Nursing Service. Georgian medical news [Internet]. 2020 Feb 1 [cited 2022 Nov 23];(299):151-
+                157–157. Available from: <a
+                    href="https://pubmed.ncbi.nlm.nih.gov/32242864/">https://pubmed.ncbi.nlm.nih.gov/32242864/</a></li>
+            <li id="r26">Stalpers D, Van Der Linden D, Kaljouw MJ, Schuurmans MJ. Using publicly reported
+                nursing-sensitive
+                screening indicators to measure hospital performance the netherlands experience in 2011. Nursing
+                Research
+                [Internet]. 2016 Jan 1 [cited 2022 Nov 23];65(5):362-370–370. Available from: <a
+                    href="https://doi.org/10.1097/nnr.0000000000000170">https://doi.org/10.1097/nnr.0000000000000170</a>
+            </li>
+            <li id="r27">Merkley J, Jivraj T, Sinno M, Amaral N, Mundle W, Jeffs L. Developing a Nursing Scorecard Using
+                the
+                National Database of Nursing Quality Indicators®: A Canadian Hospital’s Experience. Canadian Journal
+                of Nursing Leadership [Internet]. 2018 Dec 31 [cited 2022 Nov 23];31:82–91. Available from: <a
+                    href="https://doi.org/10.12927/cjnl.2019.25752">https://doi.org/10.12927/cjnl.2019.25752</a></li>
+            <li id="r28">Harvey CL, Baret C, Rochefort CM, Meyer A, Ausserhofer D, Ciutene R, Schubert M. Discursive
+                practice–
+                lean thinking, nurses’ responsibilities and the cost to care. Journal of health organization and
+                management.
+                2018; 32(6):762-778. <a
+                    href="https://doi.org/10.1108/jhom-12-2017-0316">https://doi.org/10.1108/jhom-12-2017-0316</a></li>
+            <li id="r29">Isfahani HM, Tourani S, Seyedin H. Features and results of conducted studies using a Lean
+                management
+                approach in emergency department in hospital: a systematic review. Bulletin of Emergency & Trauma. 2019;
+                7(1), 9. <a href="https://doi.org/10.29252/beat-070102">https://doi.org/10.29252/beat-070102</a></li>
+            <li id="r30">Moreno‐Fergusson ME, Guerrero-Rueda WJ, Ortiz-Basto GA, Arevalo-Sandoval IAL, Sanchez–Herrera
+                B.
+                Analytics and Lean Health Care to Address Nurse Care Management Challenges for Inpatients in Emerging
+                Economies. Journal of Nursing Scholarship. 2021: 53(6):803-814. <a
+                    href="https://doi.org/10.1111/jnu.12711">https://doi.org/10.1111/jnu.12711</a></li>
+        </ol>
+
+
+    </div>
+</body>
+
+</html>

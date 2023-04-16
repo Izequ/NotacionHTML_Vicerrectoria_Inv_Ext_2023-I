@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V7-ES-1</title>
+    <link rel="stylesheet" href="">
+    <style>
+        body {
+            padding: 10em;
+            padding-top: 20px;
+            font-family: Times New Roman;
+            color: black;
+        }
+
+        .articulo-original {
+            background-color: black;
+            color: aliceblue;
+            width: 100%;
+            size: 15%;
+        }
+
+        #articulo-derecha {
+            float: left;
+        }
+
+
+        /* Posiciones de los resumenes */
+        .abstract-container {
+            display: flex;
+            width: 100%;
+        }
+
+        .keywords-container {
+            float: left;
+            width: 20%;
+            padding-right: 20px;
+        }
+
+        .text-container {
+            float: right;
+            width: 100%;
+            padding-left: 20px;
+        }
+
+
+        ul.navbar {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 25em;
+            left: 2em;
+            width: 250px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: Times New Roman;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        ul.navbar li {
+            background: white;
+            margin: 0.5em 0;
+            padding: 0.3em;
+        }
+
+
+        /* Enlaces */
+
+        a.link-color:visited {
+            color: white;
+        }
+
+        a.link-color:link {
+            color: white;
+        }
+
+        a.link-color:hover {
+            color: white;
+        }
+
+        a.link-color:hover {
+            border-bottom: 1px solid;
+            background: black;
+        }
+
+
+        /* Link de referencia */
+
+        a:link {
+            color: #4e00ff;
+        }
+
+        a:visited {
+            color: #003bff;
+        }
+
+        a:focus {
+            border-bottom: 1px solid;
+            background: #98aae4;
+        }
+
+        a:hover {
+            border-bottom: 1px solid;
+            background: #aacefe;
+        }
+
+
+
+        /* Etiqueta P */
+
+        p {
+            line-height: normal;
+            text-align: justify;
+            font-size: 18px
+        }
+
+        p.titulo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        p.subtitulo {
+            font-size: 20px;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        p.subtitulo-segundo {
+            font-style: italic;
+            font-size: 18px;
+        }
+
+        /* Fin P */
+
+
+        /* Etiqueta Italic */
+        i {
+            font-size: 18px
+        }
+
+        /* LI para las listas */
+
+        li {
+            font-size: 18px;
+        }
+
+
+
+        /* Tablas */
+
+        table {
+            border-collapse: collapse;
+            border: 2px solid rgb(0, 0, 0);
+            align-items: center;
+        }
+
+        thead th {
+            border-collapse: collapse;
+            background-color: rgb(179, 179, 179);
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        tbody td {
+            border-collapse: collapse;
+            text-align: center;
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+
+        .tipo {
+            color: #ffffff;
+            font-size: 22px;
+            border-radius: 10px 5px 10px 5px;
+            background-color: #696969;
+        }
+
+        div.info {
+            padding-top: 20px;
+        }
+
+        img.logos {
+            width: 15px;
+            height: 15px;
+        }
+
+        .image {
+            text-align: center;
+            image-rendering: optimizeQuality;
+        }
+
+        .image p {
+            text-align: center;
+            font-size: small;
+        }
+
+        .logo {
+            width: 300px;
+            height: 80px;
+        }
+
+        .logo2 {
+            width: 300px;
+            height: 50px;
+
+        }
+
+        .lista li {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+
+        /* Anclajes de la pagina */
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .ecuacion {
+            text-align: center;
+            font-weight: bold;
+            margin: 1px;
+        }
+
+        @media only screen and (min-width:320px) and (max-width:767px) {
+            body {
+                width: 100%;
+                padding: 5em;
+                margin: 5px;
+            }
+
+            .image {
+                text-align: center;
+                image-rendering: optimizeQuality;
+            }
+
+            .image img {
+                width: 100%;
+                height: 100%;
+            }
+
+            .image p {
+                font-size: small;
+                text-align: center;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="image">
+        <img src="img/V7-ES-1/cabeza.png" width="100%">
+    </div>
+
+    <div>
+        <div class="articulo-original">
+            <p>
+            <div id="articulo-derecha"><b> <u> Articulo Original</u> </b> </div>
+            <div style='text-align:right'><b> <u><img class="image" width="15px" src="img/globales/doi.png"><a
+                            class="link-color"
+                            href="https://doi.org/10.22463/25909215.3637">https://doi.org/10.22463/25909215.3637</a></u>
+                </b></div>
+            </p>
+        </div>
+
+
+
+        <!--Titulos-->
+        <h1>Cambios en las concepciones sobre evaluación en matemáticas durante la formación docente</h1>
+
+        <h2>Changes in conceptions about assessment in mathematics during teacher training</h2>
+
+        <!--Autores-->
+        <h4>
+            Jamer Alexis Perilla-Fernández<sup><a href="#sup1">1*</a> </sup> <br>
+            Raúl Prada-Núñez<sup><a href="#sup2">2*</a> </sup> <br>
+            Gustavo Adolfo Marmolejo-Avernia<sup><a href="#sup3">3*</a> </sup> <br>
+        </h4>
+
+        <hr>
+
+        <p id="sup1"><sup>1*</sup><img class="logos" src="img/globales/sobre.png">Licenciado en Matemáticas,
+            <a href="jperilla@calasanzcucuta.edu.co">jperilla@calasanzcucuta.edu.co</a> . <img class="logos"
+                src="img/globales/orcid.png"> <a href="https://orcid.org/0000-0003-0055-2668">ORCID:
+                0000-0003-0055-2668</a>.
+            Colegio Calasanz, San José de Cúcuta, Colombia.
+        </p>
+
+        <p id="sup2"><sup>2*</sup><img class="logos" src="img/globales/sobre.png">Magister en Educación Matemática,
+            <a href="raulprada@ufps.edu.co">raulprada@ufps.edu.co</a> . <img class="logos" src="img/globales/orcid.png">
+            <a href="https://orcid.org/0000-0001-6145-1786">ORCID:
+                0000-0001-6145-1786</a>.
+            Universidad Francisco de Paula Santander, San José de Cúcuta, Colombia.
+        </p>
+
+        <p id="sup3"><sup>3*</sup><img class="logos" src="img/globales/sobre.png">Doctor en Educación Matemática,
+            <a href="usalgamav@udenar.edu.co">usalgamav@udenar.edu.co</a> . <img class="logos"
+                src="img/globales/orcid.png"> <a href="https://orcid.org/0000-0001-9047-4389">ORCID:
+                0000-0001-9047-4389</a>.
+            Universidad de Nariño, San Juan de Pasto, Colombia.
+        </p>
+
+        <hr>
+
+        <!-- Como realizar la cita -->
+
+        <p><b>How to cite: </b>Perilla-Fernández. J.A., Prada-Núñez. R., Marmolejo-Avernia. G.A., (2022). “Cambios en
+            las concepciones
+            sobre evaluación en matemáticas durante la formación docente.”. Perspectivas, vol. 7, no. S1, pp. 6-14,
+            2022.</p>
+
+        <!--Licencia-->
+        <p>&copy;Peer review is the responsibility of the Universidad Francisco de Paula Santander. This is an article
+            under the license
+            <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>
+        </p>
+
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Licencia Creative Commons"
+                style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
+
+        <hr>
+
+        <!--Recibido y aprobado-->
+        <p><b>Received: </b> Junio 15, 2022 <br> <b>Approved: </b> Agosto 20, 2022. </p>
+
+
+        <!--Resumen Inglés-->
+        <hr>
+
+        <div class="abstract-container">
+            <div class="keywords-container">
+                <p><b>Palabras clave:</b> <br></p>
+                <p>Evaluación en Matemáticas, Concepciones sobre evaluación, Formación docente, Procesos matemáticos.
+                </p>
+            </div>
+            <hr>
+            <div class="text-container">
+                <p class="titulo"> Resumen</p>
+                <p>
+                    Analizar los posibles cambios de concepciones que experimentan los docentes en formación sobre
+                    la evaluación en matemáticas durante su preparación profesional. Se aplicó en enfoque de corte
+                    cuantitativo con diseño no experimental a nivel correlacional; la muestra fue definida mediante un
+                    muestreo no probabilístico por conveniencia donde se escogieron a 98 estudiantes del programa de
+                    Licenciatura en Matemáticas de la UFPS; para la recolección de los datos se aplicó la técnica de
+                    encuestas
+                    utilizando un cuestionario donde se evaluó mediante una escala Likert diferentes ítems relacionados
+                    a 5 categorías conceptuales, posteriormente se realizó una prueba de correlación de Pearson de
+                    chicuadrado entre las concepciones presentes en los encuestados y el ciclo formativo que cursan en
+                    el
+                    programa académico. Se encontró que las diferentes concepciones existentes en los encuestados no se
+                    encuentran correlacionadas al ciclo formativo al que pertenecen, a excepción de las concepciones: a)
+                    La información que aporta la evaluación del aprendizaje modifica la enseñanza sobre la marcha. b) En
+                    matemáticas se debe evaluar el saber hacer procedimientos y algorítmicos matemáticos. Se evidencia
+                    que los encuestados no presentan cambios en sus concepciones sobre la evaluación en matemáticas
+                    desde que entran al programa hasta que lo culminan.
+                </p>
+            </div>
+        </div>
+
+        <!-- Resumen Español -->
+        <hr>
+
+        <div class="abstract-container">
+            <div class="keywords-container">
+                <p><b>Keywords: </b> <br></p>
+                <p>Evaluation in Mathematics, Conceptions about evaluation, Teacher training, Mathematical processes.
+                </p>
+            </div>
+            <hr>
+            <div class="text-container">
+                <p class="titulo"> Abstract</p>
+
+                <p>
+                    To analyze the possible changes in conceptions experienced by teachers in training about the
+                    assessment
+                    in mathematics during their professional preparation. It was applied in a quantitative cut approach
+                    with a
+                    non-experimental design at the correlational level; The sample was defined through a
+                    non-probabilistic
+                    convenience sampling where 98 students from the UFPS Bachelor of Mathematics program were
+                    chosen; For data collection, the survey technique was applied using a questionnaire where different
+                    items related to 5 conceptual categories were evaluated using a Likert scale, later a Pearson
+                    chi-square
+                    correlation test was performed between the conceptions present in the respondents. and the training
+                    cycle they take in the academic program. It was found that the different conceptions existing in the
+                    respondents are not correlated to the training cycle to which they belong, with the exception of the
+                    conceptions: a) The information provided by the evaluation of learning modifies teaching on the fly.
+                    b)
+                    In mathematics, knowledge of mathematical procedures and algorithms must be evaluated. It is evident
+                    that the respondents do not present changes in their conceptions about the assessment in mathematics
+                    from the moment they enter the program until they finish it.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Cuerpo del documento -->
+    <div>
+        <hr>
+        <!--Introducción-->
+        <p class="titulo"> Introducción</p>
+
+        <p>
+            El aprendizaje de cualquier concepto
+            matemático, lleva la superación de obstáculos
+            relacionados con el proceso de enseñanza o con
+            las capacidades propias del estudiante o con la
+            complejidad del concepto a aprender (Tall, 1991), En
+            cuanto al primer tipo de obstáculo, la evaluación del
+            aprendizaje se impone como objeto de estudio en las
+            últimas décadas. Al hablar de obstáculos referentes a
+            la evaluación del aprendizaje en matemáticas, se alude
+            a las concepciones sobre la práctica, instrumentos y
+            procesos que se utilizan al evaluar. Las concepciones
+            de los docentes, entendidas como un conjunto de
+            creencias e ideas que se construyen a partir de las
+            experiencias académicas de los docentes (Hidalgo &
+            Murillo, 2017), influyen de manera significativa en
+            la formación de los estudiantes (Hidalgo & Murillo,
+            2017).
+        </p>
+
+        <p>
+            Teniendo en cuenta lo anterior, el hecho que los
+            estudiantes colombianos evidencien un nivel crítico
+            en torno al aprendizaje de las matemáticas (De
+            Zubiría, 2015; Borrero, 2020) invita a reflexionar
+            sobre cuáles son las concepciones sobre la
+            evaluación en matemáticas que tienen los docentes
+            colombianos. La atención de este artículo recae en
+            las concepciones de los estudiantes en formación
+            docente, particularmente, en las siguientes
+            cuestiones: ¿cuáles concepciones se forman en
+            los estudiantes en formación docente durante su
+            preparación profesional? ¿Estas concepciones
+            cambian de acuerdo al ciclo de formación académica
+            en la que se encuentra? Se plantea como objetivo
+            de la investigación: analizar los posibles cambios
+            de concepciones que experimentan los docentes
+            en formación sobre la evaluación en matemáticas
+            durante su preparación profesional.
+        </p>
+
+        <p>
+            Para responder a las cuestiones anteriores
+            se definen cinco categorías donde se marcan las
+            diferentes concepciones y que serán objeto de
+            estudio en esta investigación, estas son: a) Influencia
+            de la evaluación en la educación. b) Objetivos de
+            la evaluación. c) Objetivos de la evaluación en matemáticas. d) Instrumentos de evaluación y e)
+            Responsabilidades en la evaluación.
+        </p>
+
+        <p>
+            En cuanto a la primera categoría, las
+            diferentes investigaciones evidencian dos tipos de
+            concepciones, una de estas hace referencia a que
+            la evaluación es un proceso que informa al docente
+            sobre los logros alcanzados por sus estudiantes y
+            gracias a esto se puede modificar su didáctica (Ramos
+            & Casas, 2018); por otro lado, se encontró que los
+            estudiantes que consideran la evaluación como un
+            aspecto importante en su proceso de aprendizaje
+            obtienen mejores resultados (Basso, 2011). Así,
+            en esta categoría las concepciones a destacar es la
+            evaluación como proceso influyente tanto en los
+            métodos de enseñanza como en los de aprendizaje.
+        </p>
+
+        <p>
+            En la segunda categoría se evidencia el
+            dominio de dos concepciones sobre los objetivos de
+            la evaluación, la primera se refiere a la evaluación
+            sumativa, concepción que se caracteriza por ser
+            utilizada por los docentes como instrumento
+            finalizador donde no se hace reflexión e interpretación
+            de los resultados obtenidos (Conde-Carmona,
+            2019), la segunda concepción se caracteriza sobre
+            la evaluación sumativa en la cual los procesos
+            de retroalimentación de resultados cobran una
+            gran importancia para un mejoramiento continuo
+            (Paternina & Quessep, 2017).
+        </p>
+
+        <p>
+            La tercera categoría muestra los tipos de
+            conocimientos que los docentes suelen evaluar, en
+            las investigaciones consultadas se identificaron
+            principalmente la evaluación de conocimientos
+            procedimentales y conceptuales. Chávez y Martínez
+            (2018) afirman que existe una fuerte tendencia
+            en evaluar los conocimientos procedimentales
+            en matemáticas, aun si los problemas propuestos
+            exigen conocimientos más avanzados. Por otro lado,
+            Moreno y Ortiz (2008) encontraron que los docentes
+            dan más importancia a evaluar conocimientos
+            conceptuales por encima de los procedimentales.
+        </p>
+
+        <p>
+            Es preciso denotar que estos conocimientos
+            encontrados no son los únicos que se evalúan en matemáticas, en Colombia el Ministerio de
+            Educación Nacional (Mineducación, 2006) define
+            que en matemáticas se deben evaluar 5 procesos
+            matemáticos que permitirán al estudiante alcanzar
+            competencias superiores, estos procesos se definen
+            en los Estándares Básicos de Competencias así:
+            a) formulación, comparación y ejercitación de
+            procedimientos. b) Razonamiento. c) Comunicación.
+            d) Modelación. e) formulación, tratamiento y
+            resolución de problemas.
+        </p>
+
+        <p>
+            En cuanto a los instrumentos que los docentes
+            utilizan al evaluar en matemáticas se encontró que
+            la concepción persistente es que se debe evaluar por
+            medio de pruebas escritas en especial que sean con
+            preguntas cerradas (Paternina & Quessep, 2017),
+            Por otro lado, Dolores y García (2016) encontraron
+            que los docentes evalúan en gran medida mediante
+            pruebas orales, esto hace que se evalúen otros
+            tipos de conocimiento como los comunicativos y
+            argumentativos.
+        </p>
+
+        <p>
+            Para finalizar, la quinta categoría se refiere
+            a la concepción sobre quien es el responsable de
+            las dificultades en el proceso evaluativo, estas
+            concepciones son importantes debido a que hace
+            consciente o inconsciente a cada actor educativo
+            sobre el proceso educativo. Con respecto a esto,
+            Gamboa y Pedrero (2010) encontraron en un estudio
+            que los estudiantes mayormente son conscientes
+            de que sus esfuerzos marcan su éxito o fracaso
+            académico; por otro lado, Alvarado et al. (2012)
+            afirman que “los alumnos vinculados en el tiempo
+            con profesores de buen desempeño se asocian con
+            un mejor resultado en las pruebas … que aquellos
+            vinculados a docentes de peor desempeño” (p.37),
+            además también reconocen que los diferentes tipos
+            de instrumentos utilizados influyen en los resultados
+            evaluativos. Por lo anterior, en los antecedentes se
+            evidencia concepciones donde la responsabilidad
+            se asocia a los estudiantes, la preparación de los
+            docentes y los instrumentos utilizados.
+        </p>
+
+        <p>
+            Finalmente, estas categorías permiten esbozar
+            de manera general las concepciones que persisten actualmente en los docentes a nivel internacional, sin
+            embargo, esta investigación además de identificar
+            las concepciones en los docentes en formación,
+            también pretende reconocer si existen cambios en
+            estas concepciones con respecto al nivel formativo
+            en que se encuentran los estudiantes en formación.
+        </p>
+
+        <p class="titulo">Método</p>
+
+        <p>
+            Esta investigación se enmarca bajo un enfoque
+            Cuantitativo ya que esta se caracteriza por seguir una
+            serie de pasos o procesos para comprobar la veracidad
+            de ciertas suposiciones (Hernández-Sampieri &
+            Mendoza, 2018), lo cual hace que la información
+            y datos recogidos se sometan a un tratamiento y
+            análisis rigoroso. En cuanto al nivel de investigación
+            se adoptó uno descriptivo-correlacional, ya que con
+            este permite la identificación de las concepciones
+            presentes en la muestra y además correlacionar estas
+            con el ciclo formativo en el que se encuentran los
+            docentes en formación.
+        </p>
+
+        <p class="titulo">Población y muestra</p>
+
+        <p>
+            La población de este estudio se limita a
+            estudiantes en formación docente del programa de
+            Licenciatura en Matemáticas de una universidad
+            del nororiente colombiano. Para la selección de la
+            muestra se utilizó un muestreo no probabilístico por
+            conveniencia, donde se seleccionó a 98 estudiantes
+            de dicho programa académico pertenecientes
+            los diferentes ciclos formativos que presenta su
+            currículo.
+        </p>
+
+        <p class="titulo">Herramientas</p>
+
+        <p>
+            Para la recolección de los datos se diseñó un
+            cuestionario dividido en dos secciones. La primera
+            sección corresponde al perfil sociodemográfico
+            del estudiante y en la segunda sección se plantea
+            diferentes ítems agrupados en 5 categorías de
+            análisis que fueron construidas a partir de la revisión
+            bibliográfica realizada. En cuanto al análisis de los
+            datos se usó el software SPSS v25.
+        </p>
+
+        <p class="titulo">Procedimiento</p>
+
+        <p><b>Etapa 1: </b>Análisis preliminar: En esta etapa, se
+            hace un estudio de antecedentes que apoyen y den
+            base para la construcción conceptual e histórica a la
+            presente investigación, producto de esta búsqueda
+            resultan las 5 categorías de análisis descritas
+            anteriormente.
+        </p>
+        <p><b>Etapa 2: </b>Construcción y validación de
+            instrumento: Este proceso se inicia con la
+            construcción del cuestionario basado en los utilizados
+            en investigaciones como la de Basso (2011); Gil et
+            al. (2002) y Ramos y Casas (2018), posteriormente
+            se realiza un proceso de validación de juicios por
+            expertos, tomando como referente el modelo de
+            Lawshe (1975) modificado por Tristán (2008) y
+            finalizar con determinar el nivel de confiabilidad por
+            medio del coeficiente Alpha de Cronbach.
+        </p>
+        <p><b>Etapa 3: </b>Aplicación: Esta etapa hace referencia
+            al método de la recogida de datos. Para la aplicación
+            del instrumento fue necesario elaborar el cuestionario
+            en formularios de Google, ya que, la recogida de
+            datos se dio de manera virtual, debido a la emergencia
+            sanitaria por el COVID-19. El cuestionario fue
+            remitido a los estudiantes matriculados en el
+            programa académico y se estableció una fecha límite
+            para la recepción de respuestas.
+        </p>
+        <p><b>Etapa 4: </b>Análisis de datos: En esta etapa se
+            utiliza el software SPSS v25, para hacer un análisis
+            Univariante inicial con el fin de identificar las concepciones dominantes en los encuestados en
+            cada categoría, posteriormente se tienen en cuenta
+            las concepciones encontradas y el ciclo formativo
+            en el que se encuentran los estudiantes para aplicar
+            el coeficiente de correlación de Pearson de Chicuadrado.
+        </p>
+
+        <p class="titulo">Resultados y Discusión </p>
+
+        <p>
+            De acuerdo al análisis realizado, a continuación,
+            se presentan los resultados que interesan a
+            esta investigación de acuerdo a cada categoría,
+            destacando las principales concepciones halladas
+            en los encuestados y su correlación con el ciclo
+            formativo en el que se encuentran estos.
+        </p>
+
+        <p class="subtitulo">Concepciones asociadas a la influencia de la evaluación en la educación</p>
+
+        <p>
+            En esta categoría, se definieron dos subcategorías
+            que engloban las concepciones evaluadas, la primera
+            hace referencia a la idea de que la evaluación influye
+            directamente en el aprendizaje de los estudiantes
+            y la segunda refleja que este proceso influye en la
+            enseñanza.
+        </p>
+
+        <p>
+            En la Tabla I, se evidencia que en las dos
+            concepciones definidas no existe un dominio
+            total de aceptación (26,5% y 46,0% de aceptación
+            respectivamente) por parte de los encuestados,
+            haciendo que los docentes en formación conciban la
+            evaluación como un proceso ajeno e influyente en la
+            educación.
+        </p>
+
+        <div class="image">
+            <p><b>Tabla I: </b>Correlación entre concepciones relacionadas a la influencia de la evaluación y el ciclo
+                formativo</p>
+            <img src="img/V7-ES-1/img17.png" width="80%">
+        </div>
+
+        <p>
+            Ahora bien, en la Tabla I se evidencia que la
+            concepción referente a que la evaluación influye
+            en el proceso de enseñanza tiene un coeficiente
+            de correlación de 0,01 lo cual indica que existe
+            una correlación entre está concepción y el ciclo
+            formativo del estudiante, es decir, los encuestados al
+            inicio de su formación conciben la evaluación como
+            un proceso independiente de la enseñanza pero a
+            medida que estos avanzan en el programa académico
+            conciben que los resultados evaluativos modifican
+            los procesos de enseñanza sobre la marcha.
+        </p>
+
+        <p>
+            La apropiación de esta concepción es muy
+            importante, debido a que esta permite que el
+            docente sea consciente y reflexivo sobre su práctica
+            pedagógica y la someta a cambios cuando es
+            necesario para el mejoramiento continuo, así como
+            lo afirma Pérez et al. (2017) “la evaluación permite
+            al docente adecuar el currículo y los objetivos
+            iniciales, y le otorgan la posibilidad de ajustar el
+            proceso progresivamente.” (p. 269).
+        </p>
+
+        <p class="subtitulo">Concepciones asociadas a los objetivos de la evaluación</p>
+
+        <p>
+            De acuerdo a los diferentes ítems propuestos
+            se definieron dos subcategorías que engloban los objetivos de la evaluación en matemáticas, la
+            primera es que la evaluación se concibe como un
+            proceso sumativo y la segunda que esta es un proceso
+            formativo.
+        </p>
+
+        <p>
+            En la Tabla II, se observa que el 72,2% de
+            los encuestados aceptan la evaluación como un
+            proceso formativo, mientras que un 39,5% de estos
+            aceptan las concepciones asociadas a la evaluación
+            como proceso sumativo, ante este panorama, se
+            puede afirmar que los estudiantes en formación
+            docente conciben la evaluación como un proceso
+            de retroalimentación contante para la formación
+            y mejoramiento continuo, sin rechazar del todo
+            aspectos sumativos de la evaluación.
+        </p>
+
+        <p>
+            Lo anterior supone una contradicción ya
+            que las dos concepciones están presentes en los
+            estudiantes, generando un problema como lo afirma
+            Mellado-Hernández y Chaucono-Catrinao (2016)
+            “cuando existen ambigüedades en las concepciones
+            pedagógicas… generalmente las prácticas de aula
+            resultan asociadas a un enfoque tradicional de
+            enseñanza” (p.12).
+        </p>
+
+        <div class="image">
+            <p><b>Tabla II: </b>Correlación entre concepciones relacionadas a los objetivos de la evaluación y el ciclo
+                formativo</p>
+            <img src="img/V7-ES-1/img25.png" width="80%">
+        </div>
+
+        <p>
+            En cuanto al coeficiente de correlación, se
+            observa que ninguna de las dos concepciones
+            descritas está correlacionada con el ciclo formativo
+            de los encuestados, es decir, no existen cambios
+            significativos en las concepciones de los estudiantes
+            de los primeros semestres y los de los últimos.
+        </p>
+
+        <p class="subtitulo">Concepciones asociadas a los objetivos de la evaluación en matemáticas</p>
+
+        <p>
+            Según investigaciones previas, en matemáticas
+            los docentes se limitan a evaluar dos tipos de
+            conocimientos -los procedimentales y conceptualesChávez y Martínez (2018); Preiss, Larraín y
+            Valenzuela (2011) y Conde-Carmona (2019). Sin
+            embargo, esta investigación no se limitó a presentar
+            estos conocimientos como los únicos a evaluar en matemáticas, sino que se propuso que los encuestados
+            consideraran la pertinencia de la evaluación de los
+            cinco procesos matemáticos establecidos por el Ministerio de Educación Nacional (Mineducación).
+        </p>
+
+        <p>
+            En la Tabla III, se evidencia que los cinco procesos matemáticos tuvieron más del 82% de aceptación
+            por parte de los encuestados, aspecto de gran importancia debido a que al evaluar estos procesos habrá
+            mayor seguimiento de las diferentes competencias desarrolladas por los estudiantes.
+        </p>
+
+        <div class="image">
+            <p><b>Tabla III: </b>Correlación entre concepciones relacionadas al objetivo de la evaluación en matemáticas
+                y el ciclo formativo</p>
+            <img src="img/V7-ES-1/img33.png" width="90%">
+        </div>
+
+        <p>
+            En cuanto al coeficiente de correlación, se
+            observa que la concepción relacionada con evaluar
+            los conocimientos procedimentales tiene un
+            coeficiente de correlación de 0,03, indicando que
+            esta concepción presenta mayor aceptación entre
+            los estudiantes de los primeros ciclos y disminuye
+            a medida que los estudiantes avanzan en formación
+            profesional.
+        </p>
+
+        <p>
+            En contraste Preiss et al. (2011) afirman que
+            en matemáticas los docentes suelen evaluar los
+            conocimientos procedimentales, haciendo que
+            los estudiantes formen una concepción de que
+            las matemáticas es saber operar, de ahí que los
+            estudiantes al iniciar su formación docente conciban
+            evaluar estos conocimientos en mayor medida.
+        </p>
+
+        <p class="subtitulo">Concepciones asociadas a los instrumentos de evaluación</p>
+
+        <p>
+            En esta categoría se muestran los posibles
+            instrumentos a utilizar al momento de evaluar en
+            matemáticas, diferenciando instrumentos de acuerdo
+            a su funcionalidad como los son las pruebas escritas
+            o las observaciones de aula.
+        </p>
+
+        <p>
+            En la Tabla IV, se evidencia que el tipo de
+            instrumento con mayor aceptación para evaluar en
+            matemáticas es la observación de aula con un 80,6%
+            esto indica que los docentes en formación consideran
+            importante las actitudes y actividades mostradas por
+            los estudiantes en la clase, ya que, “Indudablemente
+            dependiendo de qué se desee evaluar se escogerá el
+            mecanismo de cómo hacerlo” (Trelles et al., 2017,
+            p. 44).
+        </p>
+
+        <div class="image">
+            <p><b>Tabla IV. </b>Correlación entre concepciones relacionadas a los instrumentos de evaluación y el ciclo
+                formativo</p>
+            <img src="img/V7-ES-1/img43.png" width="90%">
+        </div>
+
+        <p>
+            En cuanto al coeficiente de correlación, se
+            observa que ninguna de las concepciones planteadas
+            tuvo un índice dentro de los parámetros para indicar
+            una relación entre las variables. De ahí que se afirme
+            que los estudiantes para docentes no presentan
+            cambios en sus concepciones con respecto a qué tipo
+            de instrumentos utilizar al evaluar en matemáticas
+            durante su preparación formativa.
+        </p>
+
+        <p class="subtitulo">Concepciones asociadas a las responsabilidades en la evaluación</p>
+
+        <p>
+            EL proceso evaluativo en educación, es una
+            actividad que se ha convertido en una herramienta
+        </p>
+
+        <div class="image">
+            <p><b>Tabla V. </b>Correlación entre concepciones relacionadas a responsabilidades en la evaluación</p>
+            <img src="img/V7-ES-1/img45.png" width="80%">
+        </div>
+
+
+        <p>
+            En cuanto a la correlación, se evidencia que
+            ninguna de las concepciones pertenecientes a
+            esta categoría muestran una relación con el ciclo
+            formativo de los encuestados, es decir que el 50%
+            de los encuestados tienen una concepción arraigada
+            con respecto a los instrumentos como principales
+            responsables de los resultados evaluativos, sin
+            importar el nivel formativo de los encuestados.
+        </p>
+
+        <!-- Conclusiones -->
+        <hr>
+
+        <p class="titulo"> Conclusiones </p>
+        <p>
+            De acuerdo al objetivo planteado, se observa
+            que en general las concepciones presentes en
+            los docentes en formación no están relacionadas
+            con el nivel formativo de estos, a excepción de la
+            concepción en la que se concibe que en matemáticas
+            se deben evaluar los conocimientos procedimentales y la concepción en la que se plantea la evaluación
+            como un proceso influyente en la enseñanza. Dichas
+            concepciones presentan un nivel de aceptación en
+            los estudiantes de primeros semestres acordes a una
+            evaluación de tipo sumativa, ya que la influencia de
+            este proceso en la enseñanza no es aceptada con un
+            alto porcentaje y por el contrario un gran porcentaje
+            de los encuestados le dan una alta aceptación a
+            evaluar procedimientos. Esto permite afirmar que los
+            estudiantes que ingresan a formarse como docentes
+            vienen influenciados por una educación tradicional,
+            pero a medida que reciben su formación docente
+            estas concepciones las van erradicando.
+        </p>
+
+
+        <!-- Referencias -->
+
+        <hr>
+
+        <p class="titulo"> Referencias </p>
+
+        <p id="r1">Alvarado, M., Cabezas, G., Falck, D., & Ortega,
+            M. E. (2012). La evaluación docente y sus
+            instrumentos: Discriminación del desempeño
+            docente y asociación con los resultados de los
+            estudiantes. Centro de Estudios MINEDUC/
+            PNUD. Recuperado de <a
+                href="https://www.estudiospnud.cl/publicaciones/la-evaluaciondocente-y-sus-instrumentos-discriminaciondel-desempeno-docente-y-asociacion-con-losresultados-de-los-estudiantes/">https://www.estudiospnud.cl/publicaciones/la-evaluaciondocente-y-sus-instrumentos-discriminaciondel-desempeno-docente-y-asociacion-con-losresultados-de-los-estudiantes/</a>
+        </p>
+        <p id="r2">Basso, A. (2011). Concepciones de alumnos
+            de secundaria respecto de la evaluación en
+            Matemáticas. Estudio de la incidencia de
+            un proceso de instrucción (tesis doctoral).
+            Universidad de Salamanca, España.</p>
+        <p id="r3">Borrero, O. F. (2020). Análisis del nivel de
+            calidad educativo en Colombia, a partir de los
+            resultados de las pruebas PISA en el periodo
+            2012-2018. Recuperado de: <a
+                href="http://hdl.handle.net/10654/35718.">http://hdl.handle.net/10654/35718.</a> </p>
+        <p id="r4">Chávez, Y., & Martínez, F. (2018). Evaluar para
+            aprender: hacer más compleja la tarea a los
+            alumnos. Educación matemática, 30(3), 211-
+            246. <a href="https://doi.org/10.24844/EM3003.09">https://doi.org/10.24844/EM3003.09</a></p>
+        <p id="r5">Conde-Carmona, R. J. (2019). Relación de
+            la evaluación y la práctica pedagógica docente: mirada de docentes de matemáticas
+            colombianos. Saber, Ciencia y Libertad, 14(2),
+            273-282. <a
+                href="https://doi.org/10.18041/2382-3240/saber.2019v14n2.5892">https://doi.org/10.18041/2382-3240/saber.2019v14n2.5892</a>
+        </p>
+        <p id="r6">Gil, F., Rico, L., & Fernández, A. (2002).
+            Concepciones y creencias del profesorado de
+            secundaria sobre la evaluación en matemáticas.
+            Revista de Investigación Educativa, 20(1), 47–75. Recuperado de <a
+                href="https://revistas.um.es/rie/article/view/97441">https://revistas.um.es/rie/article/view/97441</a>
+        </p>
+        <p id="r7">De Zubiría, J. (2015). Hacia un acuerdo nacional
+            para mejorar la calidad de la educación básica y
+            media en Colombia. Revista Educación y Ciudad,
+            (19), 39-56. <a
+                href="https://doi.org/10.36737/01230425.n19.118">https://doi.org/10.36737/01230425.n19.118</a> </p>
+        <p id="r8">Dolores, C., & García- García, J. (2016).
+            Concepciones de Profesores de Matemáticas
+            sobre la Evaluación y las Competencias.
+            Números, 92, 71-92.
+        </p>
+        <p id="r9">Hernández-Sampieri, R. & Mendoza, C. (2018).
+            Metodología de la investigación. Las rutas
+            cuantitativa, cualitativa y mixta. Ciudad de
+            México: Editorial Mc Graw Hill Education.</p>
+        <p id="r10">Hidalgo, N., & Murillo, F. J. (2017). Las
+            Concepciones sobre el Proceso de Evaluación
+            del Aprendizaje de los Estudiantes. REICE.
+            Revista Iberoamericana Sobre Calidad, Eficacia
+            Y Cambio En Educación, 15(1). <a
+                href="https://doi.org/10.15366/reice2017.15.1.007">https://doi.org/10.15366/reice2017.15.1.007</a></p>
+        <p id="r11">Gamboa, M., & Pedreros, O. (2010). Atribuciones
+            Causales y Rendimiento en Matemáticas (tesis
+            de pregrado). Universidad de Concepción, Chile.</p>
+        <p id="r12">Lawshe, C. (1975). A quantitative approach to
+            content validity. Personnel Psychology, 28, 563-
+            575.</p>
+        <p id="r13">Mellado-Hernández, M. E., & Chaucono-Catrinao,
+            J. C. (2016). Liderazgo pedagógico para reestructurar creencias docentes y mejorar
+            prácticas de aula en contexto mapuche. Revista
+            Electrónica Educare, 20(1), 371-388. <a
+                href="https://doi.org/10.15359/ree.20-1.18">https://doi.org/10.15359/ree.20-1.18</a></p>
+        <p id="r14">Ministerio de Educación Nacional. (2006).
+            Estándares Básicos de Competencias en
+            Lenguaje, Matemáticas, Ciencias y Ciudadanas.
+            Mineducación.</p>
+        <p id="r15">Moreno, I., & Ortiz, J. (2008). Docentes de Educación
+            Básica y sus concepciones acerca de la evaluación
+            en matemáticas. RIEE. Revista Iberoamericana
+            de Evaluación Educativa, 1(1), Recuperado de
+            <a href="https://revistas.uam.es/riee/article/view/4687">https://revistas.uam.es/riee/article/view/4687</a>
+        </p>
+        <p id="r16">Paternina, A., & Quessep, D. C. (2017). Creencias
+            y concepciones: una mirada a la evaluación
+            matemática en la educación superior. Revista
+            Boletín Redipe, 6(4), 150-159</p>
+        <p id="r17">Pérez, M., Enrique, J. O., Carbó, J. E., & González,
+            M. (2017). La evaluación formativa en el proceso
+            enseñanza aprendizaje. Edumecentro, 9(3), 263-
+            283.</p>
+        <p id="r18">Preiss, D., Larraín, A., & Valenzuela, S. (2011).
+            Discurso y Pensamiento en el Aula Matemática
+            Chilena. Psykhe, 20(2), 131-146. <a
+                href="https://doi.org/10.4067/S0718-22282011000200011">https://doi.org/10.4067/S0718-22282011000200011</a>
+        </p>
+        <p id="r19">Ramos, L. A., & Casas, L. M. (2018). Concepciones
+            y creencias de los profesores de Honduras
+            sobre la enseñanza, aprendizaje y evaluación de
+            las matemáticas. Revista Latinoamericana de
+            Investigación en Matemática Educativa, 21(3)
+            <a href="https://doi.org/10.12802/relime.18.2132">https://doi.org/10.12802/relime.18.2132</a>
+        </p>
+        <p id="r20">Tall, D. (1991). Advanced mathematical thinking
+            (Vol. 11). Coventry: Editorial Board.</p>
+        <p id="r21">Tristán-López, A. (2008). Modificación al modelo
+            de Lawshe para el dictamen cuantitativo de la
+            validez de contenido de un instrumento objetivo.
+            Avances en medición, 6, 37-48.</p>
+        <p id="r22">Trelles, C. A., Bravo, F. E., & Barrazueta, J. F. (2017).
+            ¿Cómo evaluar los aprendizajes en matemáticas?
+            INNOVA Research Journal, 2(6), 35-51.</p>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,1387 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V20-N1-4</title>
+    <link rel="stylesheet" href="">
+    <style>
+        body {
+            padding: 10em;
+            padding-top: 20px;
+            font-family: Times New Roman;
+            color: black;
+        }
+
+        #articulo-derecha {
+            float: left;
+        }
+
+        /* Posiciones de los resumenes */
+
+        .contenedor-general {
+            display: inline-flex;
+            width: 100%;
+        }
+
+        .contenedor-resumen {
+            width: 240%;
+        }
+
+        .contenedor-autor {
+            width: 100%;
+            padding-left: 20px;
+        }
+
+        .hr-resumen {
+            background-color: gray;
+            margin: 0;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .resumen-fondo {
+            background-color: #bdd5f1;
+            border-radius: 5px;
+        }
+
+        .titulo-resumen {
+            color: black;
+            font-size: 22px;
+            font-weight: bold;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .texto-resumen {
+            padding: 20px;
+            margin: 0;
+        }
+
+        ul.navbar {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 25em;
+            left: 2em;
+            width: 250px;
+        }
+
+        /* Titulos principales */
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: Times New Roman;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        h1 {
+            color: #29abe3;
+        }
+
+        .categoria_titulo {
+            font-style: italic;
+            color: #ffffff;
+        }
+
+        h3 {
+            font-style: italic;
+            font-weight: bold;
+            color: #707073;
+        }
+
+        .categoria {
+            text-align: center;
+            background-color: #707073;
+            width: 20%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            margin: auto;
+        }
+
+        ul.navbar li {
+            background: white;
+            margin: 0.5em 0;
+            padding: 0.3em;
+        }
+
+        /* Enlaces */
+
+        a.link-color:visited {
+            color: white;
+        }
+
+        a.link-color:link {
+            color: white;
+        }
+
+        a.link-color:hover {
+            color: white;
+        }
+
+        a.link-color:hover {
+            border-bottom: 1px solid;
+            background: black;
+        }
+
+        /* Link de referencia */
+
+        a:link {
+            color: #4e00ff;
+        }
+
+        a:visited {
+            color: #003bff;
+        }
+
+        a:focus {
+            border-bottom: 1px solid;
+            background: #98aae4;
+        }
+
+        a:hover {
+            border-bottom: 1px solid;
+            background: #aacefe;
+        }
+
+        /* Etiqueta P */
+
+        p {
+            line-height: normal;
+            text-align: justify;
+            font-size: 18px;
+        }
+
+        p.titulo {
+            color: #29abe3;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        p.subtitulo {
+            color: #29abe3;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* NUEVO */
+        p.subtitulo-segundo {
+            color: #29abe3;
+            font-style: italic;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        p.correspondencia {
+            color: black;
+            font-size: 18px;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        /* NUEVO */
+        p.entrevista {
+            color: black;
+            font-size: 18px;
+            font-style: italic;
+        }
+
+        /* NUEVO */
+        p.subtitulo-tercero {
+            color: #29abe3;
+            font-style: italic;
+            font-size: 18px;
+        }
+
+        p#cabeza {
+            color: #1d71ae;
+            text-align: center;
+        }
+
+        p.autores {
+            font-size: 16px;
+            margin: 0;
+            text-indent: 0em;
+            margin-bottom: 10px;
+        }
+
+        p.forma-citar {
+            text-indent: 0em;
+            text-align: justify;
+            justify-content: center;
+        }
+
+        .cita {
+            text-align: -webkit-center;
+        }
+
+        /* Bold especial para palabras que tienen color seguido de dos puntos
+*/
+
+        /* NUEVO */
+
+        b.subtitulo-segundo {
+            color: #29abe3;
+            font-size: 18px;
+        }
+
+        .contenedor_info {
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .info {
+            width: auto;
+        }
+
+        /* Este es para los documentos del dos en adelante *codigo abajo de este comentario* */
+
+        .info-text {
+            text-align: end;
+            margin: 0;
+        }
+
+        /* Uso Exlusico para el primero documento  que es de revision  *codigo abajo de este comentario* */
+
+        .info_text {
+            font-size: 12px;
+            line-height: 100%;
+            text-align: center;
+            margin: 0;
+        }
+
+        .info_hr {
+            margin: 5;
+        }
+
+        /* Fin P */
+        /* Etiqueta Italic */
+
+        i {
+            font-size: 18px
+        }
+
+        i.centrado {
+            font-size: 18px
+        }
+
+        /* LI para las listas */
+
+        li {
+            font-size: 18px;
+            padding-top: 10px;
+            text-align: justify;
+        }
+
+        /* NUEVO */
+        .lista li {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        hr {
+            background-color: #29abe3;
+            height: 1px;
+        }
+
+        /* Tablas */
+
+        table {
+            border-collapse: collapse;
+            border: 2px solid rgb(0, 0, 0);
+            align-items: center;
+        }
+
+        thead th {
+            border-collapse: collapse;
+            background-color: rgb(179, 179, 179);
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        tbody td {
+            border-collapse: collapse;
+            text-align: center;
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        .tipo {
+            color: #ffffff;
+            font-size: 22px;
+            border-radius: 10px 5px 10px 5px;
+            background-color: #696969;
+        }
+
+        img.logos {
+            width: 15px;
+            height: 15px;
+        }
+
+        .image {
+            text-align: center;
+            image-rendering: optimizeQuality;
+        }
+
+        .image p {
+            text-align: center;
+            font-size: small;
+        }
+
+        .logo {
+            width: 300px;
+            height: 80px;
+        }
+
+        .logo2 {
+            width: 300px;
+            height: 50px;
+        }
+
+        /* Anclajes de la pagina */
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* NUEVO */
+        .ecuacion {
+            text-align: center;
+            font-weight: bold;
+            margin: 1px;
+        }
+
+        @media only screen and (min-width:320px) and (max-width:900px) {
+            body {
+                width: 100%;
+                padding: 5em;
+                margin: 5px;
+            }
+
+            .image {
+                text-align: center;
+                image-rendering: optimizeQuality;
+            }
+
+            .image img {
+                width: 100%;
+            }
+
+            .image p {
+                font-size: small;
+                text-align: center;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="contenedor_info">
+        <div>
+            <img src="img/globales/logo.jpg" alt="" height="125px">
+        </div>
+        <div class="info" style="text-align: right;">
+            <p class="info-text"> ISSN-PRINT 1794-9831 / E-ISSN 2322-7028</p>
+            <p class="info-text"> Vol. 19 Nº 3 / sep - dic, 2022 / Cúcuta, Colombia. </p>
+            <p class="info-text">
+                <img src="img/globales/doi.png" height="20px" alt="">
+                <a href="https://doi.org/10.22463/17949831.3382">https://doi.org/10.22463/17949831.3382</a>
+            </p>
+        </div>
+    </div>
+
+
+    <!--Categoría-->
+    <div class="categoria">
+        <h2 class="categoria_titulo">Original </h2>
+    </div>
+
+    <h1> Diseño, validación facial y de contenido del instrumento “rol del cuidador familiar en administración de
+        medicamentos” </h1>
+
+    <h2 class="segundo"> Instrument design and facial and content validation "role of the family caregiver in the
+        administration of medication" </h2>
+
+    <h2 class="segundo"> Projeto, face e validação do conteúdo do instrumento "papel do cuidador familiar no
+        gerenciamento de medicamentos"</h2>
+
+
+    <!--Autores-->
+    <h3>
+        Lorena Chaparro-Díaz <sup><a href="#sup1">1*</a> </sup> <br>
+        María Zoraida Rojas-Marín <sup><a href="#sup2">2*</a> </sup> <br>
+        Sonia Patricia Carreño-Moreno <sup><a href="#sup3">3*</a> </sup> <br>
+        Ana Julia Carrillo-Algarra <sup><a href="#sup4">4*</a> </sup> <br>
+        Orlando Pacheco-Hernández <sup><a href="#sup5">5*</a> </sup> <br>
+        Natalia Esquivel-Garzón <sup><a href="#sup6">6*</a> </sup> <br>
+    </h3>
+
+
+    <!-- Conetenedor de las columnas de la descripciones de los autores, correspondencia de autor 
+    y los resumenes -->
+    <div class="contenedor-general">
+
+
+        <!-- Contenedor de los resumenes -->
+        <div class="contenedor-resumen">
+
+            <!-- Resumen Español -->
+
+            <div class="resumen-fondo">
+                <p class="titulo-resumen"> Resumen</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> <b>Objetivo:</b> Diseñar un instrumento para medir la adopción del rol del
+                    cuidador familiar en
+                    la administración de medicamentos en personas con enfermedad crónica y establecer tanto
+                    su validez de contenido como facial. <b>Método:</b> Estudio metodológico que incluyó tres fases:
+                    diseño del instrumento, determinación de la validez de contenido con 9 expertos y determinación de
+                    la validez facial mediante entrevistas cognitivas a 14 cuidadores y juicios de 30
+                    cuidadores de adultos con enfermedades crónicas. <b>Resultados:</b> Se obtuvo un cuestionario
+                    conformado por 32 ítems distribuidos en 3 dimensiones denominadas labores, organización
+                    y respuesta ante el rol. El instrumento presentó una adecuada validez de contenido dado que
+                    todos los ítems superaron el CVI mínimo de 0,58, mientras que para la escala total fue de
+                    0,97. Por su parte, la validez facial mostró que la claridad fue del 99,6%, la comprensión fue
+                    del 98,4% y la precisión fue del 96,9%. <b>Conclusión:</b> El instrumento Adopción del rol en la
+                    administración de medicamentos mide de forma lógica el constructo y los ítems que lo conforman
+                    representan adecuadamente sus dominios. </p>
+
+                <p class="texto-resumen">
+                    <b>Palabras Claves: </b> Medicamentos; Enfermedad crónica; Cuidador familiar; Instrumento; Estudio
+                    de validación.
+                </p>
+            </div>
+            <!-- Resumen Inglés -->
+
+            <div>
+                <p class="titulo-resumen"> Abstract</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> <b>Objective:</b> To design an instrument to measure the adoption of the role
+                    of the family caregiver
+                    in the administration of medications in people with chronic disease and to establish both its
+                    content and facial validity. <b>Method:</b> Methodological study that included three phases: design
+                    of the instrument, determination of content validity with 9 experts and determination of facial
+                    validity through cognitive interviews with 14 caregivers and judgments of 30 caregivers of
+                    adults with chronic diseases. <b>Results:</b> A questionnaire made up of 32 items distributed in 3
+                    dimensions called tasks, organization and response to the role was obtained. The instrument
+                    presented adequate content validity since all the items exceeded the minimum CVI of 0.58,
+                    while for the total scale it was 0.97. For its part, facial validity showed that clarity was 99.6%,
+                    comprehension was 98.4%, and precision was 96.9%. <b>Conclusion:</b> The instrument Adoption
+                    of the role in drug administration logically measures the construct and the items that comprise it
+                    adequately represent its domains. </p>
+
+                <p class="texto-resumen">
+                    <b>KeyWords:</b> Medications; Chronic Disease; Family Caregiver; Instrument; Validation Study.
+                </p>
+            </div>
+            <!-- Resumen Portuguez -->
+
+            <div class="resumen-fondo">
+                <p class="titulo-resumen"> Resumo</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> <b>Objetivo:</b> Projetar um instrumento para medir a adoção do papel do
+                    cuidador da família na
+                    administração de medicamentos em pessoas com doenças crônicas e estabelecer tanto seu
+                    conteúdo quanto sua validade facial. <b>Método:</b> Estudo metodológico que incluiu três fases:
+                    desenho do instrumento, determinação da validade do conteúdo com 9 especialistas e determinação da
+                    validade do rosto através de entrevistas cognitivas com 14 cuidadores e julgamentos
+                    de 30 cuidadores de adultos cronicamente doentes. <b>Resultados:</b> Foi obtido um questionário
+                    composto de 32 itens distribuídos em 3 dimensões chamadas trabalho, organização e resposta
+                    ao papel. O instrumento mostrou validade de conteúdo adequada, dado que todos os itens
+                    excederam o CVI mínimo de 0,58, enquanto que para a escala total foi de 0,97. A validade
+                    facial mostrou que a clareza era 99,6%, a compreensão era 98,4% e a precisão era 96,9%.
+                    <b>Conclusão:</b> O instrumento de adoção do papel da Administração de Medicamentos mede
+                    logicamente a construção e seus itens representam adequadamente seus domínios.
+                </p>
+
+                <p class="texto-resumen">
+                    <b>Palavras-chave:</b> Medicamentos; Doença crônica; Cuidador da família; Instrumento; Estudo de
+                    validação.
+                </p>
+            </div>
+
+
+
+        </div>
+
+        <!-- Descripcion de autores, Aprobado, Como citar, licencia -->
+        <div class="contenedor-autor">
+            <!-- Autores -->
+            <div>
+                <p class="subtitulo" style="color: black; font-size: 18px;">Autor de correspondencia*</p>
+                <!-- 1 -->
+                <p class="autores" id="sup1"><sup>1*</sup><img class="logos" src="img/globales/sobre.png"> Enfermera.
+                    Doctora en Enfermería
+                    - Profesora Asociada, Facultad de Enfermería Universidad Nacional de Colombia. Bogotá, Colombia.
+                    <a href="mailto:olchaparrod@unal.edu.co">olchaparrod@unal.edu.co</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0001-8241-8694">0000-0001-8241-8694</a>
+                </p>
+                <!-- 2 -->
+                <p class="autores" id="sup2"><sup>2*</sup><img class="logos" src="img/globales/sobre.png"> Enfermera.
+                    Especialista. Magister.
+                    Profesora Asistente Facultad de Enfermería, Universidad Nacional de
+                    Colombia. Bogotá, Colombia.
+                    <a href="mailto:mrojasm@unal.edu.co">mrojasm@unal.edu.co</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0002-1228-9214">0000-0002-1228-9214</a>
+                </p>
+                <!-- 3 -->
+                <p class="autores" id="sup3"><sup>3*</sup><img class="logos" src="img/globales/sobre.png"> Enfermera.
+                    Doctora en Enfermería
+                    - Profesora Asociada, Facultad de Enfermería Universidad Nacional de Colombia. Bogotá, Colombia.
+                    <a href="mailto:spcarrenom@unal.edu.co">spcarrenom@unal.edu.co</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0002-4386-6053">0000-0002-4386-6053</a>
+                </p>
+                <!-- 4 -->
+                <p class="autores" id="sup4"><sup>4*</sup><img class="logos" src="img/globales/sobre.png"> Enfermera.
+                    Enfermera. Magister. Profesora Titular Fundación Universitaria
+                    de Ciencias de la Salud- FUCS. Bogotá,
+                    Colombia.
+                    <a href="mailto:ajcarrillo@fucsalud.edu.co">ajcarrillo@fucsalud.edu.co</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0002-3765-7474">0000-0002-3765-7474</a>
+                </p>
+                <!-- 5 -->
+                <p class="autores" id="sup5"><sup>5*</sup><img class="logos" src="img/globales/sobre.png"> Enfermero.
+                    Especialista. Magister.
+                    Profesor Fundación Universitaria Juan
+                    N Corpas. Bogotá, Colombia.
+                    <a href="mailto:orlando.pacheco@juanncorpas.edu.co">orlando.pacheco@juanncorpas.edu.co</a>, <img
+                        class="logos" src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0001-5571-2724">0000-0001-5571-2724</a>
+                </p>
+                <!-- 6 -->
+                <p class="autores" id="sup6"><sup>6*</sup><img class="logos" src="img/globales/sobre.png"> Doctora en
+                    Enfermería. Profesora
+                    Universidad Industrial de Santander. Bucaramanga, Colombia.
+                    <a href="mailto:nesquivelg@unal.edu.co">nesquivelg@unal.edu.co</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0002-5354-6774">0000-0002-5354-6774</a>
+                </p>
+            </div>
+
+            <!--Recibido y aprobado-->
+            <div>
+                <p><b>Recibido: </b> 6 junio 2022 <br> <b>Aprobado: </b> 31 octubre 2022 </p>
+            </div>
+
+            <!-- Como citar -->
+            <div class="cita">
+                <p class="forma-citar autores"><b>Para citar este artículo / To reference this article / Para citar este
+                        artigo:</b> Chaparro-Diaz L, Rojas-Marin MZ,
+                    Carreño-Moreno SP, Carrillo-Algarra
+                    AJ, Pacheco-Hernandez O, Esquivel-Garzon N. Diseño, validación facial
+                    y de contenido del instrumento “rol del
+                    cuidador familiar en administración
+                    de medicamentos”. 2023; 20(1):33-44.
+                    <a href="https://doi.org/10.22463/17949831.3382">10.22463/17949831.3382</a>
+                </p>
+            </div>
+
+            <!--Licencia-->
+            <br>
+            <div>
+                <p class="autores "> &#169; Universidad Francisco de Paula Santander.
+                    Este es un artículo bajo la licencia CC-BY-NC-ND
+                    <br>
+                    <a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img
+                            alt="Licencia Creative Commons" style="border-width:0"
+                            src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Cuerpo del documento -->
+    <div>
+        <hr>
+        <!--Introducción-->
+        <p class="titulo"> Introducción</p>
+
+        <p>
+            El rol de cuidador de personas mayores con enfermedades crónicas y en situación de dependencia es asumido
+            en gran medida por un familiar, quien se ve en la necesidad de desarrollar habilidades cognitivas,
+            emocionales y sociales que le permitan responder a una cantidad
+            de tareas instrumentales para las cuales no está preparado, como por ejemplo la administración de los
+            medicamentos (1). Este proceso de transición hacia el rol de
+            cuidador toma mayor relevancia en la medida en que en
+            los últimos años ha aumentado el número de personas
+            con enfermedades crónicas no transmisibles (ENT) con
+            necesidades de cuidado cada vez más complejas(2).
+        </p>
+
+        <p>
+            En este sentido, para personas que padecen alguna
+            ENT, posterior a las hospitalizaciones, existe un mayor
+            riesgo de complicaciones en el hogar relacionadas con
+            la administración de medicamentos, tales como mayor
+            incidencia de reacciones adversas, errores relacionados
+            con la dosis, con el medicamento, con la vía o con la
+            hora de administración(3,4), al punto de llegar incluso a la interrupción del tratamiento. Estas situaciones
+            conducen a exacerbaciones clínicas, deterioro físico,
+            cognitivo, readmisiones hospitalarias y mayores costos
+            al sistema de salud (5-7).
+        </p>
+
+        <p>
+            Los estudios sobre el proceso de administración de medicamentos se han centrado en evaluar los conocimientos
+            y habilidades de los profesionales de la salud, los
+            errores de prescripción y la dispensación de la medicación en los entornos hospitalarios (8,9). Sin embargo,
+            el uso más extenso de ellos se da en los propios hogares
+            de los pacientes, por lo cual resulta indispensable disponer de herramientas que evalúen de forma integral
+            el proceso de administración de medicamentos, en este
+            caso, destinado a los cuidadores familiares, quienes
+            carecen de un suficiente soporte instrumental para la
+            organización, ejecución y respuesta ante el rol. En este
+            contexto, el apoyo y la educación que brinda enfermería en el proceso de preparación de los pacientes y de
+            sus cuidadores resulta fundamental, especialmente al
+            tratar las competencias relacionadas con el cuidado del
+            adulto mayor en el hogar. Al analizar este contexto, es
+            posible identificar acciones de mejora orientadas a una
+            adecuada adopción del rol de cuidador en el hogar.
+        </p>
+
+        <p>
+            Por lo anterior, el objetivo de esta investigación es diseñar, realizar la validez de contenido y la validez
+            facial
+            del instrumento “Adopción del rol del cuidador familiar en la administración de medicamentos ROL-M”,
+            realizado para los cuidadores familiares de personas
+            con ENT en condición de dependencia. El constructo de adopción del rol está enmarcado originalmente en el
+            concepto de transición, definido en la teoría de las transiciones por Afaf Melis (10). Así, este estudio
+            responde
+            a la necesidad de hacer copartícipes a los cuidadores
+            familiares en el proceso de administración segura de
+            medicamentos, por lo que con este estudio se decanta y
+            se valida el esfuerzo por aportar evidencia que permita
+            comprender el complejo mundo de los cuidadores.
+        </p>
+
+        <hr>
+
+        <p class="titulo">Metodología</p>
+
+        <p>
+            La investigación fue de tipo psicométrico (11), se realizó entre marzo y junio de 2021 en la ciudad de
+            Bogotá. Se siguieron los aspectos teóricos propuestos por la
+            Comisión Internacional del Test y pautas a seguir para
+            la aplicación de test (12), dentro de los cuales incluye
+            la justificación o finalidad de la construcción del instrumento, el soporte conceptual y teórico del
+            constructo
+            a evaluar, la construcción y evaluación cualitativa de
+            ítems, la validez de contenido y la validez facial (Figura 1). Con una muestra no probabilística por
+            conveniencia, con participación de 9 expertos, 44 cuidadores
+            familiares (14 entrevista cognitiva y 30 evaluación de
+            ítems). Teniendo en cuenta lo anterior, para esta investigación se contemplaron tres fases: justificación y
+            soporte conceptual, redacción de ítems y validación de
+            contenido y facial.
+        </p>
+
+        <p>
+            En la siguiente imagen se presentan las fases de desarrollo del estudio, para determinar el diseño del
+            instrumento, adopción de rol de cuidador familiar en la administración de medicamentos (ROL-M) y su
+            validación
+            facial y validación de contenido de este.
+        </p>
+
+        <div class="image">
+            <img src="img/V20-N1-4/Screenshot_1.png" width="75%">
+            <p><b>Figura 1. </b>Pasos para la elaboración del instrumento de ROL-M.</p>
+            <p><b>Fuente: </b>Elaboración propia</p>
+        </div>
+
+        <p class="subtitulo-segundo">Fase I: Justificación y soporte conceptual</p>
+
+        <p>
+            La adopción del rol de cuidador implica una transición
+            que involucra elementos cognitivos, comportamentales
+            y relacionales. Como proceso dinámico, dicha adopción debe evaluarse periódicamente, de forma que se
+            puedan realizar intervenciones de clarificación, modelación y ensayo del rol (13), incorporando recursos
+            acordes con las necesidades tanto del paciente como
+            del cuidador, de forma que faciliten la adherencia terapéutica y el éxito del tratamiento (14). En este
+            contexto,
+            se requiere de un instrumento para evaluar la adopción
+            del rol en el uso de medicamentos por parte de cuidadores familiares de personas mayores con enfermedad
+            crónica, de forma que pueda ser usado para evidenciar
+            los cambios y progresos que están ocurriendo en este
+            proceso.
+        </p>
+
+        <p>
+            Así, la construcción del instrumento ROL-M surgió
+            de la revisión de la literatura y estuvo basado en las
+            tres dimensiones de la versión original del instrumento
+            “Adopción del rol del cuidado de la persona con enfermedad crónica” (13) conjugado con la experiencia
+            de las investigadoras en el conocimiento del rol de los
+            cuidadores familiares de adultos mayores en condición
+            crónica.
+        </p>
+
+        <p>
+            Los hallazgos fueron organizados de acuerdo con las
+            características comunes, las relaciones entre sí y la afinidad temática del contenido. Adicionalmente, se
+            realizó un proceso de comparación continua en la búsqueda
+            de patrones para posteriormente asignar una categoría a
+            cada uno de los grupos que surgieron con los resultados
+            seleccionados. Luego, se realizó una revisión teórica
+            del proceso identificado que correspondió a las labores,
+            la organización y las respuestas del cuidador, ello ubicado dentro del marco teórico y conceptual de las
+            transiciones aportado por Meleis, lo que permitió integrar
+            los hallazgos con las propiedades teóricas.
+        </p>
+
+        <p class="subtitulo-segundo">Fase II: Redacción de ítems</p>
+
+        <p>
+            Para la construcción y evaluación cualitativa de los
+            ítems, de forma que tuvieran características o atributos
+            útiles, uniformes e importantes que identificaran el rol
+            del cuidador familiar que asume la preparación y administración de medicamentos en el adulto mayor casa y
+            a partir de la revisión de la literatura y de la definición
+            del constructo de la adopción del rol en el uso de medicamentos, se construyó una primera versión del
+            instrumento conformada por 26 ítems, con la participación
+            del equipo de investigación y un lingüista con el fin de
+            alinear los ítems con un lenguaje sencillo y un orden
+            gramatical.
+        </p>
+
+        <p class="subtitulo-segundo">Fase III: Validez de contenido y validez facial</p>
+
+        <ul class="lista">
+
+            <li><b>Validez de contenido</b></li>
+
+            <p>
+                Para la validez de contenido, se contó con la participación de 9 expertos (5 hombres y 4 mujeres) con
+                formación de maestría (n=8) y doctorado (n=1), procedentes
+                de Colombia, expertos en el cuidado de adultos con enfermedades crónicas, en la realización de juicios y
+                decisiones basadas en la evidencia, reconocimiento en la
+                comunidad y disponibilidad para participar en el proceso con imparcialidad. El acuerdo entre los jueces
+                se determinó mediante la validez de contenido definido por
+                Lawshe y modificado por Tristán (15), mientras que la
+                evaluación de cada ítem se realizó teniendo en cuenta
+                los criterios de redundancia, relevancia y claridad.
+            </p>
+
+            <p>
+                Con los resultados, se realizó el cálculo de la razón de
+                validez de contenido (CVR) para determinar qué ítems
+                del instrumento eran aceptables y debían mantenerse
+                en la versión final del mismo. Además, se estableció el
+                índice de validez de contenido (CVI) para todo el instrumento. Posteriormente, los investigadores y un
+                lingüista con experiencia en producción de textos escritos
+                y conocimiento de la terminología en salud consolidaron la información de cada ítem con las
+                observaciones
+                emitidas por los expertos y tomaron decisiones respecto a la estructura semántica, conceptual y de
+                contenido.
+                De este proceso, se dejaron como definitivos aquellos
+                ítems que tuvieron un índice de acuerdo igual o mayor
+                a 0,58, lo que condujo a la elaboración de una segunda
+                versión del instrumento.
+            </p>
+
+            <li><b>Validez facial </b></li>
+
+            <p>
+                En un primer momento, se realizaron 14 entrevistas
+                cognitivas semiestructuradas a cuidadores de adultos
+                con enfermedades crónicas mediante videoconferencia y con una duración aproximada de 40 minutos cada
+                una. Para la recolección de la información, se utilizó
+                la técnica de sondeo verbal, el cual estuvo orientando
+                hacia el juicio de los ítems en términos de comprensión/interpretación, recuerdo y juicio (16). Los
+                datos
+                fueron recogidos de forma concurrente mediante notas
+                de campo y las entrevistas fueron grabadas con previo consentimiento de los participantes.
+            </p>
+
+            <p>
+                En un segundo momento, los ítems fueron evaluados
+                por otro grupo de 30 cuidadores familiares de adultos
+                mayores con enfermedad crónica. Para la inclusión en
+                el estudio, los participantes debían ser mayores de 18
+                años, llevar un tiempo de cuidado de seis meses o más
+                y demostrar capacidad mental para responder o evaluar
+                el instrumento.
+            </p>
+
+            <p>
+                Para validar los ítems del instrumento de acuerdo con
+                criterios de claridad (tipo de lenguaje o redacción fácil
+                de entender), precisión (expresión en un lenguaje conciso y exacto, sin dejar dudas) y comprensión
+                (comprensión de lo que se entiende al leer el ítem). Los
+                investigadores establecieron el porcentaje de acuerdo
+                entre los jueces en cada uno de los ítems y se decidió que los valores superiores al 85% se
+                considerarían
+                satisfactorios siguiendo los criterios planteados en el
+                estudio de Villamizar y Laguado (17). Por último, la
+                información emitida por los participantes y expertos se
+                consolidó con el fin de analizar la claridad, precisión y
+                comprensión de los ítems, lo que llevó a un consenso
+                final y consolidación del instrumento.
+            </p>
+        </ul>
+
+        <p class="subtitulo-segundo">Consideraciones éticas</p>
+
+        <p>
+            La investigación se enmarcó en los principios éticos
+            para las investigaciones con seres humanos en Colombia (Res. 8430/93) y de acuerdo con las pautas éticas
+            dispuestas por el Consejo de Organizaciones de las
+            Ciencias Médicas (CIOMS). Además, se cumplió con
+            las normas vigentes de propiedad intelectual de la Universi¬dad Nacional de Colombia (Acuerdo 035/2003)
+            y obtuvo los avales éticos del Comité de Ética de la
+            Universidad Nacional de Colombia (Aval 012 de 2021).
+        </p>
+
+        <p class="titulo">Resultados</p>
+
+        <p class="subtitulo-segundo">Fase I: Justificación y soporte conceptual</p>
+
+        <p>
+            Una vez seleccionados, analizados y agrupados los hallazgos de 27 piezas de investigación, la agrupación
+            temática de la información permitió integrar los conceptos más abordados en los artículos. A partir de ello,
+            emergieron tres temas principales: labores del rol, organización del rol y respuesta ante el rol (Tabla 1).
+        </p>
+
+        <div class="image">
+            <p><b>Tabla 1. </b>Principales temas y hallazgos que emergieron de la revisión de literatura</p>
+            <img src="img/V20-N1-4/Screenshot_2.png" width="70%">
+            <p><b>Fuente: </b>Elaboración propia</p>
+        </div>
+
+        <p>
+            Frente a las labores o ejecución del rol, este integran
+            las acciones propias de la administración del medicamento, que incluyen los pasos y procedimientos al
+            momento de realizar la administración del medicamento a
+            la persona en condición de cronicidad. La organización
+            del rol, es definida como las acciones previas realizadas para facilitar y anticiparse al proceso de
+            administración del medicamento a la persona en condición de
+            cronicidad, y la respuesta ante el rol, comprende las
+            percepciones o sentimientos asociados a la adopción eficaz del rol, derivado de la experiencia de
+            administración del medicamento a la persona en condición de
+            cronicidad.
+        </p>
+
+        <p class="subtitulo-segundo">Fase II: Redacción de ítems</p>
+
+        <p>
+            La construcción y evaluación cualitativa de los ítems
+            permitió elaborar un cuestionario inicial conformado
+            por 26 ítems que fueron organizados y denominados
+            bajo tres dominios. El dominio 1, labor o ejecución de rol (1-5 ítem), buscó hacer explícitas las
+            actividades
+            instrumentales frente al uso de medicamentos. Se optó
+            por usar el término “dar los medicamentos” en lugar de
+            “administrar los medicamentos”, porque es una forma
+            sencilla, general y culturalmente más clara y de uso entre los cuidadores.
+        </p>
+
+        <p>
+            En el dominio 2, organización del rol (6-14 ítem), se
+            hizo énfasis en acciones que impliquen conducta como
+            el hecho de “pedir ayuda”, “compartir”, “saber qué hacer”, “haber enseñado” y a la búsqueda de información
+            sobre los medicamentos que complementen las indicaciones de prescripción.
+        </p>
+
+        <p>
+            Finalmente, en el dominio 3, respuesta ante el rol (15-
+            26 ítem), se hizo énfasis en la manifestación de sentimientos con palabras como “me siento” y la presencia
+            de efectos positivos o negativos “estoy”, “confío” o “sobrecargado”. En todos los ítems del instrumento, se
+            optó por referirse al receptor de cuidado como “el familiar que cuido”, teniendo en cuenta que es uno de los
+            roles que puede tener el cuidador entre muchos otros.
+            Esta versión fue sometida a la validez de contenido por
+            expertos.
+        </p>
+
+        <p class="subtitulo-segundo">Fase III: Validez de contenido y validez facial</p>
+
+        <ul class="lista">
+
+            <li><b>Validez de contenido </b></li>
+
+            <p>
+                En la Tabla II se muestran los resultados correspondientes a la validez de contenido (CVR) según las
+                evaluaciones obtenidas para cada ítem. Aquellos ítems
+                que obtuvieran valores menores a 0,58, debían ser revisados. Adicionalmente, se evidenció que el índice
+                de
+                validez global de los 26 ítems fue de 0,75, un valor
+                considerado aceptable.
+            </p>
+
+            <div class="image">
+                <p><b>Tabla 2. </b>Validez de contenido por parte de los expertos</p>
+                <img src="img/V20-N1-4/Screenshot_3.png" width="80%">
+                <img src="img/V20-N1-4/Screenshot_4.png" width="80%">
+                <p><b>Fuente: </b>Datos del estudio </p>
+            </div>
+
+            <p>
+                Como consecuencia de estos hallazgos, los ítems
+                8,11,17,18 y 25 fueron calificados como redundantes,
+                los ítems 9,12,13 y 21 fueron considerados no relevantes y se pudo determinar que los ítems 1, 2, 3, 4,
+                5,
+                7, 9, 10, 16, 22, 25 y 26 no eran claros, por lo cual se
+                ajustó su redacción. Una vez analizados los resultados,
+                el panel de expertos decidió eliminar los ítems número
+                6, 11, 12 y 17 por redundancia con otros ítems y el 21
+                por relevancia.
+            </p>
+
+            <p>
+                Por otra parte, se realizó una reorganización de las dimensiones y de sus respectivos ítems. Así, la
+                dimensión 1 pasó a ser la de labores-ejecución del rol, debido
+                a que se llegó a la conclusión de que tanto los expertos
+                (que son del área de la salud) como los cuidadores tienden a pensar primero en las actividades
+                instrumentales
+                del cuidado, luego pasan por aspectos del proceso (organización del rol) y por último comprenden el
+                impacto de la labor. Entretanto, la organización del rol se
+                mantuvo como dimensión 2. Finalmente, el dominio 3
+                de respuesta ante el rol pasó a ser el último y a estar
+                compuesto por 9 ítems.
+            </p>
+
+            <p>
+                De igual forma, se incorporó un encabezado al instrumento con preguntas abiertas y cerradas que
+                permitieran la caracterización del número de medicamentos,
+                dosis, vía y frecuencia de administración de medicamentos, la valoración de la presencia o no de
+                gastrostomía y el uso de otros productos naturales u homeopáticos como medidas complementarias del
+                tratamiento.
+                Esta segunda versión fue de nuevo evaluada por 7 de
+                los 9 expertos que participaron en la primera ronda de
+                validación y, con los hallazgos, se construyó la segunda versión del instrumento. Producto de esta
+                revisión por
+                expertos, los ajustes requeridos fueron menores, el CVI
+                para la escala total fue de 0,97, todos los ítems tuvieron
+                un CVR mayor a 0,71 y, gracias a ello, se mantuvieron
+                todos los ítems excepto el 12 que obtuvo un CVR de
+                0,42, por lo que se eliminó definitivamente. En el ítem
+                18, se volvió a retomar el término “registro”, ya que los
+                expertos expresaron que era más sencillo y común que
+                un calendario. En el ítem 23, se vio que era más común
+                conocer las sesiones educativas o cursos como “charlas”, por lo cual se incorporó este término.
+                Finalmente,
+                se mantuvieron 32 ítems, los cuales fueron sometidos a
+                la validez facial.
+            </p>
+
+
+            <li><b>Validez facial </b></li>
+
+            <p>
+                El análisis y ajustes derivados de las entrevistas cognitivas se presentan en términos de comprensión,
+                juicio
+                y aprobación. Respecto a la comprensión, se identificaron algunas dificultades relacionadas con términos
+                como “pastillero”, “ano”, “complemento” o “habilidad”. Al respecto, se buscaron otras opciones para
+                reemplazar estos términos y las preguntas se ajustaron
+                para emplear expresiones más apropiadas. De igual
+                forma, se identificaron dificultades de comprensión debido a enunciados extensos (ítem 13 y 21), lo cual
+                se
+                resolvió simplificándolos.
+            </p>
+
+            <p>
+                Frente al juicio, las observaciones fueron especificas
+                en el ítem 5 al considerar el uso del pastillero como
+                una mala práctica que condiciona al cuidador, por lo
+                que se decidió suprimir este término. También, en el
+                ítem 9 no son totalmente conocidas todas las posibles vías de administración de los medicamentos por lo
+                que
+                se sugirió incluir la gastrostomía. Igualmente, el ítem
+                12 es percibido como un juicio y entendido como una
+                acción intencional, por lo que se incluyó la palabra “involuntaria”.
+            </p>
+
+            <p>
+                Sobre la aprobación, el instrumento ROL-M fue bien
+                aceptado por los cuidadores, los ítems fueron considerados apropiados, importantes y que además reflejan
+                el rol que desempeñan en la cotidianidad de una
+                forma estructurada. Algunos cuidadores manifestaron
+                la importancia del ítem que indaga sobre el lavado de
+                manos especialmente por el momento de pandemia por
+                COVID-19, ya que este contexto ha propiciado que se
+                comprenda como una actividad cotidiana en especial
+                para el cuidado de personas con enfermedad crónica.
+                Manifestaron que el ítem 10 resulta muy importante
+                porque permite identificar si el paciente está siendo sobre o submedicado. De forma general, se
+                consideró que
+                el instrumento es fácil de completar y lo consideran una
+                herramienta útil para obtener una visión holística de la
+                situación del cuidador que podría utilizarse como base
+                para planificar el cuidado.
+            </p>
+
+            <p>
+                Respecto a la validez facial realizada por el grupo de
+                30 participantes, predominaron las mujeres en un 93%,
+                con una edad promedio de 52 años (mínima de 36 y la
+                mayor de 81 años). En cuanto a escolaridad, el 40% tenían bachillerato completo, el 23%
+                técnico-tecnólogo y
+                un 20% formación universitaria. Finalmente, en cuanto
+                a estrato, 7% pertenecían al estrato uno, el 57% eran
+                de estrato dos y un 30% de estrato tres. El porcentaje
+                de acuerdo entre los 30 participantes en el criterio de
+                claridad fue del 99,6%, en comprensión del 98,4% y en
+                precisión del 96,9%. En general, los participantes tuvieron pocas observaciones o sugerencias en
+                términos
+                de redacción, claridad o falta de precisión de cada una
+                de las preguntas.
+            </p>
+        </ul>
+
+        <p class="titulo">Discusión </p>
+
+        <p>
+            El propósito de este artículo es describir el proceso de
+            diseño, validez de contenido y facial de un instrumento
+            que valora la adopción del rol del cuidador en la administración de medicamentos en adultos mayores, con el
+            fin de evaluarlo y detectar las eventuales acciones de
+            mejora necesarias para evitar hospitalizaciones, lograr
+            los objetivos del tratamiento, el control de la enfermedad y disminuir los eventos adversos relacionados con
+            la medicación (18).
+        </p>
+
+        <p>
+            Conseguir que la transición del cuidador se realice con
+            altos estándares de calidad es especialmente importante
+            en las personas que conviven con pacientes geriátricos
+            con múltiples afecciones crónicas, dependencia y regímenes terapéuticos complejos. Estas personas, en
+            promedio, reciben cinco medicamentos formulados y dos
+            de venta libre, lo que los ubica en un mayor estado de
+            vulnerabilidad y riesgo de eventos adversos derivados
+            de una inadecuada administración del medicamento o
+            el incumplimiento de la terapia, así como los posibles
+            efectos secundarios, las reacciones alérgicas e interacciones con alimentos u otros medicamentos (19). Las
+            tasas de error en la administración de la medicación
+            durante la transición del entorno hospitalario al hogar
+            variaron entre el 19 y el 80%, por lo cual resulta necesario garantizar la continuidad y la seguridad de los
+            cuidados en el hogar, especialmente cuando el grado
+            de dependencia y la pluripatología también aumentan
+            (20).
+        </p>
+
+        <p>
+            Teniendo en cuenta las consecuencias negativas en términos de carga económica, pérdida de eficacia, posible
+            toxicidad y resistencia, es necesario minimizar el
+            riesgo de daño por una inadecuada implementación,
+            mantenimiento y persistencia del régimen terapéutico
+            a cargo de los cuidadores (21). Es así como se ha determinado que la mayoría de los cuidadores comprenden
+            que el manejo cuidadoso de la medicación contribuye
+            a que una persona tenga un curso de la enfermedad con
+            menores complicaciones y que los cuidadores deban
+            cumplir con una serie de actividades y responsabilidades diarias que involucran procesos de búsqueda e
+            intercambio de información, compra, almacenamiento,
+            suministro, supervisión, planificación, uso de medicamentos y toma de decisiones para mantener, aumentar,
+            disminuir una dosis o suspender un medicamento por
+            completo (22–24). Por ello, resulta necesaria la organización del rol para que pueda responder y cumplir
+            oportunamente con el tratamiento.
+        </p>
+
+        <p>
+            La ejecución del rol durante el proceso de administración de medicamentos es el reflejo de la experiencia,
+            el conocimiento y la preparación que tienen los cuidadores. Sin embargo, estudios han demostrado que la
+            mayoría de ellos carecen de confianza en sí mismos, se
+            sienten inadecuadamente preparados y apoyados para
+            administrar los medicamentos en casa (25,26), por lo
+            que como cuidadores necesitan educación para reconocer los efectos adversos de los medicamentos que puedan
+            presentarse a medida que cambia la condición de su familiar, para así ayudarlos a desarrollar las
+            habilidades
+            de pensamiento crítico que les permitan manejar estos
+            potenciales problemas (27) y responder de forma adecuada a la labor de administrar los medicamentos mediante
+            el desarrollo de estrategias de afrontamiento que
+            les permitan superar y manejar las emociones negativas
+            como el temor, la ansiedad, el estrés y la depresión a
+            partir del reconocimiento, evaluación y aceptación de
+            su rol de cuidador (28).
+        </p>
+
+        <p>
+            Ahora bien, gran parte de los estudios en torno a la administración de medicamentos se han centrado en
+            estudiar el cumplimento o la adherencia al tratamiento
+            por parte de los pacientes haciendo énfasis en las causas o razones de la falta de adherencia a la
+            medicación
+            y los factores asociados, tales como los errores de la
+            prescripción y dispensación dentro de los entornos hospitalarios (29). Sin embargo, en el contexto de países
+            de medianos ingresos, los cuidadores familiares se han
+            tenido que enfrentar a ejecutar tratamiento en casa en
+            muchas ocasiones por vía oral incluso trascendiendo a
+            otras vías para las que no se sienten preparados.
+        </p>
+
+        <p>
+            En relación con la ejecución del rol en los cuidadores
+            familiares de adultos mayores, se han desarrollado instrumentos para medir sus habilidades de cuidado (30),
+            para evaluar la preparación y competencias para el cuidado en el hogar (31), la adopción del rol del
+            cuidador
+            familiar (13) y la sobrecarga de los cuidadores (32). Sin
+            embargo, no existen medidas de desempeño que capturen el rol del cuidador familiar del paciente geriátrico
+            en la experiencia real durante la coordinación, continuidad de la terapia medicamentosa y que permitan
+            evaluar objetivamente la adopción del rol para garantizar la seguridad de la atención en el hogar y
+            optimizar
+            los resultados terapéuticos.
+        </p>
+
+        <p>
+            El instrumento diseñado se soportó en el referente teórico de las transiciones (33), conformado por 32 ítems
+            distribuidos en 3 dominios que se etiquetaron como labores, organización y respuesta ante el rol, elementos
+            que están estrechamente relacionados y que impactan
+            en los resultados en salud a largo plazo, dado que se ha
+            demostrado que los cuidadores pueden llegar a presentar dificultades con el desarrollo del rol a su inicio,
+            en
+            su implementación o persistencia del tratamiento (34).
+        </p>
+
+        <p>
+            Se observó que los expertos y cuidadores de los adultos mayores apoyaron el desarrollo conceptual del
+            instrumento durante la validez de contenido y facial, no
+            obstante, cabe resaltar que esto constituye un primer
+            paso dentro del proceso de validación del instrumento,
+            el cual debe continuar con la validez del constructo y
+            evaluación de la confiabilidad. Algunas limitaciones se
+            pueden identificar en el estudio en el sentido de incluir
+            la muestra por conveniencia obtenida para la validez
+            facial, ya que se pudo identificar que era relativamente
+            homogénea (la mayoría de ellas eran mujeres con nivel
+            educativo y nivel socioeconómico medio), por lo que
+            investigaciones futuras podrían incluir a cuidadores de
+            diferentes niveles socioeconómicos y ampliarse a otras
+            regiones del país que incluyan, por ejemplo, a la población rural.
+        </p>
+
+        <!-- conclusiones -->
+
+        <hr>
+
+        <p class="titulo">Conclusión</p>
+
+        <p>
+            El instrumento ROL-M permite evaluar de forma objetiva tres aspectos: la labor, la organización y la
+            respuesta al rol durante el proceso de administración de
+            medicamentos por parte del cuidador. Esta herramienta
+            demostró tener una validez de contenido y facial aceptables, por lo que se sugiere continuar con su proceso
+            de validez de constructo.
+        </p>
+
+        <p class="subtitulo">Financiación</p>
+
+        <p>
+            El presente trabajo ha sido financiado por la Facultad
+            de Enfermería, Universidad Nacional de Colombia;
+            Convocatoria para el apoyo a proyectos de investigación en salud – 60 años Facultad de Enfermería 2019,
+            Código: 45048.
+        </p>
+
+        <p class="subtitulo">Conflictos de intereses</p>
+
+        <p>
+            Las autoras declaran no tener conflicto de interés
+        </p>
+
+        <p class="subtitulo">Agradecimientos</p>
+
+        <p>
+            Los autores agradecen a las enfermeras, enfermeros
+            y cuidadores por su participación en la validación del
+            instrumento.
+        </p>
+
+
+
+        <!-- Referencias -->
+
+        <hr>
+
+        <p class="titulo"> Referencias Bibliograficas </p>
+
+        <ol class="lista">
+            <li id="r1">Krook M, Iwarzon M, Siouta E. The Discharge Process—From a Patient’s Perspective. SAGE Open Nurs
+                [Internet]. 2020;6:237796081990070. Disponible en: <a
+                    href="http://journals.sagepub.com/doi/10.1177/2377960819900707">http://journals.sagepub.com/doi/10.1177/2377960819900707</a>
+            </li>
+            <li id="r2">Ronan S, Brown M, Marsh L. Parents’ experiences of transition from hospital to home of a child
+                with complex
+                health needs: A systematic literature review. J Clin Nurs [Internet]. 2020;29(17–18):3222–35. Disponible
+                en:
+                <a
+                    href="https://onlinelibrary.wiley.com/doi/10.1111/jocn.15396">https://onlinelibrary.wiley.com/doi/10.1111/jocn.15396</a>
+            </li>
+            <li id="r3">Parand A, Garfield S, Vincent C, Franklin BD. Carers’ Medication Administration Errors in the
+                Domiciliary
+                Setting: A Systematic Review. PLoS One [Internet]. 2016;11(12):e0167204. Disponible en: <a
+                    href="https://dx.plos.org/10.1371/journal.pone.0167204">https://dx.plos.org/10.1371/journal.pone.0167204</a>
+            </li>
+            <li id="r4">Dumitrescu I, Casteels M, De Vliegher K, Van Der Linden L, Van Leeuwen E, Dilles T. High-Risk
+                Medication
+                in Home Care Nursing: A Delphi Study. J Patient Saf. [Internet] 2022 Aug 1;18(5):435-443. Disponible en
+                <a href="https://doi.org/10.1097/PTS.0000000000001023">https://doi.org/10.1097/PTS.0000000000001023</a>
+            </li>
+            <li id="r5">Look KA, Stone JA. Medication management activities performed by informal caregivers of older
+                adults. Res
+                Soc Adm Pharm [Internet]. 2018;14(5):418–26. Disponible en: <a
+                    href="https://linkinghub.elsevier.com/retrieve/pii/S1551741117301249">https://linkinghub.elsevier.com/retrieve/pii/S1551741117301249</a>
+            </li>
+            <li id="r6">Pereira F, Roux P, Santiago-Delefosse M, von Gunten A, Wernli B, Martins MM, et al. Optimising
+                medication
+                management for polymedicated home-dwelling older adults with multiple chronic conditions: a
+                mixed-methods study protocol. BMJ Open [Internet]. 2019;9(10):e030030. Disponible en: <a
+                    href="https://bmjopen.bmj.com/lookup/doi/10.1136/bmjopen-2019-030030">https://bmjopen.bmj.com/lookup/doi/10.1136/bmjopen-2019-030030</a>
+            </li>
+            <li id="r7">World Health Organization. Medication without harm: WHO Global Patient Safety Challenge on
+                Medication
+                Safety [Internet]. 2017. p. 1–17. [Citado 5 Junio 2021] Disponible en: <a
+                    href="https://www.who.int/initiatives/medication-without-harm">https://www.who.int/initiatives/medication-without-harm</a>
+            </li>
+            <li id="r8">Plaza V, Giner J, Rodrigo GJ, Dolovich MB, Sanchis J. Errors in the Use of Inhalers by Health
+                Care Professionals: A Systematic Review. J Allergy Clin Immunol Pract [Internet]. 2018;6(3):987–95.
+                Disponible en: <a
+                    href="https://linkinghub.elsevier.com/retrieve/pii/S2213219818300205">https://linkinghub.elsevier.com/retrieve/pii/S2213219818300205</a>
+            </li>
+            <li id="r9">Abdel-Latif MM. Knowledge of healthcare professionals about medication errors in hospitals. J
+                Basic Clin
+                Pharm [Internet]. 2016;7(3):87. Disponible en: <a
+                    href="http://www.jbclinpharm.org/text.asp?2016/7/3/87/183264">http://www.jbclinpharm.org/text.asp?2016/7/3/87/183264</a>
+            </li>
+            <li id="r10">Meleis AI. Transitions Theory: Middle Range and Situation Specific Theories in Nursing Research
+                and Practice. Philadelphia: F.A. Davis Company; 2015. 361–380 p. Disponible en: <a
+                    href="https://taskurun.files.wordpress.com/2011/10/transitions_theory__middle_range_and_situation_specific_theories_in_nursing_research_and_practice.pdf">https://taskurun.files.wordpress.com/2011/10/transitions_theory__middle_range_and_situation_specific_theories_in_nursing_research_and_practice.pdf</a>
+            </li>
+            <li id="r11">Sánchez-Villena AR, de La Fuente-Figuerola V, Ventura-León J. Modelos factoriales de la Escala
+                de Autoestima de Rosenberg en adolescentes peruanos. Revista De Psicopatología Y Psicología Clínica,
+                26(1), 47–55.
+                [Internet] 2021. Disponible en: <a
+                    href="https://doi.org/10.5944/rppc.26631">https://doi.org/10.5944/rppc.26631</a>
+            </li>
+            <li id="r12">Elosua P. Aplicación remota de test: riesgos y recomendaciones. Pap. Psicol. [Internet]. 2021
+                Abr [citado
+                2022 Oct 04] ; 42( 1 ): 33-37. Disponible en: <a
+                    href="https://dx.doi.org/10.23923/pap.psicol2021.2952">https://dx.doi.org/10.23923/pap.psicol2021.2952</a>
+            </li>
+            <li id="r13">Carreño-Moreno S, Chaparro Diaz L. Adopción del rol del cuidador familiar del paciente crónico:
+                Una herramienta para valorar la transición. Rev Investig Andin [Internet]. el 30 de marzo de
+                2018;20(36):39–54.
+                Disponible en: <a
+                    href="https://revia.areandina.edu.co/index.php/IA/article/view/968">https://revia.areandina.edu.co/index.php/IA/article/view/968</a>
+            </li>
+            <li id="r14">. Borson S, Mobley P, Fernstrom K, Bingham P, Sadak T, Britt HR. Measuring caregiver activation
+                to identify coaching and support needs: Extending MYLOH to advanced chronic illness. PLoS One
+                [Internet].
+                2018;13(10):e0205153. Disponible en: <a
+                    href="https://dx.plos.org/10.1371/journal.pone.0205153">https://dx.plos.org/10.1371/journal.pone.0205153</a>
+            </li>
+            <li id="r15">Tristán-López A. Modificación al modelo de Lawshe para el dictamen cuantitativo de la validez
+                de contenido
+                de un instrumento objetivo. Av en Medición [Internet]. 2008;6(1):37–48. Disponible en: <a
+                    href="https://www.semanticscholar.org/paper/Modificación-al-modelo-de-Lawshe-para-el-dictamen-Tristán-López/401781bbf691f0c15965fcf667e98a48e4899165">https://www.semanticscholar.org/paper/Modificación-al-modelo-de-Lawshe-para-el-dictamen-Tristán-López/401781bbf691f0c15965fcf667e98a48e4899165</a>
+            </li>
+            <li id="r16">Estefania CC, Zalazar-Jaime MF. Entrevistas cognitivas: revisión, directrices de uso y
+                aplicación en investigaciones psicológicas. Rev Avaliação Psicológica [Internet]. 2018;17(03):362–70.
+                Disponible en: <a
+                    href="http://pepsic.bvsalud.org/scielo.php?script=sci_arttext&pid=S1677-04712018000300010&lng=pt&nrm=iso&tlng=es">http://pepsic.bvsalud.org/scielo.php?script=sci_arttext&pid=S1677-04712018000300010&lng=pt&nrm=iso&tlng=es</a>
+            </li>
+            <li id="r17">Villamizar-Osorio ML, Laguado Jaimes E. Content and face validity of the Spanish version of the
+                Sexual
+                Self-Concept Inventory for early adolescent girls. Investig y Educ en Enfermería [Internet].
+                2019;37(1):e2.
+                Disponible en: <a
+                    href="https://revistas.udea.edu.co/index.php/iee/article/view/337769">https://revistas.udea.edu.co/index.php/iee/article/view/337769</a>
+            </li>
+            <li id="r18">McMillan SS, King MA, Stapleton H, Sav A, Kelly F, Wheeler AJ. A pharmacy carer support
+                service: obtaining new insight into carers in the community. Int J Pharm Pract [Internet].
+                2019;27(1):34–44. Disponible en:
+                <a
+                    href="https://academic.oup.com/ijpp/article/27/1/34/6099705">https://academic.oup.com/ijpp/article/27/1/34/6099705</a>
+            </li>
+            <li id="r19">Billstein-Leber M, Carrillo CJ, Cassano A, Moline K, Robertson J. ASHP Guidelines on Preventing
+                Medication Errors in Hospitals, American Journal of Health-System Pharmacy [Internet]. 2018 [citado 22
+                de
+                abril de 2020]; 75(19):1493–1517. Recuperado a partir de: <a
+                    href="https://academic.oup.com/ajhp/articleabstract/75/19/1493/5139896?redirectedFrom=fulltext">https://academic.oup.com/ajhp/articleabstract/75/19/1493/5139896?redirectedFrom=fulltext</a>
+            </li>
+            <li id="r20">Alqenae FA, Steinke D, Keers RN. Prevalence and Nature of Medication Errors and
+                Medication-Related
+                Harm Following Discharge from Hospital to Community Settings: A Systematic Review. Drug Saf [Internet].
+                2020;43(6):517–37. Disponible en: <a
+                    href="http://link.springer.com/10.1007/s40264-020-00918-3">http://link.springer.com/10.1007/s40264-020-00918-3</a>
+            </li>
+            <li id="r21">Polanco Leal, Sergio Aldemar, et al. "Características de salud y adherencia farmacoterapéutica
+                en el adulto mayor del municipio de Acacías (Colombia)." Revista Colombiana de Ciencias
+                Químico-Farmacéuticas [Internet]. (2021): Disponible en:325-338. <a
+                    href="http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0034-74182021000200325">http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0034-74182021000200325</a>
+            </li>
+            <li id="r22">Reyes-Granoble ER, Cárdenas-Ponce HR. Rol de enfermeria en la medicación al alta hospitalaria
+                del adulto
+                mayor polimedicado del Hospital Pablo Arturo Suarez, mayo-agosto del 2019. Diss. Universidad de
+                Guayaquil, Facultad de Ciencias Medicas, Carrera de Enfermería, [Internet]. 2018. Disponible en: <a
+                    href="http://repositorio.ug.edu.ec/handle/redug/53764">http://repositorio.ug.edu.ec/handle/redug/53764</a>
+            </li>
+            <li id="r23">Poblano-Verástegui O, Bautista-Morales AC, Acosta-Ruíz O, Gómez-Cortez PM, Saturno-Hernández
+                PJ. Polifarmacia en México: un reto para la calidad en la prescripción. Salud Publica Mex. [Internet].
+                2020;62:859-
+                867. Disponible en: <a href="https://doi.org/10.21149/11919">https://doi.org/10.21149/11919</a></li>
+            <li id="r24">Ensing HT, Koster ES, van Berkel PI, van Dooren AA, Bouvy ML. Problems with continuity of care
+                identified
+                by community pharmacists post-discharge. J Clin Pharm Ther [Internet]. 2017;42(2):170–7. Disponible en:
+                <a
+                    href="https://onlinelibrary.wiley.com/doi/10.1111/jcpt.12488">https://onlinelibrary.wiley.com/doi/10.1111/jcpt.12488</a>
+            </li>
+            <li id="r25">Oyola PN. "Plan educativo a pacientes adultos que reciben citostáticos orales en el hogar."
+                Notas de Enfermería 21.38 [Internet]. (2021): 21-33. Disponible en: <a
+                    href="https://revistas.unc.edu.ar/index.php/notasenf/article/view/35420">https://revistas.unc.edu.ar/index.php/notasenf/article/view/35420</a>
+            </li>
+            <li id="r26">Quispe RC. "Nivel de conocimientos y prácticas asociadas al manejo de medicamentos en el hogar
+                en personas adultas mayores con enfermedades crónicas no transmisibles del distrito de los Aquijes en el
+                año 2021."
+                [Internet]. (2022). Disponible en: <a
+                    href="https://repositorio.unica.edu.pe/bitstream/handle/20.500.13028/3731">https://repositorio.unica.edu.pe/bitstream/handle/20.500.13028/3731</a>
+            </li>
+            <li id="r27">Ogle SM, Cooke CE, Brandt NJ. Medication Management and e-Care Planning: What are the
+                Opportunities for the Future? J Gerontol Nurs [Internet]. 2015;41(10):13–7. Disponible en: <a
+                    href="http://journals.healio.com/doi/10.3928/00989134-20150915-02">http://journals.healio.com/doi/10.3928/00989134-20150915-02</a>
+            </li>
+            <li id="r28">Gallagher D, Greenland M, Lindquist D, Sadolf L, Scully C, Knutsen K, Zhao C, Goldstein BA,
+                Burgess L.BMJ
+                Open Qual. [Internet].2022 Mar;11(1):e001560. Disponible en: <a
+                    href="https://doi.org/10.1136/bmjoq-2021-001560">https://doi.org/10.1136/bmjoq-2021-001560</a></li>
+            <li id="r29">Pavón-Brito KA Tesis [Internet]. 2021 [citado el 3 de Octubre de 2022]. Disponible en: <a
+                    href="http://repositorio.ug.edu.ec/handle/redug/56719">http://repositorio.ug.edu.ec/handle/redug/56719</a>
+            </li>
+            <li id="r30">Blanco-Sánchez JP. Validación de una escala para medir la habilidad de cuidado de cuidadores.
+                Aquichan
+                [Internet]. 2014;14(3):351–63. Disponible en: <a
+                    href="http://aquichan.unisabana.edu.co/index.php/aquichan/article/view/3468/pdf">http://aquichan.unisabana.edu.co/index.php/aquichan/article/view/3468/pdf</a>
+            </li>
+            <li id="r31">Carrillo-González GM, Sánchez-Herrara B, Vargas-Rosero E. Desarrollo y pruebas psicométricas
+                del Instrumento “cuidar” - versión corta para medir la competencia de cuidado en el hogar. Rev la Univ
+                Ind Santander
+                Salud [Internet]. 2016;48(2):222–31. Disponible en: <a
+                    href="http://revistas.uis.edu.co/index.php/revistasaluduis/article/view/5509/5719">http://revistas.uis.edu.co/index.php/revistasaluduis/article/view/5509/5719</a>
+            </li>
+            <li id="r32">Alpuche-Ramírez VJ, Ramos del Río B, Rojas-Russell ME, Figueroa-López CG. Validez de la
+                entrevista de
+                carga de Zarit en una muestra de cuidadores primarios informales. Psicol y Salud [Internet].
+                2008;18(2):237–
+                45. Disponible en: <a
+                    href="https://www.redalyc.org/pdf/291/29118209.pdf">https://www.redalyc.org/pdf/291/29118209.pdf</a>
+            </li>
+            <li id="r33">Meleis A. Transitions Theory: Middle Range and Situation Specific Theories in Nursing Research
+                and practice. New York: Springer Publishing Company; 2010. El autor debe retirar la referencia puesto
+                que ya se
+                encuentra relacionada.</li>
+            <li id="r34">Wagle KC, Skopelja EN, Campbell NL. Caregiver-Based Interventions to Optimize Medication Safety
+                in Vulnerable Elderly Adults: A Systematic Evidence-Based Review. J Am Geriatr Soc [Internet].
+                2018;66(11):2128–
+                35. Disponible en: <a
+                    href="https://onlinelibrary.wiley.com/doi/10.1111/jgs.15556">https://onlinelibrary.wiley.com/doi/10.1111/jgs.15556</a>
+            </li>
+        </ol>
+    </div>
+</body>
+
+</html>

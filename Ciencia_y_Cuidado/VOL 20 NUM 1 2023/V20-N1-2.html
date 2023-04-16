@@ -1,0 +1,1366 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V20-N1-2</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            padding: 10em;
+            padding-top: 20px;
+            font-family: Times New Roman;
+            color: black;
+        }
+
+        #articulo-derecha {
+            float: left;
+        }
+
+        /* Posiciones de los resumenes */
+
+        .contenedor-general {
+            display: inline-flex;
+            width: 100%;
+        }
+
+        .contenedor-resumen {
+            width: 240%;
+        }
+
+        .contenedor-autor {
+            width: 100%;
+            padding-left: 20px;
+        }
+
+        .hr-resumen {
+            background-color: gray;
+            margin: 0;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .resumen-fondo {
+            background-color: #bdd5f1;
+            border-radius: 5px;
+        }
+
+        .titulo-resumen {
+            color: black;
+            font-size: 22px;
+            font-weight: bold;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .texto-resumen {
+            padding: 20px;
+            margin: 0;
+        }
+
+        ul.navbar {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 25em;
+            left: 2em;
+            width: 250px;
+        }
+
+        /* Titulos principales */
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: Times New Roman;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        h1 {
+            color: #29abe3;
+        }
+
+        .categoria_titulo {
+            font-style: italic;
+            color: #ffffff;
+        }
+
+        h3 {
+            font-style: italic;
+            font-weight: bold;
+            color: #707073;
+        }
+
+        .categoria {
+            text-align: center;
+            background-color: #707073;
+            width: 20%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            margin: auto;
+        }
+
+        ul.navbar li {
+            background: white;
+            margin: 0.5em 0;
+            padding: 0.3em;
+        }
+
+        /* Enlaces */
+
+        a.link-color:visited {
+            color: white;
+        }
+
+        a.link-color:link {
+            color: white;
+        }
+
+        a.link-color:hover {
+            color: white;
+        }
+
+        a.link-color:hover {
+            border-bottom: 1px solid;
+            background: black;
+        }
+
+        /* Link de referencia */
+
+        a:link {
+            color: #4e00ff;
+        }
+
+        a:visited {
+            color: #003bff;
+        }
+
+        a:focus {
+            border-bottom: 1px solid;
+            background: #98aae4;
+        }
+
+        a:hover {
+            border-bottom: 1px solid;
+            background: #aacefe;
+        }
+
+        /* Etiqueta P */
+
+        p {
+            line-height: normal;
+            text-align: justify;
+            font-size: 18px;
+        }
+
+        p.titulo {
+            color: #29abe3;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        p.subtitulo {
+            color: #29abe3;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* NUEVO */
+        p.subtitulo-segundo {
+            color: #29abe3;
+            font-style: italic;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        p.correspondencia {
+            color: black;
+            font-size: 18px;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        /* NUEVO */
+        p.entrevista {
+            color: black;
+            font-size: 18px;
+            font-style: italic;
+        }
+
+        /* NUEVO */
+        p.subtitulo-tercero {
+            color: #29abe3;
+            font-style: italic;
+            font-size: 18px;
+        }
+
+        p#cabeza {
+            color: #1d71ae;
+            text-align: center;
+        }
+
+        p.autores {
+            font-size: 16px;
+            margin: 0;
+            text-indent: 0em;
+            margin-bottom: 10px;
+        }
+
+        p.forma-citar {
+            text-indent: 0em;
+            text-align: justify;
+            justify-content: center;
+        }
+
+        .cita {
+            text-align: -webkit-center;
+        }
+
+        /* Bold especial para palabras que tienen color seguido de dos puntos
+*/
+
+        /* NUEVO */
+
+        b.subtitulo-segundo {
+            color: #29abe3;
+            font-size: 18px;
+        }
+
+        .contenedor_info {
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .info {
+            width: auto;
+        }
+
+        /* Este es para los documentos del dos en adelante *codigo abajo de este comentario* */
+
+        .info-text {
+            text-align: end;
+            margin: 0;
+        }
+
+        /* Uso Exlusico para el primero documento  que es de revision  *codigo abajo de este comentario* */
+
+        .info_text {
+            font-size: 12px;
+            line-height: 100%;
+            text-align: center;
+            margin: 0;
+        }
+
+        .info_hr {
+            margin: 5;
+        }
+
+        /* Fin P */
+        /* Etiqueta Italic */
+
+        i {
+            font-size: 18px
+        }
+
+        i.centrado {
+            font-size: 18px
+        }
+
+        /* LI para las listas */
+
+        li {
+            font-size: 18px;
+            padding-top: 10px;
+            text-align: justify;
+        }
+
+        /* NUEVO */
+        .lista li {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        hr {
+            background-color: #29abe3;
+            height: 1px;
+        }
+
+        /* Tablas */
+
+        table {
+            border-collapse: collapse;
+            border: 2px solid rgb(0, 0, 0);
+            align-items: center;
+        }
+
+        thead th {
+            border-collapse: collapse;
+            background-color: rgb(179, 179, 179);
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        tbody td {
+            border-collapse: collapse;
+            text-align: center;
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        .tipo {
+            color: #ffffff;
+            font-size: 22px;
+            border-radius: 10px 5px 10px 5px;
+            background-color: #696969;
+        }
+
+        img.logos {
+            width: 15px;
+            height: 15px;
+        }
+
+        .image {
+            text-align: center;
+            image-rendering: optimizeQuality;
+        }
+
+        .image p {
+            text-align: center;
+            font-size: small;
+        }
+
+        .logo {
+            width: 300px;
+            height: 80px;
+        }
+
+        .logo2 {
+            width: 300px;
+            height: 50px;
+        }
+
+        /* Anclajes de la pagina */
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* NUEVO */
+        .ecuacion {
+            text-align: center;
+            font-weight: bold;
+            margin: 1px;
+        }
+
+        @media only screen and (min-width:320px) and (max-width:900px) {
+            body {
+                width: 100%;
+                padding: 5em;
+                margin: 5px;
+            }
+
+            .image {
+                text-align: center;
+                image-rendering: optimizeQuality;
+            }
+
+            .image img {
+                width: 100%;
+            }
+
+            .image p {
+                font-size: small;
+                text-align: center;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contenedor_info">
+        <div>
+            <img src="img/globales/logo.jpg" alt="" height="125px">
+        </div>
+        <div class="info" style="text-align: right;">
+            <p class="info-text"> ISSN-PRINT 1794-9831 / E-ISSN 2322-7028 </p>
+            <p class="info-text"> Vol. 19 Nº 3 / sep - dic, 2022 / Cúcuta, Colombia. </p>
+            <p class="info-text">
+                <img src="img/globales/doi.png" height="20px" alt="">
+                <a href="https://doi.org/10.22463/17949831.3376">https://doi.org/10.22463/17949831.3376</a>
+            </p>
+        </div>
+    </div>
+
+
+    <!--Categoría-->
+    <div class="categoria">
+        <h2 class="categoria_titulo">Original </h2>
+    </div>
+
+    <h1> Habilidades para la vida y bienestar psicológico en estudiantes de la salud en Bogotá DC, Colombia, 2021 </h1>
+
+    <h2 class="segundo"> Life skills and psychological wellbeing in health students in Bogotá DC, Colombia, 2021</h2>
+
+    <h2 class="segundo"> Habilidades para a vida e bem-estar psicológico em estudantes de saúde em Bogotá DC, Colômbia,
+        2021</h2>
+
+
+    <!--Autores-->
+    <h3>
+        Sandra Catalina Guerrero-Aragón <sup><a href="#sup1">1*</a> </sup> <br>
+        Rafael Gabriel Rico-Salas <sup><a href="#sup2">2*</a> </sup> <br>
+        Katherine Rojas-Martínez <sup><a href="#sup3">3*</a> </sup> <br>
+        José Madrid-Lobo <sup><a href="#sup4">4*</a> </sup> <br>
+    </h3>
+
+
+    <!-- Conetenedor de las columnas de la descripciones de los autores, correspondencia de autor 
+    y los resumenes -->
+    <div class="contenedor-general">
+
+
+        <!-- Contenedor de los resumenes -->
+        <div class="contenedor-resumen">
+
+            <!-- Resumen Español -->
+
+            <div class="resumen-fondo">
+                <p class="titulo-resumen"> Resumen</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> <b>Objetivo:</b> Determinar la prevalencia del bienestar psicológico y el
+                    nivel de habilidades para
+                    la vida en estudiantes de pregrado de una institución educativa de ciencias de la salud en la
+                    ciudad de Bogotá. <b>Metodología:</b> Se realizó un estudio descriptivo, transversal y prospectivo
+                    en 340 estudiantes de la facultad de: medicina, instrumentación, enfermería, psicología y
+                    citohistología. Se aplicó la escala de habilidades para la vida y bienestar psicológico de RYFF.
+                    <b>Resultados:</b> De los 340 estudiantes, las 10 dimensiones del test habilidades para la vida
+                    evaluadas se encontraban en mayor frecuencia en un nivel normal bajo o normal alto de acuerdo
+                    con la mediana del puntaje Z; con relación al test de bienestar psicológico se encontró que la
+                    prevalencia del nivel de bienestar psicológico en los estudiantes de pregrado evaluados, alto
+                    en un 15.59%, moderado en el 79.12% y de 5.29% para un nivel bajo. <b>Conclusiones:</b> En la
+                    mayoría de los estudiantes de pregrado del área de la salud se encuentran valores en normal
+                    alto y bajo, en los niveles de habilidades para la vida necesarios para poder tener un adecuado
+                    desarrollo profesional y personal, por lo que habría un beneficio en un mayor fortalecimiento
+                    y educación sobre este tema, al poder convertirlas en factor protector frente a enfermedades
+                    mentales como la depresión y la ansiedad.
+                </p>
+
+                <p class="texto-resumen">
+                    <b>Palabras Claves: </b> Aptitud; Bienestar psicológico; Salud mental; Estudiantes.
+                </p>
+            </div>
+            <!-- Resumen Inglés -->
+
+            <div>
+                <p class="titulo-resumen"> Abstract</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> <b>Objective:</b> To determine the prevalence of psychological well-being and
+                    the level of life skills
+                    in undergraduate students of a health sciences educational institution in the city of Bogotá.
+                    <b>Methodology:</b> A descriptive, cross-sectional and prospective study was carried out in 340
+                    students from the Faculty of Medicine, Instrumentation, Nursing, Psychology and Cytohistology. The
+                    RYFF life skills and psychological well-being scale was applied. <b>Results:</b> Of the
+                    340 students, the 10 dimensions of the life skills test evaluated were more frequently at a low
+                    normal or high normal level according to the median Z score; In relation to the psychological
+                    well-being test, it was found that the prevalence of the level of psychological well-being in
+                    the undergraduate students evaluated was high in 15.59%, moderate in 79.12% and 5.29%
+                    for a low level. <b>Conclusions:</b> In the majority of undergraduate students in the health area,
+                    high and low normal values are found, in the levels of life skills necessary to be able to have an
+                    adequate professional and personal development, so there would be a benefit in a greater
+                    strengthening and education on this subject, by being able to turn them into a protective factor
+                    against mental illnesses such as depression and anxiety.
+                </p>
+
+                <p class="texto-resumen">
+                    <b>KeyWords:</b> Aptitude; Psychological well-being; Mental health; Students.
+                </p>
+            </div>
+            <!-- Resumen Portuguez -->
+
+            <div class="resumen-fondo">
+                <p class="titulo-resumen"> Resumo</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> <b>Objetivo:</b> Determinar a prevalência de bem-estar psicológico e o nível
+                    de habilidades para
+                    a vida em estudantes de graduação de uma instituição de ensino de ciências da saúde na cidade de
+                    Bogotá. <b>Metodologia:</b> Foi realizado um estudo descritivo, transversal e prospectivo
+                    em 340 alunos da Faculdade de Medicina, Instrumentação, Enfermagem, Psicologia e Cito-histologia.
+                    Foi aplicada a escala de habilidades para a vida e bem-estar psicológico RYFF.
+                    <b>Resultados:</b> Dos 340 alunos, as 10 dimensões do teste de habilidades para a vida avaliadas
+                    apresentaram maior frequência no nível normal baixo ou normal alto de acordo com a mediana do escore
+                    Z; Em relação ao teste de bem-estar psicológico, verificou-se que a prevalência
+                    do nível de bem-estar psicológico nos graduandos avaliados foi alta em 15,59%, moderada
+                    em 79,12% e baixa em 5,29%. <b>Conclusões:</b> Na maioria dos estudantes de graduação da área
+                    da saúde, encontram-se valores de normalidade altos e baixos, nos níveis de habilidades de
+                    vida necessários para poder ter um desenvolvimento profissional e pessoal adequado, portanto haveria
+                    um benefício em um maior fortalecimento e educação sobre esse tema, podendo
+                    transformá-los em fator de proteção contra doenças mentais como depressão e ansiedade.
+                </p>
+
+                <p class="texto-resumen">
+                    <b>Palavras-chave:</b> Aptidão; Bem-estar psicológico; Saúde mental; Alunos
+                </p>
+            </div>
+
+
+
+        </div>
+
+        <!-- Descripcion de autores, Aprobado, Como citar, licencia -->
+        <div class="contenedor-autor">
+            <!-- Autores -->
+            <div>
+                <p class="subtitulo" style="color: black; font-size: 18px;">Autor de correspondencia*</p>
+                <!-- 1 -->
+                <p class="autores" id="sup1"><sup>1*</sup><img class="logos" src="img/globales/sobre.png">
+                    Instrumentadora quirúrgica y psicóloga, Fundación Universitaria de Ciencias
+                    de la Salud-FUCS. Especialista en docencia universitaria. Máster en neuropsicología y educación.
+                    Bogotá D.C.
+                    <a href="mailto:sandra.guerrero@fucsalud.edu.co">sandra.guerrero@fucsalud.edu.co</a>, <img
+                        class="logos" src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0003-0567-4124">0000-0003-0567-4124</a>
+                </p>
+                <!-- 2 -->
+                <p class="autores" id="sup2"><sup>2*</sup><img class="logos" src="img/globales/sobre.png"> Médico
+                    Familiar Pontificia Universidad Javeriana. Magíster en Administración de Salud. Docente Fundación
+                    Universitaria de Ciencias de la SaludFUCS. Bogotá D.C., Colombia.
+                    <a href="mailto:rgrico@fucsalud.edu.co">rgrico@fucsalud.edu.co</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0002-0722-2322">0000-0002-0722-2322</a>
+                </p>
+                <!-- 3 -->
+                <p class="autores" id="sup3"><sup>3*</sup><img class="logos" src="img/globales/sobre.png"> Residente de
+                    Medicina Familiar, Fundación Universitaria de Ciencias de la
+                    Salud - FUCS – Hospital Universitario
+                    de San José. Bogotá D.C., Colombia.
+                    <a href="mailto:kt3.rojas@gmail.com">kt3.rojas@gmail.com</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0002-0722-2322">0000-0002-0722-2322</a>
+                </p>
+                <!-- 4 -->
+                <p class="autores" id="sup4"><sup>4*</sup><img class="logos" src="img/globales/sobre.png"> Residente de
+                    Medicina Familiar, Fundación Universitaria de Ciencias de la
+                    Salud - FUCS – Hospital Universitario
+                    de San José, Bogotá D.C., Colombia.
+                    <a href="mailto:jcmadrid@fucsalud.edu.co">jcmadrid@fucsalud.edu.co</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0001-7872-4111">0000-0001-7872-4111</a>
+                </p>
+            </div>
+
+            <!--Recibido y aprobado-->
+            <div>
+                <p><b>Recibido: </b> 29 mayo 2022 <br> <b>Aprobado: </b> 5 octubre 2022 </p>
+            </div>
+
+            <!-- Como citar -->
+            <div class="cita">
+                <p class="forma-citar autores"><b>Para citar este artículo / To reference this article / Para citar este
+                        artigo:</b> Guerrero-Aragón SC, Rico-Salas
+                    RG, Rojas-Martínez K, Madrid-Lobo J. Habilidades para la vida y bie- nestar psicológico en
+                    estudiantes de
+                    la salud en Bogotá DC, Colombia,
+                    2021. 2023; 20(1):9-21. <a
+                        href="https://doi.org/10.22463/17949831.3376">https://doi.org/10.22463/17949831.3376</a> </p>
+            </div>
+
+            <!--Licencia-->
+            <br>
+            <div>
+                <p class="autores "> &#169; Universidad Francisco de Paula Santander.
+                    Este es un artículo bajo la licencia CC-BY-NC-ND
+                    <br>
+                    <a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img
+                            alt="Licencia Creative Commons" style="border-width:0"
+                            src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Cuerpo del documento -->
+    <div>
+        <hr>
+        <!--Introducción-->
+        <p class="titulo"> Introducción</p>
+
+        <p>
+            El bienestar psicológico (BP) es una noción amplia que
+            abarca aspectos sociales, subjetivos y psicológicos, así
+            como conductas relacionadas con la salud en general
+            que llevan a las personas a actuar en una dirección positiva, que guardan relación con el cómo la gente
+            lucha
+            día a día frente a los desafíos que le impone la vida. El
+            bienestar psicológico es trascendental en el equilibrio
+            individual y en la interacción social, en consideración a
+            que las emociones positivas y bajo nivel de stress provocan cambios en la homeostasis interna que se
+            expresan bioquímicamente con menores niveles de cortisol y
+            de citoquinas derivando en un sueño REM más prolongado y una mejor salud cardiovascular (1).
+        </p>
+
+        <p>
+            Las habilidades para la vida (HpV) son aquellas que se
+            desarrollan durante todas las etapas del desarrollo humano, las cuales previenen y mitigan las conductas de
+            riesgo y permiten enfrentar de manera exitosa los desafíos de la vida (2). De esta manera, se reconocen tres
+            categorías de habilidades: cognitivas como alternativa
+            de resignificación de las situaciones; emocionales que permiten el desarrollo afectivo, la expresión y la
+            comprensión de estas; y las habilidades sociales que permiten relaciones asertivas y estables (3). Dentro de
+            las 3
+            categorías previas mencionadas se derivan habilidades
+            como: autoconocimiento, empatía, comunicación asertiva, relaciones interpersonales, toma de decisiones,
+            manejo de problemas y conflictos, pensamiento crítico,
+            manejo de emociones y sentimientos entre otras, que
+            contribuyen a la capacidad de afrontamiento a diferentes circunstancias además dependiendo de su nivel
+            pueden ser factores de tipo individuales, familiares y
+            sociales, de riesgo, o protectores (3, 4).
+        </p>
+
+        <p>
+            Por otra parte, el bienestar psicológico se enmarca en
+            el desarrollo personal y se relaciona con las HpV y se
+            caracteriza por ser un tema de interés de la psicología
+            positiva; según Meier et al., (5) el BP propuesto por Carol Ryff, es un concepto multidimensional puesto que
+            hace referencia a las capacidades y al desarrollo desde
+            lo psicológico, personal y social que influye positivamente en el individuo; la escala que propone Ryff (5)
+            se
+            componen de seis dimensiones y cuenta con categorías
+            de: condiciones de vida, estilo de vida, modo de vida,
+            las cuales pueden estar mediadas por los estados de ánimo, salud mental, personalidad, condiciones
+            socio-históricas y culturales del individuo.
+        </p>
+
+        <p>
+            Es así, que la salud mental se ha visto afectada y ha
+            ido en aumento, tomando fuerza con la pandemia COVID-19 en el año 2020, en países de ingresos medios
+            y bajos se presentó un 25% de aumento en los eventos
+            psiquiátricos, procedente de antecedentes y del aislamiento preventivo obligatorio, causando un aumento
+            de estrés que condujo a un aumento de estado de ansiedad y depresión por los sentimientos de soledad, miedo
+            a la infección, sufrimiento y la muerte de la propia
+            persona y/o de los seres queridos, el dolor después del
+            duelo, preocupaciones financieras, escasa socialización
+            lo que ha generado baja habilidad de afrontamiento,
+            crisis emocionales y pensamientos suicidas (6).
+        </p>
+
+        <p>
+            En Colombia de acuerdo con la Encuesta de Salud
+            Mental del Ministerio de Salud y Protección Social del
+            año 2015, el 52,2% de los jóvenes encuestados presentaba uno o dos síntomas de ansiedad, además, personas
+            de 24 años experimentaron sentimientos de preocupación y nerviosismo (41,2%), seguido por la población
+            de 25 a 54 años (39,2%), y, por la población de 55 años
+            o más (38,6%), igualmente, se presentan estados y
+            sentimientos como “cansancio”, “soledad”, “tristeza”,
+            ”dolores de cabeza o estomacales” y “dificultad para
+            dormir” (7, 8). En este punto se deben sumar los últimos sucesos de gran envergadura como el aislamiento
+            preventivo obligatorio tras la pandemia por SARSCOV-2 / COVID-19, la cual reforzó la manifestación
+            de aspectos psicológicos por las condiciones restrictivas que influyen el desempeño individual, familiar,
+            social, repercutiendo en la baja regulación emocional
+            ocasionada por el miedo, ira y tristeza, además, de los
+            estados de tensión, los niveles de estrés, el aumento de
+            la depresión y la ansiedad, por los problemas económicos, el aislamiento, el temor al contagio, afectando el
+            bienestar, físico, mental y emocional de la población en
+            general (9-11). Es así que, las HpV como el BP influyen
+            en la capacidad de afrontamiento a partir de las habilidades intra e interpersonales que permiten adaptarse
+            a
+            diferentes situaciones de la vida en los individuos (12,
+            13).
+        </p>
+
+        <p>
+            Los trastornos psiquiátricos en el mundo son elevados
+            y con tendencia al ascenso (280 millones de personas
+            con depresión y cada año se suicidan más de 700.000
+            personas, 45 millones de personas padecen trastorno
+            bipolar, 21 millones de personas con esquizofrenia) especialmente en países de ingresos medios y bajos (14).
+            Las HpV se convierten en herramientas protectoras
+            para el desarrollo de estas condiciones, o al menos facilitan una mejor convivencia con algunas de ellas.
+            Con
+            la llegada de la pandemia por el SARS CoV2, estos
+            trastornos se incrementaron cobrando alta relevancia
+            (13, 14). En Colombia, de acuerdo con el boletín de
+            salud mental hacia el año 2015, 4 de cada 100 habitantes consultaron a los servicios de salud por síntomas
+            relacionados con la salud mental, de los cuales el 2,4%
+            terminaron hospitalizados a causa de trastornos mentales y del comportamiento (15). Entre el 1 de enero
+            del 2020 al 30 de junio del 2021, se suicidaron aproximadamente 3.672 personas en el país; es decir,
+            aproximadamente siete personas por día en ese periodo de
+            tiempo y en el transcurso de la pandemia (16).
+        </p>
+
+        <p>
+            El personal de salud en formación suele estar inmerso en un contexto hospitalario con responsabilidades
+            y situaciones en la práctica clínica, que adicional a los
+            retos de la vida cotidiana, generan sobrecarga física y
+            emocional, sin embargo, por tratarse de proveedores de
+            salud se asume erróneamente que gozan de buen nivel
+            de salud mental, olvidando que, como cualquier otra
+            persona, están inmersos en un contexto académico y
+            hospitalario exigente que ejerce presión sobre el individuo, que de alguna forma termina influyendo sobre su
+            salud física y mental (17). Por lo expuesto, este estudio
+            pretende conocer la prevalencia del nivel de BP y HpV
+            en estudiantes de pregrado del área de la salud, temas
+            poco abordados hasta el momento en instituciones educativas del país, esperando con los resultados
+            desarrollar actividades institucionales tendientes a fortalecer y
+            brindar herramientas a los estudiantes para enfrentar de
+            la mejor manera las diferentes situaciones y retos que
+            plantea la vida universitaria y asistencial en salud.
+        </p>
+
+        <hr>
+
+        <p class="titulo">Objetivos</p>
+
+        <p class="subtitulo-segundo">Objetivo general</p>
+
+        <p>
+            Determinar la prevalencia del bienestar psicológico
+            (BP) y el nivel de habilidades para la vida (HpV) en
+            estudiantes de pregrado de una institución educativa de
+            ciencias de la salud en la ciudad de Bogotá.
+        </p>
+
+        <p class="subtitulo-segundo">Objetivos específicos</p>
+
+        <ul class="lista">
+            <li>Caracterizar la población de estudio por edad, sexo,
+                estrato socioeconómico, núcleo familiar y carrera de la salud que cursa para tipificar el perfil de la
+                población como condición que pueda afectar su BP</li>
+            <li>Identificar el nivel de HpV de los participantes del
+                estudio de acuerdo a las dimensiones del Test de
+                habilidades para la vida de Díaz-Posada.</li>
+            <li>Identificar el nivel de bienestar de los participantes
+                del estudio de acuerdo a las dimensiones de la escala de BP de Ryff. </li>
+        </ul>
+
+        <hr>
+
+        <p class="titulo">Materiales y Métodos</p>
+
+        <p>
+            Se realizó un estudio cuantitativo descriptivo de corte
+            transversal, en el que se incluyeron estudiantes mayores de edad de los programas de medicina, enfermería,
+            instrumentación quirúrgica, psicología y citohistotecnología de una universidad de ciencias de la salud de
+            Bogotá.
+        </p>
+
+        <p>
+            La población total del estudio fue de 2104 estudiantes
+            de los programas de medicina, enfermería, instrumentación quirúrgica, psicología y citohistotecnología de
+            una universidad de ciencias de la salud de Bogotá.
+        </p>
+
+        <p>
+            Se realizó un muestreo aleatorio simple, puesto que
+            todos tienen la misma probabilidad de ser escogidos
+            de los programas mencionados; la muestra fue de 340
+            estudiantes. Se incluyeron aquellos que decidieron participar en el estudio y se excluyeron estudiantes que
+            se encontraban cursando especializaciones, maestrías,
+            diplomados o cursos de extensión académica.
+        </p>
+
+        <p>
+            Los instrumentos utilizados para la recolección de datos
+            fueron el test de habilidades para la vida de Díaz-Posada et al., (18) y la escala de bienestar psicológico
+            de
+            Ryff (5); para determinar el perfil demográfico de la
+            población de estudio se incluyó el apartado al inicio de
+            los instrumentos mencionados anteriormente con el fin
+            de identificar las características sociodemográficas de
+            la población.
+        </p>
+
+        <p>
+            Ficha de datos sociodemográficos diseñada por los investigadores, ubicada al inicio de los instrumentos en
+            la que los participantes registran las variables de edad,
+            sexo, estrato socioeconómico, tipo de familia y carrera
+            universitaria.
+        </p>
+
+        <p>
+            Test habilidades para la vida diseñado por Díaz-Posada
+            et al., (18) evalúa conocimientos, habilidades o capacidades y personalidad de un individuo con la medición
+            del nivel de las 10 habilidades: autoconocimiento, manejo de emociones y sentimientos, manejo de la tensión
+            y el estrés, comunicación asertiva, empatía, relaciones
+            interpersonales, manejo de conflictos, toma de decisiones, pensamiento creativo y crítico propuesto por
+            la OMS. El instrumento se divide en 10 dimensiones,
+            cada una compuesta por 4 indicadores que, a su vez,
+            se subdividen en 2 ítems por indicador con direccionalidad tanto positiva como negativa, son 8 ítems por
+            dimensión, es decir, 80 ítems en total así: Muy superior
+            con puntuación 2.1 a 3.0 en el que presenta un nivel
+            de dimensión muy elevado; Superior 1.1 a 2.0 en el
+            que presenta un nivel de dimensión elevado; Normal
+            alto 0.1 a 1.0 en el que presenta un nivel de dimensión
+            estándar con tendencia a mejorar; Normal bajo -1.0 a
+            0 en el que presenta un nivel de dimensión que tiende a no estar fortalecido; Inferior -2.0 a -1.1 el nivel
+            de dimensión es nulo. El proceso psicométrico se obtiene sumando el puntaje de las dimensiones (siendo
+            el máximo 40), cada suma se trasforma con los baremos representados con los valores directos Z, T o
+            percentiles; dentro de las dimensiones se encuentran dos
+            (empatía y manejo de sentimientos y emociones), las
+            cuales cuentan con baremación por sexo por no tener
+            diferencias estadísticamente significativas.
+        </p>
+
+        <p>
+            Escala de bienestar psicológico de Ryff (19) propone
+            un instrumento como modelo teórico multidimensional, construido sobre una base de aportaciones clínicas,
+            humanistas, del ciclo primordial y de la sanidad mental,
+            mediante seis dimensiones: autoaceptación, relaciones
+            positivas con otras personas, autonomía, dominio del
+            entorno, propósito en la vida y crecimiento personal; la
+            escala tiene una puntuación total de 234 puntos, de los
+            cuales una puntuación mayor de 176 señala un BP elevado; si el puntaje se encuentra entre 141 y 175
+            corresponde a BP alto; entre 117 y 140 puntos BP moderado;
+            e inferior a 116 puntos se relaciona con BP bajo.
+        </p>
+
+        <p>
+            El procedimiento llevado a cabo para realizar el proyecto se basó en los siguientes pasos:
+        </p>
+
+        <ul class="lista">
+            <li>Seleccionar la población de manera aleatoria de los
+                programas de: medicina, instrumentación, enfermería, psicología y citohistologia.
+            </li>
+            <li>Contactar a un tutor o representante del semestre de
+                cada una de las facultades.</li>
+            <li>Se establece una reunión con los estudiantes seleccionados y se convoca vía hangout meet para
+                presentar el proyecto, explicar y firmar el consentimiento informado.</li>
+            <li>Se resalta la participación voluntaria y se procede a
+                la firma del consentimiento informado.</li>
+            <li>Se verifica la autorización, firma del consentimiento informado y protección de los datos personales.
+            </li>
+            <li>Se envía link de instrumento para su diligenciamiento.</li>
+            <li>Se tabulan, se analizan y se reportan los resultados.
+            </li>
+        </ul>
+
+        <p>
+            Para el análisis de datos estos se tabularon en Excel
+            2017 y el análisis estadístico se realizó en el software
+            STATA 13. Para los niveles tanto de las dimensiones
+            de HpV como de BP los datos se reportaron a través de
+            medidas de tendencia central y se utilizaron gráficos de
+            cajas y bigote.
+        </p>
+
+        <p>
+            Este estudio se apoyó por las normas internacionales
+            con la declaración de Helsinki (20) y el informe de Belmont (21); con la normatividad colombiana con la
+            Resolución 8430 de 1993 (22), estableciendo el estudio
+            como de riesgo mínimo. Este trabajo fue aprobado por
+            el Comité de Ética de Investigación con seres humanos
+            de la Sociedad de Cirugía de Bogotá Hospital de San
+            José–FUCS, y por recomendación del mismo el estudio no se diferenció por semestres específicos debido
+            a que hay facultades cuya población de estudiantes es
+            muy reducida y esto facilitaba su identificación, por tal
+            motivo el estudio garantiza la confidencialidad de los
+            participantes.
+        </p>
+
+
+        <p class="titulo">Resultados</p>
+
+        <p>
+            Los resultados permitieron determinar la prevalencia
+            de HpV y BP; dentro del estudio se incluyeron 340
+            estudiantes de pregrado de medicina, instrumentación
+            quirúrgica, enfermería, psicología y citohistotecnología. La edad promedio fue de 20,77 (DE: ±3.09), en el
+            que predominó el sexo femenino con un 75% (n=255);
+            el 44,41% era estrato tres (n=151), el 59,12% (n=201)
+            presentaba una tipología familiar nuclear y el mayor
+            grupo participante fue de la carrera de medicina con
+            un 57,06% (n=194); en la tabla 1 se puede observar la
+            caracterización del perfil de la población.
+        </p>
+
+        <div class="image">
+            <p><b>Tabla 1. </b>Características sociodemográficas de la población.</p>
+            <img src="img/V20-N1-2/Screenshot_1.png" width="40%">
+        </div>
+
+        <div class="image">
+            <img src="img/V20-N1-2/Screenshot_2.png" width="40%">
+            <p><b>Fuente: </b>Autor.</p>
+        </div>
+
+        <p>
+            En los hallazgos del nivel de HpV de los participantes
+            de acuerdo a las dimensiones del Test de Díaz-Posada, se muestra que en la dimensión conocimiento de sí
+            mismo se obtuvo un nivel normal bajo (Me: -0,4), comunicación efectiva/asertiva normal bajo (Me: 0,0),
+            relaciones interpersonales normal alto (Me: 0,21), toma de decisiones normal alto (Me: 0,35), solución de
+            problemas/conflicto normal bajo (Me: -0,09), pensamiento
+            creativo normal alto (Me: 0,07), pensamiento crítico
+            normal alto (Me: 0,11) y manejo de tensión/estrés normal alto (Me: 0,03) (ver figura 1).
+        </p>
+
+        <div class="image">
+            <img src="img/V20-N1-2/Screenshot_3.png" width="65%">
+            <p><b>Figura 1. </b>Nivel de habilidades para la vida (HpV).</p>
+            <p><b>Fuente: </b>Autor </p>
+        </div>
+
+        <p>
+            En las dimensiones de empatía, y manejo de sentimientos y emociones, se observa la puntuación por sexo ya
+            que cuenta con baremación por no tener diferencias estadísticamente significativas, en el que se muestra un
+            nivel de empatía en el sexo femenino y masculino en normal alto (Me: 0,48; Me: 0,52), en cuanto al manejo de
+            sentimientos/emociones el sexo femenino obtuvo
+            un nivel normal bajo (Me:0,4) frente al sexo masculino
+            que obtuvo un nivel normal alto (Me: 0,29) (ver figura
+            2).
+        </p>
+
+        <div class="image">
+            <img src="img/V20-N1-2/Screenshot_4.png" width="60%">
+            <p><b>Figura 2. </b>Nivel de habilidades para la vida (HpV): empatía y manejo de sentimientos/emociones por
+                sexo.</p>
+            <p><b>Fuente: </b>Autor </p>
+        </div>
+
+        <p>
+            Posteriormente, se observa el nivel de HpV por frecuencia de los
+            participantes por dimensiones (ver tabla 2).
+        </p>
+
+        <div class="image">
+            <p><b>Tabla 2. </b>Frecuencia por nivel de puntuación</p>
+            <img src="img/V20-N1-2/Screenshot_5.png" width="90%">
+            <p><b>Fuente. </b>Autores</p>
+        </div>
+
+        <p>
+            De acuerdo a los resultados obtenidos, con respecto a
+            la escala de bienestar psicológico de Ryff, de los 340
+            participantes del estudio, se identificó el nivel de BP
+            global de todos los estudiantes, en el 5,29% (Fr: 18) se
+            obtuvo un nivel de BP bajo, el 79,12% (Fr: 269) con BP
+            moderado, y el 15,59% (Fr: 53) con BP alto.
+        </p>
+
+        <p>
+            Los resultados obtenidos del nivel de BP de los participantes de acuerdo a las 6 dimensiones:
+            autoaceptación,
+            relaciones positivas, autonomía, dominio del entorno,
+            crecimiento personal, propósito de vida se pueden observar en la figura 3.
+        </p>
+
+        <div class="image">
+            <img src="img/V20-N1-2/Screenshot_6.png" width="65%">
+            <p><b>Figura 3. </b>Nivel de bienestar psicológico (BP) por dimensiones</p>
+            <p><b>Fuente: </b>Autor.</p>
+        </div>
+
+        <p class="titulo">Discusión</p>
+
+        <p>
+            El presente fue un estudio descriptivo transversal, en
+            el cual se determinó la prevalencia de BP y HpV de
+            estudiantes de pregrado de ciencias de la salud como
+            línea de base que contribuirá a identificar si cuentan
+            con habilidades que actúan como factores protectores
+            en los estudiantes; teniendo en cuenta que los estudiantes universitarios están sometidos a múltiples
+            cambios
+            en su dinámica individual y familiar, lo cual puede predisponer a desajustes de tipo emocional o social, por
+            lo
+            que las HpV se convierten en unas valiosas herramientas para enfrentar esos nuevos retos asumidos por los
+            estudiantes (23).
+        </p>
+
+        <p>
+            Los principales hallazgos mostraron que, dentro de la
+            tipificación de la población de estudio, predominó la población femenina, el estrato socioeconómico 3, el
+            mayor número de estudiantes pertenecía al programa
+            de medicina y la mayoría indicó que tienen un tipo de
+            familia nuclear (familia compuesta por madre, padre
+            e hijos). En los datos obtenidos del nivel de HpV por
+            dimensión, se muestra una mayor frecuencia en nivel
+            normal bajo, esto demuestra que los participantes tienen menos capacidad de afrontamiento que los que tienen
+            puntajes más altos. En cuanto a BP se reflejó, que
+            la gran mayoría tiene un bienestar moderado, es decir,
+            los participantes deben fortalecer su BP al encontrarse
+            en un valor promedio.
+        </p>
+
+        <p>
+            De acuerdo a los hallazgos de (HpV) las dimensiones
+            de relaciones interpersonales y toma de decisiones puntuaron en nivel normal alto. Moreno et al., (24) en un
+            estudio realizado en 350 jóvenes mostró que en el componente confianza en sí mismo, los hombres obtuvie ron
+            un mayor puntaje que las mujeres. Becerra-Romero
+            et al., (25) demostraron que un grupo de estudiantes de
+            educación superior obtuvieron en todas las dimensiones de HpV un puntaje promedio (normal alto), esto
+            incluye las dimensiones de relaciones interpersonales
+            y toma de decisiones. Esto coincide con los resultados
+            presentados y obtenidos en éste estudio, puesto que las
+            categorías de habilidades en su mayoría mostraron un
+            nivel normal alto en las dimensiones empatía, toma de
+            decisiones, pensamiento creativo y manejo de sentimientos y emociones; enfatizando en que en esta última
+            dimensión, este nivel se demuestra solo en el sexo
+            masculino, lo cual permite deducir que un nivel promedio en el grupo de participantes debe fortalecer las
+            habilidades ya que estos pueden convertirse a futuro en
+            un factor protector para las conductas de riesgo, como
+            lo son el alcoholismo, comportamientos sexuales de
+            riesgo y el consumo de sustancias psicoactivas, entre
+            otras y a su vez ayudar a incentivar a los participantes
+            que tuvieron un nivel inferior o muy inferior.
+        </p>
+
+        <p>
+            En las dimensiones de conocimiento de sí mismo, comunicación efectiva y asertiva, solución de problemas
+            y conflictos, manejo de tensión y estrés, se obtuvieron
+            hallazgos relevantes, puesto que, el nivel tiende a ser
+            normal bajo, tanto en el sexo masculino como en el femenino; en el caso de manejo de sentimientos y
+            emociones las mujeres tienden a obtener un puntaje bajo
+            en comparación a los hombres. Bonilla-Flórez et al.,
+            (26) demostraron un puntaje global en un grupo de estudiantes de diferentes programas universitarios en el
+            que se mostraban similitudes en el nivel de habilidades
+            en los puntajes normal alto y normal bajo. Lo anterior
+            concuerda parcialmente con los resultados obtenidos
+            en el estudio ya que, se evidencia que la población tiene
+            un nivel de habilidades similar, sin embargo, se destaca
+            una discrepancia en la dimensión de manejo de sentimientos y emociones donde se reconocieron diferencias
+            por el sexo. Un estudio realizado por Cardona-Izaza et
+            al., (27) mostró concordancia con los resultados en las
+            dimensiones de conocimiento de sí mismo, empatía,
+            solución de problemas y conflictos.
+        </p>
+
+        <p>
+            Lo anterior permite destacar que, en base a los baremos
+            propuestos en el test de habilidades para la vida de
+            Díaz-Posada (18) las dimensiones de empatía y manejo
+            de sentimientos y emociones se analizan diferenciadas
+            por sexo, en función a lo anterior, se evidenció que en
+            manejo de sentimientos y emociones se presentaban
+            diferencias estadísticamente significativas, mostrando un predominio de mejor manejo en estas dimensiones
+            por los hombres, a diferencia de la empatía la cual no
+            muestra diferencias por sexo. Niremberg (8) destaca en
+            función del sexo la asignación de roles que se da a nivel
+            sociocultural entre hombres y mujeres, en el que las expresiones emocionales y psicológicas varían de
+            acuerdo al aprendizaje cultural, lo anterior demuestra una
+            relación con los resultados obtenidos en la dimensión
+            manejo de sentimientos y emociones en el que culturalmente se puede ver a la mujer “débil” emocionalmente y
+            al hombre con mayor resistencia a las situaciones
+            emocionales.
+        </p>
+
+        <p>
+            Es importante considerar que la expresión emocional
+            debe ser válida e igual en hombres y mujeres, ya que
+            la influencia cultural puede generar una baja expresión
+            emocional creando una falsa creencia de fortaleza y
+            una diferencia entre los sexos. Guzmán-Bohórquez et
+            al., (29) por su parte refieren en su revisión basada en la
+            literatura, que la empatía es una habilidad que permite
+            comprender al otro, de esta manera, en el estudio al
+            presentar un nivel alto en los participantes se identifica
+            una fortaleza personal que se presenta en los profesionales de la salud. Por esto, se destaca la importancia
+            de realizar un análisis bivariado por sexo que permita
+            comparar y diferenciar los resultados entre femenino y
+            masculino.
+        </p>
+
+        <p>
+            En los hallazgos de BP se obtuvo un nivel moderado en
+            los 340 participantes del estudio. Veliz-Burgos et al.,
+            (30) demostraron en los profesionales de enfermería de
+            diferentes centros de salud de Chile, un nivel de autonomía bajo, de ahí que la percepción de BP se da por
+            recursos de afrontamiento y personales que permiten
+            dar un significado y de oportunidad de aprendizaje. Barrantes y Dureña (31) han demostrado que los primeros
+            años de la vida universitaria son un reto que pone a
+            prueba las habilidades personales adquiridas, debido
+            a que puede constituir una fuente de estrés y malestar
+            emocional. A partir de los resultados obtenidos se enfatiza que el nivel de BP se traduce en el
+            reconocimiento
+            de oportunidades de la vida cotidiana y universitaria. El
+            estudio muestra una perspectiva integradora que cobra
+            importancia en el bienestar y la calidad de vida de los
+            jóvenes, así como identificar las conductas de riesgo a
+            las que pueda estar expuesta la población universitaria
+            como lo muestra Molina (32), quien destacó que las
+            conductas de riesgo, los hábitos saludables y el bienestar en los jóvenes suelen verse afectados por el
+            cambio
+            de entorno, la exposición a riesgo, el estrés prolongado, la falta de conciencia y autocuidado.
+        </p>
+
+        <p>
+            Cabe destacar que los participantes del estudio tuvieron
+            un promedio de edad de 20 años (DE: ±3.09), variable
+            que destaca la etapa en la que se encuentran los participantes (juventud) y en la que se puede demostrar la
+            madurez emocional en concordancia con el BP. Delgado y
+            Tejeda (33) refieren que el BP está influido por la edad,
+            lo anterior se demuestra en el estudio realizado por este
+            autor, donde en los adultos se puntúa un mayor nivel
+            en dimensiones como: autoaceptación, manejo del entorno y crecimiento personal. Respecto a este hallazgo
+            en concordancia con el estudio se muestra que el BP se
+            vive diferente en cada ciclo etario del ser humano, de
+            este modo, a pesar que el estudio de Delgado y Tejeda
+            (33) demuestre que a mayor edad hay mayor BP, en
+            algunas dimensiones no puede ser excluyente para que
+            exista bienestar en etapas temprana de la vida como la
+            niñez, adolescencia y la juventud.
+        </p>
+
+        <p>
+            Las limitaciones se enmarcaron en los siguientes aspectos; el primero se fundamentó en la recolección de
+            los datos, debido a que hubo dificultad en la participación y colaboración por parte de los estudiantes de
+            algunos programas académicos, lo cual dificultó cumplir
+            con la proporción por programa académico y por ende
+            extrapolar los resultados entre las facultades. Otra limitación fue el cruce de variables del instrumento,
+            ya que
+            no fueron factibles por el número de componentes del
+            mismo. Se destaca dentro de las limitaciones, el tiempo de recolección de datos, así como la obtención del
+            instrumento el cual fue el único disponible y validado
+            para su aplicación.
+        </p>
+
+        <p>
+            Se recomienda promover el desarrollo personal en la
+            institución, con el fin de que sea más relevante este
+            tema a la hora de trabajar con la población estudiantil.
+            Por otra parte, se sugiere al área de universidad saludable de la institución, promover actividades que
+            contribuyan al desarrollo personal, ya que se destaca la poca
+            importancia que le dan los estudiantes a este aspecto,
+            razón por la cual se dificultó la aplicación de los instrumentos.
+        </p>
+
+        <p class="titulo">Conclusiones</p>
+
+        <ul class="lista">
+            <li>Se determinó la prevalencia del BP y HpV en un
+                trabajo entre las facultades de instrumentación
+                quirúrgica y medicina, para ello, se realizó una exploración amplia de una línea base de 5 programas de
+                una universidad de ciencias de la salud, lo cual
+                permitió plantear actividades en el aula y fuera de
+                ella para fortalecer el desarrollo humano a partir de
+                recursos que promuevan las HpV y el BP.</li>
+            <li>Se concluye que, al obtener resultados de HpV y
+                BP en un nivel moderado a bajo, refleja que ante
+                cualquier adversidad los estudiantes pueden presentar bajos recursos personales que les permitan
+                tener una mejor resolución de problemas, capacidad de afrontamiento, por lo que se puede convertir
+                en un factor que incida en conductas de riesgo al
+                asumir retos de la vida cotidiana.</li>
+            <li>Se generó un aporte social significativo a la comunidad educativa, que permite concluir que los jóvenes
+                universitarios de los programas de ciencias de
+                la salud requieren de un espacio en donde puedan
+                realizar actividades que fomenten el desarrollo de
+                HpV y BP, con el propósito de comprender el significado e importancia de esto, y así lo puedan
+                implementar, no solo a la vida laboral o académica, sino
+                a la vida cotidiana, ya que con esto se impulsa parte
+                del éxito en la vida profesional.</li>
+            <li>Las HpV y el BP, favorecen el desarrollo en el ámbito profesional especialmente en el área de la salud,
+                debido a que su desempeño y carga laboral requieren que el individuo fortalezca habilidades que
+                le permitan manejar los niveles de estrés y ansiedad
+                y con esto se desempeñe de forma empática y humanizada.</li>
+        </ul>
+
+        <p class="subtitulo">Conflicto de intereses</p>
+
+        <p>
+            Ninguno de los investigadores presentó conflicto de intereses.
+        </p>
+
+        <p class="subtitulo-segundo">Agradecimientos</p>
+
+        <p>
+            Agradecemos a la Fundación Universitaria de Ciencias de la Salud-FUCS, desde el área de vicerrectoría
+            de investigación que apoyó la ejecución del presente
+            proyecto. Igualmente, agradecemos a las estudiantes de
+            7° semestre de instrumentación quirúrgica de la FUCS:
+            Michelle Juliana Hernández Rojas, María Fernanda
+            Huertas Peralta, Tatiana Martínez Guzmán, Laura Catalina Hernández Castro, Ana María Reyes Osorio, las
+            cuales apoyaron una fase del proyecto como auxiliares
+            de investigación.
+        </p>
+
+        <!-- Referencias -->
+        <hr>
+
+        <p class="titulo"> Referencias bibliográficas </p>
+
+        <ol class="lista">
+            <li id="r1">García-Alandete J. Psicología positiva, bienestar y calidad de vida. En-Claves del pensamiento.
+                [Internet].
+                2014 [Citado 2022 may 5]. VIII (16): 13-29. Disponible en: <a
+                    href="http://www.scielo.org.mx/pdf/enclav/v8n16/1870-879X-enclav-8-16-00013.pdf">http://www.scielo.org.mx/pdf/enclav/v8n16/1870-879X-enclav-8-16-00013.pdf</a>
+            </li>
+            <li id="r2">Muñoz N. Habilidades para la vida dentro del contexto educativo. [Tesis de pregrado]. Facultad
+                de psicología:
+                Popayán; 2020. Disponible en: <a
+                    href="https://repository.ucc.edu.co/bitstream/20.500.12494/16012/1/2020_habilidades_vida_educativo.pdf http://www.acuedi.org/ddata/3806.pdf">https://repository.ucc.edu.co/bitstream/20.500.12494/16012/1/2020_habilidades_vida_educativo.pdf
+                    http://www.acuedi.org/ddata/3806.pdf</a>
+            </li>
+            <li id="r3">Corrales A, Quijano NK, Góngora EA. Empatía, comunicación asertiva y seguimiento de normas. Un
+                programa para desarrollar habilidades para la vida. Enseñanza e investigación en psicología. [Interner]
+                2017 [Citado
+                2022 may 10]. 22 (1): 58-65. Disponible en: <a
+                    href="https://www.redalyc.org/pdf/292/29251161005.pdf">https://www.redalyc.org/pdf/292/29251161005.pdf</a>
+            </li>
+            <li id="r4">Rivera-Imbacuan GL, Lasso-Ortega HF, Gómez-Herrera JD. Habilidades Psicosociales en Niños y
+                Adolescentes como Herramientas para una Vida Productiva. Universidad Mariana: Pasto. [Boletín
+                informativo].
+                2018; 6 (2): 28- 35. Disponible en: <a
+                    href="https://revistas.umariana.edu.co/index.php/BoletinInformativoCEI/article/download/1986/2042">https://revistas.umariana.edu.co/index.php/BoletinInformativoCEI/article/download/1986/2042</a>
+            </li>
+            <li id="r5">Meier LK, Oros LB, Meier LK, Oros LB. Adaptación y Análisis Psicométrico de las Escalas de
+                Bienestar Psicológico de Ryff en Adolescentes Argentinos. Psykhe (Santiago) [Internet]. 2019 May 1
+                [cited 2021 Oct 19];28(1):1–
+                16. Disponible en: <a
+                    href="https://www.scielo.cl/scielo.php?script=sci_arttext&pid=S0718-22282019000100108">https://www.scielo.cl/scielo.php?script=sci_arttext&pid=S0718-22282019000100108</a>
+            </li>
+            <li id="r6">Organización Mundial de la Salud OMS. desencadenante importante de pensamientos suicidas.
+                [Internet]. 2
+                de marzo de 2022 [citado 3 oct 2022]. Disponible en: <a
+                    href="https://www.who.int/news/item/02-03-2022-covid-19-pandemic-triggers-25-increase-in-prevalence-of-anxiety-and-depression-worldwide">https://www.who.int/news/item/02-03-2022-covid-19-pandemic-triggers-25-increase-in-prevalence-of-anxiety-and-depression-worldwide</a>
+            </li>
+            <li id="r7">OPS, Organización Panamericana de la Salud. Consideraciones psicosociales y de salud mental
+                durante el
+                brote de COVID-19. [Internet]. [Citado 24 septiembre 2020]. Disponible: <a
+                    href="https://www.paho.org/es/documentos/consideraciones-psicosociales-salud-mental-durante-brote-covid-19">https://www.paho.org/es/documentos/consideraciones-psicosociales-salud-mental-durante-brote-covid-19</a>
+            </li>
+            <li id="r8">DANE. Objetivos de desarrollo sostenible. Salud mental en Colombia: un análisis de los efectos
+                de la pandemia. [Interne] 2021 [Citado 2022 oct 5]. Disponible en: <a
+                    href="https://ascofapsi.org.co/pdf/Noticias/Estad%-C3%ADstica%20de%20Salud%20mental%20en%20Colombia-%20pandemia%202021%20.pdf">https://ascofapsi.org.co/pdf/Noticias/Estad%-C3%ADstica%20de%20Salud%20mental%20en%20Colombia-%20pandemia%202021%20.pdf</a>
+            </li>
+            <li id="r9">Organización de Naciones Unidas (ONU); Informe de políticas: La COVID-19 y la necesidad de
+                actuar en
+                relación con la salud mental [Internet]. 2020 [Citado 15 octubre 2020]. Disponible en: <a
+                    href="https://www.un.org/sites/un2.un.org/files/policy_brief_-_covid_and_mental_health_spanish.pdf">https://www.un.org/sites/un2.un.org/files/policy_brief_-_covid_and_mental_health_spanish.pdf</a>
+            </li>
+            <li id="r10">OPS, Organización Panamericana de la Salud. Consideraciones psicosociales y de salud mental
+                durante el
+                brote de COVID-19 [Internet]. 2020 mar 12 [Citado 2022 abr 19]. Disponible en: <a
+                    href="https://www.paho.org/es/documentos/consideraciones-psicosociales-salud-mental-durante-brote-covid-19">https://www.paho.org/es/documentos/consideraciones-psicosociales-salud-mental-durante-brote-covid-19</a>
+            </li>
+            <li id="r11">Bedoya-Jojoa CM. Covid-19: La pandemia del maltrato contra el personal de la salud en tiempos
+                de pandemia. Interdiscip J Epidemiology. 2020; 3(1): e-6276. <a
+                    href="10.18041/2665-427X/ijeph.2.6276">10.18041/2665-427X/ijeph.2.6276</a></li>
+            <li id="r12">Hernández-Rodríguez J. Impacto de la COVID-19 en la salud mental de las personas. Medicentro
+                Electrónica.
+                [Internet] 2020 [Citado 2020 abr 19]; 24 (3). Disponible en: <a
+                    href="http://scielo.sld.cu/scielo.php?script=sci_arttext&pid=S1029-30432020000300578">http://scielo.sld.cu/scielo.php?script=sci_arttext&pid=S1029-30432020000300578</a>
+            </li>
+            <li id="r13">Suárez-Alonso AG. La salud mental en tiempos de la COVID-19. Rev Esp Salud Pública. [Internet]
+                2020
+                [Citado 2020 abr 19]; 94 (9). Disponible en: <a
+                    href="https://www.sanidad.gob.es/biblioPublic/publicaciones/recursos_propios/resp/revista_cdrom/VOL94/EDITORIALES/RS94C_202010126.pdf">https://www.sanidad.gob.es/biblioPublic/publicaciones/recursos_propios/resp/revista_cdrom/VOL94/EDITORIALES/RS94C_202010126.pdf</a>
+            </li>
+            <li id="r14">Ministerio de Salud y Protección Social. Boletín de salud mental Análisis de Indicadores en
+                Salud Mental por
+                territorio. [Internet] 2018 [Citado 2022 19 de abril]. Disponible en: <a
+                    href="https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/VS/PP/ENT/boletin-onsm-abril-2018.pdf">https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/VS/PP/ENT/boletin-onsm-abril-2018.pdf</a>
+            </li>
+            <li id="r15">Departamento Administrativo Nacional de Estadística - DANE. Nota Estadística Salud Mental en
+                Colombia:
+                un análisis de los efectos de la pandemia. [Internet] 2021 [Citado 2022 abril 19]. Disponible en: <a
+                    href="https://ascofapsi.org.co/pdf/Noticias/Estad%C3%ADstica%20de%20Salud%20mental%20en%20Colombia-%20pandemia%202021%20.pdf">https://ascofapsi.org.co/pdf/Noticias/Estad%C3%ADstica%20de%20Salud%20mental%20en%20Colombia-%20pandemia%202021%20.pdf</a>
+            </li>
+            <li id="r16">Pérez-Padilla MdlL, Ponce Rojo A, Hernández Contreras J, Márquez Muñoz BA. Salud mental y
+                bienestar
+                psicológico en los estudiantes universitarios de primer ingreso de la Región Altos Norte de Jalisco.
+                Revista
+                de educación y desarrollo. [Internet] 2010 [Citado 2022 may 5]; 14: 31-37. Disponible en: <a
+                    href="https://www.cucs.udg.mx/revistas/edu_desarrollo/anteriores/14/014_Perez.pdf">https://www.cucs.udg.mx/revistas/edu_desarrollo/anteriores/14/014_Perez.pdf</a>
+            </li>
+            <li id="r17">Molina EA. La salud mental de los médicos: implementación del Programa PAIME COMMÁLAGA.
+                Universidad de Málaga [Tesis doctoral] 2015 [Citado 2022 may 5]. Disponible en: <a
+                    href="https://riuma.uma.es/xmlui/bitstream/handle/10630/12411/TD_AVANESI_MOLINA_Elma.pdf?sequence=1&isAllowed=y">https://riuma.uma.es/xmlui/bitstream/handle/10630/12411/TD_AVANESI_MOLINA_Elma.pdf?sequence=1&isAllowed=y</a>
+            </li>
+            <li id="r18">Díaz-Posada LE, Burbano RFR, Sierra MPM, López DA. Habilidades para la vida: Análisis de las
+                propiedades psicométricas de un test creado para su medición. Revista Colombiana de Ciencias Sociales
+                [Internet].
+                2013 [Citado 2021 ago 27]; 4(2):181–200. Disponible en: <a
+                    href="https://dialnet.unirioja.es/servlet/articulo?codigo=5123783">https://dialnet.unirioja.es/servlet/articulo?codigo=5123783</a>
+            </li>
+            <li id="r19">Gaucho, E. Criterios confiabilidad y validez de la escala de bienestar psicológico de Ryff en
+                la zona de planificación 3 del Ecuador (Proyecto de investigación). Ambato, Ecuador: 2018. Disponible
+                en: <a
+                    href="https://repositorio.pucesa.edu.ec/bitstream/123456789/2478/1/76743.pdf">https://repositorio.pucesa.edu.ec/bitstream/123456789/2478/1/76743.pdf</a>
+            </li>
+            <li id="r20">Manzini-Luis. Declaración de Helsinki: Principios éticos para la investigación médica sobre
+                sujetos humanos. Acta bioeth. [Internet]. 2000 Dic [Citado 2021 Nov 12]; 6(2): 321-334. Disponible en:
+                <a
+                    href="http://dx.doi.org/10.4067/S1726-569X2000000200010">http://dx.doi.org/10.4067/S1726-569X2000000200010</a>
+            </li>
+            <li id="r21">Universidad CES. Boletín cuatrimestral de Bioética. Informe Belmont Ochoa-Jaramillo F, Osorio
+                JW, Taborda M. (Ed). abril del 2018;10 (1): 5-16. Disponible en: <a
+                    href="https://repository.ces.edu.co/bitstream/handle/10946/5224/No.%201.pdf? sequence=1&isAllowed=y">https://repository.ces.edu.co/bitstream/handle/10946/5224/No.%201.pdf?sequence=1&isAllowed=y</a>
+            </li>
+            <li id="r22">República de Colombia. Ministerio de salud. Normas técnicas y científicas y administrativas
+                para investigación en salud. Resolución Número 8430. (4 octubre 1993). Disponible en: <a
+                    href="https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/DE/DIJ/RESOLUCION-8430-DE-1993.PDF">https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/DE/DIJ/RESOLUCION-8430-DE-1993.PDF</a>
+            </li>
+            <li id="r23">Osma DA, Blanco H. Agotamiento Emocional en estudiantes universitarios del área de la salud.
+                Universidad
+                y Salud. [Internet] 2021 [Citado 2022 may 5]; 23 (1):30-9. <a
+                    href="https://doi.org/10.22267/rus.212301.211">https://doi.org/10.22267/rus.212301.211</a>
+            </li>
+            <li id="r24">. Moreno I, Pérez K, Salinas J, Carrillo S, Bonilla N. Promoción de habilidades para la vida en
+                los estudiantes
+                de una institución de formación para el trabajo y el desarrollo humano de la ciudad de Barranquilla.
+                Colombia. [Internet] 2020 [Citado 2022 ene 20]. Disponible en: <a
+                    href="https://bonga.unisimon.edu.co/bitstream/handle/20.500.12442/6169/Promociondehabilidades.pdf?sequence=1&isAllowed=y">https://bonga.unisimon.edu.co/bitstream/handle/20.500.12442/6169/Promociondehabilidades.pdf?sequence=1&isAllowed=y</a>
+            </li>
+            <li id="r25">Romero I, Perez K, Salinas J, Carrillo S, Bonilla N.Promoción de habilidades para la vida en
+                los estudiantes
+                de una institución de formación para el trabajo y el desarrollo humano de la ciudad de Barranquilla.
+                Colombia. [Internet] 2020. [Citado 2022 ene 5]. Disponible en: <a
+                    href="https://bonga.unisimon.edu.co/bitstream/handle/20.500.12442/6169/Promociondehabilidades.pdf?sequence=1&isAllowed=y">https://bonga.unisimon.edu.co/bitstream/handle/20.500.12442/6169/Promociondehabilidades.pdf?sequence=1&isAllowed=y</a>
+            </li>
+            <li id="r26">Bonilla-Flores Y, Carrillo-Molina CA, Jaimes-Palencia DM, Carrillo-Sierra SM, Rivera-Porras
+                DRP, Díaz-Posada LE. Habilidades para la vida e inteligencia social como elementos favorecedores de la
+                salud mental en
+                universitarios. [Internet]. Gac Méd Caracas. 2020 [citado 17 noviembre 2021]. Disponible en: <a
+                    href="https://hdl.handle.net/20.500.12442/8310">https://hdl.handle.net/20.500.12442/8310</a></li>
+            <li id="r27">Cardona-Isaza A, Díaz-Posada LE. Habilidades para la vida en jóvenes que han sido víctimas del
+                conflicto
+                armado en Colombia. Revista Colombiana de Ciencias Sociales. [Internet] 2021 enero 1 [Citado 2022 ene
+                5];12(1): 76-94. Disponible en: <a
+                    href="https://www.funlam.edu.co/revistas/index.php/RCCS/article/view/3309">https://www.funlam.edu.co/revistas/index.php/RCCS/article/view/3309</a>
+            </li>
+            <li id="r28">Nirenberg O. Participación de adolescentes en proyectos sociales. Aportes conceptuales y pautas
+                para su
+                evaluación. Buenos Aires, Argentina: Paidós; 2006. Disponible en: <a
+                    href="https://www.trabajosocial.unlp.edu.ar/uploads/docs/clase_11_nirenberg.pdf">https://www.trabajosocial.unlp.edu.ar/uploads/docs/clase_11_nirenberg.pdf</a>
+            </li>
+            <li id="r29">Guzmán-Bohórquez LD, Giraldo-Camacho MA, Duarte-Ramos Y. Diferencia en los niveles de empatía
+                entre hombres y mujeres: una revisión bibliográfica. [Trabajo de grado] Universidad Cooperativa de
+                Colombia: Barrancabermeja, Santander; 2019 Disponible en: <a
+                    href="https://repository.ucc.edu.co/bitstream/20.500.12494/15756/1/2019_estudiantes_genero_conducta.pdf">https://repository.ucc.edu.co/bitstream/20.500.12494/15756/1/2019_estudiantes_genero_conducta.pdf</a>
+            </li>
+            <li id="r30">Veliz-Burgos A, Dörner-Paris A, Soto-Salcedo A, Reyes-Lobos J, Ganga-Contreras F. Inteligencia
+                emocional y bienestar psicológico en profesionales de enfermería del sur de Chile. Medisur [Internet].
+                2018 Abr
+                [citado 2021 Nov 17]; 16(2): 259-266. Disponible en: <a
+                    href="http://scielo.sld.cu/scielo.php?script=sci_arttext&pid=S1727-897X2018000200009&lng=es">http://scielo.sld.cu/scielo.php?script=sci_arttext&pid=S1727-897X2018000200009&lng=es</a>
+            </li>
+            <li id="r31">Barrantes-Brais K, Ureña-Bonilla P. Bienestar psicológico y bienestar subjetivo en estudiantes
+                universitarios costarricenses. Revista Intercontinental de Psicología y Educación. [Internet] 2015
+                [Citado 2021 nov 5];
+                17(1):101-123. Disponible en: <a
+                    href="https://www.redalyc.org/articulo.oa?id=80242935006">https://www.redalyc.org/articulo.oa?id=80242935006</a>
+            </li>
+            <li id="r32">Molina SR. Conductas estudiantes de riesgo en universitarios mendoza. Resultados universidad
+                nacional de
+                de en la cuyo (uncuyo) [Internet]. 2016 [citado 27 noviembre 2021]. Disponible en: <a
+                    href="https://bdigital.uncu.edu.ar/objetos_digitales/8370/molina-santiago.pdf">https://bdigital.uncu.edu.ar/objetos_digitales/8370/molina-santiago.pdf</a>
+            </li>
+            <li id="r33">Delgado AM, Tejeda MC. Bienestar psicológico en estudiantes universitario latinoamericanos.
+                [Trabajo de
+                grado]. 2020 [citado 2021 nov 8]. Universidad Cooperativa de Colombia: Facultad de psicología; 2020.
+                Disponible en: <a
+                    href="https://repository.ucc.edu.co/bitstream/20.500.12494/16343/1/2020_estudiantes_psicologico_bienestar.pdf">https://repository.ucc.edu.co/bitstream/20.500.12494/16343/1/2020_estudiantes_psicologico_bienestar.pdf</a>
+            </li>
+        </ol>
+
+
+
+
+    </div>
+
+</body>
+
+</html>

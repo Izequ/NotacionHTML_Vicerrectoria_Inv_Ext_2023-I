@@ -1,0 +1,1398 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V20-N1-8</title>
+    <link rel="stylesheet" href="">
+    <style>
+        body {
+            padding: 10em;
+            padding-top: 20px;
+            font-family: Times New Roman;
+            color: black;
+        }
+
+        #articulo-derecha {
+            float: left;
+        }
+
+        /* Posiciones de los resumenes */
+
+        .contenedor-general {
+            display: inline-flex;
+            width: 100%;
+        }
+
+        .contenedor-resumen {
+            width: 240%;
+        }
+
+        .contenedor-autor {
+            width: 100%;
+            padding-left: 20px;
+        }
+
+        .hr-resumen {
+            background-color: gray;
+            margin: 0;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .resumen-fondo {
+            background-color: #bdd5f1;
+            border-radius: 5px;
+        }
+
+        .titulo-resumen {
+            color: black;
+            font-size: 22px;
+            font-weight: bold;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .texto-resumen {
+            padding: 20px;
+            margin: 0;
+        }
+
+        ul.navbar {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 25em;
+            left: 2em;
+            width: 250px;
+        }
+
+        /* Titulos principales */
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: Times New Roman;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        h1 {
+            color: #29abe3;
+        }
+
+        .categoria_titulo {
+            font-style: italic;
+            color: #ffffff;
+        }
+
+        h3 {
+            font-style: italic;
+            font-weight: bold;
+            color: #707073;
+        }
+
+        .categoria {
+            text-align: center;
+            background-color: #707073;
+            width: 20%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            margin: auto;
+        }
+
+        ul.navbar li {
+            background: white;
+            margin: 0.5em 0;
+            padding: 0.3em;
+        }
+
+        /* Enlaces */
+
+        a.link-color:visited {
+            color: white;
+        }
+
+        a.link-color:link {
+            color: white;
+        }
+
+        a.link-color:hover {
+            color: white;
+        }
+
+        a.link-color:hover {
+            border-bottom: 1px solid;
+            background: black;
+        }
+
+        /* Link de referencia */
+
+        a:link {
+            color: #4e00ff;
+        }
+
+        a:visited {
+            color: #003bff;
+        }
+
+        a:focus {
+            border-bottom: 1px solid;
+            background: #98aae4;
+        }
+
+        a:hover {
+            border-bottom: 1px solid;
+            background: #aacefe;
+        }
+
+        /* Etiqueta P */
+
+        p {
+            line-height: normal;
+            text-align: justify;
+            font-size: 18px;
+        }
+
+        p.titulo {
+            color: #29abe3;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        p.subtitulo {
+            color: #29abe3;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* NUEVO */
+        p.subtitulo-segundo {
+            color: #29abe3;
+            font-style: italic;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        p.correspondencia {
+            color: black;
+            font-size: 18px;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        /* NUEVO */
+        p.entrevista {
+            color: black;
+            font-size: 18px;
+            font-style: italic;
+        }
+
+        /* NUEVO */
+        p.subtitulo-tercero {
+            color: #29abe3;
+            font-style: italic;
+            font-size: 18px;
+        }
+
+        p#cabeza {
+            color: #1d71ae;
+            text-align: center;
+        }
+
+        p.autores {
+            font-size: 16px;
+            margin: 0;
+            text-indent: 0em;
+            margin-bottom: 10px;
+        }
+
+        p.forma-citar {
+            text-indent: 0em;
+            text-align: justify;
+            justify-content: center;
+        }
+
+        .cita {
+            text-align: -webkit-center;
+        }
+
+        /* Bold especial para palabras que tienen color seguido de dos puntos
+*/
+
+        /* NUEVO */
+
+        b.subtitulo-segundo {
+            color: #29abe3;
+            font-size: 18px;
+        }
+
+        .contenedor_info {
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .info {
+            width: auto;
+        }
+
+        /* Este es para los documentos del dos en adelante *codigo abajo de este comentario* */
+
+        .info-text {
+            text-align: end;
+            margin: 0;
+        }
+
+        /* Uso Exlusico para el primero documento  que es de revision  *codigo abajo de este comentario* */
+
+        .info_text {
+            font-size: 12px;
+            line-height: 100%;
+            text-align: center;
+            margin: 0;
+        }
+
+        .info_hr {
+            margin: 5;
+        }
+
+        /* Fin P */
+        /* Etiqueta Italic */
+
+        i {
+            font-size: 18px
+        }
+
+        i.centrado {
+            font-size: 18px
+        }
+
+        /* LI para las listas */
+
+        li {
+            font-size: 18px;
+            padding-top: 10px;
+            text-align: justify;
+        }
+
+        /* NUEVO */
+        .lista li {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        hr {
+            background-color: #29abe3;
+            height: 1px;
+        }
+
+        /* Tablas */
+
+        table {
+            border-collapse: collapse;
+            border: 2px solid rgb(0, 0, 0);
+            align-items: center;
+        }
+
+        thead th {
+            border-collapse: collapse;
+            background-color: rgb(179, 179, 179);
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        tbody td {
+            border-collapse: collapse;
+            text-align: center;
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        .tipo {
+            color: #ffffff;
+            font-size: 22px;
+            border-radius: 10px 5px 10px 5px;
+            background-color: #696969;
+        }
+
+        img.logos {
+            width: 15px;
+            height: 15px;
+        }
+
+        .image {
+            text-align: center;
+            image-rendering: optimizeQuality;
+        }
+
+        .image p {
+            text-align: center;
+            font-size: small;
+        }
+
+        .logo {
+            width: 300px;
+            height: 80px;
+        }
+
+        .logo2 {
+            width: 300px;
+            height: 50px;
+        }
+
+        /* Anclajes de la pagina */
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* NUEVO */
+        .ecuacion {
+            text-align: center;
+            font-weight: bold;
+            margin: 1px;
+        }
+
+        @media only screen and (min-width:320px) and (max-width:900px) {
+            body {
+                width: 100%;
+                padding: 5em;
+                margin: 5px;
+            }
+
+            .image {
+                text-align: center;
+                image-rendering: optimizeQuality;
+            }
+
+            .image img {
+                width: 100%;
+            }
+
+            .image p {
+                font-size: small;
+                text-align: center;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="contenedor_info">
+        <div>
+            <img src="img/globales/logo.jpg" alt="" height="125px">
+        </div>
+        <div class="info" style="text-align: right;">
+            <p class="info-text"> ISSN-PRINT 1794-9831 / E-ISSN 2322-7028 </p>
+            <p class="info-text"> Vol. 20 Nº 1 / ene - abr 2023 / Cúcuta, Colombia.</p>
+            <p class="info-text">
+                <img src="img/globales/doi.png" height="20px" alt="">
+                <a href="https://doi.org/10.22463/17949831.3488">https://doi.org/10.22463/17949831.3488</a>
+            </p>
+        </div>
+    </div>
+
+
+    <!--Categoría-->
+    <div class="categoria">
+        <h2 class="categoria_titulo">Original </h2>
+    </div>
+
+    <h1> Perfil del estilo de vida en docentes y administrativos de una universidad</h1>
+
+    <h2 class="segundo"> Profile of the lifestyle in professors and administrators of a university</h2>
+
+    <h2 class="segundo"> Perfil do estilo de vida em professores e administradores de uma universidade</h2>
+
+
+    <!--Autores-->
+    <h3>
+        Esperanza Cabrera-Díaz <sup><a href="#sup1">1*</a> </sup> <br>
+        Pedro León Reyes-Gaspar <sup><a href="#sup2">2*</a> </sup> <br>
+        Sergio Charry-Méndez <sup><a href="#sup3">3*</a> </sup> <br>
+    </h3>
+
+
+    <!-- Conetenedor de las columnas de la descripciones de los autores, correspondencia de autor 
+    y los resumenes -->
+    <div class="contenedor-general">
+
+
+        <!-- Contenedor de los resumenes -->
+        <div class="contenedor-resumen">
+
+            <!-- Resumen Español -->
+
+            <div class="resumen-fondo">
+                <p class="titulo-resumen"> Resumen</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> <b>Objetivo:</b> Determinar los comportamientos del estilo de vida en docentes
+                    y administrativos
+                    de una universidad pública de Colombia. <b>Materiales y métodos:</b> Investigación cuantitativa
+                    descriptiva de corte trasversal. El tamaño de la muestra fue de 178 docentes y administrativos,
+                    mediante un muestreo aleatorio simple. Se aplicó un cuestionario auto diligenciado
+                    compuesto por una ficha sociodemográfica y el instrumento fantástico, diseñado por el Departamento
+                    de Medicina Familiar de la Universidad McMaster de Canadá, ajustado por el
+                    investigador Pedro Reyes Gaspar, obteniendo un Alfa de Cronbach, de 0,706, y un coeficiente
+                    de Spearman Brown r=0,616 y la correlación dos mitades de Guttman r=0,615. Los datos se
+                    trabajaron a través del programa SPSS versión 24, mediante análisis estadístico descriptivo
+                    univariado de frecuencias y tablas de contingencia. <b>Resultados:</b> El 40% de la población no
+                    es activa físicamente, más de la mitad de los docentes y administrativos aseguran que no
+                    ingieren una dieta adecuada, el 26% casi nunca duermen bien y se sienten descansados, el
+                    29% algunas veces duerme bien y descansa. El 50% algunas veces es capaz de hacer frente
+                    al estrés en sus vidas y 10% casi nunca puede manejar el estrés. Se identificó riesgo en salud
+                    en los docentes en las dimensiones de actividad física, nutrición, sueño y estrés (p.000) en
+                    comparación con los administrativos. <b>Conclusiones:</b> Se halló que el perfil de estilo de vida
+                    en docentes y administrativos de una universidad pública de Colombia se caracteriza por la
+                    inactividad física, una mala alimentación, un mal manejo del estrés y trastornos del sueño. </p>
+
+                <p class="texto-resumen">
+                    <b>Palabras Claves: </b> Estilo de vida; Docente; Promoción de la salud; Enfermedad crónica;
+                    Administrativo.
+                </p>
+            </div>
+            <!-- Resumen Inglés -->
+
+            <div>
+                <p class="titulo-resumen"> Abstract</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> <b>Objective:</b> To determine the behaviors of the lifestyle in teachers and
+                    administrators of a
+                    public university in Colombia. <b>Materials and methods:</b> cross-sectional descriptive
+                    quantitative research. The sample size was 178 teachers and administrators, using simple random
+                    sampling. A self-completed questionnaire was applied, consisting of a sociodemographic record and
+                    the fantastic instrument, designed by the Department of Family Medicine of the
+                    McMaster University of Canada, adjusted by the researcher Pedro Reyes Gaspar, obtaining a
+                    Cronbach's Alpha of 0.706, and a coefficient Spearman Brown r=0.616 and Guttman's twohalf
+                    correlation r=0.615. The data was worked through the SPSS version 24 program, through
+                    univariate descriptive statistical analysis of frequencies and contingency tables. <b>Results:</b>
+                    40%
+                    of the population is not physically active, more than half of teachers and administrators say they
+                    do not eat a proper diet, 26% almost never sleep well and feel rested, 29% sometimes
+                    sleep well and rest. 50% are sometimes able to cope with stress in their lives and 10% can
+                    hardly ever handle stress. Health risk was identified in teachers in the dimensions of physical
+                    activity, nutrition, sleep and stress (p.000) compared to administrative staff. <b>Conclusions:</b>
+                    it was found that the lifestyle profile of teachers and administrators at a public university in
+                    Colombia is characterized by physical inactivity, poor nutrition, poor stress management and
+                    sleep disorders.</p>
+
+                <p class="texto-resumen">
+                    <b>KeyWords:</b> Lifestyle; Teacher; Health promotion; Chronic disease; Administrative
+                </p>
+            </div>
+            <!-- Resumen Portuguez -->
+
+            <div class="resumen-fondo">
+                <p class="titulo-resumen"> Resumo</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> <b>Objetivo:</b> Determinar os comportamentos do estilo de vida em professores
+                    e administradores de uma universidade pública na Colômbia. <b>Materiais e métodos:</b> pesquisa
+                    quantitativa
+                    descritiva transversal. O tamanho da amostra foi de 178 professores e gestores, utilizando
+                    amostragem aleatória simples. Foi aplicado um questionário autopreenchido, composto por
+                    um registro sociodemográfico e o instrumento fantástico, elaborado pelo Departamento de
+                    Medicina de Família da Universidade McMaster do Canadá, ajustado pelo pesquisador Pedro
+                    Reyes Gaspar, obtendo um Alfa de Cronbach de 0,706, e um coeficiente Spearman Brown
+                    r=0,616 e correlação de duas metades de Guttman r=0,615. Os dados foram trabalhados por
+                    meio do programa SPSS versão 24, por meio de análise estatística descritiva univariada de
+                    frequências e tabelas de contingência. <b>Resultados:</b> 40% da população não é fisicamente ativa,
+                    mais da metade dos professores e gestores dizem não ter uma alimentação adequada, 26%
+                    quase nunca dormem bem e se sentem descansados, 29% às vezes dormem bem e descansam.
+                    50% às vezes são capazes de lidar com o estresse em suas vidas e 10% dificilmente conseguem lidar
+                    com o estresse. O risco à saúde foi identificado nos professores nas dimensões atividade física,
+                    nutrição, sono e estresse (p.000) em relação aos funcionários administrativos.
+                    <b>Conclusões:</b> verificou-se que o perfil de estilo de vida de professores e administradores de
+                    uma universidade pública na Colômbia é caracterizado por inatividade física, má nutrição,
+                    má gestão do estresse e distúrbios do sono.
+                </p>
+
+                <p class="texto-resumen">
+                    <b>Palavras-chave:</b> Estilo de vida; Professor; Promoção da saúde; Doença crônica; Administrativo.
+                </p>
+            </div>
+
+
+
+        </div>
+
+        <!-- Descripcion de autores, Aprobado, Como citar, licencia -->
+        <div class="contenedor-autor">
+            <!-- Autores -->
+            <div>
+                <p class="subtitulo" style="color: black; font-size: 18px;">Autor de correspondencia*</p>
+                <!-- 1 -->
+                <p class="autores" id="sup1"><sup>1*</sup><img class="logos" src="img/globales/sobre.png"> Psicóloga.
+                    Magister en Educación
+                    y Desarrollo Comunitario. Especialización y Doctorado en Bioética. Docente Tiempo Completo programa
+                    de
+                    Medicina Universidad Surcolombiana.
+                    Neiva-Colombia.
+                    <a href="mailto:cabreraesperanza@usco.edu.co">cabreraesperanza@usco.edu.co</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0001-8868-2832">0000-0001-8868-2832</a>
+                </p>
+                <!-- 2 -->
+                <p class="autores" id="sup2"><sup>2*</sup><img class="logos" src="img/globales/sobre.png"> Medico.
+                    Universidad Central del Ecuador Quito. Especialización en Gerencia de Servicios de Salud y
+                    Epidemiologia. Doctorado en ciencias de la salud.
+                    Docente Tiempo Completo programa
+                    de Medicina Universidad Surcolombiana. Neiva-Colombia.
+                    <a href="mailto:reyesgaspar@usco.edu.co">reyesgaspar@usco.edu.co</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0002-1597-409X">0000-0002-1597-409X</a>
+                </p>
+                <!-- 3 -->
+                <p class="autores" id="sup3"><sup>3*</sup><img class="logos" src="img/globales/sobre.png"> Psicólogo
+                    Universidad Surcolombiana. Psicólogo proyecto institucional
+                    Usco Saludable de la Universidad Surcolombiana. Neiva-Colombia.
+                    <a href="mailto:sergio.charry@usco.edu.co">sergio.charry@usco.edu.co</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0002-0949-3791">0000-0002-0949-3791</a>
+                </p>
+            </div>
+
+            <!--Recibido y aprobado-->
+            <div>
+                <p><b>Recibido: </b> 21 julio 2022 <br> <b>Aprobado: </b> 10 diciembre 2022 </p>
+            </div>
+
+            <!-- Como citar -->
+            <div class="cita">
+                <p class="forma-citar autores"><b>Para citar este artículo / To reference this article / Para citar este
+                        artigo:</b> Cabrera-Diaz E, Reyes-Gaspar PL,
+                    Charry-Mendez S. Perfil del estilo de
+                    vida en docentes y administrativos de
+                    una universidad. 2023; 20(1):81-93. <a
+                        href="https://doi.org/10.22463/17949831.3336">https://doi.org/10.22463/17949831.3336</a> </p>
+            </div>
+
+            <!--Licencia-->
+            <br>
+            <div>
+                <p class="autores "> &#169; Universidad Francisco de Paula Santander.
+                    Este es un artículo bajo la licencia CC-BY-NC-ND
+                    <br>
+                    <a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img
+                            alt="Licencia Creative Commons" style="border-width:0"
+                            src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Cuerpo del documento -->
+    <div>
+        <hr>
+        <!--Introducción-->
+        <p class="titulo"> Introducción</p>
+
+        <p>
+            Los estilos de vida están determinados por las interacciones sociales, socioeconómicas, ambientales y
+            tradiciones que motivan las conductas y comportamientos de las personas guiando su forma de vida (1). Los
+            estilos de vida están permanentemente alineados con
+            las decisiones que se toman afectando o favoreciendo
+            el estado de salud, por lo tanto, cada toma de decisiones que el individuo realice, hace que sus patrones de
+            comportamiento no sean fijos, sino que por el contrario
+            estén en transformación, de ahí que estos logren ejercer
+            cambios profundos en la salud.
+        </p>
+
+        <p>
+            En la actualidad, el perfil epidemiológico del modelo
+            de enfermedad ha sufrido cambios importantes, esto se
+            observa en la disminución de las enfermedades infectocontagiosas, gracias a los avances científicos,
+            creación
+            de vacunas, medicamentos y acciones encaminadas
+            a la prevención que protegen a la población en general. Sin embargo, este espacio ha sido ocupado por las
+            enfermedades crónico-degenerativas, este proceso ha
+            elevado el interés de investigadores en desarrollar trabajos que estudian la relación de los comportamientos
+            humanos y el origen de la enfermedad, esto ha llevado
+            a evidenciar que la morbilidad y mortalidad de algunas
+            enfermedades presentan una relación constante con los
+            estilos de vida de grupos de población específicos. En este sentido, toma importancia señalar a los estilos
+            de
+            vida como un factor trascendental en el proceso de salud-enfermedad.
+        </p>
+
+        <p>
+            Las enfermedades no trasmisibles (ENT) son patologías de prolongada duración, evolución lenta (2) y
+            representan un desafío para los servicios de salud y la
+            salud pública por su dimensión, su alto nivel de mortalidad y morbilidad, su porcentaje de carga de
+            enfermedad con la pérdida de años saludables y productivos
+            en la población, su afectación socioeconómica mundial
+            y su alto costo de tratamiento (3, 4). Entre ellas tenemos las enfermedades cardiovasculares, enfermedades
+            respiratorias crónicas, diferentes tipos de cáncer y la
+            diabetes. Las ENT son la principal causa de muerte
+            en el mundo, originando 41 millones de muertes cada
+            año, es decir 71% de las muertes que se registran a nivel mundial (5). Estos fallecimientos en un principio
+            estaban relacionados con personas de la tercera edad,
+            pero cada año 15 millones de estas muertes ocurren en
+            personas de 30 a 69 años, más del 80 % de estas defunciones acontecen en países en desarrollo (5), por esta
+            razón son consideradas un problema de salud pública
+            (6). En Colombia, las ENT contribuyen con 110 mil fallecimientos anuales (7). Según el Ministerio de Salud
+            y Protección social más del 75% de la morbilidad que
+            se registra en el país está relacionada con las ENT (8).
+            La carga de las ENT en población económicamente
+            activa es preocupante, se estima que las próximas dos
+            décadas la producción a nivel mundial alcance perdidas
+            acumulativas de más de 46 billones de dólares como
+            resultado de las enfermedades cardiovasculares, respiratorias crónicas, hipertensión arterial, cáncer y
+            diabetes (9). En América Latina, los datos evidencian que
+            el 30% de las defunciones relacionadas con las enfermedades cardiovasculares, el 20% ocurren en personas
+            de bajos recursos y el 10% en personas con ingresos
+            estables (9).
+        </p>
+
+        <p>
+            En población económicamente activa se ha observado
+            el establecimiento de factores de riesgos que impactan el estilo de vida de los individuos y las empresas
+            (10,11). Estos factores están relacionados con la modernidad, los avances científicos y tecnológicos que
+            han desarrollado en la población nuevos hábitos que
+            implican la reducción alarmante del ejercicio y actividad física, consumo excesivo de productos procesados,
+            consumo de tabaco y alcohol, bajo consumo de frutas
+            y verduras, la subvaloración del cuidado médico y la
+            apatía sobre el autocuidado de la salud.
+        </p>
+
+        <p>
+            Se tiene una idea veraz de la importancia del personal
+            docente y administrativo en el alcance de los objetivos
+            y resultados en el andamiaje educativo, que representa
+            un elemento primordial en el comportamiento de los
+            jóvenes en nuestra sociedad. La Institución educativa
+            superior, aparte de tener la obligación de formar individuos aptos para el progreso de la sociedad y las
+            comunidades, posee un nuevo reto que enfrentar, el favorecer
+            el desarrollo humano y calidad de vida de quienes estudian y trabajan en dicho centro. La universidad
+            constituye un entorno favorable para la formación en hábitos
+            saludables de la comunidad educativa en general.
+        </p>
+
+        <p>
+            Los trabajadores administrativos y docentes universitarios, por las funciones que desempeñan que envuelven
+            un conjunto de exigencias y presiones (incorporación
+            de nuevo conocimiento, evaluación, preparación de
+            clases, manejo de nuevas tecnología de comunicación
+            e información, exigencias emocionales, etc.), que hacen que su labor implique un horario exigente que en
+            ocasiones impide una buena alimentación, un escaso movimiento físico, presencia de ansiedad y estrés.
+            Convirtiéndolos en una población de alto riesgo para el
+            deterioro de su salud y bienestar (12, 13, 14). A pesar
+            de lo afirmado anteriormente, las investigaciones con
+            esta población a nivel regional y nacional son escasas,
+            esto hace confusa una mirada objetiva sobre la salud
+            y el bienestar de la comunidad universitaria. Por ello,
+            esta población representa un alto interés para el desarrollo de estudios del autocuidado de la salud desde
+            la
+            promoción de la salud, que conlleven a una trasformación del concepto de salud, resaltando por parte de
+            docentes y administrativos la autogestión de la salud y
+            de las contribuciones económicas, sociales y culturales
+            que esto sobrelleva.
+        </p>
+
+        <p>
+            La universidad es un espacio esencial para la promoción de estilos de vida saludables, esto debido al tiempo
+            en que los docentes y administrativos permanecen en la
+            misma. La promoción de la salud para los docentes y
+            administrativos de la universidad tienen como objetivo
+            básico brindar todas las herramientas para conseguir un
+            equilibrio saludable, es decir, con salud o enfermedad,
+            se propicia un proceso de autocuidado de la salud, que
+            se desarrolla día a día hasta convertirse en hábito. Por
+            esta razón, es importante que los docentes y administrativos lleven y fomenten una vida en la que resalte la
+            toma de decisiones que afecta la salud de cada persona
+            y por tanto, a la comunidad en la cual desarrollan un
+            papel. Con el presente estudio se contribuirá en el abordaje eficaz de la prevención y manejo de las ENT en
+            población económicamente activa teniendo en cuenta
+            la declaración política de la Reunión de Alto Nivel de
+            la Asamblea General de las Naciones Unidas, en donde
+            aseguran que atenuar esta situación dependerá de un
+            adecuado manejo multisectorial.
+        </p>
+
+        <p>
+            La importancia de esta investigación radica en obtener
+            información clara y objetiva que permitirá mejorar la
+            salud y el bienestar a través de intervenciones dirigidas
+            para potenciar la salud de los docentes y administrativos universitarios desde la detección de los estilos
+            de
+            vida, de igual manera se pretende describir el perfil actual de salud de los mismos y aumentar esfuerzos
+            para
+            reducir el riesgo de enfermedad y mejorar la calidad de
+            vida de la comunidad universitaria.
+        </p>
+
+        <hr>
+
+        <p class="titulo">Objetivo General</p>
+
+        <p>
+            Determinar los comportamientos del estilo de vida en
+            docentes y administrativos de una universidad pública
+            de Colombia.
+        </p>
+
+        <hr>
+
+        <p class="titulo">Materiales y Métodos</p>
+
+        <p>
+            Se realizó un estudio descriptivo de corte trasversal,
+            con docentes y administrativos de una universidad pública de Colombia, en el periodo 2021-A. El universo
+            de la muestra era de 250 docentes y administrativos de
+            la facultad de educación, para su cálculo se tomó una
+            confiabilidad del 95 % y un error estándar de muestreo
+            de 3,87 para un total de 178 sujetos, 90 administrativos
+            y 88 docentes. El tipo de muestreo fue aleatorio simple,
+            mediante las listas de participación en las actividades
+            del proyecto institucional Usco Saludable en su dimensión clínico-sanológica. Como criterios de inclusión
+            se establecieron ser docente con relación laboral por
+            nombramiento, personal administrativo con contrato
+            laboral vigente de la Universidad, participación libre
+            y voluntaria en la aplicación de la historia clínico-sanológica del proyecto institucional Usco Saludable.
+            Como Criterios de exclusión se utilizó ser contratista
+            por prestación de servicio y docente catedrático.
+        </p>
+
+        <p>
+            Para la recolección de la información se aplicó un cuestionario auto diligenciado (Historia
+            clínico-sanológica), ésta permitió recoger los datos descriptivos con la
+            muestra seleccionada para el estudio, con el propósito
+            de determinar los aspectos relevantes de los docentes y administrativos. La primera parte presentará la
+            variable de datos sociodemográficos. La segunda parte será
+            el cuestionario denominado Fantástico para valoración
+            de estilos de vida, fue diseñado por el Departamento
+            de Medicina Familiar de la Universidad McMaster de
+            Canadá, modificado por el Centro de Estudios de Salud
+            y Bienestar Humano de la Universidad de La Habana y
+            ajustado por el investigador Pedro León Reyes Gaspar
+            (15), luego de la administración de una prueba piloto a 20 sujetos entre docentes y administrativos de la
+            universidad Surcolombiana. Su consistencia interna se
+            observó mediante el Alfa de Cronbach, con el que se
+            obtuvo una correlación de 0,706, que se ubica en el rango óptimo de confiabilidad, lo cual indica que los
+            ítems
+            propuestos por el instrumento miden el constructo de
+            estilos de vida.
+        </p>
+
+        <p>
+            Como mecanismo de confirmación de la adecuada confiabilidad del cuestionario, se aplicó el test de
+            coeficiente de Spearman Brown (r=0,616) y la correlación
+            de dos mitades de Guttman (r=0,615), los cuales confirmaron que el instrumento posee una óptima
+            confiabilidad. El cuestionario permite obtener un panorama
+            general del estilo de vida mediante diez dimensiones,
+            para la presente investigación solo se tuvieron en cuenta las siguientes: A: actividad, N: nutrición, T:
+            toxicidad, A: alcohol, S: sueño y estrés, C: carrera (trabajo).
+            En cuanto a la opción de respuesta cada participante
+            respondió a cada pregunta mediante una escala tipo
+            Likert de 0 a 2 en donde 0 equivale a casi nunca, 1 a
+            alguna veces y 2 a casi siempre, para la calificación del
+            cuestionario se sumaron los resultados de cada columna y el resultado se multiplico por dos para obtener el
+            valor final del estilo de vida, por último, se ubica el
+            valor final en la escala de 0 a 100, donde puntajes entre
+            40 a 59 se consideran un estilo de vida malo, un puntaje
+            entre 60 a 69 un estilo de vida regular, entre 70-84 es
+            un estilo de vida bueno y entre 85 a 100 representa un
+            estilo de vida excelente.
+        </p>
+
+        <p>
+            Se seleccionó a los participantes teniendo en cuenta los
+            lineamientos según los criterios del muestreo. Se presentaron los permisos correspondientes a la facultad de
+            educación y los objetivos de la presente investigación.
+            El protocolo de investigación fue presentado al Comité de Ética, Bioética e investigación de la Universidad
+            Surcolombiana para su aprobación, una vez aceptado
+            mediante el acuerdo 056 del 2021 PDI, El coordinador
+            del área clínica del proyecto Usco saludable, médicos
+            y residentes contactaron de forma personal a cada participante acordando hora, lugar y fecha, para la
+            realización de la historia clínico-sanológica, se le explico
+            que el procedimiento ocupara una hora de su tiempo.
+            los participantes diligenciaron inicialmente el consentimiento informado, en donde se aclararán temas como
+            el respeto a los derechos y la dignidad de toda persona, la seguridad de que su identidad no será revelada
+            y se mantendrá la confidencialidad de la información,
+            recibirá respuesta a cualquier pregunta y aclaración a
+            cualquier duda relacionada con la investigación y se
+            enfatiza en la libertad de retirar su consentimiento en
+            cualquier momento y dejar de participar en el estudio
+            sin problema o perjuicio alguno.
+        </p>
+
+        <p>
+            También, se desarrolló una base de datos en SPSS<sup>®</sup>
+            versión 24 para la tabulación y análisis de los datos, a
+            quienes se les aplicaron estadísticos descriptivos univariado de frecuencia; se elaboraron tablas de
+            contingencia para hallar fuerza de asociación entre las varia¬-
+            bles y establecer pruebas inferenciales para la relación
+            de variables sociodemográficas y los estilos de vida.
+            Igualmente, se estableció un nivel de significan¬cia estadística del 0,05 (p &#60; 0,05). Se aplicó el
+            coeficiente V
+            de Cramer (V) para identificar el grado de intensidad
+            en el que las variables están relacionadas, este coefciente maneja resultados que varían de 0 a 1, en donde
+            0 y 0,2 indica que no hay asociación, 0,2 determina
+            una asociación débil, entre 0,2 y 0,6 se establece una
+            asociación moderada y entre 0,6 y 1 muestra asociación
+            fuerte entre variables.
+
+        </p>
+
+        <p class="titulo">Resultados</p>
+
+        <p>
+            Se analizaros los datos de 178 docentes y administrativos de una universidad pública. El 96% de la población
+            se encuentra en la etapa de adultez (27 y 59 años de
+            edad). La mayoría es de sexo femenino con un 52%. El
+            91% está afiliado al régimen contributivo, seguido del
+            7% que está en el régimen especial y solo el 2% se encuentra en el régimen subsidiado. En relación a la
+            procedencia el 85% manifiesta ser de Neiva. En cuanto al
+            estrato socioeconómico el 48% pertenece a un estrato
+            bajo, el 34% al medio y el 18% hace parte de un estrato alto. Con respecto al estado civil se pudo
+            identificar
+            que el 50% de la población es casada, el 15% convive
+            en unión libre, el 26% está soltero y el 9% refirió ser
+            separado. En cuanto a la ocupación el 51% tiene labores administrativas en la institución educativa
+            superior,
+            mientras que el 49% se dedica a la docencia (Tabla 1).
+        </p>
+
+        <div class="image">
+            <p><b>Tabla 1.</b> Características generales de docentes y administrativos de una Universidad Pública</p>
+            <img src="img/V20-N1-8/Screenshot_1.png" width="70%">
+            <p><b>Fuente: </b>visor de resultado SPSS 24</p>
+        </div>
+
+        <p>
+            El análisis de las dimensiones de los estilos de vida en
+            docentes y administrativos evidencio que el 40% casi
+            nunca es activo físicamente, seguido del 20% que afirma que algunas veces es activo físicamente, mientras
+            que el 40% considera que si es activo físicamente. En
+            la dimensión nutrición se identificó que el 51% de los
+            docentes y administrativos manifiestan que algunas veces ingieren una dieta adecuada, el 41% aseveran que
+            casi siempre su dieta es adecuada y solo el 8% afirman
+            que casi nunca ingieren una dieta adecuada. En lo concerniente al consumo a menudo de exceso de azúcar,
+            grasa, sal y chucherías el 21% indicó que las consume
+            todas, el 43% contesto que consume algunas de estas,
+            mientras que el 36% no consume ninguna. En la variable estoy en mi peso ideal el 54% cree que esta 10kilos
+            por encima del peso ideal. En referencia al consumo de
+            cigarrillo el 54% contesto no haber fumado en el último año, el 40% no haber fumado en los últimos cinco
+            años y el 6% asegura haber fumado el año pasado. En
+            cuanto al consumo diario de cigarrillo el 67% declara
+            que su consumo está en el rango de 0 a 10, el 26% dice
+            que no fuma ningún cigarrillo diariamente. El 80% de
+            los docentes y administrativos afirman que consumen
+            entre 0 a 7 cervezas semanales, de igual manera la mitad de la población (50%) manifiestan que consumen
+            ocasionalmente más de 4 cervezas en cada ocasión o
+            reunión. En la dimensión sueño y estrés se pudo identificar que el 26% casi nunca duermen bien y se sienten
+            descansados, el 29% algunas veces duerme bien y
+            descansa, mientras que el 45% señalan casi siempre
+            descansar y dormir bien. El 50% de los encuestados
+            afirman que algunas veces es capaz de hacer frente al
+            estrés en sus vidas y 10% casi nunca puede manejar las
+            situaciones de estrés. El 86% de los encuestados está
+            satisfecho con el trabajo que tiene (Tabla 2).
+        </p>
+
+        <div class="image">
+            <p><b>Tabla 2. </b>Descriptivo del estilo de vida en docentes y administrativos de una universidad pública
+            </p>
+            <img src="img/V20-N1-8/Screenshot_2.png" width="60%">
+            <img src="img/V20-N1-8/Screenshot_3.png" width="60%">
+            <p><b>Fuente: </b>visor de resultado SPSS 24.</p>
+        </div>
+
+        <p>
+            Los resultados obtenidos para los estilos de vida relacionados con la salud en la población en general,
+            mostraron que el 12% de los docentes y administrativos tienen un estilo de vida malo, el 25% presenta un
+            estilo
+            de vida regular, el 42% muestra un estilo de vida bueno
+            y el 21% poseen un estilo de vida excelente (Tabla 3).
+        </p>
+
+        <div class="image">
+            <p><b>Tabla 3. </b>Estilo de vida en docentes y administrativos de una Universidad Publica </p>
+            <img src="img/V20-N1-8/Screenshot_4.png" width="60%">
+            <p><b>Fuente: </b>visor de resultado SPSS 24.</p>
+        </div>
+
+        <p>
+            Respecto a la asociación entre los estilos de vida y las
+            características generales en docentes y administrativos
+            de una universidad pública, en primer lugar se muestra
+            que la dimensión actividad física presenta una relación
+            significativa (p=.000) y un grado de intensidad fuerte
+            (V.604) con la variable ocupación (Docentes-Administrativo), en donde se observó un mayor porcentaje de
+            administrativos que afirmaron ser activos físicamente
+            casi siempre con un 68% en comparación con los docentes en donde el 65% aseguro casi nunca ser activo
+            físicamente. Con relación a la variable ingiero una dieta
+            adecuada de la dimensión nutrición se pudo identificar
+            una asociación significativa con la variable ocupación (p=.000), revelando que el 77% de los administrativos
+            manifiesta ingerir una dieta adecuada, mientras que el
+            82% de los docentes argumentan algunas veces tener
+            una dieta adecuada. Esta asociación tiene una intensidad fuerte (V.734). En cuanto a la dimensión de sueño y
+            estrés se pudo evidenciar un grado de intensidad
+            fuerte (V.852) y una asociación significativa (p=.000)
+            con la variable ocupación en donde 86% de los administrativos afirman casi siempre dormir bien y sentirse
+            descansados, en comparación con los docentes quienes
+            manifiestan con un 51% casi nunca dormir bien y descansar (Tabla 4).
+        </p>
+
+        <div class="image">
+            <p><b>Tabla 4. </b>Asociación de estilo de vida y características generales.</p>
+            <img src="img/V20-N1-8/Screenshot_5.png" width="70%">
+            <p><b>Fuente: </b>visor de resultado SPSS 24.</p>
+        </div>
+
+        <p class="titulo">Discusión</p>
+
+        <p>
+            El presente estudio tuvo como objetivo determinar los
+            comportamientos del estilo de vida en docentes y administrativos de una universidad pública de Colombia.
+            Los estilos de vida poco saludables en docentes y administrativos universitarios, son cada vez más
+            frecuentes,
+            este debido a las responsabilidades y actividades (Académicas, administrativas, orientación a estudiantes,
+            uso de tecnologías, largas horas de lectura, atención al
+            usuario) que exigen una entrega incondicional por parte del personal. Ello requiere destinar largos periodos
+            de tiempo en poco movimiento, una alimentación no
+            balanceada y escaso descanso que aumentan las dificultades en salud de esta población (13,16).
+        </p>
+
+        <p>
+            Esto se evidencia en la presente investigación en donde se pudo demostrar que más de la mitad de los
+            docentes
+            y administrativos casi nunca y algunas veces realizan
+            actividad física, es decir tienen una vida sedentaria. Las
+            razones por la que no se practica actividad física en esta
+            población están relacionadas a los avances tecnológicos, falta de tiempo y exceso de obligaciones y trabajo
+            (17). Resultados similares se encontraron en distintos
+            estudios (10, 18,19). La actividad física es reconocida
+            como una herramienta práctica que contribuye a potencializar y reparar el estado de salud, convirtiéndola
+            en un factor protector con la capacidad de neutralizar
+            los efectos negativos de los comportamientos de riesgo
+            (20, 21). Sobre este aspecto, la presente investigación,
+            identificó una asociación significativa entre la dimensión de actividad física y ocupación
+            (docentes-administrativos), lo que permite evidenciar que los administrativos realizan más actividad física
+            en comparación
+            con los docentes. Este resultado no concuerda con lo observado por Rodríguez- Salazar et al., (22) donde
+            encontraron que los administrativos presentaban niveles
+            más alto de sedentarismo y los docentes son más activos físicamente. En este sentido, la actividad física
+            está
+            influenciada por las motivaciones para su práctica en
+            donde suele realizarse solo como rutina o pasa tiempo y
+            no como promotora de salud física, biológica y mental
+            (14).
+        </p>
+
+        <p>
+            Desde la dimensión de nutrición se encontró que más
+            de la mitad de la población considera que no ingiere
+            una dieta adecuada, que consume en exceso alimentos
+            pocos saludables y que esta pasado de su peso ideal
+            por lo menos 10 kilos. Esto coincide con otros estudios
+            (23, 24) en donde se evidencio los inadecuados hábitos alimenticios en docentes y administrativos. En esta
+            dimensión se halló una asociación significativa entre
+            ingerir una dieta adecuada y la ocupación, en donde los
+            administrativos con un 77% manifiesta ingerir una dieta adecuada, esto no está relacionado con otras
+            investigaciones en donde revela que el personal trabajador del
+            área administrativa universitaria presentan más riesgo
+            de padecer enfermedades crónicas no trasmisibles por
+            comportamientos inadecuados como una mala alimentación y sedentarismo (25).
+        </p>
+
+        <p>
+            En lo referente a la dimensión de antecedentes tóxicos
+            se pudo constatar el bajo consumo de cigarrillo y alcohol diario y habitual en la población, esto resulta
+            similar con otras investigaciones en donde se estableció
+            que solo el 5% de los docentes y el 7% de los administrativo manifestó fumar, mientras que 9,7% consume
+            alcohol (16, 26), sin embargo en población adulta en
+            Colombia se establece un consumo fuerte y dependiente de tabaco que rodea el 49,2% (27). Las razones que
+            se podrían establecer para el bajo consumo en esta población radican en el conocimiento sobre los efectos
+            negativos, como el peligro a la dependencia y el riesgo
+            desfavorable hacia la salud (26).
+        </p>
+
+        <p>
+            En este estudio se identificó que más de la mitad de
+            los docentes y administrativos (55%) argumentan casi
+            nunca y algunas veces no dormir bien, sentirse cansados y no tener las herramientas para hacer frente al
+            estrés que viven a diario. Estos resultados son congruentes con otras investigaciones en donde la
+            prevalencia
+            de estrés en docentes y administrativos es del 67% y
+            44.6% respectivamente (28, 29, 30). Estas ocupaciones
+            (docentes-administrativos) demandan del individuo
+            una entrega total que se trasforma en una gran carga de trabajo que produce angustia psicológica y grados
+            bajos de satisfacción laboral, comparándolos con otras
+            actividades o profesiones. De igual manera toda la angustia psicológica y la insatisfacción laboral produce
+            en el personal estados negativos emocionales y físicos
+            que influyen en su productividad laboral (31, 32). En
+            esta área se halló asociación significativa en donde casi
+            la totalidad de los administrativos aseveraron dormir
+            bien y sentirse descansados en comparación con los
+            docentes en donde solo el 2% manifiesto dormir bien
+            y sentirse descansado. Estos hallazgos son afines por
+            lo encontrado por Soriano-Tumbaco (33) que en el personal administrativo de una universidad Estatal no
+            observo presencia de estrés laboral. Esta condición está
+            asociada a que el trabajo administrativo es elaborado es
+            su gran mayoría por equipos de trabajo que repercuten
+            en la integración y crecimiento personal del trabajador
+            (34), mientras que el personal docente su carga de trabajo la desarrolla de forma individual (planificación
+            de
+            lecciones, organizan actividades, desarrollan y mejoran
+            planes de estudio, manejan actividades extracurriculares, supervisión de clase), generando un mayor impacto
+            en su desarrollo personal, que a su vez representa una
+            oportunidad generadora de estrés y ansiedad (28).
+        </p>
+
+        <p>
+            Según los hallazgos del estudio, la mayoría (86%) de
+            los docentes y administrativos se encuentran satisfechos con el trabajo que poseen, a pesar de presentar
+            dificultades para descansar y dormir bien en el personal docente, situación relacionada con el estrés. Lo
+            que
+            es similar a lo encontrado en otros estudios, en donde
+            se observó un nivel alto de satisfacción laboral en los
+            docentes y administrativos de una universidad (33, 35,
+            36, 37).
+        </p>
+
+        <p>
+            En relación a la alta satisfacción laboral que argumentan los docentes, esta puede estar influencia a las
+            posibilidades de progreso en la institución, relaciones interpersonales con sus pares y la remuneración
+            recibida,
+            aunque esta última resulta una variables más satisfactoria en estudios con universidades privadas en
+            comparación con instituciones públicas de educación superior
+            (33). En cuanto a los administrativos, esta condición
+            suele verse relacionada con el tipo de vinculación a la
+            institución, que para este estudio todo el personal era
+            incorporados directamente con la universidad, es decir de planta y con la antigüedad (36). La satisfacción
+            laboral alta en el personal administrativo, está relacionada con el tipo de tareas que desarrollan y la
+            relación
+            con colegas y superiores (38).
+        </p>
+
+        <p>
+            En lo concerniente, a la valoración global del estilo
+            de vida de la población en general se pudo constatar
+            que más de la mitad de los docentes y administrativos
+            muestran estilos de vidas buenos y excelentes, pero
+            se deben llevar acabo procesos de acompañamiento y
+            seguimiento que permitan llegar a un establecimiento
+            de una cultura de la salud, que solidifique una mejor
+            calidad de vida en la comunidad universitaria, estos resultados concuerdan con lo detallado en estudios
+            anteriores (17, 39).
+        </p>
+
+        <p>
+            Desde lo pertinente la investigación permitirá a la universidad disponer de información clara y objetiva
+            para
+            la creación de estrategias y programas de promoción de
+            la salud (Usco Saludable) adaptados a las necesidades
+            locales y a sus posibilidades específicas. La participación activa en la promoción de la salud implica crear
+            ambientes favorables que generen condiciones de vidas
+            gratificantes, agradables, seguras y estimulantes. Igualmente y desde el ambiente universitario,
+            proporcionar
+            los medios para que los administrativos y docentes
+            ejerzan un mayor control de su propia salud y facilitar
+            todo aquello que la que propicie.
+        </p>
+
+        <p>
+            Este estudio contribuye a la academia, le ofrece un
+            referente investigativo y teórico sobre el perfil del estilo de vida en docentes y administrativos, tema
+            poco
+            explorado en la actualidad. Además, propone factores
+            protectores de las ENT en esta población, ya que estas
+            constituyen un problema de salud pública, y plantea el
+            papel de los trabajadores y las universidades como promotores de la salud. Lo anterior, permite aportar
+            respuestas válidas que sirvan como alternativas de solución a las circunstancias adversas vividas en
+            Colombia
+            en el mundo universitario.
+        </p>
+
+        <!-- conclusiones -->
+
+        <hr>
+
+        <p class="titulo">Conclusiones</p>
+
+        <ul class="lista">
+            <li>El perfil sociodemográfico de los docentes y administrativos estudiados, refleja que se trata de una
+                población en su gran mayoría femenina, afiliada
+                al régimen contributivo, proceden de la ciudad de
+                Neiva, su estado civil es casado, pertenece a los
+                estratos bajo y medio y se encuentra en la etapa de
+                adultez en donde la edad oscila entre 27 y 59 años
+                respectivamente.</li>
+            <li>Luego de concluir con la investigación realizada,
+                se identificó que los comportamientos en salud que
+                constituyen un riesgo para los docentes y administrativos son: la actividad física, la alimentación
+                saludable y el manejo adecuado del estrés, realidad que impacta en la variable ocupación
+                (Docentes-Administrativos) de la población del presente
+                estudio, ya que se encontraron asociaciones significativas mostrando mayor riesgo en los docentes en
+                relación a su estilo de vida. De igual manera, dichas
+                áreas constituyen los factores de riesgos más influyentes en la prevención y promoción de las ENT
+                a nivel mundial. Con la información adquirida en
+                este estudio la universidad está en la capacidad de
+                elaborar políticas de gestión de recurso humano en
+                docentes, que estimulen una cultura del autocuidado de la salud y bienestar en general. </li>
+            <li>Este estudio ha demostrado, que las dimensiones
+                del estilo de vida más adecuadas en docentes y
+                administrativos están relacionadas con el consumo
+                de cigarrillo, alcohol y la satisfacción laboral. Se
+                exhorta a la institución de educación superior, a desarrollar programas y actividades que promuevan y
+                fomenten estas conductas favorables en el personal
+                docente y administrativo para establecer una cultura del autocuidado de la salud.</li>
+        </ul>
+
+        <p class="subtitulo">Conflicto de intereses</p>
+
+        <p>
+            Los autores declaran no tener ningun conflicto de intereses.
+        </p>
+
+        <!-- Referencias -->
+
+        <hr>
+
+        <p class="titulo"> Referencias bibliograficas</p>
+
+        <ol class="lista">
+            <li id="r1">Organización Mundial de la Salud. Promoción de la salud. Glosario. [Internet].1998 [citado 12 de
+                mayo
+                2022]. Disponible en: <a
+                    href="https://apps.who.int/iris/bitstream/handle/10665/67246/WHO_HPR_HEP_98.1_spa.pdf;jsessionid=ED1938CC-910D89545E906EA4CDD619CB?sequence=1">https://apps.who.int/iris/bitstream/handle/10665/67246/WHO_HPR_HEP_98.1_spa.pdf;jsessionid=ED1938CC-910D89545E906EA4CDD619CB?sequence=1</a>
+            </li>
+            <li id="r2">Organización Mundial de la salud. Enfermedades no trasmisibles. [Internet]. 2019 [citado 15 de
+                mayo 2022].
+                Disponible en: <a
+                    href="https://www.paho.org/es/temas/enfermedades-no-transmisibles">https://www.paho.org/es/temas/enfermedades-no-transmisibles</a>
+            </li>
+            <li id="r3">Castañeda Porras O, Segura O, Parra Rodríguez AY. Prevalencia de enfermedades crónicas no
+                transmisibles, Trinidad-Casanare, 2012-2014. Rev. Médica Risaralda [Internet]. 2018 [citado 10 de mayo
+                de 2022];
+                24(1):33-8. Disponible en: <a
+                    href="https://revistas.utp.edu.co/index.php/revistamedica/article/view/14631">https://revistas.utp.edu.co/index.php/revistamedica/article/view/14631</a>
+            </li>
+            <li id="r4">Organización Mundial de la Salud. Las dimensiones económicas de las enfermedades no trasmisibles
+                en
+                América Latina y el Caribe. [Internet]. 2017[Consultado 5 de mayo 2022]. Disponible en: <a
+                    href="https://iris.paho.org/bitstream/handle/10665.2/33994/9789275319055-spa.pdf?sequence=1">https://iris.paho.org/bitstream/handle/10665.2/33994/9789275319055-spa.pdf?sequence=1</a>
+            </li>
+            <li id="r5">Organización Mundial de la Salud. Enfermedades no trasmisibles, datos y cifras. [Internet]. 2021
+                2021[citado
+                12 de mayo de 2022]. Disponible en: <a
+                    href="https://www.who.int/es/news-room/fact-sheets/detail/noncommunicable-diseases">https://www.who.int/es/news-room/fact-sheets/detail/noncommunicable-diseases</a>
+            </li>
+            <li id="r6">Landrove-Rodríguez O, Morejón-Giraldoni A, Venero-Fernández S, Suárez-Medina R, Almaguer-López
+                M,
+                Pallarols-Mariño E, et al. Enfermedades no transmisibles: factores de riesgo y acciones para su
+                prevención y
+                control en Cuba. Rev Panam Salud Pública. 2018; 42: e23. <a
+                    href="https://doi.org/10.26633/RPSP.2018.23">https://doi.org/10.26633/RPSP.2018.23</a></li>
+            <li id="r7">Organización Mundial de la Salud. Enfermedades no trasmisibles. [Internet] 2018[citado el 12 de
+                mayo 2022].
+                Disponible en: <a
+                    href="http://www.who.int/mediacentre/factsheets/fs355/es/">http://www.who.int/mediacentre/factsheets/fs355/es/</a>
+            </li>
+            <li id="r8">Ministerio de salud y protección social. Análisis de situación de salud (ASIS) Colombia.
+                [Internet]. 2019 [citado 12 de mayo 2022]. Disponible en: <a
+                    href="https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/VS/ED/PSP/asis-colombia-2016.pdf">https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/VS/ED/PSP/asis-colombia-2016.pdf</a>
+            </li>
+            <li id="r9">Organización Mundial de la Salud. Plan de acción para la prevención y control de las
+                enfermedades no trasmisibles en las Américas 2013-2019. [Internet] 2014 [citado el 11 de mayo
+                2022].Disponible en: <a
+                    href="https://www.paho.org/hq/dmdocuments/2015/plan-accion-prevencion-control-ent-americas.pdf">https://www.paho.org/hq/dmdocuments/2015/plan-accion-prevencion-control-ent-americas.pdf</a>
+            </li>
+            <li id="r10">Rangel-Caballero LG, Gamboa-Delgado EM, Rojas-Sánchez LZ. Estilo de vida en trabajadores de
+                Bucaramanga y su área metropolitana y su asociación con el exceso de peso. Rev. Fac. Med. [Internet].
+                2017 [citado
+                11 de mayo de 2022]; 65(1):31-6. Disponible en: <a
+                    href="https://revistas.unal.edu.co/index.php/revfacmed/article/view/55547">https://revistas.unal.edu.co/index.php/revfacmed/article/view/55547</a>
+            </li>
+            <li id="r11">Álvarez GM, Guadalupe-Vargas M, Morales-Murillo H, Guadalupe-Vargas M, Morales-Murillo H,
+                Robles-Amaya J. El sedentarismo y la actividad física en trabajadores administrativos del sector
+                público. CU
+                [Internet]. 2017 [citado 8 de mayo 2022]; 9(21):116-24. Disponible en: <a
+                    href="https://ojs.unemi.edu.ec/index.php/cienciaunemi/article/view/399">https://ojs.unemi.edu.ec/index.php/cienciaunemi/article/view/399</a>
+            </li>
+            <li id="r12">Liska de León C, García-Arraíza E. Caracterización antropométrica, nivel de actividad física y
+                estilos de
+                vida saludables en el personal docente, administrativo y de servicio de la Facultad de Ciencias Químicas
+                y
+                Farmacia de la Universidad de San Carlos de Guatemala. Revista científica Universidad de San Carlos de
+                Guatemala. [Internet]. 2018 [citado 10 de mayo 2022]; 28 (1). Disponible en: <a
+                    href="http://portal.amelica.org/ameli/jatsRepo/50/5025005/html/">http://portal.amelica.org/ameli/jatsRepo/50/5025005/html/</a>
+            </li>
+            <li id="r13">Molano-Tobar NJ, Ordoñez-Fernández MY, Molano-Tobar DX. Cambios antropométricos y asociación
+                del
+                nivel de actividad física en docentes universitarios. Rev. cienc. cuidad. [Internet]. 2017 [citado 10 de
+                mayo de
+                2022]; 14(2):38-50. Disponible en: <a
+                    href="https://doi.org/10.22463/17949831.1109">https://doi.org/10.22463/17949831.1109</a></li>
+            <li id="r14">. Rosales-Ricardo Y, Orozco D, Yaulema L, Parreño A, Caiza V, Barragán V, Ríos A, Peralta L.
+                Actividad física
+                y salud en docentes. Una revisión. Revista Apunts Medicina de l’Esport, [Internet]. 2016 [citado 9 de
+                mayo
+                2022]; 52(196), 159–166. Disponible en: <a
+                    href="https://www.apunts.org/es-actividad-fisica-salud-docentes-una-articulo-X0213371717618326?referer=buscador">https://www.apunts.org/es-actividad-fisica-salud-docentes-una-articulo-X0213371717618326?referer=buscador</a>
+            </li>
+            <li id="r15">Reyes, P. Estrategia de promoción del autocuidado de la salud en estudiantes de Medicina:
+                Universidad Sur¬-
+                colombiana 2010-2011. [Internet]. La Habana, Cuba. Escuela Nacional de Salud Pública, 2016 [Consultado
+                el 30 de mayo del 2020]. Disponible en: <a
+                    href="https://www.usco.edu.co/archivosUsuarios/19/publicacion/facultad_de_salud/acuerdo/acuerdo_021_de_2019.pdf">https://www.usco.edu.co/archivosUsuarios/19/publicacion/facultad_de_salud/acuerdo/acuerdo_021_de_2019.pdf</a>
+            </li>
+            <li id="r16">Padilla-Sarmiento SL, Villamizar-Carrillo DJ, Mogollón-Canal OM. El trabajador universitario y
+                su salud mental desde el modelo de creencias. Rev. cienc. cuidad. [Internet]. 2018 [citado 13 de mayo de
+                2022];
+                15(2):127-39. Disponible en: <a
+                    href="https://doi.org/10.22463/17949831.1407">https://doi.org/10.22463/17949831.1407</a>
+            </li>
+            <li id="r17">Wilches-Luna EC, Hernández NL, Chavarro-Ortiz PA, Bernal-Sánchez JJ. Perfiles de riesgo
+                cardiovascular
+                y condición física en docentes y empleados no docentes de una facultad de salud. Rev. salud pública
+                [Internet].2016 [citado 7 de mayo de 2022]; 18(6):890-903. Disponible en: <a
+                    href="https://revistas.unal.edu.co/index.php/revsaludpublica/article/view/42708">https://revistas.unal.edu.co/index.php/revsaludpublica/article/view/42708</a>
+            </li>
+            <li id="r18">Chalapup-Narvaéz LM. Molano-Tobar NJ, Roldan-González E. Estilos de vida en docente y
+                estudiantes universitarios. Revista Retos [Internet]. 2022 [citado 14 mayo de 2022]; 44, 477-484.
+                Disponible en: <a
+                    href="https://dialnet.unirioja.es/servlet/articulo?codigo=8220095">https://dialnet.unirioja.es/servlet/articulo?codigo=8220095</a>
+            </li>
+            <li id="r19">Arboleda-Serna VH, Arango-Vélez EF, Feito, Y. Actividad física y percepciones de beneficios y
+                barreras en
+                una universidad colombiana. Revista RETOS. Nuevas Tendencias en Educación Física, Deporte y Recreación
+                [Internet]. 2016 [citado 11 de mayo 2022]; (30):15-19. Disponible en: <a
+                    href="https://www.redalyc.org/articulo.oa?id=345744747003">https://www.redalyc.org/articulo.oa?id=345744747003</a>
+            </li>
+            <li id="r20">Caro-Freile AI, Rebolledo-Cobos RC. Determinantes para la Práctica de Actividad Física en
+                Estudiantes
+                Uni¬versitarios. Revista Duazary [Internet]. 2017 [citado 11 de mayo de 2022]; 14(2):204-11. Disponible
+                en:
+                <a
+                    href="https://revistas.unimagdalena.edu.co/index.php/duazary/article/view/1969">https://revistas.unimagdalena.edu.co/index.php/duazary/article/view/1969</a>
+            </li>
+            <li id="r21">Barbosa-Granados SH, Actividad física y calidad de vida relacionada con la salud en una
+                comunidad académica. Revista pensamiento psicológico [Internet]. 2020 [citado el 15 mayo de 2022];
+                18(2): 2665-3281.
+                Disponible en: <a
+                    href="https://revistas.javerianacali.edu.co/index.php/pensamientopsicologico/issue/view/134">https://revistas.javerianacali.edu.co/index.php/pensamientopsicologico/issue/view/134</a>
+            </li>
+            <li id="r22">Rodríguez-Salazar MC, Molina J, Jiménez-Muñoz CJ, Pinzón-Bautista T. Calidad de y actividad
+                física en
+                estudiantes, docentes y administrativos de una universidad de Bogotá. Revista cuadernos
+                hispanoamericanos
+                de psicología [Internet]. 2011[citado 12 de mayo del 2022]; 11(1):19-37. Disponible en: <a
+                    href="https://revistas.unbosque.edu.co/index.php/CHP">https://revistas.unbosque.edu.co/index.php/CHP</a>
+            </li>
+            <li id="r23">Rosales-Ricardo Y, Peralta L, Yaulema L, Pallo Y, Orozco D, Caiza V, Parreño A, Barragán V,
+                Ríos P. Alimentación saludable en docentes. Revista Cubana de Medicina General Integral [Internet]. 2017
+                [citado 15
+                de mayo del 2022]; 33(1):115-128. Disponible en: <a
+                    href="http://www.revmgi.sld.cu/index.php/mgi/article/view/272">http://www.revmgi.sld.cu/index.php/mgi/article/view/272</a>
+            </li>
+            <li id="r24">Guamialamá- Martínez J, Salazar-Duque D, Portugal-Morejón C, Díaz-Duque P. Evaluación
+                nutricional en
+                docentes de la universidad UTE de Quito. Revista Nutrición Clínica y Dietética Hospitalaria [Internet].
+                2019
+                [citado 16 de mayo del 2022]; 39(4): 155-161. Disponible en: <a
+                    href="https://www.revistanutricion.org/articles/nutritional-evaluation-in-professors-at-ute-university-in-quito.pdf">https://www.revistanutricion.org/articles/nutritional-evaluation-in-professors-at-ute-university-in-quito.pdf</a>
+            </li>
+            <li id="r25">González-Cantero JO, González-Becerra VH, Hernández-Magaña CE, Macías-Espinoza F, Morón-Vera
+                JA,
+                Abundis-Gutiérrez A. (2021). Relationship between lifestyle and positive psychological functioning in
+                university administrative staff. Rev. CES Psico [Internet]. 2021[citado 17 de mayo 2022]; 14(3): 57-69.
+                Disponible en: <a href="https://dx.doi.org/10.21615/cesp.5473">https://dx.doi.org/10.21615/cesp.5473</a>
+            </li>
+            <li id="r26">Cabanzo-Carreño C, Dos Santos MA. Consumo de sustancias psicoactivas en tiempo libre:
+                percepción de estudiantes, docentes, y funcionarios de la Universidad Pedagógica Nacional,
+                Bogotá-Colombia. En: Villar-Luis
+                MA, editor. Experiencias de formación en investigación con el tema sustancias psicoactivas. Legis summa:
+                Sao pablo; 2013. p 41-59.</li>
+            <li id="r27">Londoño-Pérez C, Gómez LV. Riesgo de consumo de cigarrillo en población adulta colombiana. rev.
+                psicol.
+                univ. Antioquia [Internet]. 2020 [citado 8 de mayo de 2022];12(1):25-46. Disponible en: <a
+                    href="https://revistas.udea.edu.co/index.php/psicologia/article/view/341815">https://revistas.udea.edu.co/index.php/psicologia/article/view/341815</a>
+            </li>
+            <li id="r28">Salazar-Manosalvas FM, Paredes Jiménez Y, Rosero Quintana M, Estrella Cahueñas R, Jácome
+                Espinoza G.
+                El estrés laboral en el profesorado de las Ciencias Médicas de la Universidad Central del Ecuador. 2020.
+                Del
+                conocimiento del profesorado a defender su derecho a una formación integral y una vida digna. REYD
+                [Internet]. 2022 [citado 13 de mayo de 2022];(1 Extraordinario):381-405. Disponible en: <a
+                    href="https://revistes.ub.edu/index.php/RED/article/view/3771">https://revistes.ub.edu/index.php/RED/article/view/3771</a>
+            </li>
+            <li id="r29">Mendes-Rodrigues LT, Campêlo-Lago E, Pinheiro-Landim Almeida CA, Pires- Ribeiro I,
+                Vasconcelos-Mesquita G. Estrés y depresión en docentes de una institución pública de enseñanza. Enf
+                Global [Internet]. 2019
+                [citado 16 de mayo de 2022]; 19(1):209-42. Disponible en: <a
+                    href="https://revistas.um.es/eglobal/article/view/38320">https://revistas.um.es/eglobal/article/view/38320</a>
+            </li>
+            <li id="r30">Carpio-Toro I, Bravo-Corral G, Campos-Murillo N, Padilla-Samaniego A, Banegas-Peñas T,
+                Méndez-Peralta
+                L. Estrés laboral en docentes, administrativos y trabajadores universitarios. Revista electrónica de
+                psicología
+                Iztacala [Internet]. 2017 [citado 15 de mayo del 2022]; 20(3): 145-166. Disponible en: <a
+                    href="http://www.revistas.unam.mx/index.php/repi/article/view/61780">http://www.revistas.unam.mx/index.php/repi/article/view/61780</a>
+            </li>
+            <li id="r31">Desouky D, Allam H. Occupational stress, anxiety and depression among Egyptian teachers. J
+                Epidemiol
+                Glob Health [Internet]. 2017 [cited 2022 May 12];7(3):191- 198. Avaliable from: <a
+                    href="https://www.sciencedirect.com/science/article/pii/S2210600617301119?via%3Dihub">https://www.sciencedirect.com/science/article/pii/S2210600617301119?via%3Dihub</a>
+            </li>
+            <li id="r32">Hirsch CD, Barlem ELD, Almeida LK, Tomaschewski-Barlem JG, Lunardi VL, Ramos AM. Stress
+                triggers
+                in the educational environment from the perspective of nursing students. Texto Contexto Enferm
+                [Internet].
+                2018 [cited 2022 May 16]; 27(1):e0370014. Avaliable from: <a
+                    href="http://www.scielo.br/pdf/tce/v27n1/en_0104-0707-tce27-01-e0370014.pdf">http://www.scielo.br/pdf/tce/v27n1/en_0104-0707-tce27-01-e0370014.pdf</a>
+            </li>
+            <li id="r33">Soriano-Tumbaco CE. El estrés laboral y su incidencia en el desempeño del personal
+                administrativo. Social
+                [Internet]. 2021 [citado 13 de mayo de 2022]; 5(1):1-8. Disponible en: <a
+                    href="https://killkana.ucacue.edu.ec/index.php/killkana_social/article/view/735">https://killkana.ucacue.edu.ec/index.php/killkana_social/article/view/735</a>
+            </li>
+            <li id="r34">Cruz-Boullosa V, Bernui-Leo I. Satisfacción laboral en docentes de la facultad de medicina de
+                una universidad pública. An Fac med [Internet]. 2019 [citado 13 de mayo de 2022];80(4):494-7. Disponible
+                en: <a
+                    href="https://revistasinvestigacion.unmsm.edu.pe/index.php/anales/article/view/16151">https://revistasinvestigacion.unmsm.edu.pe/index.php/anales/article/view/16151</a>
+            </li>
+            <li id="r35">Regalado-Sánchez S. Presión laboral y satisfacción laboral en docentes de una Universidad
+                privada de Trujillo
+                [Tesis para obtener el Título Profesional en Psicología]. Trujillo: Universidad Privada Antenor Orrego;
+                2017
+                [citado 12 mayo 2019]. Disponible en: <a
+                    href="http://repositorio.upao.edu.pe/handle/upaorep/2457">http://repositorio.upao.edu.pe/handle/upaorep/2457</a>
+            </li>
+            <li id="r36">Vicente-Coronado MS, López-Arroyo P, Trejo-Martín C, González-Ballester S. Satisfacción docente
+                y su
+                influencia en la satisfacción del alumnado. Revista International Journal of Developmental and
+                Educational
+                Psychology [Internet]. 2019 [citado 16 de mayo del 2022]; 1(Monográfico 2). Disponible en: <a
+                    href="https://www.redalyc.org/revista.oa?id=3498&numero=60126">https://www.redalyc.org/revista.oa?id=3498&numero=60126</a>
+            </li>
+            <li id="r37">Berrío-Ríos LV, Osorio-Barreto D, Díaz-Jurado N. (2021). Factores asociados a la satisfacción
+                laboral
+                del personal administrativo de una universidad pública en la ciudad de Manizales: un análisis
+                preliminar.
+                Revista Eleuthera [Internet]. 2021 [citado 17 de mayo del 2022]; 23(2), 101-123. <a
+                    href="http://doi.org/10.17151/eleu.2021.23.2.6">http://doi.org/10.17151/eleu.2021.23.2.6</a></li>
+            <li id="r38">Chinchay-Tisoc LA, Cusicanqui-Zavaleta IS, Martínez-Quintanilla RF, y Valdiviezo-López R.
+                Propuesta de
+                mejora de la satisfacción laboral en el área administrativa de una empresa importadora en Lima (2020).
+                INNOVA Research Journal [Internet]. 2022 [citado 15 de mayo del 2022]; 7(1), 77-95. Disponible en: <a
+                    href="https://doi.org/10.33890/innova.v7.n1.2022.1942">https://doi.org/10.33890/innova.v7.n1.2022.1942</a>
+            </li>
+            <li id="r39">Jiménez-Bernardino E, Álvarez-Aguirre A, Reyes-Rocha BL, Casique-Casique L, Herrera-Paredes JM,
+                Sánchez-Perales M. Estilo de vida de ida promotor de la salud y asertividad en trabajadores
+                universitarios. Revista
+                investigación y educación en enfermería [Internet]. 2017 [citado el 17 de mayo del 2022]; 35(1), 27-34.
+                Disponible en: <a
+                    href="http://www.scielo.org.co/pdf/iee/v35n1/2216-0280-iee-35-01-00026.pdf">http://www.scielo.org.co/pdf/iee/v35n1/2216-0280-iee-35-01-00026.pdf</a>
+            </li>
+        </ol>
+    </div>
+</body>
+
+</html>

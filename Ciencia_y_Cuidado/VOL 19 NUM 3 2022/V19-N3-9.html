@@ -1,0 +1,1235 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V19-N3-9</title>
+    <link rel="stylesheet" href="">
+    <style>
+        body {
+            padding: 10em;
+            padding-top: 20px;
+            font-family: Times New Roman;
+            color: black;
+        }
+
+        #articulo-derecha {
+            float: left;
+        }
+
+        /* Posiciones de los resumenes */
+
+        .contenedor-general {
+            display: inline-flex;
+            width: 100%;
+        }
+
+        .contenedor-resumen {
+            width: 240%;
+        }
+
+        .contenedor-autor {
+            width: 100%;
+            padding-left: 20px;
+        }
+
+        .hr-resumen {
+            background-color: gray;
+            margin: 0;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .resumen-fondo {
+            background-color: #bdd5f1;
+            border-radius: 5px;
+        }
+
+        .titulo-resumen {
+            color: black;
+            font-size: 22px;
+            font-weight: bold;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .texto-resumen {
+            padding: 20px;
+            margin: 0;
+        }
+
+        ul.navbar {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 25em;
+            left: 2em;
+            width: 250px;
+        }
+
+        /* Titulos principales */
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: Times New Roman;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        h1 {
+            color: #29abe3;
+        }
+
+        .categoria_titulo {
+            font-style: italic;
+            color: #ffffff;
+        }
+
+        h3 {
+            font-style: italic;
+            font-weight: bold;
+            color: #707073;
+        }
+
+        .categoria {
+            text-align: center;
+            background-color: #707073;
+            width: 20%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            margin: auto;
+        }
+
+        ul.navbar li {
+            background: white;
+            margin: 0.5em 0;
+            padding: 0.3em;
+        }
+
+        /* Enlaces */
+
+        a.link-color:visited {
+            color: white;
+        }
+
+        a.link-color:link {
+            color: white;
+        }
+
+        a.link-color:hover {
+            color: white;
+        }
+
+        a.link-color:hover {
+            border-bottom: 1px solid;
+            background: black;
+        }
+
+        /* Link de referencia */
+
+        a:link {
+            color: #4e00ff;
+        }
+
+        a:visited {
+            color: #003bff;
+        }
+
+        a:focus {
+            border-bottom: 1px solid;
+            background: #98aae4;
+        }
+
+        a:hover {
+            border-bottom: 1px solid;
+            background: #aacefe;
+        }
+
+        /* Etiqueta P */
+
+        p {
+            line-height: normal;
+            text-align: justify;
+            font-size: 18px;
+        }
+
+        p.titulo {
+            color: #29abe3;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        p.subtitulo {
+            color: #29abe3;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* NUEVO */
+        p.subtitulo-segundo {
+            color: #29abe3;
+            font-style: italic;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        p.correspondencia {
+            color: black;
+            font-size: 18px;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        /* NUEVO */
+        p.entrevista {
+            color: black;
+            font-size: 18px;
+            font-style: italic;
+        }
+
+        /* NUEVO */
+        p.subtitulo-tercero {
+            color: #29abe3;
+            font-style: italic;
+            font-size: 18px;
+        }
+
+        p#cabeza {
+            color: #1d71ae;
+            text-align: center;
+        }
+
+        p.autores {
+            font-size: 16px;
+            margin: 0;
+            text-indent: 0em;
+            margin-bottom: 10px;
+        }
+
+        p.forma-citar {
+            text-indent: 0em;
+            text-align: justify;
+            justify-content: center;
+        }
+
+        .cita {
+            text-align: -webkit-center;
+        }
+
+        /* Bold especial para palabras que tienen color seguido de dos puntos
+*/
+
+        /* NUEVO */
+
+        b.subtitulo-segundo {
+            color: #29abe3;
+            font-size: 18px;
+        }
+
+        .contenedor_info {
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .info {
+            width: auto;
+        }
+
+        /* Este es para los documentos del dos en adelante *codigo abajo de este comentario* */
+
+        .info-text {
+            text-align: end;
+            margin: 0;
+        }
+
+        /* Uso Exlusico para el primero documento  que es de revision  *codigo abajo de este comentario* */
+
+        .info_text {
+            font-size: 12px;
+            line-height: 100%;
+            text-align: center;
+            margin: 0;
+        }
+
+        .info_hr {
+            margin: 5;
+        }
+
+        /* Fin P */
+        /* Etiqueta Italic */
+
+        i {
+            font-size: 18px
+        }
+
+        i.centrado {
+            font-size: 18px
+        }
+
+        /* LI para las listas */
+
+        li {
+            font-size: 18px;
+            padding-top: 10px;
+            text-align: justify;
+        }
+
+        /* NUEVO */
+        .lista li {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        hr {
+            background-color: #29abe3;
+            height: 1px;
+        }
+
+        /* Tablas */
+
+        table {
+            border-collapse: collapse;
+            border: 2px solid rgb(0, 0, 0);
+            align-items: center;
+        }
+
+        thead th {
+            border-collapse: collapse;
+            background-color: rgb(179, 179, 179);
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        tbody td {
+            border-collapse: collapse;
+            text-align: center;
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        .tipo {
+            color: #ffffff;
+            font-size: 22px;
+            border-radius: 10px 5px 10px 5px;
+            background-color: #696969;
+        }
+
+        img.logos {
+            width: 15px;
+            height: 15px;
+        }
+
+        .image {
+            text-align: center;
+            image-rendering: optimizeQuality;
+        }
+
+        .image p {
+            text-align: center;
+            font-size: small;
+        }
+
+        .logo {
+            width: 300px;
+            height: 80px;
+        }
+
+        .logo2 {
+            width: 300px;
+            height: 50px;
+        }
+
+        /* Anclajes de la pagina */
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* NUEVO */
+        .ecuacion {
+            text-align: center;
+            font-weight: bold;
+            margin: 1px;
+        }
+
+        @media only screen and (min-width:320px) and (max-width:900px) {
+            body {
+                width: 100%;
+                padding: 5em;
+                margin: 5px;
+            }
+
+            .image {
+                text-align: center;
+                image-rendering: optimizeQuality;
+            }
+
+            .image img {
+                width: 100%;
+            }
+
+            .image p {
+                font-size: small;
+                text-align: center;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="contenedor_info">
+        <div>
+            <img src="img/globales/logo.jpg" alt="" height="125px">
+        </div>
+        <div class="info" style="text-align: right;">
+            <p class="info-text"> ISSN-PRINT 1794-9831 / E-ISSN 2322-7028 </p>
+            <p class="info-text"> Vol. 19 Nº 3 / sep - dic, 2022 / Cúcuta, Colombia. </p>
+            <p class="info-text">
+                <img src="img/globales/doi.png" height="20px" alt="">
+                <a href="https://doi.org/10.22463/17949831.3477">https://doi.org/10.22463/17949831.3477</a>
+            </p>
+        </div>
+    </div>
+
+
+    <!--Categoría-->
+    <div class="categoria">
+        <h2 class="categoria_titulo">Original </h2>
+    </div>
+
+    <h1> Percepción del accidente cerebrovascular en pacientes con
+        enfermedad crónica no trasmisible </h1>
+
+    <h2 class="segundo"> Perception of strokes in patients with noncommunicable chronic diseases</h2>
+
+    <h2 class="segundo"> Percepção do acidente vascular cerebral em pacientes com doença crônica não transmissível</h2>
+
+
+    <!--Autores-->
+    <h3>
+        Nieves Fuentes-González <sup><a href="#sup1">1*</a> </sup> <br>
+        Angélica Viviana Pirazán-Vergara <sup><a href="#sup2">2*</a> </sup> <br>
+    </h3>
+
+
+    <!-- Conetenedor de las columnas de la descripciones de los autores, correspondencia de autor 
+    y los resumenes -->
+    <div class="contenedor-general">
+
+
+        <!-- Contenedor de los resumenes -->
+        <div class="contenedor-resumen">
+
+            <!-- Resumen Español -->
+
+            <div class="resumen-fondo">
+                <p class="titulo-resumen"> Resumen</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> <b>Objetivo:</b> Interpretar la percepción del accidente cerebrovascular en
+                    pacientes que asisten a la
+                    consulta de crónico en la ESE, Hospital San Antonio de Soatá. <b>Materiales y métodos:</b> Estudio
+                    cualitativo con enfoque fenomenológico. La selección de los 14 participantes se hizo a través
+                    del siguiente criterio de selección: ser adulto mayor con enfermedad crónica no transmisible
+                    (hipertensión arterial y/o diabetes); se excluyeron las personas con alteraciones del lenguaje
+                    y mentales establecidas por la historia clínica. El muestreo fue no probabilístico intencional.
+                    La recolección de la información se hizo mediante entrevistas en profundidad, estableciendo
+                    un primer contacto vía telefónica con los posibles participantes, luego se concertó un encuentro
+                    presencial en donde se procedió a la lectura y firma del consentimiento. Las entrevistas
+                    tuvieron una duración entre 20 a 40 minutos. Para el análisis de los datos teóricos se siguió
+                    la técnica de Colaizzi, emergiendo de los códigos nominales las subcategorías y categorías
+                    o temas centrales. <b>Resultados:</b> A partir de las entrevistas se generaron 26 códigos nominales
+                    que conformaron 2 categorías: conocimientos de la trombosis y enfermedad grave y mortal,
+                    las cuales permitieron interpretar que los informantes asignan el término de trombosis al
+                    accidente cerebrovascular y de esta manera, son capaces de identificar las principales causas,
+                    manifestaciones y secuelas neurológicas de la enfermedad. Así mismo, la trombosis es una
+                    enfermedad que genera dependencia física. <b>Conclusiones:</b> Para los participantes el evento
+                    cerebrovascular es una enfermedad prevenible, pero requiere seguimiento médico, cambios
+                    de los estilos de vida y consumo permanente de medicamentos. Sin embargo, la desigualdad
+                    económica y el difícil acceso a las instituciones de salud dificulta una atención oportuna de
+                    las enfermedades crónicas no trasmisibles. </p>
+
+                <p class="texto-resumen">
+                    <b>Palabras Claves: </b> Accidente cerebrovascular; Factores de riesgo; Mortalidad; Estilo de vida;
+                    Enfermedad crónica.
+                </p>
+            </div>
+            <!-- Resumen Inglés -->
+
+            <div>
+                <p class="titulo-resumen"> Abstract</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> <b>Objective:</b> Understand the perception of strokes in patients that attend
+                    to a chronic disease
+                    consultation in a state social health-service providing company (ESE), Hospital San Antonio
+                    de Soatá. <b>Materials and methods:</b> Qualitative study with phenomenological approach. The
+                    selection of the 14 participants was made through the following selection criteria: being a
+                    senior citizen with a noncommunicable chronic disease (hypertension and/or diabetes); people with
+                    language and mental alterations established in their medical history were excluded.
+                    nonprobability purposive sampling was performed. The information was gathered through
+                    in-depth interviews, establishing an initial contact via telephone with the potential participants,
+                    then an in-person meeting was arranged to read and sign the consent. The interviews
+                    had a duration between 20 to 40 minutes. For the analysis of the theoretical sampling, the
+                    Colaizzi’s method was used, emerging from the nominal codes, the subcategories, and categories or
+                    central themes. <b>Results:</b> From the interviews, 26 nominal codes were generated
+                    to define two categories: knowledge on thrombosis and serious and mortal disease, which
+                    allowed to understand that the informants assign the term thrombosis to stroke and this way,
+                    are capable of identify the main causes, symptoms and neurological sequels of the disease.
+                    Likewise, thrombosis is a disease that generates physical dependance. <b>Conclusions:</b> For the
+                    participants, a stroke is a preventable disease, but it requires medical follow-up, changes of
+                    lifestyle and a permanent consumption of medication. However, economic inequalities and
+                    difficult access to health institutions complicate timely care for noncommunicable chronic
+                    diseases.</p>
+
+                <p class="texto-resumen">
+                    <b>KeyWords:</b> Stroke; Risk factors; Mortality; Lifestyle; Chronic disease.
+                </p>
+            </div>
+            <!-- Resumen Portuguez -->
+
+            <div class="resumen-fondo">
+                <p class="titulo-resumen"> Resumo</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> <b>Objetivo:</b> Interpretar a percepção de acidente vascular cerebral (AVC)
+                    em pacientes que frequentam a consulta crônica no Hospital San Antônio de Soatá. <b>Materiais e
+                        métodos:</b> Estudo qualitativo com abordagem fenomenológica. A seleção dos 14 participantes foi
+                    feita
+                    através dos seguintes critérios de seleção: ser idoso com doença crônica não transmissível
+                    (hipertensão arterial e/ou diabetes); foram excluídas pessoas transtornos mentais ou da linguagem
+                    estabelecidos pela história clínica. A amostragem não foi probabilística não intencional. A coleta
+                    de informações foi feita por meio de entrevistas aprofundadas, estabelecendo
+                    um primeiro contato via telefônica, em seguida, foi organizada uma reunião presencial onde
+                    o termo de consentimento foi assinado. As entrevistas duraram entre 20 e 40 minutos. Para
+                    a análise dos dados teóricos, seguiu-se a técnica Colaizzi, obtendo dos códigos nominais as
+                    subcategorias e categorias ou temas centrais. <b>Resultados:</b> A partir das entrevistas, foram
+                    gerados 26 códigos nominais que formaram 2 categorias: conhecimento de trombose e doença
+                    grave e fatal, que permitiram interpretar que os informantes atribuem o termo trombose ao
+                    AVC e, dessa forma, são capazes de identificar as principais causas, manifestações e sequelas
+                    neurológicas da doença. Da mesma forma, a trombose é uma doença que gera dependência
+                    física. <b>Conclusões:</b> Para os participantes, o evento cerebrovascular é uma doença evitável,
+                    mas requer acompanhamento médico, mudanças de estilo de vida e consumo permanente de
+                    medicamentos. No entanto, a desigualdade econômica e o difícil acesso às instituições de
+                    saúde dificultam o atendimento oportuno a doenças crônicas não transmissíveis. </p>
+
+                <p class="texto-resumen">
+                    <b>Palavras-chave:</b> Acidente vascular cerebral; Fatores de risco; Mortalidade; Estilo de vida;
+                    Doença Crônica.
+                </p>
+            </div>
+
+
+
+        </div>
+
+        <!-- Descripcion de autores, Aprobado, Como citar, licencia -->
+        <div class="contenedor-autor">
+            <!-- Autores -->
+            <div>
+                <p class="subtitulo" style="color: black; font-size: 18px;">Autor de correspondencia*</p>
+                <!-- 1 -->
+                <p class="autores" id="sup1"><sup>1*</sup><img class="logos" src="img/globales/sobre.png"> Magister en
+                    Enfermería. Enfermera.
+                    Profesora Investigadora. Tiempo completo. Universidad de Boyacá, Tunja,
+                    Colombia.
+                    <a href="mailto:nfuentes@uniboyaca.edu.co">nfuentes@uniboyaca.edu.co</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0003-0314-0466">0000-0003-0314-0466</a>
+                </p>
+                <!-- 2 -->
+                <p class="autores" id="sup2"><sup>2*</sup><img class="logos" src="img/globales/sobre.png"> Estudiante de
+                    Pregrado del programa
+                    de Enfermería Universidad de Boyacá,
+                    Tunja, Colombia.
+                    <a href="mailto:avpirazan@uniboyaca.edu.co">avpirazan@uniboyaca.edu.co</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0002-3464-2410">0000-0002-3464-2410</a>
+                </p>
+            </div>
+
+            <!--Recibido y aprobado-->
+            <div>
+                <p><b>Recibido: </b> 7 julio 2022 <br> <b>Aprobado: </b> 28 agosto 2022 </p>
+            </div>
+
+            <!-- Como citar -->
+            <div class="cita">
+                <p class="forma-citar autores"><b>Para citar este artículo / To reference this article / Para citar este
+                        artigo:</b> Fuentes-Gonzalez N, Pirazán-Vergara AV. Percepción del accidente cerebrovascular en
+                    pacientes con
+                    enfermedad crónica no trasmisible. 2022; 19(3):86-95. <a
+                        href="https://doi.org/10.22463/17949831.3477">https://doi.org/10.22463/17949831.3477</a> </p>
+            </div>
+
+            <!--Licencia-->
+            <br>
+            <div>
+                <p class="autores "> &#169; Universidad Francisco de Paula Santander.
+                    Este es un artículo bajo la licencia CC-BY-NC-ND
+                    <br>
+                    <a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img
+                            alt="Licencia Creative Commons" style="border-width:0"
+                            src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Cuerpo del documento -->
+    <div>
+        <hr>
+        <!--Introducción-->
+        <p class="titulo"> Introducción</p>
+
+        <p>
+            La Organización Mundial de la Salud, clasifica el accidente cerebrovascular en isquémico y hemorrágico
+            (1). El primero es producido por una obstrucción de un
+            vaso sanguíneo, y el segundo, por ruptura, produciendo
+            hemorragia intracerebral. El síntoma más frecuente es
+            la pérdida repentina de la fuerza muscular, por lo general unilateral. Entre los factores de riesgo se
+            destacan:
+            el sedentarismo, el tabaquismo, el alcoholismo y antecedentes de diabetes o hipertensión arterial (2).
+        </p>
+
+        <p>
+            El accidente cerebrovascular es una de las principales
+            causas de discapacidad y la segunda causa de mortalidad en el mundo, convirtiéndose en una patología que
+            amerita atención médica oportuna. Según la Organización Mundial de la Salud en su informe de 2015, a nivel
+            mundial se contabilizaron más de 6 millones de
+            muertes ocasionadas por el Accidente Cerebrovascular,
+            de estos, 3.250.217 se produjo en mujeres y 2.990.394
+            en hombres. También cabe destacar que en Colombia,
+            la incidencia cada vez es más alta. Según las cifras del
+            año 2016 se presentaron 14.994 casos y en 2018 con
+            16.090, lo que representa para este último año una tasa
+            de mortalidad de 32 por cada 100.000 habitantes (2).
+        </p>
+
+        <p>
+            Teniendo en cuenta las estadísticas previas, esta enfermedad es un problema de salud pública que se presenta
+            en países desarrollados como en vía de desarrollo, y la
+            tasa de mortalidad y secuelas neurológicas dependen
+            del tiempo trascurrido entre el inicio de los síntomas y
+            la asistencia médica. Por tanto, es necesario que el paciente y los familiares identifiquen oportunamente
+            los
+            signos y síntomas y acudan de inmediato a una central
+            de urgencia para recibir tratamiento médico dentro de
+            la ventana terapéutica (3).
+        </p>
+
+        <p>
+            De esta manera, el enfoque fenomenológico permite
+            interpretar las percepciones que tiene el paciente acerca del evento cerebrovascular, con el fin de formular
+            estrategias y planes de cuidado de enfermería centradas en el holismo y la individualidad. Además, permite
+            complementar los hallazgos cuantitativos que hasta el
+            momento se tienen, como son la incidencia, la mortalidad y las secuelas del evento cerebrovascular (3).
+        </p>
+
+        <p>
+            Por último, la enfermedad es vivida e interpretada por
+            la persona de acuerdo al contexto, creencia y valores,
+            siendo posible interpretarla a través de las expresión
+            verbal o corporal. De esta manera, estudiar el fenómeno desde el enfoque cualitativo recoge elementos que
+            posibilitan la acción desde la perspectiva del paciente.
+        </p>
+
+        <hr>
+
+        <p class="titulo">Objetivos</p>
+
+        <p>
+            Interpretar la percepción del accidente cerebrovascular en pacientes que asisten a consulta de crónico en la
+            ESE Hospital San Antonio de Soatá.
+        </p>
+
+        <hr>
+
+        <p class="titulo">Materiales y Métodos</p>
+
+        <p>
+            Estudio cualitativo con enfoque fenomenológico. Se
+            basó en el referente filosófico de Edmund Husserl,
+            fundamentado en las experiencias de vida, respecto a
+            un suceso, desde la perspectiva del sujeto; a su vez,
+            se busca la toma de conciencia y los significados en
+            torno a un fenómeno; es decir, que se debe ir a las cosas mismas y aprender a descubrirlas en su esencia y
+            autenticidad (4-6).
+        </p>
+
+        <p>
+            La selección de los 14 participantes se hizo a conveniencia, teniendo en cuenta unos criterios de inclusión
+            como: ser adulto mayor con enfermedad crónica no
+            transmisible (hipertensión arterial y/o diabetes), que
+            asistieran a consulta de crónico en la ESE Hospital San
+            Antonio de Soatá-Boyacá. Se excluyeron las personas
+            con alteración mental y antecedentes de accidentes cerebrovascular por historia clínica.
+        </p>
+
+        <p>
+            La recolección de datos se realizó a través de entrevistas a profundidad, utilizando como preguntas
+            orientadoras: ¿Qué sabe o conoce acerca del accidente cerebrovascular? y ¿Qué significa para usted vivir
+            después
+            de presentar un evento cerebrovascular?
+        </p>
+
+        <p>
+            La recolección de datos se realizó a través de entrevistas a profundidad, utilizando como preguntas
+            orientadoras: ¿Qué sabe o conoce acerca del accidente cerebrovascular? y ¿Qué significa para usted vivir
+            después
+            de presentar un evento cerebrovascular?
+        </p>
+
+        <p>
+            La información que se obtuvo se examinó siguiendo
+            la técnica del análisis fenomenológico de Colaizzi (7),
+            que contempla los siguientes pasos:
+        </p>
+
+        <ul class="lista" style="list-style: none;">
+            <li>Paso 1. Adquirir una sensación general de la experiencia.</li>
+            <li>Paso 2. Generar información directamente pertinente al fenómeno estudiado.</li>
+            <li>Paso 3. Iluminar significados escondidos en varios
+                contextos del fenómeno.</li>
+            <li>Paso 4. Identificar la experiencia común a todos los
+                participantes.</li>
+            <li>Paso 5. Generar un prototipo de modelo teórico.</li>
+            <li>Paso 6. Validar los hallazgos.</li>
+            <li>Paso 7. Presentar un modelo teórico que refleje
+                comprensivamente las características universales
+                del fenómeno.</li>
+        </ul>
+
+        <p>
+            Para el inicio de la fase de trabajo de campo se contó
+            con la aprobación del Comité de ética de la Institución
+            de salud y de la Universidad de Boyacá. Igualmente,
+            esta investigación se rige por el artículo 11 de la resolución No 8430 de 1993, en la cual se establecen las
+            normas científicas, técnicas y administrativas para la
+            investigación en salud. Por ello, se considera un estudio sin riesgo, puesto que no se realizará ninguna
+            intervención o modificación intencionada de las variables
+            biológicas, fisiológicas, sicológicas o sociales de los
+            individuos que participan en el estudio (8).
+        </p>
+
+        <p>
+            Para mantener el rigor metodológico se tuvieron en
+            cuenta los criterios establecidos por Lincoln y Guba (911), quienes establecen la credibilidad, la
+            transferibilidad y la audibilidad, como aspectos clave para asegurar
+            la calidad investigativa. Al respecto se contactó a cada
+            participante para realizar la lectura de las entrevistas
+            iniciales; a continuación se hizo la triangulación con
+            la evidencia científica y desde la visión de la segunda
+            investigadora. Igualmente, los resultados se compartieron con los participantes, quienes confirmaron los
+            hallazgos.
+        </p>
+
+        <p>
+            Finalmente, el análisis de las entrevistas se realizó de
+            manera manual. A cada participante se le asigno la letra
+            P y un número, de modo que P12;39-41, indica que es
+            el participante doce y el incidente está en la línea 39-41
+            del texto en Word. Este método ayudó a mantener la
+            información organizada.
+        </p>
+
+        <p class="titulo">Resultados</p>
+
+        <p>
+            La edad promedio de los entrevistados fue de 66.5
+            años, la mínima de 60 y la máxima 73 años; predominó el sexo femenino con 8 participantes (57.1%) y 6
+            hombres (42.8%). La patología más relevante fue la
+            hipertensión arterial presente en 10 entrevistados que
+            corresponde al 71.4%, seguida de 2 participantes con
+            diabetes tipo 2 (14.3%) y 2 con hipertensión arterial y
+            diabetes tipo 2 (14.3%). Se destaca el área urbana como zona de vivienda de 13 personas y el 42.8 % tiene
+            nivel
+            educativo de bachiller.
+        </p>
+
+        <p class="subtitulo">Categorías y Subcategorías</p>
+
+        <p><b>1. Conocimiento de la trombosis</b></p>
+
+        <p>
+            La percepción que tienen los participantes sobre el
+            accidente cerebrovascular se basa en los conocimientos adquiridos a través de la experiencia vivida con la
+            enfermedad crónica no trasmisible, es así que, los entrevistados asignan el termino de trombosis al evento
+            cerebrovascular (ECV), enfermedad que para ellos
+            tiene unas causas, unas manifestaciones específicas y
+            conlleva a unas complicaciones asociadas con la movilidad y dependencia física. La persona al percibir
+            cualquier manifestación asociada con el evento cerebrovascular, toma unas medidas que van desde el consumo
+            de los medicamentos prescritos, la ingesta de hiervas
+            medicinales y el reposo. Sin embargo, si los síntomas
+            persisten acuden a urgencias motivados por el miedo a
+            quedar inválidos.
+        </p>
+
+        <p>
+            Las subcategorías que conforman esta categoría son: el
+            saber las causas e identificar los síntomas de la trombosis, tomar medidas para prevenirla y reconocer las
+            complicaciones (ver figura1).
+        </p>
+
+        <div class="image">
+            <img src="img/V19-N3-9/Screenshot_1.png" width="40%">
+            <p><b>Figura 1. </b>Categoría: conocimientos de la trombosis</p>
+            <p><b>Fuente: </b>Elaboración propia de las investigadoras</p>
+        </div>
+
+        <p><b>1.1 Subcategoría: sabiendo las causas de la trombosis</b></p>
+
+        <p>
+            Los entrevistados saben las principales causas que llevan al ECV, entre las que mencionan: hábitos tóxicos
+            (alimentación, alcoholismo y tabaquismo): “…el cigarrillo, el mismo licor, todo eso lleva a una trombosis
+            cerebral” P3; 21-23.
+        </p>
+
+        <p>
+            Otra causa reportada por los participantes es el abandono en cuanto al consumo de los medicamentos para el
+            tratamiento de la hipertensión arterial y la diabetes tipo
+            2: “A mí me ha pasado que, por un olvido, no me tomo
+            a tiempo los medicamentos, y dejar pasar ese tiempo, pues eso siempre es fatal…” P1- E2; 140-142. Así
+            mismo, la obesidad y el colesterol son los principales
+            factores que producen lesión en los vasos sanguíneos,
+            dificultando el aporte de sangre al cerebro y por consiguiente es un desencadenante del ECV: “...Uno no va
+            al médico para que le tomen unos exámenes, que le digan exactamente cómo están los colesteroles, que son
+            los causantes de ese problema” P11; 14-16.
+        </p>
+
+        <p>
+            Otro factor a tener en cuenta es el escaso control del
+            estrés que favorece el incremento de las cifras de tensión arterial y desencadena el ECV: “... el accidente
+            cerebrovascular tengo entendido que es una enfermedad
+            que se produce a raíz de una subida de tensión” P1;
+            9-11.
+        </p>
+
+        <p><b>1.2 Subcategoría: identificando los síntomas de la trombosis</b></p>
+
+        <p>
+            En lo que refieren los participantes sobre la sintomatología, se evidencia que en algunas ocasiones han
+            sentido malestar en el cuerpo que incluye el calor en la cara,
+            dolor de cabeza, hormigueo y parálisis de una parte del
+            cuerpo: “Si le da una trombosis, bueno, de pronto, el
+            hormigueo en los brazos, parálisis facial, de pronto la
+            boca se le llega a torcer” P1; 49-51; estas manifestaciones les produce angustia y miedo, lo que los obliga
+            a buscar ayuda con algún miembro de la familia o persona cercana. Ante la presencia de estos síntomas, la
+            persona trata de controlarlos con el consumo de hiervas medicinales y tomando una dosis del medicamento:
+            “Si, yo muchas veces lo controlo tomándome una aromática, con una yerbita que sea como que controle los
+            nervios: perejil, toronjil, lo que sea” P1; 30-34.
+        </p>
+
+        <p><b>1.3 Subcategoría: tomando medidas para prevenir la trombosis</b></p>
+
+        <p>
+            Los participantes del estudio manifiestan que para prevenir un ECV, se auto cuidan mediante hábitos
+            saludables relacionados con la alimentación y la actividad
+            física: “una alimentación sana, por un lado, y por otro
+            el ejercicio” P11; 24-27. También, expresan que es
+            importante asistir a controles médicos para la valoración del estado de salud y así dar continuidad al
+            tratamiento farmacológico. Igualmente, los entrevistados
+            reconocen que el control de la enfermedad previene las
+            complicaciones y mejora la calidad de vida. Al respecto, entre las medidas de control de la enfermedad en
+            el domicilio mencionan el consumo oportuno de medicamentos, la ingesta diaria de aspirina. A este
+            medicamento le atribuyen beneficios como el evitar la formación de trombos en los vasos sanguíneos y mejorar
+            la
+            circulación de la sangre: “todos los días tomo la aspirineta, que es un anticoagulante, después del almuerzo
+            para evitar una trombosis” P1; 41-46.
+        </p>
+
+        <p><b>1.4 Subcategoría: reconociendo las complicaciones de la trombosis</b></p>
+
+        <p>
+            Los participantes reconocen que, las complicaciones
+            del evento cerebrovascular en ocasiones son fatales,
+            pero en otros casos dejan graves secuelas neurológicas
+            por el resto de la vida: “…afecta el funcionamiento del
+            cuerpo, porque queda uno paralizado, no pueda mover
+            los brazos, las manos, no pueda comer, que pueda hacer nada” P11; 29-31. De esta manera, el saber que se
+            puede prevenir y evitar un evento cerebrovascular para
+            algunos, es una motivación para llevar a cabo las medidas de autocuidado.
+        </p>
+
+        <p><b>2. Categoría: Enfermedad grave y mortal</b></p>
+
+        <p>
+            Esta segunda categoría recoge la percepción que tienen los participantes frente al ECV. Le asignan el
+            significado de enfermedad grave y mortal a causa de
+            unos determinantes personales y del contexto. Entre
+            los determinantes personales está la herencia familiar
+            y el abandono de los controles médicos, esta última
+            potencia la progresión de la enfermedad al no poderse
+            identificar o reconocer oportunamente los cambios en
+            el funcionamiento de los órganos vitales, conduciendo al ECV con la fatal consecuencia de la pérdida de
+            la movilidad y por consiguiente de dependencia física;
+            por tanto, el paciente ante esta situación prefiere morir
+            (ver figura.2).
+        </p>
+
+        <div class="image">
+            <img src="img/V19-N3-9/Screenshot_2.png" width="50%">
+            <p><b>Figura 2. </b>Categoría: Enfermedad grave y mortal </p>
+            <p><b>Fuente: </b>Elaboración propia de las investigadoras</p>
+        </div>
+
+        <p><b>2. 1 Subcategoría: determinantes personales</b></p>
+
+        <p>
+            En esta subcategoría los participantes describen unos
+            determinantes que son propios de cada persona, siendo
+            alguno de ellos modificable y los otros no, por ejemplo, la herencia; respecto a este código nominal si los
+            padres o tíos tienen o fallecieron por un evento cerebrovascular, la posibilidad de padecer esta condición
+            de
+            salud es alta. Igualmente, el descuido en los controles
+            con el profesional de salud, contribuyen a que se desencadene la enfermedad y se tengan mayores secuelas
+            neurológicas como la invalidez. A consecuencia de los
+            factores mencionados anteriormente los participantes
+            prefieren morir que ser dependientes y por tanto ser una
+            carga económica y física para la familia: “…le pide
+            uno a Dios que se lo cargue más bien, que lo llame de
+            una vez, porque eso que le estén dando la comida, que
+            lo estén cambiando, que lo estén bañando, que le estén
+            cambiando de pañal, eso es grave, gravísimo…” P11;
+            64-66.
+        </p>
+
+        <p><b>2. 2 Subcategoría: determinantes del contexto</b></p>
+
+        <p>
+            Los determinantes del contexto son condiciones atribuidas a la región, como el difícil acceso a las
+            instituciones de salud, dificultando de esta manera la asistencia médica y el tratamiento para enfermedades
+            crónicas
+            no trasmisibles (hipertensión arterial y diabetes tipo 2):
+            “… cuando queda bien lejos, por ahí unas tres o cuatro
+            horas para poderlo arrimar (centro de salud), cuando
+            está en el campo mejor dicho es una batalla para llegar allá (centro de salud) …” P12; 39-41. Así mismo,
+            los escasos ingresos económicos de los participantes
+            inciden en la forma de cuidarse, no tienen los recursos para seguir una dieta con restricciones y acorde a
+            las necesidades de la salud. Del mismo modo, incide el
+            tratamiento farmacológico especializado o la polimedicación que en algunos casos requieren autorizaciones,
+            lo cual dilata el inicio oportuno del tratamiento farmacológico.
+        </p>
+
+        <p>
+            Por último, los entrevistados indican que las condiciones de la vivienda y la salubridad, inciden en la
+            exacerbación de las enfermedades desencadenando complicaciones como el evento cerebrovascular: “…el agua
+            muchas veces hasta ahora están haciendo caso los
+            municipios de investigar a traer el instituto de aguas
+            y usted ve que casi ninguna de las aguas de Soatá son
+            realmente potables; entonces, pues yo no soy médico,
+            pero puede incidir sobre esa enfermedad” P13; 29-31.
+        </p>
+
+        <p class="titulo">Discusión</p>
+
+        <p>
+            A través de la revisión literaria de las distintas investigaciones relacionadas con el tema objeto del
+            presente estudio, se encontró que el tabaquismo y el alcohol
+            son factores de riesgo, causantes de las enfermedades
+            cerebrovasculares, aspecto que fue identificado por
+            los participantes, al indicar que los fumadores tienden
+            a sufrir tres veces más un accidente cerebrovascular
+            que las personas que no fuman; además, provoca un
+            aumento del fibrinógeno y la adhesividad plaquetaria,
+            lo que facilita el desarrollo de arterosclerosis y la constricción vascular (12,13). Por otra parte, el
+            alcoholismo
+            está vinculado con la aparición de ECV, por lo que se
+            recomienda no sobrepasar el consumo de dos copas de
+            vino al día en hombres y una en mujeres (14). Frente
+            a la alimentación, los entrevistados reconocen que la
+            dieta con exceso de sal incrementa la presión arterial,
+            lo que efectivamente revelan los estudios al determinar que la alimentación y la obesidad, provocados por
+            los depósitos de grasa abdominales, y los niveles altos
+            de colesterol se asocian estrechamente con el riesgo de
+            ictus (12).
+        </p>
+
+        <p>
+            Por otro lado, la enfermedad más mencionada en el estudio, como causa del ECV, es la hipertensión. Las
+            personas que son hipertensas tienen cuatro veces mayor riesgo de una trombosis que aquellas normotensas;
+            otra enfermedad es la diabetes, la cual produce susceptibilidad a la arterosclerosis de las arterias
+            coronaria,
+            femoral y cerebral y por tanto, a la enfermedad cerebrovascular (15). De esta manera, la poca adherencia
+            farmacológica en pacientes con enfermedades crónicas
+            es un factor de riesgo debido a sus complicaciones,
+            provocando una muerte prematura (16).
+        </p>
+
+        <p>
+            Otro factor mencionado por los participantes es el estrés, hallazgo que es respaldado por el estudio de
+            Madero, quien afirmó que, el estrés en las personas que viven relaciones maritales e interpersonales
+            estresantes,
+            es un factor causante del evento cerebrovascular (15).
+            En cuanto al cambio brusco de temperatura no se encontraron investigaciones que respalden este resultado.
+            Se sabe que una vez se presentan los síntomas, los participantes consumen hiervas medicinales y ante la
+            persistencia de las manifestaciones del evento cerebrovascular acuden a urgencias; al respecto Gallegos,
+            citando
+            un estudio efectuado en Brasil respalda los resultados,
+            cuando señala la efectividad de 51 plantas y de estas
+            10 servian para controlar tal sintomatología, lo que demuestra que el uso de las plantas medicinales
+            funcionan siempre y cuando estén probadas científicamente
+            (17). Se debe precisar, que algunos de los participantes
+            al percibir los síntomas del evento cerebrovascular acuden inmediatamente a urgencias; otros, por el
+            contrario, al sentir que no ceden los síntomas consumen una
+            dosis de los medicamentos prescritos. Sin embargo, referenciando una investigación realizada en Santa Cruz
+            de La Palma evidencia que a esta enfermedad debe
+            dársele importancia para una evaluación y tratamiento
+            inmediato y así disminuir su recurrencia, mortalidad,
+            discapacidad, estancia hospitalaria y costes derivados
+            de la misma (12). Es decir, que para evitar las secuelas
+            anteriores es importante reconocer inmediatamente la
+            enfermedad, solicitar el auxilio indispensable y llevar
+            a la persona a una unidad de salud, en un espacio de
+            tiempo de hasta 3 horas (18, 19).
+        </p>
+
+        <p>
+            Se debe agregar, que los participantes consumen diariamente 100 mg de aspirina por ser un anticoagulante y
+            prevenir la formación de trombos. Investigaciones recientes han vinculado el tratamiento con aspirina con
+            una leve disminución del infarto agudo de miocardio y
+            del accidente cerebrovascular isquémico, junto con un
+            aumento en la incidencia de accidente cerebrovascular hemorrágico. Por lo anterior, la aspirina no evita la
+            mortalidad por causas cardiovasculares (20).
+        </p>
+
+        <p>
+            Cabe señalar que los participantes del estudio mencionan la discapacidad física como principal secuela del
+            evento cerebrovascular y, en efecto la literatura reporta
+            que, los sobrevivientes a dicha condición clínica presentan alteraciones en la movilidad y en la realización
+            de actividades habituales (21); además afecta las áreas
+            cognitiva, la emocional, la comunicación y el lenguaje,
+            la motora, la sensitiva y la visual (22,23). Desde este
+            punto de vista los entrevistados prefieren la muerte antes que depender físicamente de alguien, situación
+            que
+            los lleva a la dependencia funcional y a la imposibilidad de una vida social plena (25).
+        </p>
+
+        <p>
+            La muerte es otra consecuencia crucial del ECV. Según
+            datos de 2015 del Observatorio Nacional de Salud de
+            Colombia, las ECV fueron la tercera causa de muerte
+            en el país para ambos sexos (24).
+        </p>
+
+        <p>
+            De igual manera, los participantes refieren el descuido en los chequeos médicos, dependiendo de como la
+            persona valore la vida. Lo anterior influye de cierta manera, pues un factor protector es que la persona sea
+            optimista y esté satisfecha con la vida. De acuerdo con el
+            estudio realizado por Jiménez y Fuentes (26), es muy
+            importante el soporte familiar y/o social; de ahí, que los
+            pacientes con un buen soporte emocional en su entorno
+            o que forman parte de una familia cohesionada tienen
+            mejor adherencia terapéutica. Otro rasgo a tener en
+            cuenta es la poca cobertura sanitaria o tener problemas
+            económicos, puesto que son factores negativos que intervienen en la atención médica (27) que interfieren en
+            los más afectados, como son los residentes de zonas
+            dispersas, en vista de la limitación y la lejanía de los
+            servicios de salud, lo que puede explicar las desigualdades en salud de la población (28). Por tanto, es
+            fundamental fortalecer y ampliar la oferta de servicios de
+            salud preventivos en la atención primaria de salud (29).
+            Finalmente, según la OMS el consumo de agua contaminada se considera como de mayor riesgo para contraer
+            enfermedades infecciosas diarreicas, respiratorias
+            y tropicales desatendidas; lo que significa que no existe una relación directa con el accidente
+            cerebrovascular
+            (30).
+        </p>
+
+        <!-- conclusiones -->
+
+        <hr>
+
+        <p class="titulo">Conclusiones</p>
+
+        <p>
+            La persona diagnosticada con hipertensión arterial
+            y/o diabetes mellitus tipo 2, a través de la experiencia
+            con la enfermedad aprende que su situación de salud
+            puede llegar a cambiar si no se adhiere al tratamiento farmacológico y no farmacológico, dando lugar a la
+            presencia del ECV. Por esta razón, la herramienta más
+            poderosa que relatan los participantes es la prevención
+            motivada por el miedo a quedar postrados en una cama y dependientes físicamente para la realización de las
+            actividades de la vida diaria. En definitiva, es necesario conocer la percepción del paciente acerca del
+            ECV,
+            porque puede brindar información para desarrollar estrategias enfocadas a que la persona y la familia
+            reconozcan oportunamente los signos de la enfermedad y
+            así, reducir las complicaciones y las secuelas neurológicas.
+        </p>
+
+        <p class="subtitulo">Conflicto de intereses</p>
+
+        <p>
+            Los autores declaran no tener ningun conflicto de intereses
+        </p>
+
+
+
+        <!-- Referencias -->
+
+        <hr>
+
+        <p class="titulo"> Referencias </p>
+
+        <ol class="lista">
+            <li id="r1">Cuba. Centro Nacional de Información de Ciencias Médicas. Biblioteca Médica Nacional. Accidente
+                Cerebrovascular. Estadísticas Mundiales. Factográfico salud [Internet]. 2017 [citado 15 de mayo de
+                2022];3(12):13.
+                Disponible en: <a
+                    href="http://files.sld.cu/bmn/files/2017/12/factografico-de-salud-diciembre-2017.pdf">http://files.sld.cu/bmn/files/2017/12/factografico-de-salud-diciembre-2017.pdf</a>
+            </li>
+            <li id="r2">Abdo-Ahmed AA, AL-Shami AM, Jamshed S, Fata-Nahas RFN. Development of questionnaire on awareness
+                and action towards symptoms and risk factors of heart attack and stroke among a Malaysian population.
+                BMC
+                Public Health. [Internet]. 2019 [citado 20 de mayo de 2022]; 19(1):1-10. <a
+                    href="https://doi.org/10.1186/s12889-019-7596-1">https://doi.org/10.1186/s12889-019-7596-1</a>
+            </li>
+            <li id="r3">Osama A, Ashour Y, El-Razek RA, Mostafa I. Public knowledge of warning signs and risk factors of
+                cerebro-vascular stroke in ismailia governorate, egypt. Egypt J Neurol Psychiatry Neurosurg. 2019;
+                55(1): 1-6.
+                <a href="https://doi.org/10.1186/s41983-019-0079-6">https://doi.org/10.1186/s41983-019-0079-6</a>
+            </li>
+            <li id="r4">Fuster-Guillen DE. Investigación cualitativa: método fenomenológico hermenéutico. Propós
+                Represent [Internet]. 2019 [citado 1 Feb 2022];7(1):201–229. <a
+                    href="http://dx.doi.org/10.20511/pyr2019.v7n1.267">http://dx.doi.org/10.20511/pyr2019.v7n1.267</a>
+            </li>
+            <li id="r5">Reyes Navarro HR, Rojano Alvarado ÁY, Araujo Castellar LS. La fenomenología: un método
+                multidisciplinario en el estudio de las ciencias sociales. Pensam. gest. [Internet]. 2019 [citado 11 de
+                septiembre de 2022];
+                47:1-21. <a href="http://dx.doi.org/10.14482/pege.47.7008">http://dx.doi.org/10.14482/pege.47.7008</a>
+            </li>
+            <li id="r6">Andreu-Periz D, Ochando-García A, Limón-Cáceres E. Experiencias de vida y soporte percibido por
+                las
+                enfermeras de las unidades de hemodiálisis hospitalaria durante la pandemia de COVID.19 en España.
+                Enferm Nefrol. [Internet]. 2020 [citado 15 de mayo de 2022];23(2).148-59. <a
+                    href="https://doi.org/10.37551/S2254-28842020022">https://doi.org/10.37551/S2254-28842020022</a>
+            </li>
+            <li id="r7">Ministerio de Salud y Protección Social. Resolución Número 8430 de 1993, por la cual se
+                establecen las normas científicas, técnicas y administrativas para la investigación en salud [Internet]
+                Bogotá: Ministerio de Salud; 1993 [citado 1 Feb 2022]. Disponible en: <a
+                    href="https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/DE/DIJ/RESOLUCION-8430-DE-1993.PDF">https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/DE/DIJ/RESOLUCION-8430-DE-1993.PDF</a>
+            </li>
+            <li id="r8">Rojas-Bravo X, Osorio B. Criterios de Calidad y Rigor en la Metodología Cualitativa. Gaceta de
+                pedagogía.
+                [Internet]. 2017 [citado 15 de mayo de 2022];36: 63-75. Disponible: <a
+                    href="http://www.revistas.upel.edu.ve/index.php/gaceta/article/view/566/525">http://www.revistas.upel.edu.ve/index.php/gaceta/article/view/566/525</a>
+            </li>
+            <li id="r9">Castillo E, Vásquez ML. El rigor metodológico en la investigación cualitativa Colombia Médica.
+                Colomb
+                Med. Cali. [Internet]. 2003 [citado 7 de agosto de 2022]; 34(3): 164-167. Disponible en: <a
+                    href="https://www.redalyc.org/articulo.oa?id=28334309">https://www.redalyc.org/articulo.oa?id=28334309</a>
+            </li>
+            <li id="r10">Castillo-Parra S, Bacigalupo-Araya JF, Garcia-Vallejos G, Lorca-Nachar A, Aspee-Lepe P,
+                Gortari-Madrid P.
+                Necesidades de docentes y estudiantes para humanizar la formación de enfermería. Cienc. enferm.
+                [Internet].
+                2020 [citado 11 de septiembre de 2022]; 1-13: <a
+                    href="http://dx.doi.org/10.4067/s0717-95532020000100202">http://dx.doi.org/10.4067/s0717-95532020000100202</a>
+            </li>
+            <li id="r11">Rodríguez AP. Conocimiento sobre el accidente cerebro vascular en la población de Santa Cruz de
+                La Palma.
+                [Tesis]. [Internet]. Santa Cruz de Tenerife, España: Universidad de la Laguna; 2017 [citado 15 May
+                2022].
+                Disponible en: <a
+                    href="https://riull.ull.es/xmlui/bitstream/handle/915/9108/Conocimiento%20sobre%20el%20Accidente%20Cerebro%20Vascular%20en%20la%20poblacion%20de%20Santa%20Cruz%20de%20La%20Palma.pdf?sequence=1&isAllowed=y">https://riull.ull.es/xmlui/bitstream/handle/915/9108/Conocimiento%20sobre%20el%20Accidente%20Cerebro%20Vascular%20en%20la%20poblacion%20de%20Santa%20Cruz%20de%20La%20Palma.pdf?sequence=1&isAllowed=y</a>
+            </li>
+            <li id="r12">Guzmán-Sánchez KE, Dehesa-López E, Guzmán-Reyes F, Delgado JC. Factores de riesgprevención
+                prevención secundaria en la enfermedad cerebrovascular isquémica en adultos. Una revisión. Rev Med UAS
+                [Internet]. 2018 [citado 15 May 2022];8(23):38–49. Disponible en: <a
+                    href="http://hospital.uas.edu.mx/revmeduas/pdf/v8/n1/cerebrovascular.pdf">http://hospital.uas.edu.mx/revmeduas/pdf/v8/n1/cerebrovascular.pdf</a>
+            </li>
+            <li id="r13">Maldonado -Manzano E. Depresión, ansiedad y calidad de vida percibida en pacientes fumadores
+                con ictus
+                agudo [Tesis Doctorado]. [Internet]. Girona, España: Universidad de Girona; 2020 [citado 15 May 2022].
+                Disponible en: <a
+                    href="https://www.tdx.cat/bitstream/handle/10803/671240/temm_20200727.pdf?sequence=5&isAllowed=y">https://www.tdx.cat/bitstream/handle/10803/671240/temm_20200727.pdf?sequence=5&isAllowed=y</a>
+            </li>
+            <li id="r14">Posada Quintero WA, Rico Loaiza AM, Trujillo Puerta JP, Castrillón López ND, Arango Parra V.
+                Conocimientos en la detección precoz de un accidente cerebrovascular por parte de la comunidad en riesgo
+                del municipio de Caracolí [Trabajo de Grado]. [Internet]. Medellin: Universidad CES; 2020 [citado 15 May
+                2022].
+                Disponible en: <a
+                    href="https://repository.ces.edu.co/handle/10946/5234">https://repository.ces.edu.co/handle/10946/5234</a>
+            </li>
+            <li id="r15">Díaz Piñera A, Rodríguez Salvá A, León Sánchez M, Fernández González L, Seuc Jo AH, Álvarez
+                Mesa N.
+                Adherencia terapéutica en pacientes hipertensos del Policlínico Universitario Julio Antonio Mella de
+                Guanabacoa. Rev Finlay [Internet]. 2022 [citado 15 May 2022];12(1): 65-76. Disponible en: <a
+                    href="http://scielo.sld.cu/scielo.php?script=sci_arttext&pid=S2221-24342022000100065&lng=es.">http://scielo.sld.cu/scielo.php?script=sci_arttext&pid=S2221-24342022000100065&lng=es.</a>
+            </li>
+            <li id="r16">Gallegos Zurita ME. Las plantas medicinales : usos y efectos en el estado de salud de la
+                población</li>
+            <li id="r17">rural de Ecuador [Tesis Doctoral]. [Internet]. Lima, Perú: Universidad Nacional Mayor de San
+                Marcos; 2017
+                [citado 15 May 2022]. Disponible en: <a
+                    href="https://cybertesis.unmsm.edu.pe/bitstream/handle/20.500.12672/6415/Gallegos_zm.pdf?sequence=3&isAllowed=y.">https://cybertesis.unmsm.edu.pe/bitstream/handle/20.500.12672/6415/Gallegos_zm.pdf?sequence=3&isAllowed=y.</a>
+            </li>
+            <li id="r18">Fialho Sim-Sim MMS. et al. Conocimiento de adultos jóvenes sobre el accidente cerebrovascular
+                en una ciudad del sur de Portugal. Enfermería Global. [Internet]. 2019; 56: 423-34. [citado 30 Mayo de
+                2022]. <a href="https://doi.org/10.1016/j.nrl.2017.09.013">https://doi.org/10.1016/j.nrl.2017.09.013</a>
+            </li>
+            <li id="r19">. Metias MM, Eisenberg N, Clemente MD, Wooster EM, Dueck AD, Wooster DL, et al. Public health
+                campaigns and their effect on stroke knowledge in a high-risk urban population: A five-year study.
+                Vascular. 2017;
+                25(5): 497-503. <a
+                    href="https://doi.org/10.1177/1708538117691879">https://doi.org/10.1177/1708538117691879</a></li>
+            <li id="r20">Masson G, Lobo M, Masson W, Molinero G. Aspirin in primary prevention. Meta-analysis stratified
+                by baseline cardiovascular risk. Arch Cardiol Mex. 2020;90(3):293-299.</li>
+            <li id="r21">López-Espuela F, Portilla –Cuenca JC, Leno-Díaz C, Párraga-Sánchez JM, Gamez-Leyva G.
+                Diferencias
+                de género en la calidad de vida a largo plazo tras un ictus: influencia del estado funcional y el estado
+                de
+                ánimo. Neurología. [Internet]. 2020; 35 (7): 470-78. [citado 25 Mayo de 2022]. <a
+                    href="https://doi.org/10.1016/j.nrl.2017.10.002">https://doi.org/10.1016/j.nrl.2017.10.002</a></li>
+            <li id="r22">Olmedo Vega V, Aguilar Idáñez MJ, Arenillas Lara JF. Análisis de factores asociados a la
+                recuperación integral de pacientes de ictus al alta de hospital de agudos. Rev Esp Salud Publica
+                [Internet]. 2019 [citado 15 May
+                2022];93:1-13. Disponible en: <a
+                    href="https://scielosp.org/pdf/resp/2019.v93/e201910103/es">https://scielosp.org/pdf/resp/2019.v93/e201910103/es</a>
+            </li>
+            <li id="r23">García- Ruiz R. et al. Factors related to immediate response to symptoms in patients with
+                stroke or transient ischaemic attack. Neurología. [Internet]. 2020; 35(8): 551-55. [citado 25 Mayo de
+                2022]. <a href="https://doi.org/10.1016/j.nrl.2017.09.013">https://doi.org/10.1016/j.nrl.2017.09.013</a>
+            </li>
+            <li id="r24">Guerrero Agámez D et al. Mortalidad por enfermedades cerebrovasculares en Colombia: 30 años de
+                observación. Acta Neurol Colomb. [Internet]. 2021 [citado 11 de septiembre de 2022]; 37(4):173-188. <a
+                    href="https://doi.org/10.22379/24224022386">https://doi.org/10.22379/24224022386</a></li>
+            <li id="r25">Pioli dos Santos D, Carvalho Rodríguez J, Fumagalli de Salles J. Influencia de los síntomas de
+                depresión en
+                las funciones neuropsicológicas después del accidente cerebrovascular. Cienc. Psicol. [Internet]. 2019
+                [citado
+                11 de septiembre de 2022]; 13(1): 1-11. <a
+                    href="http://dx.doi.org/10.22235/cp.v13i1.1809">http://dx.doi.org/10.22235/cp.v13i1.1809</a></li>
+            <li id="r26">Jiménez-Reyes MO, Fuentes-González N. Percepción de la calidad del cuidado de enfermería en
+                pacientes diabéticos hospitalizados. Revista Investig Salud Univ Boyacá. 2018;5(2): 219-245. <a
+                    href="https://doi.org/10.24267/23897325.319">https://doi.org/10.24267/23897325.319</a></li>
+            <li id="r27">Pagès-Puigdemont N, Valverde-Merino MI. Adherencia terapéutica: factores modificadores y
+                estrategias de
+                mejora. Ars Pharm. 2018;59(4):251–258</li>
+            <li id="r28">. Instituto Nacional de Salud, Observatorio Nacional de Salud. Quinto informe ONS, Carga de
+                enfermedad por
+                enfermedades crónicas no transmisibles y discapacidad en Colombia. [Internet]. Bogotá: Imprenta
+                Nacional;
+                2015 [citado 15 May 2022]. Disponible en: <a
+                    href="https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/IA/INS/informe-ons-5.pdf">https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/IA/INS/informe-ons-5.pdf</a>
+            </li>
+            <li id="r29">Leyton Pavez CE, Paul- Espinoza VR, Hernández- Poblete PA, Gil -Martín JC. Atención post
+                hospitalaria de
+                pacientes con accidente cerebrovascular en atención primaria de salud. Rev. Méd. [Internet]. Risaralda;
+                2019:
+                25 (1): 22-9. Disponible en: <a
+                    href="http://www.scielo.org.co/pdf/rmri/v25n1/0122-0667-rmri-25-01-23.pdf">http://www.scielo.org.co/pdf/rmri/v25n1/0122-0667-rmri-25-01-23.pdf</a>
+            </li>
+            <li id="r30">Organización Mundial de la Salud. Agua para consumo humano [Internet]. Ginebra, Suiza:
+                Organización
+                Mundial de la Salud; 2020 [citado 15 May 2022]. Disponible en: <a
+                    href="https://www.who.int/es/news-room/factsheets/detail/drinking-water">https://www.who.int/es/news-room/factsheets/detail/drinking-water</a>
+            </li>
+        </ol>
+    </div>
+</body>
+
+</html>

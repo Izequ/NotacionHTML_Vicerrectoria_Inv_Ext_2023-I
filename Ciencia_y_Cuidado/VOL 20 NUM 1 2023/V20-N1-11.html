@@ -1,0 +1,1445 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V20-N1-11</title>
+    <link rel="stylesheet" href="">
+    <style>
+        body {
+            padding: 10em;
+            padding-top: 20px;
+            font-family: Times New Roman;
+            color: black;
+        }
+
+        #articulo-derecha {
+            float: left;
+        }
+
+        /* Posiciones de los resumenes */
+
+        .contenedor-general {
+            display: inline-flex;
+            width: 100%;
+        }
+
+        .contenedor-resumen {
+            width: 240%;
+        }
+
+        .contenedor-autor {
+            width: 100%;
+            padding-left: 20px;
+        }
+
+        .hr-resumen {
+            background-color: gray;
+            margin: 0;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .resumen-fondo {
+            background-color: #bdd5f1;
+            border-radius: 5px;
+        }
+
+        .titulo-resumen {
+            color: black;
+            font-size: 22px;
+            font-weight: bold;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .texto-resumen {
+            padding: 20px;
+            margin: 0;
+        }
+
+        ul.navbar {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 25em;
+            left: 2em;
+            width: 250px;
+        }
+
+        /* Titulos principales */
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: Times New Roman;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        h1 {
+            color: #29abe3;
+        }
+
+        .categoria_titulo {
+            font-style: italic;
+            color: #ffffff;
+        }
+
+        h3 {
+            font-style: italic;
+            font-weight: bold;
+            color: #707073;
+        }
+
+        .categoria {
+            text-align: center;
+            background-color: #707073;
+            width: 20%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            margin: auto;
+        }
+
+        ul.navbar li {
+            background: white;
+            margin: 0.5em 0;
+            padding: 0.3em;
+        }
+
+        /* Enlaces */
+
+        a.link-color:visited {
+            color: white;
+        }
+
+        a.link-color:link {
+            color: white;
+        }
+
+        a.link-color:hover {
+            color: white;
+        }
+
+        a.link-color:hover {
+            border-bottom: 1px solid;
+            background: black;
+        }
+
+        /* Link de referencia */
+
+        a:link {
+            color: #4e00ff;
+        }
+
+        a:visited {
+            color: #003bff;
+        }
+
+        a:focus {
+            border-bottom: 1px solid;
+            background: #98aae4;
+        }
+
+        a:hover {
+            border-bottom: 1px solid;
+            background: #aacefe;
+        }
+
+        /* Etiqueta P */
+
+        p {
+            line-height: normal;
+            text-align: justify;
+            font-size: 18px;
+        }
+
+        p.titulo {
+            color: #29abe3;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        p.subtitulo {
+            color: #29abe3;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* NUEVO */
+        p.subtitulo-segundo {
+            color: #29abe3;
+            font-style: italic;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        p.correspondencia {
+            color: black;
+            font-size: 18px;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        /* NUEVO */
+        p.entrevista {
+            color: black;
+            font-size: 18px;
+            font-style: italic;
+        }
+
+        /* NUEVO */
+        p.subtitulo-tercero {
+            color: #29abe3;
+            font-style: italic;
+            font-size: 18px;
+        }
+
+        p#cabeza {
+            color: #1d71ae;
+            text-align: center;
+        }
+
+        p.autores {
+            font-size: 16px;
+            margin: 0;
+            text-indent: 0em;
+            margin-bottom: 10px;
+        }
+
+        p.forma-citar {
+            text-indent: 0em;
+            text-align: justify;
+            justify-content: center;
+        }
+
+        .cita {
+            text-align: -webkit-center;
+        }
+
+        /* Bold especial para palabras que tienen color seguido de dos puntos
+*/
+
+        /* NUEVO */
+
+        b.subtitulo-segundo {
+            color: #29abe3;
+            font-size: 18px;
+        }
+
+        .contenedor_info {
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .info {
+            width: auto;
+        }
+
+        /* Este es para los documentos del dos en adelante *codigo abajo de este comentario* */
+
+        .info-text {
+            text-align: end;
+            margin: 0;
+        }
+
+        /* Uso Exlusico para el primero documento  que es de revision  *codigo abajo de este comentario* */
+
+        .info_text {
+            font-size: 12px;
+            line-height: 100%;
+            text-align: center;
+            margin: 0;
+        }
+
+        .info_hr {
+            margin: 5;
+        }
+
+        /* Fin P */
+        /* Etiqueta Italic */
+
+        i {
+            font-size: 18px
+        }
+
+        i.centrado {
+            font-size: 18px
+        }
+
+        /* LI para las listas */
+
+        li {
+            font-size: 18px;
+            padding-top: 10px;
+            text-align: justify;
+        }
+
+        /* NUEVO */
+        .lista li {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        hr {
+            background-color: #29abe3;
+            height: 1px;
+        }
+
+        /* Tablas */
+
+        table {
+            border-collapse: collapse;
+            border: 2px solid rgb(0, 0, 0);
+            align-items: center;
+        }
+
+        thead th {
+            border-collapse: collapse;
+            background-color: rgb(179, 179, 179);
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        tbody td {
+            border-collapse: collapse;
+            text-align: center;
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        .tipo {
+            color: #ffffff;
+            font-size: 22px;
+            border-radius: 10px 5px 10px 5px;
+            background-color: #696969;
+        }
+
+        img.logos {
+            width: 15px;
+            height: 15px;
+        }
+
+        .image {
+            text-align: center;
+            image-rendering: optimizeQuality;
+        }
+
+        .image p {
+            text-align: center;
+            font-size: small;
+        }
+
+        .logo {
+            width: 300px;
+            height: 80px;
+        }
+
+        .logo2 {
+            width: 300px;
+            height: 50px;
+        }
+
+        /* Anclajes de la pagina */
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* NUEVO */
+        .ecuacion {
+            text-align: center;
+            font-weight: bold;
+            margin: 1px;
+        }
+
+        @media only screen and (min-width:320px) and (max-width:900px) {
+            body {
+                width: 100%;
+                padding: 5em;
+                margin: 5px;
+            }
+
+            .image {
+                text-align: center;
+                image-rendering: optimizeQuality;
+            }
+
+            .image img {
+                width: 100%;
+            }
+
+            .image p {
+                font-size: small;
+                text-align: center;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="contenedor_info">
+        <div>
+            <img src="img/globales/logo.jpg" alt="" height="125px">
+        </div>
+        <div class="info" style="text-align: right;">
+            <p class="info-text"> ISSN-PRINT 1794-9831 / E-ISSN 2322-7028 </p>
+            <p class="info-text"> Vol. 20 Nº 1 / ene - abr 2023 / Cúcuta, Colombia. </p>
+            <p class="info-text">
+                <img src="img/globales/doi.png" height="20px" alt="">
+                <a href="https://doi.org/10.22463/17949831.3503">https://doi.org/10.22463/17949831.3503</a>
+            </p>
+        </div>
+    </div>
+
+
+    <!--Categoría-->
+    <div class="categoria">
+        <h2 class="categoria_titulo">Original </h2>
+    </div>
+
+    <h1> Reflexiones de las 4 funciones de enfermería e impactos en América Latina </h1>
+
+    <h2 class="segundo"> Reflections on the 4 nursing functions and impacts in Latin America
+    </h2>
+
+    <h2 class="segundo"> Reflexões sobre as 4 funções e impactos da enfermagem na América Latina</h2>
+
+
+    <!--Autores-->
+    <h3>
+        Sandra Milena Aponte-Franco <sup><a href="#sup1">1*</a> </sup> <br>
+        Javier Isidro Rodríguez-López <sup><a href="#sup2">2*</a> </sup> <br>
+        María Guadalupe Casales-Hernández <sup><a href="#sup3">3*</a> </sup> <br>
+        Juana Jiménez-Sánchez <sup><a href="#sup4">4*</a> </sup> <br>
+    </h3>
+
+
+    <!-- Conetenedor de las columnas de la descripciones de los autores, correspondencia de autor 
+    y los resumenes -->
+    <div class="contenedor-general">
+
+
+        <!-- Contenedor de los resumenes -->
+        <div class="contenedor-resumen">
+
+            <!-- Resumen Español -->
+
+            <div class="resumen-fondo">
+                <p class="titulo-resumen"> Resumen</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> La enfermería reconocida como disciplina profesional cuenta con conocimientos
+                    dirigidos al
+                    cuidado de la vida humana, su desarrollo la ha diferenciado de otras disciplinas dándole visibilidad
+                    particular desde cuatro funciones: gestión, enseñanza, investigación y atención clínica.
+                    Para lo cual se generó una reflexión sobre los impactos positivos y negativos del evolucionar
+                    de enfermería en América Latina ante estas funciones, desde la gestión se evidencia avances
+                    importantes desde el liderazgo gremial y organizacional, pero retrocesos en el escalamiento
+                    político, e institucional. Existe brecha de la formación profesional en comparación a otras
+                    regiones, aun así, el crecimiento de programas educativos ha dado la posibilidad de la
+                    profesionalización, pero debate el reto de la calidad, la disparidad formativa y la oferta centrada
+                    en
+                    el paradigma clínico. En el campo investigativo se resalta la creación de programas doctorales y
+                    post graduales que amplían la generación de conocimiento, pero también se evidencian
+                    barreras en la transferencia y visibilidad colectiva del conocimiento. En el área clínica espacio
+                    con mayor abordaje de las acciones formativas y laborales del profesional, cuenta con
+                    grandes retos en su crecimiento, organización, escalamiento, seguridad y precariedad laboral.
+                    En esa perspectiva la comunidad U-Nursing LatAm se ha integrado para aportar a la región
+                    en estos retos. Finalmente se concluye que la mayoría de los desafíos son relacionados con
+                    las habilidades sociales y blandas que deben potencializarse en el plano personal y colectivo.
+                    Todas las situaciones requieren tener una valoración directa de las posibilidades de fortalecer
+                    y mejorar la enfermería desde cada país de la región, teniendo en cuenta las cuatro funciones. </p>
+
+                <p class="texto-resumen">
+                    <b>Palabras Claves: </b> Enfermería; Gestión; Enseñanza; Investigación; Atención de enfermería
+                </p>
+            </div>
+            <!-- Resumen Inglés -->
+
+            <div>
+                <p class="titulo-resumen"> Abstract</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> Nursing, recognized as a professional discipline, has knowledge directed to
+                    the care of human life; its development has differentiated it from other disciplines, giving it
+                    visibility from
+                    four functions: management, teaching, research and clinical care. For which a reflection was
+                    generated on the positive and negative impacts of the evolution of nursing in Latin America
+                    in relation to these functions, from the management point of view, there is evidence of important
+                    advances from the guild and organizational leadership, but setbacks in the political
+                    and institutional scaling up. There is a gap in professional training compared to other regions,
+                    even so, the growth of educational programs has given the possibility of professionalization,
+                    but the challenge of quality, training disparity and the offer centered on the clinical paradigm
+                    is debated. In the research field, the creation of doctoral and post-graduate programs that expand
+                    the generation of knowledge is highlighted, but there are also barriers in the transfer and
+                    collective visibility of knowledge. In the clinical area, where the training and labor actions
+                    of the professional are most addressed, there are great challenges in its growth, organization,
+                    scaling, security and labor precariousness. In this perspective, the U-Nursing LatAm community has
+                    been integrated to contribute to the region in these challenges. Finally, it is concluded
+                    that most of the challenges are related to social and soft skills that must be enhanced on a
+                    personal and collective level. All situations require a direct assessment of the possibilities
+                    of strengthening and improving nursing in each country of the region, considering the four
+                    functions. </p>
+
+                <p class="texto-resumen">
+                    <b>KeyWords:</b> Nursing; Management; teaching; research; nursing care.
+                </p>
+            </div>
+            <!-- Resumen Portuguez -->
+
+            <div class="resumen-fondo">
+                <p class="titulo-resumen"> Resumo</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> A enfermagem, reconhecida como uma disciplina profissional, possui
+                    conhecimentos voltados ao cuidado da vida humana; seu desenvolvimento a diferenciou de outras
+                    disciplinas,
+                    dando-lhe particular visibilidade a partir de quatro funções: gestão, ensino, pesquisa e cuidados
+                    clínicos. Para o qual foi gerada uma reflexão sobre os impactos positivos e negativos da
+                    evolução da enfermagem na América Latina com relação a estas funções, do ponto de vista
+                    gerencial, há evidências de importantes avanços em termos de liderança sindical e organizacional,
+                    mas retrocessos na escalada política e institucional. Existe uma lacuna na formação
+                    profissional em comparação com outras regiões, mesmo assim, o crescimento dos programas
+                    educacionais deu a possibilidade de profissionalização, mas o desafio da qualidade, a disparidade de
+                    formação e a oferta centrada no paradigma clínico é debatida. No campo da pesquisa,
+                    destaca-se a criação de programas de doutorado e pós-graduação que ampliam a geração
+                    de conhecimento, mas também existem barreiras para a transferência e visibilidade coletiva
+                    do conhecimento. Na área clínica, a área com maior enfoque na capacitação e nas ações de
+                    trabalho do profissional, existem grandes desafios em termos de crescimento, organização,
+                    expansão, segurança e insegurança no emprego. Nesta perspectiva, a comunidade da U-Nursing LatAm foi
+                    integrada para contribuir para a região nestes desafios. Finalmente, conclui-se
+                    que a maioria dos desafios está relacionada a habilidades sociais e soft skills que precisam ser
+                    reforçadas em nível pessoal e coletivo. Todas as situações exigem uma avaliação direta das
+                    possibilidades de fortalecimento e melhoria da enfermagem em cada país da região, levando
+                    em conta as quatro funções. </p>
+
+                <p class="texto-resumen">
+                    <b>Palavras-chave:</b> Enfermagem; gestão; ensino; investigação e cuidados de enfermagem.
+                </p>
+            </div>
+
+
+
+        </div>
+
+        <!-- Descripcion de autores, Aprobado, Como citar, licencia -->
+        <div class="contenedor-autor">
+            <!-- Autores -->
+            <div>
+                <p class="subtitulo" style="color: black; font-size: 18px;">Autor de correspondencia*</p>
+                <!-- 1 -->
+                <p class="autores" id="sup1"><sup>1*</sup><img class="logos" src="img/globales/sobre.png"> Enfermera,
+                    especialista en gerencia de seguridad y salud en el trabajo,
+                    maestrante en ciencias de enfermería,
+                    Universidad de Guanajuato. Guanajuato-Celaya, México.
+                    <a href="mailto:sm.apontefranco@ugto.mx">sm.apontefranco@ugto.mx</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0002-4569-1234">0000-0002-4569-1234</a>
+                </p>
+                <!-- 2 -->
+                <p class="autores" id="sup2"><sup>2*</sup><img class="logos" src="img/globales/sobre.png"> Enfermero,
+                    magíster en gestión empresarial ambiental, doctorando en ciencias
+                    de enfermería, Growing Up Foundation, Representante Legal. Guanajuato,
+                    Celaya, México.
+                    <a href="mailto:javierisidrorodriguezl@gmail.com">javierisidrorodriguezl@gmail.com</a>, <img
+                        class="logos" src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0002-1907-4152">0000-0002-1907-4152</a>
+                </p>
+                <!-- 3 -->
+                <p class="autores" id="sup3"><sup>3*</sup><img class="logos" src="img/globales/sobre.png"> Licenciada en
+                    enfermería y obstetricia, magíster en ciencias socio-medicas,
+                    presidente Centro Nacional de Programas Preventivos y Control de Enfermedades – Secretaría de Salud
+                    de México.
+                    Ciudad de México, México.
+                    <a href="mailto:gcasalesh@gmail.com">gcasalesh@gmail.com</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0002-7306-6663">0000-0002-7306-6663</a>
+                </p>
+                <!-- 4 -->
+                <p class="autores" id="sup4"><sup>4*</sup><img class="logos" src="img/globales/sobre.png"> Licenciada en
+                    enfermería y obstetricia,
+                    doctora en administración de organizaciones de salud, directora México,
+                    Centro América y el Caribe, U-Nursing
+                    LatAm. Ciudad de México, México.
+                    <a href="mailto:jjscomle@gmail.com">jjscomle@gmail.com</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0003-3812-831X">0000-0003-3812-831X</a>
+                </p>
+            </div>
+
+            <!--Recibido y aprobado-->
+            <div>
+                <p><b>Recibido: </b> 21 julio 2022 <br> <b>Aprobado: </b> 10 diciembre 2022 </p>
+            </div>
+
+            <!-- Como citar -->
+            <div class="cita">
+                <p class="forma-citar autores"><b>Para citar este artículo / To reference this article / Para citar este
+                        artigo:</b> Aponte-Franco SM, Rodríguez-López
+                    JI, Casales-Hernández MG, Jiménez-Sánchez J. Reflexiones de las 4
+                    funciones de enfermería e impactos
+                    en América Latina. 20(1):119-130. <a
+                        href="https://doi.org/10.22463/17949831.3503">https://doi.org/10.22463/17949831.3503</a></p>
+            </div>
+
+            <!--Licencia-->
+            <br>
+            <div>
+                <p class="autores "> &#169; Universidad Francisco de Paula Santander.
+                    Este es un artículo bajo la licencia CC-BY-NC-ND
+                    <br>
+                    <a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img
+                            alt="Licencia Creative Commons" style="border-width:0"
+                            src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Cuerpo del documento -->
+    <div>
+        <hr>
+        <!--Introducción-->
+        <p class="titulo"> Introducción</p>
+
+        <p>
+            La enfermería reconocida como disciplina profesional
+            cuyo desarrollo está basado en conocimientos propios
+            y en algunos derivados de otras ciencias, se constituye
+            como una serie de acciones de servicio humano compasivo y de apoyo, dirigidas al cuidado de la salud en el
+            ciclo de la vida humana (1). Desde el Consejo Internacional de Enfermería (CIE), define la disciplina como
+            una parte del sistema de salud encargada del cuidado
+            de personas de todas las edades, sanas y/o enfermas a
+            nivel físico, mental y con capacidades diferentes en diversos contextos sociales, integrando acciones de
+            promoción de la salud y prevención de la enfermedad.
+        </p>
+
+        <p>
+            Entre algunas de las funciones de la disciplina enfermera se puede mencionar; el fomento de entornos
+            seguros, investigación y participación en construcción de
+            políticas de salud, gestión de pacientes (sujetos de cuidado), además de la actuación en los sistemas de
+            salud
+            y la formación (2). Centrándose desde una orientación
+            hacía el cuidado y el proceso de cuidar desde sus raíces, se analizan los elementos de la conceptualización
+            del cuidado como referente filosófico disciplinar, y las
+            prácticas de enseñanza dando prioridad al énfasis del cuidado humano que caracteriza a los profesionales de
+            enfermería (3).
+        </p>
+
+        <p>
+            El desarrollo teórico de la enfermería se ha fortalecido
+            a partir del estudio científico de aquellas manifestaciones que integran el cuidado de la salud humana, en
+            función de esto la enfermería se ha venido estableciendo a
+            través del tiempo como ciencia y disciplina de carácter
+            humanístico y social, con un cuerpo de conocimientos
+            propio donde se integran las bases de la práctica profesional, lo cual la diferencia de otras disciplinas
+            (4).
+            A partir del desarrollo científico e investigativo desde
+            inicios de siglo XX enfermería ha tenido una evolución significativa, teorías y modelos conceptuales son
+            el sustento de ello, su aplicación en la práctica como
+            estrategia de fortalecimiento disciplinar permiten tener
+            evidencia de calidad y visibilidad de la profesión (5).
+        </p>
+
+        <p>
+            En el plano de la calidad, los sistemas de salud cambiantes en el mundo requieren de la orientación al
+            beneficio
+            de quienes consumen los servicios de dichos sistemas,
+            la disciplina de enfermería ha buscado desde siempre
+            estos beneficios adaptándose teóricamente y científicamente a las necesidades cambiantes de la sociedad, por
+            esto se ha constituido como la columna vertebral de los
+            sistemas de salud abordando todo tipo de condiciones
+            en torno al cuidado, independiente del rol de actuación,
+            en este sentido los profesionales de enfermería, investigan, educan, planean y desarrollan programas
+            dirigidos a las personas y comunidades, debido al enfoque
+            centrado en el cuidado reconocen la interacción y las
+            necesidades de las personas, la sociedad y el sistema en
+            materia de salud (6).
+        </p>
+
+        <p>
+            Como se ha mencionado, los profesionales de enfermería brindan cuidado a través de distintas funciones y en
+            cada uno integra un aspecto particular de lo humano, el
+            cual es útil y necesario en todas las áreas de desempeño. En el caso de la gestión es muy importante ya que
+            permite tener una orientación acerca de cuál es la mejor
+            forma de organizar y entregar los recursos disponibles;
+            en lo asistencial, esta mirada humana hace énfasis en
+            la atención de la persona en todo el significado del ser,
+            restando importancia a los aspectos materialistas y biomédicos; desde el campo de la enseñanza la enfermería
+            transmite el interés de cuidar desde la empatía y respeto
+            sin ningún tipo de distinción; y finalmente en el plano
+            de la investigación es imprescindible fomentar el interés hacia los cimientos de la disciplina encausando
+            las acciones, saberes y fomentando nuevos escenarios de actuación con conocimiento propio (7). De acuerdo
+            con lo anterior, se pretende en este articulo reflexionar
+            sobre los impactos de la enfermería desde las cuatro
+            funciones profesionales y su apreciación en América
+            Latina.
+        </p>
+
+        <hr>
+
+        <p class="titulo">Desarrollo</p>
+
+        <p>
+            La profesión de enfermería en el mundo está logrando
+            cambios en cuanto a su concepción y potencialidades
+            para contribuir de manera más efectiva al logro de los
+            Objetivos del Desarrollo Sostenible, la cobertura universal y la aplicación de la atención primaria de la
+            salud
+            (APS) como la estrategia ideal para lograrlos (8). En
+            ese contexto, y posterior al Informe “Triple impacto de
+            la Enfermería” generado por el Grupo Interparlamentario en Salud Global de Reino Unido, que hace referencia
+            a la necesidad de fortalecer esta disciplina a nivel
+            mundial para conseguir: mejorar la salud y la igualdad
+            de género al empoderar a las enfermeras, predominantemente mujeres, y mejorar el desarrollo económico de
+            los países; en 2018 surge la campaña Nursing Now con
+            la colaboración del Consejo Internacional de Enfermeras (CIE) y la Organización Mundial de la Salud con
+            propósito de mejorar la salud al elevar el estado y el
+            perfil de la enfermería y establecer alianzas de trabajo
+            interinstitucionales (9).
+        </p>
+
+        <p>
+            Con esa intención, la de lograr dar visibilidad a la importante labor que desarrolla el personal de
+            enfermería en Latinoamérica y reconociendo que compartimos
+            condiciones similares en cuanto al desarrollo y estatus
+            profesional, para esto surgen diferentes formas asociativas que luchan por la justicia y el ejercicio de la
+            enfermería regional.
+        </p>
+
+        <p>
+            En los antecedentes podemos encontrar la Federación
+            Panamericana de Profesionales de Enfermería (FEPPEN) que integra a las organizaciones nacionales de
+            enfermería de los países latinoamericanos y del caribe desde los años 1970, desde la época ha generado el
+            fortalecimiento de la asociación, la formación, la visibilidad y emancipación de la enfermería. El
+            acompañamiento para la mejora de las condiciones laborales
+            de los trabajadores de salud, sus planes de carrera y
+            crecimiento profesional (10,11).
+        </p>
+
+        <p>
+            En esa misma perspectiva asociativa desde 1986 como
+            parte de los organismos avalados por la Unión de Universidades de América Latina (UDUAL), en la integración
+            en los últimos 36 años han logrado consolidar cerca de 130 escuelas y facultades de enfermería, entre sus
+            premisas estratégicas esta la asociación para la generación de valor para el crecimiento conjunto en la
+            educación, investigación y extensión de enfermería (12).
+        </p>
+
+        <p>
+            En las proyecciones que plantea FEPPEN, ALADEFE
+            y las orientación estratégica para enfermería en la región de las Américas (10,11,13), se encuentran el
+            aumento de la colaboración, redes, trabajo articulado y el
+            establecimiento de alianzas para promover la representación de enfermería, entornos positivos, con equipos
+            interprofesionales que se espera lograr con la integración de organizaciones, estrategias y mecanismos de
+            cooperación entre los países para el desarrollo prácticas
+            más activas desde enfermería como protagonista de su
+            propia historia.
+        </p>
+
+        <p>
+            En la época reciente de la enfermería latinoamericana
+            desde 2019 un movimiento impulsado por Growing Up
+            Foundation para integrar una comunidad académica,
+            profesional, investigativa de la enfermería, logrando la
+            integración estas proyecciones y la evolución histórica
+            de la enfermería regional mencionada. Durante 2019 y
+            2020 logró convocar a más de 40.000 profesionales de
+            la enfermería de 26 países a participar en el desarrollo
+            de 100 eventos académicos.
+        </p>
+
+        <p>
+            Derivado del impulso de Growing Up surge una nueva
+            propuesta, la de desarrollar una campaña denominada
+            Unión de Enfermería de Latinoamérica (U-Nursing LatAm) con la idea de conformar una comunidad social
+            de integración de los diferentes actores en la región, a
+            partir de un campo de aprendizaje proactivo y en colaboración que promueva a través de la innovación las
+            buenas prácticas de enfermería en América latina. Este
+            es un claro ejemplo de un impacto positivo el cual tiene como objetivo, “crear una agenda común y visión
+            compartida de la enfermería en Latinoamérica, desde
+            una comunidad enfermera que promueva la unión en
+            cada uno de nuestros territorios y abierta a todo el mundo en el marco del cuidado de la vida, respetando
+            las
+            autonomías y diversidades propias de cada persona y
+            contexto”(14).
+        </p>
+
+        <p>
+            Para lograr la integración de U-Nursing LatAm se
+            cuenta con una dirección general, una dirección y coordinación global y tres direcciones y coordinaciones
+            por
+            región (México, Centroamérica y el Caribe, Sudamérica y Colombia), trabajando en conjunto para una mayor
+            visibilidad, transferencia del conocimiento, proyectos
+            de investigación, cooperación, formación y establecimiento de alianzas profesionales e instituciones, lo
+            que permite integrar esfuerzos, espacios colaborativos
+            y disminuir la fragmentación de acciones.
+        </p>
+
+        <p>
+            Sin embargo, para hablar de los impactos que ha generado la enfermería en la región de Latinoamérica, se
+            debe revisar la situación en materia de salud considerando el perfil epidemiológico y demográfico. Podemos
+            mencionar desde la realidad socio-económica como la
+            vulnerabilidad, situaciones de pobreza y pobreza extrema, predisponen el desarrollo de enfermedades de todo
+            tipo con predominio en las crónicas no transmisibles, a
+            pesar de los avances en cuestiones de salud.
+        </p>
+
+        <p>
+            A este evidente reto se suma la escasez de recursos
+            humanos lo cual se constituye como una brecha para
+            el cumplimiento de la meta universal de salud, en este
+            punto, enfermería es pieza clave a través del desempeño de sus diferentes funciones (gestión, docencia,
+            investigación y clínico-asistencial), los cuales tienen un
+            impacto en la formulación de políticas, la coordinación
+            y reestructuración de sistemas de salud, hasta el cuidado de personas familias y comunidades (13), aspectos
+            que siempre resalta estos organismos de salud regional
+            el cual hay que detallar desde las realidades vividas en
+            los contextos locales de cada una de las naciones latinas.
+        </p>
+
+        <p>
+            La situación de la enfermería pone en manifiesto diez
+            medidas fundamentales en las que se debe direccionar
+            las políticas para el personal de enfermería, como son
+            (12):
+        </p>
+
+        <ol class="lista">
+            <li>Incremento de la financiación para formar y emplear a más profesionales de enfermería. </li>
+            <li>Fortalecimiento de la capacidad de recopilación y
+                análisis y uso de los datos del personal de salud. </li>
+            <li>Supervisión de la movilidad y migración del personal de enfermería. </li>
+            <li>Mayor número de programas formativos con enfoque a la atención primaria de salud y la cobertura
+                sanitaria universal. </li>
+            <li>Mayor impulso en iniciativas para reforzar el liderazgo y gobernanza en enfermería.</li>
+            <li>Optimizar el ejercicio de los profesionales de enfermería a través de una planificación y reglamentación
+                eficaz. </li>
+            <li>Formular políticas al interior de los países que permita un trabajo decente.</li>
+            <li>Instar políticas con aspectos de género, como horarios flexibles y mayor oportunidad de liderazgo.
+            </li>
+            <li>Actualización de las reglamentaciones del ejercicio
+                profesional al interior de los países, debido a que se
+                debe garantizar y aprovechar la formación teórica y
+                práctica con equipos interprofesionales dinámicos.</li>
+            <li>Fortalecimiento de la capacidad para la gestión eficaz de las políticas públicas mediante el diálogo y
+                la colaboración institucional. </li>
+        </ol>
+
+        <p>
+            Estas medidas deben analizarse y estudiarse a fondo a
+            fin de permitir un avance de la profesión en sus funciones. Las alianzas colaborativas permiten mejorar las
+            condiciones laborales debido a que los esfuerzos dejan
+            de ser individuales y aislados a convertirse en robustos
+            y con mayor sustento documental, lo que genera que al
+            interior de los países de Latinoamérica se pueda avanzar y proponer mecanismos que han mostrado mejoras
+            en contextos similares.
+        </p>
+
+        <p>
+            Por lo anterior, retomaremos las cuatro funciones del
+            enfoque de la disciplina de enfermería, comentando los
+            aspectos positivos y negativos en cada uno, así como el
+            aporte desde la comunidad U-Nursing LatAm.
+        </p>
+
+        <p class="subtitulo-segundo">Gestión</p>
+
+        <p>
+            En relación con la función de desempeño de enfermería
+            en la gestión de los recursos, la mala regulación y el
+            poco reconocimiento de su propio avance profesional,
+            se le suma a la problemática propia del manejo de las
+            instituciones de salud donde laboran, enfrentándose a
+            dificultades de tiempo, la sobrecarga de trabajo, la realización de tareas que no son de su competencia y la
+            falta de apoyo de los superiores los cuales dificultan su
+            desempeño en cualquier contexto.
+        </p>
+
+        <p>
+            Desde otra perspectiva, se sigue resaltando la brecha
+            para el desarrollo del profesional de enfermería en
+            comparación de los países norteamericanos como se
+            destaca en el informe de orientación estratégica para
+            enfermería en la región latinoamericana el cual revela
+            que la mayor población enfermera en América Latina
+            está conformada por tecnólogos, técnicos y auxiliares
+            de enfermería, a diferencia de Estados Unidos que
+            cuenta con un aproximado de 80% de población enfermera compuesta por licenciados, Canadá 70% y en
+            México 38%. La situación para los demás países de la
+            región está por debajo de lo mostrado para las estadísticas en el caso mexicano donde la enfermería no es
+            una profesión de primera elección y relevancia, incluso
+            en algunos países se ha hecho una importante inversión destinada a la formación y posterior contratación
+            de auxiliares de enfermería, esto en contraposición a
+            la formación de los enfermeros profesionales quienes
+            cuentan con una formación de mayor tiempo y cualificación profesional (13).
+        </p>
+
+        <p>
+            Sin embargo, el campo de actuación de la enfermería
+            profesional en América Latina ha tenido una evolución
+            en su crecimiento con la ayuda de procesos de liderazgo. Se pueden citar diversos acontecimientos, por
+            ejemplo, en los años 30´s del siglo XX en Chile, Brasil
+            y Colombia con la lucha por los derechos laborales, se
+            suma sobre los años 50´s la representación a través de
+            mecanismos de participación denominados colegios,
+            asociaciones, sociedades, federaciones, en los años
+            80´s la puja política para el surgimiento de leyes y reglamentaciones que legitimara el actuar de los
+            enfermeros en cada país. Todo ello, son procesos de gestión que deben seguir evolucionando para posicionar
+            la enfermería latinoamericana teniendo en cuenta las
+            características propias de cada persona y las realidades
+            de cada territorio donde se evidencian múltiples realidades de la enfermera en su actuar.
+        </p>
+
+        <p>
+            En los últimos 50 años el aporte de FEPPEN ha sido
+            la cooperación y colaboración de 19 países miembros
+            con sus asociaciones nacionales que han llevado a la
+            consolidación de legislaciones de enfermería, posicionamiento de las asociaciones de escuelas y facultades
+            en los países y el escalamiento en los tomadores de decisiones para el fortalecimiento de enfermería en cada
+            nación (15). El trabajo realizado por ALADEFE de vincular a 21 países con sus 130 escuelas y facultades de
+            enfermería como una red que ha ido consolidando la
+            educación en enfermería en la formación profesional
+            y posgradual (16). Este proceso histórico ha llevado al
+            incremento de asociaciones, colegios, sociedades científicas y diversas organizaciones en los últimos años,
+            especialmente en Argentina, Perú, México y en los demás países de la región de manera gradual, es por ello
+            que, al iniciar este nuevo decenio surgen iniciativas
+            como la comunidad U-Nursing LatAm (13).
+        </p>
+
+        <p>
+            En este rubro en particular la campaña promueve la
+            difusión de agendas así como las prácticas de los profesionales y sus experiencias, lo que permite la
+            visibilidad de cada uno de los miembros y desarrollo de trabajo colaborativo en temáticas comunes, además se
+            da pauta a la constitución de alianzas y redes entre diferentes organizaciones como: colegios de enfermería,
+            asociaciones, escuelas y enfermeras y enfermeros, con
+            la intención de potencializar su prestigio y capacidad
+            de liderazgo en los diferentes funciones de desempeño
+            laboral y profesional. El logro a nivel Latinoamérica de
+            esta unión se traduce a 16 redes de enfermería y salud
+            integradas con la participación de 26 países (14).
+        </p>
+
+        <p class="subtitulo-segundo">Docencia/Enseñanza</p>
+
+        <p>
+            Los procesos formativos de enfermería en la región han
+            estado presentes desde finales del siglo XIX inicialmente conectados con ofertas desarrolladas por las
+            comunidades religiosas, militares, hospitales y centro de
+            atención en salud, especialmente en Argentina, Cuba,
+            Colombia, Chile, Ecuador y México (14).
+        </p>
+
+        <p>
+            Posterior a los años 30´s hasta los 70´s se consolida
+            la formación desde las universidades que empiezan
+            ampliar sus programas formativos en especial en las
+            instituciones de educación superior públicas, luego de
+            la globalización, el modelo neoliberal predominante
+            en varios países latinos y la necesidad de tener mayor capital humano disponible para las poblaciones se
+            da apertura desde inicio de los 90´s a las escuelas de
+            formación de enfermería privadas de esa manera ampliando el mercado formativo, impactando el mercado
+            laboral y de atención de acuerdo a las condiciones de
+            cada país (15,16).
+        </p>
+
+        <p>
+            Este proceso evolutivo en la parte formativa ha logrado
+            impactos positivos como negativos para y desde la enfermería, en primera instancia dando la posibilidad de
+            acceso a los procesos educativos universitarios a todo
+            tipo de población, la consolidación de generación de
+            conocimiento de enfermería para mejorar las condiciones de salud y sociales. Por otra parte, algunos de los
+            aspectos que mencionaremos a continuación son causas desde los procesos formativos que pueden seguir
+            desarrollando fragmentación, confusión, detrimento en
+            el imaginario social de la enfermería, lo que requieren
+            una necesidad de promover cambio de paradigma en la
+            educación de enfermería que incluya aspectos como la
+            atención primaria en salud y temas de impacto de salud
+            planetaria (22–25):
+        </p>
+
+        <ul class="lista">
+            <li>Oferta y formación centrada en el paradigma clínico y lo que pida el mercado para mayor acceso de
+                estudiantes.</li>
+            <li>Disparidades en los niveles formativos de casos
+                con 2 niveles técnico y profesional a los 6 niveles
+                formativos de enfermería como en el caso de México, Puerto Rico y Nicaragua.</li>
+            <li>Ausencia en los criterios de calidad para el acceso,
+                formación y certificación de las escuelas formativas.
+            </li>
+            <li>Planes formativos del siglo XX para realidades, situaciones y generaciones del siglo XXI.</li>
+            <li>Disparidad en la duración de la formación profesional.</li>
+            <li>Limitaciones económicas y sociales para el acceso
+                a la educación profesional y posgradual.</li>
+            <li>Profesión de poco reconocimiento social y económico en el ámbito de la generación de conocimiento
+                actual.</li>
+            <li>No aprovechamiento y visibilidad del conocimiento enfermero generado en América Latina para las
+                propias realidades de la región.</li>
+            <li>Precariedad y precarización laboral de los docentes.</li>
+            <li>Ausencia de capacidades de la comunidad académica de generar innovación para el campo empresarial en
+                salud.</li>
+            <li>Ausencia de gestores educativos que integren la
+                formación, la investigación, la extensión, la cooperación, la innovación para el desarrollo territorial.
+            </li>
+            <li>Bajo grado de formación de una segunda y tercera
+                lengua.</li>
+        </ul>
+
+        <p>
+            Para tratar de disminuir estos impactos negativos,
+            siempre a estado la necesidad de actuar ante estas realidades es por eso que permanentemente desde 1986
+            ALADEFE ha velado por promover los proceso de
+            calidad de los programas académicos de enfermería,
+            la cualificación docente y el desarrollo de las Conferencias Iberoamericanas de Educación en Enfermería,
+            orientándose recientemente hacía los desafíos curriculares en el contexto global, la investigación,
+            formación
+            y participación política del recurso humano en enfermería, además de temas de género, equidad y retos para
+            la profesión (26). De igual forma como parte de sus actividades de divulgación FEPPEN para 2019 desarrollo
+            su XV Congreso Internacional.
+        </p>
+
+        <p>
+            Desde la campaña U-Nursing LatAm se impulsan dos
+            acciones puntuales en la vertiente de la enseñanza, las
+            cuales esta dirigidas a la generación y coordinación de
+            eventos como; congresos, seminarios y agrupaciones
+            de la comunidad en general y de cada una de sus redes de interés para la planeación de producción y difusión
+            de conocimiento, además de promover la creación de
+            nuevos planes y programas formativos, nuevas redes
+            de conocimiento y nuevos espacios de cooperación en
+            la enfermería de América Latina (10).
+        </p>
+
+        <p>
+            Es de esta manera que desde los diferentes países se
+            impulsa este fortalecimiento o formulación de nuevos
+            programas en conjunto con las universidades logrando contar con proyectos como nuevas especialidades y
+            diplomados en los países de la región, al aportar desde
+            U-Nursing LatAm con expertos en diferentes ámbitos
+            y crear espacios de intercambio entre las diferentes naciones. Durante el 2019 y 2020 se generaron 100
+            eventos y se tuvo la participación de más de 40,000 personas
+            beneficiadas, mientras que en el 2021 se tienen programados 300 eventos, es decir, la comunidad U-Nursing
+            LatAm se ha fortalecido y esto permite llegar a mayor
+            número de espacios de enseñanza- aprendizaje.
+        </p>
+
+        <p class="subtitulo-segundo">Investigación</p>
+
+        <p>
+            La sociedad actual demanda de profesionales competentes cuyo actuar está fundamentado en la excelencia
+            en todas las áreas, esto parte de un buen avance desde
+            la academia para tener excelentes resultados en el campo asistencial pero con un gran aporte que se
+            desarrolla
+            desde la investigación científica (17).
+        </p>
+
+        <p>
+            Es por eso por lo que desde los años 50´s se adelantan
+            esfuerzos orientados hacia la comprobación de la teoría
+            en enfermería y han surgido avances de gran relevancia. A partir de la práctica basada en la investigación
+            se hace fundamental en el desarrollo disciplinar de una
+            práctica autónoma, es imprescindible que enfermería
+            pueda dar evidencia de su aporte en la salud individual
+            y colectiva mediante el desarrollo de la investigación
+            centrada en el cuidado que se sustente en un cuerpo
+            de conocimiento propio, además en esta era de cambio
+            constante es necesario desde el enfoque de liderazgo y
+            gestión investigativa inspirar a los colegas sin importar
+            el cargo que desempeñe (28).
+        </p>
+
+        <p>
+            La investigación científica permite ampliar el conocimiento de manera efectiva, ya que sin investigación no
+            hay crecimiento de la enfermería como ciencia, como
+            disciplina, ni como profesión (18). El metaparadigma
+            de enfermería sustenta esta área como una disciplina,
+            con el apoyo de teorías y fenómenos propios, lo que propicia seleccionar la perspectiva conveniente para
+            generar conocimiento válido según la naturaleza del
+            fenómeno de estudio (ontológico), la relación del investigador y el fenómeno a estudiar (epistemológico) e
+            instrumentos para comprender el fenómeno (metodológico) (19); el avance de la profesión de enfermería en la
+            región, tiene impactos positivos con el uso del método
+            científico, que permite no sólo la generación del conocimiento sino la utilidad y efectividad del mismo
+            (20).
+        </p>
+
+        <p>
+            A pesar de su importancia, para el desarrollo de la investigación en la región cuenta con barreras de todo
+            tipo, tanto en el plano educativo, social, institucional,
+            político que se describen aquí:
+        </p>
+
+        <ul class="lista">
+            <li>Déficit en los procesos formativos de pregrado y
+                posgrados.</li>
+            <li>Propuestas centradas en los intereses particulares
+                del investigador y no las realidades comunes de la
+                sociedad.</li>
+            <li>Débil financiación institucional y gubernamental.</li>
+            <li>Productos investigativos sin intervención y transformación social.</li>
+            <li>Esquemas burocráticos y grupos excluyentes por su
+                nivel de categorización de investigadores.</li>
+            <li>Burocracia del conocimiento de los pocos programas formativos.</li>
+            <li>Deficiente oferta de formación doctoral y de magíster en enfermería.</li>
+            <li>Generación de conocimiento aislada de la evolución de la 4ta revolución industrial.</li>
+            <li>Generación de conocimiento para grupos exclusivos y revistas de gran nivel donde no se tiene una
+                transferencia a los demás enfermeros y comunidad.</li>
+            <li>Integración en los procesos investigativos con los
+                actores políticos, económicos, empresariales para
+                transformar sus procesos, productos y necesidades
+                sociales.</li>
+            <li>Déficit en la transferencia y desarrollo de conocimiento escrito, audiovisual, legislativo y
+                tecnológico. </li>
+            <li>Bajo nivel de publicación en idioma inglés.</li>
+        </ul>
+
+        <p>
+            Parte de las iniciativas históricas para aportar al eje investigativo esta desde 1976 la Revista
+            Panamericana
+            de Enfermería desde FEPPEN a la fecha no se reporta nuevas ediciones desde 2012. Desde ALADEFE en
+            1990 aparece su revista y desde 2011 se viene generando producción continua en la Revista Iberoamericana de
+            Educación e Investigación en Enfermería (31)
+            dando así apertura a los diferentes Coloquios Panamericanos desde 1988 hasta su ultima versión para el año
+            2022 en Miami.
+        </p>
+
+        <p>
+            Para fortalecer esta función desde U-Nursing LatAm se
+            han propuesto diferentes proyectos de investigación e
+            innovación con la colaboración de los enfermeros de la
+            región (10). Bajo este esquema, a través de los líderes
+            (directores y coordinadores regionales), se ha logrado
+            realizar convenios con universidades e institutos de salud para impulsar la investigación en enfermería,
+            generar nuevo conocimiento y aportar a la ciencia para una
+            mejor toma de decisiones en salud.
+        </p>
+
+        <p class="subtitulo-segundo">Clínico-Asistencial</p>
+
+        <p>
+            El campo más visible desde el imaginario social para
+            enfermería, con acciones, actividades de cuidado directo a los usuarios de atención en salud en todo su
+            curso
+            de vida, en este plano son múltiples las experiencias
+            que se pueden relatar desde las acciones de cuidado en
+            diferentes niveles como el comunitario y hospitalario,
+            en su gran mayoría por el género femenino que históricamente han estado ejerciendo esta función (32), desde
+            el nacimiento, el cuidado en la línea de vida hasta propiciar una muerte digna (22).
+        </p>
+
+        <p>
+            En este eje de actuación los valores personales se conjugan con los profesionales se alinean con la acción
+            clínica de enfermería, como la preocupación, responsabilidad y compromiso efectivo con los demás abriendo
+            un espacio de sensibilidad y cordialidad (33). A partir
+            de estos valores la enfermería puede tener un abordaje
+            humano ante las situaciones y necesidades de la persona lo que lleva no sólo a enfocarse en la enfermedad
+            y en la urgencia de la gestión del servicio (23), estas
+            acciones cotidianas suelen pasar desapercibidas por la
+            sociedad, así como le pasa al familiar que cuida de otro
+            en casa sin importar que tipo de afección de salud tenga
+            (24).
+        </p>
+
+        <p>
+            Los contextos de cuidado no solo han quedado en el
+            plano clínico, siempre han estado presente el cuidado
+            social, el cuidado comunitario, el cuidado cultural que
+            debido a la dinámica de mercado y formación centrada en lo biomédico han quedado invisibles inclusive
+            del mismo profesional de enfermería. Es por ello que
+            la Organización Panamericana de la Salud promueve
+            la ampliación del rol de enfermería y fortalecimiento de la práctica avanzada como medio para dar respuesta
+            a las crecientes necesidades de salud que enfrenta la
+            población, considerando al personal de enfermería que
+            contribuye fundamentalmente a la gestión del cuidado
+            con un ejercicio profesional amplio y bien definido con
+            autonomía para la toma de decisiones (13).
+        </p>
+
+        <p>
+            En este plano se estimaría que al ser el espacio de mayor desarrollo de la enfermería tendría todas sus
+            dificultades cubiertas a través de una buena gestión, un
+            buen espacio de generación de conocimiento, excelentes procesos formativos, pero la realidad de los
+            profesionales que se enfrentan día a día al cuidado directo es
+            totalmente contraria a su evolución, con situaciones de
+            precariedad laboral, invisibilidad profesional, ausencia
+            o limitado escalamiento y crecimiento al interior de las
+            mismas instituciones, dificultades de orden personal en
+            la capacidad de comunicarse, relacionarse, movilizarse, organizarse que se recitan en el día a día de
+            colegas
+            que llevan décadas en el mismo servicio, en la misma
+            labor, con el mismo conocimiento y con mayor desgaste laboral y personal.
+        </p>
+
+        <p>
+            Las realidades latinoamericanas son importantes mencionarlas teniendo en cuenta que la mayoría del
+            conocimiento para el desarrollo de la enfermería se genera
+            en otros contextos ajenos al regional por lo cual hablar
+            del papel de la enfermería debe estar acorde a las realidades de sus territorios y capacidades para la
+            transformación del sector salud. Es por ello del impacto de diversas acciones realizadas en U-Nursing LatAm
+            a que
+            múltiples participantes, ponentes, expertos y asistentes
+            en diferentes congresos, cursos, seminarios, talleres,
+            programas formativos desarrollan sus acciones laborales en el campo clínico-asistencial.
+        </p>
+
+        <p>
+            La interconexión entre los cuatro pilares es compleja en
+            la vida real, con poco más de 100 años la enfermería en
+            América Latina continúa buscando la integralidad. Esta
+            desarticulación se observa desde las diferentes funciones, por ejemplo, quienes se desarrollan y enfocan en
+            el
+            ámbito académico les pareciera fácil implementar desde la teoría acciones clínico-asistenciales, sin
+            embargo,
+            los nuevos procesos a implementar requieren de una
+            diversidad de acciones como la organización, gestión,
+            promoción, manejo financiero, apoyo de los líderes,
+            entre otras, que pueden resultar en un fracaso por no
+            realizar una planeación e involucrar a todos los actores
+            que resulta fundamental para lograr el impacto en las
+            estrategias que se requieren.
+        </p>
+
+        <p>
+            Se requiere que los gobiernos inviertan en la educación
+            en enfermería, con profesores preparados para las realidades de los sistemas de salud y de las necesidades
+            de la población, generar empleos bien remunerados y
+            apegados a normativa, actualmente los profesionales
+            de enfermería alcanzan niveles de doctorado y posdoctorado, sin embargo, las plazas laborales no contemplan
+            estas categorías de contratación en las diferentes
+            naciones, así como el fortalecimiento del liderazgo a
+            fin de que estos profesionales tengan una participación
+            activa en la toma de decisiones, formulación de políticas y mejoren los sistemas de salud.
+        </p>
+
+        <p>
+            Aun así, tienen retos que mejorar no solo en los ámbitos de las 4 funciones, son aspectos de orden de
+            habilidades sociales y blandas que deben potencializarse y/o
+            mejorarse en el plano personal y colectivo entre ellas
+            resaltamos las siguientes:
+        </p>
+
+
+        <ul class="lista">
+            <li>Mejorar su comunicación y sentirse parte de una
+                región ampliando más allá su propio conocimiento.</li>
+            <li>Mejorar la rigidez en su comunicación.
+            </li>
+            <li>Reconocer las posibilidades de formación que tienen y la diversidad de espacios de representación
+                organizacional y civil.</li>
+            <li>Integrarse con la región y construir colectivamente.</li>
+            <li>Eliminar sus sesgos políticos, profesionales al interior de enfermería y permitir menos centralización.
+            </li>
+            <li>Seguir apoyando el surgimiento de sus procesos de
+                representación descentralizados.</li>
+            <li>Aprovechar los buenos resultados de la construcción del pasado para generar resultados positivos
+                actuales y futuros.</li>
+            <li>Generar escalamiento, negociación, posicionamiento, aspectos propios de la dinámica empresarial y
+                política.</li>
+            <li>Generar alianzas entre organismos históricos de la
+                enfermería regional y las iniciativas actuales locales y regionales.
+            </li>
+        </ul>
+
+        <!-- conclusiones -->
+
+        <hr>
+
+        <p class="titulo">Conclusiones</p>
+
+        <ul class="lista">
+            <li>Los impactos han sido positivos en las 4 funciones de la enfermería en América Latina esto como
+                parte de un crecimiento y evolución constante que
+                también nos muestra los aspectos a potencializar y
+                las dificultades en su articulación, estos retos y debilidades que se expusieron en el plano educativo,
+                investigativo, clínico y de gestión pueden tomar línea para ir consolidando en el tiempo una agenda
+                regional y local desde cada país. Se puede considerar que los mayores avances de la enfermería de
+                acuerdo con sus productos en estas funciones y el
+                imaginario social se dan en los siguientes países:
+                Brasil, México, Chile, Uruguay, Perú, Argentina,
+                Colombia y Cuba. Sin dejar de lado los positivos
+                avances que cada país en particular pueda tener
+                para lo cual se invita a desarrollar análisis particulares de cada nación de la región de su situación
+                actual y los avances. </li>
+            <li>Cada vez son mayores los retos para la enfermería
+                gracias a la evolución social, tecnológica, generacional que se vive permanentemente a nivel global,
+                uno de los retos a los que también debe tomarse
+                atención teniendo una situación post Covid-19 relacionado con la recesión y recuperación económica,
+                la lucha contra el cambio climático, la protección
+                de la biodiversidad. Esto requiere una necesidad
+                de reforzar las estructuras sanitarias, las alianzas
+                entre todas la redes, asociaciones, federaciones y
+                espacios de integración de la enfermería local y
+                regional como U-Nursing LatAm y sus redes para
+                seguir creciendo hacía la agenda 2030 y la evolución como profesión ante el mundo (25), aspectos
+                que deben ampliarse rápidamente en la enseñanza,
+                la investigación, la gestión y la asistencia desde enfermería.</li>
+        </ul>
+
+        <p class="subtitulo">Conflicto de interes</p>
+
+        <p>
+            Los autores declaran no tener ningún conflicto de intereses.
+        </p>
+
+        <!-- Referencias -->
+
+        <hr>
+
+        <p class="titulo"> Referencias </p>
+
+        <ol class="lista">
+            <li id="r1">IDuran de Villalobos MM. DISCIPLINA DE ENFERMERIA LIBRO. Bogotá; 2001. 1–43 p.</li>
+            <li id="r2">International Council of Nurses. International Council of Nurses. 2002. </li>
+            <li id="r3">Waldow VR. Enseñanza de enfermería centrada en el cuidado. Aquichan. 2009;9(3):246–56.</li>
+            <li id="r4">Escobar-Castellanos B, Sanhueza-Alvarado O. Carper knowledge patterns and expression in nursing
+                care:
+                review study. Enfermería Cuid Humaniz. 2018;7(1):73–87. </li>
+            <li id="r5">Moreno-Fergusson ME. Importancia de los modelos conceptuales y teorías de enfermería:
+                experiencia de la
+                Facultad de Enfermería de la Universidad de La Sabana. In 2005. </li>
+            <li id="r6">Portillo MC (María C. Diferencias entre Perfiles Enfermeros: Práctica Avanzada, Enfermería
+                Asistencial Y
+                Gestión. Fac Enfermería, Univ Navarra. 2010;67–89.</li>
+            <li id="r7">Vásquez PAC. DESDE LOS ÁMBITOS DE ENFERMERÍA, ANALIZANDO EL CUIDADO HUMANIZADO. Cienc y
+                enfermería. 2010;16(1):31–5. </li>
+            <li id="r8">Organizacion Mundial de la Salud. Situación de Enfermería en el Mundo 2020: Invertir en
+                educación, empleo
+                y liderazgo [Internet]. 2020. 144 p. Available from: <a
+                    href="https://apps.who.int/iris/bitstream/handle/10665/332164/9789240004948-spa.pdf?sequence=1&isAllowed=y">https://apps.who.int/iris/bitstream/handle/10665/332164/9789240004948-spa.pdf?sequence=1&isAllowed=y</a>
+            </li>
+            <li id="r9">All-Party Parliamentary Group on Global Health. Triple Impact of Nursing [Internet]. APPG on
+                Global Health. 2016. 51 p. Available from: <a
+                    href="http://www.appg.globalhealth.org.uk/">http://www.appg.globalhealth.org.uk/</a></li>
+            <li id="r10">Vale-Gomes E, Da-Silva MJ. LA FEDERACIÓN PANAMERICANA DE PROFESIONALES DE ENFERMERÍA: visión y
+                proyecciones para el siglo XXI. Rev Bras Enferm [Internet]. 2004;57(1):62–5. Available
+                from: <a
+                    href="https://www.scielo.br/j/reben/a/zX9bLPBphfSMtNwLCXWGWKf/?lang=es&format=pdf">https://www.scielo.br/j/reben/a/zX9bLPBphfSMtNwLCXWGWKf/?lang=es&format=pdf</a>
+            </li>
+            <li id="r11">Izquierdo-Hernández A. Reflexiones en torno al desarrollo de la Federación Panamericana de
+                Profesionales
+                de Enfermería (FEPPEN). Rev Panam Enfermería [Internet]. 2015;12(1):7. Available from: <a
+                    href="https://instituciones.sld.cu/feppen/files/2014/10/Revista-Pan-Enf.pdf">https://instituciones.sld.cu/feppen/files/2014/10/Revista-Pan-Enf.pdf</a>
+            </li>
+            <li id="r12">Rubio MA, Morán L, Martínez MG. La trayectoria de ALADEFE, a 25 años de su creación. Origen,
+                desarrollo y desafíos. Rev Iberoam Educ e Investig en Enfermería [Internet]. 2011;1(1):40–5. Available
+                from: <a
+                    href="https://www.enfermeria21.com/revistas/aladefe/articulo/11/la-trayectoria-de-aladefe-a-25-anos-de-su-creacion-origen-desarrollo-y-desafios/">https://www.enfermeria21.com/revistas/aladefe/articulo/11/la-trayectoria-de-aladefe-a-25-anos-de-su-creacion-origen-desarrollo-y-desafios/</a>
+            </li>
+            <li id="r13">Organización Panamericana de la Salud (OPS). Orientación estratégica para enfermería en la
+                Región de las
+                Américas. 2019. 18–40 p. </li>
+            <li id="r14">Rodríguez J. Te invitamos a conocer proyectos que nacieron bajo la campaña Nursing Now. Rev
+                Enfermería [Internet]. 2020 [cited 2022 Jan 12];154:45–6. Available from: <a
+                    href="https://enfermeriachl.files.wordpress.com/2020/05/revista-enfermeria-nro.-154-mayo-2020.pdf">https://enfermeriachl.files.wordpress.com/2020/05/revista-enfermeria-nro.-154-mayo-2020.pdf</a>
+            </li>
+            <li id="r15">Federación Panamericana de Profesionales de Enfermería. Objetivos [Internet]. 2022 [cited 2022
+                Nov 28].
+                Available from: <a
+                    href="https://instituciones.sld.cu/feppen/objetivos/">https://instituciones.sld.cu/feppen/objetivos/</a>
+            </li>
+            <li id="r16">Asociación Latinoamericana de Escuelas y Facultades de Enfermería ALADEFE. Afiliados a ALADEFE
+                [Internet]. [cited 2022 Nov 28]. Available from: <a
+                    href="https://www.aladefe.org/afiliados.php">https://www.aladefe.org/afiliados.php</a></li>
+            <li id="r17">Rodríguez J. Liderazgo en la enfermería latinoamericana, una dinámica de cambio permanente. Rev
+                Cuid [Internet]. 2020 [cited 2020 Apr 22];9(18.1):40–7. Available from: <a
+                    href="http://revistas.unam.mx/index.php/cuidarte/article/download/77576/68552">http://revistas.unam.mx/index.php/cuidarte/article/download/77576/68552</a>
+            </li>
+            <li id="r18">Nájera R, Castrillón M. La Enfermería en América Latina situación actual, áreas críticas y
+                lineamientos para un plan de desarrollo. Aladefe [Internet]. 2000 [cited 2021 Jul 16];19. Available
+                from: <a
+                    href="http://www.aladefe.org/articulos/la_enfermeria_en_america_latina.pdf">http://www.aladefe.org/articulos/la_enfermeria_en_america_latina.pdf</a>
+            </li>
+            <li id="r19">Rodríguez R. Los orígenes de la enfermería comunitaria en Latinoamérica. Rev la Univ Ind
+                Santander Salud
+                [Internet]. 2017 [cited 2021 Jul 16];48(3):490--497. Available from: <a
+                    href="http://dx.doi.org/10.18273/revsal.v49n3-2017007">http://dx.doi.org/10.18273/revsal.v49n3-2017007</a>
+            </li>
+            <li id="r20">Luengo-Martínez CE, Sanhueza-Alvarado O. Formación del licenciado en Enfermería en América
+                Latina.
+                Aquichan [Internet]. 2016 [cited 2021 Jul 16];16(2):240–55. Available from: <a
+                    href="https://www.redalyc.org/journal/741/74146013011/html/">https://www.redalyc.org/journal/741/74146013011/html/</a>
+            </li>
+            <li id="r21">Velandia M. Presente de la enfermeria americana. Rev Temperamentvm [Internet]. 2007 [cited 2021
+                Jul
+                16];3(6). Available from: <a
+                    href="https://instituciones.sld.cu/feppen/files/2013/04/Presente-de-la-enfermería-americana1.pdf">https://instituciones.sld.cu/feppen/files/2013/04/Presente-de-la-enfermería-americana1.pdf</a>
+            </li>
+            <li id="r22">De Bortoli Cassiani S, Wilson L, De Souza S, Peña L, Zarate R, McCreary L, et al. The situation
+                of nursing
+                education in latin america and the caribbean towards universal health. Rev Lat Am Enfermagem [Internet].
+                2017 [cited 2021 May 21];25:14. Available from: <a
+                    href="https://www.scielo.br/pdf/rlae/v25/es_0104-1169-rlae25-e2913.pdf">https://www.scielo.br/pdf/rlae/v25/es_0104-1169-rlae25-e2913.pdf</a>
+            </li>
+            <li id="r23">Kurth AE. Planetary Health and the Role of Nursing: A Call to Action. J Nurs Scholarsh
+                [Internet].
+                2017;49(6):598–605. Available from: <a
+                    href="https://doi.org/10.1111/jnu.12343">https://doi.org/10.1111/jnu.12343</a></li>
+            <li id="r24">Rodríguez-López J. Evolución de los planteamientos mundiales en sustenibilidad hasta la
+                responsabilidad de
+                enfermería en la actualidad. Cult del Cuid [Internet]. 2021;18(2):4–9. Available from: <a
+                    href="https://revistas.unilibre.edu.co/index.php/cultura/article/view/8414/7467">https://revistas.unilibre.edu.co/index.php/cultura/article/view/8414/7467</a>
+            </li>
+            <li id="r25">Rodríguez E, Sandoval S, Ospino J, Rodríguez D, González M, Muñoz E, et al. El Rol de
+                enfermería en la
+                Atención Primaria de Salud: Una revisión integrativa. In: Molero M, Belén A, Simón M, Martos A, editors.
+                INVESTIGACIÓN Y PRÁCTICA EN SALUD: NUEVAS PERSPECTIVAS [Internet]. 1ra ed. 2020 [cited
+                2021 Jul 30]. p. 209. Available from: <a
+                    href="https://www.researchgate.net/publication/353559141_El_Rol_de_enfermeria_en_la_Atencion_Primaria_de_Salud_Una_revision_integrativa">https://www.researchgate.net/publication/353559141_El_Rol_de_enfermeria_en_la_Atencion_Primaria_de_Salud_Una_revision_integrativa</a>
+            </li>
+            <li id="r26">Asociación Latinoamericana de Escuelas y Facultades de Enfermería ALADEFE. Ejes temáticos
+                [Internet]. Congreso ALADEFE Granada 2021. 2021 [cited 2022 Nov 29]. Available from: <a
+                    href="https://aladefe.com/lema-y-ejes-tematicos/">https://aladefe.com/lema-y-ejes-tematicos/</a>
+            </li>
+            <li id="r27">Lombardo-Vaillant TA, de Dios-Soler MC, Miralles Aguilera E de los Á. Revista Cubana de
+                Educación Médica Superior. Educ Médica Super. 2013;27(1):135–45. </li>
+            <li id="r28">Tropello PD, DeFazio J. Servant Leadership in Nursing Administration and Academia Shaping
+                Future Generations of Nurses and Interdisciplinary Team Providers to Transform Healthcare Delivery.
+                Nurse Lead [Internet]. 2014;12(6):59–61. Available from: <a
+                    href="http://dx.doi.org/10.1016/j.mnl.2014.09.010">http://dx.doi.org/10.1016/j.mnl.2014.09.010</a>
+            </li>
+            <li id="r29">Justo E, Aristizabal G, Casales M, Rodríguez J, Muñoz E, Gonzalez M, et al. Curso
+                latinoamericano de gestión y liderazgo en enfermería: liderazgo en la investigación de enfermería
+                [Internet]. Sánchez L, Rodríguez
+                J, editors. Mar del Plata; 2020. 62 p. Available from: <a
+                    href="http://sgc.anlis.gob.ar/handle/123456789/1662">http://sgc.anlis.gob.ar/handle/123456789/1662</a>
+            </li>
+            <li id="r30">Díaz-Heredia LP, Bueno-Robles LS, Mejía-Rojas ME, López L. Investigación de enfermería: una
+                caracterización en dos publicaciones latinoamericanas. Av en Enfermería [Internet]. 2011 [cited 2021 Jul
+                16];29(2):285–
+                93. Available from: <a
+                    href="https://docs.bvsalud.org/biblioref/2020/08/102473/investigacion-de-enfermeria-una-caracterizacion-en-dos-publicac_820RMcp.pdf">https://docs.bvsalud.org/biblioref/2020/08/102473/investigacion-de-enfermeria-una-caracterizacion-en-dos-publicac_820RMcp.pdf</a>
+            </li>
+            <li id="r31">Velandia-Mora AL. La enfermería en Colombia. Análisis Sociohistórico. História da Enferm Rev
+                Eletrônica
+                [Internet]. 2010;1(2):263–94. Available from: <a
+                    href="http://www.here.abennacional.org.br/here/n2vol1ano1_artigo4.pdf">http://www.here.abennacional.org.br/here/n2vol1ano1_artigo4.pdf</a>
+            </li>
+            <li id="r32">Dominguez M, Forner V, Roncalés L. Vivencias de un profesional de enfermería ante la muerte de
+                un familiar. In: Vivencias de un profesional de enfermería ante la muerte de un familiar [Internet].
+                2012. Available from:
+                <a
+                    href="https://dialnet.unirioja.es/servlet/articulo?codigo=4138227">https://dialnet.unirioja.es/servlet/articulo?codigo=4138227</a>
+            </li>
+            <li id="r33">Enghiad P, Venturato L, Ewashen C. Exploring clinical leadership in long-term care: An
+                integrative literature review. J Nurs Manag [Internet]. 2022;30(1):90–103. Available from: <a
+                    href="https://onlinelibrary.wiley.com/doi/full/10.1111/jonm.13470">https://onlinelibrary.wiley.com/doi/full/10.1111/jonm.13470</a>
+            </li>
+            <li id="r34">Trevizan MA, Mendes IAC, Lourenço MR, Melo MRA da C. Al encuentro de la competencia del cuidado
+                según Boff: una nueva perspectiva de conducta ética de la enfermera gerente. Rev Lat Am Enfermagem
+                [Internet]. 2003 [cited 2021 Jul 16];11(5):652–7. Available from: <a
+                    href="https://www.scielo.br/j/rlae/a/qhJScV5kb36CVt39b3nwQWb/?lang=pt&format=pdf">https://www.scielo.br/j/rlae/a/qhJScV5kb36CVt39b3nwQWb/?lang=pt&format=pdf</a>
+            </li>
+            <li id="r35">Rodríguez J, Aponte S, Gonzalez M, Dimate A, Muñoz E. Avances de la vinculación del componente
+                ambiental y de hospitales verdes en carreras de Ciencias de la Salud. In: Restrepo H, Rodríguez J,
+                editors. Hospitales
+                Verdes: un nuevo desafío para América Latina [Internet]. 1ra ed. Bogotá D.C; 2020 [cited 2021 Mar 4]. p.
+                251–86. Available from: <a
+                    href="https://www.researchgate.net/publication/353558771_Avances_de_la_vinculacion_del_componente_ambiental_y_hospitales_verdes_en_carreras_de_ciencias_de_la_salud">https://www.researchgate.net/publication/353558771_Avances_de_la_vinculacion_del_componente_ambiental_y_hospitales_verdes_en_carreras_de_ciencias_de_la_salud</a>
+            </li>
+        </ol>
+    </div>
+</body>
+
+</html>

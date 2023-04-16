@@ -1,0 +1,1236 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V19-N3-4</title>
+    <link rel="stylesheet" href="">
+    <style>
+        body {
+            padding: 10em;
+            padding-top: 20px;
+            font-family: Times New Roman;
+            color: black;
+        }
+
+        #articulo-derecha {
+            float: left;
+        }
+
+        /* Posiciones de los resumenes */
+
+        .contenedor-general {
+            display: inline-flex;
+            width: 100%;
+        }
+
+        .contenedor-resumen {
+            width: 240%;
+        }
+
+        .contenedor-autor {
+            width: 100%;
+            padding-left: 20px;
+        }
+
+        .hr-resumen {
+            background-color: gray;
+            margin: 0;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .resumen-fondo {
+            background-color: #bdd5f1;
+            border-radius: 5px;
+        }
+
+        .titulo-resumen {
+            color: black;
+            font-size: 22px;
+            font-weight: bold;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .texto-resumen {
+            padding: 20px;
+            margin: 0;
+        }
+
+        ul.navbar {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 25em;
+            left: 2em;
+            width: 250px;
+        }
+
+        /* Titulos principales */
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: Times New Roman;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        h1 {
+            color: #29abe3;
+        }
+
+        .categoria_titulo {
+            font-style: italic;
+            color: #ffffff;
+        }
+
+        h3 {
+            font-style: italic;
+            font-weight: bold;
+            color: #707073;
+        }
+
+        .categoria {
+            text-align: center;
+            background-color: #707073;
+            width: 20%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            margin: auto;
+        }
+
+        ul.navbar li {
+            background: white;
+            margin: 0.5em 0;
+            padding: 0.3em;
+        }
+
+        /* Enlaces */
+
+        a.link-color:visited {
+            color: white;
+        }
+
+        a.link-color:link {
+            color: white;
+        }
+
+        a.link-color:hover {
+            color: white;
+        }
+
+        a.link-color:hover {
+            border-bottom: 1px solid;
+            background: black;
+        }
+
+        /* Link de referencia */
+
+        a:link {
+            color: #4e00ff;
+        }
+
+        a:visited {
+            color: #003bff;
+        }
+
+        a:focus {
+            border-bottom: 1px solid;
+            background: #98aae4;
+        }
+
+        a:hover {
+            border-bottom: 1px solid;
+            background: #aacefe;
+        }
+
+        /* Etiqueta P */
+
+        p {
+            line-height: normal;
+            text-align: justify;
+            font-size: 18px;
+        }
+
+        p.titulo {
+            color: #29abe3;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        p.subtitulo {
+            color: #29abe3;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* NUEVO */
+        p.subtitulo-segundo {
+            color: #29abe3;
+            font-style: italic;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        p.correspondencia {
+            color: black;
+            font-size: 18px;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        /* NUEVO */
+        p.entrevista {
+            color: black;
+            font-size: 18px;
+            font-style: italic;
+        }
+
+        /* NUEVO */
+        p.subtitulo-tercero {
+            color: #29abe3;
+            font-style: italic;
+            font-size: 18px;
+        }
+
+        p#cabeza {
+            color: #1d71ae;
+            text-align: center;
+        }
+
+        p.autores {
+            font-size: 16px;
+            margin: 0;
+            text-indent: 0em;
+            margin-bottom: 10px;
+        }
+
+        p.forma-citar {
+            text-indent: 0em;
+            text-align: justify;
+            justify-content: center;
+        }
+
+        .cita {
+            text-align: -webkit-center;
+        }
+
+        /* Bold especial para palabras que tienen color seguido de dos puntos
+*/
+
+        /* NUEVO */
+
+        b.subtitulo-segundo {
+            color: #29abe3;
+            font-size: 18px;
+        }
+
+        .contenedor_info {
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .info {
+            width: auto;
+        }
+
+        /* Este es para los documentos del dos en adelante *codigo abajo de este comentario* */
+
+        .info-text {
+            text-align: end;
+            margin: 0;
+        }
+
+        /* Uso Exlusico para el primero documento  que es de revision  *codigo abajo de este comentario* */
+
+        .info_text {
+            font-size: 12px;
+            line-height: 100%;
+            text-align: center;
+            margin: 0;
+        }
+
+        .info_hr {
+            margin: 5;
+        }
+
+        /* Fin P */
+        /* Etiqueta Italic */
+
+        i {
+            font-size: 18px
+        }
+
+        i.centrado {
+            font-size: 18px
+        }
+
+        /* LI para las listas */
+
+        li {
+            font-size: 18px;
+            padding-top: 10px;
+            text-align: justify;
+        }
+
+        /* NUEVO */
+        .lista li {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        hr {
+            background-color: #29abe3;
+            height: 1px;
+        }
+
+        /* Tablas */
+
+        table {
+            border-collapse: collapse;
+            border: 2px solid rgb(0, 0, 0);
+            align-items: center;
+        }
+
+        thead th {
+            border-collapse: collapse;
+            background-color: rgb(179, 179, 179);
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        tbody td {
+            border-collapse: collapse;
+            text-align: center;
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        .tipo {
+            color: #ffffff;
+            font-size: 22px;
+            border-radius: 10px 5px 10px 5px;
+            background-color: #696969;
+        }
+
+        img.logos {
+            width: 15px;
+            height: 15px;
+        }
+
+        .image {
+            text-align: center;
+            image-rendering: optimizeQuality;
+        }
+
+        .image p {
+            text-align: center;
+            font-size: small;
+        }
+
+        .logo {
+            width: 300px;
+            height: 80px;
+        }
+
+        .logo2 {
+            width: 300px;
+            height: 50px;
+        }
+
+        /* Anclajes de la pagina */
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* NUEVO */
+        .ecuacion {
+            text-align: center;
+            font-weight: bold;
+            margin: 1px;
+        }
+
+        @media only screen and (min-width:320px) and (max-width:900px) {
+            body {
+                width: 100%;
+                padding: 5em;
+                margin: 5px;
+            }
+
+            .image {
+                text-align: center;
+                image-rendering: optimizeQuality;
+            }
+
+            .image img {
+                width: 100%;
+            }
+
+            .image p {
+                font-size: small;
+                text-align: center;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="contenedor_info">
+        <div>
+            <img src="img/globales/logo.jpg" alt="" height="125px">
+        </div>
+        <div class="info" style="text-align: right;">
+            <p class="info-text"> ISSN-PRINT 1794-9831 / E-ISSN 2322-7028 </p>
+            <p class="info-text"> Vol. 19 Nº 3 / sep - dic, 2022 / Cúcuta, Colombia. </p>
+            <p class="info-text">
+                <img src="img/globales/doi.png" height="20px" alt="">
+                <a href="https://doi.org/10.22463/17949831.3292">https://doi.org/10.22463/17949831.3292</a>
+            </p>
+        </div>
+    </div>
+
+
+    <!--Categoría-->
+    <div class="categoria">
+        <h2 class="categoria_titulo">Original </h2>
+    </div>
+
+    <h1> Dilemas éticos en enfermería desde una reflexión multicéntrica </h1>
+
+    <h2 class="segundo"> Ethical dilemmas in nursing from a multicentre reflection</h2>
+
+    <h2 class="segundo"> Dilemas éticos na enfermagem a partir de uma reflexão multicêntrica</h2>
+
+
+    <!--Autores-->
+    <h3>
+        Ernesto Gabriel Reimundo Acosta <sup><a href="#sup1">1*</a> </sup> <br>
+        Stefanía Johanna Cedeño-Tapia <sup><a href="#sup2">2*</a> </sup> <br>
+        Taycia Ramírez-Pérez <sup><a href="#sup3">3*</a> </sup> <br>
+        Margareth Nerly Villalobos-Guiza <sup><a href="#sup4">4*</a> </sup> <br>
+        Solange Johanna Ríos <sup><a href="#sup5">5*</a> </sup> <br>
+    </h3>
+
+
+    <!-- Conetenedor de las columnas de la descripciones de los autores, correspondencia de autor 
+    y los resumenes -->
+    <div class="contenedor-general">
+
+
+        <!-- Contenedor de los resumenes -->
+        <div class="contenedor-resumen">
+
+            <!-- Resumen Español -->
+
+            <div class="resumen-fondo">
+                <p class="titulo-resumen"> Resumen</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> <b>Objetivo:</b> Describir la percepción de los estudiantes de enfermería
+                    respecto a los dilemas éticos en el ejercicio de su profesión. <b>Materiales y Métodos:</b> Se
+                    realizó un estudio cualitativo,
+                    de tipo fenomenológico, con paradigma sociocrítico que involucra los juicios, los valores y
+                    los intereses de la sociedad. Para obtener la información, se aplicó una entrevista semiestructurada
+                    a un grupo focal, organizada mediante preguntas abiertas, las cuales se realizaron mediadas por la
+                    virtualidad; posteriormente fueron grabadas previo consentimiento informado,
+                    para finalmente transcribirlas para su análisis desde la perspectiva del discurso. El análisis
+                    se efectuó mediante un proceso de reducción, con codificación abierta en un inicio y axial
+                    después para su categorización, con la ayuda del ATLAS.ti, Versión 9, a prueba. <b>Resultados:</b>
+                    Luego del análisis de los discursos, emergieron 5 categorías que fueron: Percepciones éticas
+                    de los profesionales de la enfermería; comités de bioética y el posicionamiento de la enfermería;
+                    dilemas éticos y bioéticos que persisten en el tiempo; retos que representan los dilemas
+                    éticos en la humanización de la enfermería y de la persona que está detrás de la profesión.
+                    Todas con sus respectivas subcategorías y códigos. <b>Conclusiones:</b> Hay una realidad común
+                    sobre los dilemas éticos más frecuentes que enfrentan los estudiantes de enfermería desde
+                    su formación hasta el ejercicio profesional. Así mismo, existen diferencias según el marco
+                    legal de cada país o situación en particular. Es importante resaltar que la participación de la
+                    enfermería en los Comités de bioética aporta significativamente a los debates internos a la
+                    hora de abordar las problemáticas o dilemas éticos; igualmente, orientan el actuar del equipo
+                    de salud, en sus diferentes cargos desde la consultoría hasta la presidencia de estos equipos
+                    interdisciplinarios. </p>
+
+                <p class="texto-resumen">
+                    <b>Palabras Claves: </b> Ética; Bioética; Enfermería; Comités de ética.
+                </p>
+            </div>
+            <!-- Resumen Inglés -->
+
+            <div>
+                <p class="titulo-resumen"> Abstract</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> <b>Objective:</b> Describe the perception of nursing students regarding the
+                    ethical dilemmas in the
+                    practice of their profession. <b>Materiales y Methods:</b> A qualitative, phenomenological study
+                    was carried-out, with socio-critical paradigm that involves the judgements, values and interests of
+                    society. To obtain the information, a semi-structured interview was applied in a focus
+                    group, organized through open questions, which were mediated by virtual meetings; these
+                    were subsequently recorded with previous informed consent, to finally transcribe the interviews for
+                    a discourse analysis from their perspective. The analysis was completed through a
+                    reduction process, firstly with open coding and then using axial coding for its categorization, with
+                    help using ATLAS.ti, Version 9, trial. <b>Results:</b> After the discourse analysis, 5 categories
+                    emerged: Ethical perceptions of nursing professionals, bioethics committees and nursing
+                    positioning; ethical and bioethical dilemmas that persist over time; challenges that ethical
+                    dilemmas represent in the humanization of nursing and the person behind the profession. Each
+                    category with its respective subcategories and codes. <b>Conclusions:</b> There is a common reality
+                    about the most frequent ethical dilemmas that nursing students face from their education to
+                    their professional practice. Similarly, there are differences according to the legal framework
+                    of each country or particular situation. It is important to note that the participation of nursing
+                    in bioethical Committees significantly contributes to internal discussions to address the ethical
+                    dilemmas or issues; likewise, orientating the actions taken by the health teams, in their
+                    different positions from consultancy to presidency of these interdisciplinary teams. </p>
+
+                <p class="texto-resumen">
+                    <b>KeyWords:</b> Ethics; Bioethics; Nursing; Ethics Committees.
+                </p>
+            </div>
+            <!-- Resumen Portuguez -->
+
+            <div class="resumen-fondo">
+                <p class="titulo-resumen"> Resumo</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> <b>Objetivo:</b> Descrever a percepção dos alunos de enfermagem em relação aos
+                    dilemas éticos
+                    no exercício de sua profissão. <b>Materiais e Métodos:</b> Estudo qualitativo e fenomenológico,
+                    realizado com um paradigma sociocrático que envolve os julgamentos, valores e interesses da
+                    sociedade. Para obter as informações, foi aplicada uma entrevista semiestruturada a um grupo
+                    focal, empregando perguntas abertas, realizadas mediadas pela virtualidade; posteriormente,
+                    foram gravadas com permissão obtiva mediante consentimento livre e esclarecido, finalmente
+                    transcritas para análise na perspectiva do discurso. A análise foi realizada por meio de um
+                    processo de redução, com codificação aberta realizada inicialmente e depois axial para
+                    categorização, com a ajuda do ATLAS.ti, Versão 9. <b>Resultados:</b> Após a análise, surgiram 5
+                    categorias que foram: Percepções éticas dos profissionais de enfermagem; comitês de bioética e o
+                    posicionamento da enfermagem; dilemas éticos e bioéticos que persistem ao longo do tempo;
+                    desafios que representam os dilemas éticos na humanização da enfermagem e da pessoa por
+                    trás da profissão. Todos com suas respectivas subcategorias e códigos. <b>Conclusões:</b> Há uma
+                    realidade comum sobre os dilemas éticos mais frequentes enfrentados pelos estudantes de
+                    enfermagem desde sua formação até a prática profissional. Da mesma forma, há diferenças
+                    do contexto legal específico de cada país ou situação em particular. É importante ressaltar que
+                    a participação da enfermagem nos Comitês de Bioética contribui significativamente para os
+                    debates internos na abordagem de problemas ou dilemas éticos; da mesma forma, orientam as
+                    ações da equipe de saúde, em suas diferentes posições, desde a consultoria até a presidência
+                    dessas equipes interdisciplinares. </p>
+
+                <p class="texto-resumen">
+                    <b>Palavras-chave:</b> Ética; Bioética; Enfermagem; Comitês de Ética.
+                </p>
+            </div>
+
+
+
+        </div>
+
+        <!-- Descripcion de autores, Aprobado, Como citar, licencia -->
+        <div class="contenedor-autor">
+            <!-- Autores -->
+            <div>
+                <p class="subtitulo" style="color: black; font-size: 18px;">Autor de correspondencia*</p>
+                <!-- 1 -->
+                <p class="autores" id="sup1"><sup>1*</sup><img class="logos" src="img/globales/sobre.png"> Enfermero
+                    Universitario. Docente en
+                    Enfermería en Universidad Nacional de
+                    Salta, Sede Tartagal y Santa Victoria
+                    Este. Argentina.
+                    <a href="mailto:ernestoacosta533@gmail.com">ernestoacosta533@gmail.com</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0002-7547-8098">0000-0002-7547-8098</a>
+                </p>
+                <!-- 2 -->
+                <p class="autores" id="sup2"><sup>2*</sup><img class="logos" src="img/globales/sobre.png"> Magister en
+                    Gerenciamiento Integral
+                    de Servicios de Enfermería. Doctorando
+                    en Educación Superior. Docente ACES
+                    Latinoamérica. Guayaquil, Ecuador.
+                    <a href="mailto:stefaniacedeno@aceslatinoamerica.com">stefaniacedeno@aceslatinoamerica.com</a>, <img
+                        class="logos" src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0003-1609-899X">0000-0003-1609-899X</a>
+                </p>
+                <!-- 3 -->
+                <p class="autores" id="sup3"><sup>3*</sup><img class="logos" src="img/globales/sobre.png"> Licenciada en
+                    enfermería. Máster en
+                    Atención integral al niño. Docente investigadora de la Carrera de Enfermería
+                    - Universidad de Guayaquil, Ecuador.
+                    <a href="mailto:taycia.ramirezp@ug.edu.ec">taycia.ramirezp@ug.edu.ec</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0003-2730-0946">0000-0003-2730-0946</a>
+                </p>
+                <!-- 4 -->
+                <p class="autores" id="sup4"><sup>4*</sup><img class="logos" src="img/globales/sobre.png"> Enfermera.
+                    Especialista en Docencia
+                    Universitaria. Directora Red Latinoamericana de Educación En Enfermería
+                    (ReLEdEn). Lima, Perú.
+                    <a href="mailto:mvillalobos@grinama.com">mvillalobos@grinama.com</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0002-4760-7067">0000-0002-4760-7067</a>
+                </p>
+            </div>
+
+            <!--Recibido y aprobado-->
+            <div>
+                <p><b>Recibido: </b> 30 marzo 2022 <br> <b>Aprobado: </b> 20 junio 2022 </p>
+            </div>
+
+            <!-- Como citar -->
+            <div class="cita">
+                <p class="forma-citar autores"><b>Para citar este artículo / To reference this article / Para citar este
+                        artigo:</b> Acota EGR, Cedeño-Tapia SJ,
+                    Ramírez-Pérez T, Villalobos-Guiza
+                    MN, Ríos SJ. Dilemas éticos en enfermería desde una reflexión multicéntrica. 2022; 19(3):32-43. <a
+                        href="https://doi.org/10.22463/17949831.3292">https://doi.org/10.22463/17949831.3292</a> </p>
+            </div>
+
+            <!--Licencia-->
+            <br>
+            <div>
+                <p class="autores "> &#169; Universidad Francisco de Paula Santander.
+                    Este es un artículo bajo la licencia CC-BY-NC-ND
+                    <br>
+                    <a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img
+                            alt="Licencia Creative Commons" style="border-width:0"
+                            src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Cuerpo del documento -->
+    <div>
+        <hr>
+        <!--Introducción-->
+        <p class="titulo"> Introducción</p>
+
+        <p>
+            La misión de la enfermería es cuidar con respeto y dignidad a las personas, lo que implica afrontar dilemas
+            éticos y aceptar la responsabilidad de tomar decisiones
+            que protejan la salud (1-2), tomando en cuenta la gran
+            riqueza intercultural y la heterogeneidad de las poblaciones (3).
+        </p>
+
+        <p>
+            La ética se concibe como una reflexión que profundiza
+            en las acciones humanas y los valores que condicionan su actuar, forma parte de un marco normativo que
+            busca justificaciones racionales (4). Una de las ramas de la ética, es la bioética, entendida como la
+            ciencia
+            que estudia la conducta de los profesionales de la salud
+            relacionada con el respeto por la vida (5) en la medida
+            en que se examinen a la luz de los valores y principios
+            morales (6). Según la Organización Mundial de la Salud, la bioética estudia el campo de las ciencias y la
+            atención en salud (7).
+        </p>
+
+        <p>
+            La Organización de las Naciones Unidas para la Educación, la Ciencia y la Cultura (UNESCO), emite la
+            Declaración Universal sobre Bioética y Derechos Humanos como marco universal que sustenta políticas
+            regidas por la Bioética y alienta a organizar comités pluridisciplinarios para resolver dilemas éticos (8),
+            donde se tengan en cuenta aspectos como: solidaridad,
+            responsabilidad individual, diversidad, equidad, reducción de desigualdades, desarrollo social (8), cuidado,
+            emociones, virtudes e identidad (9).
+        </p>
+
+        <p>
+            En este sentido, para el abordaje de las distintas dimensiones del ser humano, se requiere de una atención
+            integral por parte de un equipo de salud. Por ello, la
+            enfermería desempeña un papel relevante dentro del
+            equipo multidisciplinario de salud, al establecer comunicación con el sujeto, la familia y comunidad (10).
+            En
+            consecuencia, resulta imprescindible que la enfermería
+            se involucre en los comités de bioética para participar
+            de todas las funciones, permitiéndole profundizar en
+            los dilemas éticos presentes y los que emergen a causa
+            de la globalización.
+        </p>
+
+        <p>
+            De esta manera, la enfermería ante los dilemas éticos
+            en el ejercicio de sus funciones podrá brindar una respuesta adecuada en cada caso clínico (11) dando sus
+            opiniones, sugerencias y aportes con sustento científico
+            (12), basadas en los principios de la bioética: beneficencia, no maleficencia, autonomía y justicia (13) y
+            en
+            consideración de los derechos humanos (8).
+        </p>
+
+        <hr>
+
+        <p class="titulo">Objetivo</p>
+
+        <p>
+            Describir la percepción de la enfermería respecto a los
+            dilemas éticos en el ejercicio de su profesión.
+        </p>
+
+        <hr>
+
+        <p class="titulo">Materiales y Métodos</p>
+
+        <p>
+            Se realizó un estudio cualitativo, de tipo fenomenológico, con paradigma sociocrítico que involucra los
+            juicios, valores e intereses de la sociedad (14). Se consideró oportuno hacerlo con estas características
+            por que
+            los investigadores formaron parte del fenómeno estudiado al conocer la problemática desde adentro y desde
+            diferentes contextos. En ese sentido, la realización de
+            entrevistas y testimonios se enriquecieron a partir del
+            conocimiento de los sujetos, sus vivencias, ideología
+            y lingüística acerca de la interpretación de los aspectos
+            meta comunicativos y metapragmáticos (15).
+        </p>
+
+        <p>
+            Para obtener la información, se aplicó una entrevista
+            semiestructurada, estructurada en torno a preguntas
+            abiertas, las cuales se realizaron en diferentes momentos mediadas por la virtualidad. La muestra estuvo
+            conformada por 5 sujetos participantes seleccionados intencionadamente por su experiencia en distintas áreas
+            sobre el ejercicio de la profesión de la enfermería. Cada
+            encuentro en promedio duró aproximadamente 45 minutos. Las entrevistas fueron grabadas en una plataforma de
+            comunicación en línea en el marco de la I
+            Conmemoración Latinoamericana por el día de la Enfermería, bajo el lema “Proteger e invertir juntos en la
+            Humanización ¡Suma tu voz!”.
+        </p>
+
+        <p>
+            Estos encuentros estuvieron mediados por los objetivos
+            del estudio, y conducidos por una moderadora, quien
+            motivó a los participantes para que interactuaran entre ellos para lograr una sinergia óptima, lográndose la
+            saturación teórica de los datos. Otra técnica empleada
+            fue la observación participante, puesto que dos de las
+            autoras, fueron parte de los sujetos de estudio, quienes
+            convivieron de manera prolongada con aquello que se
+            pretende comprender, apoyando la recolección y aproximación al fenómeno estudiado (16).
+        </p>
+
+        <p>
+            Por otro lado, a fin de evitar la parcialidad de los resultados se realizó la triangulación de datos entre
+            los
+            investigadores; también se contrastó la información
+            que se obtuvo en el trabajo de campo con el sustento
+            teórico que guía este estudio en función del objetivo
+            trazado (17). Se solicitó previamente el consentimiento
+            informado a cada uno de los entrevistados. Del mismo
+            modo, se tuvo en cuenta la Declaración de Helsinki y
+            el Código de Nuremberg para la investigación con personas. Además, se contó con la aprobación mediante
+            Resolución del Consejo Directivo Nº319-2021 de la
+            Facultad de Ciencias de la Salud de la Universidad Nacional de Salta.
+        </p>
+
+        <p>
+            Seguidamente se transcribieron las entrevistas de forma manual, y posteriormente se realizó el análisis,
+            pasando a un proceso de reducción, codificación abierta
+            en un inicio y axial después, para su categorización,
+            con la ayuda del ATLAS. ti, Versión 9, a prueba. Los
+            resultados se dispusieron en tablas, para su mejor visibilidad facilitando su discusión. Es necesario
+            destacar
+            que los criterios de rigurosidad científica que se aplicaron fueron la credibilidad, la confirmabilidad y la
+            transferibilidad (18,19).
+        </p>
+
+        <p class="titulo">Resultados</p>
+
+        <p>
+            Los sujetos de estudio fueron 5 profesionales del cuidado de diferentes países de Sudamérica, siendo
+            originarios de Chile, Colombia, Perú, Argentina y Ecuador.
+            Tres de los enfermeros se desempeñaban en instituciones privadas y dos en instituciones públicas. En cuanto
+            al género, 3 fueron mujeres y 2 hombres. Para seleccionarlos se tuvieron en cuenta criterios como la
+            experiencia profesional que fuera de más de 10 años, y
+            una parte de los entrevistados son también autores del
+            presente artículo.
+        </p>
+
+        <p>
+            Luego del análisis de los discursos, emergieron 5 categorías con sus respectivas subcategorías y códigos;
+            los mismos fueron organizados siguiendo una matriz,
+            dando lugar a la construcción de las Tablas 1, 2, 3, 4 y
+            5 sobre la categorización de los dilemas éticos en enfermería.
+        </p>
+
+        <div class="image">
+            <p><b>Tabla 1: </b>Categorización de los dilemas éticos de las representaciones percibidas por los
+                profesionales de enfermería</p>
+            <img src="img/V19-N3-4/Screenshot_1.png" width="80%">
+            <p><b>Fuente: </b>Construcción propia</p>
+        </div>
+
+        <div class="image">
+            <p><b>Tabla 2: </b>Categorización de los dilemas de los Comités de Bioética y el posicionamiento de
+                enfermería</p>
+            <img src="img/V19-N3-4/Screenshot_2.png" width="80%">
+            <p><b>Fuente: </b>Construcción propia</p>
+        </div>
+
+        <div class="image">
+            <p><b>Tabla 3: </b>Categorización de los dilemas éticos que persisten en el tiempo</p>
+            <img src="img/V19-N3-4/Screenshot_3.png" width="75%">
+            <p><b>Fuente: </b>Construcción propia</p>
+        </div>
+
+        <div class="image">
+            <p><b>Tabla 4: </b>Categorización de los retos que representan los dilemas éticos en la humanización para la
+                enfermería</p>
+            <img src="img/V19-N3-4/Screenshot_4.png" width="75%">
+            <p><b>Fuente: </b>Construcción propia</p>
+        </div>
+
+        <div class="image">
+            <p><b>Tabla 5: </b>Categorización de los dilemas éticos de la enfermera como persona detrás de la profesión
+            </p>
+            <img src="img/V19-N3-4/Screenshot_5.png" width="75%">
+            <p><b>Fuente: </b>Construcción propia</p>
+        </div>
+
+        <p class="titulo">Discusión</p>
+
+        <p>
+            Al encontrarse distintas categorías, se puso de manifiesto que los dilemas éticos en enfermería se viven
+            desde diferentes realidades y contextos; sin embargo,
+            en la región sudamericana se produjeron algunas semejanzas.
+        </p>
+
+        <p class="subtitulo">Percepciones éticas de los profesionales de la enfermería</p>
+
+        <p>
+            La presente categoría recibió varios códigos que fueron divididos en positivos y negativos, entre los que se
+            destacan como positivos el tomar decisiones con conocimiento para hacer frente a las situaciones, actitud
+            que se debe inculcar desde la academia para un mejor
+            desenvolvimiento laboral futuro.
+        </p>
+
+        <p>
+            Entre las respuestas que se originaron, se encontraron:
+            “en los comités de ética asistencial particularmente en
+            los hospitales, se enfrentan situaciones en donde toman
+            decisiones el personal de salud relacionados a los dilemas éticos”. Otro de los informantes clave resaltó la
+            labor de la enfermería, en el afrontamiento de crisis:
+            “en todo lo que corresponde a la toma de decisiones al
+            final de vida y como buscamos la manera de suplir el
+            dolor en el paciente, de mitigarlo y llevarlo a lo que en
+            algunos casos se denomina el buen morir”.
+        </p>
+
+        <p>
+            Conviene subrayar que la Ética está intrínsecamente relacionada con las profesiones de la salud (20),
+            porque proporcionan un bien específico a la sociedad
+            cumpliendo un deber en pro de logros progresivos; no
+            obstante, existen limitaciones para la humanidad, tanto
+            individual como colectiva.
+        </p>
+
+        <p>
+            Desde otra perspectiva, en la profesión de la enfermería, se plantea que la reflexión ética se basa en el
+            respeto a dos fundamentos: la vida y la persona y en cuatro
+            principios esenciales: Promover la salud, prevenir la
+            enfermedad, restaurar la salud y aliviar el sufrimiento
+            (21). Además, cabe resaltar que es esencial como profesión de la salud respetar la Declaración de los
+            Derechos Humanos, el derecho a la vida y el derecho a la
+            salud, así como también el derecho a la autodeterminación.
+        </p>
+
+        <p>
+            Por otro lado, también se pudo percibir la preocupación
+            por aspectos negativos como son los dilemas éticos
+            emergentes, la inequidad de la atención y la corrupción.
+            Al respecto se escucharon respuestas como: “la pandemia COVID-19 frente a la cual la enfermería debió tomar
+            decisiones, sin comité, pero desde el punto de vista
+            humano tocó actuar”. Otro entrevistado planteaba que
+            “la vacunación se encuentra en el campo de la base
+            de la humanización, sin embargo, la corrupción incita
+            a praxis inadecuadas”. Lo expresado anteriormente, coincide con los informes en investigaciones, revistas,
+            periódicos y otros medios, encontrándose que “la corrupción es un fenómeno que ocasiona devastadoras
+            consecuencias para la administración pública, socava
+            su credibilidad y obstruye el cumplimiento de los fines
+            que persiguen sus órganos e instituciones. Ello dificulta
+            el acceso igualitario a bienes y servicios esenciales, y
+            afecta principalmente la vida, y la salud” (22).
+        </p>
+
+        <p>
+            Cuando se habla de la “vacuna como un bien común”
+            se entiende que la misma es para todos, sin embargó se
+            privilegiaron/priorizaron algunos grupos de personas.
+            Priorizar exige criterios, los cuales en su totalidad no
+            son legítimos y dejan en espera los grupos que debían
+            vacunarse primero; es decir, los grupos vulnerables
+            (23). Este dato fue evidenciado en todas las respuestas
+            dadas por los informantes clave en el estudio, destacándose que es un flagelo muy difícil de vencer aún en
+            América Latina, afectando lo relacionado con la salud
+            de las poblaciones en el contexto de la pandemia más
+            reciente.
+        </p>
+
+        <p class="subtitulo">Comités de Bioética y el posicionamiento de la enfermería</p>
+
+        <p>
+            Según Maestre, los Comités de Bioética Hospitalarios
+            (CBH) “son grupos interdisciplinarios que se ocupan
+            de la Docencia, la Investigación y las Consultas asociadas con los Dilemas Éticos que surgen durante la
+            práctica hospitalaria” (23). Los comités se conforman
+            con la finalidad de analizar las situaciones de conflictos y de esta manera brindar de forma integral el
+            mejor
+            asesoramiento en la toma de decisiones.
+        </p>
+
+        <p>
+            Por tanto, el Comité de ética es un espacio que permite
+            el diálogo abierto y brinda la oportunidad de cuestionar
+            las actuaciones profesionales, por lo que es necesario
+            incentivar su creación en las instituciones de salud.
+            Para ello se debe tener en cuenta la conformación de
+            equipos interdisciplinarios, en donde exista pluralidad
+            de pensamientos, fundamentos y conocimientos.
+        </p>
+
+        <p>
+            Madrid Valerio afirma que “las Enfermeras, a través
+            de la provisión de Cuidados con niveles de autonomía
+            diferentes y con fines diversos, tienen la capacidad de
+            percibir de manera más profunda al usuario, desde diferentes perspectivas” (24). De esta manera la
+            enfermería
+            al integrar los comités de ética favorece la búsqueda de
+            estrategias para la toma de decisiones frente a dilemas
+            bioéticos, y así determinar su rol desde la ontología.
+        </p>
+
+        <p>
+            En este sentido, Álvarez (25), considera que, dentro de
+            un Comité la enfermería incide en cuestiones relacionadas con el cuidado del paciente, empezando por la
+            calidad de la información, la confidencialidad, la intimidad y el bienestar, tanto físico como psicológico.
+            En coincidencia con lo expresado por los informantes
+            respecto al rol de la enfermería en la toma de decisiones respecto a la naturaleza del cuidado, destacaron
+            aspectos éticos de la práctica, así como también valores,
+            relacionados con: responsabilidad profesional, ética
+            colaborativa, solidaridad, humildad, confianza, empoderamiento desde la formación, axiología, compasión,
+            cuidados vida/muerte, adaptabilidad a los desafíos,
+            equidad social, principios bioéticos, código de conducta y la reflexión crítica sobre el cuidado.
+        </p>
+
+        <p>
+            Entre las estrategias para la toma de decisiones en los
+            dilemas bioéticos en enfermería, los informantes expresaron que se debía tener en cuenta: el reforzamiento
+            de las competencias profesionales, los protocolos humanizados, las guías de intervención, el uso de
+            tecnologías, la multidisciplinariedad, la interculturalidad, la
+            retroalimentación, los cuidados holísticos y la visibilización sobre la forma como se involucra la
+            enfermería
+            en función de sus diferentes roles autónomos apoyados
+            en conocimientos científicos, para demostrar su posicionamiento en los comités de bioética.
+        </p>
+
+        <p>
+            Como estrategia también se tuvo en cuenta la promoción de espacios de debate y trasmisión de experiencias,
+            por tanto, las instituciones deben plantearse dentro
+            de sus protocolos, un espacio para analizar situaciones
+            reales que favorezcan la discusión (26) para el tratamiento de casos específicos tal y como se evidencia en
+            esta investigación.
+        </p>
+
+        <p class="subtitulo">Dilemas éticos y bioéticos que persisten en el tiempo</p>
+
+        <p>
+            El dilema bioético surge cuando el profesional de la
+            enfermería se enfrenta a los principios bioéticos con alternativas de posible actuación. Una vez que el
+            comité
+            de ética ha realizado el análisis minucioso del dilema
+            ético, puede encontrar diversas alternativas, convirtiéndose en un reto y es aquí donde la toma de
+            decisiones
+            tiene un papel relevante para el bien y la integridad del
+            sujeto de atención y de su familia, según sus distintas
+            dimensiones (27).
+        </p>
+
+        <p>
+            A la luz de los resultados de esta investigación las subcategorías están vinculadas a: dilemas éticos en el
+            inicio de la vida, dilemas éticos transversales y dilemas
+            éticos en el final de la vida, algunos coinciden con los
+            mencionados por Guardia- Mancilla y Villarreal-Cantillo (28-29). Por mencionar algunos ejemplos expresados
+            por los informantes claves, relacionados con los
+            dilemas al inicio de la vida están: la fertilización asistida y aborto. Por otra parte, los dilemas
+            transversales
+            como modelo hegemónico/biologicista, denuncian la
+            violencia intrafamiliar y la influencia de la religión. En
+            cuanto a los que tienen que ver con el final de la vida
+            sobresalen: encarnizamiento terapéutico, prolongación
+            de la agonía, transfusión sanguínea y vulnerabilidad
+            del paciente.
+        </p>
+
+        <p>
+            De igual forma, se encuentran otros dilemas éticos a
+            los que se debe enfrentar la enfermería, entre estos se
+            puede mencionar lo que concierne con el derecho del
+            paciente, el respeto por la autonomía, y el consentimiento informado, en concordancia con lo planteado
+            por Rodríguez-Abrahantes (30); además están los que
+            se refieren a las tecnologías, los cuales, se presentan
+            desde las primeras prácticas académicas de la profesión
+            de la enfermería y a lo largo de esta (31) constituyéndose en uno de los grandes retos para la formación del
+            cuidado en la enfermería (32,33).
+        </p>
+
+        <p class="subtitulo">Retos que representan los dilemas éticos en la humanización para la enfermería</p>
+
+        <p>
+            Para los profesionales de la enfermería el cuidado humanizado es su esencia y objeto de acción en su
+            práctica diaria (34). La constante relación social, los somete
+            a un sin fin de posibles situaciones, que requieren una
+            reflexión profunda antes de brindar cuidados de calidad, teniendo en cuenta el contexto cultural; por ende,
+            la comunicación se considera un factor fundamental y
+            uno de los retos prioritarios (3,35), no solo con el usuario del cuidado, sino con todo el equipo de salud.
+        </p>
+
+        <p>
+            En efecto, la enfermería desempeña un rol importante
+            en la toma de decisiones, dado su continuo crecimiento
+            científico y ético (11). Además de formar parte de los
+            comités de ética, cada profesional debe expresar con
+            base en sus teorías, modelos y autonomía, su postura
+            frente a una decisión determinada (10). Por tanto, es
+            necesario distinguir el posicionamiento de la enfermería en los comités de ética, debido a sus conocimientos
+            científicos y a la proximidad a pacientes, familiares y
+            comunidad, permitiéndole incidir frente a las situaciones de costosa resolución tanto a nivel individual
+            como
+            colectivo (36).
+        </p>
+
+        <p>
+            En consecuencia, es indispensable reforzar los fundamentos teóricos al momento de plantear una toma de
+            decisiones adecuada que considere todas las alternativas sobre la práctica basada en la evidencia (37,38).
+            El
+            enfoque teórico es una herramienta útil para el razonamiento y el estímulo del pensamiento crítico; también
+            favorece el empleo y el manejo de la información acerca del paciente, para una gestión del cuidado ordenado
+            y eficaz (39).
+        </p>
+
+        <p>
+            Por consiguiente, la enfermería influye de manera autónoma y como miembro del equipo interdisciplinario, en
+            cualquiera de los ámbitos en que desarrolla funciones, ejerciendo una práctica efectiva de
+            liderazgo (38). La adquisición de competencias es necesaria para un buen actuar, con base en conocimientos
+            científicos sobre la moral y la ética profesional (39).
+        </p>
+
+        <p>
+            Todo profesional de la salud debe respetar los principios bioéticos de justicia, no maleficencia,
+            beneficencia
+            y autonomía. Al respecto, “La Declaración Universal
+            sobre Bioética y Derechos Humanos de la UNESCO”
+            ubica al hombre en un escenario global junto a sus semejantes y a los demás integrantes de la biósfera
+            (8,9).
+            En tal sentido, es importante reconocer los derechos
+            humanos e integrarlos en la práctica profesional (40).
+            La formación de la enfermería en bioética es fundamental para brindar un cuidado humanizado, con
+            sensibilidad ética y humanizada, con conocimiento de la
+            disciplina, lo que ayudará a encontrar respuestas ante
+            las diferentes preguntas que surgen durante la práctica
+            profesional.
+        </p>
+
+        <p>
+            Así pues, el conocimiento en ética y bioética aporta las
+            normas básicas que deben guiar la pericia profesional,
+            la conducta y la actitud del personal de enfermería. Si
+            desde la formación no está bien delimitado y no se lleva a la práctica este aspecto, se corre el riesgo de
+            que en
+            el futuro los cuidados solo estén guiados por el uso de
+            conocimientos científicos y tecnológicos, pero sin tener
+            en cuenta la dimensión humana, lo que podría causar
+            daño al sujeto de cuidado.
+        </p>
+
+        <p class="subtitulo">La persona detrás de la profesión</p>
+
+        <p>
+            El profesional de la enfermería egresa con capacidades
+            intelectuales y técnicas adquiridas en la formación; al mismo tiempo, se sabe que con el pasar de los años
+            desarrolla capacidades más específicas de su campo de
+            actuación propio del ejercicio laboral, fortaleciendo la
+            adquisición de competencias transversales y genéricas
+            (41) que van de la inexperiencia hasta el nivel de experto (40) para el cuidado de la vida. Es decir, que el
+            profesional se moldea por la interacción con el paciente, la
+            comunidad, el equipo interdisciplinario y los constantes avances científicos.
+        </p>
+
+        <p>
+            Asimismo, el estudiante de enfermería durante su formación y práctica, según los planteamientos de Patricia
+            Benner, quien detalló los niveles de adquisición
+            de habilidades a medida que transcurre el tiempo (40)
+            guían las decisiones y compartimientos; por tanto, es
+            necesario tener un acompañamiento cuando surgen los
+            dilemas éticos durante el ejercicio de las prácticas preprofesionales para abordarlas éticamente, pero
+            también
+            durante todo el ejercicio profesional.
+        </p>
+
+        <p>
+            Desde el punto de vista de la ética, la formación en valores, códigos deontológicos, principios éticos y
+            bioéticos, son fundamentales para el ejercicio de la profesión.
+            Cuidar a una persona y poder decidir a la luz de sus
+            derechos, al respeto por su autonomía, valorando sus
+            creencias y su contexto, es parte de la ética, así como el
+            actuar con responsabilidad, siempre en función de los
+            códigos éticos de la profesión.
+        </p>
+
+        <p>
+            Por otro lado, hay que tener en cuenta que todos los
+            profesionales de la enfermería se preocupan por el
+            futuro incierto a través de interrogantes tales como:
+            ¿cuándo y dónde podrá desempeñarse?, ¿cuánto sueldo obtendrá? Igualmente, se ven afectados en la salud
+            mental por tantas muertes ya sea por patologías crónicas sin retroceso o por pandemias como la que se vive
+            por el COVID-19, así como por el desgaste físico y
+            por el requerimiento académico. Del mismo modo, al
+            ser profesional los riesgos biológicos, físicos y psicológicos a los que se expone en el ambiente sanitario,
+            los constantes turnos que debe afrontar como forma de
+            múltiple empleo, por la poca valorización económica
+            y profesional con el que cuenta la profesión de la enfermería, entre otros (42), generan en la persona una
+            variedad de efectos sobre su dimensión humana, por lo
+            que se le exige, en todo momento, poner a prueba sus mecanismos de afrontamiento.
+        </p>
+
+
+        <hr>
+
+        <p class="titulo">Conclusiones</p>
+
+        <ul class="lista">
+            <li>A luz de la presente investigación, se pudo describir
+                la percepción de la enfermería respecto a los dilemas éticos y bioéticos en el ejercicio de esta
+                profesión, desde un abordaje cualitativo, facilitando la
+                interpretación del fenómeno desde la vivencia y la
+                experticia propia de profesionales con trayectorias
+                en el ejercicio de la enfermería. A su vez se debe
+                recomendar una línea de investigación sobre los dilemas éticos y bioéticos puesto que han estado
+                presentes desde hace décadas y seguirán existiendo en
+                la cotidianeidad del profesional de la enfermería.</li>
+            <li>Se debe mencionar que existe una realidad común
+                sobre los dilemas éticos más frecuentes que enfrenta la enfermería desde la formación hasta el ejercicio
+                profesional. Así mismo, existen diferencias
+                según el marco legal de cada país o situación en
+                particular.</li>
+            <li>También es importante la participación de la enfermería en los Comités de Bioética, en la utilización
+                de guías, protocolos, trabajo colaborativo y en el
+                uso de la evidencia científica con sus teorías y modelos, ya que aportan significativamente a los
+                debates internos, orientando el actuar del equipo de
+                salud sin olvidar las bases del cuidado humanizado. Además, el profesional de la enfermería puede
+                ocupar distintos cargos desde la consultoría hasta la
+                presidencia de equipos interdisciplinarios.</li>
+            <li>Por otra parte, son necesarias las ofertas de educación continua y posgradual en Bioética, así como
+                lograr una sensibilidad ética y humanizada, con conocimiento específico, a fin de propiciar una mayor
+                capacidad resolutiva, de liderazgo, de voz y voto en
+                la toma de decisiones.
+            </li>
+        </ul>
+
+        <p class="subtitulo">Conflicto de intereses</p>
+
+        <p>
+            Los autores no declaran conflicto de interés.
+        </p>
+
+        <!-- Referencias -->
+
+        <hr>
+
+        <p class="titulo"> Referencias </p>
+
+        <ol class="lista">
+            <li id="r1">Cassiani SHDB, Munar Jimenez EF, Umpiérrez Ferreira A, Peduzzi M, Leija Hernández C. La situación de
+                la enfermería en el mundo y la Región de las Américas en tiempos de la pandemia de COVID-19. Rev Panam
+                Salud Publica [Internet]. 2020;44:e64. Disponible en: <a href="http://dx.doi.org/10.26633/RPSP.2020.64">http://dx.doi.org/10.26633/RPSP.2020.64</a> </li>
+            <li id="r2">Senado y Cámara de Diputados. Provincia de Salta, Argentina. Ejercicio de la profesión de la enfermería y
+                creación del colegio profesional de enfermeros de la provincia de Salta. Ley N°7351. 2005 [Internet]. Argentina.gob.ar. [citado el 12 de junio de 2022]. Disponible en: <a href="https://www.argentina.gob.ar/normativa/nacional/ley-24004-403">https://www.argentina.gob.ar/normativa/nacional/ley-24004-403</a></li>
+            <li id="r3">Cedeño-Tapia SJ, Rodríguez IJ, Prieto DM, Schlegel C, López LE, Domínguez S. Reflexiones sobre las Bases Conceptuales de la Interculturalidad las problemáticas y retos desde la formación de Enfermería. Revista
+                Científica de Enfermería [Internet] 2021. 10(1): 94-108. Disponible en: <a href="https://revista.cep.org.pe/index.php/RECIEN/article/view/63nn">https://revista.cep.org.pe/index.php/RECIEN/article/view/63nn</a> 
+                </li>
+            <li id="r4">Neto NN, Conrado DM. Enseñando ética. Educação em Revista Belo Horizonte [Internet] 2021. (37): e24578.
+                <a href="http://dx.doi.org/10.1590/0102-469824578">http://dx.doi.org/10.1590/0102-469824578</a>
+                </li>
+            <li id="r5">Penchaszadeh V. Bioética y salud pública. Revista Iberoamericana de Bioética, (7), 1-15. [Internet] 2018.
+                <a href="https://doi.org/10.14422/rib.i07.y2018.004">https://doi.org/10.14422/rib.i07.y2018.004</a></li>
+            <li id="r6">Coya Y. Ética como normas y principios morales en la administración de salud. [Internet] 2017. Universidad
+                Metropolitana de Educación, Ciencia y Tecnología. Disponible en: <a href="https://bit.ly/3GFDK8g">https://bit.ly/3GFDK8g</a></li>
+            <li id="r7">Pucheta LL. La pretensión de universalidad de la bioética a la luz de la Declaración Universal sobre Bioética
+                y Derechos Humanos. [Internet] 2017. Disponible en: <a href="https://repositorio.uca.edu.ar/handle/123456789/158">https://repositorio.uca.edu.ar/handle/123456789/158</a> </li>
+            <li id="r8">Schlemper, B. R. Declaración Universal sobre Bioética y Derechos Humanos: referencia para la vigilancia sanitaria en comunidades terapéuticas. Revista Bioética, 25, 462-472. [Internet] 2017. <a href="https://doi.org/10.1590/1983-80422017253203">https://doi.org/10.1590/1983-80422017253203</a> </li>
+            <li id="r9">Salvador T, Sampaio H, Palhares D. Análisis textual de la Declaración Universal sobre Bioética y Derechos
+                Humanos. Revista Bioética, 26, 523-529. [Internet] 2018. <a href="https://doi.org/10.1590/1983-80422018264270">https://doi.org/10.1590/1983-80422018264270</a> </li>
+            <li id="r10">Etxeberria-Mauleon Xabier. Más allá (más acá) de las argumentaciones principialistas en los Comités de
+                Bioética. Revista Colombiana de Bioética [Internet] 2019. 14.1. <a href="https://doi.org/10.18270/rcb.v14i1.2431">https://doi.org/10.18270/rcb.v14i1.2431</a> </li>
+            <li id="r11">Sánchez Y, Manuel J. La enfermera en los comités de ética. Rev Rol enferm [Internet]. 2017 [citado el 12 de
+                junio de 2022];618–22. Disponible en: <a href="https://pesquisa.bvsalud.org/portal/resource/pt/ibc-165958">https://pesquisa.bvsalud.org/portal/resource/pt/ibc-165958</a></li>
+            <li id="r12">Espinoza-Caifil M, Baeza-Daza P, Rivera-Rojas F, Ceballos-Vasquez P. Comunicación entre paciente adulto
+                críticamente enfermo y el profesional de enfermería: una revisión integrativa. Enfermería (Montevideo) [Internet] 2021. 10 (1): pp.30-43. <a href="https://doi.org/10.22235/ech.v10i1.2412">https://doi.org/10.22235/ech.v10i1.2412</a> </li>
+            <li id="r13">Yanez-Flores K, Rivas-Riveros E, Campillay M. Ética del cuidado y cuidado de enfermería. Enfermería
+                (Montevideo) [Internet] 2021. 10 (1): pp.3-17. <a href="http://dx.doi.org/10.22235/ech.v10i1.2124">http://dx.doi.org/10.22235/ech.v10i1.2124</a></li>
+            <li id="r14">Alvarado L, García M. Características más relevantes del paradigma socio-crítico: su aplicación en investigaciones de educación ambiental y de enseñanza de las ciencias realizadas en el Doctorado de Educación del
+                Instituto Pedagógico de Caracas. Sapiens Rev Univ Investig [Internet]. 2008; 9(2):187–202. Disponible en:
+                <a href="https://www.redalyc.org/pdf/410/41011837011.pdf">https://www.redalyc.org/pdf/410/41011837011.pdf</a> </li>
+            <li id="r15">Rodríguez-Abrahantes TN, Rodríguez-Abrahantes A. Dimensión ética del cuidado de enfermería. Revista
+                Cubana de Enfermería 2018. 34 (3). Disponible en: <a href="http://www.revenfermeria.sld.cu/index.php/enf/article/view/2430/383">http://www.revenfermeria.sld.cu/index.php/enf/article/view/2430/383</a></li>
+            <li id="r16">Domínguez-Mon A, Boronat-Schvartzman J, Chiappe CM, Garibotti MB, Giménez SM, et al. Trabajo de campo etnográfico. Prácticas y saberes. Editorial de Filosofía y Letras. Universidad de Buenos Aires. [Internet] 2017. <a href="https://bit.ly/3mtGNqD">https://bit.ly/3mtGNqD</a></li>
+            <li id="r17">. Benavides MO, Gómez-Restrepo C. Métodos en investigación cualitativa: triangulación. rev.colomb.psiquiatr. [Internet]. 2005 Mar; 34 (1): 118-124. Disponible en: <a href="http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0034-74502005000100008&lng=en">http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0034-74502005000100008&lng=en</a></li>
+            <li id="r18">Guba E, Linconln Y. Paradigmas en competencia en la investigación cualitativa.pdf. 2002. 33 p. Disponible
+                en: <a href="http://www.ustatunja.edu.co/cong/images/curso/guba_y_lincoln_2002.pdf">http://www.ustatunja.edu.co/cong/images/curso/guba_y_lincoln_2002.pdf</a></li>
+            <li id="r19">Noreña AL, Alcaraz-Moreno N, Rojas JG, Rebolledo-Malpica, D. Applicability of the criteria of rigor and
+                ethics in qualitative research. Aquichan, 2012, vol. 12, no 3, p. 263-74. <a href="http://www.scielo.org.co/pdf/aqui/v12n3/v12n3a06.pdf">http://www.scielo.org.co/pdf/aqui/v12n3/v12n3a06.pdf</a></li>
+            <li id="r20">Mundaca M. Comportamiento ético en los profesionales de la salud: Revisión sistemática. Escuela Profesional De Psicología. 2022. Disponible en: <a href="https://repositorio.ucv.edu.pe/handle/20.500.12692/85468">https://repositorio.ucv.edu.pe/handle/20.500.12692/85468</a></li>
+            <li id="r21">Marín-Castán ML. La polémica decisión del Tribunal Europeo de Derechos Humanos sobre el caso Gard y
+                otros contra el Reino Unido. Revista de Bioética y Derecho, (43), 261-276. [Internet] 2018. Disponible
+                en: <a href="http://scielo.isciii.es/scielo.php?script=sci_arttext&pid=S1886-58872018000200018&lng=es">http://scielo.isciii.es/scielo.php?script=sci_arttext&pid=S1886-58872018000200018&lng=es</a></li>
+            <li id="r22">Escobar-Castellanos B, Cid-Henríquez P. El cuidado de enfermería y la ética derivados del avance tecnológico
+                en salud. Acta bioethica, 24(1), 39-46. [Internet] 2018. <a href="http://dx.doi.org/10.4067/S1726-569X2018000100039">http://dx.doi.org/10.4067/S1726-569X2018000100039</a>
+                </li>
+            <li id="r23">Maestre BR. Vacunas contra la COVID-19 y ética: ¿cuándo me tocará a mí? . Journal of Healthcare Quality
+                Research. [Internet] 2021;36(2):57-58. <a href="https://doi.org/10.1016/j.jhqr.2021.02.003">https://doi.org/10.1016/j.jhqr.2021.02.003</a></li>
+            <li id="r24">Madrid-Valerio C y Palomino-Ramírez W. Oportunidades de corrupción y pandemia: el compliance gubernamental como un protector eficaz al interior de las organizaciones públicas. Desde el Sur. [Internet].
+                2020;12(1):213–39. <a href="http://dx.doi.org/10.21142/des-1201-2020-0014">http://dx.doi.org/10.21142/des-1201-2020-0014</a> </li>
+            <li id="r25">Álvarez JA, López-Moreno S. Los Comités Hospitalarios de Bioética y la educación en salud: Notas para la
+                discusión. Revista Latinoamericana de Bioética, 17(1), 184-199. [Internet] 2017. <a href="https://doi.org/10.18359/rlbi.2343">https://doi.org/10.18359/rlbi.2343</a></li>
+            <li id="r26">Guardia-Mancilla P, Montoya-Juarez R, Marti-Garcia C, Herrero Hahn R., García Caro MP, Cruz Quintana F.
+                Percepciones de los profesionales sobre la atención prestada, obstáculos y dilemas éticos relacionados con el
+                final de la vida en hospitales, centros de Atención Primaria y residencias de ancianos. Anales Sis San Navarra
+                [Internet] 2018. [citado 2021 Julio 11]; 41(1): 35-46. <a href="https://dx.doi.org/10.23938/assn.0170">https://dx.doi.org/10.23938/assn.0170</a> </li>
+            <li id="r27">Cantos M. Enfermería y Bioética. Artículo. Sociedad Ecuatoriana. [Internet] 2018. Disponible en: <a href="https://www.buenastareas.com/ensayos/Enfermeria-y-Bio%C3%A9tica/84110335.html">https://www.buenastareas.com/ensayos/Enfermeria-y-Bio%C3%A9tica/84110335.html</a> </li>
+            <li id="r28">Torrosa F. Tribuna Abierta. Actualidad jurídica. DYKINSON, SL, editorial. [Internet] 2020. Disponible en:
+                <a href="http://digital.casalini.it/4997976">http://digital.casalini.it/4997976</a> </li>
+            <li id="r29">Guardia-Mancilla P, Montoya-Juárez R, Marti-Garcia C, Herrero Hahn R, García Caro MP, Cruz Quintana F.
+                Percepciones de los profesionales sobre la atención prestada, obstáculos y dilemas éticos relacionados con el
+                final de la vida en hospitales, centros de atención primaria y residencias de ancianos. In Anales del Sistema
+                Sanitario de Navarra. [Internet] 2018 (Vol. 41, No. 1, pp. 35-46). Gobierno de Navarra. Departamento de Salud. <a href="https://dx.doi.org/10.23938/assn.0170">https://dx.doi.org/10.23938/assn.0170</a> </li>
+            <li id="r30">Rodríguez-Abrahantes TN, Rodríguez-Abrahantes A. Dimensión ética del cuidado de enfermería. Revista
+                Cubana de Enfermería, [Internet] 2018. 34(3). Disponible en: <a href="http://scielo.sld.cu/scielo.php?script=sci_arttext&pid=S0864-03192018000300017&lng=es">http://scielo.sld.cu/scielo.php?script=sci_arttext&pid=S0864-03192018000300017&lng=es</a> </li>
+            <li id="r31">Escudero CJR. Dilemas Éticos y toma de decisiones del enfermero (a) con pacientes hospitalizados en el
+                Hospital de Belén. Tesis de Licenciatura. Perú- Trujillo: Universidad Cesar Vallejo, Facultad de Ciencias
+                Médicas, Escuela Académico Profesional de Enfermería [Internet] 2018. Disponible en: <a href="https://hdl.handle.net/20.500.12692/25404">https://hdl.handle.net/20.500.12692/25404</a></li>
+            <li id="r32">Cedeño-Tapia SJ, Villalobos Guiza MN, Rodríguez López JI & Fontal Vargas PA. La educación de enfermería
+                en Latinoamérica y los entornos virtuales de aprendizaje en tiempos de pandemia. Revista CuidArte. [Internet] 2021; 10 (20). <a href="http://dx.doi.org/10.22201/fesi.23958979e.2021.10.20.79919">http://dx.doi.org/10.22201/fesi.23958979e.2021.10.20.79919</a></li>
+            <li id="r33">Galarza VA, Wolhein LE, Cedeño-Tapia SJ. Uso de recursos educativos digitales abiertas en la formación de
+                enfermería durante la pandemia por COVID-19. Revista Científica de Enfermería. [Internet] 2021; 10 (2),
+                132-144.Disponible en: <a href="https://revista.cep.org.pe/index.php/RECIEN/article/view/81/91">https://revista.cep.org.pe/index.php/RECIEN/article/view/81/91</a>
+                </li>
+            <li id="r34">Mundial AM. Declaración de Helsinki de la AMM- Principios éticos para las investigaciones médicas
+                en seres humanos. [Internet] 2019. Disponible en: <a href="http://repositorio.mederi.com.co/bitstream/handle/123456789/386/Declaracion-Helsinki-2013-Esp.pdf?sequence=1">http://repositorio.mederi.com.co/bitstream/handle/123456789/386/Declaracion-Helsinki-2013-Esp.pdf?sequence=1</a> </li>
+            <li id="r35">Arango MC, Gómez AM. The Dialogic Bond that Relieves: Encounter to Transcend Therapeutic Adherence.
+                Aquichan [Internet] 2019; 19 (2): e1925. <a href="https://doi.org/10.5294/aqui.2019.19.2.5">https://doi.org/10.5294/aqui.2019.19.2.5</a> </li>
+            <li id="r36">González-Bermejo D, Solano MD, Polache J, Mulet A, Barreda D, Soler-Company E. Los Comités de Ética
+                Asistencial y los Comités de Ética de la Investigación en España: organización, regulación y funciones. Rev.
+                OFIL•ILAPHAR [Internet]. 2020 [citado 2021 Julio 11]; 30 (3): 206-211. <a href="https://dx.doi.org/10.4321/s1699-714x2020000300010">https://dx.doi.org/10.4321/s1699-714x2020000300010</a></li>
+            <li id="r37">Yagüe-Sánchez JM. La enfermera en los comités de ética. Rev. Rol enferm 2017: 618-22. Disponible en: <a href="https://pesquisa.bvsalud.org/portal/resource/pt/ibc-165958">https://pesquisa.bvsalud.org/portal/resource/pt/ibc-165958</a> </li>
+            <li id="r38">Cedeño-Tapia SJ. Liderazgo en enfermería, y su importancia en el desarrollo disciplinar. Rev. Cuidarte. [Internet] 2020; 9 (18): 06-12. <a href="http://dx.doi.org/10.22201/fesi.23958979e.2020.9.18.1">http://dx.doi.org/10.22201/fesi.23958979e.2020.9.18.1</a></li>
+            <li id="r39">Santana ET, Coutinho GG, Silva DVA, Bernardes TAA, Camisasca LR, Gusmão ROM, Araújo DD. Diagnósticos de enfermagem da taxonomia NANDA-I para idosos em instituição de longa permanência. Escola Anna
+                Nery [Internet] 2021; 25 (1): 1-7. <a href="https://doi.org/10.1590/2177-9465-EAN-2020-0104">https://doi.org/10.1590/2177-9465-EAN-2020-0104</a></li>
+            <li id="r40">Escobar-Castellanos B, Jara-Concha P. Filosofía de Patricia Benner, aplicación en la formación de enfermería: propuestas de estrategias de aprendizaje. Rev. Educación [Internet] 2019, 28(54), 182-202. <a href="https://dx.doi.org/10.18800/educacion.201901.009">https://dx.doi.org/10.18800/educacion.201901.009</a> 
+                </li>
+            <li id="r41">Beneitone P, Esquetini C, González J, Marty M, Siufi G, Wagenaar R. Reflexiones y perspectivas de la educación en America Latina. Universidad de Deusto. Bilbao; 2009. p. 73–82. Disponible en: <a href="http://tuningacademy.org/wp-content/uploads/2014/02/TuningLAIII_Final-Report_SP.pdf">http://tuningacademy.org/wp-content/uploads/2014/02/TuningLAIII_Final-Report_SP.pdf</a> </li>
+            <li id="r42">Cedeño-Tapia SJ. Calidad de vida en el trabajo de enfermería en el escenario pre y post pandemia. Revista
+                Científica de Enfermería [Internet]. 2021; 10 (3), 1-4. Disponible en: <a href="https://revista.cep.org.pe/index.php/RECIEN/article/view/112">https://revista.cep.org.pe/index.php/RECIEN/article/view/112</a></li>
+            </ol>
+
+
+
+
+    </div>
+
+</body>
+
+</html>

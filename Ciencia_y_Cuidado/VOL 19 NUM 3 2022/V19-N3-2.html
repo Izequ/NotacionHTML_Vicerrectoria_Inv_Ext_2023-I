@@ -1,0 +1,1297 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V19-N3-2</title>
+    <link rel="stylesheet" href="">
+    <style>
+        body {
+            padding: 10em;
+            padding-top: 20px;
+            font-family: Times New Roman;
+            color: black;
+        }
+
+        #articulo-derecha {
+            float: left;
+        }
+
+        /* Posiciones de los resumenes */
+
+        .contenedor-general {
+            display: inline-flex;
+            width: 100%;
+        }
+
+        .contenedor-resumen {
+            width: 240%;
+        }
+
+        .contenedor-autor {
+            width: 100%;
+            padding-left: 20px;
+        }
+
+        .hr-resumen {
+            background-color: gray;
+            margin: 0;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .resumen-fondo {
+            background-color: #bdd5f1;
+            border-radius: 5px;
+        }
+
+        .titulo-resumen {
+            color: black;
+            font-size: 22px;
+            font-weight: bold;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .texto-resumen {
+            padding: 20px;
+            margin: 0;
+        }
+
+        ul.navbar {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 25em;
+            left: 2em;
+            width: 250px;
+        }
+
+        /* Titulos principales */
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: Times New Roman;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        h1 {
+            color: #29abe3;
+        }
+
+        .categoria_titulo {
+            font-style: italic;
+            color: #ffffff;
+        }
+
+        h3 {
+            font-style: italic;
+            font-weight: bold;
+            color: #707073;
+        }
+
+        .categoria {
+            text-align: center;
+            background-color: #707073;
+            width: 20%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            margin: auto;
+        }
+
+        ul.navbar li {
+            background: white;
+            margin: 0.5em 0;
+            padding: 0.3em;
+        }
+
+        /* Enlaces */
+
+        a.link-color:visited {
+            color: white;
+        }
+
+        a.link-color:link {
+            color: white;
+        }
+
+        a.link-color:hover {
+            color: white;
+        }
+
+        a.link-color:hover {
+            border-bottom: 1px solid;
+            background: black;
+        }
+
+        /* Link de referencia */
+
+        a:link {
+            color: #4e00ff;
+        }
+
+        a:visited {
+            color: #003bff;
+        }
+
+        a:focus {
+            border-bottom: 1px solid;
+            background: #98aae4;
+        }
+
+        a:hover {
+            border-bottom: 1px solid;
+            background: #aacefe;
+        }
+
+        /* Etiqueta P */
+
+        p {
+            line-height: normal;
+            text-align: justify;
+            font-size: 18px;
+        }
+
+        p.titulo {
+            color: #29abe3;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        p.subtitulo {
+            color: #29abe3;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* NUEVO */
+        p.subtitulo-segundo {
+            color: #29abe3;
+            font-style: italic;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        p.correspondencia {
+            color: black;
+            font-size: 18px;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        /* NUEVO */
+        p.entrevista {
+            color: black;
+            font-size: 18px;
+            font-style: italic;
+        }
+
+        /* NUEVO */
+        p.subtitulo-tercero {
+            color: #29abe3;
+            font-style: italic;
+            font-size: 18px;
+        }
+
+        p#cabeza {
+            color: #1d71ae;
+            text-align: center;
+        }
+
+        p.autores {
+            font-size: 16px;
+            margin: 0;
+            text-indent: 0em;
+            margin-bottom: 10px;
+        }
+
+        p.forma-citar {
+            text-indent: 0em;
+            text-align: justify;
+            justify-content: center;
+        }
+
+        .cita {
+            text-align: -webkit-center;
+        }
+
+        /* Bold especial para palabras que tienen color seguido de dos puntos
+*/
+
+        /* NUEVO */
+
+        b.subtitulo-segundo {
+            color: #29abe3;
+            font-size: 18px;
+        }
+
+        .contenedor_info {
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .info {
+            width: auto;
+        }
+
+        /* Este es para los documentos del dos en adelante *codigo abajo de este comentario* */
+
+        .info-text {
+            text-align: end;
+            margin: 0;
+        }
+
+        /* Uso Exlusico para el primero documento  que es de revision  *codigo abajo de este comentario* */
+
+        .info_text {
+            font-size: 12px;
+            line-height: 100%;
+            text-align: center;
+            margin: 0;
+        }
+
+        .info_hr {
+            margin: 5;
+        }
+
+        /* Fin P */
+        /* Etiqueta Italic */
+
+        i {
+            font-size: 18px
+        }
+
+        i.centrado {
+            font-size: 18px
+        }
+
+        /* LI para las listas */
+
+        li {
+            font-size: 18px;
+            padding-top: 10px;
+            text-align: justify;
+        }
+
+        /* NUEVO */
+        .lista li {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        hr {
+            background-color: #29abe3;
+            height: 1px;
+        }
+
+        /* Tablas */
+
+        table {
+            border-collapse: collapse;
+            border: 2px solid rgb(0, 0, 0);
+            align-items: center;
+        }
+
+        thead th {
+            border-collapse: collapse;
+            background-color: rgb(179, 179, 179);
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        tbody td {
+            border-collapse: collapse;
+            text-align: center;
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        .tipo {
+            color: #ffffff;
+            font-size: 22px;
+            border-radius: 10px 5px 10px 5px;
+            background-color: #696969;
+        }
+
+        img.logos {
+            width: 15px;
+            height: 15px;
+        }
+
+        .image {
+            text-align: center;
+            image-rendering: optimizeQuality;
+        }
+
+        .image p {
+            text-align: center;
+            font-size: small;
+        }
+
+        .logo {
+            width: 300px;
+            height: 80px;
+        }
+
+        .logo2 {
+            width: 300px;
+            height: 50px;
+        }
+
+        /* Anclajes de la pagina */
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* NUEVO */
+        .ecuacion {
+            text-align: center;
+            font-weight: bold;
+            margin: 1px;
+        }
+
+        @media only screen and (min-width:320px) and (max-width:900px) {
+            body {
+                width: 100%;
+                padding: 5em;
+                margin: 5px;
+            }
+
+            .image {
+                text-align: center;
+                image-rendering: optimizeQuality;
+            }
+
+            .image img {
+                width: 100%;
+            }
+
+            .image p {
+                font-size: small;
+                text-align: center;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contenedor_info">
+        <div>
+            <img src="img/globales/logo.jpg" alt="" height="125px">
+        </div>
+        <div class="info" style="text-align: right;">
+            <p class="info-text"> ISSN-PRINT 1794-9831 / E-ISSN 2322-7028 </p>
+            <p class="info-text"> Vol. 19 Nº 3 / sep - dic, 2022 / Cúcuta, Colombia </p>
+            <p class="info-text">
+                <img src="img/globales/doi.png" height="20px" alt="">
+                <a href="https://doi.org/10.22463/17949831.3317">https://doi.org/10.22463/17949831.3317</a>
+            </p>
+        </div>
+    </div>
+
+
+    <!--Categoría-->
+    <div class="categoria">
+        <h2 class="categoria_titulo">Original </h2>
+    </div>
+
+    <h1> Efecto de una intervención educativa en el conocimiento sobre VPH en universitarias </h1>
+
+    <h2 class="segundo"> Effect of an educational intervention about knowledge on HPV in university female students</h2>
+
+    <h2 class="segundo"> Efeito de uma intervenção educacional sobre o conhecimento sobre o HPV em mulheres
+        universitárias</h2>
+
+
+    <!--Autores-->
+    <h3>
+        María Guadalupe Chávez-Morales <sup><a href="#sup1">1*</a> </sup> <br>
+        Jazmín Paola Carranza-Guardado <sup><a href="#sup2">2*</a> </sup> <br>
+        Laura Carolina Vásquez-delaCruz <sup><a href="#sup3">3*</a> </sup> <br>
+        Fátima Elizabeth Cardona-Zambrano <sup><a href="#sup4">4*</a> </sup> <br>
+        Emmanuel Alejandro Quezada-Oliva <sup><a href="#sup5">5*</a> </sup> <br>
+        Ramiro Altamira-Camacho <sup><a href="#sup6">6*</a> </sup> <br>
+    </h3>
+
+
+    <!-- Conetenedor de las columnas de la descripciones de los autores, correspondencia de autor 
+    y los resumenes -->
+    <div class="contenedor-general">
+
+
+        <!-- Contenedor de los resumenes -->
+        <div class="contenedor-resumen">
+
+            <!-- Resumen Español -->
+
+            <div class="resumen-fondo">
+                <p class="titulo-resumen"> Resumen</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> <b>Objetivo:</b> Evaluar el efecto de una intervención educativa en el
+                    conocimiento
+                    sobre el Virus
+                    del Papiloma Humano en universitarias. <b>Material y métodos:</b> Estudio cuantitativo y
+                    preexperimental.
+                    Al efecto se realizó una intervención educativa virtual fundamentada en el
+                    modelo Freireano de la Educación liberadora a estudiantes universitarias, elegidas con un
+                    muestreo aleatorio simple, mediante participación voluntaria. Se utilizó como instrumento el
+                    alfa de Cronbach de 0,768 para medir el conocimiento pre-intervención y post-intervención.
+                    También, se empleó estadística descriptiva e inferencial; los datos fueron analizados con la
+                    prueba de rangos de Wilcoxon y el coeficiente de correlación de Spearman. <b>Resultados:</b> Se
+                    evaluó a un total de 73 estudiantes de la licenciatura en nutrición, cuya mediana de la edad
+                    fue de 19 años. El 49,3% ya había iniciado su vida sexual al momento del estudio. Antes de
+                    la intervención el 46,6% tuvo un nivel de conocimiento bueno; y, posterior a la intervención
+                    el 75,3% tuvo un nivel excelente (p=0,000). No existió relación estadísticamente significativa
+                    entre el conocimiento y la edad (p=0,757), ni con el conocimiento y el semestre (p=0,458).
+                    <b>Conclusión:</b> La intervención educativa demostró tener un efecto positivo estadísticamente
+                    significativo en el conocimiento sobre el VPH por parte de las universitarias.
+                </p>
+
+                <p class="texto-resumen">
+                    <b>Palabras Claves:</b> Mujeres; Enfermería; Educación en salud; Infecciones por papilomavirus;
+                    Adulto joven.
+                </p>
+            </div>
+            <!-- Resumen Inglés -->
+
+            <div>
+                <p class="titulo-resumen"> Abstract</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> <b>Objective:</b> Evaluate the effect of an educational intervention about
+                    knowledge on Human
+                    Papilloma Virus in university female students. <b>Material y methods:</b> Quantitative and
+                    pre-experimental study. For this purpose, a virtual educational intervention was carried out with
+                    female students, based on the Freire’s educational model of Education for freedom. The Cronbach’s
+                    alpha instrument of 0,768 was used to measure pre-intervention and post-intervention
+                    knowledge. Also, descriptive and inferential statistics were applied; the data were analyzed
+                    through the Wilcoxon signed-rank test and the Spearman’s rank correlation coefficient. Results: A
+                    total of 73 undergraduate nutrition students were evaluated, with a median age of
+                    19 years. At the moment of the study, 43,9% had already started their sexual life. Before the
+                    intervention 46,6% had a good level of knowledge; after the intervention, 75,3% had an
+                    excellent level (p=0,000=). The was no statistically significant correlation between knowledge and
+                    age (p=0,757), nor between knowledge and semester (p=0,458). <b>Conclusion:</b> The
+                    educational intervention showed a statistically significant positive effect on HPV knowledge
+                    in university female students. </p>
+
+                <p class="texto-resumen">
+                    <b>Keywords:</b> Women; Nursing; Health education; HPV infections; Young adult.
+                </p>
+            </div>
+            <!-- Resumen Portuguez -->
+
+            <div class="resumen-fondo">
+                <p class="titulo-resumen"> Resumo</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> <b>Objetivo:</b> Avaliar o efeito de uma intervenção educacional sobre o
+                    conhecimento sobre o
+                    Papilomavírus Humano em estudantes universitários. <b>Material e métodos:</b> Estudo quantitativo e
+                    pré-experimental. Para isso, foi realizada uma intervenção educativa virtual baseada
+                    no modelo freireano de liberação da educação para os universitários, escolhidos com amostragem
+                    aleatória simples, por meio da participação voluntária. O alfa de Cronbach de 0,768 foi
+                    utilizado como instrumento para medir o conhecimento pré-intervenção e pós-intervenção.
+                    Também foram utilizadas estatísticas descritivas e inferenciais; os dados foram analisados
+                    com o teste de Wilcoxon e o coeficiente de correlação de Spearman. <b>Resultados:</b> Foram
+                    avaliados 73 alunos do bacharelado em nutrição, cuja idade mediana foi de 19 anos. 49,3%
+                    já haviam iniciado sua vida sexual no momento do estudo. Antes da intervenção, 46,6%
+                    tinham bom nível de conhecimento; e, após a intervenção, 75,3% apresentaram excelente
+                    nível (p=0,000). Não houve relação estatisticamente significante entre conhecimento e idade
+                    (p=0,757), nem entre o conhecimento e o semestre acadêmico (p=0,458). <b>Conclusão:</b> A
+                    intervenção educacional mostrou ter efeito positivo </p>
+
+                <p class="texto-resumen">
+                    <b>Palavras-chave:</b> Mulheres; Enfermagem; Educação em saúde; Infecções por papilomavírus;
+                    Adulto jovem.
+                </p>
+            </div>
+
+
+
+        </div>
+
+        <!-- Descripcion de autores, Aprobado, Como citar, licencia -->
+        <div class="contenedor-autor">
+            <!-- Autores -->
+            <div>
+                <p class="subtitulo" style="color: black; font-size: 18px;">Autor de correspondencia*</p>
+                <!-- 1 -->
+                <p class="autores" id="sup1"><sup>1*</sup><img class="logos" src="img/globales/sobre.png"> Lic. en
+                    Enfermería. Universidad Autónoma de Aguascalientes. Enfermera adscrita al Hospital General ISSSTE.
+                    Aguascalientes, México.
+                    <a href="mailto:al219051@edu.uaa.mx">al219051@edu.uaa.mx</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0003-3792-7224">0000-0003-3792-7224</a>
+                </p>
+                <!-- 2 -->
+                <p class="autores" id="sup2"><sup>2*</sup><img class="logos" src="img/globales/sobre.png">Lic. en
+                    Enfermería. Universidad Autónoma de Aguascalientes. Pasante de Servicio Social de Enfermería del
+                    Centenario Hospital Miguel Hidalgo. Aguascalientes, México.
+                    <a href="mailto:al219965@edu.uaa.mx">al219965@edu.uaa.mx</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0002-4157-2342">0000-0002-4157-2342</a>
+                </p>
+                <!-- 3 -->
+                <p class="autores" id="sup3"><sup>3*</sup><img class="logos" src="img/globales/sobre.png">Lic. en
+                    Enfermería. Universidad Autónoma de Aguascalientes.
+                    Pasante de Servicio Social del Departamento de Enfermería de la UAA.
+                    Aguascalientes, México.
+                    <a href="mailto:al237952@edu.uaa.mx">al237952@edu.uaa.mx</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0001-6168-7780">0000-0001-6168-7780</a>
+                </p>
+                <!-- 4 -->
+                <p class="autores" id="sup4"><sup>4*</sup><img class="logos" src="img/globales/sobre.png">Lic. en
+                    Enfermería. Universidad Autónoma de Aguascalientes. Pasante de Servicio Social
+                    de la UMA 1 IMSS. Aguascalientes, México
+                    <a href="mailto:al242150@edu.uaa.mx">al242150@edu.uaa.mx</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0002-4622-5753">0000-0002-4622-5753</a>
+                </p>
+                <!-- 5 -->
+                <p class="autores" id="sup5"><sup>5*</sup><img class="logos" src="img/globales/sobre.png">Lic. en
+                    Enfermería.
+                    Universidad Autónoma de
+                    Aguascalientes. Pasante de Servicio Social de la UMA 7 IMSS.
+                    Aguascalientes, México.
+                    <a href="mailto:al219142@edu.uaa.mx">al219142@edu.uaa.mx</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0001-9189-0106">0000-0001-9189-0106</a>
+                </p>
+                <!-- 6 -->
+                <p class="autores" id="sup6"><sup>6*</sup><img class="logos" src="img/globales/sobre.png">Mtro. en
+                    Ciencias de Enfermería, Docente del departamento
+                    de Enfermería de la Universidad
+                    Autónoma de Aguascalientes.
+                    Enfermero adscrito al Hospital
+                    General de Pabellón de Arteaga.
+                    Aguascalientes, México.
+                    <a href="mailto:ramiro.altamira@edu.uaa.mx">ramiro.altamira@edu.uaa.mx</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0003-3403-6901">0000-0003-3403-6901</a>
+                </p>
+            </div>
+
+            <!--Recibido y aprobado-->
+            <div>
+                <p><b>Recibido: </b> 30 marzo 2022 <br> <b>Aprobado: </b> 20 junio 2022 </p>
+            </div>
+
+            <!-- Como citar -->
+            <div class="cita">
+                <p class="forma-citar autores"><b>Para citar este artículo / To reference this article / Para citar este
+                        artigo:</b> Chávez-Morales MG, Carranza-Guardado JP, Vásquez-delaCruz LC, Cardona-Zambrano FE,
+                    Quezada-Oliva
+                    EA, Altamira CR.Efecto de una intervención educativa en el conocimiento sobre VPH en universitarias.
+                    2022; 19(3):10-20. <a
+                        href="https://doi.org/10.22463/17949831.3317">https://doi.org/10.22463/17949831.3317</a> </p>
+            </div>
+
+            <!--Licencia-->
+            <br>
+            <div>
+                <p class="autores "> &#169; Universidad Francisco de Paula Santander.
+                    Este es un artículo bajo la licencia CC-BY-NC-ND
+                    <br>
+                    <a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img
+                            alt="Licencia Creative Commons" style="border-width:0"
+                            src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Cuerpo del documento -->
+    <div>
+        <hr>
+        <!--Introducción-->
+        <p class="titulo"> Introducción</p>
+
+        <p>
+            Cada día, más de un millón de personas contraen una
+            enfermedad de transmisión sexual (ETS) a nivel mundial (1). El virus del papiloma humano (VPH) es la
+            ETS más frecuente en el mundo, aproximadamente el
+            80% de los individuos tendrán contacto con este virus
+            en el transcurso de sus vidas (2). Se estima que más de
+            290 millones de mujeres en el mundo están infectadas
+            por el VPH (1). La infección por VPH es asintomática
+            en la mayoría de los casos; sin embargo, puede ocasionar síntomas leves o complicaciones importantes en la
+            salud, la más destacable de ellas es el cáncer cervicouterino (3). En México, constituye un problema grave
+            de
+            salud, ya que el cáncer cervicouterino ocupa el segundo
+            lugar en neoplasias de la mujer (4).
+        </p>
+
+        <p>
+            Aunque el VPH afecta a hombres y mujeres, la mayor
+            incidencia de esta infección se encuentra en mujeres de
+            15 a 24 años (5). Cabe destacar que las mujeres jóvenes
+            presentan un riesgo mayor de contraer enfermedades
+            de transmisión sexual que jóvenes varones, este riesgo
+            está asociado a prácticas sexuales poco seguras, a menudo no deseadas y realizadas por imposición (6).
+        </p>
+
+        <p>
+            Existe un bajo conocimiento sobre el Virus del Papiloma Humano en la población en general (3,7–9). De
+            acuerdo con diferentes investigaciones realizadas sobre
+            el nivel de conocimiento en universitarios se ha concluido que en este grupo poblacional existe un bajo
+            conocimiento sobre este virus. También se demuestra
+            que la mayor parte de los universitarios desconocen
+            los factores de riesgo, transmisión, detección, complicaciones y prevención de la infección por VPH (7);
+            además prevalecen conductas de riesgo (10), lo que los convierte en un grupo de riesgo, al no tomar las
+            medidas de prevención necesarias (11). Por lo anterior, las
+            investigaciones recomiendan la creación de intervenciones dirigidas a los jóvenes debido a su posición de
+            vulnerabilidad ante esta problemática (12).
+        </p>
+
+        <p>
+            Desde este punto de vista, las intervenciones educativas deben informar y concientizar sobre temas
+            relevantes en salud, proponer practicas saludables, así como
+            estimular una mejor calidad de vida para lograr un desarrollo integral de la persona (13).
+        </p>
+
+        <p>
+            Hay que mencionar además, que la Educación para la
+            Salud con un enfoque integral tiene como objetivos el
+            ejercicio de la ciudadanía, la transformación social y
+            la construcción colectiva de la salud; para lograrlo se
+            utilizan los modelos educativos de un nuevo paradigma, en donde la educación es activa, crítica,
+            participativa y transformadora (14, 15). Bajo este paradigma se
+            encuentra la “Educación liberadora” de Paulo Freire,
+            en donde el conocimiento se construye entre los educadores y los participantes, mediante el diálogo como
+            herramienta principal (16).
+        </p>
+
+        <p>
+            La educación liberadora se basa en la educación para
+            adultos; también se centra en los participantes como
+            sujetos activos en su aprendizaje y rechaza la idea de
+            volverlos solo receptores de información; igualmente,
+            promueve el pensamiento crítico y se desafía a pensar
+            (15,17-19). Además, la finalidad del modelo es generar
+            conciencia sobre las problemáticas y la capacidad de
+            leer el mundo, para asociar la experiencia de aprendizaje con la cotidianidad, mediante una percepción
+            crítica
+            del contexto, con el objetivo de que los participantes
+            logren satisfacer sus necesidades y den soluciones a los
+            problemas de su entorno (16-19).
+        </p>
+
+        <p>
+            Para que las personas puedan cambiar la forma en que
+            leen su realidad y emprendan acciones de transformación, tienen que pasar por tres fases. Inicialmente se
+            encuentran en una fase mágica, donde no resuelven los
+            problemas al no ser percibidos; luego se presenta una
+            fase ingenua, en donde se identifican de manera individual y comienzan cambios de forma personal; y
+            finalmente hay una fase crítica, en la que se reflexiona sobre
+            los problemas de manera comunitaria, se concientiza
+            y se motiva a realizar cambios colectivos. Para lograr
+            su objetivo, el modelo educativo Freireano aparece en
+            tres momentos: “investigación de los medios de vida”,
+            “tematización, codificación y decodificación” y “problematización que se orienta a la concientización” (18).
+            Actualmente y debido a la necesaria separación física,
+            entre instructores y participantes, se utiliza una modalidad de enseñanza virtual. Esta modalidad contribuye
+            a la innovación de la enseñanza centrándose en el
+            participante, lo que permite un proceso educativo más
+            individualizado (19,21).
+        </p>
+
+        <hr>
+
+        <p class="titulo">Objetivos</p>
+
+        <p class="subtitulo">Objetivo general</p>
+
+        <p>
+            Evaluar el efecto de una intervención educativa virtual
+            sobre el conocimiento de VPH en universitarias.
+        </p>
+
+        <p class="subtitulo">Objetivos específicos</p>
+
+        <ul>
+            <li>Examinar el nivel de conocimiento que presentan
+                antes y después de la intervención.</li>
+            <li>Comparar el conocimiento de las participantes
+                pre-intervención y post-intervención. </li>
+        </ul>
+
+        <hr>
+
+        <p class="titulo">Material y métodos</p>
+
+        <p>
+            Estudio cuantitativo, preexperimental y longitudinal
+            .
+            Se utilizó una muestra aleatoria realizada en las licenciaturas del Centro de Ciencias de la Salud,
+            eligiendo la
+            licenciatura en Nutrición para la aplicación de una intervención educativa sobre VPH a las estudiantes
+            mujeres
+            . El tamaño de la muestra fue de 96 participantes
+            (IC 95%, R 15%). Las participantes se eligieron mediante un muestreo aleatorio simple con reemplazo. Se
+            incluyeron mujeres con edades comprendidas entre 18
+            y 25 años
+            , quienes aceptaron participar en la investigación y recibir la intervención. Además, se excluyeron
+            las universitarias que hubieran recibido anteriormente
+            una intervención educativa del tema, tampoco se incluyeron en los resultados a las participantes que
+            abandonaron la intervención.
+        </p>
+
+        <ol>
+            <li>El estudio se clasifica como preexperimental debido a la selección de un
+                grupo aleatorio, con medición pre-intervención y post-intervención</li>
+            <li>La intervención fue destinada solo a mujeres, debido a las diferencias
+                en problemas y necesidades en salud, y la fragmentación social en el actuar de
+                ambos sexos, puesto que la salud de las mujeres requiere una atención particular
+                y el proceso de transformación social se enfoca a la eliminación de la posición
+                subalterna de la mujer en el ámbito sexual.</li>
+            <li>El rango de edad de las participantes corresponde a adultos jóvenes con
+                capacidad de modificación sobre su entorno y sus decisiones, lo que coincide con
+                la edad de mayor prevalencia del virus del Papiloma Humano en las mujeres.</li>
+            <li>Plataforma de acceso gratuito que permite reuniones de video, grabación de las reuniones, almacenamiento
+                de archivos, así como, registro de asistencia y permanencia de los participantes.</li>
+        </ol>
+
+        <p class="subtitulo">Instrumento</p>
+
+        <p>
+            Se empleó un instrumento de medición de conocimientos sobre VPH diseñado y previamente utilizado en
+            universitarios mexicanos, con un alfa de Cronbach de
+            0.768 (9), dividido en tres partes: datos generales, preguntas opcionales sobre conductas sexuales y 15
+            ítems
+            sobre el conocimiento. El nivel de conocimiento se determinó mediante una escala de valoración según las
+            respuestas correctas y el número de preguntas, en las
+            siguientes categorías: Insuficiente de 1 a 3, regular de 4
+            a 6, bueno de 7 a 9, muy bueno de 10 a 12 y excelente
+            de 13 a 15. Las participantes contestaron el instrumento
+            al iniciar la primera sesión de la intervención y al finalizar la última.
+        </p>
+
+        <p class="subtitulo">Intervención educativa </p>
+
+        <p>
+            La intervención educativa, titulada “Tu educación en
+            salud: VPH” fue diseñada bajo el modelo de la “Educación liberadora” de Paulo Freire y creada por
+            estudiantes de la licenciatura en enfermería, siendo los mismos
+            autores de la presente investigación. Para el diseño de
+            la intervención se tuvieron en cuenta los siguientes factores: nivel académico de los participantes, la
+            modalidad académica que cursaban y el papel de la mujer en
+            el ámbito sexual y de salud.
+        </p>
+
+        <p>
+            Los autores diseñaron un manual de intervención, donde se integró el contenido informativo sobre VPH con
+            el modelo educativo Freireano, mediante consejos pedagógicos, indicaciones y recomendaciones para los
+            instructores; además, se diseñó un manual para las participantes que incluyó información relevante
+            proporcionada en las sesiones y actividades complementarias.
+            Los temas sobre VPH impartidos en cada sesión se eligieron a través de los resultados que se consiguieron
+            en la medición pre-intervención, eligiendo aquellos en
+            que las participantes contaban con menor conocimiento; asi como de aquellos temas que se ha demostrado
+            que los universitarios desconocen (8-10).
+        </p>
+
+        <p>
+            La intervención fue impartida por estudiantes de octavo semestre de la licenciatura en enfermería
+            previamente capacitados, por medio de la plataforma virtual
+            Microsoft Teams4
+            , en el periodo comprendido entre noviembre 2020 a enero 2021, con ocho sesiones de aproximadamente 50
+            minutos cada una. Los instructores
+            verificaron la asistencia y permanencia en cada sesión,
+            con el pase de la lista. Durante cada sesión la actividad
+            principal fue el diálogo entre educadores (instructores)
+            y participantes, en el que se fomentó el problematizar y
+            concientizar sobre el VPH dentro de su contexto sociocultural. De igual forma, se utilizaron recursos
+            pedagógicos del método Freireano, como la conciencia crítica,
+            la palabra generadora, la tematización, codificación y
+            decodificación, y el uso de situaciones existenciales típicas del grupo. El material didáctico utilizado fue
+            una
+            presentación en Power Point, videos, esquemas, relatos, imágenes, el manual de la intervención y el manual
+            del participante. Cabe destacar que el manual fue solo
+            una guía en el desarrollo de las sesiones, puesto que
+            cada sesión se adaptó a las opiniones, inquietudes y conocimiento de las participantes.
+        </p>
+
+        <p>
+            Por otra parte, las sesiones se dividieron de acuerdo con
+            los tres momentos del modelo educativo. El primero se
+            dedicó a la aproximación a la realidad de las participantes con el fin de generar un análisis de su contexto
+            social y cultural. El segundo se estructuró para abarcar
+            la temática seleccionada sobre el VPH (estructura de
+            superficie), así como para modificar la forma en que las
+            participantes leen su realidad y las problemáticas de su
+            entorno (estructura profunda). Finalmente, en el tercer
+            momento, las participantes observaron críticamente su
+            realidad, también se les dio a conocer estrategias prácticas de prevención para realizar una acción
+            transformadora y así concluir sobre su concientización (Figura
+            1).
+        </p>
+
+
+        <div class="image">
+            <img src="img/V19-N3-2/img16.png" width="75%">
+            <p><b>Figura 1. </b>Intervención educativa “Tu educación en salud: VPH”</p>
+            <p><b>Fuente: </b>Elaboración propia, 2021.</p>
+            <p><b>Nota: </b>Estructura metodológica de las sesiones de la intervención educativa.</p>
+        </div>
+
+        <p>
+            Para mantener la validez interna del estudio y establecer estrategias de control se consideraron los
+            siguientes aspectos: se realizaron dos sesiones a la semana, en
+            horarios convenientes a la mayoría de las participantes;
+            la medición pre-intervención se efectuó al inicio de la
+            primera sesión y la medición final, al término de la última sesión. Además, las participantes fueron
+            informadas respecto a que las respuestas del instrumento eran
+            anónimas y no tendrían ningún valor académico.
+        </p>
+
+        <p>
+            Por otro lado, en cuanto a la validez externa, la intervención educativa fue diseñada de tal manera que
+            permitiera reproducirla en otras poblaciones de mujeres
+            jóvenes, al contar con información, consejos didácticos
+            y actividades pedagógicas que involucran la problemática y el contexto sociocultural de las jóvenes.
+        </p>
+
+        <p class="subtitulo">Consideraciones éticas y legales</p>
+
+        <p>
+            El protocolo de investigación se evaluó por la academia
+            de investigación del departamento de Enfermería de la
+            Universidad Autónoma de Aguascalientes, mediante
+            el código AEI-20-20, así como por el departamento de
+            Nutrición, para garantizar la protección de los datos
+            utilizados en el estudio. El desarrollo de la investigación se apegó a lo dispuesto en el título segundo
+            sobre
+            investigación con seres humanos de la Ley General de
+            Salud en materia de investigación (22). Igualmente, se
+            les proporcionó a las participantes un consentimiento
+            informado, se les explicaron las características de la
+            intervención y se les indicó que su participación era
+            voluntaria.
+        </p>
+
+        <p class="subtitulo">Análisis estadístico</p>
+
+        <p>
+            Las variables estudiadas fueron: edad, semestre, conductas sexuales, número de respuestas correctas y nivel
+            de conocimiento. Para su análisis se emplearon
+            estadísticos descriptivos como frecuencias y medidas
+            de tendencia central. Dado que, mediante la prueba de
+            Kolgomorov Smirnov se evidenció una distribución no
+            normal en las variables, se emplearon estadísticos no
+            paramétricos. La prueba de Wilcoxon se utilizó para
+            comparar la medición pre-intervención y post-intervención del conocimiento sobre VPH y determinar su
+            nivel de significancia. Para determinar el grado de asociación entre las variables edad, semestre y
+            conductas
+            sexuales con el conocimiento fue empleado el coeficiente de correlación Rho de Spearman. Del igual forma, se
+            usó el software Statistical Package for Social
+            Sciences (SPSS) versión 25.
+        </p>
+
+        <hr>
+
+        <p class="titulo">Resultados</p>
+
+        <p>
+            Al inicio de la intervención se disponía de 96 participantes, no se contó con participantes de reemplazo
+            adicionales, por lo que solo 73 finalizaron la intervención, con una tasa de retención del 76%. La principal
+            pérdida de participantes fue entre la tercer y cuarta sesión, y el mayor índice de deserción correspondió a
+            las
+            estudiantes de sexto y octavo semestre, atribuible a los horarios escolares . La edad de las participantes
+            fue de
+            18 a 25 años, se presentó una moda y mediana de 19
+            años. La mayoría (60,3%) pertenecía al primero y al
+            segundo semestre.
+        </p>
+
+        <p>
+            Respecto a las conductas sexuales, el 49,3% de las estudiantes ya había iniciado su vida sexual. Además, el
+            63% no contaba con pareja y el 69,9% refirió no haber
+            tenido más de una pareja sexual (Gráfica 1).
+        </p>
+
+        <div class="image">
+            <img src="img/V19-N3-2/img17.png" width="80%">
+            <p><b>Gráfica 1. </b>Conductas sexuales de las participantes</p>
+            <p><b>Fuente: </b>Instrumento “Conocimiento de VPH en estudiantes”, 2021. (n=73)</p>
+        </div>
+
+        <p>
+            En relación con la diferencia de las respuestas pre-intervención y post intervención, se encontró una
+            diferencia estadísticamente significativa en la mayoría de
+            los ítems del instrumento, mostrando mayor incremento de conocimiento (p=0,000) en los ítems referidos a que
+            el VPH afecta a hombres y mujeres; igualmente se
+            determinó que no es posible la transmisión del VPH
+            por transfusiones sanguíneas, las verrugas genitales, el
+            cáncer de cuello uterino, vulva, escroto y ano (Ver tabla
+            1).
+        </p>
+
+        <div class="image">
+            <p><b>Tabla 1. </b>Respuestas correctas del instrumento pre-intervención y post-intervención.</p>
+            <img src="img/V19-N3-2/img18.png" width="80%">
+            <img src="img/V19-N3-2/img19.png" width="80%">
+            <p><b>Fuente: </b>Instrumento “Conocimiento de VPH en estudiantes”, 2021. (n=73). p= Prueba de rangos de
+                Wilcoxon.
+            </p>
+        </div>
+
+        <p>
+            En la medición pre-intervención la mayoría de las participantes tuvo 8 respuestas correctas y un nivel
+            “Bueno”. Posterior a la intervención la moda fue de 14 respuestas correctas y el nivel “Excelente”. Los
+            niveles que mostraron una diferencia estadísticamente significativa (p&lt;0.05) en ambas mediciones
+            fueron“Regular”, “Bueno” y “Excelente” (Gráfica 2).
+        </p>
+
+        <div class="image">
+            <img src="img/V19-N3-2/img20.png" width="80%">
+            <p><b>Gráfica 2. </b>Nivel de conocimiento pre-intervención y post-intervención.</p>
+            <p><b>Fuente: </b>Conocimiento de VPH en estudiantes, 2021. n=73. p=Prueba de rangos de Wilcoxon</p>
+        </div>
+
+        <p>
+            Respecto a la comparación de medianas de la medición
+            pre-intervención (Me=9) y post-intervención (Me=14)
+            se detectó un incremento de 5 puntos, con un nivel de
+            significancia de 0,000.
+        </p>
+
+        <p>
+            Entre las variables edad de las participantes y el nivel
+            de conocimientos no se demostró ninguna relación estadísticamente significativa, ya que mediante la
+            correlación de Spearman se obtuvo un p=0,882 en la medición pre-intervención y un p=0,482 en la medición
+            post-intervención.
+        </p>
+
+        <p>
+            Del mismo modo, con respecto a la relación entre semestre y nivel de conocimiento pre-intervención no se
+            encontró significancia (p=0,388), ni entre el semestre
+            de las participantes y el nivel de conocimientos post-intervención (p=0,156).
+        </p>
+
+        <p class="titulo">Discusión</p>
+
+        <p>
+            Una investigación sobre conocimientos del VPH realizada en universitarios españoles (22), describe que sólo
+            el 21% de los jóvenes sabía que el VPH está relacionado con el cáncer de cuello de útero, en comparación
+            con los resultados del presente estudio, en que la mitad
+            de los participantes conocía esta relación antes de la intervención. Otro estudio llevado a cabo con
+            estudiantes del área de la salud, incluida la carrera de nutrición (7),
+            coincide en el desconocimiento sobre las complicaciones del VPH.
+        </p>
+
+        <p>
+            Por otro lado, en la medición post-intervención se demuestra un aumento en el conocimiento de las
+            participantes; esta misma situación se ha reportado en los
+            resultados de diversas intervenciones educativas sobre
+            VPH realizadas por la enfermería con distintas características y metodologías, demostrando que existe un
+            aumento significativo del conocimiento por parte de los
+            distintos grupos a los que se imparten (23-25).
+        </p>
+
+        <p>
+            Con respecto, al análisis de la edad de las participantes
+            y la variable nivel de conocimientos no se encuentra
+            correlación entre ellas. Mientras que, otro estudio llevado a cabo en Ecuador (26) se evidencia una relación
+            entre ambas variables, reportando que a menor edad es
+            menor el conocimiento. Referente al nivel académico o
+            semestre que se curse, un estudio realizado en Argentina (8) encontró una relación con el nivel de
+            conocimiento de las universitarias, demostrando que las participantes del área de la salud de semestres
+            superiores
+            presentan mejor conocimiento en comparación con las
+            de semestres inferiores. Dicha relación no está presente
+            en los resultados que se obtuvieron en este estudio, en
+            donde el semestre no influye en el nivel de conocimientos, atribuible a la escasa participación de las
+            participantes en semestres superiores.
+        </p>
+
+        <p>
+            Cabe señalar que algunas investigaciones que miden
+            el nivel de conocimiento sobre VPH en mujeres han
+            reportado que la mayoría de las que cuentan con una
+            escolaridad nula o mínima tienen un conocimiento deficiente sobre el VPH, por lo que se concluye que las
+            mujeres con mayor escolaridad cuentan con un mejor
+            conocimiento (2,28,29). Aunque la mayoría de las participantes del presente estudio dispone de un
+            conocimiento “bueno” se espera que no se presenten casos
+            de conocimiento “insuficiente” debido a la escolaridad
+            con la que cuentan.
+        </p>
+
+        <p>
+            Desde otra perspectiva, una investigación realizada en
+            México a estudiantes, demuestra la efectividad de una
+            intervención de corta duración, como es el caso de la
+            estrategia educativa breve respecto al conocimiento sobre el virus del papiloma humano (24). Igualmente, en
+            la intervención a universitarios de Brasil realizada por
+            Oliveira et al. (29), se demostró que además de aumentar el conocimiento sobre ITS, se comprueba la
+            probabilidad de disminuir la práctica de relaciones sexuales
+            de riesgo en los participantes. Es importante señalar
+            que esta última intervención coincide con “Tu educación en salud: VPH” con 8 sesiones y la participación
+            de universitarios con un rango de edad similar.
+        </p>
+
+        <p>
+            En definitiva, las acciones educativas que posibiliten
+            cambios para mejorar la concientización y reflexión
+            son fundamentales para un óptimo conocimiento sobre
+            VPH (30). Si bien, mediante diversas estrategias tradicionales de educación aplicadas en las intervenciones
+            se logra un aumento de conocimiento, las intervenciones educativas donde el participante es un sujeto activo
+            y no solo un receptor de información, demuestran ser
+            efectivas, obteniendo una mejor reflexión, comprensión
+            y conciencia sobre las problemáticas tratadas; además
+            de demostrar satisfacción por parte de los participantes. Por su parte, Gómez et al. (31), en su
+            intervención
+            sobre el VPH mediante un ejemplo de intervención no
+            tradicional al utilizar estrategias lúdicas, lograron un
+            proceso de interiorización, reflexión y comprensión
+            sobre el VPH. Esta investigación es similar a la intervención sobre “Tu educación en salud: VPH” en donde se
+            utiliza el paradigma de la Educación liberadora,
+            permitiendo que las participantes lograran un proceso
+            de problematización, reflexión y concientización sobre
+            el VPH.
+        </p>
+
+        <hr>
+
+        <p class="titulo">Conclusiones</p>
+
+        <ul>
+            <li>La intervención educativa demostró tener un efecto
+                positivo estadísticamente significativo en el conocimiento sobre VPH en las universitarias. La mayoría
+                de las participantes no presentaron conductas
+                sexuales de riesgo y obtuvieron un conocimiento
+                bueno; sin embargo, se concluye que esto no las
+                excluye de llegar a padecer en algún momento de
+                su vida el VPH.</li>
+            <li>Es importante destacar que esta intervención fue
+                realizada de manera virtual, permitiendo inferir que
+                este método brinda la oportunidad de aumentar el
+                número de participantes incluidas en cada sesión,
+                sin costos excesivos para su realización.</li>
+            <li>Al utilizar el modelo de la Educación liberadora
+                de Paulo Freire las universitarias participan en el
+                proceso de enseñanza-aprendizaje, desde la creación de contenido a enseñar de acuerdo con lo que
+                necesitan, hasta la retroalimentación y evaluación</li>
+            <li>de lo aprendido. Al fomentar la reflexión y la concientización, cuando se educa, se aumenta la
+                posibilidad de disminuir las conductas de riesgo en la
+                población, ya que la persona conoce e interioriza
+                los problemas, reconociéndolos dentro de su vida
+                y su entorno.</li>
+            <li>Los profesionales de la enfermería son parte fundamental en la formulación de programas de promoción de
+                la salud y en la ejecución de estos a través
+                de la educación para la salud. La enfermería en su
+                papel de educadora educa y es educada, al interactuar y reconocer a la población; de igual forma es
+                capaz de desarrollar un cuidado holístico, propio de
+                esta profesión. De ahí, que indistintamente del ámbito escolar, clínico o comunitario la trascendencia
+                del conocimiento de la enfermería sobre la Educación en salud, debe ser guiado por teorías que fomenten
+                cambios sociales.</li>
+            <li>De manera análoga, se plantea que es importante
+                aplicar este modelo educativo a otros grupos poblacionales y dar seguimiento a los participantes a
+                mediano y largo plazo para evaluar el conocimiento.</li>
+        </ul>
+
+        <p class="subtitulo">Conflicto de intereses</p>
+
+        <p>
+            Los autores declaran que no existen conflictos de interés.
+        </p>
+
+
+        <!-- Referencias -->
+
+        <hr>
+
+        <p class="titulo"> Referencias </p>
+
+        <ol class="lista">
+            <li id="r1">Organización Mundial de la Salud. Infecciones de transmisión sexual [Internet]. OMS. 2019.
+                [consultado
+                15 de enero de 2022]. Disponible en: <a
+                    href="https://www.who.int/es/news-room/fact-sheets/detail/sexually-transmitted-infections-(stis)">https://www.who.int/es/news-room/fact-sheets/detail/sexually-transmitted-infections-(stis)</a>
+            </li>
+            <li id="r2">Medina-Fernández IA, Gallegos-Torres RM, Cervera-Baas ME, Cob-Tejeda RA, Jiménez-Laces J,
+                Ibarra-Escobedo O. Conocimiento del virus del papiloma humano y su vacuna por parte de mujeres de una
+                zona rural
+                de Querétaro, México. REVENF [Internet]. 2017 [consultado 15 de enero del 2022]; 18(32). Disponible en:
+                <a
+                    href="https://revistas.ucr.ac.cr/index.php/enfermeria/article/view/23575">https://revistas.ucr.ac.cr/index.php/enfermeria/article/view/23575</a>
+            </li>
+            <li id="r3">Contreras-González R, Magaly-Santana A, Jiménez-Torres E, Gallegos-Torres R, Xeque-Morales Á,
+                Palomé-Vega G, et al. Nivel de conocimientos en adolescentes sobre el virus del papiloma humano.
+                Enfermería
+                Univ [Internet]. 2017 [consultado 15 de enero de 2022];14(2). Disponible en: <a
+                    href="http://www.revista-enfermeria.unam.mx/ojs/index.php/enfermeriauniversitaria/article/view/39">http://www.revista-enfermeria.unam.mx/ojs/index.php/enfermeriauniversitaria/article/view/39</a>
+            </li>
+            <li id="r4">Trujillo-Perdomo TC, Domínguez-Bauta SR, Ríos Hernández MA, Hernández-Menéndez M. Prevalencia
+                del
+                virus del papiloma humano en mujeres con citología negativa. Rev Cuba Obstet y Ginecol [Internet]. 2017
+                [consultado 15 de enero de 2022];43(1). Disponible en: <a
+                    href="http://scielo.sld.cu/scielo.php?script=sci_arttext&pid=S0138-600X2017000100017">http://scielo.sld.cu/scielo.php?script=sci_arttext&pid=S0138-600X2017000100017</a>
+            </li>
+            <li id="r5">Xocoloctzi-Morales D, Marín-Laredo MM, Gómez-Alonso C, Valenzuela-Gandarilla J. Conocimiento de
+                los
+                adolescentes de Guanajuato sobre prevención de la infección del virus del papiloma humano. Rev Análisis
+                Cuantitativo y Estadístico [Internet]. 2016 [consultado 15 de enero de 2022]; 3(8). Disponible en: <a
+                    href="http://www.ecorfan.org/bolivia/researchjournals/Analisis_Cuantitativo_y_Estadistico/vol3num8/Revista_de_Analisis_Cuantitativo_y_Estadistico_V3_N8_1.pdf">http://www.ecorfan.org/</a>
+            </li>
+            <li id="r6">Organización Mundial de la Salud. Salud de la mujer [Internet]. Temas de salud. 2021 [consultado
+                el 9 de
+                mayo de 2021]. Disponible en: <a
+                    href="https://www.who.int/topics/womens_health/es">https://www.who.int/topics/womens_health/es</a>
+            </li>
+            <li id="r7">Bustamante-Ramos GM, Martínez-Sánchez A, Tenahua-Quitl I, Jiménez C, López-Mendoza Y.
+                Conocimiento
+                y prácticas de prevención sobre el virus del papiloma humano (VPH) en universitarios de la Sierra Sur,
+                Oaxaca. An Fac Med [Internet]. 2016 [consultado 15 de enero de 2022]; 76(4). Disponible en: <a
+                    href="https://revistasinvestigacion.unmsm.edu.pe/index.php/anales/article/view/11406">https://revistasinvestigacion.unmsm.edu.pe/index.php/anales/article/view/11406</a>
+            </li>
+            <li id="r8">Medina ML, Medina MG, Merino LA. Conductas de riesgo y nivel de conocimientos sobre Papiloma
+                virus humano en universitarios del noreste de Argentina. Enf Inf Microbiol [Internet]. 2014 [consultado
+                15 de enero de
+                2022];34(4). Disponible en: <a
+                    href="https://www.medigraphic.com/cgi-bin/new/resumen.cgi?IDARTICULO=54668">https://www.medigraphic.com/cgi-bin/new/resumen.cgi?IDARTICULO=54668</a>
+            </li>
+            <li id="r9">Ortunio M, Rodriguez A, Guevara H, Cardozo R. Conocimiento sobre el Virus del Papiloma Humano en
+                estudiantes de Citotecnología de una Universidad Nacional. Comunidad y Salud [Internet]. 2014
+                [consultado 15
+                de enero de 2022];12(1). Disponible en: <a
+                    href="https://www.redalyc.org/articulo.oa?id=375740254002">https://www.redalyc.org/articulo.oa?id=375740254002</a>
+            </li>
+            <li id="r10">Medina ML, Medina MG, Merino LA. Principales conductas de riesgo sobre Papilomavirus Humano en
+                universitarios argentinos. Av Odontoestomatol [Internet]. 2018 [consultado 15 de enero de 2022]; 34(6).
+                Disponible en: <a
+                    href="https://scielo.isciii.es/scielo.php?script=sci_arttext&pid=S0213-12852018000600005">https://scielo.isciii.es/scielo.php?script=sci_arttext&pid=S0213-12852018000600005</a>
+            </li>
+            <li id="r11">Martínez-Martínez L, Cuesta-Cambra U, Serrano-Villalobos O, Niño-González J. Fórmulas para la
+                prevención, formato narrativo vs expositivo. Análisis comparativo de sus efectos en el conocimiento,
+                actitud y conducta de los jóvenes sobre el VPH. Revista Latina de Comunicación Social [Internet]. 2018
+                [consultado 15
+                de enero de 2022]; 73 (2018). Disponible en: <a
+                    href=" https://nuevaepoca.revistalatinacs.org/index.php/revista/article/view/581">
+                    https://nuevaepoca.revistalatinacs.org/index.php/revista/article/view/581</a></li>
+            <li id="r12">Martínez-Martínez L, Cuesta Cambra U. Conocimiento y actitudes hacia el virus del papiloma
+                humano en una
+                población de universitarios españoles. RECS [Internet]. 2018 [consultado 15 de enero de 2022]; 9(1).
+                Disponible en: <a
+                    href="https://e-revistas.uc3m.es/index.php/RECS/article/view/4248">https://e-revistas.uc3m.es/index.php/RECS/article/view/4248</a>
+            </li>
+            <li id="r13">Menor-Rodríguez MJ, Aguilar-Cordero MJ, Mur-Villar N, Santana-Mur C. Efectividad de las
+                intervenciones educativas para la atención de la salud. Revisión sistemática. Medisur [Internet]. 2017
+                [consultado 15 de enero de 2022]; 15(1). Disponible en: <a
+                    href="http://scielo.sld.cu/scielo.php?script=sci_arttext&pid=S1727-897X2017000100011">http://scielo.sld.cu/scielo.php?script=sci_arttext&pid=S1727-897X2017000100011</a>
+            </li>
+            <li id="r14">Organización Panamericana de la Salud, Organización Mundial de la Salud. Documento conceptual:
+                Educación para la salud con enfoque integral [Internet]. 2017 [consultado 23 de abril de 2021].
+                Disponible en: <a
+                    href="http://revistadecomunicacionysalud.org/index.php/rcys/article/view/35/42">http://revistadecomunicacionysalud.org/index.php/rcys/article/view/35/42</a>
+            </li>
+            <li id="r15">Valadez-Figueroa IA, Vargas-Valadez V, Fausto-Guerra J, Montes-Barajas R. Modelos de
+                intervención educativa en educación para la salud. En: Vargas-Magaña M. Educación para la salud: los
+                modelos de intervención
+                y su fundamentación teorica. 1ra ed. Guadalajara: Sindicato de Trabajadores Académicos de la Universidad
+                de Guadalajara; 2015. 62–121 p.</li>
+            <li id="r16">Zea-Bustamante LE. La educación para la salud y la educación popular, una relación posible y
+                necesaria. Rev
+                Fac Nac Salud Pública [Internet]. 2019 [consultado 23 de abril de 2022]; 37 (2). Disponible en: <a
+                    href="http://www.scielo.org.co/pdf/rfnsp/v37n2/0120-386X-rfnsp-37-02-61.pdf">http://www.scielo.org.co/pdf/rfnsp/v37n2/0120-386X-rfnsp-37-02-61.pdf</a>
+            </li>
+            <li id="r17">Cruz-Aguilar E. La educación transformadora en el pensamiento de Paulo Freire. Educere
+                [Internet]. 2020 [consultado 15 de enero de 2022]; 24(78). Disponible en: <a
+                    href="https://www.redalyc.org/articulo.oa?id=35663284002">https://www.redalyc.org/articulo.oa?id=35663284002</a>
+            </li>
+            <li id="r18">Morales-Bonilla R. Conciencia crítica: centro del método Freire para el pensamiento crítico.
+                En: Páez-Martínez R, Rondón-Herrera GM, Trejo-Catalán JH. Formación docente y pensamiento crítico en
+                Paulo Freire. 1ra
+                ed. Buenos Aires: CLACSO; 2018. p. 83-99.</li>
+            <li id="r19">Rivas-Urrego G, Urrego AJ, Aranque-Escalona JC. Paulo Freire y el pensamiento crítico: palabra
+                y acción en
+                la pedagogía universitarias. Educere [Internet]. 2020 [consultado 15 de enero de 2022]; 24 (2).
+                Disponible en:
+                <a
+                    href="https://revistas.investigacion-upelipb.com/index.php/educare/article/view/1331/1301">https://revistas.investigacion-upelipb.com/index.php/educare/article/view/1331/1301</a>
+            </li>
+            <li id="r20">Bachelor JW. El aula presencial, semipresencial, virtual e invertida: Un estudio comparativo de
+                métodos
+                didácticos en la enseñanza de L2. Rev Educ [Internet]. 2019;43(2):20. <a
+                    href="https://doi.org/10.15517/revedu.v43i2.34014">https://doi.org/10.15517/revedu.v43i2.34014</a>
+            </li>
+            <li id="r21">Garay-Ruiz U, Tejeda-Garitano E, Romero-Andonegi A. Rendimiento y satisfacción de estudiantes
+                universitarios en una comunidad en línea de prácticas. Rev Mex Investig Educ [Internet]. 2017
+                [consultado 15 de enero de 2022]; 22(75). Disponible en: <a
+                    href="https://www.researchgate.net/publication/327175427_Rendimiento_y_satisfaccion_de_estudiantes_universitarios_en_una_comunidad_en_linea_de_practicas">https://www.researchgate.net/publication/</a>
+            </li>
+            <li id="r22">Secretaria General, Secretaria de Servicios Parlamentarios. Reglamento de la ley general de
+                salud en materia
+                de investigación para la salud [Internet]. 2014 [citado el 11 de diciembre de 2021]. Disponible en: <a
+                    href="http://www.diputados.gob.mx/LeyesBiblio/regley/Reg_LGS_MIS.pdf">http://www.diputados.gob.mx/LeyesBiblio/regley/Reg_LGS_MIS.pdf</a>
+            </li>
+            <li id="r23">Brito-Arenas TN, Romo-Romero M, Sánchez-Barbosa MA, Araiza-Hernández ML. Intervención educativa
+                de enfermería en el nivel de conocimiento sobre VPH en estudiantes de una secundaria pública de
+                Aguascalientes. Lux Médica [Internet]. 2020 [consultado 15 de enero de 2022];15(43). Disponible en: <a
+                    href="https://revistas.uaa.mx/index.php/luxmedica/article/view/2501">https://revistas.uaa.mx/index.php/luxmedica/article/view/2501</a>
+            </li>
+            <li id="r24">Ventura-Morales B, Castellanos-Rojas M, Chávez-Montes de Oca VG, Sánchez-Valdivieso EA.
+                Estrategia
+                educativa breve para mantenimiento del conocimiento sobre el virus del papiloma humano y prevención del
+                cáncer en adolescentes. Clin Invest Ginecol Obstet [Internet]. 2017 [consultado 15 de enero de 2022];
+                44(1).
+                Disponible en: <a
+                    href="https://www.sciencedirect.com/science/article/abs/pii/S0210573X15000660?via%3Dihub">https://www.sciencedirect.com/science/article/abs/pii/S0210573X15000660?via%3Dihub</a>
+            </li>
+            <li id="r25">Miniet-Castillo A, Otero-Naranja S, Tamayo-González OA, Valdez-Tasé E. Intervención educativa
+                para internos sobre infección por virus papiloma humano. Centro Penitenciario Provincial,Granma,
+                2013-2014. Mul
+                Med [Internet]. 2017 [consultado 15 de enero de 2022]; 21(1). Disponible en: <a
+                    href="https://www.medigraphic.com/cgi-bin/new/resumen.cgi?IDARTICULO=71824">https://www.medigraphic.com/cgi-bin/new/resumen.cgi?IDARTICULO=71824</a>
+            </li>
+            <li id="r26">. Ayora-Apolo DC, Guzmán-Cruz MM. Conocimientos, actitudes y prácticas de prevención del virus
+                del papiloma humano en estudiantes de colegios nocturnos. Enfermería Investiga. [Internet]. 2017
+                [consultado 15 de
+                enero de 2022]; 2(4). Disponible en: <a
+                    href="https://dialnet.unirioja.es/servlet/articulo?codigo=6233759">https://dialnet.unirioja.es/servlet/articulo?codigo=6233759</a>
+            </li>
+            <li id="r27">Hernández-Márquez CI, Brito-García I, Yunes-Díaz EM, Hernández-Márquez E. Conocimiento y
+                creencias
+                de mujeres del estado de Morelos sobre el virus del papiloma humano. Rev Cubana Enferm [Internet]. 2016
+                [consultado 15 de enero de 2022]; 32(4). Disponible en: <a
+                    href="http://www.revenfermeria.sld.cu/index.php/enf/article/view/329">http://www.revenfermeria.sld.cu/index.php/enf/article/view/329</a>
+            </li>
+            <li id="r28">Hernández-Márquez CI, Salinas-Urbina AA, Hernández-Giron C, Cruz-Valdez A. Conocimientos sobre
+                virus
+                del papiloma humano (VPH) y aceptación de auto-toma vaginal en mujeres mexicanas. Rev Salud Pública
+                [Internet]. 2014 [consultado 15 de enero de 2022]; 16(5). Disponible en: <a
+                    href="https://www.crossref.org/iPage?-doi=10.15446%2Frsap.v16n5.30071">https://www.crossref.org/iPage?-doi=10.15446%2Frsap.v16n5.30071</a>
+            </li>
+            <li id="r29">. Gomes Días-Pedrosa AC, Caramelo F, Patrício M, Camarneiro AP, Massano-Cardoso S, Rui- PitaJ.
+                Impacto
+                de um programa de intervenção educativa nos comportamentos sexuais de jovens universitários. Rev Enferm
+                Ref [Internet]. 2017 [consultado 15 de enero de 2022]; 6(13). Disponible en: <a
+                    href="http://www.scielo.mec.pt/scielo.php?script=sci_arttext&pid=S0874-02832017000200008">http://www.scielo.mec.pt/scielo.php?script=sci_arttext&pid=S0874-02832017000200008</a>
+            </li>
+            <li id="r30">Lacerda-Pinheiro PL, Miranda-Cadete MM. El conocimiento de los adolescentes escolarizados sobre
+                el virus del
+                papiloma humano: revisión integrativa. Enferm. glob. [Internet]. 2019 [consultado 15 de enero de 2022];
+                18(56).
+                Disponible en: <a
+                    href="http://scielo.isciii.es/scielo.php?script=sci_arttext&pid=S1695-61412019000400020&lng=es">http://scielo.isciii.es/scielo.php?script=sci_arttext&pid=S1695-61412019000400020&lng=es</a>
+            </li>
+            <li id="r31">Gómez SM, Agudelo-Ramírez A, Pradilla-Serrano ÁS, García-Hincapié J. Estrategias lúdicas para
+                aumentar
+                el conocimiento de un grupo de adolescentes sobre el virus del papiloma humano. Duazary [Internet]. 2019
+                [consultado 15 de enero de 2022]; 16(2). Disponible en: <a
+                    href="https://revistas.unimagdalena.edu.co/index.php/duazary/article/view/2741 ">https://revistas.unimagdalena.edu.co/index.php/duazary/article/view/2741
+                </a></li>
+        </ol>
+
+
+
+    </div>
+
+</body>
+
+</html>

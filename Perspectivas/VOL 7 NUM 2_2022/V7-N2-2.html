@@ -1,0 +1,1510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V7-N2-2</title>
+    <link rel="stylesheet" href="">
+    <style>
+        body {
+            padding: 10em;
+            padding-top: 20px;
+            font-family: Times New Roman;
+            color: black;
+        }
+
+        .articulo-original {
+            background-color: black;
+            color: aliceblue;
+            width: 100%;
+            size: 15%;
+        }
+
+        #articulo-derecha {
+            float: left;
+        }
+
+
+        /* Posiciones de los resumenes */
+        .abstract-container {
+            display: flex;
+            width: 100%;
+        }
+
+        .keywords-container {
+            float: left;
+            width: 20%;
+            padding-right: 20px;
+        }
+
+        .text-container {
+            float: right;
+            width: 100%;
+            padding-left: 20px;
+        }
+
+
+        ul.navbar {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 25em;
+            left: 2em;
+            width: 250px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: Times New Roman;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        ul.navbar li {
+            background: white;
+            margin: 0.5em 0;
+            padding: 0.3em;
+        }
+
+
+        /* Enlaces */
+
+        a.link-color:visited {
+            color: white;
+        }
+
+        a.link-color:link {
+            color: white;
+        }
+
+        a.link-color:hover {
+            color: white;
+        }
+
+        a.link-color:hover {
+            border-bottom: 1px solid;
+            background: black;
+        }
+
+
+        /* Link de referencia */
+
+        a:link {
+            color: #4e00ff;
+        }
+
+        a:visited {
+            color: #003bff;
+        }
+
+        a:focus {
+            border-bottom: 1px solid;
+            background: #98aae4;
+        }
+
+        a:hover {
+            border-bottom: 1px solid;
+            background: #aacefe;
+        }
+
+
+
+        /* Etiqueta P */
+
+        p {
+            line-height: normal;
+            text-align: justify;
+            font-size: 18px
+        }
+
+        p.titulo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        p.subtitulo {
+            font-size: 20px;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        p.subtitulo-segundo {
+            font-style: italic;
+            font-size: 18px;
+        }
+
+        /* Fin P */
+
+
+        /* Etiqueta Italic */
+        i {
+            font-size: 18px
+        }
+
+        /* LI para las listas */
+
+        li {
+            font-size: 18px;
+        }
+
+
+
+        /* Tablas */
+
+        table {
+            border-collapse: collapse;
+            border: 2px solid rgb(0, 0, 0);
+            align-items: center;
+        }
+
+        thead th {
+            border-collapse: collapse;
+            background-color: rgb(179, 179, 179);
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        tbody td {
+            border-collapse: collapse;
+            text-align: center;
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+
+        .tipo {
+            color: #ffffff;
+            font-size: 22px;
+            border-radius: 10px 5px 10px 5px;
+            background-color: #696969;
+        }
+
+        div.info {
+            padding-top: 20px;
+        }
+
+        img.logos {
+            width: 15px;
+            height: 15px;
+        }
+
+        .image {
+            text-align: center;
+            image-rendering: optimizeQuality;
+        }
+
+        .image p {
+            text-align: center;
+            font-size: small;
+        }
+
+        .logo {
+            width: 300px;
+            height: 80px;
+        }
+
+        .logo2 {
+            width: 300px;
+            height: 50px;
+
+        }
+
+        .lista li {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+
+        /* Anclajes de la pagina */
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .ecuacion {
+            text-align: center;
+            font-weight: bold;
+            margin: 1px;
+        }
+
+        @media only screen and (min-width:320px) and (max-width:767px) {
+            body {
+                width: 100%;
+                padding: 5em;
+                margin: 5px;
+            }
+
+            .image {
+                text-align: center;
+                image-rendering: optimizeQuality;
+            }
+
+            .image img {
+                width: 100%;
+                height: 100%;
+            }
+
+            .image p {
+                font-size: small;
+                text-align: center;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="image">
+        <img src="img/V7-N2-2/cabeza.png" width="100%">
+    </div>
+
+    <div>
+        <div class="articulo-original">
+            <p>
+            <div id="articulo-derecha"><b> <u> Articulo Original</u> </b> </div>
+            <div style='text-align:right'><b> <u><img class="image" width="15px" src="img/globales/doi.png"><a
+                            class="link-color"
+                            href="https://doi.org/10.22463/25909215.3580">https://doi.org/10.22463/25909215.3580</a></u>
+                </b></div>
+            </p>
+        </div>
+
+
+
+        <!--Titulos-->
+        <h1>Las habilidades cognitivas durante la lectura de textos multimodales digitales en la escuela
+            rural</h1>
+
+        <h2>Cognitive skills during the reading of multimodal digital texts in the rural school</h2>
+
+        <!--Autores-->
+        <h4>
+            Gerzon Yair Calle-Álvarez<sup><a href="#sup1">1*</a> </sup> <br>
+            Isabel Cristina Echavarría-Patiño<sup><a href="#sup2">2*</a> </sup> <br>
+        </h4>
+
+        <hr>
+
+        <p id="sup1"><sup>1*</sup><img class="logos" src="img/globales/sobre.png"> Doctor en Educación,
+            <a href="gerzon.calle@udea.edu.co">gerzon.calle@udea.edu.co</a> . <img class="logos"
+                src="img/globales/orcid.png"> <a href="https://orcid.org/0000-0002-4083-6051">ORCID:
+                0000-0002-4083-6051</a>.
+            Universidad de Antioquia, Medellín, Colombia.
+        </p>
+
+        <p id="sup1"><sup>2*</sup><img class="logos" src="img/globales/sobre.png">Licenciada en Educación Básica
+            Primaria,
+            <a href="cristina.echavarria1@udea.edu.co">cristina.echavarria1@udea.edu.co</a> . <img class="logos"
+                src="img/globales/orcid.png"> <a href="https://orcid.org/0000-0001-8354-0173">ORCID:
+                0000-0001-8354-0173</a>.
+            Institución Educativa Rural Presbítero Antonio
+            José Cadavid, Don Matías, Colombia.
+        </p>
+
+
+        <hr>
+
+        <!-- Como realizar la cita -->
+
+        <p><b>Como citar: </b> Calle-Álvarez, G.Y. & Echavarría-Patiño, I.C. (2022). “Las habilidades cognitivas durante
+            la lectura de textos
+            multimodales digitales en la escuela rural”. Perspectivas, vol. 7, no. 2, pp. 12-25, 2022.</p>
+
+        <!--Licencia-->
+        <p>&copy;Peer review is the responsibility of the Universidad Francisco de Paula Santander. This is an article
+            under the license
+            <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>
+        </p>
+
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Licencia Creative Commons"
+                style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
+
+        <hr>
+
+        <!--Recibido y aprobado-->
+        <p><b>Received: </b> Febrero 10, 2022 <br> <b>Approved: </b> Abril 30, 2022. </p>
+
+
+        <!--Resumen Inglés-->
+        <hr>
+
+        <div class="abstract-container">
+            <div class="keywords-container">
+                <p><b>Palabras clave: </b> <br></p>
+                <p>Cognición, Educación Rural, Escuela Primaria, Lectura, Multimedia Educativo, Tecnología Educacional.
+                </p>
+            </div>
+            <hr>
+            <div class="text-container">
+                <p class="titulo"> Resumen</p>
+                <p>
+                    Los textos multimodales digitales contienen diferentes modos de representación como imágenes,
+                    esquemas,
+                    grafías y sonido, lo que implica al lector el desarrollo de habilidades cognitivas que aporten a la
+                    comprensión
+                    de la información. El objetivo del artículo es analizar el desarrollo de las habilidades cognitivas
+                    durante
+                    la lectura de textos multimodales digitales en los estudiantes de la básica primaria de la escuela
+                    rural. Se
+                    aplicó una metodología mixta de investigación, donde a partir del uso didáctico de cinco textos
+                    multimodales
+                    digitales en un aula de escuela rural, se hizo seguimiento a la aplicación de las habilidades
+                    cognitivas de
+                    cinco estudiantes; para ello, se utilizó la escala de habilidades cognitivas y el diario de campo.
+                    Los resultados
+                    muestran un desempeño medio de las habilidades cognitivas de observación, descripción, retención y
+                    comparación, dificultades en el reconocimiento de los modos de representación para la comprensión,
+                    sin
+                    embargo, se valora la actitud positiva de los estudiantes para la lectura de textos multimodales
+                    digitales. En
+                    las conclusiones se plantea que es necesario integrar al Modelo Flexible Escuela Nueva - Escuela
+                    Activa
+                    recursos de la comunicación multimodal digital debido a sus aportes para la incorporación de los
+                    estudiantes
+                    en la cultura digital.
+                </p>
+            </div>
+        </div>
+
+        <!-- Resumen Español -->
+        <hr>
+
+        <div class="abstract-container">
+            <div class="keywords-container">
+                <p><b>Keywords:</b> <br></p>
+                <p>Cognition, Rural Education, Primary School, Reading, Educational Multimedia, Educational Technology.
+                </p>
+            </div>
+            <hr>
+            <div class="text-container">
+                <p class="titulo"> Abstract</p>
+
+                <p>
+                    Digital multimodal texts contain different modes of representation such as images, diagrams, graphs
+                    and sound, which involves the reader developing cognitive skills that contribute to the
+                    understanding of
+                    information. The objective of the article is to analyze the development of cognitive abilities
+                    during the
+                    reading of digital multimodal texts in the students of the elementary school of the rural school. A
+                    mixed
+                    research methodology was applied, where from the didactic use of five digital multimodal texts in a
+                    rural
+                    school classroom, the application of the cognitive skills of five students was followed up, for
+                    this, the
+                    cognitive skills scale was used. and the field diary. The results show an average performance of the
+                    cognitive
+                    skills of observation, description, memory and comparison, difficulties in the recognition of the
+                    modes of
+                    representation for comprehension, however, the positive attitude of the students for the reading of
+                    digital
+                    multimodal texts is valued. In the conclusions, it is stated that it is necessary to integrate the
+                    Flexible Model
+                    New School - Active School with resources of digital multimodal communication due to its
+                    contributions for
+                    the incorporation of students in the digital culture.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Cuerpo del documento -->
+    <div>
+        <hr>
+        <!--Introducción-->
+        <p class="titulo"> Introducción</p>
+
+        <p>
+            La lectura permite a los estudiantes acceder a
+            la información que circula en diferentes formatos,
+            medios de comunicación, y en herramientas con
+            las cuales interactúa en su diario vivir. También,
+            es una manera para aprender y enriquecer los
+            saberes conseguidos a lo largo de la vida. Es en este
+            proceso donde el estudiante desarrolla diferentes
+            habilidades cognitivas que le permiten explorar,
+            comprender, analizar y reflexionar sobre diferentes
+            problemáticas a las cuales se enfrenta. Además, estas
+            se encuentran interrelacionadas con los procesos de
+            aprendizaje (Peng & Kievit, 2020) y la transferencia
+            de conocimientos (Kraft, 2019).
+        </p>
+
+        <p>
+            Las habilidades cognitivas, desde el punto
+            de vista de Ramos-Elizondo, Herrera-Bernal &
+            Ramírez-Montoya (2010), son destrezas básicas
+            y superiores para responder a una tarea, donde las
+            primeras ayudan a la construcción de las segundas.
+            Para los autores, las habilidades básicas son:
+            análisis, obtención y recuperación de la información,
+            enfoque, transformación y evaluación; mientras
+            las habilidades cognitivas superiores son: toma
+            de decisiones, pensamiento crítico, pensamiento
+            creativo y solución de problemas. Asimismo, están
+            asociadas a procesos exitosos de comprensión de
+            lectura (Peng & Kievit, 2020; Taboada Barber &
+            Lutz Klauda, 2020).
+        </p>
+
+        <p>
+            Por su parte, Romero Carrasquero & Tapia
+            Luzardo (2014), plantean que las habilidades
+            cognitivas favorecen nuevos conocimientos en
+            situaciones determinadas, al tiempo, que son
+            un indicador de la salud mental de las personas.
+            Desde esta perspectiva, el aula de clase, es un
+            lugar en donde las habilidades cognitivas, a partir
+            de la ejecución de estrategias didácticas, se pueden
+            desarrollar o fortalecer. Además, con el uso de las
+            tecnologías digitales se reconoce la responsabilidad
+            de la escuela de comprender las formas como operan
+            las habilidades cognitivas en la comunicación
+            multimodal (Gladic Miralles & Cautín-Epifani,
+            2016).
+        </p>
+
+        <p>
+            Los textos multimodales digitales son tipos de
+            textos que combinan diferentes sistemas semióticos,
+            permitiendo el acceso a la información de manera
+            diversa y a partir de la comprensión lectora de los
+            mismos, desarrolla el pensamiento y la adquisición
+            del conocimiento en los estudiantes. Barboza & Peña
+            (2014), señalan que las generaciones actuales tienen
+            el reto de participar y comprender en otras formas
+            de lectura, que exigen aplicación de estrategias
+            didácticas para lograr niveles de reflexión y criticidad
+            sobre el texto.
+        </p>
+
+        <p>
+            Anteriormente el acercamiento a la lectura se
+            realizaba por medio de libros físicos y en lugares
+            específicos, como las bibliotecas o salones de clase.
+            A medida que ha ido evolucionando las tecnologías,
+            las prácticas de lectura se ha ampliado, ya que se
+            puede acceder a ella de diferentes formatos y
+            soportes, de allí el concepto de lecturas multimodales
+            digitales. Al respecto, Calle-Álvarez & Pérez-Gómez
+            (2018), afirman que la básica primaria es clave
+            para la formación de la argumentación y que los
+            textos multimodales digitales son una herramienta
+            importante para el aprendizaje significativo, ya que
+            activan diferentes sentidos y canales de comprensión.
+            Al tiempo, que aportan a los estímulos sensoriales
+            auditivos y visuales necesarios para la adquisición
+            y la mejora de la lectura en la infancia (Xu et al.,
+            2018).
+        </p>
+
+        <p>
+            Manghi Haquin et al., (2013), desde una revisión
+            documental concluyen que, para tener un aprendizaje
+            significativo, es necesario que el profesor incorpore
+            en las estrategias de enseñanza textos donde no solo
+            se tenga en cuenta las grafías, sino también otros
+            elementos como dibujos, fotografías, mapas. Este tipo
+            de texto donde ofrecen varios recursos semióticos, se
+            convierte en elementos para el aprendizaje, ya que el
+            estudiante requiere desarrollar diversas habilidades
+            cognitivas para lograr una comprensión.
+        </p>
+
+        <p>
+            Gutiérrez Cardoso (2018), plantea que la
+            utilización de las tecnologías digitales dentro
+            del aula, le permite al docente transformar la educación y generar en los estudiantes, otras
+            formas de percibir su realidad, el interés por el tema
+            investigativo y el trabajo colaborativo e individual.
+            Además, incorporando en el proceso educativo, la
+            interpretación de textos multimodales, permiten en
+            el estudiante realizar conexiones entre la enseñanza,
+            los métodos de aprendizaje y sus problemas sociales.
+            Sin embargo, Vásquez Guerrero (2020), considera
+            que es necesario que inicialmente el profesor
+            adquiera las competencias para el uso didáctico de
+            las tecnologías digitales, para poder llevar al aula los
+            textos multimodales digitales.
+        </p>
+
+        <p>
+            Calle-Álvarez & Gómez-Sierra (2020), en
+            un estudio sobre comportamiento lector de textos
+            multimodales afirman que la lectura se convirtió para
+            los estudiantes en una posibilidad para desarrollar la
+            imaginación, además, que los diferentes espacios en
+            los cuales interactúa, como la familia y la escuela
+            son fundamentales para el proceso lector. Por
+            consiguiente, la escuela debe propiciar momentos
+            de encuentros con la lectura, a partir de diferentes
+            tipos de textos para contribuir con la formación de
+            sujetos autónomos, reflexivos y críticos, teniendo en
+            cuenta el uso de las diferentes tecnologías, con las
+            cuales cuenta la institución, para trabajar la variedad
+            textual.
+        </p>
+
+        <p>
+            Neva (2021), realizó una investigación que
+            consistió en recopilar y analizar una serie de artículos
+            de investigación referentes a la implementación de
+            textos multimodales digitales en la escuela primaria
+            para el mejoramiento de la comprensión lectora. En
+            las conclusiones se reconoce que la generalidad de
+            las investigaciones se evidencia una tendencia sobre
+            la favorabilidad en cuanto a la implementación de
+            textos multimodales digitales en las aulas de clases.
+            Por ello, la lectura ya no se ve como una práctica
+            lineal que solo está en los libros físicos, sino también
+            como una práctica donde los textos digitales abren el
+            paso a nuevos formatos hipermediales.
+        </p>
+
+        <p>
+            Los estudios sobre habilidades cognitivas
+            y lectura siguen estando vigentes por sus contribuciones a la discusión sobre el proceso de
+            adquisición y aprendizaje de la lectura en la vida
+            social y académica. Además, con la incorporación
+            de las tecnologías digitales en la escuela, se hace
+            necesario comprender las transiciones y adaptaciones
+            didácticas que se deben hacer desde la escuela para
+            el abordaje de los textos multimodales digitales. Por
+            ello, el objetivo del artículo es analizar el desarrollo
+            de las habilidades cognitivas durante la lectura de
+            texto multimodales digitales en los estudiantes de la
+            básica primaria de la escuela rural.
+        </p>
+
+
+
+
+
+        <!-- Metodología y materiales -->
+        <hr>
+
+        <p class="titulo">Materiales y Métodos</p>
+
+        <p>
+            Para desarrollo de la investigación se
+            implementó la metodología mixta. HernándezSampieri & Mendoza Torres (2018), se refieren a
+            metodología mixta como un proceso sistemático
+            que implica el análisis crítico y reflexivo de datos
+            cuantitativos y cualitativos. Con este método, se
+            logra la retroalimentación de las características de
+            los métodos cualitativos y cuantitativos en pro a
+            la solución del problema de investigación. Con
+            la metodología cualitativa se tuvo en cuenta al
+            estudiante desde su contexto y las relaciones con la
+            lectura de textos multimodales digitales; mientras
+            que la metodología cuantitativa aportó a la medición
+            y seguimiento de las habilidades cognitivas.
+        </p>
+
+        <p>
+            El enfoque pragmático es el utilizado para
+            fundamentar la metodología mixta. Este enfoque se
+            caracteriza por vincular la práctica con la teoría y se
+            centra en la pregunta de investigación (Pole, 2009).
+            La ejecución de la investigación se realizó a partir de
+            las siguientes fases:
+        </p>
+
+        <p>
+            <b>Fase 1. </b> Presentación de propuesta investigativa
+            a la comunidad educativa: durante el segundo
+            semestre del año 2020, se inició con la elaboración
+            del proyecto de investigación. Se identificaron
+            las debilidades que presentaban los estudiantes
+            referentes al proceso de lectura y las características
+            del entorno escolar. Además, se realizó la búsqueda
+            de los referentes teóricos que ayudaron a sustentar
+            el estudio, construyendo las ideas necesarias para darle solución o para la mejora de las debilidades
+            identificadas en los estudiantes. De igual manera,
+            se socializó la propuesta de investigación a la
+            comunidad educativa.
+        </p>
+
+        <p>
+            <b>Fase 2. </b>Diseño de propuesta transversal desde
+            el modelo Escuela Nueva: esta fase se ejecutó en
+            los dos primeros meses del primer semestre del
+            año 2021, se realizó la modificación de algunos
+            contenidos trabajados en los módulos de aprendizaje
+            del Modelo Flexible Escuela Nueva, utilizados
+            dentro del aula de clase para el proceso de enseñanza
+            y aprendizaje de los estudiantes. Con el diseño de
+            estas unidades de aprendizaje, se buscó trasversalizar
+            las competencias que trabajan los estudiantes, con
+            los textos multimodales digitales.
+        </p>
+
+        <p>
+            <b>Fase 3. </b>Diseño y validación de los instrumentos
+            de investigación: en esta fase se diseñaron
+            dos instrumentos de investigación la escala de
+            habilidades cognitivas y el diario de campo.
+            Además, se solicitó a un magíster en lingüística, con
+            experiencia investigativa sobre estudios del lenguaje
+            en la educación que revisara los instrumentos. El
+            experto sugirió que se eliminarán unos indicadores
+            de la escala de habilidades cognitivas debido a que
+            estaban inmersos en los otros, los investigadores
+            asumieron positivamente las sugerencias. El otro
+            instrumento lo consideró pertinente para responder
+            al objetivo de la investigación.
+        </p>
+        <p>
+            <b>Fase 4. </b>Implementación de la propuesta
+            transversal y recolección de información: organizada
+            la propuesta didáctica, se pasó a la ejecución de la
+            misma. Además, se aplicaron los instrumentos de
+            investigación.
+        </p>
+        <p>
+            <b>Fase 5. </b>Análisis de la información: después
+            de la ejecución de las actividades planeadas, y de
+            haber recogido la información, se procedió a realizar
+            el análisis; para ello, se consolidó la información
+            de la escala de habilidades cognitivas en una tabla
+            de Microsoft Excel, mientras que para el diario de campo se realizó una lectura y clasificación de la
+            información en categorías.
+        </p>
+
+        <p class="titulo">Instrumentos de recolección de información</p>
+
+        <p>
+            Escala de habilidades cognitivas durante la
+            lectura de textos multimodales digitales: la escala
+            es un instrumento de recolección de datos, que le
+            facilita al investigador medir diferentes variables
+            dentro de una investigación. La escala medía cuatro
+            habilidades cognitivas: observación, descripción,
+            retención y comparación desde la perspectiva de
+            Romero Carrasquero & Tapia Luzardo (2014), sobre
+            las habilidades cognitivas en los primeros años
+            escolares. Estos postulados se materializaron en 11
+            indicadores. Para la recolección de los datos, uno
+            de los investigadores diligenciaba el instrumento
+            después de realizar una actividad de lectura de
+            textos multimodales digitales, determinando el
+            nivel de desempeño del indicador en cada uno de
+            los estudiantes. Posteriormente, la información se
+            registraba en una tabla de Microsoft Excel, para el
+            análisis desde la estadística descriptiva. Vale precisar,
+            que las cuatro habilidades no necesariamente se
+            evaluaban en todas las sesiones (ver tabla 1).
+        </p>
+
+        <p>
+            Diario de campo: fue un instrumento de
+            recolección de información utilizado por los
+            investigadores, con el objetivo de registrar aquellas
+            experiencias de los estudiantes desde la lectura de
+            textos multimodales digitales. En este instrumento
+            fue importante la observación sobre el grupo de
+            estudiantes, sus acciones, actividades, opiniones
+            dadas frente a las actividades realizadas. El
+            diario de campo contenía las descripciones de las
+            observaciones efectuadas durante la intervención
+            didáctica. Se diligenciaba después de cada sesión.
+            Para su análisis se utilizó el análisis de contenido,
+            para lo cual, se realizó una lectura de cada registro y se
+            categorizaba los fragmentos con valor interpretativo,
+            desde sus aportes a la comprensión del desempeño
+            de las habilidades cognitivas durante la lectura de
+            textos multimodales digitales.
+        </p>
+
+        <p class="titulo">Población y Muestra</p>
+
+        <p>
+            El Centro Educativo Rural al momento del
+            estudio contaba con 12 estudiantes matriculados
+            en los grados de 1° a 4° de la básica primaria.
+            Para desarrollar esta investigación, se tomó como
+            muestra, 5 estudiantes de los grados 3° y 4°. Ellos
+            fueron 2 mujeres y 3 hombres. Sus edades oscilaban
+            entre los 8 y 12 años de edad. El contexto en el cual
+            se desenvuelven, es rural. Estudian bajo el modelo
+            flexible Escuela Nueva-Escuela Activa. A pesar de
+            ser del campo y no contar con recursos económicos
+            suficientes, tenían la posibilidad de interactuar con
+            la tecnología en la sede educativa y en sus hogares.
+        </p>
+
+        <p class="titulo">Características generales de la intervención didáctica</p>
+
+        <p>
+            El Modelo Flexible Escuela Nueva-Escuela
+            Activa el cual se trabaja en la sede educativa, tiene
+            como finalidad, que el estudiante construya sus
+            propios conocimientos. Es un modelo flexible, con un
+            enfoque constructivista donde la base fundamental
+            son los saberes previos de los estudiantes, el trabajo
+            colaborativo y el ritmo de aprendizaje de cada uno.
+            El profesor asume una postura de orientador del
+            proceso de aprendizaje, donde además de utilizar los
+            módulos, incorpora los recursos que brinda el medio
+            que les rodea y la interacción con la comunidad
+            educativa. Esta metodología flexible implica que
+            el proceso de lectura, se transforme en un recurso
+            para el aprendizaje de los estudiantes. Ellos, utilizan
+            la lectura en diferentes áreas del conocimiento en
+            el aula de clases, no solamente de textos escritos,
+            sino también de imágenes, lugares, sonidos y
+            comportamientos que suceden en su territorio, y
+            que son la base para desarrollar sus actividades
+            académicas.
+        </p>
+
+        <p>
+            El diseño de la intervención didáctica consideró
+            cinco sesiones de lectura de textos multimodales
+            digitales, y cada sesión se estructuró desde tres
+            momentos: a) prelectura, exploración de saberes
+            previos, motivación e introducción de los estudiantes a los aspectos globales del texto; b) lectura,
+            desarrollo
+            de la lectura del texto de manera individual o
+            colectiva; c) confrontación, valoración del avance de
+            las habilidades cognitivas. En la tabla I, se resume el
+            tipo de texto abordado y las habilidades cognitivas
+            valoradas.
+        </p>
+
+        <div class="image">
+            <p><b>Tabla I. </b>Relación textos y habilidades cognitivas</p>
+            <img src="img/V7-N2-2/img13.png" width="50%">
+        </div>
+
+        <p class="titulo">Resultados y Discusión</p>
+
+        <p>
+            Los resultados se presentan desde la escala de
+            habilidades cognitivas durante la lectura de textos
+            multimodales digitales y el uso didáctico de los
+            textos multimodales digitales en la escuela rural,
+            lo que permite ampliar las comprensiones sobre el
+            proceso de valoración de las habilidades cognitivas,
+            desde los aportes de la didáctica y la perspectiva de
+            los estudiantes.
+        </p>
+
+        <p class="titulo">Habilidades cognitivas durante la lectura de textos multimodales digitales</p>
+
+        <p>
+            Para el análisis de la fiabilidad, se aplicó el Alfa
+            de Cronbach para los once indicadores de la escala
+            de habilidades cognitivas durante la lectura de textos
+            multimodales digitales, arrojando un resultado de
+            0,98, que desde los niveles propuestos por Streiner
+            (2003), es un valor excelente para los estudios en
+            Ciencias Sociales. Lo anterior es un resultado
+            positivo para el estudio, debido a la complejidad
+            para comprender unas características no observables
+            directamente en los estudiantes de la escuela rural.
+        </p>
+
+        <div class="image">
+            <p><b>Tabla II. </b>Resultados escala de habilidades cognitivas durante la lectura de textos multimodales
+                digitales</p>
+            <img src="img/V7-N2-2/img21.png" width="70%">
+        </div>
+
+        <p>
+            En la Tabla II se presentan el porcentaje de
+            estudiantes por desempeño de cada una de las
+            habilidades cognitivas. Como se identifica no hubo
+            estudiantes que se ubicaran en los niveles de siempre
+            y nunca, lo que evidencia, por una parte, el poco
+            contacto de los estudiantes con procesos de lectura
+            multimodal digital lo que dificultó procesos de
+            desempeño alto; por otra parte, que las experiencias
+            previas de lectura aportan a los procesos de lectura
+            multimodal digital, trasladando las habilidades
+            cognitivas a las interacciones con los recursos tecnológicos. Esto implica un reto para la escuela
+            rural de ir incorporando a los estudiantes en la cultura
+            digital, debido a que actualmente la mayor parte de
+            la información circula en los espacios virtuales.
+        </p>
+
+        <p>
+            Con respecto a la habilidad de la observación,
+            esta cumplió un papel importante durante la
+            aplicación y análisis de los resultados de la secuencia
+            didáctica desarrollada con los estudiantes, ya que
+            esta fue la única habilidad que estuvo presente en
+            cada una de las sesiones aplicadas, debido a que era un punto de partida para comprender las otras
+            habilidades. Lo cual se justifica debido a que es el
+            inicio para procesos de decodificación y comprensión
+            lingüística (Grace Kim, 2017). En esta habilidad
+            cognitiva se evidenció que el 60% de los estudiantes
+            casi siempre identificaron los componentes de
+            los textos multimodales digitales, como lo son las
+            imágenes, los audios y las grafías.
+        </p>
+
+        <p>
+            Cuando se trabajó las características textuales
+            de los textos multimodales digitales, se evidenció
+            que, un 48% de los estudiantes, se sostuvieron
+            en la variante a veces con tendencia a mejorar,
+            ya que el 32% de los estudiantes reconocieron
+            las características casi siempre. Al momento de
+            trabajar los textos multimodales digitales a partir
+            de la observación, los estudiantes identificaron las
+            características textuales externas como el título,
+            el autor, la extensión, además, de los recursos
+            visuales y sonoros. Vale precisar que al comienzo
+            no reconocían las características gráficas y visuales
+            como parte del texto, lo que se explica por el poco
+            uso de textos digitales en sus prácticas de lectura, lo
+            que implicó una explicación por parte de la profesora
+            para que en los procesos de observación comenzaran
+            a reconocer los aportes de estas características a la
+            comprensión del texto. El lograr estas comprensiones
+            son importantes porque en los procesos de lectura el
+            estudiante integra los procesos auditivos y visuales
+            (Xu et al., 2018).
+        </p>
+
+        <p>
+            Frente al componente visual de los textos, les
+            era más fácil reconocer los elementos presentes
+            en las imágenes, pero, era necesario orientar los
+            análisis para que comprendieran los aportes de estas
+            al contenido del texto. Esta situación reflejaba una
+            lectura literal de este tipo de textos. Sin embargo,
+            como lo señala Calle-Álvarez & Gómez-Sierra
+            (2020), las imágenes implican otras formas de lectura
+            debido a que es necesario comprender los sistemas
+            simbólicos que están inmersos en el texto, por lo que
+            es necesario continuar abordando este tipo de textos
+            para fortalecer los niveles de lectura inferencial y
+            crítico.
+        </p>
+
+        <p>
+            La descripción es la habilidad cognitiva que le
+            permite a los estudiantes expresar de forma oral o
+            escrita las características de un objeto, lugar, persona
+            o evento. Esta habilidad se relaciona notablemente
+            con la observación, ya que la descripción elaborada
+            es el resultado de una observación rigurosa. En la
+            aplicación de la secuencia didáctica, el resultado
+            arrojado en esta habilidad cognitiva refleja que el
+            grupo de estudiantes respondió positivamente a las
+            actividades donde se involucró la descripción. Como
+            se evidencia en la Tabla II, el 60% de los estudiantes
+            se sostuvieron en el nivel de casi siempre en los
+            indicadores sobre la utilización de los adjetivos
+            adecuados para determinar las características y
+            cualidades de las imágenes, audios y otros modos
+            de representación de la información presentada;
+            y en el suministro de la información suficiente
+            para cada una de las descripciones. Esto se reflejó
+            cuando los estudiantes realizaron la descripción
+            de imágenes proyectadas en un video sobre un
+            cuento y en la infografía; para lo cual, utilizaron los
+            adjetivos adecuados y suministraron información
+            relevante y amplia que reflejaban las características
+            de lo observado. El otro 40% de los estudiantes, se
+            sostuvieron en el nivel de a veces con tendencia
+            a mejorar, tratando de cumplir con los objetivos
+            propuestos durante el desarrollo de cada una de las
+            actividades, debido a que sus descripciones eran
+            cortas, lo que dificultaba la identificación de la
+            imagen que deseaban proyectar con sus palabras.
+        </p>
+
+        <p>
+            Cuando se trabajó el tercer ítem que hacía
+            referencia a las descripciones de objetos de forma
+            oral y escrita donde incluida detalles descriptivos,
+            se pudo evidenciar que el 53% de los estudiantes se
+            mantuvieron en un desempeño medio y, además, un
+            27% en casi nunca. Este resultado se dio ya que, al
+            momento de describir, los estudiantes se centraban
+            en lo visible, pero cuando se les pedía describir de
+            una manera implícita, los estudiantes no lograban
+            responder. Este último aspecto se evidenció en
+            una de las actividades donde debían completar
+            los organizadores gráficos y escribir en tarjetas
+            las características de imágenes observadas. En
+            estas actividades consignaron solo la información que podían observar a simple vista, más no
+            aquellas características que permitían reconocer
+            aspectos como usabilidad, tiempos, acciones.
+            Al respecto, Gutiérrez Cardoso (2018), plantea
+            que las confluencias de las características de los
+            textos multimodales permiten comprensiones y
+            reconstrucciones profundas de la realidad.
+        </p>
+
+        <p>
+            La retención es la habilidad cognitiva que
+            le permite al estudiante codificar, almacenar
+            una información que hayan adquirido, para
+            posteriormente, desarrollar otras que requieran de
+            esa clase de información. Al momento de evaluar
+            la retención en el desarrollo de las actividades
+            planeadas se evidenció como lo muestra la Tabla
+            II, que en los tres ítems trabajados el 20% de los
+            estudiantes obtuvieron desempeños de casi siempre,
+            lo que indica que el 80% se ubicó en algunas veces
+            y casi nunca. Con estos resultados arrojados se
+            refleja que los estudiantes presentaron dificultades
+            para aplicar la memoria al momento de recordar
+            las características de estructura y contenido de los
+            textos multimodales digitales, para aplicarlo en
+            las actividades de verificación, ya que a pesar de
+            que se les explicó cuáles eran las características
+            implícitas y explicitas a tener en cuenta en un
+            texto, no lo aplicaban correctamente al desarrollar
+            las otras actividades trabajadas. También, se les
+            dificultó el trabajo de ordenar la información de
+            los textos, debido a que omitían información clave.
+            Como lo plantea Hoyos Flórez & Gallego (2017),
+            durante la lectura es necesario la comprensión de las
+            estructuras sintácticas y relaciones semánticas para
+            la recuperación del mensaje escrito.
+        </p>
+
+        <p>
+            Al analizar los resultados de la habilidad
+            cognitiva de la comparación, en tres de las cinco
+            sesiones trabajadas, se pudo evidenciar en los ítems
+            evaluados, que un promedio del 50% de estudiantes se
+            sostuvieron en la variante casi siempre, lo que indica
+            que el otro 50% se encuentran en desempeños de
+            algunas veces y casi nunca. Lo anterior muestra que
+            la mitad de los estudiantes realizaron comparaciones
+            entre dos textos multimodales digitales, encontrando
+            las semejanzas y las diferencias entre ellos a partir de la información que brindaron en cada una de sus
+            características semánticas, logrando organizar y
+            relacionar los nuevos conocimientos con los saberes
+            previos que trajeron a las sesiones de trabajo, lo
+            que se corresponde con los modelos situacionales
+            que parten de los conocimientos adquiridos para
+            lograr comprensiones más profundas de los textos
+            (Grace Kim, 2017). Sin embargo, a la otra mitad
+            de los estudiantes se les dificulta encontrar puntos
+            de encuentro y distancia entre los textos, lo que se
+            explica debido a que, en el dominio de las habilidades
+            cognitivas de observación, descripción y retención,
+            también, tienen dificultades, lo que se torna en un
+            obstáculo para desarrollar procesos de comparación.
+        </p>
+
+        <p>
+            En los estudiantes que obtuvieron un desempeño
+            de casi siempre, en la habilidad de comparación,
+            se destaca que realizaron paralelos entre dos tipos
+            de textos como lo fueron un video con estructura
+            informativa y un video con contenido narrativo,
+            donde se referían al mismo tema, pero la información
+            brindada era diferente. También, en la habilidad
+            de la comparación se reconoció que los textos
+            multimodales digitales tuvieron mayor aceptación
+            que los libros impresos a los cuales los estudiantes
+            están acostumbrados a leer. Por esta razón como lo
+            afirma Neva (2021), los profesores pueden hacer uso
+            de las posibilidades de las tecnologías digitales para
+            lograr avances en la comprensión de lectura de los
+            estudiantes.
+        </p>
+
+        <p class="titulo">Los textos multimodales digitales en la escuela rural</p>
+
+        <div class="image">
+            <img src="img/V7-N2-2/img33.png" width="50%">
+            <p><b>Figura 1. </b>Lectura multimodal digital en la escuela rural</p>
+        </div>
+
+        <p>
+            La Figura 1 presenta las categorías y
+            descriptores que emergieron del análisis del diario
+            de campo. Desde el abordaje didáctico de los
+            textos multimodales digitales en la escuela rural se
+            reconoce que, en el proceso de aprendizaje de los
+            estudiantes, las estrategias de enseñanza utilizadas
+            por el docente son importantes para que este proceso
+            sea significativo. Cada una de las acciones que se
+            realizan en el espacio educativo contribuyen a
+            enriquecer la experiencia de los estudiantes, a partir
+            de las necesidades que presentan ellos. Lo anterior,
+            corresponde con el estudio de Thibaut (2020), sobre
+            la integración de los modelos de comunicación digital
+            de las que participan los estudiantes y profesores
+            fuera del aula, con las prácticas que se desarrollan
+            dentro del aula.
+        </p>
+
+        <p>
+            Desde el mismo momento en que se da
+            apertura a las clases, con el saludo por parte de la
+            docente hacia el grupo de estudiantes, donde se
+            les dio a conocer el tema a trabajar, el objetivo,
+            las actividades y la metodología a utilizar, se implementaron estrategias de enseñanzas que le
+            permitieron a los estudiantes la retroalimentación
+            de sus conocimientos previos. Por otra parte, la
+            implementación de diferentes recursos didácticos
+            como los módulos de aprendizaje del Modelo Flexible
+            Escuela Nueva-Escuela Activa en diferentes áreas
+            del conocimiento, las tabletas, los computadores, los
+            rompecabezas, las imágenes impresas y digitales,
+            los videos, los textos multimodales tanto impresos
+            como digitales, y los materiales que ofrecía el
+            medio que rodeaba a los estudiantes, permitieron
+            el desarrollo de las actividades que fortalecieron en
+            los niños las habilidades cognitivas. El desarrollo
+            de estas se pudo evidenciar, por ejemplo, cuando
+            los estudiantes armaban con sus compañeros los
+            rompecabezas proyectados desde las Tablet y cuando
+            reproducían las secuencias de sucesos de una noticia
+            que fue proyectada. En los procesos de enseñanza
+            y aprendizaje de la lectura, la motivación para que
+            los estudiantes participen, expresen sus ideas y se
+            aproximen a los textos contribuyen a mejorar los
+            niveles de comprensión (Taboada Barber & Lutz
+            Klauda, 2020).
+        </p>
+
+        <p>
+            Durante el desarrollo de las sesiones fue
+            importante la actitud de la profesora a cargo del
+            grupo de estudiantes. Esto se vio reflejado en el
+            momento en que la docente daba explicaciones y
+            aclaraciones pertinentes de los temas trabajados,
+            cuando tenía disposición en colaborarles a los
+            estudiantes cuando presentaban dificultades en el
+            desarrollo de determinadas actividades y cuando
+            tenía claridad en el objetivo que se pretendía alcanzar
+            con cada una de las sesiones trabajadas. Con lo
+            anterior, se pudo lograr un proceso evaluativo, donde
+            los estudiantes a partir de la participación activa en
+            las tareas, no solamente en la parte oral, a través de
+            los conversatorios, mesas redondas y respuestas a
+            preguntas de tipo indagación, literal o inferencial,
+            sino también, en la parte escrita con la creación de
+            textos literarios como el cuento, la noticia, las gráficas,
+            los mapas conceptuales, el juegos y los talleres con
+            preguntas de tipo literal, inferencial y crítica, se
+            pudo evidenciar los saberes que ellos tenían sobre
+            los temas y despejaron dudas que tuvieran a partir de la explicación que daba la profesora acompañante.
+            Como señala Vásquez Guerrero (2020), los
+            profesores tienen la tarea de comprender el papel
+            de la lectura en una sociedad que está permeada por
+            las tecnologías, además, de reconocer e implementar
+            estrategias de acompañamiento donde el estudiante
+            logre comprender el valor de lo multimodal como
+            recurso semiótico.
+        </p>
+
+        <p>
+            Vale resaltar que la reflexión final a la que se
+            llegó con la implementación de estas sesiones, es
+            que es necesario adaptar la planeación y el material
+            de trabajo brindado por el Modelo Flexible Escuela
+            Nueva – Escuela Activa a espacios y herramientas
+            digitales que le brinden al estudiante la variedad
+            textual y así, se vaya incorporando a los estudiantes
+            a la cultura digital. Al respecto Bautista Villalobos
+            & Méndez de Cuellar (2015), plantean que la
+            incorporación de las tecnologías digitales en el aula
+            complejiza y diversifica la lectura y la escritura
+            debido los diversos modos de representación.
+        </p>
+
+        <p>
+            Las estrategias de aprendizaje son conductas
+            y actividades aplicadas por los estudiantes, que
+            trasversalizadas con las metodologías implementadas
+            por el docente, ayudan a que el conocimiento sea
+            significativo ya que, se retroalimentarán los saberes
+            previos a partir de la interacción con el medio que lo
+            rodea. Esta situación reafirma la importancia de los
+            procesos de enseñanza y evaluación, planificados y
+            ejecutados desde la realidad de los estudiantes, en
+            el perfeccionamiento de las habilidades cognitivas
+            (Kraft, 2019).
+        </p>
+
+        <p>
+            La galería textual donde los estudiantes tuvieron
+            acercamiento con elementos que permitieron la
+            lectura de forma física y digital, la resolución de
+            preguntas a partir de la observación de gráficas y
+            dibujos, la lectura de textos impresos y digitales y, el
+            elaborar y completar gráficos y mapas conceptuales
+            para sintetizar la información brindada por este
+            tipo de textos, fueron algunas de las actividades
+            implementadas en los diferentes encuentros que
+            permitieron reforzar las habilidades cognitivas
+            como la retención, la observación, la descripción y la comparación, fomentando en el estudiante la
+            capacidad de organizar, pensar, almacenar y procesar
+            la información. Por lo tanto, la implementación
+            de estrategias de aprendizaje que partan de las
+            realidades de los estudiantes y el acceso a los recursos
+            beneficia el desarrollo de habilidades cognitivas que
+            se replicarán en otros espacios de la vida social del
+            estudiante (Camizán García et al., 2021).
+        </p>
+
+        <p>
+            En este proceso formativo fue importante las
+            diferentes actitudes, emociones y sentimientos que
+            expresaron de forma espontánea los estudiantes
+            durante el desarrollo de las tareas de lectura.
+            Donde expresaron gusto al momento de realizar
+            las actividades trabajadas, debido a que se sentían
+            familiarizados con los textos presentados, donde
+            los temas se relacionaban con problemáticas o
+            situaciones que ocurrían en su medio. También,
+            expresaron las dificultades que se presentaron al
+            desarrollar ciertas actividades como la elaboración
+            de mapas conceptuales y la comprensión de textos
+            informativos, ya que los estudiantes no estaban
+            familiarizados con este tipo de textos, además,
+            porque sus actividades previas estaban centradas
+            en la lectura y la producción de textos narrativos y
+            descriptivos.
+        </p>
+
+        <p>
+            En este proceso de aprendizaje, también, fue
+            importante la interacción entre los estudiantes y
+            los diferentes tipos de textos, ya fueran impresos o
+            digitales, evidenciando así que los textos trabajados
+            como los descriptivos, informativos, narrativos y
+            explicativos están integrados en los módulos de
+            aprendizaje del programa Escuela Nueva, desde las
+            diferentes áreas del currículo escolar que cuentan
+            con guías de aprendizaje, permitiendo así la
+            transversalidad al momento de la planeación de clases.
+            Asimismo, los estudiantes conocieron algunos tipos
+            de textos multimodales digitales y lograron entender
+            que cada uno de los elementos que se encuentran
+            en este tipo de texto tenían un significado. Como
+            señalan Manghi Haquin et al., (2013) es necesario
+            actualizar el concepto de alfabetización debido a que
+            los recursos multimodales han dejado de tener la concepción exclusiva de valor estético, para aportar
+            a un diálogo entre sus componentes.
+        </p>
+
+        <p>
+            Es de importancia resaltar que cuando los
+            estudiantes tengan contacto con un tipo de texto
+            multimodal sea de manera digital o impresa,
+            explicarles sus características y funcionalidades para
+            que ellos manejen esta información y su comprensión
+            sea mayor. Teniendo presente que, cada uno de
+            los espacios en los que interactúa el estudiante
+            hacen parte del proceso educativo, ya que es allí
+            donde construye y reconstruye sus conocimientos,
+            a partir de la relación entre estos espacios, con las
+            personas y los recursos didácticos que le permiten
+            construir saberes. Neva (2021), afirma que el nivel
+            de inmersión de las tecnologías digitales en la
+            sociedad genera que los sujetos, en los procesos de
+            intercambio de información, apliquen estrategias de
+            selección, evaluación y análisis de la información.
+        </p>
+
+        <p>
+            La escuela es uno de los espacios donde los
+            estudiantes pasan la mayor parte del tiempo, pero
+            este lugar es una pequeña parte de esa comunidad a
+            la cual pertenecen, ya que ellos, también, interactúan
+            con sus familias, con sus vecinos y amigos en las
+            fincas o los caminos que deben recorrer para llegar a
+            sus casas o a la escuela, o en otro lugar significativo
+            como la caseta comunal, espacios importantes en
+            el entorno rural el cual pertenecen los estudiantes.
+            Este entorno escolar tiene varios factores como su
+            cultura, la localización, el nivel económico, que
+            intervienen de una manera directa o indirecta en la
+            formación académica de los estudiantes. Cada uno de
+            estos espacios son significativos dentro del proceso
+            académico y se pudo evidenciar en el momento en
+            que los estudiantes interactuaron con la noticia,
+            donde desde sus comprensiones cercanas lograron
+            deconstruir la información que les presentaba el
+            video.
+        </p>
+
+        <p>
+            Cuando los estudiantes desarrollaban las
+            diferentes actividades planeadas a partir de la
+            secuencia didáctica, se pudieron dar cuenta de que
+            los libros, carteles y textos que brindan diferentes
+            lecturas, no solamente se encuentran de manera física, sino también de manera digital. El poco acercamiento
+            que los estudiantes tienen a las tecnologías
+            digitales, no les ha permitido explorar las diferentes
+            presentaciones con las que se pueden disfrutar de la
+            lectura ni tampoco con la variedad textual. De allí
+            entonces la importancia que, desde la escuela, la
+            docente brinde espacios de acercamiento a la lectura
+            no solamente de manera física, sino también, de
+            manera digital para que los niños puedan enriquecer
+            su experiencia educativa y así comprender que cada
+            elemento que hace parte del entorno que interactúa
+            a diario se puede leer y brindarnos información
+            necesaria para nuestro aprendizaje. Monsalve et al.,
+            (2011), enfatiza que llevar al aula las tecnologías
+            digitales para que transiten con los medios impresos,
+            desde los primeros grados escolares, permite que
+            los estudiantes aprendan de una forma dinámica y
+            que tengan otras comprensiones de la realidad del
+            mundo.
+        </p>
+
+
+
+        <!-- Conclusiones -->
+        <hr>
+
+        <p class="titulo"> Conclusiones</p>
+        <p>
+            A través de la elaboración y el desarrollo
+            de la secuencia didáctica, donde su contenido y
+            actividades a realizar, se trasversalizaron con los
+            temas de los módulos de aprendizaje trabajados
+            con los estudiantes dentro del aula de clase, se pudo
+            evidenciar que este material que hace parte del
+            Modelo Flexible de Escuela Nueva, integra diversos
+            textos multimodales que le permiten al estudiante
+            acceder a otro tipo de lectura, permitiéndole
+            interactuar con diferentes modos de significación y
+            así enriquecer el proceso lector.
+        </p>
+
+        <p>
+            La implementación de las tecnologías digitales
+            dentro del aula de clase, permite potenciar el proceso
+            educativo, ya que es atractivo para los estudiantes y
+            posibilita la atención en el desarrollo de actividades.
+            Para el acercamiento a los contenidos planteados
+            por el modelo Flexible de Escuela Nueva, se
+            realizaron adaptaciones didácticas a los contenidos.
+            Sin embargo, esto no es directamente proporcional
+            al desarrollo de las habilidades cognitivas de
+            observación, retención, descripción y comparación,
+            debido a que llevar los textos multimodales digitales a la escuela rural, por si solos, no se desarrolla
+            estas
+            habilidades.
+        </p>
+
+        <p>
+            Se reconoce la importancia de desarrollar
+            la habilidad cognitiva de la observación en los
+            estudiantes, debido a sus implicaciones en la
+            aplicación de las habilidades de descripción,
+            comparación y retención. Al tiempo, que el desarrollo
+            de la habilidad de descripción aporta elementos para
+            la construcción de comparaciones. Por lo tanto,
+            al momento de proponer propuestas didácticas
+            que desarrollen estas habilidades es necesario
+            comprender las conexiones que existen entre ellas,
+            y tratar de integrarlas a procesos de comprensión de
+            lectura desde los componentes gráficos y visuales de
+            los textos.
+        </p>
+
+        <p>
+            Al trabajar con los estudiantes los textos
+            multimodales digitales, se les mostró diferentes
+            formatos y soportes tecnológicos en las que se puede
+            practicar la lectura. Trabajando este tipo de texto,
+            los estudiantes evidenciaron que no solo se puede
+            acceder a la lectura de una manera física, sino también
+            de manera digital donde no solo las letras presentan
+            significado, sino que los dibujos, sonidos y colores
+            aportan a la construcción de significados dentro de los
+            textos. Además, se identificó que las imágenes en los
+            textos multimodales digitales aportan al desarrollo
+            de las habilidades cognitivas de la observación,
+            descripción, retención y comparación, sin embargo,
+            es necesario entrenar a los estudiantes en ellas, para
+            lograr niveles de desempeño superior.
+        </p>
+
+        <p>
+            Una de las principales recomendaciones que se
+            pueden realizar para futuras investigaciones, es la
+            implementación de la tecnología digital, y en este caso
+            los textos multimodales digitales en las actividades
+            académicas, ya que permiten ir incorporando a los
+            estudiantes de la escuela rural en la cultura digital,
+            sin desconocer sus realidades, pero, si posibilitando
+            acceder a información y recursos que les aportarán
+            a las comprensiones de sus problemáticas cercanas.
+        </p>
+
+        <p>
+            Por otra parte, tener en cuenta que el Modelo
+            Flexible de Escuela Nueva que se maneja en las zonas rurales, no se puede trabajar tal cual como
+            es entregado por los entes gubernamentales. Es
+            importante que el docente primero comprenda
+            la estructura del modelo flexible y conozca la
+            finalidad de esta metodología, también los temas
+            y los contenidos a trabajar, realice diferentes
+            adaptaciones didácticas a partir de las características
+            de los estudiantes, el contexto en el cual ellos se
+            desenvuelven, realice una transversalización y en el
+            proceso reconocer las potencialidades de recursos
+            tecnológicos con los que cuenta en el centro rural
+            para fortalecer los aprendizajes.
+        </p>
+
+        <!-- Referencias -->
+
+        <hr>
+
+        <p class="titulo"> Referencias </p>
+
+        <p id="r1">Barboza P., F. D., & Peña G., F. J. (2014). El
+            problema de la enseñanza de la lectura en
+            educación primaria. Educere, 18(59),133-142.
+            Recuperado de <a
+                href="https://www.redalyc.org/articulo.oa?id=35631103015">https://www.redalyc.org/articulo.oa?id=35631103015</a>
+        </p>
+        <p id="r2">Bautista Villalobos, S., & Méndez de Cuellar, M.
+            (2015). Prácticas de lectura y escritura mediadas
+            por las TICS en contextos educativos rurales.
+            Revista Guillermo De Ockham, 13(1), 97-107.
+            <a href="https://doi.org/10.21500/22563202.1692">https://doi.org/10.21500/22563202.1692</a>
+        </p>
+        <p id="r3">Calle-Álvarez, G. Y., & Gómez-Sierra, M. I. (2020).
+            El comportamiento lector en textos multimodales
+            digitales en la básica primaria. Panorama,
+            14(27), 14–34. <a
+                href="https://doi.org/10.15765/pnrm.v14i27.1518">https://doi.org/10.15765/pnrm.v14i27.1518</a></p>
+        <p id="r4">Calle-Álvarez, G. Y., & Pérez-Guzmán, J. A. (2018).
+            La construcción de argumentos multimodales
+            digitales en la básica primaria. Aletheia, 10(2),
+            38-55. Recuperado de <a
+                href="https://aletheia.cinde.org.co/index.php/ALETHEIA/article/view/497">https://aletheia.cinde.org.co/index.php/ALETHEIA/article/view/497</a>
+        </p>
+        <p id="r5">Camizán García, H. C., Benites Seguín, L. A.,
+            & Damián Ponte, I. F. (2021). Estrategias de
+            aprendizaje. TecnoHumanismo, 1(8), 1-20.
+            <a href="https://doi.org/10.53673/th.v1i8.40">https://doi.org/10.53673/th.v1i8.40</a>
+        </p>
+        <p id="r6">Gladic Miralles, J., & Cautín-Epifani, V. (2016). una mirada a los modelos multimodales de
+            comprensión y aprendizaje a partir del texto.
+            Literatura y lingüística, (34), 357-380. <a
+                href="https://dx.doi.org/10.4067/S0716-58112016000200017">https://dx.doi.org/10.4067/S0716-58112016000200017</a>
+        </p>
+        <p id="r7">Grace Kim, Y. S. (2017) Why the Simple View
+            of Reading Is Not Simplistic: Unpacking
+            Component Skills of Reading Using a Direct
+            and Indirect Effect Model of Reading (DIER).
+            Scientific Studies of Reading, 21(4), 310-333.
+            <a
+                href="http://dx.doi.org/10.1080/10888438.2017.1291643">http://dx.doi.org/10.1080/10888438.2017.1291643</a>
+        </p>
+        <p id="r8">Gutiérrez Cardoso, N. (2018). Textos multimodales y
+            su apoyo a la creación e interacción en el entorno
+            educativo. Praxis, Educación Y Pedagogía,
+            (2), 84–111. <a
+                href="https://doi.org/10.25100/praxis_educacion.v0i2.7799">https://doi.org/10.25100/praxis_educacion.v0i2.7799</a>
+        </p>
+        <p id="r9">Hernández-Sampieri, R. & Mendoza Torres, C
+            (2018). Metodología de la investigación. Las
+            rutas cuantitativa, cualitativa y mixta. Ciudad
+            de México, México: Editorial Mc Graw Hill
+            Education.</p>
+        <p id="r10">Hoyos Flórez, A. M., & Gallego, T. M. (2017).
+            Desarrollo de habilidades de comprensión
+            lectora en niños y niñas de la básica primaria.
+            Revista Virtual Universidad Católica del Norte,
+            51, 223-45. Recuperado de <a
+                href="http://revistavirtual.ucn.edu.co/index.php/RevistaUCN/article/view/841/1359">http://revistavirtual.ucn.edu.co/index.php/RevistaUCN/article/view/841/1359</a>
+        </p>
+        <p id="r11">Kraft, M.A. (2019). Teacher Effects on Complex
+            Cognitive Skills and Social-Emotional
+            Competencies. Journal of Human Resources
+            54(1), 1-36. <a href="https://www.muse.jhu.edu/article/714319">https://www.muse.jhu.edu/article/714319</a>
+        </p>
+        <p id="r12">Manghi Haquin, D., González Torres, D., Echeverría
+            Urrutia, E., Marín Martínez, C., Rodríguez Vega,
+            P., & Guajardo Morales, V. (2013). Leer para
+            aprender a partir de textos multimodales: los
+            textos escolares como mediadores semióticos.
+            Revistas de estudio y experiencia en Educación, 12(24), 77-99. Recuperado de <a
+                href="http://www.rexe.cl/ojournal/index.php/rexe/article/view/68">http://www.rexe.cl/ojournal/index.php/rexe/article/view/68</a>
+        </p>
+        <p id="r13">Monsalve Upegui, M. E., Franco Velásquez, M. A.,
+            Monsalve Ríos, M. A., Betancur Trujillo, V. L.,
+            & Ramírez Salazar, D. A. (2011). Desarrollo
+            de las habilidades comunicativas en la escuela
+            nueva. Revista Educación Y Pedagogía, 21(55),
+            189-210. Recuperado de: <a
+                href="https://revistas.udea.edu.co/index.php/revistaeyp/article/view/9766">https://revistas.udea.edu.co/index.php/revistaeyp/article/view/9766</a>
+        </p>
+        <p id="r14">Neva, O. A. (2021). Textos Digitales y Comprensión
+            Lectora en Primaria: Una Revisión de Literatura.
+            Educación Y Ciencia, (25), e12467. <a
+                href="https://doi.org/10.19053/0120-7105.eyc.2021.25.e12467">https://doi.org/10.19053/0120-7105.eyc.2021.25.e12467</a>
+        </p>
+        <p id="r15">Peng, P., & Kievit, R. A. (2020). The development
+            of academic achievement and cognitive abilities:
+            A bidirectional perspective. Child Development
+            Perspectives, 14(1), 15-20. <a
+                href="https://doi.org/10.1111/cdep.12352">https://doi.org/10.1111/cdep.12352</a></p>
+        <p id="r16">Pole, K. (2009). Diseño de metodologías mixtas.
+            Una revisión de las estrategias para combinar
+            metodologías cuantitativas y cualitativas.
+            Renglones, 60, 37-42 Recuperado de <a
+                href="http://hdl.handle.net/11117/252">http://hdl.handle.net/11117/252</a></p>
+        <p id="r17">Ramos-Elizondo, A., Herrera-Bernal, J., & RamírezMontoya, M. (2010). Desarrollo de habilidades
+            cognitivas con aprendizaje móvil: Un estudio
+            de casos. Comunicar, 34, 201-209. <a
+                href="https://doi.org/10.3916/C34-2010-03-20">https://doi.org/10.3916/C34-2010-03-20</a></p>
+        <p id="r18">Romero Carrasquero, Y., & Tapia Luzardo, F. (2014).
+            Desarrollo de las habilidades cognitivas en niños
+            de edad escolar. Multiciencias, 14(3),297-303.
+            Recuperado de <a
+                href="https://www.redalyc.org/articulo.oa?id=90432809008">https://www.redalyc.org/articulo.oa?id=90432809008</a>
+        </p>
+        <p id="r19">Streiner, D. L. (2003). Starting at the beginning:
+            an introduction to coefficient alpha and internal
+            consistency. Journal of personality assessment,
+            80(1), 99-103. <a
+                href="https://doi.org/10.1207/S15327752JPA8001_18">https://doi.org/10.1207/S15327752JPA8001_18</a></p>
+        <p id="r20">Taboada Barber, A., & Lutz Klauda, S. (2020). How
+            Reading Motivation and Engagement Enable
+            Reading Achievement: Policy Implications.
+            Policy Insights from the Behavioral and
+            Brain Sciences, 7(1), 27–34. <a
+                href="https://doi.org/10.1177/2372732219893385">https://doi.org/10.1177/2372732219893385</a></p>
+        <p id="r21">Thibaut, P. (2020). El nexo entre literacidad y
+            cultura digital: una mirada docente en Chile.
+            Revista Electrónica de Investigación Educativa,
+            22, 1-13. <a
+                href="https://doi.org/10.24320/redie.2020.22.e06.2328">https://doi.org/10.24320/redie.2020.22.e06.2328</a>
+        </p>
+        <p id="r22">Vásquez Guerrero, D. A. (2020). Texto multimodal
+            digital para el fortalecimiento de las habilidades
+            lectoras en estudiantes de Básica primaria TunjaBoyacá. Desafíos de la cultura en la escuela
+            contemporánea, 6(6), 99-12. Recuperado de
+            <a
+                href="http://experiencias.iejuliussieber.edu.co/index.php/Exp-inv/article/view/170">http://experiencias.iejuliussieber.edu.co/index.php/Exp-inv/article/view/170</a>
+        </p>
+        <p id="r23">Xu, W., Kolozsvari, O. B., Monto, S. P., &
+            Hämäläinen, J. A. (2018). Brain responses to
+            letters and speech sounds and their correlations
+            with cognitive skills related to reading in
+            children. Frontiers in human neuroscience, 12,
+            304. <a href="https://doi.org/10.3389/fnhum.2018.00304">https://doi.org/10.3389/fnhum.2018.00304</a></p>
+
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,1149 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V20-N1-3</title>
+    <link rel="stylesheet" href="">
+    <style>
+        body {
+            padding: 10em;
+            padding-top: 20px;
+            font-family: Times New Roman;
+            color: black;
+        }
+
+        #articulo-derecha {
+            float: left;
+        }
+
+        /* Posiciones de los resumenes */
+
+        .contenedor-general {
+            display: inline-flex;
+            width: 100%;
+        }
+
+        .contenedor-resumen {
+            width: 240%;
+        }
+
+        .contenedor-autor {
+            width: 100%;
+            padding-left: 20px;
+        }
+
+        .hr-resumen {
+            background-color: gray;
+            margin: 0;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .resumen-fondo {
+            background-color: #bdd5f1;
+            border-radius: 5px;
+        }
+
+        .titulo-resumen {
+            color: black;
+            font-size: 22px;
+            font-weight: bold;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .texto-resumen {
+            padding: 20px;
+            margin: 0;
+        }
+
+        ul.navbar {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 25em;
+            left: 2em;
+            width: 250px;
+        }
+
+        /* Titulos principales */
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: Times New Roman;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        h1 {
+            color: #29abe3;
+        }
+
+        .categoria_titulo {
+            font-style: italic;
+            color: #ffffff;
+        }
+
+        h3 {
+            font-style: italic;
+            font-weight: bold;
+            color: #707073;
+        }
+
+        .categoria {
+            text-align: center;
+            background-color: #707073;
+            width: 20%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            margin: auto;
+        }
+
+        ul.navbar li {
+            background: white;
+            margin: 0.5em 0;
+            padding: 0.3em;
+        }
+
+        /* Enlaces */
+
+        a.link-color:visited {
+            color: white;
+        }
+
+        a.link-color:link {
+            color: white;
+        }
+
+        a.link-color:hover {
+            color: white;
+        }
+
+        a.link-color:hover {
+            border-bottom: 1px solid;
+            background: black;
+        }
+
+        /* Link de referencia */
+
+        a:link {
+            color: #4e00ff;
+        }
+
+        a:visited {
+            color: #003bff;
+        }
+
+        a:focus {
+            border-bottom: 1px solid;
+            background: #98aae4;
+        }
+
+        a:hover {
+            border-bottom: 1px solid;
+            background: #aacefe;
+        }
+
+        /* Etiqueta P */
+
+        p {
+            line-height: normal;
+            text-align: justify;
+            font-size: 18px;
+        }
+
+        p.titulo {
+            color: #29abe3;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        p.subtitulo {
+            color: #29abe3;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* NUEVO */
+        p.subtitulo-segundo {
+            color: #29abe3;
+            font-style: italic;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        p.correspondencia {
+            color: black;
+            font-size: 18px;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        /* NUEVO */
+        p.entrevista {
+            color: black;
+            font-size: 18px;
+            font-style: italic;
+        }
+
+        /* NUEVO */
+        p.subtitulo-tercero {
+            color: #29abe3;
+            font-style: italic;
+            font-size: 18px;
+        }
+
+        p#cabeza {
+            color: #1d71ae;
+            text-align: center;
+        }
+
+        p.autores {
+            font-size: 16px;
+            margin: 0;
+            text-indent: 0em;
+            margin-bottom: 10px;
+        }
+
+        p.forma-citar {
+            text-indent: 0em;
+            text-align: justify;
+            justify-content: center;
+        }
+
+        .cita {
+            text-align: -webkit-center;
+        }
+
+        /* Bold especial para palabras que tienen color seguido de dos puntos
+*/
+
+        /* NUEVO */
+
+        b.subtitulo-segundo {
+            color: #29abe3;
+            font-size: 18px;
+        }
+
+        .contenedor_info {
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .info {
+            width: auto;
+        }
+
+        /* Este es para los documentos del dos en adelante *codigo abajo de este comentario* */
+
+        .info-text {
+            text-align: end;
+            margin: 0;
+        }
+
+        /* Uso Exlusico para el primero documento  que es de revision  *codigo abajo de este comentario* */
+
+        .info_text {
+            font-size: 12px;
+            line-height: 100%;
+            text-align: center;
+            margin: 0;
+        }
+
+        .info_hr {
+            margin: 5;
+        }
+
+        /* Fin P */
+        /* Etiqueta Italic */
+
+        i {
+            font-size: 18px
+        }
+
+        i.centrado {
+            font-size: 18px
+        }
+
+        /* LI para las listas */
+
+        li {
+            font-size: 18px;
+            padding-top: 10px;
+            text-align: justify;
+        }
+
+        /* NUEVO */
+        .lista li {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        hr {
+            background-color: #29abe3;
+            height: 1px;
+        }
+
+        /* Tablas */
+
+        table {
+            border-collapse: collapse;
+            border: 2px solid rgb(0, 0, 0);
+            align-items: center;
+        }
+
+        thead th {
+            border-collapse: collapse;
+            background-color: rgb(179, 179, 179);
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        tbody td {
+            border-collapse: collapse;
+            text-align: center;
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        .tipo {
+            color: #ffffff;
+            font-size: 22px;
+            border-radius: 10px 5px 10px 5px;
+            background-color: #696969;
+        }
+
+        img.logos {
+            width: 15px;
+            height: 15px;
+        }
+
+        .image {
+            text-align: center;
+            image-rendering: optimizeQuality;
+        }
+
+        .image p {
+            text-align: center;
+            font-size: small;
+        }
+
+        .logo {
+            width: 300px;
+            height: 80px;
+        }
+
+        .logo2 {
+            width: 300px;
+            height: 50px;
+        }
+
+        /* Anclajes de la pagina */
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* NUEVO */
+        .ecuacion {
+            text-align: center;
+            font-weight: bold;
+            margin: 1px;
+        }
+
+        @media only screen and (min-width:320px) and (max-width:900px) {
+            body {
+                width: 100%;
+                padding: 5em;
+                margin: 5px;
+            }
+
+            .image {
+                text-align: center;
+                image-rendering: optimizeQuality;
+            }
+
+            .image img {
+                width: 100%;
+            }
+
+            .image p {
+                font-size: small;
+                text-align: center;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="contenedor_info">
+        <div>
+            <img src="img/globales/logo.jpg" alt="" height="125px">
+        </div>
+        <div class="info" style="text-align: right;">
+            <p class="info-text"> ISSN-PRINT 1794-9831 / E-ISSN 2322-7028 </p>
+            <p class="info-text"> Vol. 19 Nº 3 / sep - dic, 2022 / Cúcuta, Colombia. </p>
+            <p class="info-text">
+                <img src="img/globales/doi.png" height="20px" alt="">
+                <a href="https://doi.org/10.22463/17949831.3314">https://doi.org/10.22463/17949831.3314</a>
+            </p>
+        </div>
+    </div>
+
+
+    <!--Categoría-->
+    <div class="categoria">
+        <h2 class="categoria_titulo">Original </h2>
+    </div>
+
+    <h1> Funcionalidad familiar de adolescentes asistentes a control prenatal. Cartagena 2021</h1>
+
+    <h2 class="segundo"> Family functionality of adolescents attending prenatal control. Cartagena 2021</h2>
+
+    <h2 class="segundo"> Funcionalidade familiar dos adolescentes que frequentam os cuidados pré-natais. Cartagena 2021
+    </h2>
+
+
+    <!--Autores-->
+    <h3>
+        Yolima Manrique-Anaya <sup><a href="#sup1">1*</a> </sup> <br>
+        Moraima Del toro-Rubio <sup><a href="#sup2">2*</a> </sup> <br>
+    </h3>
+
+
+    <!-- Conetenedor de las columnas de la descripciones de los autores, correspondencia de autor 
+    y los resumenes -->
+    <div class="contenedor-general">
+
+
+        <!-- Contenedor de los resumenes -->
+        <div class="contenedor-resumen">
+
+            <!-- Resumen Español -->
+
+            <div class="resumen-fondo">
+                <p class="titulo-resumen"> Resumen</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> <b>Introducción:</b> El embarazo en la adolescencia tiende a presentar
+                    repercusiones personales,
+                    sociales, educativas y psicológicas en la madre y en el hijo. Es por ello por lo que el apoyo
+                    de la familia y su funcionalidad resultan cruciales. <b>Objetivo:</b> Determinar el nivel de
+                    funcionalidad familiar existente en las familias de las adolescentes gestantes asistentes a
+                    controles
+                    prenatales en tres instituciones de salud de Cartagena-Colombia durante 2021. <b>Materiales y
+                        Métodos:</b> Estudio descriptivo, de corte transversal, y asociación. La población estuvo
+                    constituida por 780 adolescentes gestantes que asisten a controles prenatales en dos instituciones.
+                    Se determinó una muestra de 185 adolescentes gestantes, seleccionadas mediante muestreo
+                    probabilístico. Fue aplicado instrumento sociodemográfico y APGAR familiar. <b>Resultados:</b>
+                    Las gestantes participaron de la institución A (50,81%) y de la institución B (44,32%), se
+                    trató de adolescentes bachilleres (58,92%), que conviven en unión libre (51,35%), en familias
+                    nucleares de origen (32,97%) y sus familias devengan ingresos entre 1 – 2 salarios mínimos
+                    (48,11%). El embarazo actual no fue planeado, y a los controles prenatales asisten con la
+                    mamá (31,35%), la pareja (27,57%) o solas (22,16%). La funcionalidad normal fue la más
+                    frecuente (99,46%), y se presentó asociación (p ≤ 0,05) con las instituciones, con la tipología
+                    familiar de naturaleza monoparental conformada y con el acompañamiento a los controles
+                    prenatales. <b>Conclusión:</b> Se determinó un nivel de funcionalidad familiar normal en las
+                    familias de las adolescentes gestantes asistentes a controles prenatales en dos instituciones de
+                    salud de Cartagena. </p>
+
+                <p class="texto-resumen">
+                    <b>Palabras Claves: </b> Puntaje de APGAR; Embarazo en adolescencia; Familia; Cuidado prenatal.
+                </p>
+            </div>
+            <!-- Resumen Inglés -->
+
+            <div>
+                <p class="titulo-resumen"> Abstract</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> <b>Introduction:</b> Pregnancy in adolescence tends to have personal, social,
+                    educational, and psychological repercussions on the mother and child. That is why the support of the
+                    family, and
+                    its functionality are crucial. <b>Objective:</b> To determine the level of family functionality
+                    existing
+                    in the families of pregnant adolescents attending prenatal check-ups in three health institutions in
+                    Cartagena-Colombia during 2021. <b>Materials and Methods:</b> Descriptive, cross-sectional, and
+                    association study. The population consisted of 780 pregnant adolescents who attend prenatal
+                    check-ups in two institutions. A sample of 185 pregnant adolescents, selected
+                    by probabilistic sampling, was estimated. Sociodemographic instrument and family APGAR
+                    were applied. <b>Results:</b> Pregnant women participated in institution A (50.81%) and institution
+                    B (44.32%), they were high school adolescents (58.92%), who live together in a free union
+                    (51.35%), in nuclear families of origin (32.97%) and their families earn between 1 – 2 minimum wages
+                    (48.11%). The current pregnancy was not planned, and prenatal check-ups are
+                    attended by the mother (31.35%), the couple (27.57%) or alone (22.16%). Normal functionality was the
+                    most frequent (99.46%) and was correlated (p ≤ 0.05) with the institutions, with
+                    the family typology of a single-parent nature formed and with the accompaniment to prenatal
+                    controls. <b>Conclusion:</b> A normal level of family functionality was determined in the families
+                    of pregnant adolescents attending prenatal check-ups in two health institutions in Cartagena. </p>
+
+                <p class="texto-resumen">
+                    <b>KeyWords:</b> APGAR score; Pregnancy in adolescence; Family; prenatal care.
+                </p>
+            </div>
+            <!-- Resumen Portuguez -->
+
+            <div class="resumen-fondo">
+                <p class="titulo-resumen"> Resumo</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> <b>Introdução:</b> A gravidez na adolescência tende a ter repercussões
+                    pessoais, sociais, educacionais e psicológicas sobre a mãe e o filho. É por isso que o apoio da
+                    família e sua funcionalidade são cruciais. <b>Objetivo:</b> Determinar o nível de funcionalidade
+                    familiar existente nas
+                    famílias de adolescentes gestantes que participam de check-ups pré-natal em dois instituições
+                    de saúde em Cartagena-Colômbia durante 2021. <b>Materiais e métodos:</b> Estudo descritivo,
+                    transversal e associacao de estudo. A população era composta por 780 adolescentes gestantes
+                    que frequentam o pré-natal em dois instituições. Foi estimada uma amostra de 185 adolescentes
+                    gestantes, selecionadas por amostragem probabilística. Foram aplicados instrumentos
+                    sociodemográficos e APGAR familiar. <b>Resultados:</b> Gestantes participaram da instituição A
+                    (50,81%) e da instituição B (44,32%), eram adolescentes do ensino médio (58,92%), que
+                    vivem juntas em união gratuita (51,35%), em famílias nucleares de origem (32,97%) e suas
+                    famílias ganham entre 1 e 2 salários-mínimos (48,11%). A gestação atual não foi planejada,
+                    e os check-ups pré-natal são atendidos pela mãe (31,35%), pelo casal (27,57%) ou sozinho
+                    (22,16%). A funcionalidade normal foi a mais frequente (99,46%), e foi correlacionada (p
+                    ≤ 0,05) com as instituições, com a tipologia familiar de natureza monoparental conformada
+                    e com o acompanhamento aos controles pré-natais. <b>Conclusão:</b> Foi determinado um nível
+                    normal de funcionalidade familiar nas famílias de adolescentes gestantes que frequentam os
+                    check-ups do pré-natal em dois instituições de saúde de Cartagena. </p>
+
+                <p class="texto-resumen">
+                    <b>Palavras-chave:</b> Índice APGAR; Gravidez na adolescencia; Familía; Cuidado pré-natal.
+                </p>
+            </div>
+
+
+
+        </div>
+
+        <!-- Descripcion de autores, Aprobado, Como citar, licencia -->
+        <div class="contenedor-autor">
+            <!-- Autores -->
+            <div>
+                <p class="subtitulo" style="color: black; font-size: 18px;">Autor de correspondencia*</p>
+                <!-- 1 -->
+                <p class="autores" id="sup1"><sup>1*</sup><img class="logos" src="img/globales/sobre.png"> Enfermera.
+                    Magister en Enfermería.
+                    Docente Corporación Universitaria
+                    Rafael Núñez. Cartagena, Colombia
+                    <a href="mailto:ymanriquea@curnvirtual.edu.co">ymanriquea@curnvirtual.edu.co</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0002-3986-7870">0000-0002-3986-7870</a>
+                </p>
+                <!-- 2 -->
+                <p class="autores" id="sup2"><sup>2*</sup><img class="logos" src="img/globales/sobre.png"> Enfermera.
+                    Magister en Educación.
+                    Docente Corporación Universitaria
+                    Rafael Núñez. Cartagena, Colombia.
+                    <a href="mailto:moraima.deltoro@curnvirtual.edu.co">moraima.deltoro@curnvirtual.edu.co</a>, <img
+                        class="logos" src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0001-6710-5171">0000-0001-6710-5171</a>
+                </p>
+            </div>
+
+            <!--Recibido y aprobado-->
+            <div>
+                <p><b>Recibido: </b> 22 junio 2022 <br> <b>Aprobado: </b> 25 octubre 2022 </p>
+            </div>
+
+            <!-- Como citar -->
+            <div class="cita">
+                <p class="forma-citar autores"><b>Para citar este artículo / To reference this article / Para citar este
+                        artigo:</b> Manrique-Anaya Y, Del Toro-Rubio M.
+                    Funcionalidad familiar de adolescentes
+                    asistentes a control prenatal. Cartagena
+                    2021. 2023; 20(1):22-32. <a
+                        href="https://doi.org/10.22463/17949831.3314">https://doi.org/10.22463/17949831.3314</a> </p>
+            </div>
+
+            <!--Licencia-->
+            <br>
+            <div>
+                <p class="autores "> &#169; Universidad Francisco de Paula Santander.
+                    Este es un artículo bajo la licencia CC-BY-NC-ND
+                    <br>
+                    <a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img
+                            alt="Licencia Creative Commons" style="border-width:0"
+                            src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Cuerpo del documento -->
+    <div>
+        <hr>
+        <!--Introducción-->
+        <p class="titulo"> Introducción</p>
+
+        <p>
+            Un embarazo que tome lugar en la etapa de la adolescencia presenta repercusiones sobre la salud de la
+            adolescente, así como en sus circunstancias sociales, en el
+            desenlace del embarazo y en el desarrollo a largo plazo
+            del hijo (1) Todos estos elementos, en tanto que son
+            complejos, interrelacionados y con repercusiones en la
+            salud pública, hacen que se le catalogue como una problemática (2).
+        </p>
+
+        <p>
+            Las cifras existentes coadyuvan a dimensionar el panorama. En el campo internacional, la Organización
+            Mundial de la Salud indica que, si bien la tasa de natalidad entre las adolescentes ha exhibido una
+            tendencia
+            decreciente, se estima que la tasa del 11% en el mundo
+            se producen entre las jóvenes de 15 a 19 años, sobre
+            todo en países de ingresos bajos y medianos (3). La tasa mundial de embarazos a esta edad se calcula en
+            46 por cada 1.000 adolescentes, a la vez que a nivel de
+            América Latina y el Caribe continúan en 66,5 nacidos
+            por cada 1.000 niñas de entre 15 y 19 años, la segunda
+            más alta del mundo luego de África Subsahariana (4).
+        </p>
+
+        <p>
+            En Colombia el Ministerio de Salud revela que el 13,8%
+            de las mujeres con edades de 13-19 años han estado
+            embarazadas, sobre todo en zonas rurales (18,6%). Es
+            importante destacar que, en las zonas rurales de Colombia, cada año toman lugar cerca de 40.000 nacimientos
+            en niñas y mujeres adolescentes (5). Al enfocar la situación en Cartagena, puede decirse que esta es una de
+            las
+            ciudades del país con mayor recurrencia de embarazos
+            en la adolescencia. El Departamento Administrativo
+            Distrital de Salud reporta que, del total de la atención
+            en sala de partos el 21,5% de estos, se dan en menores
+            de edad (6).
+        </p>
+
+        <p>
+            Al panorama descrito se suma la inmadurez (física y
+            psicológica) que aún existe en la adolescencia para asumir el rol de madre y la responsabilidad en la
+            crianza de los hijos(a) lo cual podría ser una situación que
+            trae consecuencias familiares. Por tanto, el apoyo y el
+            funcionamiento de la familia constituye un factor crítico durante esta transición, destacándose el soporte
+            que brinda en cuanto a lo socioeconómico, financiero
+            y emocional, además se incluye la satisfacción de necesidades tales como la alimentación, la vivienda, el
+            cuidado del hijo y el asesoramiento (7,8).
+        </p>
+
+        <p>
+            Los cambios físicos y psicológicos ocurren tanto en la
+            gestante adolescente como en el seno familiar de quien
+            la apoya, es aquí cuando la funcionalidad familiar toma
+            su importancia sobre todo al ser positiva o adaptativa,
+            es decir, cuando persiste la cohesión y la comunicación
+            entre padres e hijos, estos últimos son más propensos a
+            presentar una salud mental favorable y mayor bienestar
+            y la vida de ellas y en su etapa de gestación. Por el contrario, cuando el funcionamiento familiar es
+            negativo,
+            en los hijos sobrevienen desajustes comportamentales,
+            síntomas depresivos y de ansiedad, así como delincuencia y uso de sustancias (9).
+        </p>
+
+        <p>
+            Diversos estudios han encontrado que, en efecto, existe
+            relación entre el funcionamiento familiar y el embarazo
+            en las adolescentes. Tal es el caso de Malasia, donde
+            se ha revelado una correlación negativa significativa
+            entre los rasgos de personalidad y la percepción de las
+            adolescentes embarazadas sobre su funcionamiento familiar. Esto es importante desde el punto de vista del
+            apoyo social, pues el modo en que pueden ayudar los
+            familiares a la adolescente embarazada puede condicionar el desarrollo adecuado del embarazo (10).
+        </p>
+
+        <p>
+            En países como Nigeria, el desarrollo de un embarazo
+            en edades tempranas se ve influenciado por el apoyo
+            recibido de la familia, lo que a su vez se vincula con
+            la calidad del funcionamiento familiar. De otra parte,
+            cuando la relación madre-hija no es la adecuada por
+            disfuncionalidad familiar, además de ser propenso el
+            inicio de la vida sexual a edades más tempranas, se producen con mayor frecuencia embarazos y se hace
+            necesario asumir la adaptación a su nuevo rol (11).
+        </p>
+
+        <p>
+            En España las mujeres con embarazos a edades tempranas tienden a exhibir un funcionamiento familiar menos
+            sólido, lo que repercute adversamente en el desarrollo
+            de las actitudes maternas comparadas con gestantes en etapa adulta, las cuales tienden a tener mejores
+            actitudes en su rol materno, lo que guarda estrecha relación
+            con la experiencia de vida y los conocimientos sobre
+            la crianza de los hijos para hacerla más llevadera, demostrando con esto un óptimo funcionamiento familiar
+            (12).
+        </p>
+
+        <p>
+            Para el caso nacional en el departamento de Santander,
+            predomina la percepción de funcionalidad familiar regular (46,7%), sobre todo entre los niveles
+            socioeconómicos más bajos. Esta situación desfavorable se ha
+            relacionado con el menor apoyo social del que pueden
+            gozar las adolescentes embarazas durante este complejo momento de sus vidas (13). En la ciudad de Montería
+            la ausencia, o el escaso, apoyo social es consecuente
+            con eventos durante la gestación de la adolescente y
+            posterior al parto, ejemplo de ello es su reinserción en
+            la vida cotidiana y lograr respeto social, lo cual amerita
+            apoyo de la familia, si esta es deficiente tiene impacto
+            negativo en la funcionalidad del núcleo familiar (14).
+        </p>
+
+        <p>
+            En el plano de Cartagena se ha encontrado que, el grupo de embarazadas oscila entre 13 a 19 años, la edad
+            más frecuente corresponde a 17 (28%). Se ha detectado
+            que la mayoría asiste de forma temprana al control prenatal durante el primer trimestre (75,3%). Además, una
+            proporción notable pertenece a una familia altamente
+            funcional (82,1%); sin embargo, no existe asociación
+            significativa con la asistencia al control prenatal (15).
+            También se ha dado a conocer que lo anterior está permeado e influido por los marcos culturales de trasfondo
+            a las creencias y actitudes en salud (16).
+        </p>
+
+        <p>
+            En concordancia a lo anterior se ha conocido que la
+            asistencia a los controles prenatales es mediada por la
+            pertenencia a determinado régimen de salud, aunado a
+            la proximidad de los establecimientos de salud, al domicilio de la gestante, su escolaridad, y aspectos
+            familiares como la funcionalidad familiar, al percibir apoyo
+            para asistir al control prenatal (17), debe puntualizar
+            que, por la gran relevancia que representa sobrellevar
+            el embarazo por las adolescentes gestantes, se necesita
+            comprender la dinámica familiar con la madre adolescente en este momento de la vida.
+        </p>
+
+        <p>
+            Por lo expuesto, se estimó conocer el nivel de funcionalidad familiar existente en las familias de las
+            adolescentes gestantes que asisten al control prenatal en dos
+            instituciones de salud de Cartagena-Colombia.
+        </p>
+
+        <hr>
+
+        <p class="titulo">Materiales y métodos</p>
+
+        <p>
+            Se realizó un estudio descriptivo de corte transversal
+            (18, 19,20) y de asociación (21). La población estuvo
+            constituida por 780 adolescentes gestantes que asistieron a controles prenatales a la institución A y la
+            institución B localizadas en la ciudad de Cartagena;
+            se estimó una muestra de 185 adolescentes gestantes,
+            escogidas mediante un muestreo probabilístico, considerando los siguientes criterios de inclusión: 1)
+            adolescentes gestantes entre 14 - 16 años (adolescencia
+            intermedia) o entre 17 – 19 (adolescencia tardía); 2)
+            adolescente que asista a los controles prenatales de alguna de las dos instituciones de salud seleccionadas;
+            y
+            3) las adolescentes gestantes que desee participar en
+            el estudio, firmando el asentimiento. El criterio de exclusión: gestantes con diversidad funcional, que se
+            les
+            dificulte su participación en la investigación.
+        </p>
+
+        <p>
+            Se aplicó encuesta sobre aspectos sociodemográficos
+            (de diseño propio) y el test APGAR familiar, el cual es
+            un instrumento que permite conocer, desde la opinión
+            del paciente, la situación funcional de sus familias.
+            Producto de validaciones previas se ha conocido un
+            alfa de Cronbach alto (0,80), incluso a nivel nacional (0,793) (22).
+        </p>
+
+        <p>
+            Los datos fueron recolectados mediante encuestas presenciales, que se aplicaron en las dos instituciones de
+            salud en el área de Cartagena durante los meses de
+            agosto-diciembre 2020 y analizados en el programa
+            SPSS versión 2.0. Los resultados fueron expresados en
+            frecuencias relativas y absolutas, el criterio de asociación se obtuvo por el estadístico chi cuadrado con p
+            ≤
+            0,05. Parcialmente la asociación fue usada para evaluar
+            la relación entre cada uno de los aspectos sociodemográficos con el resultado del APGAR familiar. El
+            componente ético se acogió según la Resolución 8430 de
+            1993 (23), además de tener el aval del comité de ética
+            de la Corporación Universitaria Rafael Núñez con No
+            de acta 002-IIp2019. La investigación no presentó ningún tipo de conflicto de interés.
+        </p>
+
+        <p class="titulo">Resultados</p>
+
+        <p>
+            Participaron 185 adolescentes gestantes, pertenecientes
+            a dos instituciones de salud ubicadas en Cartagena. La
+            mayoría provino de la institución A 50,81% y de la institución B 44,32%, las edades más frecuentes fueron de
+            15 a 19 años. Los aspectos sociodemográficos a destacar se muestran en la Tabla 1.
+        </p>
+
+        <div class="image">
+            <p><b>Tabla 1. </b>Descripción de los aspectos sociodemográficos.</p>
+            <img src="img/V20-N1-3/Screenshot_1.png" width="60%">
+            <img src="img/V20-N1-3/Screenshot_2.png" width="60%">
+            <p><b>Fuente: </b>Datos de las investigadoras con base en información de las encuestas</p>
+        </div>
+
+        <p>
+            Respecto al estado civil se detectó que las adolescentes
+            gestantes cohabitan con su pareja en unión libre, sus
+            familias son nucleares, es decir, viven con su mamá,
+            papá, con o sin hermanos y otras son de familias extendidas en las cuales además de los miembros ya
+            mencionados cohabitan con otros parientes. En términos de la
+            escolaridad el bachillerato fue el nivel más frecuente,
+            al indagar por la ocupación en la que se desempeñan
+            cotidianamente se obtuvo que la mayoría ejerce como
+            estudiante y otras son trabajadoras independientes y
+            amas de casa
+        </p>
+
+        <p>
+            Los ingresos de la familia suman entre 1 – 2 salarios mínimos mensuales. El estudio permitió conocer que
+            la mayor parte de las adolescentes no planificaron su
+            embarazo y son sus madres y pareja quienes las acompañan al control prenatal.
+        </p>
+
+        <p class="subtitulo-segundo">Funcionalidad en las familias de las adolescentes gestantes</p>
+
+        <p>
+            De acuerdo con los resultados, se pudo conocer que
+            casi la totalidad de adolescentes gestantes pertenecen
+            a familias con funcionalidad normal (99,46%); únicamente para 1 encuestada se observó la existencia de
+            disfuncionalidad leve (0,54%) (Figura 1).
+        </p>
+
+        <div class="image">
+            <img src="img/V20-N1-3/Screenshot_3.png" width="70%">
+            <p><b>Figura 1. </b>Funcionalidad familiar</p>
+            <p><b>Fuente: </b>Cálculos de las investigadoras con base en información de las encuestas</p>
+        </div>
+
+        <p class="subtitulo-segundo">Asociación entre funcionalidad familiar y aspectos sociodemográficos de las
+            adolescentes gestantes</p>
+
+        <p>
+            En esta parte se presenta la asociación entre la funcionalidad familiar y aquellas variables de índole
+            sociodemográfica. Para estos efectos, se calculó el estadístico
+            chi cuadrado.
+        </p>
+
+        <div class="image">
+            <p><b>Tabla 2. </b>Asociación entre funcionalidad familiar y aspectos sociodemográficos de las adolescentes
+                gestantes.</p>
+            <img src="img/V20-N1-3/Screenshot_4.png" width="65%">
+            <img src="img/V20-N1-3/Screenshot_5.png" width="65%">
+            <p><b>Fuente: </b>Cálculos de las investigadoras con base en información de las encuestas. Se resaltan las
+                asociaciones estadísticamente significativas, es decir, con p < 0,05.</p>
+        </div>
+
+        <div class="image">
+            <p><b>Tabla 3. </b>Ítems de la funcionalidad familiar con mayores puntuajes</p>
+            <img src="img/V20-N1-3/Screenshot_6.png" width="75%">
+            <p><b>N:</b> Nunca <b>CN:</b> Casi nunca <b>AV:</b> Algunas veces <b>CS:</b> Casi siempre <b>S:</b> Siempre
+            </p>
+            <p><b>Fuente: </b>Elaboración propia</p>
+        </div>
+
+        <p>
+            Los resultados observados en la tabla 2 y la tabla 3 permiten afirmar las variables que se asociaron con la
+            funcionalidad y los ítems que tuvieron mayor puntaje en
+            el APGAR seleccionado por las adolescentes gestantes asistentes a controles prenatales. Se observaron
+            diferencias significativas por tipo de institución, tipo
+            de familia y la asistencia al control prenatal, se logró
+            conocer que cuando la gestante vive con su pareja la
+            funcionalidad familiar es alta.
+        </p>
+
+        <p>
+            La última variable para la cual se registró significancia
+            estadística fue el acompañamiento que tiene la adolescente gestante a controles prenatales. Al respecto y de
+            modo específico, el hecho de asistir con alguna amiga
+            o amigo (p: 0,045), así como acudir sin compañía al
+            control prenatal (p: 0,029), presentaron asociación con
+            la funcionalidad de las familias.
+        </p>
+
+        <p class="titulo">Discusión</p>
+
+        <p>
+            La investigación desarrollada evidencia que las gestantes adolescentes son de estrato socioeconómico bajo,
+            los ingresos familiares están entre 1 a 2 SMLV, viven
+            con su familia y pareja, y el ser acompañadas al control
+            prenatal es importante en su funcionalidad familiar.
+        </p>
+
+        <p>
+            Dentro del factor económico se observa que al estar
+            limitado el ingreso es aún más complejo en ofrecer al nuevo miembro lo necesario para su bienestar; sin
+            embargo, pese a lo descrito califican la funcionalidad
+            familiar normal, que se podría ver reflejado en la estabilidad emocional hacia los cambios físicos y de rol
+            de
+            las adolescentes.
+        </p>
+
+        <p>
+            Lo anterior se asemeja al aporte de Obwoge y colaboradores (24), quienes argumentan que los embarazos y
+            la maternidad en la adolescencia constituyen un grupo de alto riesgo, al tener implicaciones en su estado
+            físico, psicológico, económico y social de las adolescentes, sin embargo el hecho de mantener la atención
+            prenatal constituye un mecanismo que coadyuva a la
+            prevención de desenlaces adversos en el embarazo a
+            estas edades, sobre todo cuando los miembros de la
+            familia apoyan a la adolescente gestante bajo un entorno asertivo y funcional en términos de afecto y
+            comunicación. De igual manera Leftwich y Ortega (25),
+            Mekwunyei y Odetola (26), en sus estudios demostraron que la adolescente gestante mantiene la práctica
+            del control prenatal cuando es compañía de su madre
+            (31,35%), o pareja (27,57%) principalmente.
+        </p>
+
+        <p>
+            Al efectuar comparaciones con otros estudios, Sevillano y Machare (27), reportan que las adolescentes
+            gestantes suelen recibir apoyo de su pareja al asistir a los
+            controles prenatales (44%) y de amistades (33,33%).
+            En cuanto el nivel educativo Panthumas y colaboradores (28), mostraron que se mantiene las adolescentes en
+            nivel secundario (68%), conviven con su pareja
+            (69,1%), y que no contemplaron el quedar embarazadas (79%). Valladarez ( 29).
+        </p>
+
+        <p>
+            Estas cifras fueron similares a las de otros estudios que
+            refieren funcionalidad normal, aunque en proporciones
+            más reducidas, 56,5% (30), 46,5% (31), 51,5% (32) y
+            con 3,29% (33) .
+        </p>
+
+        <p>
+            Por su parte, Angley y colaboradores (34) reconocen
+            que el mejor funcionamiento familiar repercute sobre
+            una mayor satisfacción de las adolescentes gestantes
+            con su nuevo rol de madres, lo que podría evidenciarse
+            en este estudio cuando las adolescentes gestantes deciden asistir a los controles prenatales. Esta práctica
+            podría ser una manera indirecta de entender que han
+            decidido asumir el rol en cuestión, pues se preocupan
+            por la salud propia y la de su futuro hijo.
+        </p>
+
+        <p>
+            Finalmente, en cuanto a las variables de asociación resultó que el tipo de familia monoparental donde
+            principalmente la cabeza del hogar es la madre, si bien no
+            primó en este estudio, se identifica de impacto en cuanto a la funcionalidad, al relacionarse con el hecho
+            de
+            acompañar a la adolescente a los controles prenatales
+            como se argumentó en el estudio de Panthumas y colaboradores (28). De acuerdo con estos autores, asistir
+            con compañía a los controles prenatales constituye una
+            muestra de apoyo social, el cual se consigue en la medida en que las familias presenten buena funcionalidad.
+            De aquí que se pueda entender la relación entre funcionalidad y acompañamiento. Sin embargo, no queda
+            del todo claro por qué algunas adolescentes gestantes
+            deciden asistir en solitario a los controles; en este punto
+            quizás tenga que ver el hecho de que algunos miembros
+            de la familia o la pareja puedan tener compromisos impostergables (por ejemplo, trabajar o estudiar), lo que
+            hace que no quede otra opción más que la adolescente
+            vaya sola.
+        </p>
+
+        <p>
+            Algunas limitaciones inherentes al estudio están en el
+            tamaño de la muestra fue relativamente reducido, y que las participantes provinieron de instituciones de
+            salud
+            específicas, en este orden de ideas, se imposibilita efectuar generalizaciones de los resultados, sumado que
+            el
+            propio diseño cuantitativo de esta investigación, no
+            permite explorar aspectos como sentimientos, ideas,
+            pensamientos, creencias, entre otros asuntos sugestivos
+            que posiblemente se encuentren inmersos en las dinámicas de las familias a las que pertenecen las
+            adolescentes gestantes.
+        </p>
+
+        <!-- conclusiones -->
+
+        <hr>
+
+        <p class="titulo">Conclusiones</p>
+
+        <ul class="lista">
+            <li>El embarazo no planeado en adolescentes continúa
+                teniendo repercusiones en los aspectos psicológicos, físicos y familiares. Las familias son quienes
+                terminan asumiendo el apoyo en el binomio madre-hijo pese a ser de estrato socioeconómico bajo.
+            </li>
+            <li>Se pudo establecer que casi la totalidad de las adolescentes gestantes hacen parte de familias con
+                funcionalidad normal. Así mismo, se concluyó que fue
+                positiva la opinión que proporcionaron a diversos
+                aspectos tales como el compartir los espacios de la
+                casa, el tiempo para estar juntos en familia, el dinero, el afecto, entre otros.</li>
+            <li>Se hace necesario desarrollar investigaciones de
+                tipo cualitativo que considere la evaluación de los
+                sentimientos, pensamientos, emociones, creencias,
+                mitos, figuraciones, entre otros aspectos de índole subjetiva que permitan comprender los aspectos
+                subyacentes a la funcionalidad que se experimenta
+                en las familias de las adolescentes gestantes; incluyendo en la participación a otros miembros del hogar
+                para conocer sus puntos de vista.</li>
+        </ul>
+
+        <p class="subtitulo segundo">Conflicto de intereses</p>
+
+        <p>
+            Los autores declaran no tener ningun conflicto de interes.
+        </p>
+
+        <!-- Referencias -->
+
+        <hr>
+
+        <p class="titulo"> Referencias bibliográficas</p>
+
+        <ol class="lista">
+            <li id="r1">Whitworth M, Cockerill R, Lamb H. Antenatal management of teenage pregnancy. Obstetrics.
+                Gynaecology
+                & Reproductive Medicine. 2017;27(2):50-56. Accessed November 12, 2021. <a
+                    href="https://doi.org/10.1016/j.ogrm.2016.11.005">10.1016/j.ogrm.2016.11.005</a></li>
+            <li id="r2">Mendoza L, Claros D. Actividad sexual temprana y embarazo en la adolescencia: estado del arte.
+                Revista
+                Chilena de Obstetricia y Ginecología. 2016;81(3):243-253. Accessed November 12, 2021. <a
+                    href="https://doi.org/10.4067/S0717-75262016000300012">10.4067/S0717-75262016000300012</a></li>
+            <li id="r3">OMS. El Embarazo En La Adolescencia. Accessed November 12, 2021. <a
+                    href="https://www.who.int/es/news-room/fact-sheets/detail/adolescent-pregnancy">https://www.who.int/es/news-room/fact-sheets/detail/adolescent-pregnancy</a>
+            </li>
+            <li id="r4">PAHO. América Latina y el Caribe tienen la segunda tasa más alta de embarazo adolescente en el
+                mundo.
+                Accessed November 12, 2021. <a
+                    href="https://lac.unfpa.org/es/news/am%C3%A9rica-latina-y-el-caribe-tienen-la-segunda-tasa-m%C3%A1s-alta-de-embarazo-adolescente-en-el-mund-1">https://lac.unfpa.org/es/news/am%C3%A9rica-latina-y-el-caribe-tienen-la-segunda-tasa-m%C3%A1s-alta-de-embarazo-adolescente-en-el-mund-1</a>
+            </li>
+            <li id="r5">Colombia M de Salud. Prevención del embarazo adolescente, una prioridad nacional. Accessed
+                November
+                13, 2021. <a
+                    href="https://www.minsalud.gov.co/Paginas/Prevencion-del-embarazo-adolescente-una-prioridad-nacional.aspx">https://www.minsalud.gov.co/Paginas/Prevencion-del-embarazo-adolescente-una-prioridad-nacional.aspx</a>
+            </li>
+            <li id="r6">Departamento Administrativo Distrital de Salud (DADIS) de Cartagena. Boletín Epidemiológico Del
+                Subprograma de Vigilancia de La Maternidad Segura – Quinto Periodo de 2015.</li>
+            <li id="r7">Assini L, Garza M, Green K. Teen Mothers’ Family Support and Adult Identity in the Emerging
+                Adulthood:
+                Implications for Socioeconomic Attainment Later in Life. Emerging Adulthood. Published online 2019:1-12.
+                Accessed November 13, 2021. <a
+                    href="https://doi.org/10.1177/2167696819879251">10.1177/2167696819879251</a></li>
+            <li id="r8">Sriyasak A, Almqvist A, Sridawruang C, Häggström E. Parents’ experiences of their teenage
+                children’s parenthood: An interview study. Nursing & Health Sciences. 2017;20(1):39-45. Accessed
+                November 13, 2021.
+                <a href="https://doi.org/10.1111/nhs.12378">10.1111/nhs.12378</a>
+            </li>
+            <li id="r9">Francisco R, Loios S, Pedro M. Family Functioning and Adolescent Psychological Maladjustment:
+                The Mediating Role of Coping Strategies. Child Psychiatry & Human Development. 2015;47(5):759-770.
+                Accessed
+                November 13, 2021. <a href="https://doi.org/10.1007/s10578-015-0609-0">10.1007/s10578-015-0609-0</a>
+            </li>
+            <li id="r10">Perveen A, Kee P, Hamzah H, Sa’ad F, Darussalam N. Relationship between Personality Traits and
+                Perception
+                of Family Functioning among Unwed Pregnant Teenagers. International Journal of Humanities Social
+                Sciences and Education. 2017;4(9):40-45. Accessed November 13, 2021. <a
+                    href="https://doi.org/10.20431/2349-0381.0409006">10.20431/2349-0381.0409006</a></li>
+            <li id="r11">Ogundokun A, Abioye-Kuteyi E, Bello I, Oyegbade O, Olowookere. S, Olowookere A. Effect of
+                family-oriented interviews on family function of young persons attending the family practice clinic in
+                Oauthc, Ile Ife,
+                south-western Nigeria. South African Family Practice. 2016;58(6):225-228. Accessed November 13, 2021.
+                <a href="https://doi.org/10.1080/20786190.2016.1248118">10.1080/20786190.2016.1248118</a>
+            </li>
+            <li id="r12">García A, Monferrer A, Grimaldos J, et al. A preliminary study to assess the impact of maternal
+                age on
+                stress-related variables in healthy nulliparous women. Psychoneuroendocrinology. 2017; 78:97-104.
+                Accessed November 13, 2021. <a
+                    href="https://doi.org/10.1016/j.psyneuen.2017.01.018">10.1016/j.psyneuen.2017.01.018</a>
+            </li>
+            <li id="r13">Jerez A, Pardo P, Serrano K. Percepción del Apoyo Familiar, Social y Emocional en las
+                Adolescentes Gestantes de El Municipio del Playón-Santander. Bucaramanga. Published online 2018.
+                Accessed November 13,
+                2021. <a
+                    href="https://repository.ucc.edu.co/bitstream/20.500.12494/7547/1/2018_Apoyo_Adolescentes_Gestantes.pdf">https://repository.ucc.edu.co/bitstream/20.500.12494/7547/1/2018_Apoyo_Adolescentes_Gestantes.pdf</a>
+            </li>
+            <li id="r14">Castro E, López L. Relación entre el funcionamiento familiar y embarazo en las adolescentes
+                usuarias del
+                Hospital San Jerónimo de Montería. Published online 2017. Accessed November 13, 2021. <a
+                    href="https://repositorio.unicordoba.edu.co/handle/ucordoba/943">https://repositorio.unicordoba.edu.co/handle/ucordoba/943</a>
+            </li>
+            <li id="r15">García S, Parada E, Pérez J, Quiroz D, Sanjuan P. Relación entre funcionalidad familiar y
+                asistencia al control prenatal en adolescentes embarazadas inscritas al programa maternidad segura de la
+                ESE Hospital Local
+                Cartagena de Indias. Published online 2018. Accessed November 13, 2021. <a
+                    href="http://hdl.handle.net/11227/6994">http://hdl.handle.net/11227/6994</a>
+            </li>
+            <li id="r16">Castillo C, Gonzáles S. Creencias y prácticas de la sexualidad en adolescentes embarazadas en
+                Cartagena, Colombia. Investigación & Desarrollo. 2015;23(2):312-337. Accessed November 13, 2021. <a
+                    href="https://doi.org/10.14482/indes.23.2.7068">10.14482/indes.23.2.7068</a></li>
+            <li id="r17">Castillo I, Fortich L, Padilla J, Monroy M, Morales Y, Ahumada A. Factores asociados al uso
+                adecuado del control prenatal en 13 municipios de Bolívar, Colombia. Rev Cubana Enfermer [Internet].
+                accessed Jun 21,2021] ; 33( 1 ): 62-71. Disponible en: <a
+                    href="http://scielo.sld.cu/scielo.php?script=sci_arttext&pid=S0864-03192017000100008&lng=es">http://scielo.sld.cu/scielo.php?script=sci_arttext&pid=S0864-03192017000100008&lng=es</a>
+            </li>
+            <li id="r18">Sanchez F, Fundamentos epistémicos de la investigación cualitativa y cuantitativa: consensos y
+                disensos. Rev.
+                Digit. Invest. Docencia Univ. [online]. 2019, vol.13, n.1 [accessed Jun 06, 2021], pp.102-122.
+                Disponible en:
+                <a href="http://dx.doi.org/10.19083/ridu.2019.644">10.19083/ridu.2019.644</a>
+            </li>
+            <li id="r19">Bonita R, Beaglehole R, Kjellstrõm T. Epidemiología Básica. Vol 629. 2a. Ed. Organización
+                Panamericana
+                de la Salud; 2008.</li>
+            <li id="r20">Manterola C, Quiroz G, Salazar P, García N. Metodología de los tipos y diseños de estudio más
+                frecuentemente utilizados en investigación clínica, Revista Médica Clínica Las Condes, 2019; 30
+                (1):36-49. <a href="https://doi.org/10.1016/j.rmclc.2018.11.005">10.1016/j.rmclc.2018.11.005</a></li>
+            <li id="r21">Hernández R, Mendoza C. Metodología de La Investigación. Las rutas cuantitativas, cualitativa y
+                mixta McGraw-Hill; 2018.</li>
+            <li id="r22">Galán E. Funcionamiento familiar y estilos de vida promotores de salud en las familias de
+                pacientes con
+                cáncer de colon y recto. Published online 2019. Accessed November 13, 2021. <a
+                    href="https://zaguan.unizar.es/record/78876/files/TESIS-2019-076.pdf">https://zaguan.unizar.es/record/78876/files/TESIS-2019-076.pdf</a>
+            </li>
+            <li id="r23">Colombia. Ministerio de Salud. Resolución 8430 de 1993. Accessed November 13, 2021. <a
+                    href="http://www.unisabana.edu.co/fileadmin/Documentos/Investigacion/comite_de_etica/Res__8430_1993_-_Salud.pdf">http://www.unisabana.edu.co/fileadmin/Documentos/Investigacion/comite_de_etica/Res__8430_1993_-_Salud.pdf</a>
+            </li>
+            <li id="r24">Obwoge R, Okere A, Nduku C, et al. Health Related Challenges Among Pregnant Teenagers Attending
+                Narok
+                County Hospital, Narok County. International Journal of Gastroenterology. 2019;3(2):35-40. Accessed
+                November 13, 2021. <a href="1https://doi.org/10.11648/j.ijg.20190302.12">10.11648/j.ijg.20190302.12</a>
+            </li>
+            <li id="r25">Leftwich H, Ortega M. Adolescent Pregnancy. Pediatric Clinics of North America.
+                2017;64(2):381-388. Accessed November 13, 2021. <a
+                    href="https://doi.org/10.1016/j.pcl.2016.11.007">10.1016/j.pcl.2016.11.007</a></li>
+            <li id="r26">Mekwunyei L, Odetola T. Determinants of maternal health service utilisation among pregnant
+                teenagers in Delta State, Nigeria. Pan Afr Med J. 2020;37(81):1-17. Accessed November 13, 2021. <a
+                    href="https://doi.org/10.11604%20/pamj.2020.37.81.16051">10.11604 /pamj.2020.37.81.16051</a></li>
+            <li id="r27">Sevillano K, Machare F. Intervenciones de enfermería y su relación con el estado psicológico de
+                las adolescentes embarazadas que acuden al Centro de Salud Tipo A- Balzar de Vinces periodo octubre 2018
+                – abril
+                2019. Published online 2019. Accessed November 13, 2021. <a
+                    href="http://dspace.utb.edu.ec/handle/49000/5854">http://dspace.utb.edu.ec/handle/49000/5854</a>
+            </li>
+            <li id="r28">Panthumas S, Kittipichai W, Chamroonsawasdi K, Taechaboonsermsak P. Antecedent factors of
+                maternal
+                identity among primiparous Thai teenage mothers. Journal of Health Research. 2019;33(4):336-348.
+                Accessed November 13, 2021. <a
+                    href="https://doi.org/10.1108/JHR-09-2018-0109">https://doi.org/10.1108/JHR-09-2018-0109</a></li>
+            <li id="r29">Valladarez J. Factores de riesgo familiar que predisponen al embarazo en las adolescentes, del
+                Hospital Isidro
+                Ayora periodo abril –septiembre 2015. Accessed November 13, 2021. <a
+                    href="http://dspace.unl.edu.ec/jspui/handle/123456789/17154">http://dspace.unl.edu.ec/jspui/handle/123456789/17154</a>
+            </li>
+            <li id="r30">Rezaei A, Paki S, Keshvari M. The relationship between family functioning and self-esteem in
+                female high
+                school students of Isfahan, Iran, in 2013-2014. Irán J Nurs Midwifery Res. 2017;20(3):371-377. Accessed
+                November 13, 2021. <a
+                    href="https://pubmed.ncbi.nlm.nih.gov/26120339/">https://pubmed.ncbi.nlm.nih.gov/26120339/</a></li>
+            <li id="r31">Lotero H, Villa I, Torres L. Afectividad y apoyo social percibido en mujeres gestantes: un
+                análisis comparativo. Rev colomb psicol. 2018;27(2):85-101. Accessed November 13, 2021. <a
+                    href="https://doi.org/10.15446/rcp.v27n2.65584">10.15446/rcp.v27n2.65584</a></li>
+            <li id="r32">Serna D, Terán C, Vanegas A, Medina O, Blandón O, Cardona D. Depresión y funcionamiento
+                familiar en
+                adolescentes de un municipio de Quindío, Colombia. Rev haban cienc méd. 2020;19(5):1-17. Accessed
+                November 13, 2021. <a
+                    href="http://www.revhabanera.sld.cu/index.php/rhab/article/view/3153">http://www.revhabanera.sld.cu/index.php/rhab/article/view/3153</a>
+            </li>
+            <li id="r33">Yusoff S, Yahya N, Yusoff Z, Ismail M, Razali N, Kamil N. Level of Family Functioning in Kuala
+                Krai Distric. International Journal of Academic Research in Business and Social Sciences.
+                2020;10(11):1254-1260.
+                Accessed November 13, 2021. <a
+                    href="https://doi.org/10.6007/IJARBSS/v10-i11/8203">https://doi.org/10.6007/IJARBSS/v10-i11/8203</a>
+            </li>
+            <li id="r34">Angley M, Divney A, Magriples U, Kershaw T. Social Support, Family Functioning and Parenting
+                Competence in Adolescent Parents. Matern Child Health J. 2017;19(1):67-73. Accessed November 13, 2021.
+                <a href="https://doi.org/10.1007/s10995-014-1496-x">https://doi.org/10.1007/s10995-014-1496-x</a></li>
+        </ol>
+
+
+
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,1269 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V19-N3-11</title>
+    <link rel="stylesheet" href="">
+    <style>
+        body {
+            padding: 10em;
+            padding-top: 20px;
+            font-family: Times New Roman;
+            color: black;
+        }
+
+        #articulo-derecha {
+            float: left;
+        }
+
+        /* Posiciones de los resumenes */
+
+        .contenedor-general {
+            display: inline-flex;
+            width: 100%;
+        }
+
+        .contenedor-resumen {
+            width: 240%;
+        }
+
+        .contenedor-autor {
+            width: 100%;
+            padding-left: 20px;
+        }
+
+        .hr-resumen {
+            background-color: gray;
+            margin: 0;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .resumen-fondo {
+            background-color: #bdd5f1;
+            border-radius: 5px;
+        }
+
+        .titulo-resumen {
+            color: black;
+            font-size: 22px;
+            font-weight: bold;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .texto-resumen {
+            padding: 20px;
+            margin: 0;
+        }
+
+        ul.navbar {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 25em;
+            left: 2em;
+            width: 250px;
+        }
+
+        /* Titulos principales */
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: Times New Roman;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        h1 {
+            color: #29abe3;
+        }
+
+        .categoria_titulo {
+            font-style: italic;
+            color: #ffffff;
+        }
+
+        h3 {
+            font-style: italic;
+            font-weight: bold;
+            color: #707073;
+        }
+
+        .categoria {
+            text-align: center;
+            background-color: #707073;
+            width: 20%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            margin: auto;
+        }
+
+        ul.navbar li {
+            background: white;
+            margin: 0.5em 0;
+            padding: 0.3em;
+        }
+
+        /* Enlaces */
+
+        a.link-color:visited {
+            color: white;
+        }
+
+        a.link-color:link {
+            color: white;
+        }
+
+        a.link-color:hover {
+            color: white;
+        }
+
+        a.link-color:hover {
+            border-bottom: 1px solid;
+            background: black;
+        }
+
+        /* Link de referencia */
+
+        a:link {
+            color: #4e00ff;
+        }
+
+        a:visited {
+            color: #003bff;
+        }
+
+        a:focus {
+            border-bottom: 1px solid;
+            background: #98aae4;
+        }
+
+        a:hover {
+            border-bottom: 1px solid;
+            background: #aacefe;
+        }
+
+        /* Etiqueta P */
+
+        p {
+            line-height: normal;
+            text-align: justify;
+            font-size: 18px;
+        }
+
+        p.titulo {
+            color: #29abe3;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        p.subtitulo {
+            color: #29abe3;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* NUEVO */
+        p.subtitulo-segundo {
+            color: #29abe3;
+            font-style: italic;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        p.correspondencia {
+            color: black;
+            font-size: 18px;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        /* NUEVO */
+        p.entrevista {
+            color: black;
+            font-size: 18px;
+            font-style: italic;
+        }
+
+        /* NUEVO */
+        p.subtitulo-tercero {
+            color: #29abe3;
+            font-style: italic;
+            font-size: 18px;
+        }
+
+        p#cabeza {
+            color: #1d71ae;
+            text-align: center;
+        }
+
+        p.autores {
+            font-size: 16px;
+            margin: 0;
+            text-indent: 0em;
+            margin-bottom: 10px;
+        }
+
+        p.forma-citar {
+            text-indent: 0em;
+            text-align: justify;
+            justify-content: center;
+        }
+
+        .cita {
+            text-align: -webkit-center;
+        }
+
+        /* Bold especial para palabras que tienen color seguido de dos puntos
+*/
+
+        /* NUEVO */
+
+        b.subtitulo-segundo {
+            color: #29abe3;
+            font-size: 18px;
+        }
+
+        .contenedor_info {
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .info {
+            width: auto;
+        }
+
+        /* Este es para los documentos del dos en adelante *codigo abajo de este comentario* */
+
+        .info-text {
+            text-align: end;
+            margin: 0;
+        }
+
+        /* Uso Exlusico para el primero documento  que es de revision  *codigo abajo de este comentario* */
+
+        .info_text {
+            font-size: 12px;
+            line-height: 100%;
+            text-align: center;
+            margin: 0;
+        }
+
+        .info_hr {
+            margin: 5;
+        }
+
+        /* Fin P */
+        /* Etiqueta Italic */
+
+        i {
+            font-size: 18px
+        }
+
+        i.centrado {
+            font-size: 18px
+        }
+
+        /* LI para las listas */
+
+        li {
+            font-size: 18px;
+            padding-top: 10px;
+            text-align: justify;
+        }
+
+        /* NUEVO */
+        .lista li {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        hr {
+            background-color: #29abe3;
+            height: 1px;
+        }
+
+        /* Tablas */
+
+        table {
+            border-collapse: collapse;
+            border: 2px solid rgb(0, 0, 0);
+            align-items: center;
+        }
+
+        thead th {
+            border-collapse: collapse;
+            background-color: rgb(179, 179, 179);
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        tbody td {
+            border-collapse: collapse;
+            text-align: center;
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        .tipo {
+            color: #ffffff;
+            font-size: 22px;
+            border-radius: 10px 5px 10px 5px;
+            background-color: #696969;
+        }
+
+        img.logos {
+            width: 15px;
+            height: 15px;
+        }
+
+        .image {
+            text-align: center;
+            image-rendering: optimizeQuality;
+        }
+
+        .image p {
+            text-align: center;
+            font-size: small;
+        }
+
+        .logo {
+            width: 300px;
+            height: 80px;
+        }
+
+        .logo2 {
+            width: 300px;
+            height: 50px;
+        }
+
+        /* Anclajes de la pagina */
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* NUEVO */
+        .ecuacion {
+            text-align: center;
+            font-weight: bold;
+            margin: 1px;
+        }
+
+        @media only screen and (min-width:320px) and (max-width:900px) {
+            body {
+                width: 100%;
+                padding: 5em;
+                margin: 5px;
+            }
+
+            .image {
+                text-align: center;
+                image-rendering: optimizeQuality;
+            }
+
+            .image img {
+                width: 100%;
+            }
+
+            .image p {
+                font-size: small;
+                text-align: center;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="contenedor_info">
+        <div>
+            <img src="img/globales/logo.jpg" alt="" height="125px">
+        </div>
+        <div class="info" style="text-align: right;">
+            <p class="info-text"> ISSN-PRINT 1794-9831 / E-ISSN 2322-7028</p>
+            <p class="info-text"> Vol. 19 Nº 3 / sep - dic, 2022 / Cúcuta, Colombia. </p>
+            <p class="info-text">
+                <img src="img/globales/doi.png" height="20px" alt="">
+                <a href="https://doi.org/10.22463/17949831.3399">https://doi.org/10.22463/17949831.3399</a>
+            </p>
+        </div>
+    </div>
+
+
+    <!--Categoría-->
+    <div class="categoria">
+        <h2 class="categoria_titulo">Original </h2>
+    </div>
+
+    <h1> Experiencia vivida, Van Manen como referente para la investigación fenomenológica delcuidado </h1>
+
+    <h2 class="segundo"> Lived experience, Van Manen as a reference for phenomenological research of care</h2>
+
+    <h2 class="segundo"> Experiência vivida, Van Manen como referência para pesquisa fenomenológica do cuidado</h2>
+
+
+    <!--Autores-->
+    <h3>
+        Raúl Fernando Guerrero-Castañeda <sup><a href="#sup1">1*</a> </sup> <br>
+        Cinthia Elizabeth González-Soto <sup><a href="#sup2">2*</a> </sup> <br>
+    </h3>
+
+
+    <!-- Conetenedor de las columnas de la descripciones de los autores, correspondencia de autor 
+    y los resumenes -->
+    <div class="contenedor-general">
+
+
+        <!-- Contenedor de los resumenes -->
+        <div class="contenedor-resumen">
+
+            <!-- Resumen Español -->
+
+            <div class="resumen-fondo">
+                <p class="titulo-resumen"> Resumen</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> La fenomenología como filosofía y cómo método de investigación cualitativa en
+                    salud y enfermería se ha posicionado como un abordaje que permite desvelar fenómenos complejos del
+                    cuidado. Los seres humanos están inmersos en diversos fenómenos del cuidado que pueden
+                    ser comprendidos a través de las experiencias vividas en diversos escenarios. El objetivo de
+                    este artículo es describir la propuesta de Van Manen sobre la experiencia vivida como un
+                    referente para la investigación fenomenológica en el cuidado de la enfermería y la salud. A
+                    través de la revisión crítica del referente de la fenomenología hermenéutica de Van Manen,
+                    se propone el abordaje de los fenómenos del cuidado a través del análisis de las experiencias
+                    vividas. Este referente metodológico puede ser una guía que efectuada de forma rigurosa
+                    provee a los enfermeros de una herramienta científica para la exploración de los fenómenos
+                    del cuidado. Las enfermeras investigadoras en fenomenología exploran cada experiencia
+                    vivida y la transforman en un texto fenomenológico que les permite desvelar fenómenos
+                    importantes para la disciplina de la enfermería. </p>
+
+                <p class="texto-resumen">
+                    <b>Palabras Claves: </b> Fenomenología; Hermenéutica; Filosofía en enfermería; Cuidado
+                </p>
+            </div>
+            <!-- Resumen Inglés -->
+
+            <div>
+                <p class="titulo-resumen"> Abstract</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> Phenomenology as a philosophy and qualitative research method in health and
+                    nursing has
+                    positioned itself as an approach that allows to uncover complex care phenomena. Human
+                    beings are immersed in diverse care phenomena that could be understood through lived experiences in
+                    diverse scenarios. The objective of this article is to describe the proposal of Van
+                    Manen on lived experience as a reference for phenomenological research of nursing care and
+                    health. Through a critical review of Van Manen’s hermeneutic phenomenology, an approach
+                    of the care phenomena is proposed through the analysis of lived experiences. This methodological
+                    reference could be a guide that if carried-out meticulously provides nurses with a
+                    scientific tool for exploration of care phenomena. Research nurses in phenomenology explore
+                    each lived experience and transform them into a phenomenological text that allows to reveal
+                    important phenomena for the nursing discipline. </p>
+
+                <p class="texto-resumen">
+                    <b>KeyWords:</b> Phenomenology; Hermeneutics; Nursing philosophy; Caring.
+                </p>
+            </div>
+            <!-- Resumen Portuguez -->
+
+            <div class="resumen-fondo">
+                <p class="titulo-resumen"> Resumo</p>
+                <hr class="hr-resumen">
+                <p class="texto-resumen"> A fenomenologia como filosofia e como método de pesquisa qualitativa em saúde
+                    e enfermagem tem se posicionado como uma abordagem que permite revelar fenômenos complexos
+                    de cuidado. Os seres humanos estão imersos em diversos fenômenos de cuidado que podem
+                    ser compreendidos através das experiências vividas em diversos cenários. O objetivo deste
+                    artigo é descrever a proposta de Van Manen sobre a experiência vivida como referência para
+                    pesquisas fenomenológicas em cuidados de enfermagem e saúde. Através da revisão crítica
+                    do referente Van Manen da fenomenologia hermenêutica, a abordagem dos fenômenos do
+                    cuidado é proposta através da análise de experiências vividas. Essa referência metodológica
+                    pode ser um guia que, realizada rigorosamente, fornece aos enfermeiros uma ferramenta
+                    científica para explorar os fenômenos do cuidado. Pesquisadores de fenomenologia de enfermagem
+                    exploram cada experiência vivida e a transformam em um texto fenomenológico que
+                    revela fenômenos importantes para a disciplina de enfermagem. </p>
+
+                <p class="texto-resumen">
+                    <b>Palavras-chave:</b> Pesquisa cualitativa; Hermenêutica; Hilosofia em enfermagem; Cuidado.
+                </p>
+            </div>
+
+
+
+        </div>
+
+        <!-- Descripcion de autores, Aprobado, Como citar, licencia -->
+        <div class="contenedor-autor">
+            <!-- Autores -->
+            <div>
+                <p class="subtitulo" style="color: black; font-size: 18px;">Autor de correspondencia*</p>
+                <!-- 1 -->
+                <p class="autores" id="sup1"><sup>1*</sup><img class="logos" src="img/globales/sobre.png"> Licenciado en
+                    Enfermería. Maestro
+                    en Educación. Doctor en Ciencias de
+                    Enfermería. Profesor Investigador del
+                    Departamento de Enfermería Clínica,
+                    Campus Celaya-Salvatierra, Universidad de Guanajuato, Celaya, México.
+                    <a href="mailto:drfernandocastaneda@hotmail.com">drfernandocastaneda@hotmail.com</a>, <img
+                        class="logos" src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0003-3996-5208">0000-0003-3996-5208</a>
+                </p>
+                <!-- 2 -->
+                <p class="autores" id="sup2"><sup>2*</sup><img class="logos" src="img/globales/sobre.png"> Licenciada en
+                    Enfermería. Maestra en
+                    Ciencias de Enfermería. Estudiante de
+                    Doctorado en Ciencias de Enfermería,
+                    Campus Celaya-Salvatierra, Universidad de Guanajuato, Celaya, México.
+                    <a href="mailto:%20ce.gonzalezsoto@ugto.mx">ce.gonzalezsoto@ugto.mx</a>, <img class="logos"
+                        src="img/globales/orcid.png"><a
+                        href="https://orcid.org/0000-0001-9720-5413">0000-0001-9720-5413</a>
+                </p>
+            </div>
+
+            <!--Recibido y aprobado-->
+            <div>
+                <p><b>Recibido: </b> 13 junio 2022 <br> <b>Aprobado: </b> 28 agosto 2022 </p>
+            </div>
+
+            <!-- Como citar -->
+            <div class="cita">
+                <p class="forma-citar autores"><b>Para citar este artículo / To reference this article / Para citar este
+                        artigo:</b> Guerrero-Castañeda RF, Gonz'ales¿zSto CE. Experiencia vivida, Van
+                    Manen como referente para la investigación fenomenológica delcuidado. 2022; 19(3):112-120 <a
+                        href="https://doi.org/10.22463/17949831.3399">https://doi.org/10.22463/17949831.3399</a>
+                </p>
+            </div>
+
+            <!--Licencia-->
+            <br>
+            <div>
+                <p class="autores "> &#169; Universidad Francisco de Paula Santander.
+                    Este es un artículo bajo la licencia CC-BY-NC-ND
+                    <br>
+                    <a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img
+                            alt="Licencia Creative Commons" style="border-width:0"
+                            src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Cuerpo del documento -->
+    <div>
+        <hr>
+        <!--Introducción-->
+        <p class="titulo"> Introducción</p>
+
+        <p>
+            Abordar el tema de la fenomenología despierta una
+            serie de inquietudes en los investigadores enfermeros
+            naturalistas; estas inquietudes se suelen tornar más asiduas, ya que la fenomenología debate en gran medida
+            los métodos de investigación tradicional. Para los investigadores más noveles es una experiencia por lograr
+            el objetivo mismo de la fenomenología, la comprensión de ésta como un referente filosófico y metodológico
+            que les permita acercarse a diversos fenómenos del
+            cuidado de la enfermería (1), considerándola como la
+            experiencia de la salud humana y las relaciones entre
+            persona cuidada y persona que cuida.
+        </p>
+
+        <p>
+            Conviene subrayar que el cuidado es un término bastante complejo, puesto que la variedad de sus significados
+            corresponde a muchas interpretaciones, en el marco de
+            la fenomenología. La evolución del concepto de cuidar
+            como el acto fundamental y fáctico de la enfermería ha
+            surgido gracias a la investigación.
+        </p>
+
+        <p>
+            Los fenómenos que confluyen en el acto de cuidar en
+            la enfermería pueden ser abordados desde diferentes
+            métodos; es decir, que la complejidad del ser humano
+            exige la revisión sobre los aportes de los grandes fenomenólogos como Husserl, Heidegger, Merleau-Ponty,
+            Gadamer, entre otros (2). Es por eso, que los diversos
+            abordajes sobre el fenómeno disciplinar de la enfermería como es el cuidado se constituye en el objetivo
+            fundamental para comprenderlo e interpretarlo, acciones
+            que son causantes de conflicto entre los investigadores.
+        </p>
+
+        <p>
+            Precisamente, el pensar y abordar diversos actos en el
+            cuidado han hecho que se comprenda que la esencia de
+            la enfermería es el acto de cuidar (3). Este comprender
+            la esencia del cuidado es interesante para la fenomenología.
+        </p>
+
+        <p>
+            Es necesario recalcar que el cuidado es un encuentro
+            con el otro; de ahí, que la enfermera centre su acción
+            en un acto que requiere: conocimiento, destreza y habilidad, pero también de sensibilidad para hacer frente
+            a diversas situaciones de cuidado. Las personas que reciben cuidados en su cotidianidad viven experiencias
+            que marcan su vida, por esta razón, tanto las personas
+            cuidadas y las enfermeras como cuidadoras, vivencian
+            y experimentan el mundo, como parte de ese convivir
+            mutuo y de cuidado.
+        </p>
+
+        <p>
+            Cuando la enfermera cuida, la persona cuidada tiene un
+            efecto, vive la experiencia resultante de ese momento
+            que marca su existencia, de ahí que se pueda hablar de
+            experiencia vivida en un momento determinado. Al respecto, Watson habla de un momento de cuidado, como
+            un encuentro fenomenológico, un encuentro único que
+            tiene un efecto de sanación (4).
+        </p>
+
+        <p>
+            En ese encuentro, el cuidado se vuelve único para los
+            participantes que lo experimentan viviéndolo desde su
+            propia historia; por tanto, la comprensión del significado de esta experiencia vivida es única para cada
+            uno.
+        </p>
+
+        <p>
+            El significado surge de la intencionalidad del cuidado
+            en ese momento, de su estructuración en la conciencia
+            de ambos participantes, de su forma de ver y percibir
+            el mundo de la vida, del cual son partícipes (5). Desde
+            este punto de vista, ese significado es la esencia de ese
+            momento de cuidar, que involucra no sólo el acto en sí
+            de la enfermera, sino el significado de diversas experiencias vividas en torno no sólo a ese momento sino a
+            la vida misma de la persona que es cuidada.
+        </p>
+
+        <p>
+            De donde se infiere que la fenomenología busca acceder a esa conciencia y rescata esa esencia de las
+            experiencias vividas por una persona en su vida cotidiana.
+            En consecuencia, la razón de la fenomenología es comprender cada experiencia vivida; de ahí, que el método
+            fenomenológico requiera de una mayor complejidad al
+            examinar un fenómeno que puede ser abordado e interpretado en la vida cotidiana tal como se presenta (6).
+        </p>
+
+        Por su parte, Max Van Manen aborda la fenomenología
+        hermenéutica desde las experiencias vividas (6), por lo
+        que resulta un referente metodológico que puede ayudar a los investigadores enfermeros a explorar diversos
+        fenómenos en torno al cuidado de la enfermería y
+        que puedan interpretar su esencia con el rigor que la
+        fenomenología exige, dando sentido a fenómenos que
+        resultan complejos a la luz de la investigación cuantitativa. Por esta razón, el objetivo de este artículo es
+        reflexionar sobre la propuesta de Van Manen sobre la
+        experiencia vivida como un referente para la investigación fenomenológica en el cuidado de la enfermería.
+
+        <hr>
+
+        <p class="titulo">Desarrollo</p>
+
+        <p>
+            Se partió de la interrogante ¿Cuáles son los aportes de
+            la propuesta de Van Manen sobre la experiencia vivida
+            como un referente para la investigación en enfermería?,
+            a partir de ello se realizó el presente estudio teórico reflexivo elaborado a través de la revisión de la
+            literatura
+            de Max Van Manen y algunos artículos sobre fenomenología hermenéutica y cuidado. El autor elabora un
+            análisis crítico de la literatura revisada destacando el
+            referente de la “experiencia vivida” como camino metodológico en fenomenología para la investigación de
+            la enfermería. La revisión de la literatura se orientó en
+            la búsqueda de artículos de reflexión, revisión o empíricos que retomaran el referente filosófico en
+            cuestión,
+            publicados a partir del 2015. Finalmente de los 336 resultados que se obtuvieron se seleccionaron 20
+            artículos, después de su lectura completa.
+        </p>
+
+        <p class="subtitulo-segundo">La experiencia vivida</p>
+
+        <p>
+            Max van Manen ha desarrollado una serie de discusiones en torno a la fenomenología y pedagogía. Si bien,
+            su estudio se ha centrado en la educación, es interesante abordar diversos conceptos propuestos por el autor
+            que pueden ser orientadores en la investigación fenomenológica de la enfermería. En su trabajo titulado:
+            “Phenomenology of practice” (6) elabora una serie de
+            discusiones sobre la investigación fenomenológica en
+            ciencias de la salud.
+        </p>
+
+        <p>
+            En este contexto, el término experiencia vivida alude a
+            la experiencia humana. Por consiguiente, la investigación fenomenológica en general, aborda las experiencias
+            humanas en su esencia. La forma en cómo el ser
+            humano conecta con el mundo y donde se vuelve uno
+            sólo, corresponde a la forma en que lo experimenta y
+            por tanto, crea una estructura de significados que puede
+            enriquecerse. Van Manen cita a Dilthey quien afirma
+            que “la experiencia vivida como una conciencia reflexiva o auto dada, es inherente a la temporalidad de la
+            conciencia de la vida como la vivimos” (6).
+        </p>
+
+        <p>
+            Es decir que la razón de vivir en el mundo otorga un
+            significado en torno a una experiencia de vivir en el
+            mundo desde la percepción de los sentidos y su razón
+            de ser, es decir, su esencia. La experiencia vivida es la
+            forma de aprehender del mundo. Por ende, las experiencias son vividas en tanto que crean en la conciencia
+            una intencionalidad, una forma de comprensión de sí
+            mismo y del mundo que rodea al ser humano.
+        </p>
+
+        <p>
+            Es por eso, que la vivencia del mundo es una interacción que dota de un significado al ser humano que la
+            vive; por esta razón, hablar de experiencia vivida no es
+            hablar de una sola forma de cómo se percibe el mundo,
+            sino como el ser humano lo ha comprendido y cómo
+            interpreta los diversos escenarios de su mundo.
+        </p>
+
+        <p>
+            Se debe precisar que la controversia con el método fenomenológico en cuanto se refiere a la comprensión la
+            experiencia vivida es la complejidad del verbo comprender. ¿Cómo el investigador fenomenológico puede
+            comprender una experiencia vivida por el otro? ¿Será
+            posible comprender el significado o esencia de un fenómeno experimentado por otro sin interferir la
+            subjetividad del investigador?
+        </p>
+
+        <p>
+            En este sentido, una experiencia vivida puede ser comprendida a través del lenguaje, puesto que el lenguaje
+            es el vehículo por el cual la experiencia vivida se manifiesta (7). Esto es, que todo el cúmulo de palabras
+            es un conjunto de mensajes que el investigador debe
+            identificar, que no será una tarea inalcanzable, puesto
+            que el ser humano transforma la experiencia vivida
+            y la expresa a través del lenguaje. La fenomenología
+            en sus posteriores propuestas expone un fenómeno que
+            puede ser manifestado por una persona que lo ha experimentado. De donde se concluye, que la
+            intersubjetividad es un punto de conexión entre el investigador y la
+            persona, dando origen a un significado que es posible
+            desvelar, en tanto que la experiencia vivida momento a
+            momento y la reflexión responde a la interrogante sobre el fenómeno vivido y el lenguaje es el vehículo que
+            enuncia la conciencia del ser.
+        </p>
+
+        <p>
+            Van Manen cita que “para el investigador es importante
+            darse cuenta de que la experiencia, tal como la vivimos
+            momento a momento, es siempre más compleja, más
+            matizada, más rica en capas que podemos comprender,
+            y los significados que surgen de reflexionar sobre la experiencia vivida son siempre ambiguos, enigmáticos,
+            y
+            en definitiva insondable” (6).
+        </p>
+
+        <p>
+            Por tanto, la riqueza del método fenomenológico es la
+            comprensión de un fenómeno vivido, relacionando lo
+            que una persona ha vivido con lo universal y continuo
+            del mundo; razón por la cual la fenomenología no demuestra, no explica, no intenta evidenciar. La
+            fenomenología busca comprender, acción que se expresa en
+            un texto. La esencia de toda experiencia vivida no es
+            una forma oculta de un fenómeno vivido, Van Manen
+            alude que “la investigación fenomenológica no se diferencia de una tarea artística; es un intento creativo,
+            de
+            algún modo, de capturar un determinado fenómeno de
+            la vida en una descripción lingüística que a la vez sea
+            holística y analítica, evocativa y precisa, única y universal, potente y sensible” (6).
+        </p>
+
+        <p>
+            De ahí que las formas de cotidianidad del ser humano
+            se visualizan en diversas vivencias a las que otorga un
+            significado; por tal razón, la experiencia vivida es una
+            forma de la cual se vale la fenomenología para interrogar sobre una forma de estar en el mundo. Esta
+            experiencia vivida se caracteriza por su facticidad, es decir,
+            la intencionalidad de la persona por rescatar la esencia
+            de lo vivido.
+        </p>
+
+        <p>
+            Por eso, las preguntas fenomenológicas no aluden a
+            problemas, puesto que la fenomenología no busca resolver problemas, sino que surge de la experiencia,
+            colocando en sintonía a quien lo ha vivido. La fenomenología busca la esencia de esa experiencia vivida, no
+            está afianzada en prejuicios, puesto que busca la forma
+            como la persona lo ha vivido y lo reflexiona conscientemente, dando significado a esa experiencia vivida,
+            razón por la cual a la luz de la fenomenología no se
+            puede generalizar (8). La expresión de las experiencias
+            vividas son una clave para el investigador, aún cuando
+            se mencione que es una investigación fenomenológica
+            descriptiva, puesto que es necesario recuperar la esencia de esas experiencias vividas.
+        </p>
+
+        <p>
+            Por otro lado, Van Manen expresa que la descripción
+            fenomenológica tiene como base dos tipos: la descripción de la cualidad vivida de la experiencia vivida y
+            la descripción del significado de cómo se expresa esa
+            experiencia vivida (6,9).
+        </p>
+
+        <p>
+            El primer sentido es un detalle de la forma más superficial de la experiencia vivida: qué, cómo, cuándo,
+            dónde, quién; los detalles del ambiente en su expresión más
+            nítida. De igual forma, la descripción del significado es
+            el tono simbólico aludido por el lenguaje, respondiendo a la esencia del fenómeno, manifestado de forma
+            mediana y vaga como señala Heidegger (10).
+        </p>
+
+        <p>
+            Hay que indicar que la interpretación corresponde a
+            la hermenéutica, por esta razón se habla en algunas
+            ocasiones de fenomenología hermenéutica. La hermenéutica señala la interpretación de un fenómeno, si se
+            retoma el concepto del significado, entonces, cabría
+            también mencionar que lo que el investigador interpreta como significado es la ya interpretación de la
+            persona que ha vivido la experiencia (11).
+        </p>
+
+        <p>
+            Las experiencias vividas son propias de las personas
+            que las viven, el modo en cómo ocurren y cómo se
+            significan es el modo esencial de su razón de ser. El
+            investigador es parte del mundo, es uno con la persona de quien rescata la experiencia. Del mismo modo,
+            debe tener en cuenta que la fenomenología se centra en
+            el fenómeno sin prejuicios o suposiciones, indaga en
+            la experiencia tal como es vivida, no cómo la conceptualice (la operacionalización de un concepto limita su
+            comprensión); en consecuencia debe reflexionar en la
+            esencia de esa experiencia vivida, escribir y reescribir el fenómeno (12). El mapeo de las unidades de
+            significado convergentes y la estructuración del fenómeno
+            vivido son el objetivo de su comprensión e interpretación.
+        </p>
+
+        <p>
+            Se han propuesto algunos momentos o fases para llevar a cabo el método fenomenológico; al respecto Van
+            Manen expresa que un investigador fenomenólogo es
+            un teórico. El investigador enfermero que busca ahondar en las experiencias vividas y fundamentarse en el
+            método fenomenológico debe ser ante todo un teórico,
+            ser sensible y dinámico y tener interés por los aspectos
+            más sublimes del ser humano. El investigador debe ser
+            como menciona Van Manen “un observador sensible
+            de las sutilezas de la vida cotidiana y a la vez un lector ávido de textos significativos de la tradición de
+            las
+            ciencias humanas, de las humanidades, la historia, la
+            filosofía, la antropología y las ciencias sociales en tanto
+            en cuanto pertenezcan a su ámbito de interés” (6).
+        </p>
+
+        <p>
+            Desde esta perspectiva el método de Van Manen está
+            señalado como una teorización fenomenológica, un
+            conjunto de guías y recomendaciones, más que pasos
+            que limitarían el contacto con la persona que ha vivido el fenómeno. El investigador da voz a esa persona
+            que ha tenido una experiencia vivida y cómo la vivió
+            (13) con sus respectivas características. Por tal razón,
+            el investigador debe ser sensible y tener una capacidad
+            de reflexión e interpretación que le permita rescatar la
+            subjetividad del fenómeno estudiado.
+        </p>
+
+        <p>
+            El método de análisis de forma operativa de la experiencia vivida propuesto por Van Manen (9) incluye tres
+            momentos que componen una estructura circular, pues
+            no terminan con el tercero, pues se está en un constante
+            reflexionar sobre la experiencia vivida.
+        </p>
+
+        <p>
+            <b>Primer momento: </b>Recoger la experiencia vivida. Hace
+            referencia a recolectar toda la información sobre la experiencia tal como es vivida, aunque se pueden
+            agregar
+            fuentes (libros o artículos), contribuyendo a la contextualización del fenómeno estudiado. La fuente
+            principal
+            de la experiencia vivida es la entrevista fenomenológica (14). La entrevista fenomenológica se inicia con
+            una
+            pregunta detonadora que ayudará a avivar la experiencia vivida por y en el sujeto, en donde se recoge toda
+            la
+            información. Además permite escuchar una y otra vez
+            la entrevista, poner atención a los elementos lingüísticos utilizados y transcribir fielmente cada detalle,
+            para
+            posteriormente codificar el material (Jefferson).
+        </p>
+
+        <p>
+            <b>Segundo momento: </b>Reflexionar acerca de la experiencia vivida. Se visualiza la experiencia vivida de
+            forma global, se discute y se reflexiona sobre ella una y
+            otra vez, identificando los temas generales o frases que
+            sean motivo de significado (15). Se estructura en dos
+            niveles: una reflexión macrotemática o significado fundamental y una reflexión microtemática que incluye la
+            selección de frases o unidades de significado, es decir,
+            frases que permitan desvelar el significado de la experiencia vivida. Ambos niveles deben ser fuentes de
+            reflexión en torno a la esencia de la experiencia vivida.
+            En una investigación es fundamental la lectura detallada de los elementos transcritos, seleccionando las
+            frases que corresponden a la esencia misma del fenómeno.
+        </p>
+
+        <p>
+            <b>Tercer momento: </b>Descripción-reflexión de la experiencia vivida. El investigador deberá realizar una
+            descripción reflexiva de la experiencia vivida, dar sentido
+            a la experiencia, precisar el fenómeno en sus unidades
+            de significado y mostrarlo en su sentido más profundo. Esta fase operativamente señala la convergencia
+            de unidades de significado que sirvan para identificar
+            temas o unidades de significado mayor; además, señala
+            no sólo su descripción en orden de aparición sino su
+            relación de tal forma que permita interpretar el fenómeno mostrando su sentido. Los investigadores se pueden
+            ayudar mediante la elaboración de mapas conceptuales
+            en donde se visualice la relación entre unidades de significado mayor o temas.
+        </p>
+
+        <p class="subtitulo-segundo">El fenómeno del cuidado como experiencia vivida</p>
+
+        <p>
+            El cuidado es un término complejo, aún visto a través
+            de todas las teorías y enfoques filosóficos propuestos.
+            El cuidado es una acción intencionada cuyo fin es promover la vida, dignificar a la persona cuidada,
+            enaltecer los más altos valores humanos; por tanto, va más
+            allá del sólo ayudar en la recuperación de la salud, sino
+            que se constituye en el eje central (4). La sanación no
+            es sólo curar el cuerpo, además, exalta la naturaleza humana en diversas situaciones de vida y salud, da
+            fortaleza al espíritu y ahonda en la esencia de las relaciones
+            transpersonales. La trascendencia de la enfermería está
+            en que el cuidado logre hacer de la persona cuidada un
+            ser humano iluminado, y de la enfermera un ser que
+            a través de la acción de cuidar enaltezca el sentido de
+            humanidad de cada persona, en diversas situaciones.
+        </p>
+
+        <p>
+            El cuidado es un acto poético. Estudiosos del tema
+            afirman que el objeto sujeto de la enfermera donde se descubre la esencia del cuidado es “el ser humano, la
+            persona como núcleo, como materia prima con la que
+            trabaja la enfermera para "producir su obra"(16). Mediante una visión fenomenológica se aborda el cuidado
+            en diferentes experiencias vividas tanto por las personas cuidadas como por la enfermera, en donde se pueden
+            llegar a comprender diversos fenómenos (17), muchos de los cuales solamente han sido explorados por
+            enfoques reduccionistas.
+        </p>
+
+        <p>
+            Hay que mencionar además, que la enfermera puede
+            comprender estos fenómenos y trascender el fenómeno
+            del cuidado, haciéndolo más palpable y coadyuvando a
+            una enfermería cuyo centro de interés sean las diversas
+            experiencias vividas, no para generalizarlas y generar
+            pautas de seguimiento, sino para comprender la complejidad del mundo de cuidado, atender a las respuestas
+            humanas del otro y lograr la suma dignificación de la
+            persona cuidada.
+        </p>
+
+        <p>
+            Se puede agregar que las experiencias vividas por las
+            personas en relación al cuidado son únicas e irrepetibles y su significado es una interpretación del ser en
+            el
+            mundo vivido. Desde este punto de vista, dicho mundo puede comprenderse a través de los cuatro existenciales
+            fenomenológicos: el primero concebido como
+            el cuerpo vivido (corporalidad), el cual se basa en la
+            conciencia del cuerpo en el mundo, su relación con las
+            experiencias y la percepción; el segundo, se refiere al
+            espacio vivido (espacialidad), entendido como la dimensión en donde existe la relación con la experiencia,
+            por tanto es subjetivo; el tercero relacionado con
+            el tiempo vivido (temporalidad) que hace alusión a la
+            condición del significado a partir del momento en que
+            se reflexiona sobre la experiencia vivida; y, el cuarto
+            son las relaciones vividas (relacionalidad), que alude
+            a la interacción intersubjetiva del sujeto, la interacción que transforma y concibe el intercambio de
+            significados (6). No obstante, la reflexión continua de las
+            experiencias vividas del cuidado a través del método
+            fenomenológico puede resultar en una experiencia profunda, capaz de desentrañar aquello que las palabras
+            puedan expresar y que está en la conciencia de las personas. Por tanto, la enfermería requiere de la
+            sensibilidad fenomenológica, pues el cuidado es dinámico y el
+            método fenomenológico es necesario para comprender
+            las diversas situaciones de cuidado en las experiencias
+            vividas. Además, requiere de un interés filosófico que
+            ayude a comprender esas experiencias, a través de las
+            cuales se puede entender la esencia del cuidado desde diversos ángulos.
+        </p>
+
+        <p>
+            Al mismo tiempo, las experiencias comunicadas en
+            el lenguaje ahondan en el ser en su forma existencial
+            de ver el mundo (13). De ahí, que la enfermera pueda
+            reinventar el mundo del cuidado y fortalecer el cuerpo
+            de conocimientos disciplinar, coadyuvando a su desarrollo humanístico y estético. Es por eso que se debe
+            investigar sobre métodos que permitan acceder a diversos fenómenos. Es decir, que el enfermero investigador
+            en fenomenología aborda diversos fenómenos del cuidado como un acto que permite el cuidar, preservar la
+            vida, velar por el otro y procurar al otro, en un sentido
+            existencialista” (18).
+        </p>
+
+        <p>
+            De igual modo, el cuidado se vive en la cotidianidad
+            de la enfermera, lo que significa que los actos de cuidar los diversos fenómenos de la persona sobrepasan
+            la técnica y la destreza manual. Por sí sólo, el cuidado
+            en la enfermería se sostiene, pero es necesario indagar
+            sobre sus expresiones que se dan en las experiencias
+            vividas de las personas; en consecuencia este encuentro fenomenológico con el otro se manifiesta a través
+            de emociones y palabras. De manera análoga, queda
+            plasmado en la conciencia de quien participa de él y
+            el método fenomenológico da voz a esas experiencias
+            y las transforma en la representación interpretativa de
+            su esencia.
+        </p>
+
+        <p>
+            La articulación del lenguaje interpretativo por sí sólo
+            ya existe y es capaz de revolucionar la ciencia del cuidado de la enfermería a través de sus expresiones.
+            Fuster señala que ese lenguaje plasmado en texto fenomenológico debe “procurar llevar al lector a
+            experimentar
+            una forma de “epifanía” del significado” (13). Esto
+            significa que la enfermera que observe el fenómeno estudiado del cuidado debe estar motivada desde su
+            interior, evocar la más sublime transformación de su forma
+            de percibir el cuidado, de comprenderlo; igualmente,
+            mueve su sentido de ver el cuidado desde su práctica,
+            transformándolo en una experiencia vivida a través de
+            la interpretación que da al texto.
+        </p>
+
+        <p>
+            Lo más importante, es precisar que para cada persona el
+            cuidado tiene un significado; por tal razón, cada experiencia vivida es almacenada en la conciencia y cuando
+            es recordada por medio de la pregunta fenomenológica,
+            se estimularán los más recónditos detalles dando origen
+            a un discurso que ahonde en esa experiencia vivida, estructurando el fenómeno como lo interpreta desde sí.
+        </p>
+
+        <p>
+            En efecto, esta descripción de la experiencia vivida
+            conlleva a la intencionalidad, a la forma de interpretar
+            el lenguaje por parte de la persona respecto a su experiencia vivida. Es importante resaltar que la noesis
+            es
+            un acto reflexivo de la experiencia vivida y el noema
+            corresponde al encuentro con la unidad de significado
+            de la vivencia, es decir, el objeto pensado (19). El cuidado desde esta perspectiva se vuelve un acto
+            intencionado, tanto al ser ejecutado por la enfermera como
+            por el significado que la persona da a cada experiencia
+            vivida.
+        </p>
+
+        <p>
+            El cuidado no se limita a la relación entre la enfermera
+            y la persona cuidada, puesto que el ser humano cuida
+            de sí; por eso, la interrelación con el cuidado se da en
+            la medida en que el fenómeno vivido representa una
+            forma de comprensión del mundo en el que se preserva
+            la vida. Por otro lado, el cuidado es un encuentro entre
+            la enfermera y la persona cuidada en un determinado
+            momento, un encuentro también fáctico de la vida, una
+            razón de estar ahí para el otro y con el otro. En este
+            contexto, la enfermera es un ser humano absorto con
+            el otro en un momento que trasciende el espacio y el
+            tiempo vivido y se transforma en una experiencia vivida que puede fortalecer la comprensión de situaciones
+            de cuidado
+        </p>
+
+        <p>
+            Visto de esta manera el interés del fenómeno a estudiar debe tener una delimitación clara del mismo; si el
+            objeto de la fenomenología es estudiar la experiencia
+            vivida, atenderá a la interrogante de la investigación
+            fenomenológica. Van Manen señala que la pregunta
+            clave de la cual nacen todas las preguntas fenomenológicas es: “¿Cuál es la naturaleza de esta experiencia
+            vivida?” (9). La interrogante fenomenológica de estudio está motivada por la vida profesional, la
+            disciplinar y la vida personal de la enfermera investigadora,
+            cuyo objetivo será estructurar el fenómeno por el cual
+            se pregunta, determinando una forma de comprensión
+            que le permita desvelar el significado del cuidado, no
+            para determinarlo o cerrarlo, sino para abrirlo a nuevas
+            posibilidades de interpretación.
+        </p>
+
+        <p>
+            Hay que aclarar que es diferente la manera en que una
+            persona experimenta un proceso de enfermedad, un tratamiento, una relación de enseñanza y promoción de
+            salud, la relación con el personal de enfermería que le
+            cuida, una madre que está separada de su hijo hospitalizado en una terapia intensiva neonatal, del hijo que
+            tiene a su padre en cuidados intensivos y el vivir cotidiano del cuidador del adulto mayor que lleva más de
+            un
+            mes hospitalizado. En años recientes, Van Manen se ha
+            tomado como referente para diversos estudios desarrollados desde la enfermería, especialmente para los que
+            hacen referencia a las experiencias vividas en docencia
+            y cuidado a personas hospitalizadas y sus familias (20-
+            22). Estos estudios dan cuenta sobre la utilidad del referente filosófico y del método en diversos momentos
+            del
+            cuidado que necesitan ser abordados fenomenológicamente. Aunque existen otros referentes metodológicos
+            en fenomenología, con la propuesta de Van Manen se
+            reflexiona sobre el conocimiento científico respetando
+            la naturaleza de los fenómenos en sí mismos a través
+            de una forma operativa accesible al mundo del análisis de la experiencia vivida. Estas formas de vivir los
+            fenómenos relacionados con el cuidado son el foco de
+            estudio de la fenomenología a través de la experiencia
+            vivida. Fenómenos aún más complejos como la muerte,
+            el significado de morir con dignidad, las experiencias
+            de enfermeras que brindan cuidados paliativos (23) son
+            fenómenos que subliman el acto de cuidar.
+        </p>
+
+        <p>
+            En consecuencia, las enfermeras deben interesarse por
+            el estudio filosófico que permita comprender los principios básicos de la fenomenología como filosofía y
+            método, que aunque parezca sencilla la exploración
+            de las experiencias vividas, hace falta que se provea
+            de estudios con rigor científico que sustenten el enfoque cualitativo fenomenológico (24). En definitiva,
+            las
+            enfermeras motivadas por el estudio fenomenológico
+            pueden profundizar respecto a la valorización de las
+            experiencias vividas y generar una práctica de enfermería renovadora (25).
+        </p>
+
+        <p>
+            No se debe olvidar que la expresión cuidado proviene
+            de cogitatus del participio cogitare, cuyo significado es
+            pensar, reflexionar (26). Son dos características invaluables presentes en el método propuesto por Van
+            Manen, el reflexionar en la experiencia vivida.
+        </p>
+
+        <p>
+            De donde se infiere que el referente fenomenológico
+            de Van Manen es una guía que se puede ejecutar de
+            forma correcta y rigurosa permitiéndole a la enfermera
+            explorar adecuadamente los fenómenos relevantes de
+            su disciplina. Por tanto, la reflexibilidad, la rigurosidad
+            y la innovación metodológica bien detallada, pueden
+            generar formas de ver el cuidado desde la experiencia
+            de quien la vive. De manera semejante, los diversos
+            fenómenos que rodean al cuidado son factibles de ser estudiados por este método y de proporcionar al cuerpo
+            disciplinar conocimientos, que a través de la comprensión de los significados de las experiencias vividas,
+            puedan dar respuesta a diversas interrogantes existenciales de la práctica de la enfermería.
+        </p>
+
+        <!-- conclusiones -->
+
+        <hr>
+
+        <p class="titulo">Conclusiones</p>
+
+        <p>
+            La enfermera se ve inmersa en diversos momentos de
+            cuidado que pueden ser abordados desde la investigación fenomenológica; es decir, que la complejidad de
+            estos momentos puede ser comprendida e interpretada
+            a través de las experiencias vividas del cuidado. Enfermeras y personas cuidadas son protagonistas de los
+            diversos fenómenos del cuidar; por consiguiente, su
+            comprensión puede mejorar la práctica de la enfermería, haciendo de ella una disciplina sensible al acto de
+            cuidado.
+        </p>
+
+        <p>
+            Las experiencias vividas emergen en su esencia a través del lenguaje, que es la clave para su comprensión.
+            Reflexionar sobre la naturaleza de las experiencias de
+            cuidado es el principal argumento del método fenomenológico. La enfermera investigadora debe ser capaz
+            de sustentar un proyecto de investigación de forma rigurosa y transformar la experiencia vivida en un texto
+            fenomenológico interpretativo del cuidado.
+        </p>
+
+        <p class="subtitulo">Conflircto de intereses</p>
+
+        <p>
+            Los autores declaran no tener ningún conflicto de intereses.
+        </p>
+
+
+
+        <!-- Referencias -->
+
+        <hr>
+
+        <p class="titulo"> Referencias Bibliográficas </p>
+
+        <ol class="lista">
+            <li id="r1">Rodriguez A, Smith J. Phenomenology as a healthcare research method. Evid Based Nurs.
+                2018;21(4):96–8.
+                <a href="https://doi.org/10.1136/eb-2018-102990">https://doi.org/10.1136/eb-2018-102990</a>
+            </li>
+            <li id="r2">Expósito-Concepción MY, Villarreal-Cantillo E, Palmet-Jiménez MM, Borja-González JB,
+                Segura-Barrios
+                IM, Sánchez-Arzuza FE. Phenomenology as a Methods for Studying Humanized Care. Rev Cubana Enferm
+                [Internet]. 2019 [citado 24 Mar 2022]; 35(1). Available from: <a
+                    href="http://www.revenfermeria.sld.cu/index.php/enf/article/view/2333">http://www.revenfermeria.sld.cu/index.php/enf/article/view/2333</a>
+            </li>
+            <li id="r3">Damsgaard JB. Phenomenology and hermeneutics as a basis for sensitivity within health care. Nurs
+                Philos.
+                2020;22(1):e12338. <a href="https://doi.org/10.1111/nup.12338">https://doi.org/10.1111/nup.12338</a>
+            </li>
+            <li id="r4">Watson J. Human caring science. A theory of Nursing. Boston: Jones and Bartlett; 2011.</li>
+            <li id="r5">Christensen M, Welch A, Barr J. Husserlian Descriptive Phenomenology: A review of
+                intentionality, reduction
+                and the natural attitude. J Nurs Educ Pract. 2017;7(8):113–8. <a
+                    href="https://doi.org/10.5430/jnep.v7n8p113">https://doi.org/10.5430/jnep.v7n8p113</a></li>
+            <li id="r6">Van Manen M. Phenomenology of practice. New York: Routledge; 2014. <a
+                    href="https://doi.org/10.1111/nin.12259">https://doi.org/10.1111/nin.12259</a></li>
+            <li id="r7">Heidegger M. Sobre a essência da lingaguem. Petrópolis, RJ: Vozes; 2015.
+            </li>
+            <li id="r8">Abalo F. La indicación formal como punto de partida de la investigación fenomenología.
+                Trans/Form/Ação.
+                2017;40(4):67–88. <a
+                    href="https://doi.org/10.1590/s0101-31732017000400005">https://doi.org/10.1590/s0101-31732017000400005</a>
+            </li>
+            <li id="r9">Van Manen M. Investigación educativa y experiencia vivida. Ciencia humana para una pedagogía de
+                la acción
+                y de la sensibilidad. Barcelona: Idea Books; 2003.</li>
+            <li id="r10">Heidegger M. El ser y el tiempo. México: Fondo de Cultura Económica; 2015.</li>
+            <li id="r11">Schmidt LK. Hermenêutica. Petrópolis: Vozes; 2014.</li>
+            <li id="r12">Ayala R. Formación de investigadores de las ciencias sociales y humanas en el enfoque
+                fenomenológico
+                hermenéutico (de Van Manen) en el contexto hispanoamericano. Educ XX1. [Internet]. 2016 [citado 24 Mar
+                2022];19(2):359–81. Disponible en: <a
+                    href="http://revistas.uned.es/index.php/educacionXX1/article/view/16471">http://revistas.uned.es/index.php/educacionXX1/article/view/16471</a>
+            </li>
+            <li id="r13">Fuster D. Investigación cualitativa: Método fenomenológico hermenéutico. Propós. represent.
+                2019;7(1):201–
+                229. <a
+                    href="http://dx.doi.org/10.20511/pyr2019.v7n1.267">http://dx.doi.org/10.20511/pyr2019.v7n1.267</a>
+            </li>
+            <li id="r14">Guerrero-Castañeda RF, Menezes TM de O, Ojeda-Vargas MG. Características de la entrevista
+                fenomenológica en investigación en enfermería. Rev Gaúcha Enferm. 2017;38(2): e67458. <a
+                    href="http://dx.doi.org/10.1590/1983-1447.2017.02.67458">http://dx.doi.org/10.1590/1983-1447.2017.02.67458</a>
+            </li>
+            <li id="r15">Errasti-Ibarrondo B, Jordán JA, Díez-Del-Corral MP, Arantzamendi M. Conducting phenomenological
+                research: Rationalizing the methods and rigour of the phenomenology of practice. J Adv Nurs. 2018 Jul
+                1;74(7):1723–34. <a href="https://doi.org/10.1111/jan.13569">https://doi.org/10.1111/jan.13569</a></li>
+            <li id="r16">Siles-González J, Solano-Ruiz MC. Pensamiento crítico, autoevaluación y estética en la práctica
+                clínica de
+                enfermería: una aportación desde la antropología educativa. Barcelona: Octaedro; 2019.</li>
+            <li id="r17">Ramírez C. Fenomenología hermenéutica y sus implicaciones en enfermería. Index Enferm.
+                [Internet]. 2016
+                [citado 24 Mar 2022];25(1–2):82–85. Disponible en: <a
+                    href="http://scielo.isciii.es/scielo.php?script=sci_abstract&pid=S1132-12962016000100019">http://scielo.isciii.es/scielo.php?script=sci_abstract&pid=S1132-12962016000100019</a>
+            </li>
+            <li id="r18">. Rodríguez-Jiménez S, Cárdenas-Jiménez M, Pacheco-Arce AL, Ramírez-Pérez M. Una mirada
+                fenomenológica del cuidado de enfermería. Enfermería Univ. [Internet]. 2014 [citado Mar
+                2022];11(4):145–53. Disponible en: <a
+                    href="http://www.scielo.org.mx/scielo.php?pid=S166570632014000400005&script=sci_abstract&tlng=es">http://www.scielo.org.mx/scielo.php?pid=S166570632014000400005&script=sci_abstract&tlng=es</a>
+            </li>
+            <li id="r19">. Glazel LP. Normative Experience: Deontic Noema and Deontic Noesis. Phenomenology and Mind.
+                2017;(13):96–107. <a
+                    href="https://doi.org/10.13128/Phe_Mi-22432">https://doi.org/10.13128/Phe_Mi-22432</a></li>
+            <li id="r20">. Rocha-Lara EA, Pineda-Olvera J, Lara-Barrón AM, Godínez-Rodríguez MA. Experiencias docentes
+                en el
+                cambio curricular vivido en la carrera de enfermería de la FES, Iztacala. Rev. enferm. Neurol
+                [Internet].
+                2021 [citado 26 Sep 2022];20(2):139-148. Disponible en: <a
+                    href="https://pesquisa.bvsalud.org/portal/resource/pt/biblio-1368377">https://pesquisa.bvsalud.org/portal/resource/pt/biblio-1368377</a>
+            </li>
+            <li id="r21">Ramírez-Perdomo CA, Quintero-Reina CD, Cuellar-Osorio ZF, López-Murcia MI, Heredia-Conde MO,
+                Pulido-Vaca MC, Suarez-Medina MJ. Experiencias de cuidado de padres y profesionales de enfermería en
+                la Unidad de Cuidados intensivos neonatal. Rev Cult del Cuidado Enferm [Internet]. 2020 [citado 26 Sep
+                2022];17(2):2665-1262. Disponible en: <a
+                    href="https://pesquisa.bvsalud.org/portal/resource/pt/biblio-1247922">https://pesquisa.bvsalud.org/portal/resource/pt/biblio-1247922</a>
+            </li>
+            <li id="r22">Mufato LF, Gaíva MA. Empatía de enfermeras con recién nacidos hospitalizados en unidades de
+                cuidados
+                intensivos neonatales. Acta Paul Enferm.2022;35. <a
+                    href="https://doi.org/10.37689/acta-ape/2022AO00492">https://doi.org/10.37689/acta-ape/2022AO00492</a>
+            </li>
+            <li id="r23">Ibáñez-Masero O, Ortega-Galán ÁM, Carmona-Rega MI, Ruiz-Fernández MD, Cabrera-Troya J,
+                García-Cisneros R, et al. El significado de morir dignamente desde la perspectiva de las personas
+                cuidadoras: estudio
+                fenomenológico. Enferm Clínica. 2016;26(6):358–66. <a
+                    href="http://dx.doi.org/10.1016/j.enfcli.2016.07.003">http://dx.doi.org/10.1016/j.enfcli.2016.07.003</a>
+            </li>
+            <li id="r24">Matua GA. Choosing phenomenology as a guiding philosophy for nursing research. Nurse Res.
+                2015;22(4):30–
+                4. <a href="https://doi.org/10.7748/nr.22.4.30.e1325">https://doi.org/10.7748/nr.22.4.30.e1325</a></li>
+            <li id="r25">Johnston CM, Wallis M, Oprescu FI, Gray M. Methodological considerations related to nurse
+                researchers
+                using their own experience of a phenomenon within phenomenology. J Adv Nurs. 2017;73(3):574–84. <a
+                    href="https://doi.org/10.1111/jan.13198">https://doi.org/10.1111/jan.13198</a>
+            </li>
+            <li id="r26"> Molinier P, Legarreta M. Subjetividad y materialidad del cuidado: ética, trabajo y proyecto
+                político. Int J
+                Collect Identity Res. [Internet]. 2016 [citado 25 Abr 2022];(1):1–14. Disponible en: <a
+                    href="https://ojs.ehu.eus/index.php/papelesCEIC/article/view/16084/14148">https://ojs.ehu.eus/index.php/papelesCEIC/article/view/16084/14148</a>
+            </li>
+        </ol>
+    </div>
+</body>
+
+</html>

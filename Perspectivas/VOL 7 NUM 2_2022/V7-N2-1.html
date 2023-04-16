@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V7-N2-1</title>
+    <link rel="stylesheet" href="">
+    <style>
+        body {
+            padding: 10em;
+            padding-top: 20px;
+            font-family: Times New Roman;
+            color: black;
+        }
+
+        .articulo-original {
+            background-color: black;
+            color: aliceblue;
+            width: 100%;
+            size: 15%;
+        }
+
+        #articulo-derecha {
+            float: left;
+        }
+
+
+        /* Posiciones de los resumenes */
+        .abstract-container {
+            display: flex;
+            width: 100%;
+        }
+
+        .keywords-container {
+            float: left;
+            width: 20%;
+            padding-right: 20px;
+        }
+
+        .text-container {
+            float: right;
+            width: 100%;
+            padding-left: 20px;
+        }
+
+
+        ul.navbar {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 25em;
+            left: 2em;
+            width: 250px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: Times New Roman;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        ul.navbar li {
+            background: white;
+            margin: 0.5em 0;
+            padding: 0.3em;
+        }
+
+
+        /* Enlaces */
+
+        a.link-color:visited {
+            color: white;
+        }
+
+        a.link-color:link {
+            color: white;
+        }
+
+        a.link-color:hover {
+            color: white;
+        }
+
+        a.link-color:hover {
+            border-bottom: 1px solid;
+            background: black;
+        }
+
+
+        /* Link de referencia */
+
+        a:link {
+            color: #4e00ff;
+        }
+
+        a:visited {
+            color: #003bff;
+        }
+
+        a:focus {
+            border-bottom: 1px solid;
+            background: #98aae4;
+        }
+
+        a:hover {
+            border-bottom: 1px solid;
+            background: #aacefe;
+        }
+
+
+
+        /* Etiqueta P */
+
+        p {
+            line-height: normal;
+            text-align: justify;
+            font-size: 18px
+        }
+
+        p.titulo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        p.subtitulo {
+            font-size: 20px;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        p.subtitulo-segundo {
+            font-style: italic;
+            font-size: 18px;
+        }
+
+        /* Fin P */
+
+
+        /* Etiqueta Italic */
+        i {
+            font-size: 18px
+        }
+
+        /* LI para las listas */
+
+        li {
+            font-size: 18px;
+        }
+
+
+
+        /* Tablas */
+
+        table {
+            border-collapse: collapse;
+            border: 2px solid rgb(0, 0, 0);
+            align-items: center;
+        }
+
+        thead th {
+            border-collapse: collapse;
+            background-color: rgb(179, 179, 179);
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        tbody td {
+            border-collapse: collapse;
+            text-align: center;
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+
+        .tipo {
+            color: #ffffff;
+            font-size: 22px;
+            border-radius: 10px 5px 10px 5px;
+            background-color: #696969;
+        }
+
+        div.info {
+            padding-top: 20px;
+        }
+
+        img.logos {
+            width: 15px;
+            height: 15px;
+        }
+
+        .image {
+            text-align: center;
+            image-rendering: optimizeQuality;
+        }
+
+        .image p {
+            text-align: center;
+            font-size: small;
+        }
+
+        .logo {
+            width: 300px;
+            height: 80px;
+        }
+
+        .logo2 {
+            width: 300px;
+            height: 50px;
+
+        }
+
+        .lista li {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+
+        /* Anclajes de la pagina */
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .ecuacion {
+            text-align: center;
+            font-weight: bold;
+            margin: 1px;
+        }
+
+        @media only screen and (min-width:320px) and (max-width:767px) {
+            body {
+                width: 100%;
+                padding: 5em;
+                margin: 5px;
+            }
+
+            .image {
+                text-align: center;
+                image-rendering: optimizeQuality;
+            }
+
+            .image img {
+                width: 100%;
+                height: 100%;
+            }
+
+            .image p {
+                font-size: small;
+                text-align: center;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="image">
+        <img src="img/V7-N2-1/cabeza.png" width="100%">
+    </div>
+
+    <div>
+        <div class="articulo-original">
+            <p>
+            <div id="articulo-derecha"><b> <u> Articulo Original</u> </b> </div>
+            <div style='text-align:right'><b> <u><img class="image" width="15px" src="img/globales/doi.png"><a
+                            class="link-color"
+                            href="https://doi.org/10.22463/25909215.3470">https://doi.org/10.22463/25909215.3470</a></u>
+                </b></div>
+            </p>
+        </div>
+
+
+
+        <!--Titulos-->
+        <h1>Resignificación de la educación en los hogares comunitarios en tiempos de COVID 19 </h1>
+
+        <h2>Community Homes Vs Covid 19: A Resignification of Socio-educational Work</h2>
+
+        <!--Autores-->
+        <h4>
+            Maritza Carolina Jaimes-Márquez<sup><a href="#sup1">1*</a> </sup> <br>
+            Kelly Jhoana Ortiz-Gómez<sup><a href="#sup2">2*</a> </sup> <br>
+            Laura Nataly Galvis-Velandia<sup><a href="#sup3">3*</a> </sup> <br>
+
+        </h4>
+
+        <hr>
+
+        <p id="sup1"><sup>1*</sup><img class="logos" src="img/globales/sobre.png">
+            Especialista en pedagogía y docencia,
+            <a href="maritzcarolinajm@ufps.edu.co">maritzcarolinajm@ufps.edu.co</a> . <img class="logos"
+                src="img/globales/orcid.png"> <a href="https://orcid.org/0000-0002-4728-6064">ORCID:
+                0000-0002-4728-6064</a>.
+            Universidad Francisco de Paula Santander, Cúcuta,
+            Colombia.
+        </p>
+
+        <p id="sup1"><sup>2*</sup><img class="logos" src="img/globales/sobre.png"> Trabajadora social en formación,
+            <a href="jhoanaor95@gmail.com">jhoanaor95@gmail.com</a> . <img class="logos" src="img/globales/orcid.png">
+            <a href="https://orcid.org/0000-0003-0338-5412">ORCID:
+                0000-0003-0338-5412</a>.
+            Universidad Francisco de Paula Santander, Cúcuta,
+            Colombia
+        </p>
+
+        <p id="sup1"><sup>3*</sup><img class="logos" src="img/globales/sobre.png"> Especialista en pedagogía y docencia,
+            <a href="lauranatalygv@ufps.edu.co">lauranatalygv@ufps.edu.co</a> . <img class="logos"
+                src="img/globales/orcid.png"> <a href="https://orcid.org/0000-0003-2444-8398">ORCID:
+                0000-0003-2444-8398</a>.
+            Universidad Francisco de Paula Santander, Cúcuta,
+            Colombia
+        </p>
+
+
+        <hr>
+
+        <!-- Como realizar la cita -->
+
+        <p><b>How to cite: </b> Jaimes-Márquez M.C, Ortiz-Gómez K.J, Galvis-Velandia L.N. (2022). “Resignificación de la
+            educación en los
+            hogares comunitarios en tiempos de COVID 19 .”. Perspectivas, vol. 7, no. 2, pp. 6-11, 2022</p>
+
+        <!--Licencia-->
+        <p>&copy;Peer review is the responsibility of the Universidad Francisco de Paula Santander. This is an article
+            under the license
+            <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>
+        </p>
+
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Licencia Creative Commons"
+                style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
+
+        <hr>
+
+        <!--Recibido y aprobado-->
+        <p><b>Received: </b> Enero 20, 2022 <br> <b>Approved: </b> Mayo 20, 2022. </p>
+
+
+        <!--Resumen Inglés-->
+        <hr>
+
+        <div class="abstract-container">
+            <div class="keywords-container">
+                <p><b>Palabras clave:</b> <br></p>
+                <p>Agentes Educativas, Covid-19, Familia, Teoría Socio Educativa.</p>
+            </div>
+            <hr>
+            <div class="text-container">
+                <p class="titulo"> Resumen</p>
+                <p>
+                    El presente artículo desarrolla los resultados de la investigación titulada caracterización de la
+                    labor
+                    docente de las agentes educativas de los hogares comunitarios del ICBF en tiempos de Covid-19, cuyo
+                    objetivo fue caracterizar el rol de las agentes educativas generando una resignificación de su labor
+                    socioeducativa, por lo tanto, fue necesario analizarlo bajo un paradigma cualitativo y desde un
+                    enfoque
+                    hermenéutico el cual permitió hacer un abordaje exhaustivo desde la perspectiva del Trabajo Social,
+                    debido a que se realizó la interpretación del conocimiento de la experiencia que los autores le
+                    otorgan
+                    a su contexto, captando así el verdadero sentido del mensaje, aportándole a la línea de Trabajo
+                    Social y
+                    acción socioeducativa del GITS (Grupo de Investigación de Trabajo Social).
+                </p>
+                <p>
+                    Teniendo en cuenta los principales resultados siguiendo la teoría socioeducativa, se encontró que
+                    las agentes educativas realizaron un acompañamiento y seguimiento a los procesos de formación no
+                    solo de los niños y niñas, sino también de sus cuidadores, adquiriendo conocimientos y habilidades
+                    que lograron mejorar su calidad de vida, especialmente en situaciones abrumadoras e imprevistas
+                    como se presentaron a partir de la pandemia generada por el covid-19 , donde se gestaron contextos
+                    desfavorables a la hora de desarrollar las distintas actividades educativas que se venían
+                    desarrollando
+                    en la vida cotidiana de una manera presencial.
+                </p>
+                <p>
+                    En cuanto a una de las conclusiones más relevantes se resaltó la importancia de las agentes
+                    educativas
+                    (madres comunitarias), ya que estas establecieron estrategias académicas las cuales le permitieron
+                    desde su rol colaborar de una manera armónica a mitigar los problemas que se presentan alrededor
+                    de la familia de los menores que son beneficiarios de estos hogares comunitarios y lograr que por
+                    medio de la virtualidad se realizaran las actividades que se venían desarrollando en la educación
+                    inicial
+                    resignificando su papel en la sociedad.
+
+                </p>
+            </div>
+        </div>
+
+        <!-- Resumen Español -->
+        <hr>
+
+        <div class="abstract-container">
+            <div class="keywords-container">
+                <p><b>Keywords:</b> <br></p>
+                <p>Digital marketing, peasant economy, young peasant, competitiveness, agribusiness.</p>
+            </div>
+            <hr>
+            <div class="text-container">
+                <p class="titulo">Abstract</p>
+
+                <p>
+                    This article develops the results of the research entitled characterization of the teaching work of
+                    the
+                    educational agents of the ICBF community homes in times of Covid-19, whose objective was to
+                    characterize the role of the educational agents generating a resignification of their
+                    socio-educational work,
+                    therefore, it was necessary to analyze it under a qualitative paradigm and from a hermeneutic
+                    approach
+                    which allowed an exhaustive approach from the perspective of Social Work, Therefore, it was
+                    necessary
+                    to analyze it under a qualitative paradigm and from a hermeneutic approach which allowed an
+                    exhaustive
+                    approach from the perspective of Social Work, due to the interpretation of the knowledge of the
+                    experience
+                    that the authors give to their context, thus capturing the true meaning of the message, contributing
+                    to the line of Social Work and socio-educational action of the GITS (Social Work Research Group).
+                </p>
+                <p>
+                    Taking into account the main results following the socio-educational theory, it was found that the
+                    educational agents accompanied and followed up the training processes not only of the children,
+                    but also of their caregivers, acquiring knowledge and skills that managed to improve their quality
+                    of life, especially in overwhelming and unforeseen situations as they were presented from the
+                    pandemic generated by covid-19 , where unfavorable contexts were generated when developing
+                    the different educational activities that were being developed in daily life in a face-to-face
+                    manner.
+                </p>
+                <p>
+                    As for one of the most relevant conclusions, the importance of the educational agents (community
+                    mothers) was highlighted, since they established academic strategies which allowed them to
+                    collaborate
+                    in a harmonious way to mitigate the problems that arise around the families of the children who are
+                    beneficiaries of these community homes and to achieve that through virtuality the activities that
+                    were
+                    being developed in the initial education were carried out, redefining their role in society.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Cuerpo del documento -->
+    <div>
+        <hr>
+        <!--Introducción-->
+        <p class="titulo"> Introducción</p>
+
+        <p>
+            En este artículo se tomará como base el trabajo de
+            investigación realizado en el asentamiento humano
+            de la Esperanza del municipio de Villa del Rosario,
+            Norte de Santander, el cual se desarrollo en el primer
+            semestre del año 2020 y donde se pudo recolectar la
+            información necesaria para determinar el rol de las
+            agentes educativas frente a la virtualidad ocasionada
+            por el covid-19 en relación con la resignificación de
+            su labor socioeducativo en los hogares comunitarios
+            del ICBF (Instituto Colombiano de Bienestar
+            Familiar).
+        </p>
+
+        <p>
+            Los hogares comunitarios de bienestar fueron
+            creados en 1986 certificado por el CONPES bajo
+            una estrategia que atienda a las necesidades de
+            protección, cuidado, nutrición, salud, educación y
+            desarrollo psicosocial de los menores de seis años,
+            funcionando en lugares cercanos a las familias
+            vulnerables desde la apertura en los hogares de
+            las madres comunitarias; también, el programa va
+            dirigido a fortalecer las prácticas familiares para
+            mitigar los factores de riesgo a los que están expuestos
+            al interior del hogar, por medio de la generación de espacios formativos desde la participación de la
+            familia y comunidad (ICBF, 2018).
+        </p>
+
+        <p>
+            En este se evidenciaron las modificaciones
+            que se realizaron al proyecto pedagógico para que
+            los niños y niñas pudieran seguir desarrollando sus
+            actividades desde casa, también se logro ver que no
+            solo se estaba trabajando a nivel educacional sino
+            también a nivel del bienestar familiar, ya que las
+            actividades que normalmente se realizarían en el
+            hogar comunitario bajo la supervisión de las agentes
+            educativas, dadas las nuevas condiciones, estas son
+            realizadas por los padres de familia de modo en que
+            se replique en los niños y niñas logrando evidenciar
+            la creatividad, compromiso y entrega en la labor
+            socioeducativa.
+        </p>
+
+        <p>
+            A su vez, es importante describir la forma en
+            que se modifica la acción socioeducativa desde la
+            labor de las agentes educativas, teniendo en cuenta
+            los referentes técnicos, conceptuales y legales por los
+            que se guían las madres comunitarias para responder
+            a la atención integral de los menores, por lo cual,
+            realizan un acompañamiento en la elaboración de
+            las propuestas pedagógicas, que se estructuran desde los intereses y necesidades de los niños y niñas y
+            fortalecen los elementos que constituyen su práctica
+            pedagógica, siendo una herramienta para acercar a
+            los niños, niñas y familias al aprendizaje.
+        </p>
+
+        <p>
+            La importancia del reconocimiento del rol de
+            las agentes educativas y el reconocimiento del mismo
+            por los padres de familia ha hecho que este proceso se
+            haya desarrollado de una manera adecuada y efectiva
+            ante los diferentes retos que se presentaron a lo largo
+            de este periodo donde recién se implementaba la
+            virtualidad como herramienta educativa para los
+            niños de estos hogares comunitarios, se ha logrado
+            recoger la caracterización de la familia y el enfoque
+            que esta tiene.
+        </p>
+
+
+        <!-- Metodología y materiales -->
+        <hr>
+
+        <p class="titulo">Materiales y Métodos</p>
+
+        <p>
+            Para la realización de los materiales y métodos
+            se utilizó desde un paradigma de investigación
+            cualitativa que permitió comprender los fenómenos
+            sociales explorados desde las perspectivas de
+            las diferentes poblaciones en su vida cotidiana.
+            Para Gonzales (2013) la investigación cualitativa
+            estudia la experiencia de los sujetos a partir de los
+            procesos sociales, desde características particulares
+            de las personas que lo originan, analizando desde el
+            dialogo donde expresan sus creencias, mentalidades
+            y sentimientos, siendo estos aspectos los que
+            conducen el accionar del sujeto. La esencia de lo
+            cualitativo se forma en la cotidianidad, y solo por
+            medio de un proceso investigativo se logra percibir
+            su totalidad con mayor claridad.
+        </p>
+
+        <p>
+            Al seleccionar el enfoque hermenéutico,
+            permitió comprender las distintas manifestaciones
+            de las agentes educativas, desde el campo de acción
+            empleado por los niños y niñas, sus familias y la
+            comunidad, logrando obtener una aproximación
+            a la realidad que les permitiera presentar de mejor
+            manera las distintas acciones o actitudes que se
+            tomaron durante el contexto inusual presentado
+            por la pandemia y el como estos lograron adaptarse
+            de una forma apropiada dando continuidad con el
+            desarrollo de las actividades.
+        </p>
+
+        <p>
+            La selección de los informantes claves
+            se realizó en función de la representación de las
+            propiedades de la estructura social de lo contenido
+            en su singularidad (Navarrete, 2000, p.167). Por
+            consiguiente, participaron ocho agentes educativas
+            y ocho representantes de padres de familia con las
+            siguientes características: Tiempo de vinculación
+            no inferior a cinco años en el programa Hogares
+            comunitarios de bienestar, cuidando una población
+            infantil heterogénea y que participen activamente
+            en las capacitaciones que brinda el ICBF y las
+            instituciones locales. Respecto a los padres de
+            familia o cuidadores de los niños y niñas, sus
+            criterios de selección fueron que pertenecieran a
+            los hogares comunitarios de las agentes educativas
+            seleccionadas, con un tiempo de vinculación
+            no inferior a dos años al programa de hogares
+            comunitarios de bienestar y dos padres de familia
+            con una niña o niño con necesidades educativas
+            especiales Participen activamente en el proceso de
+            selección.
+        </p>
+
+        <p class="titulo">Instrumento de recolección de datos y su validación </p>
+
+        <p>
+            Para la recolección y validación de los datos
+            obtenidos mediante los instrumentos, se realizó una
+            redacción de la información en la que se llevó a
+            cabo un diseño que permitió un acercamiento con la
+            población objeto de estudio, teniendo en cuenta las
+            fuentes primarias que fueron un nivel de información
+            que emergió un contenido mediante el contacto
+            directo de los actores claves.
+
+        </p>
+
+        <p>
+            Según Díaz, L., Torruco, U, Martínez, M
+            y Varela, M. (2013). la entrevista semiestructurada
+            “Presenta un grado mayor de flexibilidad debido
+            a que parte de preguntas planeadas, que pueden
+            ajustarse a los entrevistados, su ventaja es la
+            posibilidad de adaptarse a los sujetos con enormes
+            posibilidades para motivar al interlocutor, aclarar
+            términos e identificar ambigüedades” (p.163)
+        </p>
+
+        <p>
+            La entrevista se realizó con la intención
+            de analizar el impacto que generan las agentes educativas (madres comunitarias) en el proceso de
+            desarrollo de los niños y niñas en su sistema familiar
+            y el reconocimiento social que les asignan a sus
+            funciones, a su vez, se identificó el modelo pedagógico
+            que emplearon en sus actividades diarias con los
+            niños y niñas, distinguió el actual procedimiento de
+            su labor en tiempos de pandemia resignificando la
+            educación en los hogares comunitarios.
+        </p>
+
+        <p class="titulo">Discusión.</p>
+
+        <p><b>
+                Para analizar las prácticas socioeducativas
+                de las agentes educativas, se toma como referente
+                teórico la acción socioeducativa planteada por
+                Méndez (2014) la cual hace énfasis
+            </b></p>
+
+        <p>
+            En la eliminación de factores que generen
+            problemáticas sociales a través de la profundización
+            de conocimiento de las realidades individuales y
+            grupales del individuo, partiendo de un plan de acción
+            que promueva el empoderamiento y capacidades de
+            los sujetos para organizarse, interactuar y actuar en
+            su propia transformación social que permita mejorar
+            su calidad de vida.
+        </p>
+
+        <p>
+            Así, las agentes educativas potencian el
+            saber de los diferentes sujetos; los niños, niñas y
+            padres beneficiarios, visibilizando sus condiciones
+            y protagonismo en su proceso pedagógico. Al
+            respecto, refieren que “A inicio de año hacemos una
+            caracterización de los niños y en base a eso hacemos
+            el proyecto pedagógico, nosotras tenemos nuestro
+            objetivo, intencionalidad” (AE02) “El ICBF nos da
+            unos lineamientos y ahí nosotros debemos partir de
+            las necesidades de cada hogar” (AE03) “uno hace
+            una reunión con los usuarios y los capacitamos”
+            (AE08).
+        </p>
+
+        <p>
+            Se observó la inclusión de los padres de familia
+            en los procesos educativos los cuales fueron dirigidos
+            por las agentes educativas en donde se promovía el
+            análisis con lo referente a la participación, a su vez,
+            fueron considerados los preceptos para así poder
+            vincularlos en el plan de desarrollo de los niños
+            donde se observó una actitud e imagen abierta a recibir la indicación e instrucciones que las agentes
+            educativas brindaron.
+        </p>
+
+        <p>
+            De este modo, ante el interés de considerar la
+            influencia de los diferentes sistemas en el bienestar del
+            niño y la niña, se integra la teoría familiar sistémica
+            empleada por Ponce de León y Fernández (2010) en
+            la que se describen las complejas interacciones en
+            esta unidad disponiendo de una función que, desde
+            lo anterior, aportaron una comprensión más amplia
+            de cada miembro de la familia y el desempeño de
+            los mismos para la realización de las actividades
+            por medios virtuales dando cumplimiento al plan
+            pedagógico por las agentes educativas para esta
+            situación atípica.
+        </p>
+
+        <p>
+            Esto permitió evidenciar la función al
+            iniciar los cambios en el sistema de medida donde
+            se realiza la participación de los siguientes niveles
+            de desarrollo y en el desarrollo de los niños y niñas
+            beneficiarios del programa de hogares comunitarios.
+            Ante esto Martiniello (1999, citado en Pizarro, et al.,
+            2013) plantea la participación de los padres desde
+            cuatro dimensiones:
+        </p>
+
+        <p>
+            La Responsabilidad parental en las prácticas de
+            crianza, cuidado y protección de sus hijos, desarrolla
+            las condiciones básicas para que el menor asista a
+            un centro educativo. Los padres como maestros,
+            se involucran activamente en el trabajo realizado
+            en el centro educativo, supervisando y apoyando
+            la continuidad de sus tareas desde casa. Los padres
+            como agentes de apoyo realizan su contribución en
+            la mejora del servicio, desde donaciones, materiales,
+            tiempo y participación y acompañamiento en las
+            actividades. Los padres con poder de decisión al
+            desempeñar roles que puedan afectar o beneficiar los
+            objetivos e intención del centro, incluye el ser parte
+            de comités o representantes.
+        </p>
+
+        <p>
+            Como referencia a referencia a ello, se expresó
+            por medio de los participantes la correspondencia de
+            estas dimensiones y lo que representa cada uno de los
+            hogares. En la responsabilidad parental se destacan
+            dos comentarios realizados por padres de familia “la ayuda de nosotros como padres es llevando
+            las evidencias de las tareas, cumpliendo con esa
+            labor que nos envía semanalmente, yo como mamá
+            pienso que los papás deben están comprometidos
+            con el proyecto” (PF04) “Hacer caso inmediato
+            a los lineamientos que indican para que sea más
+            llevadero” (PF06)
+        </p>
+
+        <p>
+            No obstante, la nueva modalidad de los
+            hogares comunitarios ha evidenciado la debilidad de
+            los acudientes como los principales educadores en
+            cuanto a la falta de disposición y desobediencia al ser
+            orientados por sus padres “El aprendizaje con ellos
+            no es igual ahora por la virtualidad, porque ellos a
+            uno le hacen caso, en cambio a los papás casi no, el
+            trabajo más que todo lo hacían era ellos, pero que
+            los niños lo realicen como tal, solo los más grandes,
+            mientras que conmigo ellos si trabaja, entonces se
+            presenta mucha dificultad porque no trabajan igual
+            que conmigo” (AE06).
+        </p>
+
+        <p>
+            Una dimensión muy importante en la
+            resignificación de la labor socioeducativa, se refiere
+            a las estrategias psicosociales, las agentes educativas
+            en sus prácticas no pueden ignorar los aspectos
+            psicosociales de los niños y niñas que emergen de su
+            realidad, así entre más compleja sea esta, su exigencia
+            para atenderlos es mayor, debido a la importancia de
+            su labor en el contexto y la relación que establece
+            con la comunidad, por tanto, la influencia de los
+            adultos es notable en la medida en que su mediación
+            impulsa el desarrollo y aprendizaje de los menores.
+        </p>
+
+
+
+        <!-- Conclusiones -->
+        <hr>
+
+        <p class="titulo"> Conclusiones</p>
+        <p>
+            Los hogares beneficiarios de la asociación de
+            padres hogares comunitarios asentamiento humano la
+            Esperanza de Villa del Rosario permitieron proponer
+            estrategias que fortalecieron su función como
+            resultado de la comprensión del reconocimiento de
+            su labor en la actualidad. Es concebido como agentes
+            de transformación social en aquellas familias que
+            se encuentran en una situación de vulnerabilidad
+            en la medida que posibilita el desarrollo cognitivolingüístico y socio afectivo que está determinado
+            por la interacción en el contexto educativo y familiar en que se encuentra el infante, por esto, se diseñara
+            una caja de herramientas como material de apoyo de
+            intervención dirigida a las agentes educativas con el
+            propósito de fortalecer su trabajo en la adquisición
+            de conocimientos desde lo teórico-conceptual según
+            lo arrojado en el proceso de la investigación por las
+            agentes educativas y los padres beneficiarios.
+        </p>
+
+        <p>
+            El rol de las agentes educativas desde la
+            visión de los actores está representado en siete
+            subcategorías: líder, empoderamiento, cuidadora,
+            desempeño profesional, perfil profesional,
+            cualificación profesional, gestión interinstitucional.
+            Se logra evidenciar desde sus relatos las
+            representaciones sociales sobre lo que es ser una
+            agente educativa, su rol se encuentra construido
+            sobre la base del cambio en el escenario familiar e
+            individual del menor, que desde su subjetividad no
+            contemplan un rol determinado, sino que están en
+            constante cambio respondiendo a las necesidades
+            y características específicas de los niños y niñas.
+            Dicha diversidad de roles adoptados por las agentes
+            educativas, han configurado su papel activo en la
+            vida de los infantes y su grupo familiar.
+        </p>
+
+        <p>
+            El rol de las agentes educativas desde la
+            visión de los actores está representado en siete
+            subcategorías: líder, empoderamiento, cuidadora,
+            desempeño profesional, perfil profesional,
+            cualificación profesional, gestión interinstitucional.
+            Se logra evidenciar desde sus relatos las
+            representaciones sociales sobre lo que es ser una
+            agente educativa, su rol se encuentra construido
+            sobre la base del cambio en el escenario familiar e
+            individual del menor, que desde su subjetividad no
+            contemplan un rol determinado, sino que están en
+            constante cambio respondiendo a las necesidades
+            y características específicas de los niños y niñas.
+            Dicha diversidad de roles adoptados por las agentes
+            educativas, han configurado su papel activo en la
+            vida de los infantes y su grupo familiar.
+        </p>
+
+        <p>
+            Finalmente, se reconoce el significado que las
+            familias de los hogares beneficiarios de la asociación de padres hogares comunitarios asentamiento
+            humano la Esperanza de Villa del Rosario tienen
+            sobre el rol de las agentes educativas como una
+            persona integral e indispensable en el proceso de
+            desarrollo de sus hijos y el fortalecimiento de la
+            unidad familiar al inculcar prácticas de cuidado
+            y crianza que de forma inconsciente aplicaban
+            de manera negativa y el de reconocer además, el
+            menester que tiene como representantes el formar
+            parte activa de la formación de sus hijos, de esta
+            manera, el programa hogares comunitarios de
+            bienestar, es indispensable para dar cumplimiento
+            a actividades que como padres de familia deben
+            desempeñar para brindar a sus hijos bienestar y a su
+            vez, confiar sólidamente en la seguridad bajo la que
+            estarán en un hogar comunitario, especialmente, esta
+            visión es fortalecida, por la imagen de protección y
+            amor que la agente educativa refleja.
+        </p>
+
+
+        <!-- Referencias -->
+
+        <hr>
+
+        <p class="titulo"> Referencias </p>
+
+        <p id="r1">Consejo Nacional de Política Económica Social (2007). Política pública nacional de primera infancia
+            “Colombia por la primera infancia”. Bogotá, Colombia. Recuperado de <a
+                href="http://www.sipi.siteal.iipe.unesco.org/sites/default/files/sipi_intervencion/conpes_109.pdf">http://www.sipi.siteal.iipe.unesco.org/sites/default/files/sipi_intervencion/conpes_109.pdf</a>
+        </p>
+        <p id="r2">Díaz, L., Torruco, U, Martínez, M y Varela, M.
+            (2013). La entrevista, recurso flexible y dinámico.
+            Investigación en Educación Médica, 2(7),162-
+            167. Disponible en: <a
+                href="https://www.redalyc.org/articulo.oa?id=3497/349733228009">https://www.redalyc.org/articulo.oa?id=3497/349733228009</a>
+        </p>
+        <p id="r3">Gil, J., Rodríguez, G., & García, E. (1999).
+            Metodología de la investigación cualitativa.
+            Málaga: aljibe.</p>
+        <p id="r4">Gonzales, E. (2013). Acerca del estado de la cuestión
+            o sobre un pasado reciente en la investigación
+            cualitativa con enfoque hermenéutico.
+            Unipluriversidad, 13(1), 60- 63.</p>
+        <p id="r5">Instituto colombiano de bienestar familiar. (2018).
+            Hogares comunitarios de bienestar. Recuperado
+            de <a
+                href="https://www.siteal.iiep.unesco.org/sites/default/files/sit_accion_files/co_2006_0.pdf">https://www.siteal.iiep.unesco.org/sites/default/files/sit_accion_files/co_2006_0.pdf</a>
+        </p>
+        <p id="r6">Jaimes Marquez & Galvis Velandia Jaimes Marquez,
+            M. C., & Galvis Velandia, L. En tiempos de
+            COVID -19, volver a la esencia, una mirada
+            desde el Trabajo Social. En El Covid-19 y la
+            reinvención:Perspec tivas mutantes de existir
+            y habitar en pandemia (págs. 142). Cùcuta :
+            Ediciones Nueva Jurìdica. (2020).
+        </p>
+        <p id="r7">Méndez, N. (2014). La acción socioeducativa y la
+            investigación acción en la democratización de la
+            vida cotidiana. Recuperado el Enero de Marzo
+            <a
+                href="https://revista.trabajosocial.or.cr/index.php/revista/article/view/183">https://revista.trabajosocial.or.cr/index.php/revista/article/view/183</a>
+        </p>
+        <p id="r8">Navarrete, J. (2000). El muestreo en la investigación
+            cualitativa. Investigaciones sociales, 4(5), 165-
+            180.</p>
+        <p id="r9">Pitalua de Valle, A. (2020). Practicas pedagógicas
+            comunitarias para el desarrollo integral de
+            infantes del municipio de san Carlos córdoba.
+            Estudio De Ciencias Sociales Y Administrativas
+            De La Universidad De Celaya, 10(1). <a
+                href="http://ecsauc.udec.edu.mx/index.php/ECSAUC/article/view/5">http://ecsauc.udec.edu.mx/index.php/ECSAUC/article/view/5</a>
+        </p>
+        <p id="r10">Planella, J. (2005). Pedagogía y hermenéutica:
+            de Hegel a Gadamer. Revista de Educación,
+            328(12), 1-11. pp. 741-753.</p>
+        <p id="r11">Ponce de león, L & Fernández, T (2010). trabajo
+            social con familias, Madrid, Ediciones
+            Académicas. </p>
+        <p id="r12">Valencia, V. (2012). Revisión documental en
+            el proceso de investigación. Universidad
+            Tecnológica de Pereira. Bogotá, Colombia.
+        </p>
+        <p id="r13">Vásquez, D y Pineda H. (2016). Madre comunitaria
+            transformación de su quehacer a través del
+            tiempo. [Tesis de maestría, Universidad
+            pedagógica nacional].</p>
+
+
+    </div>
+
+</body>
+
+</html>
