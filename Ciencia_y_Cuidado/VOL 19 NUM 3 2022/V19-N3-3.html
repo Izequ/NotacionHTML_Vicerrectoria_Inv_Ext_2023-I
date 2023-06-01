@@ -6,381 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>V19-N3-3</title>
-    <link rel="stylesheet" href="">
-    <style>
-        body {
-            padding: 10em;
-            padding-top: 20px;
-            font-family: Times New Roman;
-            color: black;
-        }
-
-        #articulo-derecha {
-            float: left;
-        }
-
-        /* Posiciones de los resumenes */
-
-        .contenedor-general {
-            display: inline-flex;
-            width: 100%;
-        }
-
-        .contenedor-resumen {
-            width: 240%;
-        }
-
-        .contenedor-autor {
-            width: 100%;
-            padding-left: 20px;
-        }
-
-        .hr-resumen {
-            background-color: gray;
-            margin: 0;
-            margin-left: 20px;
-            margin-right: 20px;
-        }
-
-        .resumen-fondo {
-            background-color: #bdd5f1;
-            border-radius: 5px;
-        }
-
-        .titulo-resumen {
-            color: black;
-            font-size: 22px;
-            font-weight: bold;
-            padding: 20px;
-            margin: 0;
-        }
-
-        .texto-resumen {
-            padding: 20px;
-            margin: 0;
-        }
-
-        ul.navbar {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            position: absolute;
-            top: 25em;
-            left: 2em;
-            width: 250px;
-        }
-
-        /* Titulos principales */
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5 {
-            font-family: Times New Roman;
-            text-align: center;
-            font-weight: bold;
-        }
-
-        h1 {
-            color: #29abe3;
-        }
-
-        .categoria_titulo {
-            font-style: italic;
-            color: #ffffff;
-        }
-
-        h3 {
-            font-style: italic;
-            font-weight: bold;
-            color: #707073;
-        }
-
-        .categoria {
-            text-align: center;
-            background-color: #707073;
-            width: 20%;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-            margin: auto;
-        }
-
-        ul.navbar li {
-            background: white;
-            margin: 0.5em 0;
-            padding: 0.3em;
-        }
-
-        /* Enlaces */
-
-        a.link-color:visited {
-            color: white;
-        }
-
-        a.link-color:link {
-            color: white;
-        }
-
-        a.link-color:hover {
-            color: white;
-        }
-
-        a.link-color:hover {
-            border-bottom: 1px solid;
-            background: black;
-        }
-
-        /* Link de referencia */
-
-        a:link {
-            color: #4e00ff;
-        }
-
-        a:visited {
-            color: #003bff;
-        }
-
-        a:focus {
-            border-bottom: 1px solid;
-            background: #98aae4;
-        }
-
-        a:hover {
-            border-bottom: 1px solid;
-            background: #aacefe;
-        }
-
-        /* Etiqueta P */
-
-        p {
-            line-height: normal;
-            text-align: justify;
-            font-size: 18px;
-        }
-
-        p.titulo {
-            color: #29abe3;
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        p.subtitulo {
-            color: #29abe3;
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        /* NUEVO */
-        p.subtitulo-segundo {
-            color: #29abe3;
-            font-style: italic;
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        p.correspondencia {
-            color: black;
-            font-size: 18px;
-            font-style: italic;
-            font-weight: bold;
-        }
-
-        /* NUEVO */
-        p.entrevista {
-            color: black;
-            font-size: 18px;
-            font-style: italic;
-        }
-
-        /* NUEVO */
-        p.subtitulo-tercero {
-            color: #29abe3;
-            font-style: italic;
-            font-size: 18px;
-        }
-
-        p#cabeza {
-            color: #1d71ae;
-            text-align: center;
-        }
-
-        p.autores {
-            font-size: 16px;
-            margin: 0;
-            text-indent: 0em;
-            margin-bottom: 10px;
-        }
-
-        p.forma-citar {
-            text-indent: 0em;
-            text-align: justify;
-            justify-content: center;
-        }
-
-        .cita {
-            text-align: -webkit-center;
-        }
-
-        /* Bold especial para palabras que tienen color seguido de dos puntos
-*/
-
-        /* NUEVO */
-
-        b.subtitulo-segundo {
-            color: #29abe3;
-            font-size: 18px;
-        }
-
-        .contenedor_info {
-            text-align: center;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .info {
-            width: auto;
-        }
-
-        /* Este es para los documentos del dos en adelante *codigo abajo de este comentario* */
-
-        .info-text {
-            text-align: end;
-            margin: 0;
-        }
-
-        /* Uso Exlusico para el primero documento  que es de revision  *codigo abajo de este comentario* */
-
-        .info_text {
-            font-size: 12px;
-            line-height: 100%;
-            text-align: center;
-            margin: 0;
-        }
-
-        .info_hr {
-            margin: 5;
-        }
-
-        /* Fin P */
-        /* Etiqueta Italic */
-
-        i {
-            font-size: 18px
-        }
-
-        i.centrado {
-            font-size: 18px
-        }
-
-        /* LI para las listas */
-
-        li {
-            font-size: 18px;
-            padding-top: 10px;
-            text-align: justify;
-        }
-
-        /* NUEVO */
-        .lista li {
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-
-        hr {
-            background-color: #29abe3;
-            height: 1px;
-        }
-
-        /* Tablas */
-
-        table {
-            border-collapse: collapse;
-            border: 2px solid rgb(0, 0, 0);
-            align-items: center;
-        }
-
-        thead th {
-            border-collapse: collapse;
-            background-color: rgb(179, 179, 179);
-            border: 2px solid rgb(0, 0, 0);
-        }
-
-        tbody td {
-            border-collapse: collapse;
-            text-align: center;
-            border: 2px solid rgb(0, 0, 0);
-        }
-
-        .tipo {
-            color: #ffffff;
-            font-size: 22px;
-            border-radius: 10px 5px 10px 5px;
-            background-color: #696969;
-        }
-
-        img.logos {
-            width: 15px;
-            height: 15px;
-        }
-
-        .image {
-            text-align: center;
-            image-rendering: optimizeQuality;
-        }
-
-        .image p {
-            text-align: center;
-            font-size: small;
-        }
-
-        .logo {
-            width: 300px;
-            height: 80px;
-        }
-
-        .logo2 {
-            width: 300px;
-            height: 50px;
-        }
-
-        /* Anclajes de la pagina */
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* NUEVO */
-        .ecuacion {
-            text-align: center;
-            font-weight: bold;
-            margin: 1px;
-        }
-
-        @media only screen and (min-width:320px) and (max-width:900px) {
-            body {
-                width: 100%;
-                padding: 5em;
-                margin: 5px;
-            }
-
-            .image {
-                text-align: center;
-                image-rendering: optimizeQuality;
-            }
-
-            .image img {
-                width: 100%;
-            }
-
-            .image p {
-                font-size: small;
-                text-align: center;
-            }
-
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/movil.css" media="(min-width:320px) and (max-width:900px)">
 
 </head>
 
@@ -1195,104 +822,50 @@
                         discapacidad, actitudes de
                         cuidadores y madres sustitutas.pdf. Rev Cienc y Cuid. 2022;19(1):9–18.
                     </li>
-                    <li id="r10">Fazio RH, Olson MA. Implicit Measures in Social Cognition Research: Their Meaning and
-                        Use. Annu Rev
-                        [Internet]. 2003 Nov 28 [cited 2022 Jan 4];54:297–327. Available from: <a
-                            href="https://www.annualreviews.org/doi/abs/10.1146/annurev.psych.54.101601.145225">https://www.annualreviews.org/doi/abs/10.1146/annurev.psych.54.101601.145225</a>
-                    </li>
-                    <li id="r11">Lam WY, Gunukula SK, McGuigan D, Isaiah N, Symons AB, Akl EA. Validated instruments
-                        used to measure
-                        attitudes of healthcare students and professionals towards patients with physical disability: a
-                        systematic review. J Neuroeng Rehabil [Internet]. 2010 [cited 2022 Jan 4];7(1):55. Available
-                        from: <a
-                            href="https://jneuroengrehab.biomedcentral.com/articles/10.1186/1743-0003-7-55">https://jneuroengrehab.biomedcentral.com/articles/10.1186/1743-0003-7-55</a>
-                    </li>
-                    <li id="r12">Melendez Rojas RE. Las politicas publicas en materia de discapacidad en América Latina
-                        y su garantia de
+                    <li id="r10">Fazio RH, Olson MA. Implicit Measures in Social Cognition Research: Their Meaning and Use. Annu Rev
+                        [Internet]. 2003 Nov 28 [cited 2022 Jan 4];54:297–327. Available from: <a href="https://www.annualreviews.org/doi/abs/10.1146/annurev.psych.54.101601.145225">https://www.annualreviews.org/doi/abs/10.1146/annurev.psych.54.101601.145225</a></li>
+                    <li id="r11">Lam WY, Gunukula SK, McGuigan D, Isaiah N, Symons AB, Akl EA. Validated instruments used to measure
+                        attitudes of healthcare students and professionals towards patients with physical disability: a systematic review. J Neuroeng Rehabil [Internet]. 2010 [cited 2022 Jan 4];7(1):55. Available from: <a href="https://jneuroengrehab.biomedcentral.com/articles/10.1186/1743-0003-7-55">https://jneuroengrehab.biomedcentral.com/articles/10.1186/1743-0003-7-55</a></li>
+                    <li id="r12">Melendez Rojas RE. Las politicas publicas en materia de discapacidad en América Latina y su garantia de
                         acceso a una educación inclusiva de calidad. Actual Investig en Educ. 2019;19(2):1–26.</li>
-                    <li id="r13">Cubillos Alzate CJ, Perea Caro SA. Boletines Poblacionales: Personas con
-                        Discapacidad-PCD 1 Oficina de
-                        Promoción Social I-2020 [Internet]. Bogota D.C.; 2020 [cited 2022 Feb 14]. Available from: <a
-                            href="https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/DE/PS/boletines-poblacionales-personas-discapacidadI-2020.pdf">https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/DE/PS/boletines-poblacionales-personas-discapacidadI-2020.pdf</a>
-                    </li>
-                    <li id="r14">DANE. Boletín Técnico Indicadores básicos de tenencia y uso de Tecnologías de
-                        Informacion y Comunicacion-TIC [Internet]. Bogota D.C.; 2019. Available from: <a
-                            href="https://www.dane.gov.co/files/investigaciones/boletines/tic/bol_tic_hogares_departamental_2018.pdf">https://www.dane.gov.co/files/investigaciones/boletines/tic/bol_tic_hogares_departamental_2018.pdf</a>
-                    </li>
-                    <li id="r15">González López I, Macías García D. La formación permanente como herramienta para
-                        mejorar la intervención del maestro de educación física con alumnado con discapacidad. Retos
-                        [Internet]. 2018 Jan 1 [cited 2022
-                        Feb 14];33(33):118–22. Available from: <a
-                            href="https://recyt.fecyt.es/index.php/retos/article/view/55056">https://recyt.fecyt.es/index.php/retos/article/view/55056</a>
-                    </li>
-                    <li id="r16">Sabido Ramos O. Cuerpo y sentidos: el análisis sociológico de la percepción. Debate Fem
-                        [Internet].
-                        2016;51:63–80. Available from: <a
-                            href="http://linkinghub.elsevier.com/retrieve/pii/S0188947816300317">http://linkinghub.elsevier.com/retrieve/pii/S0188947816300317</a>
-                    </li>
-                    <li id="r17">Hormiga Sánchez CM, Alzate Posada ML, Borrell C, Palència L, Rodríguez Villamizar LA,
-                        Otero Wandurraga
-                        JA. Actividad física ocupacional, de transporte y de tiempo libre: Desigualdades según género en
-                        Santander,
-                        Colombia. Rev Salud Pública [Internet]. 2016;18(2):201–13. Available from: <a
-                            href="10.15446/rsap.v18n2.50008">10.15446/rsap.v18n2.50008</a></li>
-                    <li id="r18">Merino-Pantoja EP, Cabello-Terán J, Merino-Vidangossy E. El teléfono móvil y los
-                        estudiantes universitarios:
-                        una aproximación a usos, conductas y percepciones. Pixel-Bit, Rev Medios y Educ.
-                        2017;(51):81–96. </li>
-                    <li id="r19">Andrade-Salazar JA, Mendoza-Vergara MF, et al. Relación entre conflictos de la
-                        adolescencia y habilidades
-                        sociales en adolescentes de una Institución Educativa de Risaralda. Pensam Am.
-                        2020;13(25):52–61.</li>
-                    <li id="r20">Rello CF, Puerta IG, Tejero González CM. Análisis comparativo del efecto de tres
-                        programas de sensibilización hacia la discapacidad en Educación Física. Retos.
-                        2018;2041(34):258–62.</li>
-                    <li id="r21">Rello CF, Puertas I, Tejero-Gonzalez C. Cambiando las actitudes hacia la discapacidad:
-                        diseño de un programa de sensibilizacion en Educacion Fisica. Retos Nuevas Tend en Educ Física,
-                        Deport y Recreación [Internet]. 2020 [cited 2021 Oct 15];37(1):713–21. Available from: <a
-                            href="https://dialnet.unirioja.es/servlet/articulo?codigo=7243341">https://dialnet.unirioja.es/servlet/articulo?codigo=7243341</a>
-                    </li>
-                    <li id="r22">Miller S, Ross S, Cleland J. Medical students’ attitudes towards disability and support
-                        for disability in medicine.
-                        Med Teach [Internet]. 2009 [cited 2022 Jan 4];31(6). Available from: <a
-                            href="doi.org/10.1080/01421590802516814">doi.org/10.1080/01421590802516814</a></li>
-                    <li id="r23">Verdiales-Lopez DM. La mujer: pieza clave en el desarrollo sostenible. Estrategias
-                        contenidas en la Agenda
-                        2030. Espiral Estud sobre Estado y Soc [Internet]. 2021 [cited 2021 Oct 15];82:145–71. Available
-                        from: <a
-                            href="https://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S1665-05652021000300145">https://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S1665-05652021000300145</a>
-                    </li>
-                    <li id="r24">Molano-Tobar NJ, Molano-Tobar DX, Chalapud-Narváez LM. La Discapacidad Desde La
-                        Percepción De
+                    <li id="r13">Cubillos Alzate CJ, Perea Caro SA. Boletines Poblacionales: Personas con Discapacidad-PCD 1 Oficina de
+                        Promoción Social I-2020 [Internet]. Bogota D.C.; 2020 [cited 2022 Feb 14]. Available from: <a href="https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/DE/PS/boletines-poblacionales-personas-discapacidadI-2020.pdf">https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/DE/PS/boletines-poblacionales-personas-discapacidadI-2020.pdf</a>
+                        </li>
+                    <li id="r14">DANE. Boletín Técnico Indicadores básicos de tenencia y uso de Tecnologías de Informacion y Comunicacion-TIC [Internet]. Bogota D.C.; 2019. Available from: <a href="https://www.dane.gov.co/files/investigaciones/boletines/tic/bol_tic_hogares_departamental_2018.pdf">https://www.dane.gov.co/files/investigaciones/boletines/tic/bol_tic_hogares_departamental_2018.pdf</a></li>
+                    <li id="r15">González López I, Macías García D. La formación permanente como herramienta para mejorar la intervención del maestro de educación física con alumnado con discapacidad. Retos [Internet]. 2018 Jan 1 [cited 2022
+                        Feb 14];33(33):118–22. Available from: <a href="https://recyt.fecyt.es/index.php/retos/article/view/55056">https://recyt.fecyt.es/index.php/retos/article/view/55056</a></li>
+                    <li id="r16">Sabido Ramos O. Cuerpo y sentidos: el análisis sociológico de la percepción. Debate Fem [Internet].
+                        2016;51:63–80. Available from: <a href="http://linkinghub.elsevier.com/retrieve/pii/S0188947816300317">http://linkinghub.elsevier.com/retrieve/pii/S0188947816300317</a></li>
+                    <li id="r17">Hormiga Sánchez CM, Alzate Posada ML, Borrell C, Palència L, Rodríguez Villamizar LA, Otero Wandurraga
+                        JA. Actividad física ocupacional, de transporte y de tiempo libre: Desigualdades según género en Santander,
+                        Colombia. Rev Salud Pública [Internet]. 2016;18(2):201–13. Available from: <a href="10.15446/rsap.v18n2.50008">10.15446/rsap.v18n2.50008</a></li>
+                    <li id="r18">Merino-Pantoja EP, Cabello-Terán J, Merino-Vidangossy E. El teléfono móvil y los estudiantes universitarios:
+                        una aproximación a usos, conductas y percepciones. Pixel-Bit, Rev Medios y Educ. 2017;(51):81–96. </li>
+                    <li id="r19">Andrade-Salazar JA, Mendoza-Vergara MF, et al. Relación entre conflictos de la adolescencia y habilidades
+                        sociales en adolescentes de una Institución Educativa de Risaralda. Pensam Am. 2020;13(25):52–61.</li>
+                    <li id="r20">Rello CF, Puerta IG, Tejero González CM. Análisis comparativo del efecto de tres programas de sensibilización hacia la discapacidad en Educación Física. Retos. 2018;2041(34):258–62.</li>
+                    <li id="r21">Rello CF, Puertas I, Tejero-Gonzalez C. Cambiando las actitudes hacia la discapacidad: diseño de un programa de sensibilizacion en Educacion Fisica. Retos Nuevas Tend en Educ Física, Deport y Recreación [Internet]. 2020 [cited 2021 Oct 15];37(1):713–21. Available from: <a href="https://dialnet.unirioja.es/servlet/articulo?codigo=7243341">https://dialnet.unirioja.es/servlet/articulo?codigo=7243341</a></li>
+                    <li id="r22">Miller S, Ross S, Cleland J. Medical students’ attitudes towards disability and support for disability in medicine.
+                        Med Teach [Internet]. 2009 [cited 2022 Jan 4];31(6). Available from: <a href="doi.org/10.1080/01421590802516814">doi.org/10.1080/01421590802516814</a></li>
+                    <li id="r23">Verdiales-Lopez DM. La mujer: pieza clave en el desarrollo sostenible. Estrategias contenidas en la Agenda
+                        2030. Espiral Estud sobre Estado y Soc [Internet]. 2021 [cited 2021 Oct 15];82:145–71. Available from: <a href="https://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S1665-05652021000300145">https://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S1665-05652021000300145</a></li>
+                    <li id="r24">Molano-Tobar NJ, Molano-Tobar DX, Chalapud-Narváez LM. La Discapacidad Desde La Percepción De
                         Educadores Y Fisioterapeutas En Un Instituto De Educación. Popayán, Colombia. Comunidad y Salud.
-                        2018;16(1):66–73.
-                    </li>
-                    <li id="r25">Cuervo-Polanco MP. M del P, Maldonado-Salgado H H, Hernández-Romero H H, Carvajal L L,
-                        Camargo-Rojas D D, Castro-Alzate E E, et al. Conocimientos, actitudes y prácticas de cuidadores
-                        de personas con
-                        discapacidad, en procesos de inclusión social en el municipio Madrid, Cundinamarca. Ciencias la
-                        Salud.
+                        2018;16(1):66–73. 
+                        </li>
+                    <li id="r25">Cuervo-Polanco MP. M del P, Maldonado-Salgado H H, Hernández-Romero H H, Carvajal L L, Camargo-Rojas D D, Castro-Alzate E E, et al. Conocimientos, actitudes y prácticas de cuidadores de personas con
+                        discapacidad, en procesos de inclusión social en el municipio Madrid, Cundinamarca. Ciencias la Salud.
                         2015;13(2):177–91.</li>
-                    <li id="r26">Gonzalez J, Cortes R. Actitudes y creencias hacia la discapacidad en clases de
-                        educación física. Una cuestión
+                    <li id="r26">Gonzalez J, Cortes R. Actitudes y creencias hacia la discapacidad en clases de educación física. Una cuestión
                         educativa. Psychol Soc Educ. 2017;8(2):105.</li>
-                    <li id="r27">Otálora-Buitrago A. La inclusión social y la empatía. Equidad y Desarro.
-                        2018;32(32):9–10.</li>
-                    <li id="r28">Solís García P, Borja González V. Actitudes del profesorado de Educación Física hacia
-                        la inclusión de alumnos con discapacidad. Retos. 2021;2041(39):7–12.</li>
-                    <li id="r29">Espinosa-Barajas J, Llado-Larraga D, Navarro-Leal M. Propuesta de un modelo de
-                        inclusión y equidad educativa universitaria, a partir de experiencias de estudiantes con
-                        discapacidad. Rev Cienc UAT [Internet]. 2021
-                        [cited 2021 Oct 15];16(1):116–35. Available from: <a
-                            href="https://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S2007-78582021000200116">https://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S2007-78582021000200116</a>
-                    </li>
-                    <li id="r30">Lopez-Bastias J, Moreno-Rodriguez R, Espada-Chavarria R. El acceso a la universidad en
-                        estudiantes con
-                        discapacidad: la influencia de la orientacion educativa en la eleccion de estudios de grado.
-                        Psychol Soc Educ
-                        [Internet]. 2020 [cited 2021 Oct 15];12(2):1–17. Available from: <a
-                            href="https://doi.org/10.25115/psye.v12i2.2085">https://doi.org/10.25115/psye.v12i2.2085</a>
-                    </li>
+                    <li id="r27">Otálora-Buitrago A. La inclusión social y la empatía. Equidad y Desarro. 2018;32(32):9–10.</li>
+                    <li id="r28">Solís García P, Borja González V. Actitudes del profesorado de Educación Física hacia la inclusión de alumnos con discapacidad. Retos. 2021;2041(39):7–12.</li>
+                    <li id="r29">Espinosa-Barajas J, Llado-Larraga D, Navarro-Leal M. Propuesta de un modelo de inclusión y equidad educativa universitaria, a partir de experiencias de estudiantes con discapacidad. Rev Cienc UAT [Internet]. 2021
+                        [cited 2021 Oct 15];16(1):116–35. Available from: <a href="https://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S2007-78582021000200116">https://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S2007-78582021000200116</a>
+                        </li>
+                    <li id="r30">Lopez-Bastias J, Moreno-Rodriguez R, Espada-Chavarria R. El acceso a la universidad en estudiantes con
+                        discapacidad: la influencia de la orientacion educativa en la eleccion de estudios de grado. Psychol Soc Educ
+                        [Internet]. 2020 [cited 2021 Oct 15];12(2):1–17. Available from: <a href="https://doi.org/10.25115/psye.v12i2.2085">https://doi.org/10.25115/psye.v12i2.2085</a></li>
                 </ol>
 
 

@@ -1,0 +1,17 @@
+body{
+    width: 100%;
+    padding: 5em;
+    margin: 5px;
+}
+.image{
+    text-align: center;
+    image-rendering: optimizeQuality;    
+}
+.image img{
+    width: 100%;
+    height: 100%;
+}
+.image p{
+    font-size: small;
+    text-align: center;
+}

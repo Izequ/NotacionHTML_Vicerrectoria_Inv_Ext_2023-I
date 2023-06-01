@@ -6,381 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>V19-N3-2</title>
-    <link rel="stylesheet" href="">
-    <style>
-        body {
-            padding: 10em;
-            padding-top: 20px;
-            font-family: Times New Roman;
-            color: black;
-        }
-
-        #articulo-derecha {
-            float: left;
-        }
-
-        /* Posiciones de los resumenes */
-
-        .contenedor-general {
-            display: inline-flex;
-            width: 100%;
-        }
-
-        .contenedor-resumen {
-            width: 240%;
-        }
-
-        .contenedor-autor {
-            width: 100%;
-            padding-left: 20px;
-        }
-
-        .hr-resumen {
-            background-color: gray;
-            margin: 0;
-            margin-left: 20px;
-            margin-right: 20px;
-        }
-
-        .resumen-fondo {
-            background-color: #bdd5f1;
-            border-radius: 5px;
-        }
-
-        .titulo-resumen {
-            color: black;
-            font-size: 22px;
-            font-weight: bold;
-            padding: 20px;
-            margin: 0;
-        }
-
-        .texto-resumen {
-            padding: 20px;
-            margin: 0;
-        }
-
-        ul.navbar {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            position: absolute;
-            top: 25em;
-            left: 2em;
-            width: 250px;
-        }
-
-        /* Titulos principales */
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5 {
-            font-family: Times New Roman;
-            text-align: center;
-            font-weight: bold;
-        }
-
-        h1 {
-            color: #29abe3;
-        }
-
-        .categoria_titulo {
-            font-style: italic;
-            color: #ffffff;
-        }
-
-        h3 {
-            font-style: italic;
-            font-weight: bold;
-            color: #707073;
-        }
-
-        .categoria {
-            text-align: center;
-            background-color: #707073;
-            width: 20%;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-            margin: auto;
-        }
-
-        ul.navbar li {
-            background: white;
-            margin: 0.5em 0;
-            padding: 0.3em;
-        }
-
-        /* Enlaces */
-
-        a.link-color:visited {
-            color: white;
-        }
-
-        a.link-color:link {
-            color: white;
-        }
-
-        a.link-color:hover {
-            color: white;
-        }
-
-        a.link-color:hover {
-            border-bottom: 1px solid;
-            background: black;
-        }
-
-        /* Link de referencia */
-
-        a:link {
-            color: #4e00ff;
-        }
-
-        a:visited {
-            color: #003bff;
-        }
-
-        a:focus {
-            border-bottom: 1px solid;
-            background: #98aae4;
-        }
-
-        a:hover {
-            border-bottom: 1px solid;
-            background: #aacefe;
-        }
-
-        /* Etiqueta P */
-
-        p {
-            line-height: normal;
-            text-align: justify;
-            font-size: 18px;
-        }
-
-        p.titulo {
-            color: #29abe3;
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        p.subtitulo {
-            color: #29abe3;
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        /* NUEVO */
-        p.subtitulo-segundo {
-            color: #29abe3;
-            font-style: italic;
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        p.correspondencia {
-            color: black;
-            font-size: 18px;
-            font-style: italic;
-            font-weight: bold;
-        }
-
-        /* NUEVO */
-        p.entrevista {
-            color: black;
-            font-size: 18px;
-            font-style: italic;
-        }
-
-        /* NUEVO */
-        p.subtitulo-tercero {
-            color: #29abe3;
-            font-style: italic;
-            font-size: 18px;
-        }
-
-        p#cabeza {
-            color: #1d71ae;
-            text-align: center;
-        }
-
-        p.autores {
-            font-size: 16px;
-            margin: 0;
-            text-indent: 0em;
-            margin-bottom: 10px;
-        }
-
-        p.forma-citar {
-            text-indent: 0em;
-            text-align: justify;
-            justify-content: center;
-        }
-
-        .cita {
-            text-align: -webkit-center;
-        }
-
-        /* Bold especial para palabras que tienen color seguido de dos puntos
-*/
-
-        /* NUEVO */
-
-        b.subtitulo-segundo {
-            color: #29abe3;
-            font-size: 18px;
-        }
-
-        .contenedor_info {
-            text-align: center;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .info {
-            width: auto;
-        }
-
-        /* Este es para los documentos del dos en adelante *codigo abajo de este comentario* */
-
-        .info-text {
-            text-align: end;
-            margin: 0;
-        }
-
-        /* Uso Exlusico para el primero documento  que es de revision  *codigo abajo de este comentario* */
-
-        .info_text {
-            font-size: 12px;
-            line-height: 100%;
-            text-align: center;
-            margin: 0;
-        }
-
-        .info_hr {
-            margin: 5;
-        }
-
-        /* Fin P */
-        /* Etiqueta Italic */
-
-        i {
-            font-size: 18px
-        }
-
-        i.centrado {
-            font-size: 18px
-        }
-
-        /* LI para las listas */
-
-        li {
-            font-size: 18px;
-            padding-top: 10px;
-            text-align: justify;
-        }
-
-        /* NUEVO */
-        .lista li {
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-
-        hr {
-            background-color: #29abe3;
-            height: 1px;
-        }
-
-        /* Tablas */
-
-        table {
-            border-collapse: collapse;
-            border: 2px solid rgb(0, 0, 0);
-            align-items: center;
-        }
-
-        thead th {
-            border-collapse: collapse;
-            background-color: rgb(179, 179, 179);
-            border: 2px solid rgb(0, 0, 0);
-        }
-
-        tbody td {
-            border-collapse: collapse;
-            text-align: center;
-            border: 2px solid rgb(0, 0, 0);
-        }
-
-        .tipo {
-            color: #ffffff;
-            font-size: 22px;
-            border-radius: 10px 5px 10px 5px;
-            background-color: #696969;
-        }
-
-        img.logos {
-            width: 15px;
-            height: 15px;
-        }
-
-        .image {
-            text-align: center;
-            image-rendering: optimizeQuality;
-        }
-
-        .image p {
-            text-align: center;
-            font-size: small;
-        }
-
-        .logo {
-            width: 300px;
-            height: 80px;
-        }
-
-        .logo2 {
-            width: 300px;
-            height: 50px;
-        }
-
-        /* Anclajes de la pagina */
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* NUEVO */
-        .ecuacion {
-            text-align: center;
-            font-weight: bold;
-            margin: 1px;
-        }
-
-        @media only screen and (min-width:320px) and (max-width:900px) {
-            body {
-                width: 100%;
-                padding: 5em;
-                margin: 5px;
-            }
-
-            .image {
-                text-align: center;
-                image-rendering: optimizeQuality;
-            }
-
-            .image img {
-                width: 100%;
-            }
-
-            .image p {
-                font-size: small;
-                text-align: center;
-            }
-
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/movil.css" media="(min-width:320px) and (max-width:900px)">
 </head>
 
 <body>
@@ -1185,107 +812,50 @@
                 [consultado 15 de enero de 2022]; 15(1). Disponible en: <a
                     href="http://scielo.sld.cu/scielo.php?script=sci_arttext&pid=S1727-897X2017000100011">http://scielo.sld.cu/scielo.php?script=sci_arttext&pid=S1727-897X2017000100011</a>
             </li>
-            <li id="r14">Organización Panamericana de la Salud, Organización Mundial de la Salud. Documento conceptual:
-                Educación para la salud con enfoque integral [Internet]. 2017 [consultado 23 de abril de 2021].
-                Disponible en: <a
-                    href="http://revistadecomunicacionysalud.org/index.php/rcys/article/view/35/42">http://revistadecomunicacionysalud.org/index.php/rcys/article/view/35/42</a>
-            </li>
-            <li id="r15">Valadez-Figueroa IA, Vargas-Valadez V, Fausto-Guerra J, Montes-Barajas R. Modelos de
-                intervención educativa en educación para la salud. En: Vargas-Magaña M. Educación para la salud: los
-                modelos de intervención
+            <li id="r14">Organización Panamericana de la Salud, Organización Mundial de la Salud. Documento conceptual: Educación para la salud con enfoque integral [Internet]. 2017 [consultado 23 de abril de 2021]. Disponible en: <a href="http://revistadecomunicacionysalud.org/index.php/rcys/article/view/35/42">http://revistadecomunicacionysalud.org/index.php/rcys/article/view/35/42</a></li>
+            <li id="r15">Valadez-Figueroa IA, Vargas-Valadez V, Fausto-Guerra J, Montes-Barajas R. Modelos de intervención educativa en educación para la salud. En: Vargas-Magaña M. Educación para la salud: los modelos de intervención
                 y su fundamentación teorica. 1ra ed. Guadalajara: Sindicato de Trabajadores Académicos de la Universidad
                 de Guadalajara; 2015. 62–121 p.</li>
-            <li id="r16">Zea-Bustamante LE. La educación para la salud y la educación popular, una relación posible y
-                necesaria. Rev
-                Fac Nac Salud Pública [Internet]. 2019 [consultado 23 de abril de 2022]; 37 (2). Disponible en: <a
-                    href="http://www.scielo.org.co/pdf/rfnsp/v37n2/0120-386X-rfnsp-37-02-61.pdf">http://www.scielo.org.co/pdf/rfnsp/v37n2/0120-386X-rfnsp-37-02-61.pdf</a>
-            </li>
-            <li id="r17">Cruz-Aguilar E. La educación transformadora en el pensamiento de Paulo Freire. Educere
-                [Internet]. 2020 [consultado 15 de enero de 2022]; 24(78). Disponible en: <a
-                    href="https://www.redalyc.org/articulo.oa?id=35663284002">https://www.redalyc.org/articulo.oa?id=35663284002</a>
-            </li>
-            <li id="r18">Morales-Bonilla R. Conciencia crítica: centro del método Freire para el pensamiento crítico.
-                En: Páez-Martínez R, Rondón-Herrera GM, Trejo-Catalán JH. Formación docente y pensamiento crítico en
-                Paulo Freire. 1ra
+            <li id="r16">Zea-Bustamante LE. La educación para la salud y la educación popular, una relación posible y necesaria. Rev
+                Fac Nac Salud Pública [Internet]. 2019 [consultado 23 de abril de 2022]; 37 (2). Disponible en: <a href="http://www.scielo.org.co/pdf/rfnsp/v37n2/0120-386X-rfnsp-37-02-61.pdf">http://www.scielo.org.co/pdf/rfnsp/v37n2/0120-386X-rfnsp-37-02-61.pdf</a></li>
+            <li id="r17">Cruz-Aguilar E. La educación transformadora en el pensamiento de Paulo Freire. Educere [Internet]. 2020 [consultado 15 de enero de 2022]; 24(78). Disponible en: <a href="https://www.redalyc.org/articulo.oa?id=35663284002">https://www.redalyc.org/articulo.oa?id=35663284002</a></li>
+            <li id="r18">Morales-Bonilla R. Conciencia crítica: centro del método Freire para el pensamiento crítico. En: Páez-Martínez R, Rondón-Herrera GM, Trejo-Catalán JH. Formación docente y pensamiento crítico en Paulo Freire. 1ra
                 ed. Buenos Aires: CLACSO; 2018. p. 83-99.</li>
-            <li id="r19">Rivas-Urrego G, Urrego AJ, Aranque-Escalona JC. Paulo Freire y el pensamiento crítico: palabra
-                y acción en
-                la pedagogía universitarias. Educere [Internet]. 2020 [consultado 15 de enero de 2022]; 24 (2).
-                Disponible en:
-                <a
-                    href="https://revistas.investigacion-upelipb.com/index.php/educare/article/view/1331/1301">https://revistas.investigacion-upelipb.com/index.php/educare/article/view/1331/1301</a>
-            </li>
-            <li id="r20">Bachelor JW. El aula presencial, semipresencial, virtual e invertida: Un estudio comparativo de
-                métodos
-                didácticos en la enseñanza de L2. Rev Educ [Internet]. 2019;43(2):20. <a
-                    href="https://doi.org/10.15517/revedu.v43i2.34014">https://doi.org/10.15517/revedu.v43i2.34014</a>
-            </li>
-            <li id="r21">Garay-Ruiz U, Tejeda-Garitano E, Romero-Andonegi A. Rendimiento y satisfacción de estudiantes
-                universitarios en una comunidad en línea de prácticas. Rev Mex Investig Educ [Internet]. 2017
-                [consultado 15 de enero de 2022]; 22(75). Disponible en: <a
-                    href="https://www.researchgate.net/publication/327175427_Rendimiento_y_satisfaccion_de_estudiantes_universitarios_en_una_comunidad_en_linea_de_practicas">https://www.researchgate.net/publication/</a>
-            </li>
-            <li id="r22">Secretaria General, Secretaria de Servicios Parlamentarios. Reglamento de la ley general de
-                salud en materia
-                de investigación para la salud [Internet]. 2014 [citado el 11 de diciembre de 2021]. Disponible en: <a
-                    href="http://www.diputados.gob.mx/LeyesBiblio/regley/Reg_LGS_MIS.pdf">http://www.diputados.gob.mx/LeyesBiblio/regley/Reg_LGS_MIS.pdf</a>
-            </li>
+            <li id="r19">Rivas-Urrego G, Urrego AJ, Aranque-Escalona JC. Paulo Freire y el pensamiento crítico: palabra y acción en
+                la pedagogía universitarias. Educere [Internet]. 2020 [consultado 15 de enero de 2022]; 24 (2). Disponible en:
+                <a href="https://revistas.investigacion-upelipb.com/index.php/educare/article/view/1331/1301">https://revistas.investigacion-upelipb.com/index.php/educare/article/view/1331/1301</a>
+                </li>
+            <li id="r20">Bachelor JW. El aula presencial, semipresencial, virtual e invertida: Un estudio comparativo de métodos
+                didácticos en la enseñanza de L2. Rev Educ [Internet]. 2019;43(2):20. <a href="https://doi.org/10.15517/revedu.v43i2.34014">https://doi.org/10.15517/revedu.v43i2.34014</a></li>
+            <li id="r21">Garay-Ruiz U, Tejeda-Garitano E, Romero-Andonegi A. Rendimiento y satisfacción de estudiantes universitarios en una comunidad en línea de prácticas. Rev Mex Investig Educ [Internet]. 2017 [consultado 15 de enero de 2022]; 22(75). Disponible en: <a href="https://www.researchgate.net/publication/327175427_Rendimiento_y_satisfaccion_de_estudiantes_universitarios_en_una_comunidad_en_linea_de_practicas">https://www.researchgate.net/publication/</a></li>
+            <li id="r22">Secretaria General, Secretaria de Servicios Parlamentarios. Reglamento de la ley general de salud en materia
+                de investigación para la salud [Internet]. 2014 [citado el 11 de diciembre de 2021]. Disponible en: <a href="http://www.diputados.gob.mx/LeyesBiblio/regley/Reg_LGS_MIS.pdf">http://www.diputados.gob.mx/LeyesBiblio/regley/Reg_LGS_MIS.pdf</a></li>
             <li id="r23">Brito-Arenas TN, Romo-Romero M, Sánchez-Barbosa MA, Araiza-Hernández ML. Intervención educativa
-                de enfermería en el nivel de conocimiento sobre VPH en estudiantes de una secundaria pública de
-                Aguascalientes. Lux Médica [Internet]. 2020 [consultado 15 de enero de 2022];15(43). Disponible en: <a
-                    href="https://revistas.uaa.mx/index.php/luxmedica/article/view/2501">https://revistas.uaa.mx/index.php/luxmedica/article/view/2501</a>
-            </li>
-            <li id="r24">Ventura-Morales B, Castellanos-Rojas M, Chávez-Montes de Oca VG, Sánchez-Valdivieso EA.
-                Estrategia
+                de enfermería en el nivel de conocimiento sobre VPH en estudiantes de una secundaria pública de Aguascalientes. Lux Médica [Internet]. 2020 [consultado 15 de enero de 2022];15(43). Disponible en: <a href="https://revistas.uaa.mx/index.php/luxmedica/article/view/2501">https://revistas.uaa.mx/index.php/luxmedica/article/view/2501</a> </li>
+            <li id="r24">Ventura-Morales B, Castellanos-Rojas M, Chávez-Montes de Oca VG, Sánchez-Valdivieso EA. Estrategia
                 educativa breve para mantenimiento del conocimiento sobre el virus del papiloma humano y prevención del
-                cáncer en adolescentes. Clin Invest Ginecol Obstet [Internet]. 2017 [consultado 15 de enero de 2022];
-                44(1).
-                Disponible en: <a
-                    href="https://www.sciencedirect.com/science/article/abs/pii/S0210573X15000660?via%3Dihub">https://www.sciencedirect.com/science/article/abs/pii/S0210573X15000660?via%3Dihub</a>
-            </li>
-            <li id="r25">Miniet-Castillo A, Otero-Naranja S, Tamayo-González OA, Valdez-Tasé E. Intervención educativa
-                para internos sobre infección por virus papiloma humano. Centro Penitenciario Provincial,Granma,
-                2013-2014. Mul
-                Med [Internet]. 2017 [consultado 15 de enero de 2022]; 21(1). Disponible en: <a
-                    href="https://www.medigraphic.com/cgi-bin/new/resumen.cgi?IDARTICULO=71824">https://www.medigraphic.com/cgi-bin/new/resumen.cgi?IDARTICULO=71824</a>
-            </li>
-            <li id="r26">. Ayora-Apolo DC, Guzmán-Cruz MM. Conocimientos, actitudes y prácticas de prevención del virus
-                del papiloma humano en estudiantes de colegios nocturnos. Enfermería Investiga. [Internet]. 2017
-                [consultado 15 de
-                enero de 2022]; 2(4). Disponible en: <a
-                    href="https://dialnet.unirioja.es/servlet/articulo?codigo=6233759">https://dialnet.unirioja.es/servlet/articulo?codigo=6233759</a>
-            </li>
-            <li id="r27">Hernández-Márquez CI, Brito-García I, Yunes-Díaz EM, Hernández-Márquez E. Conocimiento y
-                creencias
+                cáncer en adolescentes. Clin Invest Ginecol Obstet [Internet]. 2017 [consultado 15 de enero de 2022]; 44(1).
+                Disponible en: <a href="https://www.sciencedirect.com/science/article/abs/pii/S0210573X15000660?via%3Dihub">https://www.sciencedirect.com/science/article/abs/pii/S0210573X15000660?via%3Dihub</a></li>
+            <li id="r25">Miniet-Castillo A, Otero-Naranja S, Tamayo-González OA, Valdez-Tasé E. Intervención educativa para internos sobre infección por virus papiloma humano. Centro Penitenciario Provincial,Granma, 2013-2014. Mul
+                Med [Internet]. 2017 [consultado 15 de enero de 2022]; 21(1). Disponible en: <a href="https://www.medigraphic.com/cgi-bin/new/resumen.cgi?IDARTICULO=71824">https://www.medigraphic.com/cgi-bin/new/resumen.cgi?IDARTICULO=71824</a></li>
+            <li id="r26">. Ayora-Apolo DC, Guzmán-Cruz MM. Conocimientos, actitudes y prácticas de prevención del virus del papiloma humano en estudiantes de colegios nocturnos. Enfermería Investiga. [Internet]. 2017 [consultado 15 de
+                enero de 2022]; 2(4). Disponible en: <a href="https://dialnet.unirioja.es/servlet/articulo?codigo=6233759">https://dialnet.unirioja.es/servlet/articulo?codigo=6233759</a></li>
+            <li id="r27">Hernández-Márquez CI, Brito-García I, Yunes-Díaz EM, Hernández-Márquez E. Conocimiento y creencias
                 de mujeres del estado de Morelos sobre el virus del papiloma humano. Rev Cubana Enferm [Internet]. 2016
-                [consultado 15 de enero de 2022]; 32(4). Disponible en: <a
-                    href="http://www.revenfermeria.sld.cu/index.php/enf/article/view/329">http://www.revenfermeria.sld.cu/index.php/enf/article/view/329</a>
-            </li>
-            <li id="r28">Hernández-Márquez CI, Salinas-Urbina AA, Hernández-Giron C, Cruz-Valdez A. Conocimientos sobre
-                virus
+                [consultado 15 de enero de 2022]; 32(4). Disponible en: <a href="http://www.revenfermeria.sld.cu/index.php/enf/article/view/329">http://www.revenfermeria.sld.cu/index.php/enf/article/view/329</a></li>
+            <li id="r28">Hernández-Márquez CI, Salinas-Urbina AA, Hernández-Giron C, Cruz-Valdez A. Conocimientos sobre virus
                 del papiloma humano (VPH) y aceptación de auto-toma vaginal en mujeres mexicanas. Rev Salud Pública
-                [Internet]. 2014 [consultado 15 de enero de 2022]; 16(5). Disponible en: <a
-                    href="https://www.crossref.org/iPage?-doi=10.15446%2Frsap.v16n5.30071">https://www.crossref.org/iPage?-doi=10.15446%2Frsap.v16n5.30071</a>
-            </li>
-            <li id="r29">. Gomes Días-Pedrosa AC, Caramelo F, Patrício M, Camarneiro AP, Massano-Cardoso S, Rui- PitaJ.
-                Impacto
+                [Internet]. 2014 [consultado 15 de enero de 2022]; 16(5). Disponible en: <a href="https://www.crossref.org/iPage?-doi=10.15446%2Frsap.v16n5.30071">https://www.crossref.org/iPage?-doi=10.15446%2Frsap.v16n5.30071</a></li>
+            <li id="r29">. Gomes Días-Pedrosa AC, Caramelo F, Patrício M, Camarneiro AP, Massano-Cardoso S, Rui- PitaJ. Impacto
                 de um programa de intervenção educativa nos comportamentos sexuais de jovens universitários. Rev Enferm
-                Ref [Internet]. 2017 [consultado 15 de enero de 2022]; 6(13). Disponible en: <a
-                    href="http://www.scielo.mec.pt/scielo.php?script=sci_arttext&pid=S0874-02832017000200008">http://www.scielo.mec.pt/scielo.php?script=sci_arttext&pid=S0874-02832017000200008</a>
-            </li>
-            <li id="r30">Lacerda-Pinheiro PL, Miranda-Cadete MM. El conocimiento de los adolescentes escolarizados sobre
-                el virus del
-                papiloma humano: revisión integrativa. Enferm. glob. [Internet]. 2019 [consultado 15 de enero de 2022];
-                18(56).
-                Disponible en: <a
-                    href="http://scielo.isciii.es/scielo.php?script=sci_arttext&pid=S1695-61412019000400020&lng=es">http://scielo.isciii.es/scielo.php?script=sci_arttext&pid=S1695-61412019000400020&lng=es</a>
-            </li>
-            <li id="r31">Gómez SM, Agudelo-Ramírez A, Pradilla-Serrano ÁS, García-Hincapié J. Estrategias lúdicas para
-                aumentar
+                Ref [Internet]. 2017 [consultado 15 de enero de 2022]; 6(13). Disponible en: <a href="http://www.scielo.mec.pt/scielo.php?script=sci_arttext&pid=S0874-02832017000200008">http://www.scielo.mec.pt/scielo.php?script=sci_arttext&pid=S0874-02832017000200008</a>
+                </li>
+            <li id="r30">Lacerda-Pinheiro PL, Miranda-Cadete MM. El conocimiento de los adolescentes escolarizados sobre el virus del
+                papiloma humano: revisión integrativa. Enferm. glob. [Internet]. 2019 [consultado 15 de enero de 2022]; 18(56).
+                Disponible en: <a href="http://scielo.isciii.es/scielo.php?script=sci_arttext&pid=S1695-61412019000400020&lng=es">http://scielo.isciii.es/scielo.php?script=sci_arttext&pid=S1695-61412019000400020&lng=es</a></li>
+            <li id="r31">Gómez SM, Agudelo-Ramírez A, Pradilla-Serrano ÁS, García-Hincapié J. Estrategias lúdicas para aumentar
                 el conocimiento de un grupo de adolescentes sobre el virus del papiloma humano. Duazary [Internet]. 2019
-                [consultado 15 de enero de 2022]; 16(2). Disponible en: <a
-                    href="https://revistas.unimagdalena.edu.co/index.php/duazary/article/view/2741 ">https://revistas.unimagdalena.edu.co/index.php/duazary/article/view/2741
-                </a></li>
+                [consultado 15 de enero de 2022]; 16(2). Disponible en: <a href="https://revistas.unimagdalena.edu.co/index.php/duazary/article/view/2741 ">https://revistas.unimagdalena.edu.co/index.php/duazary/article/view/2741 </a></li>
         </ol>
 
 

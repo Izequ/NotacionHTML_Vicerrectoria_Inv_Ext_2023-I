@@ -6,381 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>V19-N3-6</title>
-    <link rel="stylesheet" href="">
-    <style>
-        body {
-            padding: 10em;
-            padding-top: 20px;
-            font-family: Times New Roman;
-            color: black;
-        }
-
-        #articulo-derecha {
-            float: left;
-        }
-
-        /* Posiciones de los resumenes */
-
-        .contenedor-general {
-            display: inline-flex;
-            width: 100%;
-        }
-
-        .contenedor-resumen {
-            width: 240%;
-        }
-
-        .contenedor-autor {
-            width: 100%;
-            padding-left: 20px;
-        }
-
-        .hr-resumen {
-            background-color: gray;
-            margin: 0;
-            margin-left: 20px;
-            margin-right: 20px;
-        }
-
-        .resumen-fondo {
-            background-color: #bdd5f1;
-            border-radius: 5px;
-        }
-
-        .titulo-resumen {
-            color: black;
-            font-size: 22px;
-            font-weight: bold;
-            padding: 20px;
-            margin: 0;
-        }
-
-        .texto-resumen {
-            padding: 20px;
-            margin: 0;
-        }
-
-        ul.navbar {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            position: absolute;
-            top: 25em;
-            left: 2em;
-            width: 250px;
-        }
-
-        /* Titulos principales */
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5 {
-            font-family: Times New Roman;
-            text-align: center;
-            font-weight: bold;
-        }
-
-        h1 {
-            color: #29abe3;
-        }
-
-        .categoria_titulo {
-            font-style: italic;
-            color: #ffffff;
-        }
-
-        h3 {
-            font-style: italic;
-            font-weight: bold;
-            color: #707073;
-        }
-
-        .categoria {
-            text-align: center;
-            background-color: #707073;
-            width: 20%;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-            margin: auto;
-        }
-
-        ul.navbar li {
-            background: white;
-            margin: 0.5em 0;
-            padding: 0.3em;
-        }
-
-        /* Enlaces */
-
-        a.link-color:visited {
-            color: white;
-        }
-
-        a.link-color:link {
-            color: white;
-        }
-
-        a.link-color:hover {
-            color: white;
-        }
-
-        a.link-color:hover {
-            border-bottom: 1px solid;
-            background: black;
-        }
-
-        /* Link de referencia */
-
-        a:link {
-            color: #4e00ff;
-        }
-
-        a:visited {
-            color: #003bff;
-        }
-
-        a:focus {
-            border-bottom: 1px solid;
-            background: #98aae4;
-        }
-
-        a:hover {
-            border-bottom: 1px solid;
-            background: #aacefe;
-        }
-
-        /* Etiqueta P */
-
-        p {
-            line-height: normal;
-            text-align: justify;
-            font-size: 18px;
-        }
-
-        p.titulo {
-            color: #29abe3;
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        p.subtitulo {
-            color: #29abe3;
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        /* NUEVO */
-        p.subtitulo-segundo {
-            color: #29abe3;
-            font-style: italic;
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        p.correspondencia {
-            color: black;
-            font-size: 18px;
-            font-style: italic;
-            font-weight: bold;
-        }
-
-        /* NUEVO */
-        p.entrevista {
-            color: black;
-            font-size: 18px;
-            font-style: italic;
-        }
-
-        /* NUEVO */
-        p.subtitulo-tercero {
-            color: #29abe3;
-            font-style: italic;
-            font-size: 18px;
-        }
-
-        p#cabeza {
-            color: #1d71ae;
-            text-align: center;
-        }
-
-        p.autores {
-            font-size: 16px;
-            margin: 0;
-            text-indent: 0em;
-            margin-bottom: 10px;
-        }
-
-        p.forma-citar {
-            text-indent: 0em;
-            text-align: justify;
-            justify-content: center;
-        }
-
-        .cita {
-            text-align: -webkit-center;
-        }
-
-        /* Bold especial para palabras que tienen color seguido de dos puntos
-*/
-
-        /* NUEVO */
-
-        b.subtitulo-segundo {
-            color: #29abe3;
-            font-size: 18px;
-        }
-
-        .contenedor_info {
-            text-align: center;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .info {
-            width: auto;
-        }
-
-        /* Este es para los documentos del dos en adelante *codigo abajo de este comentario* */
-
-        .info-text {
-            text-align: end;
-            margin: 0;
-        }
-
-        /* Uso Exlusico para el primero documento  que es de revision  *codigo abajo de este comentario* */
-
-        .info_text {
-            font-size: 12px;
-            line-height: 100%;
-            text-align: center;
-            margin: 0;
-        }
-
-        .info_hr {
-            margin: 5;
-        }
-
-        /* Fin P */
-        /* Etiqueta Italic */
-
-        i {
-            font-size: 18px
-        }
-
-        i.centrado {
-            font-size: 18px
-        }
-
-        /* LI para las listas */
-
-        li {
-            font-size: 18px;
-            padding-top: 10px;
-            text-align: justify;
-        }
-
-        /* NUEVO */
-        .lista li {
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-
-        hr {
-            background-color: #29abe3;
-            height: 1px;
-        }
-
-        /* Tablas */
-
-        table {
-            border-collapse: collapse;
-            border: 2px solid rgb(0, 0, 0);
-            align-items: center;
-        }
-
-        thead th {
-            border-collapse: collapse;
-            background-color: rgb(179, 179, 179);
-            border: 2px solid rgb(0, 0, 0);
-        }
-
-        tbody td {
-            border-collapse: collapse;
-            text-align: center;
-            border: 2px solid rgb(0, 0, 0);
-        }
-
-        .tipo {
-            color: #ffffff;
-            font-size: 22px;
-            border-radius: 10px 5px 10px 5px;
-            background-color: #696969;
-        }
-
-        img.logos {
-            width: 15px;
-            height: 15px;
-        }
-
-        .image {
-            text-align: center;
-            image-rendering: optimizeQuality;
-        }
-
-        .image p {
-            text-align: center;
-            font-size: small;
-        }
-
-        .logo {
-            width: 300px;
-            height: 80px;
-        }
-
-        .logo2 {
-            width: 300px;
-            height: 50px;
-        }
-
-        /* Anclajes de la pagina */
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* NUEVO */
-        .ecuacion {
-            text-align: center;
-            font-weight: bold;
-            margin: 1px;
-        }
-
-        @media only screen and (min-width:320px) and (max-width:900px) {
-            body {
-                width: 100%;
-                padding: 5em;
-                margin: 5px;
-            }
-
-            .image {
-                text-align: center;
-                image-rendering: optimizeQuality;
-            }
-
-            .image img {
-                width: 100%;
-            }
-
-            .image p {
-                font-size: small;
-                text-align: center;
-            }
-
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/movil.css" media="(min-width:320px) and (max-width:900px)">
 
 </head>
 
@@ -1277,193 +904,85 @@
         <p class="titulo"> Referencias </p>
 
         <ol class="lista">
-            <li id="r1">Hernández-Tejedor A, Martín Delgado MC. Una crisis de ética dentro de la crisis sanitaria por la
-                COVID-19.
-                Med Intensiva (Engl Ed). 2021 Mar 26;45(9):563-5. <a
-                    href="https://doi.org/10.1016/j.medin.2021.03.006">https://doi.org/10.1016/j.medin.2021.03.006</a>
-            </li>
-            <li id="r2">Kokkinos CM, Tsouloupas CN, Voulgaridou I. The effects of perceived psychological, educational,
-                and financial impact of COVID-19 pandemic on Greek university students' satisfaction with life through
-                Mental
-                Health. Journal of Affective Disorders. 2022 Mar; 300:289-95. <a
-                    href="https://doi.org/10.1016/j.jad.2021.12.114">https://doi.org/10.1016/j.jad.2021.12.114</a></li>
-            <li id="r3">Mañón-Garibay GJ. La pandemia COVID-19 y la nueva relación con la muerte. Revista del Posgrado
-                en Derecho. 2020 nov 21;(13):56. <a
-                    href="https://doi.org/10.22201/ppd.26831783e.2020.13.150">https://doi.org/10.22201/ppd.26831783e.2020.13.150</a>
-            </li>
-            <li id="r4">Grace MK. COVID-19 bereavement, depressive symptoms, and binge drinking. SSM - Mental Health.
-                2021
-                Dec; 1:100041. <a
-                    href="https://doi.org/10.1016/j.ssmmh.2021.100041">https://doi.org/10.1016/j.ssmmh.2021.100041</a>
-            </li>
-            <li id="r5">Kumar RM. The Many Faces of Grief: A Systematic Literature Review of Grief During the COVID-19
-                Pandemic. Illness, Crisis & Loss. 2021 Aug 16;105413732110380. <a
-                    href="https://doi.org/10.1177/10541373211038084">https://doi.org/10.1177/10541373211038084</a></li>
-            <li id="r6">Boelen PA, Lenferink LIM. Symptoms of prolonged grief, posttraumatic stress, and depression in
-                recently
-                bereaved people: symptom profiles, predictive value, and cognitive behavioural correlates. Social
-                Psychiatry
-                and Psychiatric Epidemiology. 2019 Sep 18;55(6):765–77. <a
-                    href="https://doi.org/10.1007/s00127-019-01776-w">https://doi.org/10.1007/s00127-019-01776-w</a>
-            </li>
+            <li id="r1">Hernández-Tejedor A, Martín Delgado MC. Una crisis de ética dentro de la crisis sanitaria por la COVID-19.
+                Med Intensiva (Engl Ed). 2021 Mar 26;45(9):563-5. <a href="https://doi.org/10.1016/j.medin.2021.03.006">https://doi.org/10.1016/j.medin.2021.03.006</a></li>
+            <li id="r2">Kokkinos CM, Tsouloupas CN, Voulgaridou I. The effects of perceived psychological, educational, and financial impact of COVID-19 pandemic on Greek university students' satisfaction with life through Mental
+                Health. Journal of Affective Disorders. 2022 Mar; 300:289-95. <a href="https://doi.org/10.1016/j.jad.2021.12.114">https://doi.org/10.1016/j.jad.2021.12.114</a></li>
+            <li id="r3">Mañón-Garibay GJ. La pandemia COVID-19 y la nueva relación con la muerte. Revista del Posgrado en Derecho. 2020 nov 21;(13):56. <a href="https://doi.org/10.22201/ppd.26831783e.2020.13.150">https://doi.org/10.22201/ppd.26831783e.2020.13.150</a></li>
+            <li id="r4">Grace MK. COVID-19 bereavement, depressive symptoms, and binge drinking. SSM - Mental Health. 2021
+                Dec; 1:100041. <a href="https://doi.org/10.1016/j.ssmmh.2021.100041">https://doi.org/10.1016/j.ssmmh.2021.100041</a>
+                </li>
+            <li id="r5">Kumar RM. The Many Faces of Grief: A Systematic Literature Review of Grief During the COVID-19 Pandemic. Illness, Crisis & Loss. 2021 Aug 16;105413732110380. <a href="https://doi.org/10.1177/10541373211038084">https://doi.org/10.1177/10541373211038084</a></li>
+            <li id="r6">Boelen PA, Lenferink LIM. Symptoms of prolonged grief, posttraumatic stress, and depression in recently
+                bereaved people: symptom profiles, predictive value, and cognitive behavioural correlates. Social Psychiatry
+                and Psychiatric Epidemiology. 2019 Sep 18;55(6):765–77. <a href="https://doi.org/10.1007/s00127-019-01776-w">https://doi.org/10.1007/s00127-019-01776-w</a></li>
             <li id="r7">Buitrago-Ramírez F, Ciurana-Misol R, Fernández-Alonso MdelC, Tizón JL. Pandemia de la COVID-19 y
-                salud mental: reflexiones iniciales desde la atención primaria de salud española. Atención Primaria.
-                Jul;
-                2021;53(1):89-101. <a
-                    href="https://doi.org/10.1016/j.aprim.2020.06.006">https://doi.org/10.1016/j.aprim.2020.06.006</a>
-            </li>
-            <li id="r8">Montoya Carrasquilla J. Pérdida, aflicción y luto: manual para la recuperación. México Trillas;
-                2012.</li>
-            <li id="r9">Palacio Valencia MC, Bernal Orozco F. El duelo por muerte: la intersección entre prácticas
-                culturales, rituales
-                sociales y expresiones emocionales. Tempus Psicológico. 2020 May 30;2(1):88-107. <a
-                    href="https://doi.org/10.30554/tempuspsi.2.1.2595.2019">https://doi.org/10.30554/tempuspsi.2.1.2595.2019</a>
-            </li>
-            <li id="r10">Schwerdtle PM, De Clerck V, Plummer V. Experiences of Ebola Survivors: Causes of Distress and
-                Sources
-                of Resilience. Prehospital and Disaster Medicine. Cambridge University Press; 2017;32(3):234–9. <a
-                    href="https://doi.org/10.1017/S1049023X17000073">https://doi.org/10.1017/S1049023X17000073</a></li>
-            <li id="r11">Diolaiuti F, Marazziti D, Beatino MF, Mucci F, Pozza A. Impact and consequences of COVID-19
-                pandemic
+                salud mental: reflexiones iniciales desde la atención primaria de salud española. Atención Primaria. Jul;
+                2021;53(1):89-101. <a href="https://doi.org/10.1016/j.aprim.2020.06.006">https://doi.org/10.1016/j.aprim.2020.06.006</a></li>
+            <li id="r8">Montoya Carrasquilla J. Pérdida, aflicción y luto: manual para la recuperación. México Trillas; 2012.</li>
+            <li id="r9">Palacio Valencia MC, Bernal Orozco F. El duelo por muerte: la intersección entre prácticas culturales, rituales
+                sociales y expresiones emocionales. Tempus Psicológico. 2020 May 30;2(1):88-107. <a href="https://doi.org/10.30554/tempuspsi.2.1.2595.2019">https://doi.org/10.30554/tempuspsi.2.1.2595.2019</a></li>
+            <li id="r10">Schwerdtle PM, De Clerck V, Plummer V. Experiences of Ebola Survivors: Causes of Distress and Sources
+                of Resilience. Prehospital and Disaster Medicine. Cambridge University Press; 2017;32(3):234–9. <a href="https://doi.org/10.1017/S1049023X17000073">https://doi.org/10.1017/S1049023X17000073</a></li>
+            <li id="r11">Diolaiuti F, Marazziti D, Beatino MF, Mucci F, Pozza A. Impact and consequences of COVID-19 pandemic
                 on complicated grief and persistent complex bereavement disorder. Psychiatry Research. 2021 Mar;113916.
-                <a
-                    href="https://doi.org/10.1016/j.psychres.2021.113916">https://doi.org/10.1016/j.psychres.2021.113916</a>
-            </li>
-            <li id="r12">Barbaras R. La fenomenología como dinámica de la manifestación. Aporía Revista Internacional de
-                Investigaciones Filosóficas. 2019 Aug 2;3(Especial):48-68. <a
-                    href="https://doi.org/10.7764/aporia.3-Especial.1931">https://doi.org/10.7764/aporia.3-Especial.1931</a>
-            </li>
-            <li id="r13">Morley J. Phenomenology in nursing studies: New perspectives – Commentary. International
-                Journal of Nursing Studies. 2019 May; 93:163–7. <a
-                    href="https://doi.org/10.1016/j.ijnurstu.2019.02.002">https://doi.org/10.1016/j.ijnurstu.2019.02.002</a>
-            </li>
-            <li id="r14">Martínez-Pérez AM. “Quedarse madre”. Maternidad y duelo en el proceso de
-                salud-enfermedad-cuidado.
-                CMS [Internet]. 13 de mayo de 2022 [citado 8 de julio de 2022];61(3):57-65. <a
-                    href="https://doi.org/10.56116/cms.v61.n3.s1.2021.86">https://doi.org/10.56116/cms.v61.n3.s1.2021.86</a>
-            </li>
-            <li id="r15">Mariano-Juárez L. Etnografías de la Muerte y las Culturas en América Latina, de Juan Antonio
-                Flores Martos
-                y Luisa Abad González, Coords. AIBR, Revista de Antropologia Iberoamericana. 2008 May 1;03(02).
-                Recuperado de: <a
-                    href="https://www.redalyc.org/articulo.oa?id=62330210">https://www.redalyc.org/articulo.oa?id=62330210</a>
-            </li>
-            <li id="r16">Johnson MC, Saletti-Cuesta L, Tumas N. Emociones, preocupaciones y reflexiones frente a la
-                pandemia del
-                COVID-19 en Argentina. Ciência & Saúde Coletiva. 2020 Jun;25(suppl 1):2447–56. Disponible en: <a
-                    href="https://doi.org/10.1590/1413-81232020256.1.10472020">https://doi.org/10.1590/1413-81232020256.1.10472020</a>
-            </li>
-            <li id="r17">. De Boise S, Hearn J. Are men getting more emotional? Critical sociological perspectives on
-                men, masculinities
-                and emotions. The Sociological Review. 2017 Jan 25;65(4):779–96. <a
-                    href="https://doi.org/10.1177/0038026116686500">https://doi.org/10.1177/0038026116686500</a></li>
-            <li id="r18">Piscitello GM, Martin S. Spirituality, Religion, and Medicine Education for Internal Medicine
-                Residents. Am J Hosp Palliat Med. 2020 [acceso: 06/10/2020];37(4):272–7. Disponible en: <a
-                    href=" https://doi.org/10.1177/1049909119872752"> https://doi.org/10.1177/1049909119872752</a></li>
-            <li id="r19">Ali M. COVID-19 Epidemic and Spirituality: A Review of the Benefits of Religion in Times of
-                Crisis.
-                Jundishapur J Chronic Dis Care. 2020 [acceso: 17/09/2020]; 9(2): e104260. Disponible en: <a
-                    href="https://doi.org/10.5812/jjcdc.104260">https://doi.org/10.5812/jjcdc.104260</a>
-            </li>
-            <li id="r20">Mamani-Benito O, Carranza-Esteban R, Turpo-Chaparro J, White M, Pichén-Fernández J. Evidencias
-                iniciales de validez y confiabilidad en población peruana de una escala de repercusiones en las
-                prácticas religiosas
+                <a href="https://doi.org/10.1016/j.psychres.2021.113916">https://doi.org/10.1016/j.psychres.2021.113916</a></li>
+            <li id="r12">Barbaras R. La fenomenología como dinámica de la manifestación. Aporía Revista Internacional de Investigaciones Filosóficas. 2019 Aug 2;3(Especial):48-68. <a href="https://doi.org/10.7764/aporia.3-Especial.1931">https://doi.org/10.7764/aporia.3-Especial.1931</a></li>
+            <li id="r13">Morley J. Phenomenology in nursing studies: New perspectives – Commentary. International Journal of Nursing Studies. 2019 May; 93:163–7. <a href="https://doi.org/10.1016/j.ijnurstu.2019.02.002">https://doi.org/10.1016/j.ijnurstu.2019.02.002</a></li>
+            <li id="r14">Martínez-Pérez AM. “Quedarse madre”. Maternidad y duelo en el proceso de salud-enfermedad-cuidado.
+                CMS [Internet]. 13 de mayo de 2022 [citado 8 de julio de 2022];61(3):57-65. <a href="https://doi.org/10.56116/cms.v61.n3.s1.2021.86">https://doi.org/10.56116/cms.v61.n3.s1.2021.86</a></li>
+            <li id="r15">Mariano-Juárez L. Etnografías de la Muerte y las Culturas en América Latina, de Juan Antonio Flores Martos
+                y Luisa Abad González, Coords. AIBR, Revista de Antropologia Iberoamericana. 2008 May 1;03(02). Recuperado de: <a href="https://www.redalyc.org/articulo.oa?id=62330210">https://www.redalyc.org/articulo.oa?id=62330210</a></li>
+            <li id="r16">Johnson MC, Saletti-Cuesta L, Tumas N. Emociones, preocupaciones y reflexiones frente a la pandemia del
+                COVID-19 en Argentina. Ciência & Saúde Coletiva. 2020 Jun;25(suppl 1):2447–56. Disponible en: <a href="https://doi.org/10.1590/1413-81232020256.1.10472020">https://doi.org/10.1590/1413-81232020256.1.10472020</a>
+                </li>
+            <li id="r17">. De Boise S, Hearn J. Are men getting more emotional? Critical sociological perspectives on men, masculinities
+                and emotions. The Sociological Review. 2017 Jan 25;65(4):779–96. <a href="https://doi.org/10.1177/0038026116686500">https://doi.org/10.1177/0038026116686500</a></li>
+            <li id="r18">Piscitello GM, Martin S. Spirituality, Religion, and Medicine Education for Internal Medicine Residents. Am J Hosp Palliat Med. 2020 [acceso: 06/10/2020];37(4):272–7. Disponible en: <a href=" https://doi.org/10.1177/1049909119872752"> https://doi.org/10.1177/1049909119872752</a></li>
+            <li id="r19">Ali M. COVID-19 Epidemic and Spirituality: A Review of the Benefits of Religion in Times of Crisis.
+                Jundishapur J Chronic Dis Care. 2020 [acceso: 17/09/2020]; 9(2): e104260. Disponible en: <a href="https://doi.org/10.5812/jjcdc.104260">https://doi.org/10.5812/jjcdc.104260</a>
+                </li>
+            <li id="r20">Mamani-Benito O, Carranza-Esteban R, Turpo-Chaparro J, White M, Pichén-Fernández J. Evidencias iniciales de validez y confiabilidad en población peruana de una escala de repercusiones en las prácticas religiosas
                 a causa de la COVID-19 (ERPR-Cov19). Revista Cubana de Enfermería [Internet]. 2020 [citado 8 Jul 2022];
-                36 Disponible en: <a
-                    href="http://revenfermeria.sld.cu/index.php/enf/article/view/4107">http://revenfermeria.sld.cu/index.php/enf/article/view/4107</a>
+                36 Disponible en: <a href="http://revenfermeria.sld.cu/index.php/enf/article/view/4107">http://revenfermeria.sld.cu/index.php/enf/article/view/4107</a></li>
+            <li id="r21">Manjula-Bai H. The Socio-Economic Implications of the Coronavirus Pandemic (COVID-19): A Review.
+                ComFin Research. 2020 Oct 1;8(4):8–17. <a href="https://doi.org/10.34293/commerce.v8i4.3293">https://doi.org/10.34293/commerce.v8i4.3293</a></li>
+            <li id="r22">Huerta-González J. "la familia ante la pandemia por la covid-19." Rev Mex Med Fam 7 (2020): 109-14. <a href="https://doi.org/10.24875/RMF.20000130">https://doi.org/10.24875/RMF.20000130</a>
             </li>
-            <li id="r21">Manjula-Bai H. The Socio-Economic Implications of the Coronavirus Pandemic (COVID-19): A
-                Review.
-                ComFin Research. 2020 Oct 1;8(4):8–17. <a
-                    href="https://doi.org/10.34293/commerce.v8i4.3293">https://doi.org/10.34293/commerce.v8i4.3293</a>
-            </li>
-            <li id="r22">Huerta-González J. "la familia ante la pandemia por la covid-19." Rev Mex Med Fam 7 (2020):
-                109-14. <a href="https://doi.org/10.24875/RMF.20000130">https://doi.org/10.24875/RMF.20000130</a>
-            </li>
-            <li id="r23">García-Hernández AM. Duelo y confinamiento. Ene. 2020;14(1):1414.Disponible en: <a
-                    href="http://scielo.isciii.es/scielo.php?script=sci_arttext&pid=S1988-348X2020000100004&lng=es">http://scielo.isciii.es/scielo.php?script=sci_arttext&pid=S1988-348X2020000100004&lng=es</a>
-            </li>
-            <li id="r24">Mitima-Verloop HB, Mooren TTM, Boelen PA. Facilitating grief: An exploration of the function of
-                funerals
-                and rituals in relation to grief reactions. Death Studies. 2019 Nov 11;1–11. <a
-                    href="https://doi.org/10.1080/07481187.2019.1686090">https://doi.org/10.1080/07481187.2019.1686090</a>
-            </li>
-            <li id="r25">Kokou-Kpolou CK. Letter to the Editor: Prolonged grief disorder, posttraumatic stress disorder,
-                and depression following traffic accidents among bereaved Balinese family members: Prevalence, latent
-                classes and cultural correlates. Journal of Affective Disorders. 2021 Dec;295:1–2. <a
-                    href="https://doi.org/10.1016/j.jad.2021.05.085">https://doi.org/10.1016/j.jad.2021.05.085</a></li>
-            <li id="r26">William-Worden J, Aparicio A, Sánchez Barberán G. El tratamiento del duelo: asesoramiento
-                psicológico y
+            <li id="r23">García-Hernández AM. Duelo y confinamiento. Ene. 2020;14(1):1414.Disponible en: <a href="http://scielo.isciii.es/scielo.php?script=sci_arttext&pid=S1988-348X2020000100004&lng=es">http://scielo.isciii.es/scielo.php?script=sci_arttext&pid=S1988-348X2020000100004&lng=es</a></li>
+            <li id="r24">Mitima-Verloop HB, Mooren TTM, Boelen PA. Facilitating grief: An exploration of the function of funerals
+                and rituals in relation to grief reactions. Death Studies. 2019 Nov 11;1–11. <a href="https://doi.org/10.1080/07481187.2019.1686090">https://doi.org/10.1080/07481187.2019.1686090</a></li>
+            <li id="r25">Kokou-Kpolou CK. Letter to the Editor: Prolonged grief disorder, posttraumatic stress disorder, and depression following traffic accidents among bereaved Balinese family members: Prevalence, latent classes and cultural correlates. Journal of Affective Disorders. 2021 Dec;295:1–2. <a href="https://doi.org/10.1016/j.jad.2021.05.085">https://doi.org/10.1016/j.jad.2021.05.085</a></li>
+            <li id="r26">William-Worden J, Aparicio A, Sánchez Barberán G. El tratamiento del duelo: asesoramiento psicológico y
                 terapia. Barcelona; México: Paidós; 2010.</li>
-            <li id="r27">García-Hernández AM, Rodríguez-Álvaro M, Brito-Brito PR, Fernández-Gutiérrez DA,
-                Martínez-Alberto
-                CE, Marrero-González CM. Duelo adaptativo, no adaptativo y continuidad de vínculos. Revista ENE de
-                Enfermería. 2021; 15(1). Recuperado de <a
-                    href="http://ene-nfermeria.org/ojs/index.php/ENE/article/view/1242">http://ene-nfermeria.org/ojs/index.php/ENE/article/view/1242</a>
-            </li>
-            <li id="r28">Wallace CL, Wladkowski SP, Gibson A, White P. Grief during the COVID-19 pandemic:
-                Considerations
-                for palliative care providers. Journal of Pain and Symptom Management. 2020 Apr;60(1). <a
-                    href="https://doi.org/10.1016/j.jpainsymman.2020.04.012">https://doi.org/10.1016/j.jpainsymman.2020.04.012</a>
-            </li>
-            <li id="r29">Lacasta-Reverte Ma, Lacasta M, Torrijos MT, López-Pérez Y, Carracedo Sanchidrián D, Pérez
-                Manrique T,
+            <li id="r27">García-Hernández AM, Rodríguez-Álvaro M, Brito-Brito PR, Fernández-Gutiérrez DA, Martínez-Alberto
+                CE, Marrero-González CM. Duelo adaptativo, no adaptativo y continuidad de vínculos. Revista ENE de Enfermería. 2021; 15(1). Recuperado de <a href="http://ene-nfermeria.org/ojs/index.php/ENE/article/view/1242">http://ene-nfermeria.org/ojs/index.php/ENE/article/view/1242</a></li>
+            <li id="r28">Wallace CL, Wladkowski SP, Gibson A, White P. Grief during the COVID-19 pandemic: Considerations
+                for palliative care providers. Journal of Pain and Symptom Management. 2020 Apr;60(1). <a href="https://doi.org/10.1016/j.jpainsymman.2020.04.012">https://doi.org/10.1016/j.jpainsymman.2020.04.012</a></li>
+            <li id="r29">Lacasta-Reverte Ma, Lacasta M, Torrijos MT, López-Pérez Y, Carracedo Sanchidrián D, Pérez Manrique T,
                 et al. Impacto emocional en pacientes y familiares durante la pandemia por COVID-19. Un duelo diferente.
-                Medicina Paliativa [Internet]. 2020 [cited 2020 Nov 28]. <a
-                    href="https://doi.org/10.20986/medpal.2020.1188/2020">https://doi.org/10.20986/medpal.2020.1188/2020</a>
-            </li>
-            <li id="r30">León-Amenero D, Huarcaya-Victoria J. El duelo y cómo dar malas noticias en medicina. Anales de
-                la Facultad de Medicina [Internet]. 2019 Jan 1;80(1):86-91. Available from: <a
-                    href="http://www.scielo.org.pe/scielo.php?pid=S1025-55832019000100016&script=sci_arttext">http://www.scielo.org.pe/scielo.php?pid=S1025-55832019000100016&script=sci_arttext</a>
-            </li>
-            <li id="r31">Tamiolaki A, Kalaitzaki AE. "That which does not kill us, makes us stronger": COVID-19 and
-                Posttraumatic
-                Growth. Psychiatry Research. 2020 Jul;289:113044. <a
-                    href="https://doi.org/10.1016/j.psychres.2020.113044">https://doi.org/10.1016/j.psychres.2020.113044</a>
-            </li>
-            <li id="r32">Heuston MM, Grove C, Harne-Britner S, Fox BA. Nurse Leaders and Staff as Partners to Manage
-                Grief
-                and Build Resiliency During COVID-19. Nurse Leader. 2021 Apr; 19(3), 308–311. <a
-                    href="https://doi.org/10.1016/j.mnl.2021.02.010">https://doi.org/10.1016/j.mnl.2021.02.010</a></li>
-            <li id="r33">Giraldo-García JA, Restrepo-Echavarría R. El proceso de duelo ante la pérdida humana en tiempos
-                de pandemia por COVID-19. Revista Científica Arbitrada en Investigaciones de la Salud GESTAR. 2022 Mar
-                4;5(9
+                Medicina Paliativa [Internet]. 2020 [cited 2020 Nov 28]. <a href="https://doi.org/10.20986/medpal.2020.1188/2020">https://doi.org/10.20986/medpal.2020.1188/2020</a></li>
+            <li id="r30">León-Amenero D, Huarcaya-Victoria J. El duelo y cómo dar malas noticias en medicina. Anales de la Facultad de Medicina [Internet]. 2019 Jan 1;80(1):86-91. Available from: <a href="http://www.scielo.org.pe/scielo.php?pid=S1025-55832019000100016&script=sci_arttext">http://www.scielo.org.pe/scielo.php?pid=S1025-55832019000100016&script=sci_arttext</a></li>
+            <li id="r31">Tamiolaki A, Kalaitzaki AE. "That which does not kill us, makes us stronger": COVID-19 and Posttraumatic
+                Growth. Psychiatry Research. 2020 Jul;289:113044. <a href="https://doi.org/10.1016/j.psychres.2020.113044">https://doi.org/10.1016/j.psychres.2020.113044</a></li>
+            <li id="r32">Heuston MM, Grove C, Harne-Britner S, Fox BA. Nurse Leaders and Staff as Partners to Manage Grief
+                and Build Resiliency During COVID-19. Nurse Leader. 2021 Apr; 19(3), 308–311. <a href="https://doi.org/10.1016/j.mnl.2021.02.010">https://doi.org/10.1016/j.mnl.2021.02.010</a></li>
+            <li id="r33">Giraldo-García JA, Restrepo-Echavarría R. El proceso de duelo ante la pérdida humana en tiempos de pandemia por COVID-19. Revista Científica Arbitrada en Investigaciones de la Salud GESTAR. 2022 Mar 4;5(9
                 Edición especial marzo):135-52.</li>
-            <li id="r34">Dantas C de R, Azevedo RCS de, Vieira LC, Côrtes MTF, Federmann ALP, Cucco L da M, et al. O
-                luto nos
+            <li id="r34">Dantas C de R, Azevedo RCS de, Vieira LC, Côrtes MTF, Federmann ALP, Cucco L da M, et al. O luto nos
                 tempos da COVID-19: desafios do cuidado durante a pandemia. Revista Latinoamericana de Psicopatologia
-                Fundamental [Internet]. 2020 Sep [cited 2021 Jun 1];23(3):509-33. Available from: <a
-                    href="https://doi.org/10.1590/1415-4714.2020v23n3p509.5">https://doi.org/10.1590/1415-4714.2020v23n3p509.5</a>
-            </li>
-            <li id="r35">Mayland CR, Harding AJE, Preston N, Payne S. Supporting Adults Bereaved Through COVID-19: A
-                Rapid Review of the Impact of Previous Pandemics on Grief and Bereavement. Journal of Pain and Symptom
-                Management [Internet]. 2020 Aug [cited 2020 Aug 14];60(2):e33-9. <a
-                    href="https://doi.org/10.1016/j.jpainsymman.2020.05.012">https://doi.org/10.1016/j.jpainsymman.2020.05.012</a>
-            </li>
-            <li id="r36">Mora López G, Berbís Morelló C, Martínez Segura E, Montesó Curto P, Ferré Grau C. Former
-                caregiver's daily life reconstruction: facing the grief of the caregiver. Index Enferm [Internet]. 2019
-                Sep [citado
-                2022 Mayo 06] ; 28( 3 ): 105-109. Disponible en: <a
-                    href="http://scielo.isciii.es/scielo.php?script=sci_arttext&pid=S1132-12962019000200003&lng=es">http://scielo.isciii.es/scielo.php?script=sci_arttext&pid=S1132-12962019000200003&lng=es</a>
-            </li>
-            <li id="r37">Ponce-Reyes JV, Rodríguez-Álava LA. La dinámica familiar frente al duelo por la pérdida de un
-                miembro del
+                Fundamental [Internet]. 2020 Sep [cited 2021 Jun 1];23(3):509-33. Available from: <a href="https://doi.org/10.1590/1415-4714.2020v23n3p509.5">https://doi.org/10.1590/1415-4714.2020v23n3p509.5</a></li>
+            <li id="r35">Mayland CR, Harding AJE, Preston N, Payne S. Supporting Adults Bereaved Through COVID-19: A Rapid Review of the Impact of Previous Pandemics on Grief and Bereavement. Journal of Pain and Symptom Management [Internet]. 2020 Aug [cited 2020 Aug 14];60(2):e33-9. <a href="https://doi.org/10.1016/j.jpainsymman.2020.05.012">https://doi.org/10.1016/j.jpainsymman.2020.05.012</a></li>
+            <li id="r36">Mora López G, Berbís Morelló C, Martínez Segura E, Montesó Curto P, Ferré Grau C. Former caregiver's daily life reconstruction: facing the grief of the caregiver. Index Enferm [Internet]. 2019 Sep [citado
+                2022 Mayo 06] ; 28( 3 ): 105-109. Disponible en: <a href="http://scielo.isciii.es/scielo.php?script=sci_arttext&pid=S1132-12962019000200003&lng=es">http://scielo.isciii.es/scielo.php?script=sci_arttext&pid=S1132-12962019000200003&lng=es</a></li>
+            <li id="r37">Ponce-Reyes JV, Rodríguez-Álava LA. La dinámica familiar frente al duelo por la pérdida de un miembro del
                 sistema. Revista Científica Arbitrada en Investigaciones de la Salud GESTAR ISSN: 2737-6273 [Internet].
-                2022 Mar 4 [cited 2022 May 7];5(9 Ed. esp.):38-57. <a
-                    href="https://doi.org/10.46296/gt.v5i9edespmar.0053">https://doi.org/10.46296/gt.v5i9edespmar.0053</a>
-            </li>
-            <li id="r38">Villarraga-Ramírez L. Cuidado de la salud mental de las enfermeras: prioridad en la pandemia
-                por la covid-19. Aquichan. 2021;21(3): e2131. <a
-                    href="https://doi.org/10.5294/ aqui.2021.21.3.1">https://doi.org/10.5294/ aqui.2021.21.3.1</a></li>
-            <li id="r39">. Eisma MC, Tamminga A. Grief Before and During the COVID-19 Pandemic: Multiple Group
-                Comparisons. Journal of Pain and Symptom Management. 2020 Dec;60(6): e1-4. <a
-                    href="https://doi.org/10.1016/j.jpainsymman.2020.10.004">https://doi.org/10.1016/j.jpainsymman.2020.10.004</a>
-            </li>
-            <li id="r40">. Noguera-Ortiz NY, Pérez-Ruiz C. La situación de enfermería: "un milagro de vida" en la
-                aplicación integral
-                del concepto de duelo. Avances en Enfermería. 2014 Oct 15;32(2):306-13. <a
-                    href="https://doi.org/10.15446/av.enferm.v32n2.46245">https://doi.org/10.15446/av.enferm.v32n2.46245</a>
-            </li>
+                2022 Mar 4 [cited 2022 May 7];5(9 Ed. esp.):38-57. <a href="https://doi.org/10.46296/gt.v5i9edespmar.0053">https://doi.org/10.46296/gt.v5i9edespmar.0053</a>
+                </li>
+            <li id="r38">Villarraga-Ramírez L. Cuidado de la salud mental de las enfermeras: prioridad en la pandemia por la covid-19. Aquichan. 2021;21(3): e2131. <a href="https://doi.org/10.5294/ aqui.2021.21.3.1">https://doi.org/10.5294/ aqui.2021.21.3.1</a></li>
+            <li id="r39">. Eisma MC, Tamminga A. Grief Before and During the COVID-19 Pandemic: Multiple Group Comparisons. Journal of Pain and Symptom Management. 2020 Dec;60(6): e1-4. <a href="https://doi.org/10.1016/j.jpainsymman.2020.10.004">https://doi.org/10.1016/j.jpainsymman.2020.10.004</a></li>
+            <li id="r40">. Noguera-Ortiz NY, Pérez-Ruiz C. La situación de enfermería: "un milagro de vida" en la aplicación integral
+                del concepto de duelo. Avances en Enfermería. 2014 Oct 15;32(2):306-13. <a href="https://doi.org/10.15446/av.enferm.v32n2.46245">https://doi.org/10.15446/av.enferm.v32n2.46245</a></li>
         </ol>
 
     </div>
